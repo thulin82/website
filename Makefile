@@ -19,6 +19,12 @@ update: codebase-update site-build local-publish-clear
 
 
 
+# target: production-publish - Publish latest to the production server.
+production-publish:
+	ssh mos@$(WWW_SITE) -t "cd git/website && make update"
+
+
+
 # target: update - Publish website to local host.
 .PHONY: local-publish
 local-publish:
@@ -32,7 +38,8 @@ local-publish:
 #
 .PHONY: local-cache-clear
 local-cache-clear:
-	- sudo rm $(LOCAL_HTDOCS)/cache/*/*
+	- sudo rm $(LOCAL_HTDOCS)/cache/anax/*
+	#- sudo rm $(LOCAL_HTDOCS)/cache/*/*
 
 
 
@@ -136,12 +143,6 @@ site-build:
 
 	# Sync to virtual host dir
 	rsync -av --exclude old --exclude .git --exclude cache/ --delete "./" $(LOCAL_HTDOCS)
-
-
-
-# target: production-publish - Publish latest to the production server.
-production-publish:
-	ssh mos@$(WWW_SITE) -t "cd git/website && make update"
 
 
 
