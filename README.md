@@ -1,8 +1,63 @@
 dbwebb.se website
 ================================
 
-This is (to be) the main website for dbwebb.se
+[![Join the chat at https://gitter.im/mosbth/dbwebb](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mosbth/dbwebb?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Resport issues as suggestions.
+This is (to be) the main website for dbwebb.se.
 
-/mos
+Work to merge content from [dbwebb.se](http://dbwebb.se) is ongoing.
+
+Report issues as suggestions.
+
+
+
+For developers and maintainers
+--------------------------------
+
+
+
+###Fresh install
+
+Start by preparing your local development environment.
+
+```
+$ cd git && git clone <the original or your forked repo>
+$ cd <the original or your forked repo>
+$ make create-local-structure
+$ make etc-hosts
+$ make virtual-host
+$ make update
+```
+
+Now open your browser at `local.v2.dbwebb.se` and browser the website.
+
+
+
+###Keep updated
+
+Update the code base and get external packages.
+
+```
+$ make update
+```
+
+
+
+###Develop and test locally
+
+Make changes in your git repo, publish using `make local-publish` and reload your browser.
+
+```
+# Do changes and then publish them locally.
+$ make local-publish
+
+# Clear the cache when publishing
+$ make local-publish-clear
+```
+
+
+
+```                                                            
+ .                                                             
+..:  Copyright (c) 2012 - 2016 Mikael Roos, mos@dbwebb.se   
+```                                                            
