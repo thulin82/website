@@ -2,11 +2,10 @@
 author: Mikael Roos
 published: 2016-03-21
 ---
-Kursen oopython
+Kursen webdesign
 ===================================================
 
-Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*, lär ut objektorienterad analys och design tillsammans med objektorienterad programmering med Python.
-
+Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *webdesign*, lär webbprogrammeraren att förbereda sin webbplats för webbdesign.
 
 <!--more-->
 
@@ -18,7 +17,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Programmeringskurs i Python 7.5hp.
+> Kurs i HTML, CSS och PHP 7.5hp.
 
 
 
@@ -66,7 +65,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 TBD.
 
-[Instruktion till kursmoment 01]([BASEURL]oopython/kmom01).
+[Instruktion till kursmoment 01]([BASEURL]webdesign/kmom01).
 
 
 
@@ -74,7 +73,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 02]([BASEURL]oopython/kmom02).
+[Instruktion till kursmoment 02]([BASEURL]webdesign/kmom02).
 
 
 
@@ -82,7 +81,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 03]([BASEURL]oopython/kmom03).
+[Instruktion till kursmoment 03]([BASEURL]webdesign/kmom03).
 
 
 
@@ -90,7 +89,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 04]([BASEURL]oopython/kmom04).
+[Instruktion till kursmoment 04]([BASEURL]webdesign/kmom04).
 
 
 
@@ -98,7 +97,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 05]([BASEURL]oopython/kmom05).
+[Instruktion till kursmoment 05]([BASEURL]webdesign/kmom05).
 
 
 
@@ -106,7 +105,7 @@ TBD.
 
 TBD.
 
-[Instruktion till kursmoment 06]([BASEURL]oopython/kmom06).
+[Instruktion till kursmoment 06]([BASEURL]webdesign/kmom06).
 
 
 
@@ -114,7 +113,7 @@ TBD.
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10]([BASEURL]oopython/kmom10).
+[Instruktion till kursmoment 10]([BASEURL]webdesign/kmom10).
 
 
 
@@ -174,7 +173,7 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan]([BASEURL]oooopython/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+För dig som studerar på distans finns det en [rekommenderad studieplan]([BASEURL]oowebdesign/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
 
 Går du på campus får du en lektionsplan i samband med kursstart.
 
@@ -225,7 +224,7 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Du hittar [kursplanen genom att söka på kurskoden PA1437 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1437).
+Du hittar [kursplanen genom att söka på kurskoden PA1436 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1436).
 
 
 
@@ -233,5 +232,5 @@ Revisionshistoria {#revisionshistoria}
 --------------------------------------
 
 <span class='revision-history' markdown='1'>
-2016-03-21: (A, mos) Första revisionen inför kursstart VT2017.  
+2016-03-21: (A, mos) Första revisionen inför kursstart HT2016.  
 </span>

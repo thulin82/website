@@ -71,5 +71,5 @@ Revisionshistoria {#revisionshistoria}
 --------------------------------------
 
 <span class='revision-history' markdown='1'>
-2016-03-21 (PA, mos) Första utgåvan för kursen.  
+2016-03-21 (PA, mos) Första utgåvan för oopython kursen.  
 </span>
