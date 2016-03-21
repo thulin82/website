@@ -14,6 +14,8 @@ You can check a live version, so far, at [v2.dbwebb.se](http://v2.dbwebb.se).
 For developers and maintainers
 --------------------------------
 
+This is how I do it on Debian/Linux.
+
 
 
 ###Fresh install
@@ -21,7 +23,7 @@ For developers and maintainers
 Start by preparing your local development environment.
 
 ```
-$ cd git && git clone <the original or your forked repo>
+$ git clone <the original or your forked repo>
 $ cd <the original or your forked repo>
 $ make create-local-structure
 $ make etc-hosts
