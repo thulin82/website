@@ -7,6 +7,8 @@ This is (to be) the main website for dbwebb.se.
 
 Work to merge content from [dbwebb.se](http://dbwebb.se) is ongoing.
 
+You can check a live version, so far, at [v2.dbwebb.se](http://v2.dbwebb.se).
+
 
 
 For developers and maintainers
