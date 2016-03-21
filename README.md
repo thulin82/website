@@ -27,13 +27,13 @@ $ make virtual-host
 $ make update
 ```
 
-Now open your browser at `local.v2.dbwebb.se` and browser the website.
+Now open your browser at `local.v2.dbwebb.se` and browse the website.
 
 
 
 ###Keep updated
 
-Update the code base and get external packages.
+Update the code base, the external packages and publish locally.
 
 ```
 $ make update
@@ -43,7 +43,7 @@ $ make update
 
 ###Develop and test locally
 
-Make changes in your git repo, publish using `make local-publish` and reload your browser.
+Make changes in your repo, publish using `make local-publish` and reload your browser.
 
 ```
 # Do changes and then publish them locally.
