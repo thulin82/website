@@ -12,17 +12,14 @@ LOCAL_HTDOCS := $(HOME)/htdocs/$(WWW_SITE)/
 ROBOTSTXT	 := robots.txt
 
 
-#
-# Update and publish
-#
+
+# target: update - Update codebase and publish by clearing the cache.
 .PHONY: update
-update: codebase-update site-build local-publish
+update: codebase-update site-build local-publish-clear
 
 
 
-#
-# Publish website to local host
-#
+# target: update - Publish website to local host.
 .PHONY: local-publish
 local-publish:
 	rsync -av --exclude old --exclude .git --exclude cache --delete "./" $(LOCAL_HTDOCS)
@@ -141,15 +138,10 @@ site-build:
 	rsync -av --exclude old --exclude .git --exclude cache/ --delete "./" $(LOCAL_HTDOCS)
 
 
-#
-#
-#
-.PHONY: production-update
-production-update:
-	git pull
-	bin/setup.bash --sync --clear-content
 
-# Does note update footer in forum, need to remove forum cache to update.
+# target: production-publish - Publish latest to the production server.
+production-publish:
+	ssh mos@$(WWW_SITE) -t "cd git/website && make update"
 
 
 

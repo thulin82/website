@@ -7,8 +7,6 @@ This is (to be) the main website for dbwebb.se.
 
 Work to merge content from [dbwebb.se](http://dbwebb.se) is ongoing.
 
-Report issues as suggestions.
-
 
 
 For developers and maintainers
@@ -54,6 +52,12 @@ $ make local-publish
 # Clear the cache when publishing
 $ make local-publish-clear
 ```
+
+
+
+###Help me
+
+* [Install YAML on Debian/Linux](http://dbwebb.se/t/5244).
 
 
 

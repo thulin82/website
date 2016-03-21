@@ -4,7 +4,7 @@ published: 2016-03-21
 category:
     - category3
 ---
-Version 3 av dbwebb.se
+Version 2-ish av dbwebb.se
 ===================================
 
 [FIGURE class="right" src="/image/cimage/kodim07.png?w=200&c=140,140,520,340&sharpen" caption="Fin röd blomma."]
