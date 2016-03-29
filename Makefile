@@ -8,7 +8,7 @@ WWW_SITE	:= v2.dbwebb.se
 WWW_LOCAL	:= local.$(WWW_SITE)
 SERVER_ADMIN := mos@$(WWW_SITE)
 
-GIT_BASE 	= git/cimage.se
+GIT_BASE 	= git/$(WWW_SITE)
 HTDOCS_BASE = $(HOME)/htdocs
 LOCAL_HTDOCS = $(HTDOCS_BASE)/$(WWW_SITE)
 ROBOTSTXT	 := robots.txt
