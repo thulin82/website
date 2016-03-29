@@ -8,8 +8,23 @@ WWW_SITE	:= v2.dbwebb.se
 WWW_LOCAL	:= local.$(WWW_SITE)
 SERVER_ADMIN := mos@$(WWW_SITE)
 
-LOCAL_HTDOCS := $(HOME)/htdocs/$(WWW_SITE)/
+GIT_BASE 	= git/cimage.se
+HTDOCS_BASE = $(HOME)/htdocs
+LOCAL_HTDOCS = $(HTDOCS_BASE)/$(WWW_SITE)
 ROBOTSTXT	 := robots.txt
+
+# Certificates for https
+SSL_APACHE_CONF = /etc/letsencrypt/options-ssl-apache.conf
+SSL_PEM_BASE 	= /etc/letsencrypt/live/$(WWW_SITE)
+
+
+
+# target: help - Displays help.
+.PHONY:  help
+help:
+	@echo "make [target] ..."
+	@echo "target:"
+	@egrep "^# target:" Makefile | sed 's/# target: / /g'
 
 
 
@@ -21,7 +36,7 @@ update: codebase-update site-build local-publish-clear
 
 # target: production-publish - Publish latest to the production server.
 production-publish:
-	ssh mos@$(WWW_SITE) -t "cd git/website && make update"
+	ssh mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
 
 
 
@@ -39,7 +54,6 @@ local-publish:
 .PHONY: local-cache-clear
 local-cache-clear:
 	- sudo rm $(LOCAL_HTDOCS)/cache/anax/*
-	#- sudo rm $(LOCAL_HTDOCS)/cache/*/*
 
 
 
@@ -146,9 +160,7 @@ site-build:
 
 
 
-#
-# Create a entry in the /etc/hosts
-#
+# target: etc-hosts - Create a entry in the /etc/hosts for local access.
 .PHONY: etc-hosts
 etc-hosts:
 	echo "127.0.0.1 $(WWW_LOCAL)" | sudo bash -c 'cat >> /etc/hosts'
@@ -156,28 +168,47 @@ etc-hosts:
 
 
 
-#
-# Create local directory structure
-#
+# target: create-local-structure - Create needed local directory structure.
 .PHONY: create-local-structure
 create-local-structure:
-	install --directory $(HOME)/htdocs/$(WWW_SITE)
+	install --directory $(HOME)/htdocs/$(WWW_SITE)/htdocs
+
+
+# target: ssl-cert-create - One way to create the certificates.
+.PHONY: ssl-cert-create
+ssl-cert-create:
+	cd $(HOME)/git/letsencrypt
+	./letsencrypt-auto certonly --standalone -d $(WWW_SITE) -d www.$(WWW_SITE)
 
 
 
-#
-# Create a entry for the virtual host
-#
+# target: ssl-cert-update - Update certificates with new expiray date.
+.PHONY: ssl-cert-renew
+ssl-cert-update:
+	cd $(HOME)/git/letsencrypt
+	./letsencrypt-auto renew
+
+
+
+# target: install-fresh - Do a fresh installation of a new server.
+.PHONY: install-fresh
+install-fresh: create-local-structure etc-hosts virtual-host update
+
+
+
+# target: virtual-host - Create entries for the virtual host http.
 .PHONY: virtual-host
 
-define VIRTUAL_HOST
+define VIRTUAL_HOST_80
+Define site $(WWW_SITE)
+ServerAdmin $(SERVER_ADMIN)
+
 <VirtualHost *:80>
-	Define site $(WWW_SITE)
-	ServerAdmin $(SERVER_ADMIN)
-	ServerName $${site} 
-	ServerAlias www.$${site}
+	ServerName $${site}
 	ServerAlias local.$${site}
-	DocumentRoot $(HOME)/htdocs/$${site}/htdocs
+	ServerAlias do1.$${site}
+	ServerAlias do2.$${site}
+	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
 
 	<Directory />
 		Options Indexes FollowSymLinks
@@ -185,16 +216,98 @@ define VIRTUAL_HOST
 		Require all granted
 		Order allow,deny
 		Allow from all
-	</Directory>     
+	</Directory>
 
-	ErrorLog  /home/mos/htdocs/$${site}/error.log
-	CustomLog /home/mos/htdocs/$${site}/access.log combined
+	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
+	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined
 </VirtualHost>
 endef
-export VIRTUAL_HOST
+export VIRTUAL_HOST_80
 
-virtual-host: 
-	echo "$$VIRTUAL_HOST" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
-	ls -l /etc/apache2/sites-available/$(WWW_SITE).conf
-	sudo a2ensite $(WWW_SITE)
+define VIRTUAL_HOST_80_WWW
+Define site $(WWW_SITE)
+ServerAdmin $(SERVER_ADMIN)
+
+<VirtualHost *:80>
+	ServerName www.$${site}
+	Redirect "/" "http://$${site}/"
+</VirtualHost>
+endef
+export VIRTUAL_HOST_80_WWW
+
+virtual-host:
+	echo "$$VIRTUAL_HOST_80" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
+	echo "$$VIRTUAL_HOST_80_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
+	sudo a2ensite $(WWW_SITE) www.$(WWW_SITE)
+	sudo a2enmod rewrite
+	sudo apachectl configtest
+	sudo service apache2 reload
+
+
+
+# target: virtual-host-https - Create entries for the virtual host https.
+.PHONY: virtual-host-https
+
+define VIRTUAL_HOST_443
+Define site $(WWW_SITE)
+ServerAdmin $(SERVER_ADMIN)
+
+<VirtualHost *:80>
+	ServerName $${site}
+	ServerAlias do1.$${site}
+	ServerAlias do2.$${site}
+	Redirect "/" "https://$${site}/"
+</VirtualHost>
+
+<VirtualHost *:443>
+	Include $(SSL_APACHE_CONF)
+	SSLCertificateFile 		$(SSL_PEM_BASE)/cert.pem
+	SSLCertificateKeyFile 	$(SSL_PEM_BASE)/privkey.pem
+	SSLCertificateChainFile $(SSL_PEM_BASE)/chain.pem
+
+	ServerName $${site}
+	ServerAlias do1.$${site}
+	ServerAlias do2.$${site}
+	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
+
+	<Directory />
+		Options Indexes FollowSymLinks
+		AllowOverride All
+		Require all granted
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
+	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined
+</VirtualHost>
+endef
+export VIRTUAL_HOST_443
+
+define VIRTUAL_HOST_443_WWW
+Define site $(WWW_SITE)
+ServerAdmin $(SERVER_ADMIN)
+
+<VirtualHost *:80>
+	ServerName www.$${site}
+	Redirect "/" "https://www.$${site}/"
+</VirtualHost>
+
+<VirtualHost *:443>
+	Include $(SSL_APACHE_CONF)
+	SSLCertificateFile 		$(SSL_PEM_BASE)/cert.pem
+	SSLCertificateKeyFile 	$(SSL_PEM_BASE)/privkey.pem
+	SSLCertificateChainFile $(SSL_PEM_BASE)/chain.pem
+
+	ServerName www.$${site}
+	Redirect "/" "https://$${site}/"
+</VirtualHost>
+endef
+export VIRTUAL_HOST_443_WWW
+
+virtual-host-https:
+	echo "$$VIRTUAL_HOST_443" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
+	echo "$$VIRTUAL_HOST_443_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
+	sudo a2enmod ssl
+	sudo apachectl configtest
 	sudo service apache2 reload

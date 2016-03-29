@@ -47,6 +47,16 @@ return [
                 "siteTitle"     => null, //"Anax PHP framework",
                 "siteSlogan"    => null, //"Reusable modules for web development"
             ],
+            "sort" => 2
+        ],
+        [
+            "region" => "header",
+            "template" => "default/image",
+            "data" => [
+                "class" => "logo-1",
+                "src" => "/image/tema/trad/blad.jpg",
+                "alt" => "Logo",
+            ],
             "sort" => -1
         ],
         [
