@@ -48,18 +48,16 @@ local-publish:
 
 
 
-#
-# Clear the cache
-#
+# target: local-cache-clear - Clear the cache.
 .PHONY: local-cache-clear
 local-cache-clear:
-	- sudo rm $(LOCAL_HTDOCS)/cache/anax/*
+	-sudo rm -f $(LOCAL_HTDOCS)/cache/anax/*
 
 
 
 #
-# Publish website to local host and clear the cache
-#
+# 
+# target: local-publish-clear - Publish website to local host and clear the cache.
 .PHONY: local-publish-clear
 local-publish-clear: local-cache-clear local-publish
 
@@ -98,11 +96,16 @@ prepare-build:
 
 
 
-#
-# less
-#
+# target: less-update - Build less and update site.
 .PHONY: less-update
 less-update: less local-publish
+
+
+
+# target: less-update-clear - Build less and update site and clear cache.
+.PHONY: less-update-clear
+less-update-clear: less local-publish-clear
+
 
 
 .PHONY: less
