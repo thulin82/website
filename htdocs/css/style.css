@@ -3507,15 +3507,15 @@ figure figcaption p {
 /** --------------------------------------------------------------
  * New style to manage sizes
  */
-figure.figure {
+.figure {
   display: table;
   padding: 0;
   /* Chrome shinks images in td */
 }
-figure.figure td img {
+.figure td img {
   max-width: none;
 }
-figure.figure figcaption {
+.figure figcaption {
   display: table-caption;
   caption-side: bottom;
   padding: 0;
@@ -3546,6 +3546,18 @@ figure.wrap:after {
   content: '';
   display: block;
   clear: both;
+}
+/** --------------------------------------------------------------
+ * Figure with ASCIINEMA
+ */
+.asciinema {
+  display: block;
+}
+.asciinema figcaption {
+  display: block;
+}
+.asciinema .asciicast {
+  margin: 0 0 !important;
 }
 /** ==============================================================
  * image overlay.

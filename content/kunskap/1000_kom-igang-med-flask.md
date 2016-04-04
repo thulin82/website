@@ -56,7 +56,7 @@ Större rubrik igen {#dontForgetId}
 
 Ascinema länk:
 
-[ASCIINEMA src=37763]
+[ASCIINEMA src=37763 caption="Här är en bildtext"]
 
 
 
