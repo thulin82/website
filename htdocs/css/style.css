@@ -3227,6 +3227,31 @@ body {
 .inner-wrap-breadcrumb:after {
   clear: both;
 }
+/** --------------------------------------------------------------
+ * Flash area
+ */
+.inner-wrap-flash {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.inner-wrap-flash:before,
+.inner-wrap-flash:after {
+  content: "";
+  display: table;
+}
+.inner-wrap-flash:after {
+  clear: both;
+}
+.inner-wrap-flash:before,
+.inner-wrap-flash:after {
+  content: "";
+  display: table;
+}
+.inner-wrap-flash:after {
+  clear: both;
+}
 /** ==============================================================
  * The main content area.
  *
@@ -4685,6 +4710,13 @@ body {
 .rm-default a {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+/** ==============================================================
+ * Main
+ *
+ */
+.inner-wrap-flash {
+  margin-bottom: 22px;
 }
 /** ==============================================================
  * Main

@@ -1,3 +1,12 @@
+---
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "/image/vimmel/varbild-dbwebb2.jpg"
+
+---
 Version 2-ish av dbwebb.se
 =============================
 

@@ -67,11 +67,11 @@ Om du känner att du har tid och lust.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön]([BASEURL]python/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](python/labbmiljo) som behövs för kursen.
 
-1. [Installera kommandot `dbwebb`  samt kursrepot för kursen]([BASEURL]dbwebb-cli/clone).
+1. [Installera kommandot `dbwebb`  samt kursrepot för kursen](dbwebb-cli/clone).
 
-Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`]([BASEURL]dbwebb-cli).
+Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`](dbwebb-cli).
 
 
 
@@ -108,7 +108,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
