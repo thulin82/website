@@ -3131,6 +3131,14 @@ h2:hover .header-anchor {
 .article-toc .level-h4 {
   padding-left: 1em;
 }
+/**
+ * Style of lists.
+ */
+.no-bullet ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 /** 
  * Structure for regions in theme template file and main view files.
  *
@@ -3251,6 +3259,63 @@ body {
 }
 .inner-wrap-flash:after {
   clear: both;
+}
+/** --------------------------------------------------------------
+* Columns above main
+*/
+.inner-wrap-columns-above {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  *zoom: 1;
+}
+.inner-wrap-columns-above:before,
+.inner-wrap-columns-above:after {
+  content: "";
+  display: table;
+}
+.inner-wrap-columns-above:after {
+  clear: both;
+}
+.inner-wrap-columns-above:before,
+.inner-wrap-columns-above:after {
+  content: "";
+  display: table;
+}
+.inner-wrap-columns-above:after {
+  clear: both;
+}
+/** --------------------------------------------------------------
+ * General column elements.
+ */
+.col4-wrapper {
+  *zoom: 1;
+}
+.col4-wrapper:before,
+.col4-wrapper:after {
+  content: "";
+  display: table;
+}
+.col4-wrapper:after {
+  clear: both;
+}
+.col4-wrapper:before,
+.col4-wrapper:after {
+  content: "";
+  display: table;
+}
+.col4-wrapper:after {
+  clear: both;
+}
+.col4 {
+  display: inline;
+  float: left;
+  width: 23.95833333%;
+  margin: 0 0.52083333%;
+}
+.col4,
+.col4-x {
+  height: 100%;
 }
 /** ==============================================================
  * The main content area.
@@ -4712,10 +4777,17 @@ body {
   padding-bottom: 12px;
 }
 /** ==============================================================
- * Main
+ * Flash
  *
  */
 .inner-wrap-flash {
+  margin-bottom: 22px;
+}
+/** ==============================================================
+ * Column above
+ *
+ */
+.inner-wrap-columns-above {
   margin-bottom: 22px;
 }
 /** ==============================================================
@@ -4741,10 +4813,12 @@ body {
 .article h2 {
   border-bottom: 1px solid #ccc;
 }
-.sidebar .block {
+.sidebar .block,
+.columns-above .block {
   margin-bottom: 44px;
 }
-.sidebar .block h4 {
+.sidebar .block h4,
+.columns-above .block h4 {
   border-top: 1px solid #ccc;
   background-color: #eee;
   background-color: #ccc;
@@ -4755,6 +4829,16 @@ body {
   background-image: linear-gradient(to right, #fff, #ccc);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffcccccc', GradientType=1);
+}
+.sidebar .block h4 a,
+.columns-above .block h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+.sidebar .block h4 a:hover,
+.columns-above .block h4 a:hover {
+  color: #33f;
+  text-decoration: underline;
 }
 /** ==============================================================
  * The footer column area.
