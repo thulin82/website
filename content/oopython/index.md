@@ -1,5 +1,5 @@
 ---
-author: Mikael Roos
+author: Mikael, Kenneth
 published: 2016-03-21
 ---
 Kursen oopython
@@ -62,51 +62,51 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: TBD {#kmom01}
+###Kmom01: Kom igång med objekt och Flask {#kmom01}
 
-TBD.
+Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa en websida med routes i ramverket Flask.
 
-[Instruktion till kursmoment 01]([BASEURL]oopython/kmom01).
-
-
-
-###Kmom02: TBD {#kmom02}
-
-TBD.
-
-[Instruktion till kursmoment 02]([BASEURL]oopython/kmom02).
+[Instruktion till kursmoment 01](oopython/kmom01).
 
 
 
-###Kmom03: TBD {#kmom03}
+###Kmom02: UML och unittest {#kmom02}
 
-TBD.
+Vi jobbar vidare med vår me-sida i Flask. Till det kikar vi lite på UML diagram och unittest. Några verktyg som är bra att känna till i en produktionsmiljö.
 
-[Instruktion till kursmoment 03]([BASEURL]oopython/kmom03).
-
-
-
-###Kmom04: TBD {#kmom04}
-
-TBD.
-
-[Instruktion till kursmoment 04]([BASEURL]oopython/kmom04).
+[Instruktion till kursmoment 02](oopython/kmom02).
 
 
 
-###Kmom05: TBD {#kmom05}
+###Kmom03: Autogenerering av UML och dokumentation {#kmom03}
 
-TBD.
+I Python finns det verktyg och moduler för att autogenerera UML-diagram och dokumentation. Vi ska titta närmare på dem, samtidigt som vi jobbar vidare med me-sidan i Flask.
 
-[Instruktion till kursmoment 05]([BASEURL]oopython/kmom05).
+[Instruktion till kursmoment 03](oopython/kmom03).
 
 
 
-###Kmom06: TBD {#kmom06}
+###Kmom04: Regex och databaser {#kmom04}
 
-TBD.
+[Regex, regexp eller reguljära uttryck](https://sv.wikipedia.org/wiki/Regulj%C3%A4ra_uttryck) används för att hantera strängmatchning på olika sätt. Vi ska även utöka me-sidan med en databas.
 
-[Instruktion till kursmoment 06]([BASEURL]oopython/kmom06).
+[Instruktion till kursmoment 04](oopython/kmom04).
+
+
+
+###Kmom05: Sorteringsalgoritmer och sökmotor {#kmom05}
+
+Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem och lägga till en sökmotor på me-sidan.
+
+[Instruktion till kursmoment 05](oopython/kmom05).
+
+
+
+###Kmom06: Utvecklingsmetodik och TDD {#kmom06}
+
+För att förbereda inför en produktionsmiljö går vi igenom vanliga steg från idé till produkt. Vi ska även titta på [TDD](https://sv.wikipedia.org/wiki/Testdriven_utveckling) och hur man kan arbeta med det.
+
+[Instruktion till kursmoment 06](oopython/kmom06).
 
 
 
@@ -114,7 +114,7 @@ TBD.
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10]([BASEURL]oopython/kmom10).
+[Instruktion till kursmoment 10](oopython/kmom10).
 
 
 
@@ -157,7 +157,7 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Python for Informatics | Think Python       | 
+| Kursmoment | Python for Informatics | Think Python       |
 |------------|------------------------|--------------------|
 | Kmom01     |                        |                    |
 | Kmom02     |                        |                    |
@@ -167,14 +167,14 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom06     |                        |                    |
 | Kmom10     |                        |                    |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 
 
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan]([BASEURL]oooopython/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+För dig som studerar på distans finns det en [rekommenderad studieplan]([BASEURL]oooopython/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar.
 
 Går du på campus får du en lektionsplan i samband med kursstart.
 
@@ -185,7 +185,7 @@ Det finns ett särskilt dokument som ger lite [utförligare beskrivning av plane
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker]([BASEURL]kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker]([BASEURL]kurser/bedomning-och-betygsattning).
 
 
 
@@ -233,5 +233,6 @@ Revisionshistoria {#revisionshistoria}
 --------------------------------------
 
 <span class='revision-history' markdown='1'>
+2016-04-01: (B, lew) Andra revisionen inför kursstart VT2017.  
 2016-03-21: (A, mos) Första revisionen inför kursstart VT2017.  
 </span>

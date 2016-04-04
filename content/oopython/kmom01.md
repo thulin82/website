@@ -1,17 +1,15 @@
 ---
-author: Mikael Roos
+author: Kenneth
 published: 2016-03-21
 ---
-Kmom01: TBD
+Kmom01: Kom igång med objekt och Flask
 ====================================
 
-INTRO 
+INTRO
 
 <!--more-->
 
-BILD 
-
-[FIGURE src=/image/snapht14/python-mos-me-page.png?w=w2 caption="Mikaels me-sida i Python som cgi-skript."]
+[FIGURE src=/image/oopython/kmom01/flask1.png?w=w2 caption="En enkel me-sida med Flask."]
 
 
 <!-- Flytta nedan text till eget dokumet/vy/block -->
@@ -32,7 +30,7 @@ Läs följande:
 
 Detta är kursens huvudbok, Läs den.
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information)
 
     * Ch1 Why should you learn to write programs?
     * Ch2 Variables, expressions and statements
@@ -46,12 +44,12 @@ Här följer kompletterande litteratur.
 
 Om du vill kan du även kika igenom  de första kapitlen i referenslitteraturen, det är bara så du vet om det är böcker som passar dig. Skumläs snabbt följande.
 
-3. [Invent your games with Python]([BASEURL]kunskap/boken-invent-your-own-computer-games-with-python) 
+3. [Invent your games with Python]([BASEURL]kunskap/boken-invent-your-own-computer-games-with-python)
 
     * Chapter 1 - Installing Python
     * Chapter 2 - The Interactive Shell
 
-4. [Dive into Python 3]([BASEURL]kunskap/boken-dive-into-python-3) 
+4. [Dive into Python 3]([BASEURL]kunskap/boken-dive-into-python-3)
 
     * Ch-1 What’s New in “Dive Into Python 3”
     * Ch0 Installing Python
@@ -63,13 +61,11 @@ Om du vill kan du även kika igenom  de första kapitlen i referenslitteraturen,
 
 Läs följande:
 
-1. Bekanta dig med [dokumentationen som finns på Pythons webbplats](https://www.python.org/doc/). Kika runt lite och orientera dig.
+1. Fräscha upp minnet med [dokumentationen som finns på Pythons webbplats](https://www.python.org/doc/). Kika runt lite och orientera dig.
 
-2. Se översikten av dokumentation för [Python 3.x Doc](https://docs.python.org/3/).
+2. Se översikten av dokumentationen för [Python 3.x Doc](https://docs.python.org/3/).
 
-    * I [The Python Tutorial](https://docs.python.org/3/tutorial/index.html), läs första stycket om *Numbers* i kapitlet [An Informal Introduction to Python](https://docs.python.org/3/tutorial/introduction.html#an-informal-introduction-to-python).
-
-3. Läs de två inledande kapitlen i [Python styleguide](http://legacy.python.org/dev/peps/pep-0008/). Läs så att du får en känsla för vad en styleguide är för ett programmeringsspråk. Använd sedan styleguiden som uppslagsverk.
+3. Titta på [Flasks hemsida](http://flask.pocoo.org/). Där hittar du även installationsanvisningar och exempel.
 
 
 
@@ -125,9 +121,9 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 
 Genomför följande övning för att träna dig.
 
-1. Kom igång och gör ditt första program i Python tillsammans med artikeln "[Kom igång med ditt första program i Python]([BASEURL]kunskap/kom-igang-med-ditt-forsta-program-i-python)".
+1. Kom igång och gör din första webbapplikation i Python tillsammans med artikeln "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
 
-
+2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".
 
 ###Uppgifter {#uppgifter}
 

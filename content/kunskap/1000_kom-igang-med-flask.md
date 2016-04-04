@@ -1,0 +1,81 @@
+---
+author: Kenneth
+published: 2016-03-21
+category:
+    - python
+---
+Kom igång med ramverket Flask
+===================================
+
+[FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
+
+INTRO
+
+<!--more-->
+
+
+
+Förutsättning {#pre}
+-------------------------------
+
+Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebär.
+
+
+
+Rubrik {#dontForgetId}
+------------------------------
+
+
+Lite text lalalalal
+
+```python
+>>> python kod
+>>> tjohoo
+```
+
+
+
+
+
+###Mindre delrubrik, kan använda `[]` (titta i koden) {#dontForgetId}
+
+mer text
+
+```python
+>>> mer kod
+
+```
+
+
+###Mindre delrubrik {#dontForgetId}
+
+
+
+Större rubrik igen {#dontForgetId}
+------------------------------
+
+Ascinema länk:
+
+[ASCIINEMA src=37763]
+
+
+
+###Överkurs {#overkurs}
+
+Text...
+
+
+
+Avslutningsvis {#avslutning}
+------------------------------
+
+Bra finish, länka till forumtråd eller liknande?
+
+
+
+Revisionshistoria {#revisionshistoria}
+--------------------------------------
+
+<span class='revision-history' markdown='1'>
+2016-02-29 (A, mos) Första utgåvan.  
+</span>
