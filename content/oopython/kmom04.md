@@ -1,17 +1,18 @@
 ---
-author: Mikael Roos
+author: Kenneth
 published: 2016-03-21
 ---
-Kmom04: TBD
+Kmom04: Regex och databaser
 ====================================
 
-Lär dig grunderna i datastrukturen listor och se vad du kan göra med dem.
+INTRO
 
-Så här kan det se ut när du bekantar dig med listor.
+<!--more-->
 
-<script type="text/javascript" src="https://asciinema.org/a/11737.js" id="asciicast-11737" async></script>
+[FIGURE src=/image/oopython/kmom04/??????.png?w=w2 caption="Bild på något fint."]
 
-<!--[FIGURE src=/image/snap/py-marvin.png?w=w2 caption="Marvin i Python."]-->
+
+<!-- Flytta nedan text till eget dokumet/vy/block -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -20,31 +21,22 @@ Så här kan det se ut när du bekantar dig med listor.
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar)*
+*(ca: 8-10 studietimmar)*
 
 
 ###Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
-    * Ch8 Lists
-
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
-    * Ch10 Lists
-
 
 
 ###Artiklar {#artiklar}
 
-Det finns inga artiklar.
-
-<!--
 Läs följande:
 
-2. Läs om hur man skapar en två-dimensionell array av listor i Python.
-    * [How to define two-dimensional array in python](http://stackoverflow.com/questions/6667201/how-to-define-two-dimensional-array-in-python)
--->
+1.
+
+2.
 
 
 
@@ -52,37 +44,31 @@ Läs följande:
 
 Titta på följande:
 
-1. Videoserien [Lär dig Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
-
-2. De videor som följer med och kompletterar kurslitteraturen.
-
-    * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o)
-
-Följande videor är också vara relevanta, kika på dem och se om du tycker de kompletterar övriga videor.
-
-1. [Python Programming Tutorial](https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA) från [Bucky på The New Boston](https://www.youtube.com/channel/UCJbPGzawDH1njbqV-D5HqKw). Titta på video 9-13. Videorna är skrivna med Python2, inte Python3, så var uppmärksam på de små men viktiga skillnaderna (se kursboken).
-
-2. [Python 3 Tutorials](https://www.youtube.com/playlist?list=PL8830E081324343F1) från [TheMonkeyLords](https://www.youtube.com/channel/UCMkRMDJ398W1JvBxxlJ9dpw). Titta på video 12-14. Det blir som ett komplement till Buckys video-serie
-
 
 
 ###Lästips {#lastips}
 
-Det finns inga lästips.
+Om du känner att du har tid och lust.
 
+1. Öva dig med [regex korsord](https://regexcrossword.com/)
+
+2. Bekanta dig med [regex101](https://regex101.com/#python)
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 12-16 studietimmar)*
+*(ca: 8-10 studietimmar)*
+
 
 
 ###Övningar {#ovningar}
 
-Genomför övningarna för att träna inför uppgifterna.
+Genomför följande övning för att träna dig.
 
-1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)".
+1. Läs igenom artikeln "[Vad är regex?](kunskap/regex)".
+
+2. Jobba igenom övningen med "[SQLAlchemy](kunskap/sqlalchemy)".
 
 
 
@@ -90,20 +76,17 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python och listor](uppgift/python-och-listor)".
+1. Gör uppgiften "[Regex](uppgift/lab4)" (lab 4)
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3)".
+2. Gör uppgiften "[Skapa en djurparks-databas](uppgift/skapa-en-djurparks-databas)"
 
-3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)".
+3. Gör uppgiften "[Visa djurparken på me-sidan](uppgift/visa-djurpark-på-me-sida)".
 
 
 
 ###Extra {#extra}
 
-1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1](uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
-    * [Curses Programming with Python](https://docs.python.org/3/howto/curses.html)
-    * [Curses — Terminal handling for character-cell displays](https://docs.python.org/3/library/curses.html)
-
+1. Gör så att man kan lägga till och ta bort djur via formulär
 
 
 
@@ -112,13 +95,16 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](python/redovisa).
+Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Var det svårt att bekanta sig med datastrukturen för listor eller flöt det på bra?
-* Har du jobbat med listor, eller arrayer, i andra programmeringsspråk -- kan du isåfall jämföra Python listor mot andra programmeringsspråk?
-* Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?
+* ?
+* ?
+* ?
+* ?
+* Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
+* Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
 
 
 
