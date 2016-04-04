@@ -1,9 +1,9 @@
 ####Kursmoment instruktioner
 
-* [01: TBD](oopython/kmom01)
-* [02: TBD](oopython/kmom02)
-* [03: TBD](oopython/kmom03)
-* [04: TBD](oopython/kmom04)
-* [05: TBD](oopython/kmom05)
-* [06: TBD](oopython/kmom06)
-* [07/10: Projekt och examination](oopython/kmom10)
+* [01: Kom igång med objekt och Flask](kmom01)
+* [02: UML och unittest](kmom02)
+* [03: Autogenerering av UML och dokumentation](kmom03)
+* [04: Regex och databaser](kmom04)
+* [05: Sorteringsalgoritmer och sökmotor](kmom05)
+* [06: Utvecklingsmetodik och TDD](kmom06)
+* [07/10: Projekt och examination](kmom10)
