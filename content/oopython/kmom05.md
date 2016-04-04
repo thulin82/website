@@ -24,12 +24,12 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
     * Ch9 Dictionaries
     * Ch10 Tuples
 
 
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * Ch11 Dictionaries
     * Ch12 Tuples
     * Ch13 Case study: data structure selection
@@ -85,19 +85,19 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med dictionaries och tupler]([BASEURL]uppgift/python-med-dictionaries-och-tupler)".
+1. Gör uppgiften "[Python med dictionaries och tupler](uppgift/python-med-dictionaries-och-tupler)".
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - analysera text och ord]([BASEURL]uppgift/din-egen-chattbot-marvin-analysera-text-och-ord)".
+1. Gör uppgiften "[Din egen chattbot - Marvin - analysera text och ord](uppgift/din-egen-chattbot-marvin-analysera-text-och-ord)".
 
 
 
 ###Extra {#extra}
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe]([BASEURL]uppgift/din-egen-chattbot-marvin-tictactoe)".
+1. Gör uppgiften "[Din egen chattbot - Marvin - TicTacToe](uppgift/din-egen-chattbot-marvin-tictactoe)".
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-4)".
+1. Gör uppgiften "[Din egen chattbot - Marvin - kryptering och dekryptering](uppgift/din-egen-chattbot-marvin-steg-4)".
 
-1. Gör den Curses-baserade uppgiften "[Ett terminal-baserat spel i Python - steg2]([BASEURL]uppgift/ett-terminal-baserat-spel-i-python-steg2)". 
+1. Gör den Curses-baserade uppgiften "[Ett terminal-baserat spel i Python - steg2](uppgift/ett-terminal-baserat-spel-i-python-steg2)". 
 
 
 
@@ -106,7 +106,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

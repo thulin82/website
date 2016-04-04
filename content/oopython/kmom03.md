@@ -24,20 +24,20 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
     * Ch6 Strings
     * Ch7 Files
 
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist).  
+2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist).  
     * Ch8 Strings
     * Ch14 Files 
 
 Python har en inbyggd debugger som kan användas för att felsöka och rätta upp felaktiga program. Läs om den i följande böcker.
 
-1. [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * App A Debugging 
 
-2. [Invent your games with Python]([BASEURL]kunskap/boken-invent-your-own-computer-games-with-python) 
+2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) 
     * Chapter 7 - Using the Debugger
 
 
@@ -94,9 +94,9 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med strängar och filer]([BASEURL]uppgift/python-med-strangar-och-filer)".
+1. Gör uppgiften "[Python med strängar och filer](uppgift/python-med-strangar-och-filer)".
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-2)".
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2)".
 
 
 
@@ -115,7 +115,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

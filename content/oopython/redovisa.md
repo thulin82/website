@@ -14,7 +14,7 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-I filen `me/redovisning.cgi` skall du [redovisa dina reflektioner]([BASEURL]kunskap/att-skriva-en-bra-redovisningstext) från varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc. Skriv minst 15 meningar.
+I filen `me/redovisning.cgi` skall du [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc. Skriv minst 15 meningar.
 
 Besvara även de specifika frågor som finns för varje kursmoment.
 
@@ -43,7 +43,7 @@ Den länken som dyker upp längst ned är länken till din me-sida. Där kan du 
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet]([BASEURL]forum/utbildning/python). 
+Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/python). 
 
 Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-sida.
 
@@ -52,7 +52,7 @@ Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-s
 Kopiera redovisningstexten till ITs {#its}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs]([BASEURL]bth#its) tillsammans med en länk till din me-sida. 
+Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) tillsammans med en länk till din me-sida. 
 
 Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 

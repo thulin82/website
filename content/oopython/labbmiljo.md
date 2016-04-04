@@ -22,8 +22,8 @@ Om du kör Windows, se då till att göra det som en användare som har Administ
 
 Behöver du hjälp med frågor om operativsystem så finns följande subforum.
 
-* [Windows för Webbprogrammerare]([BASEURL]forum/viewforum.php?f=55)
-* [Unix och Linux]([BASEURL]forum/viewforum.php?f=49)
+* [Windows för Webbprogrammerare](forum/viewforum.php?f=55)
+* [Unix och Linux](forum/viewforum.php?f=49)
 
 
 
@@ -34,7 +34,7 @@ I kurserna används texteditorn Atom som standard. Men du kan i princip välja e
 
 Du [installerar Atom från dess webbplats](https://atom.io/).
 
-Här är en guide till hur du [installerar och kommer igång med Atom]([BASEURL]kunskap/installera-texteditorn-atom).
+Här är en guide till hur du [installerar och kommer igång med Atom](kunskap/installera-texteditorn-atom).
 
 
 
@@ -47,11 +47,11 @@ På ett Unix-system använder man ofta en pakethanterare för att installera, up
 
 Här är guider för hur du kommer igång med terminalen, för respektive operativsystem.
 
-* [Installera Unix-terminalen Cygwin på Windows]([BASEURL]kunskap/installera-unix-terminalen-cygwin-pa-windows)
-* [Terminalen och pakethantering med Brew på Mac OS]([BASEURL]kunskap/terminalen-och-pakethantering-med-brew-pa-mac-os)
-* [Terminalen och pakethantering i Unix/Linux]([BASEURL]kunskap/terminalen-och-pakethantering-i-unix-linux)
+* [Installera Unix-terminalen Cygwin på Windows](kunskap/installera-unix-terminalen-cygwin-pa-windows)
+* [Terminalen och pakethantering med Brew på Mac OS](kunskap/terminalen-och-pakethantering-med-brew-pa-mac-os)
+* [Terminalen och pakethantering i Unix/Linux](kunskap/terminalen-och-pakethantering-i-unix-linux)
 
-Om du är osäker på grunderna i en Unix-terminal så finns det en [guide som hjälper dig att komma igång med Unix på kommandoraden]([BASEURL]kunskap/20-steg-for-att-komma-i-gang-med-unix-och-terminalen).
+Om du är osäker på grunderna i en Unix-terminal så finns det en [guide som hjälper dig att komma igång med Unix på kommandoraden](kunskap/20-steg-for-att-komma-i-gang-med-unix-och-terminalen).
 
 
 
@@ -62,7 +62,7 @@ Versionshanteringverktyget Git används till och från i kurserna. Du behöver h
 
 Du kan [installera det från Gits hemsida](http://git-scm.com/download).
 
-Här är en [guide till hur du installerar Git]([BASEURL]kunskap/installera-versionshanteringssystemet-git).
+Här är en [guide till hur du installerar Git](kunskap/installera-versionshanteringssystemet-git).
 
 
 
@@ -78,7 +78,7 @@ Installera Python i terminalen  {#python}
 
 Nu är det dags att installera Python i din terminal. Det finns olika sätt att installera Python på din datorn men jag har valt att installera det i terminalen. Det blir alltså vår referensmiljö.
 
-För att installera och komma igång med ditt första Python-program så läser du artikeln "[Installera Python i terminalen]([BASEURL]kunskap/installera-python-i-terminalen)".
+För att installera och komma igång med ditt första Python-program så läser du artikeln "[Installera Python i terminalen](kunskap/installera-python-i-terminalen)".
 
 
 
@@ -87,7 +87,7 @@ Avslutningsvis {#avslutning}
 
 Nu har du kommit igång och du har den labbmiljö som krävs för att genomföra det första kursmomentet i kursen.
 
-Om du stöter på problem så kan du alltid [fråga direkt i kursens forum]([BASEURL]forum/utbildning/python).
+Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/python).
 
 
 

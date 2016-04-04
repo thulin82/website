@@ -46,7 +46,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
     * Ch12 Networked programs
     * Ch13 Using Web Services
     * Ch14 Using databases and Structured Query Language (SQL)
@@ -90,7 +90,7 @@ Titta på följande:
 
 Följande är relevant extra läsning.
 
-1. I boken [Dive Into Python 3]([BASEURL]kunskap/boken-dive-into-python-3) handlar kapitel 14 om [HTTP Web Services](http://www.diveintopython3.net/http-web-services.html).
+1. I boken [Dive Into Python 3](kunskap/boken-dive-into-python-3) handlar kapitel 14 om [HTTP Web Services](http://www.diveintopython3.net/http-web-services.html).
 
 
 
@@ -114,7 +114,7 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Din egen chattbot - Marvin - steg 5]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-5)".
+1. Gör uppgiften "[Din egen chattbot - Marvin - steg 5](uppgift/din-egen-chattbot-marvin-steg-5)".
 
 
 
@@ -129,7 +129,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

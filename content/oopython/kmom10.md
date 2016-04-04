@@ -35,7 +35,7 @@ Fråga i forumet om du känner dig osäker.
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning]([BASEURL]kurser/bedomning-och-betygsattning).
+När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
 
 
 
@@ -176,7 +176,7 @@ Redovisning {#redovisning}
 
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet]([BASEURL]forum/utbildning/python) och berätta att du är klar.
+3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
 
 4\. Se till att samtliga kursmoment validerar.
 

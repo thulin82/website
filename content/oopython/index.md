@@ -121,9 +121,9 @@ Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det si
 Kurslitteratur {#litteratur}
 ----------------------------
 
-[Måste jag skaffa kurslitteraturen]([BASEURL]kurser/maste-jag-skaffa-kurslitteraturen)?
+[Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
-Det finns en [översikt av kurslitteratur per kurs]([BASEURL]kunskap/oversikt-av-kurslitteratur-per-kurs).
+Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
 
 
 
@@ -134,10 +134,10 @@ Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal art
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[Python for Informatics - Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information)** -- Charles R Severance  
+* **[Python for Informatics - Exploring information](kunskap/boken-python-for-informatics-exploring-information)** -- Charles R Severance  
   En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
 
-* **[Think Python - How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
+* **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
   En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
 
 
@@ -147,7 +147,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
 
-* **[Dive into Python 3]([BASEURL]kunskap/boken-dive-into-python-3)** -- Mark Pilgrim  
+* **[Dive into Python 3](kunskap/boken-dive-into-python-3)** -- Mark Pilgrim  
   En intro-bok till Python 3 för den som redan kan Python 2 eller kan ett annat programmeringsspråk.
 
 
@@ -174,18 +174,18 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan]([BASEURL]oooopython/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar.
+För dig som studerar på distans finns det en [rekommenderad studieplan](oooopython/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar.
 
 Går du på campus får du en lektionsplan i samband med kursstart.
 
-Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter]([BASEURL]kurser/lektionsplan-och-rekommenderad-studieplan).
+Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
 
 
 
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker]([BASEURL]kurser/bedomning-och-betygsattning).
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
@@ -207,7 +207,7 @@ Lärarstöd och handledning {#handledning}
 
 I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
 
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser]([BASEURL]kurser/lararstod-och-handledning).  
+Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).  
 
 
 
@@ -216,7 +216,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling]([BASEURL]kurser/kursutvardering-och-kursutveckling).
+Läs om hur [jag jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
 
 
 

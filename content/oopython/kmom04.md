@@ -27,10 +27,10 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
     * Ch8 Lists
 
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * Ch10 Lists
 
 
@@ -82,7 +82,7 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python]([BASEURL]kunskap/kom-igang-med-datatypen-lista-i-python)".
+1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)".
 
 
 
@@ -90,17 +90,17 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python och listor]([BASEURL]uppgift/python-och-listor)".
+1. Gör uppgiften "[Python och listor](uppgift/python-och-listor)".
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-3)".
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3)".
 
-3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier]([BASEURL]uppgift/din-egen-chattbot-marvin-inventarie)".
+3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)".
 
 
 
 ###Extra {#extra}
 
-1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1]([BASEURL]uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
+1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1](uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
     * [Curses Programming with Python](https://docs.python.org/3/howto/curses.html)
     * [Curses — Terminal handling for character-cell displays](https://docs.python.org/3/library/curses.html)
 
@@ -112,7 +112,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

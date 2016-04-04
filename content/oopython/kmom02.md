@@ -93,7 +93,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]oopython/redovisa).
+Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
