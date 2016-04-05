@@ -1,9 +1,9 @@
 ####[oopython](oopython)
 
-* [01: Kom igång med objekt och Flask](oopython/kmom01)
+* [01: Kom igång med objekt...](oopython/kmom01)
 * [02: UML och unittest](oopython/kmom02)
-* [03: Autogenerering av UML och dokumentation](oopython/kmom03)
+* [03: Autogenerera UML och doc](oopython/kmom03)
 * [04: Regex och databaser](oopython/kmom04)
-* [05: Sorteringsalgoritmer och sökmotor](oopython/kmom05)
-* [06: Utvecklingsmetodik och TDD](oopython/kmom06)
+* [05: Sorteringsalgoritmer...](oopython/kmom05)
+* [06: Utvecklingsmetodik, TDD](oopython/kmom06)
 * [07/10: Projekt och examination](oopython/kmom10)
