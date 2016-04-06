@@ -79,7 +79,7 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 
 Genomför följande övning för att träna dig.
 
-1. Kom igång och gör din första webbapplikation i Python tillsammans med artikeln "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
+1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
 
 2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".
 

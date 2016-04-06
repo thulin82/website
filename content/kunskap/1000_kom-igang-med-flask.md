@@ -26,7 +26,7 @@ Installation {#installation}
 
 Sparka igång en terminal och installera det med pakethanteraren pip. Kör du Windows, starta en terminal som administratör och skippa `sudo`
 
-```code
+```bash
 sudo pip install Flask
 ```
 
@@ -39,7 +39,7 @@ Skapa en enkel webbapplikation {#skapa-enkel-app}
 
 Skapa en mapp med namnet "my_app" och gå in i den:
 
-```code
+```bash
 $ mkdir my_app
 $ cd my_app
 ```
@@ -59,7 +59,7 @@ Vi skapar en fil som vi döper till `app.py`. Det är frontcontrollern till appl
 
 I mappen "my_app":
 
-```code
+```bash
 touch app.py
 ```
 
@@ -87,7 +87,7 @@ Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat 
 
 Starta applikationen med:
 
-```code
+```bash
 python3 app.py
 ```
 
@@ -109,7 +109,7 @@ Nu kör vi.
 Först skapar vi filerna som behövs.
 
 Från roten:
-```code
+```bash
 mkdir templates static
 mkdir static/styles
 touch templates/index.html
@@ -251,7 +251,7 @@ Nu kan vi kopiera index.html.
 
 Från roten:
 
-```code
+```bash
 cp templates/index.html templates/about.html
 ```
 

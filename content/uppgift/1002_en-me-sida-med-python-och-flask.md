@@ -1,13 +1,13 @@
 ---
-author: Mikael Roos
+author: Kenneth
 published: 2016-03-21
 category:
     - python
 ---
-Din egen chattbot - Marvin - steg 3
+Skapa en me-sida med Python och Flask
 ===================================
 
-Programmering och problemlösning i Python. Lär Marvin att prata lite mer slumpmässigt via listor med standardsvar.
+Använd ett microramverk för att skapa en webbapplikation (alt. me-sida).
 
 <!--more-->
 
@@ -15,52 +15,38 @@ Programmering och problemlösning i Python. Lär Marvin att prata lite mer slump
 Förkunskaper {#forkunskaper}
 -----------------------
 
-???????
+Du har jobbat igenom övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)". Har du gjort övningen har du nästan kommit i mål med uppgiften.
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär  att lära Marvin att svara på löpande text istället för siffror.
-
-Marvin skall kunna svara på frågor som dessa.
-
-```text
-Marvin, ge mig ett citat!
-Dagens citat, tack?
-Citat - för bövelen, ge mig ett!
-```
-
-Marvin skall alltså kunna ge ett citat, oavsett hur man ber om det.
-
-Det enkla sättet att göra det är att kolla om texten som skrivs till Marvin innehåller ett visst ord, så som "citat" i detta fallet. Baserat på det skriver sedan Marvin ut ett svar, som exempelvis kan slumpas från en lista.
-Du kan kika lite på hur en liknande lösning hanteras av [IRC-Marvin på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L358).
-
-Vi kommer att lära Marvin att ge oss ett citat, där citaten är lagrade på fil.
+Vi ska skapa en me-sida som vi senare kommer bygga vidare på genom kursen. Utgå ifrån övningen.
 
 
 
 Krav {#krav}
 -----------------------
 
-Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopiera även filen med citat.
+Startfilen ska heta "app.py" och ska ligga i mappen kmom01/Flask.
+
+1. Applikationen ska använda Bootstrap.
+
+2. Applikationen ska ha minst två sidor, index.html och redovisning.html.
+
+3. index.html ska innehålla minst
+    * en bild
+    * Någon form av välkomsttext
+
+4. redovisning.html ska innehålla
+    * Dina redovisningstexter för kursmomenten
+
+5. Applikationen ska använda port 5000
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -ri kmom03/marvin2/*.py kmom04/marvin3/
-cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
-cd kmom04/marvin3
-```
-
-1. Lär Marvin kommandot "citat". Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`.
-
-2. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate marvin3
+dbwebb validate Flask
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
@@ -70,7 +56,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. Lär Marvin svara på meningar som innehåller orden "hej" och "lunch". Svaren skall slumpas fram och kombineras från de [standardsvar som IRC-Marvin använder på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L179-L193).
+Det finns inga extrauppgifter.
 
 
 
@@ -89,11 +75,5 @@ Revisionshistoria {#revisionshistoria}
 --------------------------------------
 
 <span class='revision-history' markdown='1'>
-2016-02-29 (G, mos) Uppdaterade länk till IRC-marvin.  
-2016-01-29 (F, mos) Uppdaterade länk till IRC-marvin.  
-2015-08-25 (E, mos) Uppgraderade till dbwebb v2.  
-2015-02-02 (D, mos) Ändrar cd-kommendot så det flyttar till rätt katalog.  
-2014-08-27 (C, mos) Ändrar hur uppgiften kopieras från start och skrev om lite text.  
-2014-08-16 (B, Sylvanas) Förtydligande av extrauppgift med länk till github.  
-2014-07-03 (A, mos) Första utgåvan i samband med kursen python.  
+2016-04-06 (A, lew) Första utgåvan i samband med kursen oopython.  
 </span>
