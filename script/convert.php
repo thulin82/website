@@ -38,8 +38,16 @@ foreach ($res as $doc) {
     
     // Create the target filename
     $file = $key;
+
+    // Start by checking per type
+    switch ($type) {
+        case "page":
+            break;
+    }
+
     if ($url) {
         $file = $url;
+    } else {
     }
 
     // Write target file, create dirs if needed
