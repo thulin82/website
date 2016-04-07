@@ -47,6 +47,7 @@ Startfilen ska heta "app.py" och ska ligga i mappen kmom01/Flask.
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb validate Flask
+dbwebb publish Flask
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

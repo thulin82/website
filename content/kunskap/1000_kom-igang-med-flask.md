@@ -24,7 +24,7 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 Installation {#installation}
 ------------------------------
 
-Sparka igång en terminal och installera det med pakethanteraren pip. Kör du Windows, starta en terminal som administratör och skippa `sudo`
+Sparka igång en terminal och installera Flask med pakethanteraren pip. Kör du Windows, starta en terminal som administratör och skippa `sudo`
 
 ```bash
 sudo pip install Flask
@@ -116,7 +116,7 @@ touch templates/index.html
 touch static/styles/style.css
 ```
 
-[FIGURE src=/image/oopython/kmom01/tree1.png?w=w2 caption="Filstruktur."]
+[FIGURE src=/image/oopython/kmom01/tree1.png caption="Filstruktur."]
 
 
 
@@ -242,12 +242,13 @@ Vi kommer behöva lägga till en route i `app.py` och skapa en ny sida i /templa
 
 ###Skapa ny sida i /templates {#skapa-ny-sida-i-templates}
 
-Börja med att skapa filen. Den har samma struktur som `index.html` så vi kopierar bara den. Öppna index.html i editorn och lägg till ett <li> element för den nya sidan, under `<li class="active"><a href="/">Hem</a></li>`:
+Börja med att skapa filen. Den har samma struktur som `index.html` så vi kopierar bara den. Öppna index.html i editorn och lägg till ett `<li>` element för den nya sidan, under  
+`<li class="active"><a href="/">Hem</a></li>`:
 ```html
-<li><a href="/about">Om</a></li>           
+<li><a href="/about">Om</a></li>
 ```
 
-Nu kan vi kopiera index.html.
+Nu kan vi kopiera innehållet i index.html till filen about.html.
 
 Från roten:
 
@@ -261,7 +262,7 @@ cp templates/index.html templates/about.html
 <title>About</title>
 ```
 
-När man klickat på "Om" i navbaren ska det menyvalet vara aktivt. Vi skiftar så rätt <li>-element har rätt klass:
+När man klickat på "Om" i navbaren ska det menyvalet vara aktivt. Vi skiftar så rätt `<li>`-element har rätt klass:
 
 ```html
 <li><a href="/">Hem</a></li>
