@@ -21,8 +21,7 @@ return [
             "favicon"       => "favicon.ico",
 
             // Style and stylesheets
-            //"stylesheets" => ["css/anax-base.min.css"],
-            "stylesheets" => ["css/style.css"],
+            "stylesheets" => ["css/style.min.css"],
             "styleInline" => null,
 
             // JavaScript

@@ -115,10 +115,10 @@ LESS_OPTIONS 	:= --strict-imports --include-path=theme/mos-theme/style/
 FONT_AWESOME	:= theme/mos-theme/style/font-awesome/fonts/
 
 less: prepare-build
-	lessc $(LESS_OPTIONS) $(LESS) build/css/style.css
-	#lessc --clean-css $(LESS_OPTIONS) $(LESS) build/css/style.min.css
-	cp build/css/style.css htdocs/css/style.css
-	#cp build/css/style.min.css htdocs/css/style.min.css
+	#lessc $(LESS_OPTIONS) $(LESS) build/css/style.css
+	lessc --clean-css $(LESS_OPTIONS) $(LESS) build/css/style.min.css
+	#cp build/css/style.css htdocs/css/style.css
+	cp build/css/style.min.css htdocs/css/style.min.css
 	
 	rsync -av $(FONT_AWESOME) htdocs/fonts/
 

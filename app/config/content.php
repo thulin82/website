@@ -13,16 +13,21 @@ return [
     // for production.
     //"ignoreCache" => true,
 
-    // Default options for textfilter
-    "textfilter" => [
+    // Default options for textfilter to parse frontmatter, step one
+    "textfilter-frontmatter" => [
         "jsonfrontmatter",
         "yamlfrontmatter",
+    ],
+
+    // Default options for textfilter to parse second step
+    "textfilter" => [
         "shortcode",
         "markdown",
         "titlefromh1",
         "anchor4Header",
     ],
 
+    // For loading meta data
     "metafilter" => [
         "jsonfrontmatter",
         "yamlfrontmatter",
@@ -30,6 +35,13 @@ return [
 
     // Default template
     "template" => "default/article",
+
+    // Wrapper for section of revision history
+    "revision-history" => [
+        "start" => "\n\n\n" . t("Revision history") . " {#revision}\n-------------\n\n<span class=\"revision-history\">\n",
+        "end"   => "</span>\n",
+        "class" => "revision-history",
+    ],
 
     // Filter to load content
     "pattern" => "*.md",
