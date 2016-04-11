@@ -1,7 +1,7 @@
 ---
 author: Kenneth
 published: 2016-03-21
----
+...
 Kmom01: Kom igång med objekt och Flask
 ====================================
 

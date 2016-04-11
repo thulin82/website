@@ -1,7 +1,7 @@
 ---
 author: Kenneth
 published: 2016-03-21
----
+...
 Kmom03: Autogenerering av UML och dokumentation
 ====================================
 

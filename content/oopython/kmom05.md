@@ -1,7 +1,7 @@
 ---
 author: Kenneth
 published: 2016-03-21
----
+...
 Kmom05: Sorteringsalgoritmer och sökmotor
 ====================================
 
