@@ -3,7 +3,7 @@ author: Mikael Roos
 published: 2016-03-21
 category:
     - terminal
----
+...
 Den terminalbaserade texteditorn nano
 ===================================
 

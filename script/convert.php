@@ -189,12 +189,35 @@ foreach ($res as $doc) {
     // TODO Grep and format revision history
     //<span class='revision-history'>Av Mikael Roos (mos@dbwebb.se)</span>
     //[IMG src=/img/htmlphp/kmom01/image06.png alt=En me-sida när den är klar.]
+    $match = null;
+    $pattern = "/Revisionshistoria \{#revisionshistoria\}.*?>(.*?)<\/span>/s";
+    $revision = [];
+    if (preg_match($pattern, $content, $match)) {
+        //echo "FOUND\n";
+        $content = preg_replace($pattern, "", $content, 1);
+        $lines = explode("\n", (trim($match[1])));
+        foreach ($lines as $line) {
+            $line = trim($line);
+            $pos1 = strpos($line, " ");
+            $pos2 = strpos($line, ":");
+            $pos1 = $pos1 ? $pos1 : 99;
+            $pos2 = $pos2 ? $pos2 : 99;
+            $pos = min($pos1, $pos2);
+            $key = substr($line, 0, $pos);
+            $val = trim(substr($line, $pos + 1));
+            $revision[$key] = $val; 
+        }
+        //var_dump($revision);
+    }
 
     // YAML ending with ...?
     // Add YAML frontmatter
     if ($doYaml) {
         $fm = [];
         $fm["author"] = $acronym;
+        if (!empty($revision)) {
+            $fm["revision"] = $revision;
+        }
         if ($category) {
             $fm["category"] = $category;
         }
@@ -205,12 +228,13 @@ foreach ($res as $doc) {
             $fm["updated"] = $updated;
         }
         $fm["created"] = $created;
-        $content = yaml_emit($fm) . $content;
+        $content = yaml_emit($fm, YAML_UTF8_ENCODING) . $content;
     }
 
     // Write file 
     file_put_contents($file, $content);
     echo "Saved $file $redirects\n";
+    //$res = readline();
     $res = null; //readline();
     if ($res == "p") {
         print_r($doc);

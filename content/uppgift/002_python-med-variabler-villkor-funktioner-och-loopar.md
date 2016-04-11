@@ -3,7 +3,7 @@ author: Mikael Roos
 published: 2016-03-21
 category:
     - python
----
+...
 Python med variabler, villkor, funktioner och loopar
 ===================================
 

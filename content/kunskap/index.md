@@ -24,8 +24,7 @@ views:
             meta: 
                 type: toc
                 items: 4
-
----
+...
 Kunskapsbanken
 ===========================
 

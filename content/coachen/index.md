@@ -25,7 +25,7 @@ views:
                 type: toc
                 items: 4
 
----
+...
 Tips från coachen
 ===========================
 

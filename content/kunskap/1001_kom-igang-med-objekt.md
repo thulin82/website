@@ -3,7 +3,7 @@ author: Kenneth
 published: 2016-03-21
 category:
     - python
----
+...
 Kom igång med objekt i Python
 ===================================
 

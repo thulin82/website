@@ -1,7 +1,7 @@
 ---
 author: Mikael Roos
 published: 2016-03-21
----
+...
 Kursen webdesign
 ===================================================
 
