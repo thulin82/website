@@ -215,19 +215,23 @@ foreach ($res as $doc) {
     if ($doYaml) {
         $fm = [];
         $fm["author"] = $acronym;
-        if (!empty($revision)) {
-            $fm["revision"] = $revision;
-        }
+
         if ($category) {
             $fm["category"] = $category;
         }
-        if ($published) {
-            $fm["published"] = $published;
+        
+        if (!empty($revision)) {
+            $fm["revision"] = $revision;
+        } else {
+            if ($published) {
+                $fm["published"] = $published;
+            }
+            if ($updated) {
+                $fm["updated"] = $updated;
+            }
+            $fm["created"] = $created;
         }
-        if ($updated) {
-            $fm["updated"] = $updated;
-        }
-        $fm["created"] = $created;
+        
         $content = yaml_emit($fm, YAML_UTF8_ENCODING) . $content;
     }
 

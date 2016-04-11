@@ -1,6 +1,7 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
+author: mos
+revision:
+    2016-04-11: (PA, mos) Arbetskopia.
 ...
 Resultat och redovisning
 ====================================

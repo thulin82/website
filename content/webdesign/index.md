@@ -1,14 +1,16 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
+author: mos
+revision:
+    2016-04-11: (PA, mos) Arbetskopia.
 ...
 Kursen webdesign
 ===================================================
 
 Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *webdesign*, lär webbprogrammeraren att förbereda sin webbplats för webbdesign.
 
-<!--more-->
+Kursen syftar till en orientering inom områden design och användbarhet, specifikt för tillämpningsområdet webb. Kursen har tekniken som utgångspunkt, där olika tekniker introduceras och används för att underlätta webbdesign och användbarhet för webbplatsen med syftet att skapa en korrekt och användarvänlig webbplats.
 
+<!--more-->
 
 
 
@@ -17,7 +19,7 @@ Förkunskaper {#forkunskaper}
 
 Det formella förkunskapskravet är:
 
-> Kurs i HTML, CSS och PHP 7.5hp.
+> Genomgången kurs i Webbteknologier 7.5hp.
 
 
 
@@ -27,32 +29,37 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Allmän problemlösning och strukturerad programmering.
-* Grundläggande programmering i Python med variabler, loopar, funktioner, argument.
-* Felsökning, felkoder och tekniker att debugga sitt program.
-* Översikt av Pythons standardbibliotek och användande av datastrukturer och algoritmer, filhantering, koppling till databaser, grafiska gränssnitt och skapande av webbsidor.
-* Utvecklingsmiljö och verktyg för programvaruutveckling med Python samt publicera kod på en driftserver och visa resultat via webbsidor
+* Färglära och färgsättning av en webbplats
+* Typografi
+* Lagar och regler kring webbplatser
+* Anpassa webbplats för funktionshindrade
+* Grid-baserad layout, horisontell och vertikal
+* CSS-konstruktioner för style med CSS/LESS/SASS
+* Bygga tema till webbplats
+* Använda PHP-ramverk för att skapa och designa webbplats
+* Sökmotoroptimering
 
 
 
 Mål {#mal}
 ------------------------
 
-
-
 ###Kunskap och förståelse {#kunskap}
 
 Efter genomförd kurs skall studenten:
 
-* påvisa grundläggande kunskaper i problemlösning med strukturerad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* påvisa grundläggande förståelse för teknisk webbdesign och användbarhet genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* påvisa goda kunskaper i att anpassa och designa en webbplats via praktiska övningar och projekt.
+
 
 
 ###Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
-* utifrån en specifikation kunna utveckla en lösning i Python samt dokumentera och via text kunna presentera denna lösning.
-* ha god praktisk förmåga att hantera de verktyg och utvecklingsmiljöer som används vid utveckling och felsökningar med Python.
+* självständigt utveckla, dokumentera och presentera ett projekt inom webbdesign och användbarhet.
+* ha god praktisk förmåga att hantera de tekniker, verktyg och miljöer som används för att designa och göra en webbplats användbar.
+
 
 
 Kursmoment {#kursmoment}
@@ -128,16 +135,11 @@ Det finns en [översikt av kurslitteratur per kurs]([BASEURL]kunskap/oversikt-av
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal artiklar som finns tillgängliga på nätet. Böckerna är väldigt lika men exemplen skiljer sig åt i dem, den ena boken fokuserar på datavetenskap och matematik medan den andra fokuserar på informatik och informationsbehandling. Det räcker att fokusera på en av böckerna och skumläsa den andra.
+Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
-
-* **[Python for Informatics - Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information)** -- Charles R Severance  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
-
-* **[Think Python - How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
+* **[The Principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)**  
 
 
 
@@ -145,9 +147,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
-
-* **[Dive into Python 3]([BASEURL]kunskap/boken-dive-into-python-3)** -- Mark Pilgrim  
-  En intro-bok till Python 3 för den som redan kan Python 2 eller kan ett annat programmeringsspråk.
+* **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)**  
 
 
 
@@ -156,7 +156,7 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Python for Informatics | Think Python       | 
+| Kursmoment | Beautiful Web Design   | XXX                | 
 |------------|------------------------|--------------------|
 | Kmom01     |                        |                    |
 | Kmom02     |                        |                    |
@@ -173,11 +173,24 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan]([BASEURL]oowebdesign/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+*Flytta till eget dokument.*
 
-Går du på campus får du en lektionsplan i samband med kursstart.
+Varje kurs och kurstillfälle har en [rekommenderad studieplan]([BASEURL]webdesign/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+
+Deltar du i undervisningen på ett program så finns det också en lektionsplan som du får i samband med kursstart.
 
 Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter]([BASEURL]kurser/lektionsplan-och-rekommenderad-studieplan).
+
+
+
+Lärarstöd och handledning {#handledning}
+----------------------------------------
+
+I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
+
+Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser]([BASEURL]kurser/lararstod-och-handledning).  
+
+*Eget dokument om feedback och att ställa frågor för att få feedback.*
 
 
 
@@ -197,16 +210,9 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 |-----------------|-------------------------------|
 | Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
-| Kmom05 - kmom10 | Uppgift 3 á 2.5hp             |
+| Kmom05 - kmom10 | Projekt á 2.5hp               |
 
-
-
-Lärarstöd och handledning {#handledning}
-----------------------------------------
-
-I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
-
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser]([BASEURL]kurser/lararstod-och-handledning).  
+*Eget dokument om rättning och rapportering till ladok.*
 
 
 
@@ -215,7 +221,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling]([BASEURL]kurser/kursutvardering-och-kursutveckling).
+Läs om hur [vi jobbar med kursutvärdering och kursutveckling]([BASEURL]kurser/kursutvardering-och-kursutveckling).
 
 
 
@@ -225,12 +231,3 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Du hittar [kursplanen genom att söka på kurskoden PA1436 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1436).
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-03-21: (A, mos) Första revisionen inför kursstart HT2016.  
-</span>
