@@ -91,16 +91,13 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa objekt](uppgift/lab1)" (lab 1)
 
-2. Gör uppgiften "[Återställ trasigt objekt](uppgift/aterstall-trasigt-objekt)"
-
-3. Gör uppgiften "[En me-sida med Python och Flask](uppgift/en-me-sida-med-python-och-flask)".
+2. Gör uppgiften "[En me-sida med Python och Flask](uppgift/en-me-sida-med-python-och-flask)".
 
 
 
 ###Extra {#extra}
 
-Det finns inga extra uppgifter.
-
+1. Gör uppgiften "[Återställ trasigt objekt](uppgift/aterstall-trasigt-objekt)"
 
 
 Resultat & Redovisning  {#resultat_redovisning}
