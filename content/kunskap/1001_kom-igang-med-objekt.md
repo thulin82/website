@@ -27,7 +27,7 @@ Terminologi {#terminologi}
 
 * **Klass**: En användar-definierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klass-variabler, instans-variabler och metoder, som nås via "dot-notation".
 
-* **Klass-variabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna.
+* **Klass-variabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. En klass-variabel kallas även _statisk variabel_.
 
 * **Instans-variabel**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
 
@@ -54,7 +54,7 @@ Låt oss gå igenom hur man skapar ett bil-objekt, "Car". Ett klass-objekt skapa
 class Car():
 ```
 
-Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser kommer ha. Vi lägger också till en räknare som har koll på hur många bilar vi har:
+Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser kommer ha. Vi lägger också till en räknare som har koll på hur många bilar vi har, två så kallade _statiska variabler_ eller _klass-variabler_:
 
 ```python
 class Car():
@@ -62,7 +62,7 @@ class Car():
     carCount = 0
 ```
 
-Sådär ja, vad fint det blev. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Den metoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
+Sådär ja, vad fint det blev. De statiska variablerna som ligger här ägs av bas-klassen Car. Man kan sätta resten av attributen direkt men för att göra klassen mer användningsbar sätter vi dem i konstruktorn; metoden som körs när en ny instans skapas. Alla bilar kommer ha 4 hjul men övriga attribut kan skilja sig. Den metoden heter `__init__` och det första argumentet är `self` så objektet kan nå sina egna attribut. Vi fyller på med modell och pris. I vår `__init__`-metod kan vi också öka på räknaren:
 
 ```python
 class Car():
@@ -75,6 +75,8 @@ class Car():
 
         Car.carCount += 1
 ```
+
+Som du ser så används argumentet "self" i klassen. Den behöver man inte skicka med som parameter, utan det gör Python åt dig. Alla metoder måste dock börja med "self" i argumentlistan. Det som händer är att med det magiska första argumentet vet metoden vilken instans som äger anropet.
 
 Nu kan vi skapa en ny instans med:
 
@@ -116,7 +118,7 @@ print(bmw.price)
 100000
 ```
 
-Då "bmw" är en instans av Car så kan vi ändra attributet `wheels` i efterhand och då ändras den för alla objekt skapade från klassen:
+"bmw" är en instans av Car så om vi ändrar attributet `wheels` i efterhand, så ändras den för alla objekt skapade från klassen:
 
 ```python
 print(bmw.wheels)
@@ -128,6 +130,7 @@ print(bmw.wheels)
 12
 ```
 
+För att instanserna ska äga variablerna kan man flytta tex `wheels` till __init__-metoden.
 
 ###Metoder {#metoder}
 
@@ -157,8 +160,6 @@ Model: BMW, Price: 100000
 volvo.presentCar()
 Volvo, Price: 150000
 ```
-
-Som du ser så används argumentet **self** i klassen. Den behöver man inte skicka med som parameter, utan det gör Python åt dig. Alla metoder måste börja med **self** dock.
 
 
 
