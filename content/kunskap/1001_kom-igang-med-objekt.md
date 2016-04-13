@@ -131,7 +131,24 @@ print(bmw.wheels)
 12
 ```
 
-För att instanserna ska äga variablerna kan man flytta tex `wheels` till __init__-metoden.
+För att instanserna ska äga variablerna kan man flytta tex `wheels` till __init__-metoden. Då äger instanserna ett eget attribut och påverkas inte om man ändrar i basklassen:
+
+```python
+class Car():
+    #wheels = 4
+    carCount = 0
+
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+        self.wheels = 4
+
+        Car.carCount += 1
+```
+
+För stunden kan vi ha kvar `wheels` som statisk variabel. Alla våra bilar ska ha 4 hjul.
+
+
 
 ###Metoder {#metoder}
 
