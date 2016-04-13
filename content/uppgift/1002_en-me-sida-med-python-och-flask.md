@@ -1,6 +1,7 @@
 ---
-author: Kenneth
-published: 2016-03-21
+author: lew
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
 category:
     - python
 ...
@@ -69,12 +70,3 @@ Lär dig felsöka med debuggern, använd den när du får problem. Komplettera m
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-04-06 (A, lew) Första utgåvan i samband med kursen oopython.  
-</span>

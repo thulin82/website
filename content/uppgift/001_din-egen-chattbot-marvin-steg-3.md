@@ -1,6 +1,15 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
+author:
+    - mos
+    - Sylvanas
+revision:
+    "2016-02-29": (G, mos) Uppdaterade länk till IRC-marvin.  
+    "2016-01-29": (F, mos) Uppdaterade länk till IRC-marvin.  
+    "2015-08-25": (E, mos) Uppgraderade till dbwebb v2.  
+    "2015-02-02": (D, mos) Ändrar cd-kommendot så det flyttar till rätt katalog.  
+    "2014-08-27": (C, mos) Ändrar hur uppgiften kopieras från start och skrev om lite text.  
+    "2014-08-16": (B, Sylvanas) Förtydligande av extrauppgift med länk till github.  
+    "2014-07-03": (A, mos) Första utgåvan i samband med kursen python.  
 category:
     - python
 ...
@@ -22,7 +31,7 @@ Du kan grunderna i Python och stränghantering och du har byggt [andra delen av 
 Introduktion {#intro}
 -----------------------
 
-Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär  att lära Marvin att svara på löpande text istället för siffror. 
+Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär  att lära Marvin att svara på löpande text istället för siffror.
 
 Marvin skall kunna svara på frågor som dessa.
 
@@ -63,7 +72,7 @@ cd kmom04/marvin3
 dbwebb validate marvin3
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -82,18 +91,3 @@ Lär dig felsöka med debuggern, använd den när du får problem. Komplettera m
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-02-29 (G, mos) Uppdaterade länk till IRC-marvin.  
-2016-01-29 (F, mos) Uppdaterade länk till IRC-marvin.  
-2015-08-25 (E, mos) Uppgraderade till dbwebb v2.  
-2015-02-02 (D, mos) Ändrar cd-kommendot så det flyttar till rätt katalog.  
-2014-08-27 (C, mos) Ändrar hur uppgiften kopieras från start och skrev om lite text.  
-2014-08-16 (B, Sylvanas) Förtydligande av extrauppgift med länk till github.  
-2014-07-03 (A, mos) Första utgåvan i samband med kursen python.  
-</span>

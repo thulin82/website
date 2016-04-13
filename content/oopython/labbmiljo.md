@@ -1,6 +1,9 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
+author: mos
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
+category:
+    - python
 ...
 Installera en labbmiljö till oopython
 ====================================
@@ -88,12 +91,3 @@ Avslutningsvis {#avslutning}
 Nu har du kommit igång och du har den labbmiljö som krävs för att genomföra det första kursmomentet i kursen.
 
 Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/python).
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-03-21 (PA, mos) Första utgåvan för kursen.  
-</span>

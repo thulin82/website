@@ -1,6 +1,7 @@
 ---
-author: Kenneth Lewenhagen
-published: 2016-04-12
+author: lew
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
 category:
     - python
 ...
@@ -211,12 +212,3 @@ Det här var en introduktion till hur man skapar egna klasser. Vill du lära dig
 
 1. [docs.python.org](https://docs.python.org/3.4/tutorial/classes.html#)  
 2. [tutorialspoint](http://www.tutorialspoint.com/python/python_classes_objects.htm)
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-04-12 (A, lew) Första utgåvan.  
-</span>

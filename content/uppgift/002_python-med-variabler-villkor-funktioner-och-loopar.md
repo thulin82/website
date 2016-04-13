@@ -1,6 +1,7 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
+author: lew
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
 category:
     - python
 ...
@@ -64,7 +65,7 @@ Krav {#krav}
 dbwebb validate lab1
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -83,15 +84,3 @@ Debugga och felsök genom att skriva ut variablernas olika innehåll med `print(
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2015-08-25 (D, mos) Uppdaterade till dbwebb v2.  
-2015-01-14 (C, mos) Fel länk till förkunskaperna.  
-2014-08-26 (B, mos) Testad, genomgången och uppdaterad.  
-2014-07-03 (A, mos) Första utgåvan i samband med kursen python.  
-</span>

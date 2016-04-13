@@ -1,6 +1,9 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
+author: lew
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
+category:
+    - python
 ...
 Kmom10: Projekt och examination
 ====================================
@@ -24,7 +27,7 @@ Kunden låter dig välja spelidé - han vill testa dig. Men vissa gränser finns
 
 Spelet skall innehålla sju rum. Varje rum innehåller någon form av problem som skall lösas, när man löst problemet kommer man vidare till nästa rum. Klarar man sista rummet så har man klarat spelet.
 
-Spelet behöver inte nödvändigtvis vara ett klassiskt "spel". Du kan tolka det annorlunda och välja att skapa motsvarande som kanske utbildar i Python, eller ett verktyg som tar dig igenom dagen genom att hämta och visa information från olika webbplatser. Kanske har du en idé om att skapa och utveckla din python-Tamagotchi. Fri tolkning alltså. Men håll dig inom kraven nedan. Om din spelidé kräver att du justerar kraven aningen så dokumenterar du vad du gör och varför. 
+Spelet behöver inte nödvändigtvis vara ett klassiskt "spel". Du kan tolka det annorlunda och välja att skapa motsvarande som kanske utbildar i Python, eller ett verktyg som tar dig igenom dagen genom att hämta och visa information från olika webbplatser. Kanske har du en idé om att skapa och utveckla din python-Tamagotchi. Fri tolkning alltså. Men håll dig inom kraven nedan. Om din spelidé kräver att du justerar kraven aningen så dokumenterar du vad du gör och varför.
 
 Har du svårt att komma på en idé? Välj något från ett spel, en film eller bok du läst och återskapa det.
 
@@ -81,9 +84,9 @@ Väl i rummet kan du skriva vad du vill göra, det är kommandon som du kan ge t
 | `se`           | Titta dig runt omkring - spelet svarar med om det finns något särskilt att se i rummet. |
 | `l`, `ledtråd` | Ge en ledtråd, eller fler om det finns, en ledtråd för varje gång man skriver kommandot. |
 
-I ett rum finns det objekt. Ett objekt har en beskrivning. Ett objekt kan du göra något med, du kan interagera med det. När du interagerar med ett objekt så kan det ändra form. En stängd garderob kan öppnas. En stol kan flyttas. En vas kan tas sönder. När något händer med ett objekt så kan det leda till att ytterligare ett objekt kommer in i rummet. 
+I ett rum finns det objekt. Ett objekt har en beskrivning. Ett objekt kan du göra något med, du kan interagera med det. När du interagerar med ett objekt så kan det ändra form. En stängd garderob kan öppnas. En stol kan flyttas. En vas kan tas sönder. När något händer med ett objekt så kan det leda till att ytterligare ett objekt kommer in i rummet.
 
-För att ta ett exempel. Du har objektet *"Det är en vit garderob från Ikea, den ser väl använd ut. Dörren är stängd."*. Du gör kommandot `öppna garderob`, objektet ändrar form till att vara en öppen garderob (dess beskrivning ändras). Beskrivningen är nu *"Det är en öppen garderob, i garderoben finns en kristallkula."*. Objektet `kristallkula` tillkom när du öppnade garderoben. 
+För att ta ett exempel. Du har objektet *"Det är en vit garderob från Ikea, den ser väl använd ut. Dörren är stängd."*. Du gör kommandot `öppna garderob`, objektet ändrar form till att vara en öppen garderob (dess beskrivning ändras). Beskrivningen är nu *"Det är en öppen garderob, i garderoben finns en kristallkula."*. Objektet `kristallkula` tillkom när du öppnade garderoben.
 
 Följande skall du kunna göra med ett objekt.
 
@@ -174,7 +177,7 @@ Redovisning {#redovisning}
 
 1.3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
+2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
 3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
 
@@ -184,12 +187,3 @@ Redovisning {#redovisning}
 # Ställ dig i kurskatalogen
 dbwebb publish me
 ```
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-03-21 (PA, mos) Första utgåvan för oopython kursen.  
-</span>

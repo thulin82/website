@@ -1,6 +1,9 @@
 ---
-author: Mikael, Kenneth
-published: 2016-03-21
+author: lew
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
+category:
+    - python
 ...
 Kursen oopython
 ===================================================
@@ -226,13 +229,3 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Du hittar [kursplanen genom att söka på kurskoden PA1437 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1437).
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-04-01: (B, lew) Andra revisionen inför kursstart VT2017.  
-2016-03-21: (A, mos) Första revisionen inför kursstart VT2017.  
-</span>

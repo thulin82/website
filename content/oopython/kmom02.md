@@ -1,6 +1,9 @@
 ---
-author: Kenneth
-published: 2016-03-21
+author: lew
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
+category:
+    - python
 ...
 Kmom02: UML och unittest
 ====================================
@@ -103,12 +106,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * ?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-03-21 (PA, mos) Första utgåvan för oopython kursen.  
-</span>

@@ -1,6 +1,7 @@
 ---
-author: Kenneth
-published: 2016-03-21
+author: lew
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
 category:
     - python
 ...
@@ -293,12 +294,3 @@ Avslutningsvis {#avslutning}
 ------------------------------
 
 Titta gärna på [Bootstrap temats sida](https://getbootstrap.com/examples/theme/). Högerklicka -> Visa källkod så ser du hur de byggt upp den och vilka klasser som använts. Testa och lek!
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-04-06 (A, lew) Första utgåvan.  
-</span>

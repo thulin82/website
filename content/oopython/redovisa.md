@@ -1,6 +1,9 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
+author: mos
+revision:
+    "2016-04-12": (PA, lew) Pre-release.
+category:
+    - python
 ...
 Resultat och redovisning
 ====================================
@@ -18,7 +21,7 @@ I filen `me/redovisning.cgi` skall du [redovisa dina reflektioner](kunskap/att-s
 
 Besvara även de specifika frågor som finns för varje kursmoment.
 
-Det är **viktigt** att dina filer `me/redovisning.cgi` och `me/me.cgi` är uppdaterade. 
+Det är **viktigt** att dina filer `me/redovisning.cgi` och `me/me.cgi` är uppdaterade.
 
 Du behöver *inte* uppdatera `me/redovisning.py` eller `me/me.py`.
 
@@ -43,7 +46,7 @@ Den länken som dyker upp längst ned är länken till din me-sida. Där kan du 
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/python). 
+Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/python).
 
 Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-sida.
 
@@ -52,7 +55,7 @@ Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-s
 Kopiera redovisningstexten till ITs {#its}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) tillsammans med en länk till din me-sida. 
+Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) tillsammans med en länk till din me-sida.
 
 Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 
@@ -64,12 +67,3 @@ Klart! {#klar}
 Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade. Skapa alltid en tråd i forumet om du funderar på något.
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
-
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2016-03-21 (PA, mos) Första utgåvan för kursen.  
-</span>
