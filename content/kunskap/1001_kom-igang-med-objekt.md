@@ -135,7 +135,6 @@ För att instanserna ska äga variablerna kan man flytta tex `wheels` till __ini
 
 ```python
 class Car():
-    #wheels = 4
     carCount = 0
 
     def __init__(self, model, price):
@@ -183,17 +182,17 @@ Volvo, Price: 150000
 
 ###En lista som medlemsvariabel {#en-lista-som-medlem}
 
-Vi lägger till en lista som medlemsvariabel. Tanken är att den ska innehålla information om övrig utrustning. Vi lägger till en tom lista som medlemsvariabel och en metod som lägger till saker och en utskriftsmetod.
+Vi lägger till en lista som ska innehålla information om övrig utrustning. Vi initierar klassen med en tom lista och en metod som lägger till saker och en utskriftsmetod.
 
 ```python
 class Car():
     wheels = 4
     carCount = 0
-    equipment = [] #Vi lägger till en lista som inte behöver sättas i konstruktorn, __init__
 
     def __init__(self, model, price):
         self.model = model
         self.price = price
+        self.equipment = []
 
         Car.carCount += 1
 
@@ -219,6 +218,100 @@ volvo.printEquipment()
 * Bluetooth
 * 7 inch display
 ```
+
+
+
+###Privata medlemsvariabler {#privata-medlemsvariabler}
+
+För att komma åt ett objekts medlemsvariabler använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska kunna komma åt variablerna kan man göra dem _privata_. Det gör man med `_` innan variabeln. Låt oss titta på hur det ser ut och fungerar. Vi skapar en klass med en publik och en privat instans-variabel:
+
+```python
+class Test_private():
+
+    def __init__(self):
+        self.publicMember = "publik"
+        self.__privateMember = "privat"
+
+    def printPublic(self):
+        print(self.publicMember)
+
+    def printPrivate(self):
+        print(self.__privateMember)
+```
+
+Nu ser du att vi även har två metoder som skriver ut respektive variabel. Det är instansen som äger dem båda, även den privata, och kan således hantera dem:
+
+```python
+test = Test_private()
+
+test.printPublic()
+publik
+
+test.printPrivate()
+privat
+```
+
+Om vi testar att nå variablerna utanför...
+
+```python
+test = Test_private()
+
+print( test.publicMember )
+publik
+
+print( test.__privateMember )
+AttributeError: 'Test_private' object has no attribute '__privateMember'
+```
+
+...så får vi ett felmeddelande som talar om för oss att objektet inte har det attributet. Bra. Att använda privata variabler och metoder kan lämpa sig bra i till exempel en arvskedja eller för att visa andra utvecklare att de inte ska peta på de variablerna eller metoderna.
+
+
+
+###Operatoröverlagring {#operatoroverlagring}
+
+Operatorer inom programmering (`+, -, *, /, <, >` med flera), har ett förutbestämt syfte. Om vi skulle vilja använda dem för något eget syfte istället kan vi använda oss av **operatoröverlagring**. Låt säga att vi vill kunna addera våra bil-objekt och få reda på det sammanlagda priset. Först testar vi rakt av:
+
+```python
+print( bmx + volvo )
+TypeError: unsupported operand type(s) for +: 'Car' and 'Car'
+```
+
+Det gick inte så bra. `+`-operatorn vill ju ha siffror och inte objekt. Vi lägger till en metod som överlagrar operatorn i klassen:
+
+```python
+class Car():
+    wheels = 4
+    carCount = 0
+
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+        self.equipment = []
+
+        Car.carCount += 1
+
+    def presentCar(self):
+        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+
+    def addEquipment(self, newEquipment):
+        self.equipment.append(newEquipment)
+
+    def printEquipment(self):
+        for eq in self.equipment:
+            print("* " + eq)
+
+    def __add__(self, other):
+        return self.price + other.price
+```
+
+Vi använder `__` före och efter metoden och skickar in ett annat objekt kallat _other_ som parameter. Vi testar igen:
+
+```python
+print( bmx + volvo )
+250000
+```
+
+Nuså. Samma koncept gäller för övriga operatorer och kan vara behändigt vid hantering av objekt av olika slag.
 
 
 
