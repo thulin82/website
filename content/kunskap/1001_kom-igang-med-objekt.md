@@ -84,25 +84,25 @@ Som du ser så används argumentet "self" i klassen. Den behöver man inte skick
 Nu kan vi skapa en ny instans med:
 
 ```python
-bmw = Car("BMW", 100000)
+>>> bmw = Car("BMW", 100000)
 ```
 
 Nu har vi skapat en instans av klassen Car med 4 hjul, märket BMW och med ett pris på 100.000. Vi kan även skapa fler instanser från samma klass:
 
 ```python
-volvo = Car("Volvo", 150000)
+>>> volvo = Car("Volvo", 150000)
 ```
 
 Vi testar att skriva ut objekten:
 
 ```python
-print(bmw)
+>>> print(bmw)
 <__main__.Car object at 0x7f824cc7b4e0>
 
-print(volvo)
+>>> print(volvo)
 <__main__.Car object at 0x7f824cc7b4a8>
 
-print("Antal bilar: {antal}".format(antal=Car.carCount))
+>>> print("Antal bilar: {antal}".format(antal=Car.carCount))
 Antal bilar: 2
 ```
 
@@ -111,25 +111,25 @@ Det ser ju bra ut. Två instanser av "Car" som inte refererar till samma minnesp
 För att nå medlemsvariablerna använder man så kallad "dot-notation". Vi provar.
 
 ```python
-print(bmw.wheels)
+>>> print(bmw.wheels)
 4
 
-print(bmw.model)
+>>> print(bmw.model)
 BMW
 
-print(bmw.price)
+>>> print(bmw.price)
 100000
 ```
 
 "bmw" är en instans av Car så om vi ändrar attributet `wheels` i efterhand, så ändras den för alla objekt skapade från klassen:
 
 ```python
-print(bmw.wheels)
+>>> print(bmw.wheels)
 4
 
-Car.wheels = 12
+>>> Car.wheels = 12
 
-print(bmw.wheels)
+>>> print(bmw.wheels)
 12
 ```
 
@@ -173,10 +173,10 @@ class Car():
 Nu kan vi använda den på följande sätt:
 
 ```python
-bmw.presentCar()
+>>> bmw.presentCar()
 Model: BMW, Price: 100000
 
-volvo.presentCar()
+>>> volvo.presentCar()
 Volvo, Price: 150000
 ```
 
@@ -213,9 +213,9 @@ class Car():
 Som du ser agerar metoden oberoende av resten av klassen. **@staticmethod** gör att python inte behöver instansiera en bunden metod för varje instans av klassen, samt att det är enkelt att se för andra vad som händer. Vi testar att använda den:
 
 ```python
-bmw = Car("BMW", 100000)
+>>> bmw = Car("BMW", 100000)
 
-print( bmw.reducePrice() )
+>>> print( bmw.reducePrice() )
 Priset för BMW är nu 66000
 ```
 
@@ -259,11 +259,11 @@ class Car():
 Nu kan vi lägga till utrustning:
 
 ```python
-volvo = Car("Volvo", 150000)
-volvo.addEquipment("Bluetooth")
-volvo.addEquipment("7 inch display")
+>>> volvo = Car("Volvo", 150000)
+>>> volvo.addEquipment("Bluetooth")
+>>> volvo.addEquipment("7 inch display")
 
-volvo.printEquipment()
+>>> volvo.printEquipment()
 * Bluetooth
 * 7 inch display
 ```
@@ -291,24 +291,24 @@ class Test_private():
 Nu ser du att vi även har två metoder som skriver ut respektive variabel. Det är instansen som äger dem båda, även den privata, och kan således hantera dem:
 
 ```python
-test = Test_private()
+>>> test = Test_private()
 
-test.printPublic()
+>>> test.printPublic()
 publik
 
-test.printPrivate()
+>>> test.printPrivate()
 privat
 ```
 
 Om vi testar att nå variablerna utanför...
 
 ```python
-test = Test_private()
+>>> test = Test_private()
 
-print( test.publicMember )
+>>> print( test.publicMember )
 publik
 
-print( test.__privateMember )
+>>> print( test.__privateMember )
 AttributeError: 'Test_private' object has no attribute '__privateMember'
 ```
 
@@ -321,7 +321,7 @@ AttributeError: 'Test_private' object has no attribute '__privateMember'
 Operatorer inom programmering (`+, -, *, /, <, >` med flera), har ett förutbestämt syfte. Om vi skulle vilja använda dem för något eget syfte istället kan vi använda oss av **operatoröverlagring**. Låt säga att vi vill kunna addera våra bil-objekt och få reda på det sammanlagda priset. Först testar vi rakt av:
 
 ```python
-print( bmx + volvo )
+>>> print( bmx + volvo )
 TypeError: unsupported operand type(s) for +: 'Car' and 'Car'
 ```
 
@@ -364,7 +364,7 @@ class Car():
 Vi använder `__` före och efter metoden och skickar in ett annat objekt kallat _other_ som parameter. Vi testar igen:
 
 ```python
-print( bmx + volvo )
+>>> print( bmx + volvo )
 250000
 ```
 
