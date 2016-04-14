@@ -38,6 +38,8 @@ Terminologi {#terminologi}
 
 * **Attribut**:  De specifika egenskaperna (variablerna) för en klass.
 
+* **Statisk metod**: En metod i klassen som fungerar oberoende av klassen och _self_.
+
 
 När kan/ska man använda objekt? {#nar-kan-man-anvanda-objekt}
 ------------------------------
@@ -180,6 +182,45 @@ Volvo, Price: 150000
 
 
 
+###Statiska metoder {#statiska-metoder}
+
+En metod i ett klassobjekt använder oftast parametern _self_ och tillhör därför varje instans. Vill man ha en mer generell metod som inte behöver vara enskilt beroende utav
+instanserna kan man använda _statiska metoder_. Det är metoder som används av klassen men utför inget direkt mot dess egna variabler. Vi lägger till en metod som räknar ut priset när man kört ut från bilfirman, samt en metod som använder den:
+
+```python
+class Car():
+    wheels = 4
+    carCount = 0
+
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+
+        Car.carCount += 1
+
+    def presentCar(self):
+        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+
+    @staticmethod
+    def calculatePriceReduction(aPrice):
+        return int(aPrice * 0.66)
+
+    def reducePrice(self):
+        self.price = self.calculatePriceReduction(self.price)
+        return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
+```
+
+Som du ser agerar metoden oberoende av resten av klassen. **@staticmethod** gör att python inte behöver instansiera en bunden metod för varje instans av klassen, samt att det är enkelt att se för andra vad som händer. Vi testar att använda den:
+
+```python
+bmw = Car("BMW", 100000)
+
+print( bmw.reducePrice() )
+Priset för BMW är nu 66000
+```
+
+
+
 ###En lista som medlemsvariabel {#en-lista-som-medlem}
 
 Vi lägger till en lista som ska innehålla information om övrig utrustning. Vi initierar klassen med en tom lista och en metod som lägger till saker och en utskriftsmetod.
@@ -198,6 +239,14 @@ class Car():
 
     def presentCar(self):
         print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+
+    @staticmethod
+    def calculatePriceReduction(aPrice):
+        return int(aPrice * 0.66)
+
+    def reducePrice(self):
+        self.price = self.calculatePriceReduction(self.price)
+        return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 
     def addEquipment(self, newEquipment):
         self.equipment.append(newEquipment)
@@ -292,6 +341,14 @@ class Car():
 
     def presentCar(self):
         print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+
+    @staticmethod
+    def calculatePriceReduction(aPrice):
+        return int(aPrice * 0.66)
+
+    def reducePrice(self):
+        self.price = self.calculatePriceReduction(self.price)
+        return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
 
     def addEquipment(self, newEquipment):
         self.equipment.append(newEquipment)
