@@ -208,9 +208,11 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Nu kan vi läsa av felmeddelandet:
+Nu kan vi läsa av felmeddelandet när vi kör filen:
 
 ```python
+>>> python3 testfile.py -v
+
 test_yield_error (__main__.Testcase)
 Returns True if model-attribute matches ... FAIL
 
