@@ -51,7 +51,7 @@ Objekt kommer väl till pass när ens kod börjar kräva beteenden. Är det ren 
 Skapa ett objekt {#skapa-ett-objekt}
 ------------------------------
 
-Låt oss gå igenom hur man skapar ett bil-objekt, "Car". Ett klass-objekt skapas med:  
+Låt oss gå igenom hur man skapar ett bil-objekt, "Car". För enkelhetens skull hoppar jag över docstrings i artikeln. Ett klass-objekt skapas med:  
 
 ```python
 class Car():
