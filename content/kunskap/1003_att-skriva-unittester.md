@@ -211,6 +211,10 @@ if __name__ == '__main__':
 Nu kan vi läsa av felmeddelandet:
 
 ```python
+test_yield_error (__main__.Testcase)
+Returns True if model-attribute matches ... FAIL
+
+======================================================================
 FAIL: test_yield_error (__main__.Testcase)
 Returns True if model-attribute matches
 ----------------------------------------------------------------------
@@ -223,20 +227,6 @@ AssertionError: 'BMW' is not 'Honda'
 Ran 1 test in 0.000s
 
 FAILED (failures=1)
-
-FAIL: test_yield_error (__main__.Testcase)
-Returns True if model-attribute matches
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "testfile.py", line 35, in test_yield_error
-    self.assertIs(self.bmw.model, "Honda")
-AssertionError: 'BMW' is not 'Honda'
-
-----------------------------------------------------------------------
-Ran 1 test in 0.000s
-
-FAILED (failures=1)
-
 ```
 
 Större rubrik igen {#dontForgetId}
