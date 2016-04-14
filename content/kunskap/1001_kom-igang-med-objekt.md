@@ -375,7 +375,7 @@ Nuså. Samma koncept gäller för övriga operatorer och kan vara behändigt vid
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det här var en introduktion till hur man skapar egna klasser. Vill du lära dig mer på en gång kan du läsa på lite djupare om objekt och klasser:  
+Det här var en introduktion till hur man skapar egna klasser. Toppen på isberget. Vill du lära dig mer på en gång kan du läsa på lite djupare om objekt och klasser:  
 
 1. [docs.python.org](https://docs.python.org/3.4/tutorial/classes.html#)  
 2. [tutorialspoint](http://www.tutorialspoint.com/python/python_classes_objects.htm)
