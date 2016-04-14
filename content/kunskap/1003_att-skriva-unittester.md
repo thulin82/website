@@ -53,18 +53,19 @@ Dåså. Vi tittar på grundstrukturen i _testfile.py_:
 
 ```python
 #!/usr/bin/env python3
+""" Module for unittests """
 
 import unittest
 
 class Testcase(unittest.TestCase):
-    # skriv testerna här
+    """ Submodule for unittests, derives from unittest.TestCase """
 
 
 if __name__ == '__main__':
     unittest.main()
 ```
 
-Vi importerar modulen och skapar en subklass av _unittest.TestCase_. blocket med _unittest.main()_ kör igång ett interface för testscriptet och producerar en bra utskrift.
+Vi importerar modulen och skapar en subklass av _unittest.TestCase_. blocket med _unittest.main()_ kör igång ett interface för testscriptet och producerar en bra utskrift. Notera att vi har med docstrings nu. Docstrings som används i metoderna kommer skrivas ut när testfilen körs.
 
 Ett enkelt test på den inbyggda funktionen **.upper()** kan se ut så här:
 
@@ -76,6 +77,7 @@ import unittest
 class Testcase(unittest.TestCase):
 
     def test_upper(self):
+        """ Test builtin uppercase """
         self.assertEqual('programmering'.upper(), 'PROGRAMMERING')
 
 if __name__ == '__main__':
@@ -112,7 +114,8 @@ OK
 
 
 >>> python3 testfile.py -v
-test_upper (__main__.Testcase) ... ok
+test_upper (__main__.Testcase)
+Test builtin uppercase ... ok
 
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
@@ -120,7 +123,7 @@ Ran 1 test in 0.000s
 OK
 ```
 
-Med flaggan **-v** ser vi att vi får en tydligare utskrift, där testena skrivs ut med. Det fungerar bara om man döper testmetoderna med "test_" i början. Det är trevligt med fina utskrifter så vi kör vidare på det.
+Med flaggan **-v** ser vi att vi får en tydligare utskrift, där testerna skrivs ut med. Det fungerar bara om man döper testmetoderna med "test_" i början. Vi ser även docstringen utskriven. Det är trevligt med fina utskrifter så vi kör vidare på det.
 
 
 
@@ -141,14 +144,100 @@ class Testcase(unittest.TestCase):
     volvo = Car("Volvo", 150000)
 
     def test_if_objects_are_same(self):
-        """ Returns True if a and b are not same """
+        """ Returns True if instances are not same """
         self.assertIsNot(self.bmw, self.volvo)
+
+    def test_attribute(self):
+        """ Returns True attribute matches expected """
+        self.assertIs(self.bmw.model, "BMW")
+        self.assertIs(self.volvo.model, "Volvo")
+
+    def test_sum_instances(self):
+        """ Returns True if __add__ is correct """
+        self.assertEqual(self.volvo + self.bmw, 250000)
+
+    def test_equipment(self):
+        """ Returns True if Airbag exists in equipment """
+
+        self.bmw.addEquipment("Bluetooth")
+        self.bmw.addEquipment("Airbag")
+        self.bmw.addEquipment("AC")
+
+        self.assertIn("Airbag", self.bmw.equipment)
 
 if __name__ == '__main__':
     unittest.main()
 ```
 
+Kör vi följande test får vi resultatet:
 
+```python
+>>> python3 testfile.py -v
+
+test_attribute (__main__.Testcase)
+Returns True attribute matches expected ... ok
+test_equipment (__main__.Testcase)
+Returns True if Airbag exists in equipment ... ok
+test_if_objects_are_same (__main__.Testcase)
+Returns True if instances are not same ... ok
+test_sum_instances (__main__.Testcase)
+Returns True if __add__ is correct ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+```
+
+Om ett test inte går igenom visas en tydlig utskrift på vad och var felet gäller. Vi kan titta på hur det kan se ut:
+
+```python
+#!/usr/bin/env python3
+
+import unittest
+from car import Car
+
+class Testcase(unittest.TestCase):
+    bmw = Car("BMW", 100000)
+
+    def this_yields_an_error(self):
+        """ Returns True if model-attribute matches """
+        self.assertIs(self.bmw.model, "Honda")
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+Nu kan vi läsa av felmeddelandet:
+
+```python
+FAIL: test_yield_error (__main__.Testcase)
+Returns True if model-attribute matches
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "testfile.py", line 35, in test_yield_error
+    self.assertIs(self.bmw.model, "Honda")
+AssertionError: 'BMW' is not 'Honda'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+
+FAIL: test_yield_error (__main__.Testcase)
+Returns True if model-attribute matches
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "testfile.py", line 35, in test_yield_error
+    self.assertIs(self.bmw.model, "Honda")
+AssertionError: 'BMW' is not 'Honda'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
+
+```
 
 Större rubrik igen {#dontForgetId}
 ------------------------------
