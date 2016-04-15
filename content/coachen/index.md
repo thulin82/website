@@ -14,7 +14,7 @@ views:
         data:
             meta: 
                 type: toc
-                items: 4
+                items: 7
 
     blog-toc:
         region: sidebar-right
@@ -23,7 +23,7 @@ views:
         data:
             meta: 
                 type: toc
-                items: 4
+                items: 7
 
 ...
 Tips från coachen

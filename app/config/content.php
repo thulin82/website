@@ -20,17 +20,12 @@ return [
     ],
 
     // Default options for textfilter to parse second step
+    // Might update frontmatter
     "textfilter" => [
         "shortcode",
         "markdown",
         "titlefromh1",
         "anchor4Header",
-    ],
-
-    // For loading meta data
-    "metafilter" => [
-        "jsonfrontmatter",
-        "yamlfrontmatter",
     ],
 
     // Default template
@@ -44,7 +39,9 @@ return [
     ],
 
     // Filter to load content
-    "pattern" => "*.md",
-    "meta" => ".meta.md",
+    "pattern"   => "*.md",
+    "meta"      => ".meta.md",
+    "author"    => "#author/([^\.]+)#",
+    "category"  => "category/category-*.md",
 
 ];
