@@ -270,7 +270,7 @@ Nu kan vi lägga till utrustning:
 
 
 
-###Privata medlemsvariabler {#privata-medlemsvariabler}
+<!-- ###Privata medlemsvariabler {#privata-medlemsvariabler}
 
 För att komma åt ett objekts medlemsvariabler använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska kunna komma åt variablerna kan man göra dem _privata_. Det gör man med `_` innan variabeln. Låt oss titta på hur det ser ut och fungerar. Vi skapar en klass med en publik och en privat instans-variabel:
 
@@ -279,13 +279,13 @@ class Test_private():
 
     def __init__(self):
         self.publicMember = "publik"
-        self.__privateMember = "privat"
+        self._privateMember = "privat"
 
     def printPublic(self):
         print(self.publicMember)
 
     def printPrivate(self):
-        print(self.__privateMember)
+        print(self._privateMember)
 ```
 
 Nu ser du att vi även har två metoder som skriver ut respektive variabel. Det är instansen som äger dem båda, även den privata, och kan således hantera dem:
@@ -312,7 +312,7 @@ publik
 AttributeError: 'Test_private' object has no attribute '__privateMember'
 ```
 
-...så får vi ett felmeddelande som talar om för oss att objektet inte har det attributet. Bra. Att använda privata variabler och metoder kan lämpa sig bra i till exempel en arvskedja eller för att visa andra utvecklare att de inte ska peta på de variablerna eller metoderna.
+...så får vi ett felmeddelande som talar om för oss att objektet inte har det attributet. Bra. Att använda privata variabler och metoder kan lämpa sig bra i till exempel en arvskedja eller för att visa andra utvecklare att de inte ska peta på de variablerna eller metoderna. -->
 
 
 
