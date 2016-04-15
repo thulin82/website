@@ -103,7 +103,11 @@ Peka sedan webbläsaren på `localhost:5000`, alternativt `127.0.0.1:5000` så s
 Bootstrap {#bootstrap}
 ------------------------------
 
-Vi använder [Bootstrap](http://getbootstrap.com/) i applikationen. Det underlättar en snygg design och responsivitet. [Temat som används](https://getbootstrap.com/examples/theme/#). Du får självklart använda ett annat tema om du vill. De flesta teman har bara en annan .css-fil och kan skilja sig lite i klassnamn och struktur. Inga större skillnader.
+Vi använder [Bootstrap](http://getbootstrap.com/) i applikationen. Det underlättar en snygg design och responsivitet.  
+
+[Temat som används](https://getbootstrap.com/examples/theme/#).  
+
+Du får självklart använda ett annat tema om du vill. De flesta teman har bara en annan .css-fil och kan skilja sig lite i klassnamn och struktur. Inga större skillnader.
 
 Nu kör vi.
 
@@ -123,7 +127,7 @@ touch static/styles/style.css
 
 ###index.html {#index}
 
-För Bootstrap's och JQuery's filer använder vi oss av (CDN)(https://en.wikipedia.org/wiki/Content_delivery_network). Det krävs att man har åtkomst till internet, då Bootstraps filer laddas in via `http`. Mindre filer lokalt. Smidigt!  
+För Bootstrap's och JQuery's filer använder vi oss av (CDN)(https://en.wikipedia.org/wiki/Content_delivery_network). Det krävs att man har åtkomst till internet, då Bootstraps filer laddas in via `http`. Det blir färre filer lokalt. Smidigt!  
 
 Öppna index.html i editorn och kopiera in följande kod:
 
