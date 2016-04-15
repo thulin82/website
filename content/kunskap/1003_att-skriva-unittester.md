@@ -65,7 +65,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Vi importerar modulen och skapar en subklass av _unittest.TestCase_. blocket med _unittest.main()_ kör igång ett interface för testscriptet och producerar en bra utskrift. Notera att vi har med docstrings nu. Docstrings som används i metoderna kommer skrivas ut när testfilen körs.
+Vi importerar modulen och skapar en subklass av _unittest.TestCase_. Blocket med _unittest.main()_ kör igång ett interface för testscriptet och producerar en bra utskrift. Notera att vi har med docstrings nu. Docstrings som används i metoderna kommer skrivas ut när testfilen körs.
 
 Ett enkelt test på den inbyggda funktionen **.upper()** kan se ut så här:
 
