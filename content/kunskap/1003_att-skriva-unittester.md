@@ -65,7 +65,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Vi importerar modulen och skapar en subklass av _unittest.TestCase_. blocket med _unittest.main()_ kör igång ett interface för testscriptet och producerar en bra utskrift. Notera att vi har med docstrings nu. Docstrings som används i metoderna kommer skrivas ut när testfilen körs.
+Vi importerar modulen och skapar en subklass av _unittest.TestCase_. Blocket med _unittest.main()_ kör igång ett interface för testscriptet och producerar en bra utskrift. Notera att vi har med docstrings nu. Docstrings som används i metoderna kommer skrivas ut när testfilen körs.
 
 Ett enkelt test på den inbyggda funktionen **.upper()** kan se ut så här:
 
@@ -231,22 +231,13 @@ Ran 1 test in 0.000s
 FAILED (failures=1)
 ```
 
-Större rubrik igen {#dontForgetId}
-------------------------------
-
-Ascinema länk:
-
-[ASCIINEMA src=37763]
-
-
-
-###Överkurs {#overkurs}
-
-Text...
-
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Bra finish, länka till forumtråd eller liknande?
+Det här var lite om unittest och hur man kan gå tillväga för att testa sin kod. De flesta testerna är relativt självförklarande och kommer inte gås in djupare på. Läs gärna mer om unittest:  
+
+* [docs.python.org](https://docs.python.org/3.5/library/unittest.html)  
+
+* [docs.python-guide.org](http://docs.python-guide.org/en/latest/writing/tests/)
