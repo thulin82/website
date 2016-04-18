@@ -228,16 +228,15 @@ foreach ($res as $doc) {
         
         if (!empty($revision)) {
             $fm["revision"] = $revision;
-        } else {
-            if ($published) {
-                $fm["published"] = $published;
-            }
-            if ($updated) {
-                $fm["updated"] = $updated;
-            }
-            $fm["created"] = $created;
         }
-        
+        if ($published) {
+            $fm["published"] = $published;
+        }
+        if ($updated) {
+            $fm["updated"] = $updated;
+        }
+        $fm["created"] = $created;
+
         $content = yaml_emit($fm, YAML_UTF8_ENCODING) . $content;
     }
 

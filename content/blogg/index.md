@@ -5,6 +5,7 @@ views:
             class: blog
 
     byline: false
+    share-this: false
     block-about: false
     article-toc: false
 
@@ -13,9 +14,12 @@ views:
         template: default/blog-list
         sort: 2
         data:
+            dateFormat: Y-m-d
             meta: 
                 type: toc
                 items: 7
+                orderby: publishTime
+                orderorder: desc
 
     blog-toc:
         region: sidebar-right
@@ -25,6 +29,8 @@ views:
             meta: 
                 type: toc
                 items: 7
+                orderby: publishTime
+                orderorder: desc
 
 ...
 Nytt och Noterat
