@@ -1,9 +1,20 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
----
+author: mos
+revision:
+  "2016-03-15": (I, mos) Tog bort videoserie MonkeyLords och NewBoston.
+  "2016-02-29": (H, mos) Tog bort material om två dimensionell lista och lade till
+    övning "Kom igång med datatypen lista i Python".
+  "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
+  "2015-02-03": (F, mos) Tog bort curses fråga från redovisningsfrågorna.
+  "2015-02-02": (E, mos) Flyttade curses till extra uppgift och lade till ny uppgift
+    med Marvin inventarier.
+  "2015-01-08": (D, mos) Bort blå ruta med kursutveckling pågår.
+  "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
+  "2014-09-19": (B, mos) Tog bort beta status.
+  "2014-08-27": (A, mos) Första utgåvan för python kursen.
+...
 Kmom04: Listor
-====================================
+==================================
 
 Lär dig grunderna i datastrukturen listor och se vad du kan göra med dem.
 
@@ -27,10 +38,10 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
     * Ch8 Lists
 
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * Ch10 Lists
 
 
@@ -58,12 +69,6 @@ Titta på följande:
 
     * [Python for Informatics: Chapter 8 - Lists](https://www.youtube.com/watch?v=nO8eU3uts0o)
 
-Följande videor är också vara relevanta, kika på dem och se om du tycker de kompletterar övriga videor.
-
-1. [Python Programming Tutorial](https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA) från [Bucky på The New Boston](https://www.youtube.com/channel/UCJbPGzawDH1njbqV-D5HqKw). Titta på video 9-13. Videorna är skrivna med Python2, inte Python3, så var uppmärksam på de små men viktiga skillnaderna (se kursboken).
-
-2. [Python 3 Tutorials](https://www.youtube.com/playlist?list=PL8830E081324343F1) från [TheMonkeyLords](https://www.youtube.com/channel/UCMkRMDJ398W1JvBxxlJ9dpw). Titta på video 12-14. Det blir som ett komplement till Buckys video-serie
-
 
 
 ###Lästips {#lastips}
@@ -82,7 +87,7 @@ Det finns inga lästips.
 
 Genomför övningarna för att träna inför uppgifterna.
 
-1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python]([BASEURL]kunskap/kom-igang-med-datatypen-lista-i-python)".
+1. Jobba igenom artikeln/övningen "[Kom igång med datatypen lista i Python](kunskap/kom-igang-med-datatypen-lista-i-python)".
 
 
 
@@ -90,17 +95,17 @@ Genomför övningarna för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python och listor]([BASEURL]uppgift/python-och-listor)".
+1. Gör uppgiften "[Python och listor](uppgift/python-och-listor)".
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-3)".
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 3](uppgift/din-egen-chattbot-marvin-steg-3)".
 
-3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier]([BASEURL]uppgift/din-egen-chattbot-marvin-inventarie)".
+3. Gör uppgiften "[Din egen chattbot - Marvin - inventarier](uppgift/din-egen-chattbot-marvin-inventarie)".
 
 
 
 ###Extra {#extra}
 
-1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1]([BASEURL]uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
+1. Bekanta dig med Python-modulen Curses och gör uppgiften "[Ett terminal-baserat spel i Python - steg1](uppgift/ett-terminal-baserat-spel-i-python-steg1)". Läs följande dokument för att komma igång med curses.
     * [Curses Programming with Python](https://docs.python.org/3/howto/curses.html)
     * [Curses — Terminal handling for character-cell displays](https://docs.python.org/3/library/curses.html)
 
@@ -112,7 +117,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
@@ -122,16 +127,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 
 
-Revisionshistoria {#revisionshistoria}
---------------------------------------
 
-<span class='revision-history' markdown='1'>
-2016-02-29 (H, mos) Tog bort material om två dimensionell lista och lade till övning "Kom igång med datatypen lista i Python".  
-2016-02-22 (G, mos) Lade till videoserien "Lär dig Python".  
-2015-02-03 (F, mos) Tog bort curses fråga från redovisningsfrågorna.  
-2015-02-02 (E, mos) Flyttade curses till extra uppgift och lade till ny uppgift med Marvin inventarier.  
-2015-01-08 (D, mos) Bort blå ruta med kursutveckling pågår.  
-2014-10-01 (C, mos) Ändrade länken till redovisa-instruktionen.  
-2014-09-19 (B, mos) Tog bort beta status.  
-2014-08-27 (A, mos) Första utgåvan för python kursen.  
-</span>

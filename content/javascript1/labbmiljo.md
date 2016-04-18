@@ -1,14 +1,13 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (B, mos) Bort med installation av nano.
-  "2015-08-25": (A, mos) Första utgåvan inför python ht15.
-category: python
+  "2015-08-26": (A, mos) Första utgåvan inför javascript1 ht15.
+category: javascript
 ...
-Installera en labbmiljö till python
+Introduktion till labbmiljö i javascript1
 ==================================
 
-Här får du en snabb översikt för att se vilka verktyg och applikationer du behöver installera för att erhålla den labbmiljö som krävs för kursen python.
+Här får du en snabb översikt för att se vilka verktyg och applikationer du behöver installera för att erhålla den labbmiljö som krävs för kursen javascript1.
 
 <!--more-->
 
@@ -72,16 +71,11 @@ Här är en [guide till hur du installerar Git](kunskap/installera-versionshante
 Webbläsare  {#webblasare}
 ---------------------------------
 
-Se till att du har webbläsaren [Firefox](https://www.mozilla.org/download) installerad på din dator. Du kan även välja att installera [Google Chrome](https://www.google.com/chrome/).
+Se till att du har minst [Firefox](https://www.mozilla.org/download) och [Google Chrome](https://www.google.com/chrome/) installerade på din dator. Vi använder Firefox som referens. Om det visar sig att koden fungerar olika i olika webbläsare så testar vi alltid i Firefox.
 
+I Firefox behöver du även [installera pluginen Firebug](http://getfirebug.com/) som är ett utvecklarverktyg för Firefox.
 
-
-Installera Python i terminalen  {#python}
----------------------------------
-
-Nu är det dags att installera Python i din terminal. Det finns olika sätt att installera Python på din datorn men jag har valt att installera det i terminalen. Det blir alltså vår referensmiljö.
-
-För att installera och komma igång med ditt första Python-program så läser du artikeln "[Installera Python i terminalen](kunskap/installera-python-i-terminalen)".
+Här en guide för att dig som vill se [hur Firebug fungerar](coachen/kom-i-gang-och-installera-firebug-som-utvecklarverktyg).
 
 
 
@@ -90,7 +84,7 @@ Avslutningsvis {#avslutning}
 
 Nu har du kommit igång och du har den labbmiljö som krävs för att genomföra det första kursmomentet i kursen.
 
-Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/python).
+Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/javascript1).
 
 
 

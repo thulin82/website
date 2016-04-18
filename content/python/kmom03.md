@@ -1,9 +1,15 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
----
+author: mos
+revision:
+  "2016-03-15": (F, mos) Tog bort videoserie MonkeyLords och NewBoston.
+  "2016-02-22": (E, mos) Lade till videoserien "Lär dig Python".
+  "2015-01-08": (D, mos) Bort blå ruta med kursutveckling pågår.
+  "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
+  "2014-09-08": (B, mos) Första publika releasen.
+  "2014-08-27": (A, mos) Första utgåvan för python kursen.
+...
 Kmom03: Strängar och filer
-====================================
+==================================
 
 Lär dig om strängar och filhantering i Python samt börja strukturera din kod i moduler genom att dela upp den i olika filer.
 
@@ -24,20 +30,20 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
     * Ch6 Strings
     * Ch7 Files
 
-2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist).  
+2. Komplettera med motsvarande kapitel från systerboken [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist).  
     * Ch8 Strings
     * Ch14 Files 
 
 Python har en inbyggd debugger som kan användas för att felsöka och rätta upp felaktiga program. Läs om den i följande böcker.
 
-1. [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * App A Debugging 
 
-2. [Invent your games with Python]([BASEURL]kunskap/boken-invent-your-own-computer-games-with-python) 
+2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) 
     * Chapter 7 - Using the Debugger
 
 
@@ -61,12 +67,6 @@ Titta på följande:
 
     * [Python for Informatics: Chapter 6 - Strings](https://www.youtube.com/watch?v=L2IUSArpG98)
     * [Python for Informatics: Chapter 7 - Files](https://www.youtube.com/watch?v=O0wE2M8-ois)
-
-Följande videor är också vara relevanta, kika på dem och se om du tycker de kompletterar övriga videor.
-
-1. [Python Programming Tutorial](https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA) från [Bucky på The New Boston](https://www.youtube.com/channel/UCJbPGzawDH1njbqV-D5HqKw). Titta på video 6-7, 17-18, 41-43. Videorna är skrivna med Python2, inte Python3, så var uppmärksam på de små men viktiga skillnaderna (se kursboken).
-
-2. [Python 3 Tutorials](https://www.youtube.com/playlist?list=PL8830E081324343F1) från [TheMonkeyLords](https://www.youtube.com/channel/UCMkRMDJ398W1JvBxxlJ9dpw). Titta på video 3, 17-18, 22-23. Det blir som ett komplement till Buckys video-serie
 
 
 
@@ -94,9 +94,9 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med strängar och filer]([BASEURL]uppgift/python-med-strangar-och-filer)".
+1. Gör uppgiften "[Python med strängar och filer](uppgift/python-med-strangar-och-filer)".
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-2)".
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 2](uppgift/din-egen-chattbot-marvin-steg-2)".
 
 
 
@@ -115,7 +115,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
@@ -126,13 +126,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 
 
-Revisionshistoria {#revisionshistoria}
---------------------------------------
 
-<span class='revision-history' markdown='1'>
-2016-02-22 (E, mos) Lade till videoserien "Lär dig Python".  
-2015-01-08 (D, mos) Bort blå ruta med kursutveckling pågår.  
-2014-10-01 (C, mos) Ändrade länken till redovisa-instruktionen.  
-2014-09-08 (B, mos) Första publika releasen.  
-2014-08-27 (A, mos) Första utgåvan för python kursen.  
-</span>

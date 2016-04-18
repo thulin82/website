@@ -1,9 +1,17 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
----
+author: mos
+revision:
+  "2016-03-15": (H, mos) Tog bort videoserie MonkeyLords och NewBoston.
+  "2016-02-22": (G, mos) Lade till videoserien "Lär dig Python".
+  "2015-08-25": (F, mos) Ändrar till hur labbmiljön installeras samt dbwebb-cli v2.
+  "2015-01-08": (E, mos) Bort blå ruta med kursutveckling pågår.
+  "2014-10-01": (D, mos) Ändrade länken till redovisa-instruktionen.
+  "2014-08-30": (C, mos) Publicerades för första gången officiellt.
+  "2014-08-25": (B, mos) Cgi fungerar som tänkt med python3 på webbservern.
+  "2014-08-21": (A, mos) Första utgåvan för python kursen.
+...
 Kmom01: Kom i gång med Python
-====================================
+==================================
 
 Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Python fungerar på många miljöer och i olika varianter. Vi börjar skriva de första enkla programmen för att komma underfund med hur Python kan användas.
 
@@ -25,26 +33,26 @@ Läs följande:
 
 Detta är kursens huvudbok, Läs den.
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
 
     * Ch1 Why should you learn to write programs?
     * Ch2 Variables, expressions and statements
 
 Här följer kompletterande litteratur.
 
-1. [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist). Denna bok är nästan skriven på samma sätt som kurslitteraturen ovan, men du kan kika i den för att se vilken bok du uppskattar mest. Den kompletterar huvudboken och du kan skumläsa den.
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist). Denna bok är nästan skriven på samma sätt som kurslitteraturen ovan, men du kan kika i den för att se vilken bok du uppskattar mest. Den kompletterar huvudboken och du kan skumläsa den.
 
     * Ch1 The way of the program
     * Ch2 Variables, expressions and statements
 
 Om du vill kan du även kika igenom  de första kapitlen i referenslitteraturen, det är bara så du vet om det är böcker som passar dig. Skumläs snabbt följande.
 
-3. [Invent your games with Python]([BASEURL]kunskap/boken-invent-your-own-computer-games-with-python) 
+3. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) 
 
     * Chapter 1 - Installing Python
     * Chapter 2 - The Interactive Shell
 
-4. [Dive into Python 3]([BASEURL]kunskap/boken-dive-into-python-3) 
+4. [Dive into Python 3](kunskap/boken-dive-into-python-3) 
 
     * Ch-1 What’s New in “Dive Into Python 3”
     * Ch0 Installing Python
@@ -77,13 +85,6 @@ Titta på följande:
     * [Python for Informatics: Chapter 1 - Introduction](https://www.youtube.com/watch?v=G721cooZXgs)
     * [Python for Informatics: Chapter 2 - Expressions](https://www.youtube.com/watch?v=IXXHH6ztsSA)
 
-Följande videor är också vara relevanta, kika på dem och se om du tycker de kompletterar övriga videor.
-
-1. [Python Programming Tutorial](https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA) från [Bucky på The New Boston](https://www.youtube.com/channel/UCJbPGzawDH1njbqV-D5HqKw). Titta på video 1-3, 5-6 för att få en känsla av hur det fungerar. Videorna är skrivna med Python2, inte Python3, så var uppmärksam på de små men viktiga skillnaderna (se kursboken).
-
-2. [Python 3 Tutorials](https://www.youtube.com/playlist?list=PL8830E081324343F1) från [TheMonkeyLords](https://www.youtube.com/channel/UCMkRMDJ398W1JvBxxlJ9dpw). Titta på video 1-4. Det blir som ett komplement till Buckys video-serie
-
-3. [Python 101 - CGI](https://www.youtube.com/watch?v=Ct_aAWRcwdg&list=TLUxtqlOhUaMvOqZLkyzT1Z53oAmCJ59AL) som visar hur du gör en webbsida med Python som ett CGI-skript.
 
 
 
@@ -106,11 +107,11 @@ Om du känner att du har tid och lust.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön]([BASEURL]python/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](python/labbmiljo) som behövs för kursen.
 
-1. [Installera kommandot `dbwebb`  samt kursrepot för kursen]([BASEURL]dbwebb-cli/clone).
+1. [Installera kommandot `dbwebb`  samt kursrepot för kursen](dbwebb-cli/clone).
 
-Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`]([BASEURL]dbwebb-cli).
+Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`](dbwebb-cli).
 
 
 
@@ -118,7 +119,7 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 
 Genomför följande övning för att träna dig.
 
-1. Kom igång och gör ditt första program i Python tillsammans med artikeln "[Kom igång med ditt första program i Python]([BASEURL]kunskap/kom-igang-med-ditt-forsta-program-i-python)".
+1. Kom igång och gör ditt första program i Python tillsammans med artikeln "[Kom igång med ditt första program i Python](kunskap/kom-igang-med-ditt-forsta-program-i-python)".
 
 
 
@@ -126,9 +127,9 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[En me-sida i Python som cgi-skript]([BASEURL]uppgift/en-me-sida-i-python-som-cgi-skript)".
+1. Gör uppgiften "[En me-sida i Python som cgi-skript](uppgift/en-me-sida-i-python-som-cgi-skript)".
 
-2. Gör uppgiften "[Ditt första Python-skript]([BASEURL]uppgift/ditt-forsta-python-skript)".
+2. Gör uppgiften "[Ditt första Python-skript](uppgift/ditt-forsta-python-skript)".
 
 
 
@@ -144,7 +145,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
@@ -157,15 +158,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 
 
-Revisionshistoria {#revisionshistoria}
---------------------------------------
 
-<span class='revision-history' markdown='1'>
-2016-02-22 (G, mos) Lade till videoserien "Lär dig Python".  
-2015-08-25 (F, mos) Ändrar till hur labbmiljön installeras samt dbwebb-cli v2.  
-2015-01-08 (E, mos) Bort blå ruta med kursutveckling pågår.  
-2014-10-01 (D, mos) Ändrade länken till redovisa-instruktionen.  
-2014-08-30 (C, mos) Publicerades för första gången officiellt.  
-2014-08-25 (B, mos) Cgi fungerar som tänkt med python3 på webbservern.  
-2014-08-21 (A, mos) Första utgåvan för python kursen.  
-</span>

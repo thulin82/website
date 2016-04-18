@@ -1,14 +1,13 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (B, mos) Bort med installation av nano.
-  "2015-08-25": (A, mos) Första utgåvan inför python ht15.
-category: python
+  "2015-10-26": (A, mos) Första utgåvan.
+category: webbprogrammering
 ...
-Installera en labbmiljö till python
+Introduktion till labbmiljö i webapp
 ==================================
 
-Här får du en snabb översikt för att se vilka verktyg och applikationer du behöver installera för att erhålla den labbmiljö som krävs för kursen python.
+Här får du en snabb översikt för att se vilka verktyg och applikationer du behöver installera för att erhålla den labbmiljö som krävs för kursen webapp.
 
 <!--more-->
 
@@ -19,7 +18,7 @@ Du kan se detta som en referensinstallation av labbmiljön. Det är inget absolu
 Operativsystem  {#os}
 ---------------------------------
 
-Du kan använda Windows, Mac OS eller någon variant av Linux/Unix. Du undviker enklast eventuella problem genom att hålla dig till de senaste versionerna av operativsystemen.
+Till din primära utvecklingsmiljö kan du använda Windows, Mac OS eller någon variant av Linux/Unix. Du undviker enklast eventuella problem genom att hålla dig till de senaste versionerna av operativsystemen.
 
 Om du kör Windows, se då till att göra det som en användare som har Administratörsrättigheter.
 
@@ -72,16 +71,31 @@ Här är en [guide till hur du installerar Git](kunskap/installera-versionshante
 Webbläsare  {#webblasare}
 ---------------------------------
 
-Se till att du har webbläsaren [Firefox](https://www.mozilla.org/download) installerad på din dator. Du kan även välja att installera [Google Chrome](https://www.google.com/chrome/).
+Se till att du har minst [Firefox](https://www.mozilla.org/download) och [Google Chrome](https://www.google.com/chrome/) installerade på din dator. 
+
+Både Firefox och Chrome har ett utvecklarläge för mobila plattformar och det är bra att du bekantar dig med båda.
+
+Här finns en guide till hur du kommer åt [utvecklarläge för mobila enheter](coachen/developer-tools-i-webblasaren-for-mobila-enheter) i Firefox och Chrome.
 
 
 
-Installera Python i terminalen  {#python}
+Simulator för Firefox OS  {#firefoxos}
 ---------------------------------
 
-Nu är det dags att installera Python i din terminal. Det finns olika sätt att installera Python på din datorn men jag har valt att installera det i terminalen. Det blir alltså vår referensmiljö.
+Firefox OS är ett operativsystem för mobila enheter och telefoner. Det finns ett utvecklingsverktyg WebIDE som innehåller en simulator för Firefox OS. Det är ett bra verktyg för att testa hur ens webbpalts kan se ut i en telefon.
 
-För att installera och komma igång med ditt första Python-program så läser du artikeln "[Installera Python i terminalen](kunskap/installera-python-i-terminalen)".
+Här är en [guide om hur du installerar Firefox Developer, en speciell utgåva av Firefox, tillsammans med WebIDE och simulatorn för Firefox OS](coachen/firefox-developer-med-firefox-os-simulator-utvecklingsverktyg-for-en-webbprogrammerare).
+
+
+
+Webbserver {#server}
+--------------------------------------
+
+[Installera XAMPP](https://www.apachefriends.org) som innehåller webbservern Apache.
+
+På Windows och Mac OS är det rekommenderat att du kör XAMPP, men sitter du på Linux så kan du göra som du vill. Kanske är det enklare att installera med pakethanteraren. Fråga i forumet om du behöver råd.
+
+Här finns en [utförlig beskrivning av hur du installerar XAMPP](kunskap/installera-en-egen-webbserver-for-utveckling) på olika plattformar.
 
 
 
@@ -90,7 +104,7 @@ Avslutningsvis {#avslutning}
 
 Nu har du kommit igång och du har den labbmiljö som krävs för att genomföra det första kursmomentet i kursen.
 
-Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/python).
+Om du stöter på problem så kan du alltid [fråga direkt i forumet om kursens forum](forum/utbildning/webapp).
 
 
 

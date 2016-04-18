@@ -1,9 +1,12 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
----
+author: mos
+revision:
+  "2015-01-09": (C, mos) Text om studieplan kurspaket.
+  "2015-01-08": (B, mos) Bort blå ruta med kursutveckling pågår.
+  "2014-06-23": (A, mos) Första revisionen inför kursstart HT2014.
+...
 Kursen python
-===================================================
+==================================
 
 Kursen **Programmering och Problemlösning i Python**, a.k.a. *python*, lär ut grunderna i programmering och problemlösning med programmerinsspråket Python.
 
@@ -71,7 +74,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i kurslitteraturen. Sedan måste vi börja skriva våra första enkla program också.
 
-[Instruktion till kursmoment 01]([BASEURL]python/kmom01).
+[Instruktion till kursmoment 01](python/kmom01).
 
 
 
@@ -79,7 +82,7 @@ Det första vi skall göra är att skaffa oss en utvecklingsmiljö och kika i ku
 
 Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if-satser, loopar och hur du använder de inbyggda funktionerna. Därefter är det dags att skriva egna funktioner i ditt första lite större program där Marvin skall få lite intelligens så han kan svara på frågor.
 
-[Instruktion till kursmoment 02]([BASEURL]python/kmom02).
+[Instruktion till kursmoment 02](python/kmom02).
 
 
 
@@ -87,7 +90,7 @@ Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if
 
 Lär dig om strängar och filhantering i Python samt börja strukturera din kod i moduler genom att dela upp den i olika filer.
 
-[Instruktion till kursmoment 03]([BASEURL]python/kmom03).
+[Instruktion till kursmoment 03](python/kmom03).
 
 
 
@@ -95,7 +98,7 @@ Lär dig om strängar och filhantering i Python samt börja strukturera din kod 
 
 Lär dig grunderna i datastrukturen listor och vad du kan göra med den. Pröva på att skriva ett grafiskt program i terminalen men Python-modulen Curses.
 
-[Instruktion till kursmoment 04]([BASEURL]python/kmom04).
+[Instruktion till kursmoment 04](python/kmom04).
 
 
 
@@ -103,7 +106,7 @@ Lär dig grunderna i datastrukturen listor och vad du kan göra med den. Pröva 
 
 Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupler. Bygg vidare på ditt curses-program och gör ett litet spel.
 
-[Instruktion till kursmoment 05]([BASEURL]python/kmom05).
+[Instruktion till kursmoment 05](python/kmom05).
 
 
 
@@ -111,7 +114,7 @@ Lär dig mer om datastrukturer i Python, nu handlar det om dictionaries och tupl
 
 Lär dig att installera och använda externa moduler i Python med pip. Momentet är inriktat på en samling av moduler som hjälper dig att koppla upp dig mot webbplatser och hämta information från dem.
 
-[Instruktion till kursmoment 06]([BASEURL]python/kmom06).
+[Instruktion till kursmoment 06](python/kmom06).
 
 
 
@@ -119,16 +122,16 @@ Lär dig att installera och använda externa moduler i Python med pip. Momentet 
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10]([BASEURL]python/kmom10).
+[Instruktion till kursmoment 10](python/kmom10).
 
 
 
 Kurslitteratur {#litteratur}
 ----------------------------
 
-[Måste jag skaffa kurslitteraturen]([BASEURL]kurser/maste-jag-skaffa-kurslitteraturen)?
+[Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
-Det finns en [översikt av kurslitteratur per kurs]([BASEURL]kunskap/oversikt-av-kurslitteratur-per-kurs).
+Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
 
 
 
@@ -139,10 +142,10 @@ Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal art
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[Python for Informatics - Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information)** -- Charles R Severance  
+* **[Python for Informatics - Exploring information](kunskap/boken-python-for-informatics-exploring-information)** -- Charles R Severance  
   En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
 
-* **[Think Python - How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
+* **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
   En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
 
 
@@ -152,10 +155,10 @@ Det finns läsanvisningar i samband med varje kursmoment.
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
 
-* **[Dive into Python 3]([BASEURL]kunskap/boken-dive-into-python-3)** -- Mark Pilgrim  
+* **[Dive into Python 3](kunskap/boken-dive-into-python-3)** -- Mark Pilgrim  
   En intro-bok till Python 3 för den som redan kan Python 2 eller kan ett annat programmeringsspråk.
 
-* **[Invent Your Own Computer Games with Python]([BASEURL]kunskap/boken-invent-your-own-computer-games-with-python)** -- Al Sweigart  
+* **[Invent Your Own Computer Games with Python](kunskap/boken-invent-your-own-computer-games-with-python)** -- Al Sweigart  
   en nybörjarbok i Python som fokuserar på övningar med spel.
   
 
@@ -182,20 +185,20 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan]([BASEURL]python/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+För dig som studerar på distans finns det en [rekommenderad studieplan](python/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
 
-Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet]([BASEURL]webutv#studieplan).
+Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
 Går du på campus får du en lektionsplan i samband med kursstart.
 
-Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter]([BASEURL]kurser/lektionsplan-och-rekommenderad-studieplan).
+Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
 
 
 
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker]([BASEURL]kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
@@ -204,7 +207,7 @@ Lärarstöd och handledning {#handledning}
 
 I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
 
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser]([BASEURL]kurser/lararstod-och-handledning).  
+Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).  
 
 
 
@@ -213,7 +216,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [jag jobbar med kursutvärdering och kursutveckling]([BASEURL]kurser/kursutvardering-och-kursutveckling).
+Läs om hur [jag jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
 
 
 
@@ -227,11 +230,5 @@ Du hittar [kursplanen genom att söka på kurskoden DV1531 via BTH's hemsida](ht
 
 
 
-Revisionshistoria {#revisionshistoria}
---------------------------------------
 
-<span class='revision-history' markdown='1'>
-2015-01-09: (C, mos) Text om studieplan kurspaket.  
-2015-01-08: (B, mos) Bort blå ruta med kursutveckling pågår.  
-2014-06-23: (A, mos) Första revisionen inför kursstart HT2014.  
-</span>
+

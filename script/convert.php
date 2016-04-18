@@ -98,7 +98,7 @@ foreach ($res as $doc) {
             break;
         
         case "block":
-            $file = "block/$key";
+            $file = "block-old/$key";
             $doYaml = false;
             $h1 = false;
             $h4 = "####";
@@ -185,10 +185,16 @@ foreach ($res as $doc) {
     $content = str_replace("<span class='revision-history'>Av Mikael Roos (mos@dbwebb.se)</span>", "", $content);
     $content = str_replace("<span class='revision-history'>Av Rickard Gimersted (rickard@gimerstedt.se)</span>", "", $content);
 
-    // TODO Grep for older IMAGE, IMAGE2
-    // TODO Grep and format revision history
-    //<span class='revision-history'>Av Mikael Roos (mos@dbwebb.se)</span>
-    //[IMG src=/img/htmlphp/kmom01/image06.png alt=En me-sida när den är klar.]
+    // IMG2
+    $content = str_replace("[IMG2 ", "[FIGURE ", $content);
+
+    // IMG
+    $pattern = "/\[IMG src=(.+) alt=(.+)\]/";
+    $replace = "[FIGURE src=$1 caption=\"$2\"]";
+    $content = preg_replace($pattern, $replace, $content);
+
+
+    // Grep and format revision history
     $match = null;
     $pattern = "/Revisionshistoria \{#revisionshistoria\}.*?>(.*?)<\/span>/s";
     $revision = [];

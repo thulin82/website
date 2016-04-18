@@ -1,9 +1,15 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
----
+author: mos
+revision:
+  "2015-08-25": (E, mos) Bytte bin/dbwebb mot dbwebb.
+  "2014-09-26": (D, mos) Tog bort kravet på att hålla `me.py` och `redovisning.py`
+    uppdaterade.
+  "2014-09-17": (C, mos) Förtydligade kravet om 15 meningar.
+  "2014-08-21": (B, mos) Genomgången.
+  "2014-06-13": (A, mos) Första utgåvan för python kursen.
+...
 Resultat och redovisning
-====================================
+==================================
 
 Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 
@@ -14,7 +20,7 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-I filen `me/redovisning.cgi` skall du [redovisa dina reflektioner]([BASEURL]kunskap/att-skriva-en-bra-redovisningstext) från varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc. Skriv minst 15 meningar.
+I filen `me/redovisning.cgi` skall du [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc. Skriv minst 15 meningar.
 
 Besvara även de specifika frågor som finns för varje kursmoment.
 
@@ -43,7 +49,7 @@ Den länken som dyker upp längst ned är länken till din me-sida. Där kan du 
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet]([BASEURL]forum/utbildning/python). 
+Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/python). 
 
 Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-sida.
 
@@ -52,7 +58,7 @@ Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-s
 Kopiera redovisningstexten till ITs {#its}
 ---------------------------------------
 
-Kopiera redovisningstexten och lämna in den på redovisningen [ITs]([BASEURL]bth#its) tillsammans med en länk till din me-sida. 
+Kopiera redovisningstexten och lämna in den på redovisningen [ITs](bth#its) tillsammans med en länk till din me-sida. 
 
 Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar tillsammans med kursmomentets övningar.
 
@@ -67,13 +73,4 @@ Ta en kort mental paus innan du ger dig på nästa kursmoment.
 
 
 
-Revisionshistoria {#revisionshistoria}
---------------------------------------
 
-<span class='revision-history' markdown='1'>
-2015-08-25 (E, mos) Bytte bin/dbwebb mot dbwebb.  
-2014-09-26 (D, mos) Tog bort kravet på att hålla `me.py` och `redovisning.py` uppdaterade.  
-2014-09-17 (C, mos) Förtydligade kravet om 15 meningar.  
-2014-08-21 (B, mos) Genomgången.  
-2014-06-13 (A, mos) Första utgåvan för python kursen.  
-</span>

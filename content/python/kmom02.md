@@ -1,9 +1,16 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
----
+author: mos
+revision:
+  "2016-03-15": (G, mos) Tog bort videoserie MonkeyLords och NewBoston.
+  "2016-02-22": (F, mos) Lade till videoserien "Lär dig Python".
+  "2015-01-30": (E, mos) Länk till läsanvisning appendix 2.
+  "2015-01-08": (D, mos) Bort blå ruta med kursutveckling pågår.
+  "2014-10-01": (C, mos) Ändrade länken till redovisa-instruktionen.
+  "2014-09-03": (B, mos) Första officiella versionen.
+  "2014-08-27": (A, mos) Första utgåvan för python kursen.
+...
 Kmom02: Villkor, funktioner och loopar
-====================================
+==================================
 
 Kom i gång med grunderna i Python och öva hur du skriver kod med variabler, if-satser, loopar och hur du använder de inbyggda funktionerna. Därefter är det dags att skriva egna funktioner i ditt första lite större program där Marvin skall få lite intelligens så han kan svara på frågor.
 
@@ -23,18 +30,18 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information]([BASEURL]kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
     * Ch3 Conditional execution
     * Ch4 Functions
     * Ch5 Iteration
 
-2. [Invent your games with Python]([BASEURL]kunskap/boken-invent-your-own-computer-games-with-python) 
+2. [Invent your games with Python](kunskap/boken-invent-your-own-computer-games-with-python) 
     * [Appendix A - Differences Between Python 2 and 3](http://inventwithpython.com/appendixa.html)
 
 
 Det räcker om du läser ovanstående, men vill du ha lite till och samtidigt lite repetition, så läser du motsvarande kapitel i Think Python.
 
-1. [Think Python: How to Think Like a Computer Scientist]([BASEURL]kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
     * Ch3 Functions
     * Ch5 Conditionals and recursion
     * Ch6 Fruitful functions
@@ -60,12 +67,6 @@ Titta på följande:
     * [Python for Informatics: Chapter 4 - Functions](https://www.youtube.com/watch?v=Wdi6lhcrtBU)
     * [Python for Informatics: Chapter 5 - Iteration](https://www.youtube.com/watch?v=6KgArgGi6Mk)
 
-Följande videor är också vara relevanta, kika på dem och se om du tycker de kompletterar övriga videor.
-
-1. [Python Programming Tutorial](https://www.youtube.com/playlist?list=PLEA1FEF17E1E5C0DA) från [Bucky på The New Boston](https://www.youtube.com/channel/UCJbPGzawDH1njbqV-D5HqKw). Titta på video 4, 8, 20-26. Videorna är skrivna med Python2, inte Python3, så var uppmärksam på de små men viktiga skillnaderna (se kursboken).
-
-2. [Python 3 Tutorials](https://www.youtube.com/playlist?list=PL8830E081324343F1) från [TheMonkeyLords](https://www.youtube.com/channel/UCMkRMDJ398W1JvBxxlJ9dpw). Titta på video 5-11. Det blir som ett komplement till Buckys video-serie
-
 
 
 ###Lästips {#lastips}
@@ -90,9 +91,9 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Python med variabler, villkor, funktioner och loopar]([BASEURL]uppgift/python-med-variabler-villkor-funktioner-och-loopar)".
+1. Gör uppgiften "[Python med variabler, villkor, funktioner och loopar](uppgift/python-med-variabler-villkor-funktioner-och-loopar)".
 
-2. Gör uppgiften "[Din egen chattbot - Marvin - steg 1]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-1)".
+2. Gör uppgiften "[Din egen chattbot - Marvin - steg 1](uppgift/din-egen-chattbot-marvin-steg-1)".
 
 
 
@@ -107,7 +108,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]python/redovisa).
+Läs [instruktionen om hur du skall redovisa](python/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
@@ -117,14 +118,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 
 
-Revisionshistoria {#revisionshistoria}
---------------------------------------
 
-<span class='revision-history' markdown='1'>
-2016-02-22 (F, mos) Lade till videoserien "Lär dig Python".  
-2015-01-30 (E, mos) Länk till läsanvisning appendix 2.  
-2015-01-08 (D, mos) Bort blå ruta med kursutveckling pågår.  
-2014-10-01 (C, mos) Ändrade länken till redovisa-instruktionen.  
-2014-09-03 (B, mos) Första officiella versionen.  
-2014-08-27 (A, mos) Första utgåvan för python kursen.  
-</span>

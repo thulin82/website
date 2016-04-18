@@ -1,14 +1,13 @@
 ---
 author: mos
+category: webbprogrammering
 revision:
-  "2016-02-22": (B, mos) Bort med installation av nano.
-  "2015-08-25": (A, mos) Första utgåvan inför python ht15.
-category: python
+  "2015-10-29": (A, mos) Första utgåvan inför oophp ht15.
 ...
-Installera en labbmiljö till python
+Installera labbmiljö till oophp
 ==================================
 
-Här får du en snabb översikt för att se vilka verktyg och applikationer du behöver installera för att erhålla den labbmiljö som krävs för kursen python.
+Här får du en snabb översikt för att se vilka verktyg och applikationer du behöver installera för att erhålla den labbmiljö som krävs för kursen oophp.
 
 <!--more-->
 
@@ -72,16 +71,29 @@ Här är en [guide till hur du installerar Git](kunskap/installera-versionshante
 Webbläsare  {#webblasare}
 ---------------------------------
 
-Se till att du har webbläsaren [Firefox](https://www.mozilla.org/download) installerad på din dator. Du kan även välja att installera [Google Chrome](https://www.google.com/chrome/).
+Se till att du har minst [Firefox](https://www.mozilla.org/download) och [Google Chrome](https://www.google.com/chrome/) installerade på din dator. Vi använder Firefox som referens. Om det visar sig att koden fungerar olika i olika webbläsare så testar vi alltid i Firefox.
+
+Tidigare behövde du i Firefox [installera pluginen Firebug](http://getfirebug.com/) som är ett utvecklarverktyg för Firefox. men numer finns det ett bra inbyggt verktyg för utvecklare. Google Chrome innehåller också ett utvecklarverktyg som du akn använda.
+
+Här en guide för att dig som vill se [hur Firebug fungerar](coachen/kom-i-gang-och-installera-firebug-som-utvecklarverktyg). Kika på den så du vet ungefär hur ett utvecklarverktyg kan fungera i webbläsaren.
 
 
 
-Installera Python i terminalen  {#python}
+Webbserver, PHP och databaser  {#webbserver}
 ---------------------------------
 
-Nu är det dags att installera Python i din terminal. Det finns olika sätt att installera Python på din datorn men jag har valt att installera det i terminalen. Det blir alltså vår referensmiljö.
+[Installera XAMPP](https://www.apachefriends.org) som innehåller webbservern Apache tillsammans med PHP, och databaserna SQLite och MariaDB. MariaDB är en [variant av databasen MySQL](https://mariadb.com/kb/en/mariadb/mariadb-vs-mysql-features/).
 
-För att installera och komma igång med ditt första Python-program så läser du artikeln "[Installera Python i terminalen](kunskap/installera-python-i-terminalen)".
+På Windows och Mac OS är det rekommenderat att du kör XAMPP, men sitter du på Linux så kan du göra som du vill. Kanske är det enklare att installera med pakethanteraren. Fråga i forumet om du behöver råd.
+
+Här finns en [utförlig beskrivning av hur du installerar XAMPP](kunskap/installera-en-egen-webbserver-for-utveckling) på olika plattformar.
+
+
+
+Flytta filer med Filezilla {#filezilla}
+---------------------------------
+
+Det är behändigt att kunna flytta filer mellan system. Filezilla är ett ftp/sftp-verktyg som hjälper dig med det. installera Filezilla och du får hjälp i artikeln "[Flytta filer till driftsmiljön med sftp och Filezilla](kunskap/flytta-filer-till-driftsmiljon-med-sftp-och-filezilla)".
 
 
 
@@ -90,7 +102,7 @@ Avslutningsvis {#avslutning}
 
 Nu har du kommit igång och du har den labbmiljö som krävs för att genomföra det första kursmomentet i kursen.
 
-Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/python).
+Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/oophp).
 
 
 

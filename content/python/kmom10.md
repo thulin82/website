@@ -1,9 +1,14 @@
 ---
-author: Mikael Roos
-published: 2016-03-21
----
+author: mos
+revision:
+  "2015-08-25": (E, mos) Uppgraderade till dbwebb v2.
+  "2015-02-12": (D, mos, Sylvanas) Uppdaterade krav 6 och 5 (tog bort curses).
+  "2015-01-08": (C, mos) Bort blå ruta med kursutveckling pågår.
+  "2014-11-19": (B, mos) Tog bort `s` från kommandot se, det var duplicerat.
+  "2014-11-12": (A, mos) Första versionen till python ht14.
+...
 Kmom10: Projekt och examination
-====================================
+==================================
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -35,7 +40,7 @@ Fråga i forumet om du känner dig osäker.
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning]([BASEURL]kurser/bedomning-och-betygsattning).
+När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
 
 
 
@@ -176,7 +181,7 @@ Redovisning {#redovisning}
 
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet]([BASEURL]forum/utbildning/python) och berätta att du är klar.
+3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
 
 4\. Se till att samtliga kursmoment validerar.
 
@@ -187,13 +192,4 @@ dbwebb publish me
 
 
 
-Revisionshistoria {#revisionshistoria}
---------------------------------------------------------------------
 
-<span class='revision-history' markdown='1'>
-2015-08-25: (E, mos) Uppgraderade till dbwebb v2.  
-2015-02-12: (D, mos, Sylvanas) Uppdaterade krav 6 och 5 (tog bort curses).  
-2015-01-08: (C, mos) Bort blå ruta med kursutveckling pågår.  
-2014-11-19: (B, mos) Tog bort `s` från kommandot se, det var duplicerat.  
-2014-11-12: (A, mos) Första versionen till python ht14.  
-</span>
