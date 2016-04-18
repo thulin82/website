@@ -3,7 +3,7 @@ author:
     - mos
     - lew
 category:
-    - category3
+    - dbwebb
 published: 2016-03-21
 ...
 Version 2-ish av dbwebb.se

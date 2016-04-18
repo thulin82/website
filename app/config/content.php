@@ -42,6 +42,6 @@ return [
     "pattern"   => "*.md",
     "meta"      => ".meta.md",
     "author"    => "#author/([^\.]+)#",
-    "category"  => "category/category-*.md",
+    "category"  => "#kategori/([^\.]+)#",
 
 ];
