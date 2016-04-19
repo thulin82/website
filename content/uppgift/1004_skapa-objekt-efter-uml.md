@@ -5,10 +5,10 @@ revision:
 category:
     - python
 ...
-Din egen chattbot - Marvin - steg 3
+Skapa objekt efter UML-diagram
 ===================================
 
-Programmering och problemlösning i Python. Lär Marvin att prata lite mer slumpmässigt via listor med standardsvar.
+Nu ska du testa vingarna och skapa några objekt efter ett färdigt UML-diagram.
 
 <!--more-->
 
@@ -16,52 +16,54 @@ Programmering och problemlösning i Python. Lär Marvin att prata lite mer slump
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och stränghantering och du har byggt [andra delen av Marvin]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-2).
+Du har läst artiklarna: "[Vad är UML?](kunskap/vad-ar-uml)" och "[Kom igång med objekt](kunskap/kom-igang-med-objekt)" samt "[Arv med objekt](kunskap/arv)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär  att lära Marvin att svara på löpande text istället för siffror.
+Du ska skapa klass-filer för respektive klass i diagrammet. Spara alla filerna i mappen kmom02/minizoo som ligger i kursrepot. Var noga med att döpa filerna, variablerna och metoderna enligt anvisningarna i diagrammet.
 
-Marvin skall kunna svara på frågor som dessa.
+För filerna använder du namnen:  
+1. mini_zoo.py  
+2. animal.py  
+3. house.py  
+4. bird.py  
+5. fish.py  
+6. mammal.py  
 
-```text
-Marvin, ge mig ett citat!
-Dagens citat, tack?
-Citat - för bövelen, ge mig ett!
-```
+Använd sedan en fil kallad "main.py" för att skapa objekt och testa koden.  
 
-Marvin skall alltså kunna ge ett citat, oavsett hur man ber om det.
-
-Det enkla sättet att göra det är att kolla om texten som skrivs till Marvin innehåller ett visst ord, så som "citat" i detta fallet. Baserat på det skriver sedan Marvin ut ett svar, som exempelvis kan slumpas från en lista.
-Du kan kika lite på hur en liknande lösning hanteras av [IRC-Marvin på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L358).
-
-Vi kommer att lära Marvin att ge oss ett citat, där citaten är lagrade på fil.
-
+[FIGURE src=/image/oopython/kmom02/uml1.png?w=w2 caption="Klassiskt UML-diagram."]
 
 
 Krav {#krav}
 -----------------------
 
-Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopiera även filen med citat.
+Starta med att skapa filerna:
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -ri kmom03/marvin2/*.py kmom04/marvin3/
-cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
-cd kmom04/marvin3
+cd me/kmom02/minizoo
+touch mini_zoo.py animal.py house.py bird.py fish.py mammal.py
 ```
 
-1. Lär Marvin kommandot "citat". Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`.
+1. Namngivning ska ske enligt diagrammet
 
-2. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
+2. Metoderna `get_*` ska returnera en sträng utifrån listan
+
+3. I varje klass ska det finnas en överlagrad `__str__()`-metod som skriver ut allt om objektet på ett godtyckligt sätt. Arv ska användas även här. ex:  
+    * `animal` ska skriva ut information om sig själv.  
+    * `house` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla djur i listan.  
+    * `mini_zoo` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla hus i listan.  
+
+4. I din main.py ska du skapa ett mini-zoo med minst 3 hus med minst 3 djur i varje. Om ditt mini-zoo heter My_zoo avsluta med: `print(My_zoo)`.  
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate marvin3
+dbwebb validate minizoo
+dbwebb publish minizoo
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
@@ -71,14 +73,12 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. Lär Marvin svara på meningar som innehåller orden "hej" och "lunch". Svaren skall slumpas fram och kombineras från de [standardsvar som IRC-Marvin använder på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L179-L193).
+Det finns ingen extrauppgift.
 
 
 
 Tips från coachen {#tips}
 -----------------------
-
-Lär dig felsöka med debuggern, använd den när du får problem. Komplettera med utskrifter av `print()`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
