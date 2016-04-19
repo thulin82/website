@@ -5,10 +5,10 @@ revision:
 category:
     - python
 ...
-Din egen chattbot - Marvin - steg 3
+Skriv testfall för ditt mini-zoo
 ===================================
 
-Programmering och problemlösning i Python. Lär Marvin att prata lite mer slumpmässigt via listor med standardsvar.
+Vi ska skapa en fil som går igenom klasserna och unittestar dem.
 
 <!--more-->
 
@@ -16,29 +16,14 @@ Programmering och problemlösning i Python. Lär Marvin att prata lite mer slump
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och stränghantering och du har byggt [andra delen av Marvin]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-2).
+Du har gjort uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)" och läst igenom artikeln "[Att skriva unittester](kunskap/att-skriva-unittester)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär  att lära Marvin att svara på löpande text istället för siffror.
-
-Marvin skall kunna svara på frågor som dessa.
-
-```text
-Marvin, ge mig ett citat!
-Dagens citat, tack?
-Citat - för bövelen, ge mig ett!
-```
-
-Marvin skall alltså kunna ge ett citat, oavsett hur man ber om det.
-
-Det enkla sättet att göra det är att kolla om texten som skrivs till Marvin innehåller ett visst ord, så som "citat" i detta fallet. Baserat på det skriver sedan Marvin ut ett svar, som exempelvis kan slumpas från en lista.
-Du kan kika lite på hur en liknande lösning hanteras av [IRC-Marvin på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L358).
-
-Vi kommer att lära Marvin att ge oss ett citat, där citaten är lagrade på fil.
+För att färdigställa produkten behöver den testas. Vi skriver unittester för klasserna med Pythons egna testramverk.
 
 
 
@@ -50,18 +35,17 @@ Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopi
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom03/marvin2/*.py kmom04/marvin3/
-cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
-cd kmom04/marvin3
+cp -ri kmom02/mini-zoo/*.py kmom02/test/
+touch test_zoo.py
 ```
 
-1. Lär Marvin kommandot "citat". Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`.
+1. Kopiera in koden från `main.py` där du skapat objekt.
 
-2. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
+2. Skriv ett testfall för varje typ av attribut och för varje metod i klasserna. Du behöver med andra ord inte skriva ett test för varje sträng-attribut utan ta en av dem.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate marvin3
+dbwebb validate test
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
@@ -71,14 +55,11 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. Lär Marvin svara på meningar som innehåller orden "hej" och "lunch". Svaren skall slumpas fram och kombineras från de [standardsvar som IRC-Marvin använder på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L179-L193).
-
+Det finns inga extrauppgifter
 
 
 Tips från coachen {#tips}
 -----------------------
-
-Lär dig felsöka med debuggern, använd den när du får problem. Komplettera med utskrifter av `print()`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
