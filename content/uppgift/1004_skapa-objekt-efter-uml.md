@@ -63,7 +63,6 @@ touch mini_zoo.py animal.py house.py bird.py fish.py mammal.py
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb validate minizoo
-dbwebb publish minizoo
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
