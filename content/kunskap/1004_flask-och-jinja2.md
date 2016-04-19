@@ -5,10 +5,10 @@ revision:
 category:
     - python
 ...
-Vad är UML?
+Flask och Jinja2
 ===================================
 
-[FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
+[FIGURE src=/image/oopython/kmom03/kmom03_top_jinja2.png?w=c5 class="right"]
 
 INTRO
 
