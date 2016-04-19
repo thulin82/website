@@ -35,7 +35,7 @@ För filerna använder du namnen:
 
 Använd sedan en fil kallad "main.py" för att skapa objekt och testa koden.  
 
-[FIGURE src=/image/oopython/kmom02/uml1.png?w=w2 caption="Klassiskt UML-diagram."]
+[FIGURE src=/image/oopython/kmom02/uml1.png?w=w2 caption="Klicka på bilden för större storlek."]
 
 
 Krav {#krav}
