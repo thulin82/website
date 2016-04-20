@@ -8,7 +8,7 @@ category:
 Att skriva unittester
 ===================================
 
-[FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
+[FIGURE src=/image/oopython/kmom02/test_top.png class="right"]
 
 Unittester, eller "enhetstester", används för att testa så enskilda metoder eller funktioner gör det de ska. Till exempel om en metod ska returnera bool-värdet `True`, så ska den aldrig kunna returnera `False`.  
 
