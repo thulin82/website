@@ -54,6 +54,7 @@ Flask använder en viss mappstruktur när den letar efter filerna. Till exempel:
 Allt har sin plats. Struktur. Det finns såklart andra resurser att tillgå som i sin tur har "egna" platser i applikationen men för stunden räcker det med det här.  
 
 
+
 ###Frontcontroller {#frontcontroller}
 
 Vi skapar en fil som vi döper till `app.py`. Det är frontcontrollern till applikationen, dvs den fil som hanterar alla inkommande routes och servar webbläsaren med korrekt fil.
@@ -127,7 +128,7 @@ touch static/styles/style.css
 
 ###index.html {#index}
 
-För Bootstrap's och JQuery's filer använder vi oss av (CDN)(https://en.wikipedia.org/wiki/Content_delivery_network). Det krävs att man har åtkomst till internet, då Bootstraps filer laddas in via `http`. Det blir färre filer lokalt. Smidigt!  
+För Bootstrap's och JQuery's filer använder vi oss av [CDN](https://en.wikipedia.org/wiki/Content_delivery_network). Det krävs att man har åtkomst till internet, då Bootstraps filer laddas in via `http`. Det blir färre filer lokalt. Smidigt!  
 
 Öppna index.html i editorn och kopiera in följande kod:
 
