@@ -81,7 +81,19 @@ Dessa uppgifter skall utföras och redovisas.
 
 2. Gör uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)"
 
-3. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".
+3. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".  
+
+
+Fyll på din me-sida med redovisningstexten för det här kursmomentet:
+
+Kopiera din me-sida från föregående kursmoment och utgå från den koden.
+
+```bash
+# Ställ dig i kurskatalogen
+cd me
+cp -ri kmom01/Flask/ kmom02/Flask2/
+cd kmom02/Flask2
+```
 
 
 
