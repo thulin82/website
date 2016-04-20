@@ -180,6 +180,18 @@ return array(
 
 
     /**
+     * Add header for cache control when outputting images.
+     *
+     * Default value:
+     *  cache_control: null, or set to string
+     */
+     'cache_control' => "max-age=604800",
+
+     'skip_original' => true,
+
+
+
+    /**
      * Post processing of images using external tools, set to true or false
      * and set command to be executed.
      *

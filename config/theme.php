@@ -41,6 +41,8 @@ return [
             "data" => [
                 "homeLink"      => "",
                 "siteLogoText"  => "dbwebb",
+                "siteLogoTextIcon" => "image/tema/trad/blad_40x38.png",
+                "siteLogoTextIconAlt" => "Liten logo",
                 "siteLogo"      => null, //"img/anax.png",
                 "siteLogoAlt"   => null, //"Anax Logo",
                 "siteTitle"     => null, //"Anax PHP framework",

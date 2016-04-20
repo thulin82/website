@@ -2,6 +2,7 @@
 author: mos
 category: webbprogrammering
 revision:
+  "2016-04-08": (B, mos) Uppdaterad.
   "2014-06-16": (A, mos) Första utgåvan i samband javascript1-kursen.
 updated: "2016-04-07 22:49:52"
 created: "2014-06-12 08:03:40"

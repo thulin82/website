@@ -17,6 +17,11 @@ ROBOTSTXT	 := robots.txt
 SSL_APACHE_CONF = /etc/letsencrypt/options-ssl-apache.conf
 SSL_PEM_BASE 	= /etc/letsencrypt/live/$(WWW_SITE)
 
+# Theme
+LESS 		 = theme/style_dbwebb.less
+LESS_OPTIONS = --strict-imports --include-path=theme/mos-theme/style/
+FONT_AWESOME = theme/mos-theme/style/font-awesome/fonts/
+
 
 
 # target: help - Displays help.
@@ -108,18 +113,14 @@ less-update-clear: less local-publish-clear
 
 
 
+# target: less - Build less stylesheet and update the site with it.
 .PHONY: less
-
-LESS 			:= theme/style.less
-LESS_OPTIONS 	:= --strict-imports --include-path=theme/mos-theme/style/
-FONT_AWESOME	:= theme/mos-theme/style/font-awesome/fonts/
-
 less: prepare-build
 	#lessc $(LESS_OPTIONS) $(LESS) build/css/style.css
 	lessc --clean-css $(LESS_OPTIONS) $(LESS) build/css/style.min.css
 	#cp build/css/style.css htdocs/css/style.css
 	cp build/css/style.min.css htdocs/css/style.min.css
-	
+
 	rsync -av $(FONT_AWESOME) htdocs/fonts/
 
 
@@ -221,6 +222,11 @@ ServerAdmin $(SERVER_ADMIN)
 		Allow from all
 	</Directory>
 
+	<FilesMatch "\.(jpe?g|png|gif|js|css|svg)$">
+		   ExpiresActive On
+		   ExpiresDefault "access plus 1 week"
+	</FilesMatch>
+
 	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
 	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined
 </VirtualHost>
@@ -280,6 +286,11 @@ ServerAdmin $(SERVER_ADMIN)
 		Order allow,deny
 		Allow from all
 	</Directory>
+
+	<FilesMatch "\.(jpe?g|png|gif|js|css|svg)$">
+		   ExpiresActive On
+		   ExpiresDefault "access plus 1 week"
+	</FilesMatch>
 
 	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
 	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined

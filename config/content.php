@@ -6,7 +6,7 @@
 return [
 
     // Use for styling the menu
-    "basepath" => ANAX_APP_PATH . "/../content",
+    "basepath" => ANAX_APP_PATH . "/content",
 
     // Use or ignore using the cache, default is false.
     // During development it might be good to ignore the cache, but not
@@ -17,6 +17,12 @@ return [
     "textfilter-frontmatter" => [
         "jsonfrontmatter",
         "yamlfrontmatter",
+    ],
+
+    // Additional filters to get title
+    "textfilter-title" => [
+        "markdown",
+        "titlefromh1",
     ],
 
     // Default options for textfilter to parse second step
@@ -43,5 +49,6 @@ return [
     "meta"      => ".meta.md",
     "author"    => "#author/([^\.]+)#",
     "category"  => "#kategori/([^\.]+)#",
+    "pagination" => "sida",
 
 ];

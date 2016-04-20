@@ -1,7 +1,7 @@
 <?php
 
 define("ANAX_INSTALL_PATH", realpath(__DIR__ . "/../vendor/mos/anax"));
-define("ANAX_APP_PATH", __DIR__ . "/../app");
+define("ANAX_APP_PATH", __DIR__ . "/..");
 
 //require ANAX_APP_PATH . "/config/error_reporting.php";
 

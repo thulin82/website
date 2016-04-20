@@ -229,6 +229,9 @@ foreach ($res as $doc) {
         if (!empty($revision)) {
             $fm["revision"] = $revision;
         }
+        if ($type == "post" && !$published) {
+            $published = $created;
+        }
         if ($published) {
             $fm["published"] = $published;
         }
