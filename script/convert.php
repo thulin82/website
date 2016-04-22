@@ -345,6 +345,15 @@ $delete = [
     "kurser/omregistrering.md",
     "kurser/byta-studietakt.md",
     "kurser",
+    "social/facebook.md",
+    "social/flickr.md",
+    "social/github.md",
+    "social/googleplus.md",
+    "social/instagram.md",
+    "social/linkedin.md",
+    "social/twitter.md",
+    "social/youtube.md",
+    "social",
 ];
 
 
