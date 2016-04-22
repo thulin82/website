@@ -49,7 +49,11 @@ cd kmom03/Flask3
     * Bildlänk(ar)
     * Överlagra `__str__()`-metoden och se till så den skriver ut alla medlemsvariabler, en variabel per rad.
 
-3. Använd ditt objekt i din me-sida
+3. Använd ditt objekt i din me-sida  
+
+6. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till data.png. Bifoga diagrammet i mappen Flask3/  
+
+7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html i formatet .png. Bifoga filen i mappen Flask3/
 
 
 ```bash
