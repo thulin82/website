@@ -18,6 +18,12 @@ return [
             "title" => "Jobba med kurserna"
         ],
 
+        "community" => [
+            "text"  =>"Community",
+            "url"   => $this->di->get("url")->create("community"),
+            "title" => "Delta i communityn"
+        ],
+
         "kunskap" => [
             "text"  =>"Kunskap",
             "url"   => $this->di->get("url")->create("kunskap"),
