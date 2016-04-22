@@ -47,7 +47,6 @@ cd kmom03/Flask3
     * Länkar i navbar
     * Sidans titel
     * Bildlänk(ar)
-    *
     * Överlagra `__str__()`-metoden och se till så den skriver ut alla medlemsvariabler, en variabel per rad.
 
 3. Använd ditt objekt i din me-sida
