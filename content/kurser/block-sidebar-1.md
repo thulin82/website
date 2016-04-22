@@ -32,7 +32,7 @@ Följande kurser ingår inte i något av ovanstående utbildningsprogram eller k
 
 ####Arkiverade kurser
 
-Följande kurser är arkiverade, de har utgått och är ersatta av nyare kurser.
+Följande kurser är [arkiverade](kurser/arkiv), de har utgått och är ersatta av nyare kurser.
 
 * [htmlphp v1](htmlphp-v1)
 * [oophp v1](oophp-v1)

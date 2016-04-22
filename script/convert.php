@@ -296,7 +296,11 @@ $move = [
     "block-old/utb-block-8.md" => "utbildning/block-8.md",
     "block-old/utb-block-9.md" => "utbildning/block-9.md",
     
-    // Frågor och svar om kurser
+    // Arkiverade kurser
+    "htmlphp-v1" => "kurser/arkiv/htmlphp-v1",
+    "oophp-v1" => "kurser/arkiv/oophp-v1",
+    "phpmvc-v1" => "kurser/arkiv/phpmvc-v1",
+    "webtopic" => "kurser/arkiv/webtopic",
 
 ];
 
@@ -354,6 +358,8 @@ $delete = [
     "social/twitter.md",
     "social/youtube.md",
     "social",
+    "rss/index.md",
+    "rss",
 ];
 
 
@@ -384,6 +390,12 @@ $redirect["linkedin"] = "social/linkedin";
 $redirect["twitter"] = "social/twitter";
 $redirect["youtube"] = "social/youtube";
 $redirect["bth"] = "kurser/faq/bth-stodfunktioner";
+
+// Arkiverade kurser
+$redirect["webtopic"] = "kurser/arkiv/webtopic";
+$redirect["htmlphp-v1"] = "kurser/arkiv/htmlphp-v1";
+$redirect["oophp-v1"] = "kurser/arkiv/oophp-v1";
+$redirect["phpmvc-v1"] = "kurser/arkiv/phpmvc-v1";
 
 // Kurser
 $redirect["kurser/bra-att-veta"] = "kurser/faq";
