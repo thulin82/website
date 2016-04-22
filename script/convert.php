@@ -284,6 +284,20 @@ $move = [
     "rss.md" => "rss/index.md",
     "webprog.md" => "webprog/index.md",
     "webutv.md" => "webutv/index.md",
+
+    // Block from utb
+    "block-old/utb-block-1.md" => "utbildning/block-1.md",
+    "block-old/utb-block-2.md" => "utbildning/block-2.md",
+    "block-old/utb-block-3.md" => "utbildning/block-3.md",
+    "block-old/utb-block-4.md" => "utbildning/block-4.md",
+    "block-old/utb-block-5.md" => "utbildning/block-5.md",
+    "block-old/utb-block-6.md" => "utbildning/block-6.md",
+    "block-old/utb-block-7.md" => "utbildning/block-7.md",
+    "block-old/utb-block-8.md" => "utbildning/block-8.md",
+    "block-old/utb-block-9.md" => "utbildning/block-9.md",
+    
+    // Frågor och svar om kurser
+
 ];
 
 foreach ($move as $orig => $new) {
@@ -303,6 +317,51 @@ foreach ($move as $orig => $new) {
 
 
 
+// Files to delete, already merged
+$delete = [
+    "block-old/develop-kurser.md",
+    "block-old/flash-kurser.md",
+    "block-old/framsida-bild.md",
+    "block-old/sok-kurser.md",
+    "block-old",
+    "utbildning/block-7.md",
+    "bth",
+    "kurser/hur-fungerar-kurspaketet.md",
+    "kurser/faq.md",
+    "kurser/bra-att-veta.md",
+    "kurser/struktur.md",
+    "bth/index.md",
+    "bth",
+    "kurser/lektionsplan-och-rekommenderad-studieplan.md",
+    "kurser/3-veckors-upprop.md",
+    "kurser/maste-jag-skaffa-kurslitteraturen.md",
+    "kurser/kom-igang.md",
+    "kurser/lararstod-och-handledning.md",
+    "kurser/vilken-feedback-far-man-pa-inlamningarna.md",
+    "kurser/bedomning-och-betygsattning.md",
+    "kurser/kursutvardering-och-kursutveckling.md",
+    "kurser/jag-har-blivit-avregistrerad.md",
+    "kurser/hinner-inte-fardigt.md",
+    "kurser/omregistrering.md",
+    "kurser/byta-studietakt.md",
+    "kurser",
+];
+
+
+
+
+foreach ($delete as $file) {
+    $target = "$base/$file";
+    if (is_file($target)) {
+        unlink("$base/$file");
+    } elseif (is_dir($target)) {
+        rmdir("$base/$file");
+    }
+    echo "Deleting $file\n";
+}
+
+
+// Redirects and urls removed
 $redirect["cli"] = "dbwebb-cli";
 $redirect["dbwebb-cli"] = "dbwebb-cli/dbwebb";
 $redirect["dbwebb-inspect"] = "dbwebb-cli/dbwebb-inspect";
@@ -315,6 +374,25 @@ $redirect["instagram"] = "social/instagram";
 $redirect["linkedin"] = "social/linkedin";
 $redirect["twitter"] = "social/twitter";
 $redirect["youtube"] = "social/youtube";
+$redirect["bth"] = "kurser/faq/bth-stodfunktioner";
+
+// Kurser
+$redirect["kurser/bra-att-veta"] = "kurser/faq";
+$redirect["kurser/struktur"] = "kurser/faq";
+$redirect["kurser/lektionsplan-och-rekommenderad-studieplan"] = "kurser/faq/rekommenderad-studieplan";
+/*
+"kurser/3-veckors-upprop.md",
+"kurser/maste-jag-skaffa-kurslitteraturen.md",
+"kurser/kom-igang.md",
+"kurser/lararstod-och-handledning.md",
+"kurser/vilken-feedback-far-man-pa-inlamningarna.md",
+"kurser/bedomning-och-betygsattning.md",
+"kurser/kursutvardering-och-kursutveckling.md",
+"kurser/jag-har-blivit-avregistrerad.md",
+"kurser/hinner-inte-fardigt.md",
+"kurser/omregistrering.md",
+"kurser/byta-studietakt.md",
+*/
 
 $removed[] = "manual";
 $removed[] = "program";

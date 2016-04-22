@@ -1,4 +1,10 @@
-####Social
+####Bygg ett nätverk!
+
+[FIGURE src="/image/vimmel/felix-grill.jpg?w=c8&h=100&cf&a=0,20,50,20" caption="Skaffa vänner och kontakter!"]
+
+Det nätverk av kontakter du skapar under din studietid har du med dig hela livet.
+
+Bli en del av vårt nätverk!
 
 [<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>](facebook)
 [<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>](twitter)

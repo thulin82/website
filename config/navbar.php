@@ -14,32 +14,38 @@ return [
 
         "kurser" => [
             "text"  =>"Kurser",
-            "url"   => $this->di->get("url")->create("kurser/"),
+            "url"   => $this->di->get("url")->create("kurser"),
             "title" => "Jobba med kurserna"
         ],
 
         "kunskap" => [
             "text"  =>"Kunskap",
-            "url"   => $this->di->get("url")->create("kunskap/"),
+            "url"   => $this->di->get("url")->create("kunskap"),
             "title" => "Läs kunskapsartiklar"
         ],
 
         "coachen" => [
             "text"  =>"Coachen",
-            "url"   => $this->di->get("url")->create("coachen/"),
+            "url"   => $this->di->get("url")->create("coachen"),
             "title" => "Läs tips från coachen"
         ],
 
         "uppgifter" => [
             "text"  =>"Uppgifter",
-            "url"   => $this->di->get("url")->create("uppgift/"),
+            "url"   => $this->di->get("url")->create("uppgift"),
             "title" => "Jobba med uppgifter och övningar"
         ],
 
         "blogg" => [
             "text"  =>"Blogg",
-            "url"   => $this->di->get("url")->create("blogg/"),
+            "url"   => $this->di->get("url")->create("blogg"),
             "title" => "Läs om dbwebb, kurserna, webbprogrammering och webbutveckling och utbildning i allmänhet"
+        ],
+
+        "utbildning" => [
+            "text"  =>"Utbildning",
+            "url"   => $this->di->get("url")->create("utbildning"),
+            "title" => "Läs om de utbildningar vi erbjuder inom webbprogrammering och webbutveckling"
         ],
 
     ],
