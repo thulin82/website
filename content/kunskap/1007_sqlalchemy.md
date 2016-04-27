@@ -301,7 +301,7 @@ in_():
 Model: v40, Price: 195000.0, Country: Sweden, Manufacturer: Volvo
 ```
 
-För fler exempel, kika på [SQLAlchemys tutorial](http://docs.sqlalchemy.org/en/latest/orm/tutorial.html#common-filter-operators)  
+För fler exempel, kika i [SQLAlchemys tutorial](http://docs.sqlalchemy.org/en/latest/orm/tutorial.html#common-filter-operators)  
 
 
 
@@ -325,4 +325,4 @@ Gå igenom [tutorialen](http://docs.sqlalchemy.org/en/latest/core/tutorial.html)
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det här var lite om grunderna i SQLAlchemy och hur man kommer igång med det. Läs gärna på mer om tillfälle ges. 
+Det här var lite om grunderna i SQLAlchemy och hur man kommer igång med det. Läs gärna på mer om tillfälle ges.
