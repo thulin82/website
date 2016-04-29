@@ -31,6 +31,17 @@ CSS-lint
 Make
 
 Bilder med ![]()
+
+
+Mer, osäker vilket kmom.
+
+> Talande webläsare
+> Skriva för webben https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/
+> Lagar om webben
+> Forskning inom användbarhet
+> Översikt av W3Cs arbete
+
+
 <!--more-->
 
 [FIGURE src=/image/snap/tema-regioner-visa-grid.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]

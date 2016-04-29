@@ -1,3 +1,3 @@
 ####Tips från Coachen
 
-TBD
+Eller en ruta för aktuella notiser.

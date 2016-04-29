@@ -22,7 +22,7 @@ return [
     // Additional filters to get title
     "textfilter-title" => [
         "markdown",
-        "titlefromh1",
+        "titlefromheader",
     ],
 
     // Default options for textfilter to parse second step
@@ -30,7 +30,7 @@ return [
     "textfilter" => [
         "shortcode",
         "markdown",
-        "titlefromh1",
+        "titlefromheader",
         "anchor4Header",
     ],
 

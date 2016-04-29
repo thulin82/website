@@ -1,4 +1,4 @@
-####Läs Webbprogrammering vid BTH!
+####Läs BTH Webbprogrammering!
 
 <!-- <img src="/image/grill.jpeg?w=c7" alt="">
 Den traditionella höstgrillen för nya, befintliga och utgångna studenter på programmen WIP, SE, ISE, DSV går snart av stapeln igen.

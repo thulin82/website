@@ -1,5 +1,19 @@
 ---
+title: Jobba med kurserna
+
 views:
+    blog-list:
+        region: main
+        template: default/blog-list
+        sort: 2
+        data:
+            dateFormat: j F Y
+            meta: 
+                type: toc-route
+                route: blogg
+                orderby: publishTime
+                orderorder: desc
+
     sidebar-1:
         region: sidebar-right
         template: default/block
@@ -8,25 +22,7 @@ views:
                 type: content
                 route: ./block-sidebar-1
 
-    columns-below:
-        region: columns-below
-        template: default/columns
-        sort: 1
-        data:
-            class: col3
-            classes: no-bullet
-            meta:
-                type: columns
-                columns:
-                    column-1:
-                        route: block/home/col-below-1
-                    column-2:
-                        route: block/home/col-below-2
-                    column-3:
-                        route: block/home/col-below-3
-
 ...
-Jobba med kurserna
-=============================
-
-Ska ha liknande upplägg som nuvarande dbwebb.se/kurser.
+<div class="block">
+    <h4>Senaste nytt om kurser</h4>
+</div>

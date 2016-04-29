@@ -24,6 +24,12 @@ return [
             "title" => "Delta i communityn"
         ],
 
+        "material" => [
+            "text"  =>"Material",
+            "url"   => $this->di->get("url")->create("material"),
+            "title" => "Kurs- och utbildningsmaterial"
+        ],
+/*
         "kunskap" => [
             "text"  =>"Kunskap",
             "url"   => $this->di->get("url")->create("kunskap"),
@@ -47,11 +53,17 @@ return [
             "url"   => $this->di->get("url")->create("blogg"),
             "title" => "Läs om dbwebb, kurserna, webbprogrammering och webbutveckling och utbildning i allmänhet"
         ],
-
+*/
         "utbildning" => [
             "text"  =>"Utbildning",
             "url"   => $this->di->get("url")->create("utbildning"),
             "title" => "Läs om de utbildningar vi erbjuder inom webbprogrammering och webbutveckling"
+        ],
+
+        "om" => [
+            "text"  =>"Om",
+            "url"   => $this->di->get("url")->create("om"),
+            "title" => "Läs om webbplatsen, de som står bakom och dess syfte"
         ],
 
     ],

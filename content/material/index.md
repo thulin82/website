@@ -1,34 +1,8 @@
 ---
-title: Webbprogrammering och Databaser
+title: Kurs- och Utbildningsmaterial
 
 views:
-    flash:
-        region: flash
-        template: default/image
-        data:
-            src: "/image/vimmel/varbild-dbwebb2.jpg"
-
-    blog-list:
-        region: main
-        template: default/blog-list
-        sort: 2
-        data:
-            dateFormat: j F Y
-            meta: 
-                type: toc-route
-                route: blogg
-                orderby: publishTime
-                orderorder: desc
-
-    sidebar-1:
-        region: sidebar-right
-        template: default/block
-        data:
-            meta:
-                type: content
-                route: block/home/sidebar-1
-
-    columns-above:
+    columns-above-1:
         region: columns-above
         template: default/columns
         sort: 1
@@ -41,20 +15,20 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: block/home/col-1
+                                route: blogg/block-toc
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: block/home/col-2
+                                route: kunskap/block-toc
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: block/home/col-3
+                                route: block/tbd
 
-    columns-below:
-        region: columns-below
+    columns-above-2:
+        region: columns-above
         template: default/columns
         sort: 1
         data:
@@ -71,14 +45,25 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: kunskap/block-toc
+                                route: uppgift/block-toc
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: block/home/col-below-3
+                                route: block/tbd
 
 ...
-<div class="block">
-    <h4>Senast i Bloggen</h4>
-</div>
+Utbildningsmaterial
+===========================
+
+Samlingssida.
+
+Block för blogg, kunskap, coachen, utbildning.
+
+Youtube-kanalen.
+
+Kursrepo och Travis-status samt gitter.
+
+Allmänt om kurserna (kurser/faq).
+
+Allmänt om utbildningspketen (utbildning/faq).

@@ -1,10 +1,35 @@
 ---
-revision:
-    2015-01-09: (E, mos) Ny organisation.  
-    2014-01-08: (D, mos) Lade till info om antagningsenheten.  
-    2013-02-21: (C, mos) Ändrade länkarna inför dbwebb v2.  
-    2013-01-21: (B, mos) Uppdaterad inför vårterminen 2013.  
-    2012-08-28: (A, mos) Första versionen, samlat info från andra platser.  
+title: maste-jag-skaffa-kurslitteraturen
+
+views: 
+    columns-below:
+        region: columns-below
+        template: default/columns
+        sort: 1
+        data:
+            class: col3
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: kunskap/block-toc
+                    column-2:
+                        template: default/block
+                        data:
+                            meta:
+                                type: content
+                                route: block/home/col-below-2
+                    column-3:
+                        template: default/block
+                        data:
+                            meta:
+                                type: content
+                                route: block/home/col-below-3
+
 ...
 MOPED 
 =====
