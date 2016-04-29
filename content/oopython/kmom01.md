@@ -84,7 +84,9 @@ Genomför följande övning för att träna dig.
 
 1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
 
-2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".
+2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
+
+3. Läs igenom artikeln om "[arv](kunskap/arv)" i Python.
 
 
 
