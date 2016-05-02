@@ -372,6 +372,7 @@ $delete = [
     "oopython/labbmiljo",
     "python/labbmiljo",
     "webapp/labbmiljo",
+    "webgl/labbmiljo",
 
 ];
 
