@@ -167,8 +167,4 @@ DISABLE_HTMLHINT=
 Avslutningsvis {#avslutning}
 -----------------------------------------------
 
-Om du har [frågor kring kommandot `dbwebb-validate`](t/4016) så ställer du dem i forumet.
-
-
-
-
+Om du har [frågor kring kommandot `dbwebb-validate`](/t/4016) så ställer du dem i forumet.

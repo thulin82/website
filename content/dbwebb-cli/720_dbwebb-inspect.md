@@ -64,8 +64,4 @@ $ dbwebb-inspect --selfupdate
 Avslutningsvis {#avslutning}
 -----------------------------------------------
 
-Om du har [frågor kring kommandot `dbwebb-inspect`](t/4017) så ställer du dem i forumet.
-
-
-
-
+Om du har [frågor kring kommandot `dbwebb-inspect`](/t/4017) så ställer du dem i forumet.

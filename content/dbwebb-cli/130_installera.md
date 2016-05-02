@@ -13,15 +13,15 @@ Kommandosekvensen laddar först ned filen dbwebb som en temporär fil. Därefter
 sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/install.bash)"
 ```
 
- Du kommer att se ett felmeddelande om det inte går bra att installera. om du får problem så kan du installera [steg-för-steg](#steg) istället.
-
-om du är intresserad så kan du dubbelkolla vad installationsskriptet gör, genom att [studera det på GitHub](https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/install.bash).
+Du kommer att se ett felmeddelande om det inte går bra att installera. om du får problem så kan du [installera steg för steg](installera-steg-for-steg) istället.
 
 När installationen är klar så kan du pröva om det gick bra genom att kolla vilken version du har.
 
 ```text
 $ dbwebb --version
 ```
+
+Om du är intresserad så kan du dubbelkolla vad installationsskriptet gör, genom att [studera det på GitHub](https://raw.githubusercontent.com/mosbth/dbwebb-cli/master/install.bash).
 
 Så här kan det se ut.
 
