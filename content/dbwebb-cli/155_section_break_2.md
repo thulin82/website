@@ -1,5 +1,5 @@
 ---
-title: Kom igång
+title: Kommandon
 sectionHeader: true
 linkable: false
 ...
