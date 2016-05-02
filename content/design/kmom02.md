@@ -14,9 +14,27 @@ Horisontellt grid för typsnitt.
 
 Övning med att lägga in style för alla html font element.
 
-Om markdown.
 
 <!--more-->
+
+Mer, osäker vilket kmom.
+
+
+2. Mer
+
+Introduktion till SEO
+Mer om Markdown
+Om Markdown Extra med typografiska element.
+
+
+3. Mäta
+
+Verktyg för att mäta SEO.
+
+> Talande webläsare
+> Lagar om webben
+> Forskning inom användbarhet
+> Översikt av W3Cs arbete
 
 
 [FIGURE src=/image/snap/tema-typografi-grid.png?w=w2 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]

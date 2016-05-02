@@ -329,7 +329,6 @@ $delete = [
     "block-old/sok-kurser.md",
     "block-old",
     "utbildning/block-7.md",
-    "bth",
     "kurser/hur-fungerar-kurspaketet.md",
     "kurser/faq.md",
     "kurser/bra-att-veta.md",
@@ -348,7 +347,7 @@ $delete = [
     "kurser/hinner-inte-fardigt.md",
     "kurser/omregistrering.md",
     "kurser/byta-studietakt.md",
-    "kurser",
+//    "kurser",
     "social/facebook.md",
     "social/flickr.md",
     "social/github.md",
@@ -415,6 +414,9 @@ $redirect["phpmvc-v1"] = "kurser/arkiv/phpmvc-v1";
 $redirect["kurser/bra-att-veta"] = "kurser/faq";
 $redirect["kurser/struktur"] = "kurser/faq";
 $redirect["kurser/lektionsplan-och-rekommenderad-studieplan"] = "kurser/faq/rekommenderad-studieplan";
+$redirect["kurser/maste-jag-skaffa-kurslitteraturen"] = "kurser/faq/maste-jag-skaffa-kurslitteraturen";
+$redirect["kurser/lararstod-och-handledning"] = "kurser/faq/lararstod-och-handledning";
+
 /*
 "kurser/3-veckors-upprop.md",
 "kurser/maste-jag-skaffa-kurslitteraturen.md",
@@ -434,7 +436,15 @@ $removed[] = "program";
 $removed[] = "validator";
 
 echo "Redirects\n";
-print_r($redirect);
+$htaccess = "";
+foreach ($redirect as $key => $val) {
+    $htaccess .= "Redirect /$key /$val\n";
+}
+$file = __DIR__ . "/htaccess";
+file_put_contents($file, $htaccess);
+echo "Saved $file\n";
+
+
 
 echo "Removed\n";
 print_r($removed);

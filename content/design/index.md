@@ -3,10 +3,10 @@ author: mos
 revision:
     2016-04-11: (PA, mos) Arbetskopia.
 ...
-Kursen webdesign
+Kursen design
 ===================================================
 
-Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *design*, lär webbprogrammeraren att förbereda sin webbplats för webbdesign.
+Kursen **Teknisk webbdesign och användbarhet**, a.k.a. *design*, lär webbprogrammeraren att tekniskt förbereda sin webbplats för design och användbarhet.
 
 Kursen syftar till en orientering inom områden design och användbarhet, specifikt för tillämpningsområdet webb. Kursen har tekniken som utgångspunkt, där olika tekniker introduceras och används för att underlätta webbdesign och användbarhet för webbplatsen med syftet att skapa en korrekt och användarvänlig webbplats.
 
@@ -129,8 +129,6 @@ Kurslitteratur {#litteratur}
 
 [Måste jag skaffa kurslitteraturen](kurser/maste-jag-skaffa-kurslitteraturen)?
 
-Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitteratur-per-kurs).
-
 
 
 ###Kurslitteratur {#kurslitteratur}
@@ -166,38 +164,30 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom06     |                        |                    |
 | Kmom10     |                        |                    |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
-
 
 
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-*Flytta till eget dokument.*
+Varje kurs och kurstillfälle har en [rekommenderad studieplan](design/studieplan).
 
-Varje kurs och kurstillfälle har en [rekommenderad studieplan](design/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+Vissa av kurstillfällena har även en [lektionsplan](design/lektionsplan) som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda.
 
-Deltar du i undervisningen på ett program så finns det också en lektionsplan som du får i samband med kursstart.
-
-Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
-
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).  
-
-*Eget dokument om feedback och att ställa frågor för att få feedback.*
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).  
 
 
 
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/faq/bedomning-och-betygsattning). 
 
 
 
@@ -212,7 +202,7 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
-*Eget dokument om rättning och rapportering till ladok.*
+Läs mer om [rapportering av resultat](urser/faq/resultatrapportering).
 
 
 
@@ -221,7 +211,7 @@ Kursutvärdering och kursutveckling {#kursutvardering}
 
 Det finns ett särskilt dokument som beskriver hur arbetet med kursutvärderingar och kursutveckling sker. Det är oerhört viktigt för mig att du säger till vad du tycker om kurs och kursmaterial, du kan alltid hojta till i både forum, chatt eller mail.
 
-Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/kursutvardering-och-kursutveckling).
+Läs om hur [vi jobbar med kursutvärdering och kursutveckling](kurser/faq/kursutvardering-och-kursutveckling).
 
 
 
