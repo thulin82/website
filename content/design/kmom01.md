@@ -44,24 +44,6 @@ Läs följande:
 
 Läs följande:
 
-1. Bekanta dig med [LESS](http://lesscss.org/) och se vad det kan göra. 
-
-
-1. Läs artikeln "[The Semantic Grid System: Page Layout For Tomorrow](http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/)". Skaffa dig en överblick av LESS och The Semantic Grid.
-
-1. Läs artikeln "[Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?](http://coding.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/)". Vad handlar det om med alla varianter på layout av en webbsida? Skaffa dig en översikt. *(OBS GAMMAL ARTIKEL SÖK ERSÄTTARE)*
-
-
-
-1. Studera det gridbaserade ramverket [Semantic.gs](http://tylertate.github.io/semantic.gs/).
-
-1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/)
-
-
-####Att mäta hur optimerad en webbplats är {#optimerad}
-
-1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer andvända dess verktygen i en av uppgifterna.
-
 
 
 ###Video  {#video}
@@ -70,12 +52,56 @@ Titta på följande:
 
 
 
+###Tekniker för att skriva för webben {#skriva}
+
+1. Skriva för webben https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/
+
+1. Introduktion till Markdown.
+
+
+
+###Kom igång med LESS {#less}
+
+1. Bekanta dig med [LESS](http://lesscss.org/) och se vad det kan göra. 
+
+1. Läs Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)" som fokuserar på skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor gör.
+
+1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/)
+
+
+
+###Vad handlar grid-baserad layout om? {#grid}
+
+1. Studera det gridbaserade ramverket [Semantic.gs](http://tylertate.github.io/semantic.gs/).
+
+1. Läs artikeln "[The Semantic Grid System: Page Layout For Tomorrow](http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/)". Skaffa dig en överblick av LESS och The Semantic Grid.
+
+1. Läs artikeln "[Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?](http://coding.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/)". Vad handlar det om med alla varianter på layout av en webbsida? Skaffa dig en översikt. *(OBS GAMMAL ARTIKEL SÖK ERSÄTTARE)*
+
+
+
+###Responsive webbdesign {#responsiv}
+
+
+
+###Introduktion till webbdesign {#webbdesign}
+
+
+
+###Introduktion till användbarhet för webben {#anvandbarhet}
+
+
+
+
+###Att mäta hur optimerad en webbplats är {#optimerad}
+
+1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
+
+
 
 ###Lästips {#lastips}
 
 Om du känner att du har tid och kraft.
-
-1. Läs Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)" som fokuserar på skillnader och likheter mellan LESS och SASS.
 
 
 
@@ -138,19 +164,6 @@ Bilder med ![]()
 Använd media queries för att göra en responsiv webbplats.
 
 
-3. Mäta 
-
-Använd google pagespeed/yslow för att kolla sidans värdering.
-
-
-
-4. Mer
-
-Introduktion till Markdown
-Introduktion till webbdesign
-Introduktion till användbarhet
-
-Skriva för webben https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/
 
 
 
