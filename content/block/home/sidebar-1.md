@@ -17,7 +17,7 @@ Till hösten 2016 startar vi ett nytt **distansprogram i Webbprogrammering** om 
 
 Välkommen med din ansökan så syns vi här!
 
-[Läs om våra utbildningar »]([BASEURL]utbildning)<br><br>
+[Läs om våra utbildningar »](utbildning)<br><br>
 
 
 <!--

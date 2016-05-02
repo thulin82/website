@@ -18,17 +18,18 @@ return [
             "title" => "Jobba med kurserna"
         ],
 
+        "material" => [
+            "text"  =>"Material",
+            "url"   => $this->di->get("url")->create("material"),
+            "title" => "Kurs- och utbildningsmaterial"
+        ],
+
         "community" => [
             "text"  =>"Community",
             "url"   => $this->di->get("url")->create("community"),
             "title" => "Delta i communityn"
         ],
 
-        "material" => [
-            "text"  =>"Material",
-            "url"   => $this->di->get("url")->create("material"),
-            "title" => "Kurs- och utbildningsmaterial"
-        ],
 /*
         "kunskap" => [
             "text"  =>"Kunskap",

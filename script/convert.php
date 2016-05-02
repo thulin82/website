@@ -360,6 +360,12 @@ $delete = [
     "social",
     "rss/index.md",
     "rss",
+    "dbwebb-cli/dbwebb.md",
+    "dbwebb-cli/dbwebb-inspect.md",
+    "dbwebb-cli/dbwebb-validate.md",
+    "dbwebb-cli/clone.md",
+    "dbwebb-cli",
+
 ];
 
 
@@ -378,7 +384,7 @@ foreach ($delete as $file) {
 
 // Redirects and urls removed
 $redirect["cli"] = "dbwebb-cli";
-$redirect["dbwebb-cli"] = "dbwebb-cli/dbwebb";
+$redirect["dbwebb-cli"] = "dbwebb-cli";
 $redirect["dbwebb-inspect"] = "dbwebb-cli/dbwebb-inspect";
 $redirect["dbwebb-validate"] = "dbwebb-cli/dbwebb-validate";
 $redirect["facebook"] = "social/facebook";
