@@ -365,6 +365,13 @@ $delete = [
     "dbwebb-cli/dbwebb-validate.md",
     "dbwebb-cli/clone.md",
     "dbwebb-cli",
+    "htmlphp/labbmiljo",
+    "javascript1/labbmiljo",
+    "linux/labbmiljo",
+    "oophp/labbmiljo",
+    "oopython/labbmiljo",
+    "python/labbmiljo",
+    "webapp/labbmiljo",
 
 ];
 
