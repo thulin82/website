@@ -305,6 +305,17 @@ För fler exempel, kika i [SQLAlchemys tutorial](http://docs.sqlalchemy.org/en/l
 
 
 
+###Ta bort data från tabellen {#ta-bort-data-fran-tabellen}  
+
+För att ta bort rader ur tabellen använder vi oss utav `.delete()`. Vi tar bort bilen med id 2:
+
+```python
+>>> session.query(Cars).filter(Cars.id == 2).delete()
+>>> session.commit()
+```
+
+
+
 ###Resultat som lista {#resultat-som-lista}
 
 Vi kan även få tillbaka resultatet som olika datatyper. För att få det som en lista använder vi oss utav `.all()`:
