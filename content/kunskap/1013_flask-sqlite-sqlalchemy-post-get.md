@@ -10,7 +10,7 @@ UML
 
 [FIGURE src=/image/oopython/kmom02/uml_diagrams.png class="right"]
 
-UML står för Unified Modeling Language, det är ett visuellt modelrings språk för att specificera, konstruera och dokumentera artifakter i ett system.  
+UML står för Unified Modeling Language, det är ett visuellt modellerings språk för att specificera, konstruera och dokumentera artifakter i ett system.  
 Det brukar användas på tre sätt:
 
 1. Som en sketch: Informel och ofta inte fullständig, hand sketch eller på whiteboard. Används för att utforska problem.
@@ -24,7 +24,7 @@ Vi kommer gå igenom två av diagrammen, Class diagram och Sequence diagram.
 Förutsättning {#pre}
 -------------------------------
 
-Du Du kan grunderna i objektorienterad programmering, arv, komposition och aggregation.
+Du kan grunderna i objektorienterad programmering, arv, komposition och aggregation.
 
 
 
