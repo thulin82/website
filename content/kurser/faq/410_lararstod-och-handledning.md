@@ -43,6 +43,11 @@ Föreläsningar och seminarier {#forelasningar}
 Det finns inga schemalagda föreläsningar eller seminarier i distanskurserna.
 
 
+Hangouts
+
+Labbtillfällen i sal
+
+
 
 Kursadmin {#admin}
 ------------------------------------------

@@ -83,6 +83,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 3. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".  
 
+4. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"
 
 Fyll på din me-sida med redovisningstexten för det här kursmomentet:
 

@@ -1,0 +1,1 @@
+../../labbmiljo/block-inledning-generell.md

@@ -15,20 +15,70 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: blogg/block-toc
+                                route: coachen/block-read
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: kunskap/block-toc
+                                route: kunskap/block-read
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: block/tbd
+                                route: uppgift/block-read
 
     columns-above-2:
         region: columns-above
+        template: default/columns
+        sort: 2
+        data:
+            class: col3
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: blogg/block-read
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: block/kursrepo
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: ./block-ovrigt-material
+
+    columns-above-3:
+        region: columns-above
+        template: default/columns
+        sort: 3
+        data:
+            class: col3
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: block/labbmiljo
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: block/dbwebb-cli
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: block/faq
+
+    columns-below-1:
+        region: columns-below
         template: default/columns
         sort: 1
         data:
@@ -40,30 +90,28 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: coachen/block-toc
+                                route: block/by-category
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: uppgift/block-toc
+                                route: block/by-author
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: block/tbd
+                                route: block/senast-uppdaterat
 
 ...
 Utbildningsmaterial
 ===========================
 
-Samlingssida.
+Om hittar fel i materialet?
 
-Block för blogg, kunskap, coachen, utbildning.
+RSS
 
-Youtube-kanalen.
+Licens, att använda.
 
-Kursrepo och Travis-status samt gitter.
+Att bidra.
 
-Allmänt om kurserna (kurser/faq).
-
-Allmänt om utbildningspketen (utbildning/faq).
+Nybörjarmaterial, kom igång.
