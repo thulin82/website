@@ -1,16 +1,18 @@
 ---
-author: lew
+author: aar
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2016-05-03": (PA, aar) Pre-release.
 category:
     - python
 ...
-Vad är UML?
+Introduktion till regex
 ===================================
 
-[FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
+[FIGURE src=/image/oopython/kmom04/regex.png class="right"]
 
-INTRO
+Regex är en förkortning av Regular Expression som är ett välkänt språk för att matcha text mönster. Det används oftast till att extrahera information från kod, log filer och andra texter.  
+I regex defineras ett mönster av karaktärer som regex sedan försöker hitta/matcha i en sträng eller text.  
+I python används modulen [_re_](https://docs.python.org/2/library/re.html) för att använda regex på strängar.
 
 <!--more-->
 
@@ -19,22 +21,33 @@ INTRO
 Förutsättning {#pre}
 -------------------------------
 
-Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebär.
+Det finns inga förkunskaper.
 
 
 
-Rubrik {#dontForgetId}
+Använda modulen re {#anvanda_modulen_re}
 ------------------------------
 
 
-Lite text lalalalal
+Vi ska använda oss av re's funktion [_search_](https://docs.python.org/2/library/re.html#re.search) för att matcha mönster. Det går även använda re's [_match_](https://docs.python.org/2/library/re.html#re.match) funktion men den kommer alltid att försöka matcha strängen från position noll och frammåt medans search kan hitta mönstret vart som helst i strängen.  
+Nedan är ett exemple på skillnaden mellan search och match.
 
 ```python
->>> python kod
->>> tjohoo
+import re
+line = "2bc"
+matchMatch = re.match("b", line)
+print(matchMatch)
+None
+
+matchSearch = re.search("b", line)
+print(matchSearch)
+<_sre.SRE_Match object; span=(1, 2), match='b'>
+
+print(matchSearch.group())
+b
 ```
 
-
+När vi skriver ut matchMatch får vi None för att match och search returnerar None ifall den inte hittar mönstret.
 
 
 
@@ -70,4 +83,4 @@ Text...
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Bra finish, länka till forumtråd eller liknande?
+Dokumentation för re modulen: <https://docs.python.org/2/library/re.html#>.

@@ -8,7 +8,7 @@ category:
 Vad är UML?
 ===================================
 
-[FIGURE src=/image/oopython/kmom02/uml_diagrams.png class="right"]
+[FIGURE src=/image/oopython/kmom02/uml_diagrams.png?w=c5 class="right"]
 
 UML står för Unified Modeling Language, det är ett visuellt modellerings språk för att specificera, konstruera och dokumentera artifakter i ett system.  
 Det brukar användas på tre sätt:
@@ -18,6 +18,8 @@ Det brukar användas på tre sätt:
 3. Som ett programmeringsspråk: Det finns färdiga verktyg som genererar kod baserat på UML.
 
 Vi kommer gå igenom två av diagrammen, Class diagram och Sequence diagram.
+
+<!--more-->
 
 
 
@@ -148,3 +150,5 @@ Det finns bra verktyg online för att rita uml diagram, kolla in https://www.dra
 För att läsa mer om class diagram kolla här: http://www.uml-diagrams.org/class-diagrams-overview.html.
 
 För att läsa mer om sequence diagram och vad man mer kan göra med dem kolla här: http://www.uml-diagrams.org/sequence-diagrams.html.
+
+
