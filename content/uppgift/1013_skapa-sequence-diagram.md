@@ -23,7 +23,7 @@ Du har läst artiklarna: "[Vad är UML?](kunskap/vad-ar-uml)" och "[Kom igång m
 Introduktion {#intro}
 -----------------------
 
-Du ska skapa ett sequnce diagram med valfritt verktyg, jag föreslår https://www.websequencediagrams.com/ eller https://www.draw.io/.
+Du ska skapa ett sequnce diagram med valfritt verktyg, jag föreslår <https://www.websequencediagrams.com/> eller <https://www.draw.io/>.
 
 
 
