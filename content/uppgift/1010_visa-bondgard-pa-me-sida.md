@@ -5,10 +5,10 @@ revision:
 category:
     - python
 ...
-Din egen chattbot - Marvin - steg 3
+Visa bondgården på me-sidan
 ===================================
 
-Programmering och problemlösning i Python. Lär Marvin att prata lite mer slumpmässigt via listor med standardsvar.
+Baka ihop delarna från kursmomentet och presentera tabellen på me-sidan.
 
 <!--more-->
 
@@ -16,69 +16,53 @@ Programmering och problemlösning i Python. Lär Marvin att prata lite mer slump
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och stränghantering och du har byggt [andra delen av Marvin]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-2).
+Du har gjort uppgiften "[Skapa en bongårdsdatabas](uppgift/skapa-en-bondgards-databas).  
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Ett steg vidare från våran Marvin med meny är att lära honom kommandon utöver de menyval som finns. Det innebär  att lära Marvin att svara på löpande text istället för siffror.
-
-Marvin skall kunna svara på frågor som dessa.
-
-```text
-Marvin, ge mig ett citat!
-Dagens citat, tack?
-Citat - för bövelen, ge mig ett!
-```
-
-Marvin skall alltså kunna ge ett citat, oavsett hur man ber om det.
-
-Det enkla sättet att göra det är att kolla om texten som skrivs till Marvin innehåller ett visst ord, så som "citat" i detta fallet. Baserat på det skriver sedan Marvin ut ett svar, som exempelvis kan slumpas från en lista.
-Du kan kika lite på hur en liknande lösning hanteras av [IRC-Marvin på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L358).
-
-Vi kommer att lära Marvin att ge oss ett citat, där citaten är lagrade på fil.
+Nu är det dags att presentera databasen "farm.sqlite" och dess tabeller på din me-sida, med hjälp av Flask och SQLAlchemy. Du bestämmer själv hur presentationen ska se ut så länge kraven uppfylls.
 
 
 
 Krav {#krav}
 -----------------------
 
-Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopiera även filen med citat.
+Utgå ifrån mappen "/kmom04/Flask4" och fortsätt arbeta med den.
+
+1. Skapa en ny flik i din navbar där presentationen ska visas, tex "Bondgård".
+
+2. Varje tabell i databasen, "farm.sqlite", ska presenteras med all tillgänglig information, förslagsvis i html-tabeller.  
+
+3. Varje databas-tabell ska representas av respektive klass i SQLAlchemy.  
+
+4. Man ska kunna ta bort en rad ur valfri tabell via en länk och metoden GET.  
+
+5. Man ska kunna lägga till en rad i valfri tabell via ett formulär och metoden POST.  
+
+6. Sidan ska uppdatera informationen direkt, dvs ladda om med det nya innehållet. Det är bara den aktuella tabellen som ska uppdateras och läsas in igen.  
+
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -ri kmom03/marvin2/*.py kmom04/marvin3/
-cp -i ../example/marvin/quotes_lgtg.txt kmom04/marvin3/quotes.txt
-cd kmom04/marvin3
+dbwebb validate Flask4
 ```
 
-1. Lär Marvin kommandot "citat". Presentera ett slumpmässigt citat från boken "Liftarens Guide till Galaxen", som Marvin har tillgång till i filen `quotes.txt`.
-
-2. Validera Marvin genom att göra följande kommandon i kurskatalogen i terminalen.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate marvin3
-```
-
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. Glöm inte att göra `dbwebb publish Flask4`.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-1. Lär Marvin svara på meningar som innehåller orden "hej" och "lunch". Svaren skall slumpas fram och kombineras från de [standardsvar som IRC-Marvin använder på github](https://github.com/mosbth/irc2phpbb/blob/v0.3.1/old/irc2phpbb.py#L179-L193).
+1. Lägg till funktionaliteter som att kunna sortera tabellerna, paginering och max antal rader som visas etc. Skriv en rad i din redovisningstext om vad du gjort.
 
 
 
 Tips från coachen {#tips}
 -----------------------
-
-Lär dig felsöka med debuggern, använd den när du får problem. Komplettera med utskrifter av `print()`.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 

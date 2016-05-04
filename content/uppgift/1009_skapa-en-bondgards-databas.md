@@ -5,8 +5,10 @@ revision:
 category:
     - python
 ...
-Skapa en djurparksdatabas
+Skapa en bondgårdssdatabas
 ===================================
+
+[FIGURE src=/image/oopython/kmom04/farmer.png?w=c5 class="right"]
 
 Skapa en SQLite-databas över en simulerad liten bondgård i SQLite Manager.
 
@@ -65,7 +67,7 @@ Fyll på _animals_ med minst 10 djur.
 
 Fyll på _vehicles_ med minst 3 olika typer av fordon.  
 
-5. Spara databasfilen i `kmom04/Flask4/db`
+5. Spara databasfilen i `kmom04/Flask4/db`.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -85,7 +87,7 @@ Det finns inga extrauppgifter.
 Tips från coachen {#tips}
 -----------------------
 
-Du kan testa dina tabeller direkt i SQLite Manager med olika queries. 
+Du kan testa dina tabeller direkt i SQLite Manager med olika queries.
 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
