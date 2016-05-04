@@ -5,7 +5,7 @@ revision:
 category:
     - python
 ...
-Vad är UML?
+Från idé till produkt
 ===================================
 
 [FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
