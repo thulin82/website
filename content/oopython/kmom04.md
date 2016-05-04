@@ -83,9 +83,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Regex](uppgift/lab4)" (lab 4)
 
-2. Gör uppgiften "[Skapa en djurparks-databas](uppgift/skapa-en-djurparks-databas)"
+2. Gör uppgiften "[Skapa en bondgårds-databas](uppgift/skapa-en-bondgards-databas)"
 
-3. Gör uppgiften "[Visa djurparken på me-sidan](uppgift/visa-djurpark-på-me-sida)".
+3. Gör uppgiften "[Visa bondgården på me-sidan](uppgift/visa-bondgarden-pa-me-sida)".
 
 
 
