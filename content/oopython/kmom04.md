@@ -71,7 +71,9 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln "[Vad är regex?](kunskap/regex)".
 
-2. Jobba igenom övningen med "[SQLAlchemy](kunskap/sqlalchemy)".
+2. Jobba igenom övningen med "[SQLAlchemy](kunskap/sqlalchemy)".  
+
+3. Titta igenom artikeln som handlar om "[GET, POST i Flask](kunskap/flask-sqlite-sqlalchemy-post-get)"  
 
 
 
