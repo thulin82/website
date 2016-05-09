@@ -34,9 +34,9 @@ Utgå ifrån mappen "/kmom04/Flask4" och fortsätt arbeta med den.
 
 1. Skapa en ny flik i din navbar där presentationen ska visas, tex "Bondgård".
 
-2. Varje tabell i databasen, "farm.sqlite", ska presenteras med all tillgänglig information, förslagsvis i html-tabeller.  
+2. Varje databas-tabell ska representas av respektive klass i SQLAlchemy.  
 
-3. Varje databas-tabell ska representas av respektive klass i SQLAlchemy.  
+3. Varje tabell i databasen, "farm.sqlite", ska presenteras med all tillgänglig information, förslagsvis i html-tabeller.  
 
 4. Man ska kunna ta bort en rad ur valfri tabell via en länk och metoden GET.  
 
