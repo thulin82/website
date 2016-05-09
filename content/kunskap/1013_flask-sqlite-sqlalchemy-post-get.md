@@ -26,6 +26,8 @@ Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans me
 
 [FIGURE src=/image/oopython/kmom04/tree_flask2.png]
 
+<!--more-->
+
 
 
 Förutsättning {#pre}
