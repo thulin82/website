@@ -127,9 +127,11 @@ Installera labbmiljön för kursen.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. Bygg webbplats med anax. Använd composer. Bifoga mall för standardsidor.
+1. Övning composer, make.
 
 1. Övning för att komma igång med make och kompilera less (använd normalize + semantic.gr, media queries).
+
+1. Bygg webbplats med anax. Använd composer. Bifoga mall för standardsidor.
 
 1. Övning med navbar som är responsiv.
 
