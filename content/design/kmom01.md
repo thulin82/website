@@ -127,7 +127,7 @@ Installera labbmiljön för kursen.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. Övning composer, make.
+1. Övning composer, make. yaml.
 
 1. Övning för att komma igång med make och kompilera less (använd normalize + semantic.gr, media queries).
 

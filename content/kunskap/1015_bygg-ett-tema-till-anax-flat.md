@@ -1,19 +1,21 @@
 ---
 author: mos
 revision:
-    2016-05-02: (PA, mos) Pre-release.
+    2016-05-11: (PA, mos) Pre-release.
 category:
     - design
+    - less
+    - css
     - ramverk
     - anax
     - anax-flat
 ...
-Bygg en me-sida med Anax Flat
+Bygg ett tema till Anax Flat
 ===================================
 
-Vi skall använda ramverket Anax Flat för att bygga en me-sida. Ramverket Anax Flat är en variant av Anax som bygger på en webbplats som skapas med Markdown dokument tillsamman med YAML eller JSON som frontmatter. Frontmattern tillsammans med en väl definierad katalog och filstruktur fungerar som en ersättare till databasen.
+Du har kommit igång med ramverket Anax Flat och du kan skapa ditt eget innehåll på webbplatsen. Nu är det dags att börja styla webbplatsen med CSS, eller rättare sagt med LESS.
 
-När vi byggt vår webbplats börjar vi skapa ett tema till den, genom att använda LESS och ett gridbaserat LESS-ramverk.
+Vi bygger upp ett tema från grunden, steg för steg. Temat får en grundstruktur som gör det utbyggbart och modulärt.
 
 <!--more-->
 
@@ -22,11 +24,7 @@ När vi byggt vår webbplats börjar vi skapa ett tema till den, genom att anvä
 Förutsättning {#pre}
 -------------------------------
 
-Du har installerat `composer` och `make`.
-
-Du kan kompilera LESS-filer vid kommandoraden.
-
-Du har konfigurerat din PHP installation att hantera YAML.
+Du har jobbat igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
 
 
 
