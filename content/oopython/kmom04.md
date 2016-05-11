@@ -71,7 +71,9 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln "[Vad är regex?](kunskap/regex)".
 
-2. Jobba igenom övningen med "[SQLAlchemy](kunskap/sqlalchemy)".
+2. Jobba igenom övningen med "[SQLAlchemy](kunskap/sqlalchemy)".  
+
+3. Titta igenom artikeln som handlar om "[GET, POST i Flask](kunskap/flask-sqlite-sqlalchemy-post-get)"  
 
 
 
@@ -81,9 +83,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Regex](uppgift/lab4)" (lab 4)
 
-2. Gör uppgiften "[Skapa en djurparks-databas](uppgift/skapa-en-djurparks-databas)"
+2. Gör uppgiften "[Skapa en bondgårds-databas](uppgift/skapa-en-bondgards-databas)"
 
-3. Gör uppgiften "[Visa djurparken på me-sidan](uppgift/visa-djurpark-på-me-sida)".
+3. Gör uppgiften "[Visa bondgården på me-sidan](uppgift/visa-bondgarden-pa-me-sida)".
 
 
 

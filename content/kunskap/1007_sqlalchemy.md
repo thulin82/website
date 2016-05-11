@@ -8,7 +8,7 @@ category:
 SQLAlchemy
 ===================================
 
-<!-- [FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"] -->
+[FIGURE src=/image/oopython/kmom04/alchemy_top.png?w=c5 class="right"]
 
 SQLAlchemy är en "verktygslåda" för hantering av SQL. Delen vi ska titta närmare på är en så kallad [Object Relational Mapper](https://en.wikipedia.org/wiki/Object-relational_mapping)(ORM). Det hjälper oss att använda den fulla kapaciteten hos SQL på ett objektrelaterat sätt, där vi inte behöver använda oss utav en onödigt många och invecklade SQL satser vid större projekt.
 
