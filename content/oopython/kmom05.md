@@ -70,7 +70,7 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".
 
-2. Läs igenom artikeln "[Datastrukturen "Set"](kunskap/datastrukturer)".
+2. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
 
 
 
