@@ -5,7 +5,7 @@ revision:
 category:
     - python
 ...
-Kmom05: Sorteringsalgoritmer och sökmotor
+Kmom05: Sorteringsalgoritmer och datastrukturer
 ====================================
 
 INTRO
@@ -70,7 +70,9 @@ Genomför följande övning för att träna dig.
 
 1. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".
 
-2. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
+2. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".  
+
+3. 2. Läs igenom artikeln "[Rekursion](kunskap/rekursion)".
 
 
 
