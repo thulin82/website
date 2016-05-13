@@ -64,9 +64,11 @@ Titta på följande:
 
 1. Bekanta dig med [LESS](http://lesscss.org/) och se vad det kan göra. 
 
-1. Läs Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)" som fokuserar på skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor gör.
+1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)" som fokuserar på skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor gör.
 
-1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/)
+1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
+
+1. Videoserie.
 
 
 

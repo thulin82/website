@@ -28,227 +28,259 @@ Du har jobbat igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-s
 
 
 
-Börja med en tom katalog {#tom}
+Börja med en fork {#fork}
 -------------------------------
 
-Låt oss börja från ingenting. En tom katalog. Skapa en ny katalog och döp den till `anax-flat`. Se till att katalogen ligger på en plats där du kan öppna den via din lokala webbserver.
+På GitHub finns mosbth/ ett embryo till ett tema. Framförallt finns en makefile som hjälper dig att jobba med LESS på kommandoraden. Allt eftersom kommer vi bygga ut vårt tema genom att återanvända befintliga moduler tillsammans med de egna moduler vi skapar. Att samla allt i ett eget Git-repo känns som en god idé.
+
+Grundtemat finns på [`canax/anax-flat-theme`](https://github.com/mosbth/anax-flat-theme). Forka den och klona den sedan till din installation av Anax Flat.
+
+Forka gör du via GitHub, klicka på knappen "Fork".
+
+Nu har du en egen kopia på ditt eget GitHub konto. Ta nu och klona din egna kopia.
 
 ```bash
-$ mkdir anax-flat
-$ cd anax-flat
-```
-
-Anax Flat finns på GitHub och på Packagist. Jag väljer att installera Anax Flat med composer.
-
-```bash
-$ composer require mos/anax-flat geshi/geshi:dev-master
-```
-
-*Egentligen behöver du bara paketet `mos/anax-flat` men eftersom paketet `geshi/geshi` inte använder [sematisk versionshantering](http://semver.org/) så får vi även hämta hem det paketet genom att specificera senaste versionen som `dev-master`.*
-
-Nu har du en fil `composer.json` och du har Anax Flat installerat under vendor-mappen. Då kan vi skapa en webbplats med hjälp av filer som ligger i Anax Flat.
-
-<!--
-
-Flytta till ett eget dokument om hur man installera och använder composer.
-
-Du kan alltid kontrollera vilka moduler som du tagit hem, de som nu ligger i `vendor` mappen.
-
-```bash
-$ composer info
-```
-
-Du kan också kontrollera varför en modul installerats genom att se vilken modul som är beroende av densamma. Så här kan du se vilken modul som krävde att `mos/ctextfilter` installerades.
-
-```bash
-$ composer require mos/ctextfilter
-```
-
-Om du vill vet mer om paketet så kan du använda composer för att öppna paketets hemsida.
-
-```bash
-$ composer home mos/ctextfilter
-$ composer home mos/anax
-```
-
-Du kan alltid uppdatera de nedladdade paketen för att få hem senaste ändringar.
-
-```bash
-$ composer update
-```
-
-Ibland får du ett meddelande om att uppdatera `composer`. Du kan hjälpa `composer` att uppdatera sig själv.
-
-```bash
-$ composer selfupdate
-```
-
-Du kan göra fler saker med `composer`. Använd hjälptexten för att snabbt få en översikt av vad du kan göra.
-
-```bash
-$ composer
-```
--->
-
-Så här kan det se ut.
-
-ASCIINEMA
-
-
-
-Låna en Makefile {#make}
--------------------------------
-
-Anax Flat innehåller en Makefile som vi kan återanvända. Makefilen innehåller vanliga kommandon som vi vill köra när vi bygger en webbplats med Anax Flat.
-
-```bash
-$ cp vendor/mos/anax-flat/Makefile .
+# Flytta till rooten av din Anax Flat
+$ git clone git@github.com:mosbth/anax-flat-theme.git theme
+$ cd theme
 $ ls -l
-$ make help
 ```
 
-Det sista kommandot `make help` ger dig en utskrift av de kommandon som Makefilen stödjer. Det är med hjälp av dessa kommandon som vi nu skall bygga en webbplats.
-
-Öppna gärna filen `Makefile` i din texteditor och studera den. Den innehåller kod som är en blandning av make-specifik syntax och Bash-syntax. För att bli duktig på makefiler behöver du lära dig både make och bash, men det är ett sidospår.
-
-Så här kan det se ut.
-
-ASCIINEMA
-
-Nu kan vi använda makefilen för att skapa grunden till en webbplats.
+Kika runt bland filerna och öppna dem i din texteditor. Bekanta dig med dem, de innehåller inte så mycket för tillfället, bara ett skal.
 
 
 
-Skapa en katalogstruktur {#kataloger}
+Verktyg för att kompilera och linta LESS {#less}
 -------------------------------
 
-Makefilen innehåller ett kommando för att skapa en grundstruktur till din webbplats.
+Innan vi kan kompilera LESS behöver vi en kompilator. Jag tänker installera en kompilator i form av ett NPM-paket.
+
+Du kan använda makefilen för att installera det som behövs.
 
 ```bash
-$ make site-build
+$ make npm-config
+$ make npm-install
+$ make npm-version
 ```
 
-Det som sker är att kommandon i makefilen dels skapar ett antal kataloger och dels kopierar filer och katalogstrukturer från de paketen som ligger i `vendor` mappen.
+Nu har du två verktyg. Du har kommandot `lessc` som lintar, kompilerar och minifierar din styesheet. Du har även kommandot `csslint` som lintar din slutliga CSS-kod.
 
-Du kan själv studera [källkoden för makefilen](https://github.com/canax/anax-flat/blob/master/Makefile) och se vad som händer. Leta reda på den action som heter *site-build* så kan du se vilka kommandon som utförs.
+Du kan testa att köra dem direkt via kommandoraden för att se att de fungerar.
 
-Så här kan det se ut.
+```bash
+$ lessc --version
+$ csslint --version
+```
 
-ASCIINEMA
-
-Här följer en förteckning av några av de kataloger som skapas.
-
-| Katalog        | Beskrivning                            |
-|----------------|----------------------------------------|
-| `cache/*`      | Temporär lagring av cachade filer.     |
-| `content/*`    | Filer som motsvarar innehållet i webbplatsen. Här redigerar vi innehållet i webbplatsen. |
-| `theme/*`      | Utvecklingsmiljö för att skapa ett nytt tema. |
-| `htdocs/*`     | Rooten till den publika delen av webbplatsen. Här lagras alla filer som skall vara tillgängliga via en länk. |
-
-Du kan nu öppna katalogen `htdocs` i din webbläsare, via din lokala webbserver. För min del gäller länken `http://localhost/anax-flat/htdocs` men du får justera den så att den passar just din installation.
-
-BILD på webbsidan.
-
-Nu har vi en webbplats. Låt oss anpassa webbplatsen, först genom att modifiera dess innehåll och därefter genom att modifiera dess style.
+Vi kommer låta makefilen sköta kompilering och lintning.
 
 
 
-Innehåll som en mesida {#innehall}
+En första stylesheet {#steg1}
 -------------------------------
 
-Innehållet i denna webbplats ligger i markdown filer under katalogen `content`. Öppna upp din texteditor och studera filerna och katalogstrukturen.
+Då så, låt oss kompilera en första gång och se vad som händer.
 
-Då skall vi ändra filernas innehåll.
+```bash
+$ make less
+$ ls -l build/css/
+total 8.0K
+-rw-r--r-- 1 mos mos 551 May 11 18:13 style.css
+-rw-r--r-- 1 mos mos  94 May 11 18:13 style.min.css
+```
 
+Öppna gärna de båda filerna för att se hur den kompilerade stylen ser ut.
 
+Den resulterande stylesheeten hamnar i katalogen `build/css`. Den minifierade stylesheeten kopieras också till `htdocs/css/style.min.css` så du kan testa den lokalt. Dessutom kopieras en ytterligare kopia till Anax Flat via `../htdocs/css/style.min.css` så att du kan använda den nya stylen direkt i din Anax Flat.
 
-###Byt språk på webbplatsen {#lang}
-
-Filerna som finns är grunden till en mesida. De är på engelska, men du får gärna skriva på svenska. Om du väljer svenska så kan du ändra grundinställningen i temat så att den säger att detta är en webbplats på svenska.
-
-Denna ändring gör du i konfigurationsfilen `config/theme.php`. Leta reda på raden som säger `lang` och byt den till `sv`. Så här.
+Du kan behöva konfigurera din Anax Flat att använda denna stylesheeten. Det gör du i filen `config/theme.php` genom att ändra följande.
 
 ```php
-//"lang"          => "en",
-"lang"          => "sv",
+//"stylesheets" => ["css/default.min.css"],
+"stylesheets" => ["css/style.min.css"],
 ```
 
-Webbplatsen är språkanpassad och de delar som stödjer det kommer nu att ge svenska meddelanden istället för engelska.
+Du kan nu ladda om din Anax Flat i din webbläsare och använda din nya stil, om än någon knapphändig än så länge.
+
+[FIGURE src=/image/kurs/design/anax-flat-no-theme.png?w=w2 caption="Anax Flat utan style."]
+
+Då kan vi börja att bygga upp stilen från början. Du kan notera att även om det inte finns någon style så går det ändock att läsa innehållet i webbplatsen. Det är viktigt att man kan göra det, ur användbarhetssynpunkt. Ibland kanske stylesheeten inte hinner laddas och då skall användaren ändå kunna använda webbplatsen.
+
+Då börjar vi lägga till LESS moduler.
 
 
 
-###Ändra innehåll i enkla sidor {#sidor}
-
-Två av huvudsidorna som ligger i menyn är `index.md` och `about.md`. Öppna upp dem i din texteditor och uppdatera innehållet. Ladda nu om sidorna i din webbläsare så ser du att innehållet har ändrats.
-
-
-
-###Ändra innehåll i block {#block}
-
-Innehållet som ligger i footern, är fördelat i tre kolumner och en footer längst ned. Du hittar deras motsvarande innehåll i katalogen `content/block`. Öppna de olika filerna och redigera dem så de blir personliga för din webbplats.
-
-Ladda om sidan i webbläsaren för att se ändringarna.
-
-
-
-###Ändra innehållet i sammansatta sidor {#samsidor}
-
-Sidan för `report/` är en sammansatt sida, den består av flera undersidor. Det som ger sidan dess struktur är konfigurerat i filen `report/.meta`. Du kan kika i den filen för att se dess struktur.
-
-Pröva sedan att ändra i filen `110_kmom01.md`, det är i denna filen du skriver redovisningstexten för kmom01.
-
-Ladda om sidan i webbläsaren för att se den uppdaterade texten.
-
-
-
-###YAML för att konfigurera sidornas innehåll {#yaml}
-
-Det du ser överst i sidorna, mellan start taggen `---` och slut taggen `...` är YAML data. YAML är ett textformat som kan läsas in till en PHP datastruktur. 
-
-Vi kallar denna del sidornas *frontmatter*. Det är data om själva sidorna, vi kan kalla det *meta data*, eller *data om data*.
-
-Sak samma, det ger oss möjlighet att konfigurera hur sidorna presenteras. 
-
-
-
-Anpassa stylen {#style}
+Normalisera stylen {#normalisera}
 -------------------------------
 
-Det följer med en grundstyle som ligger i den minifierade stylesheeten `htdocs/css/default.min.css`. Minifierad betyder att stylesheeten är komprimerad och alla kommentarer och mellanslag är borttagna, den är alltså lite svår att läsa om du öppnar den i din texteditor.
-
-Genom att använda webbläsarens devtools kan du dock se vilka CSS-konstruktioner som finns.
-
-Men hur gör man för att bygga en eget style?
-
-Jo, det kan du läsa om i artikeln "Bygg ett tema till Anax Flat".
+Det första vi gör är att nollställa stylen, eller egentligen vill vi normalisera stylen. Det vi vill uppnå är att vår grundstyle är lika i alla webbläsare, oavsett om vissa webbläsare lägger på sin egen personliga style. Detta kan [normalize.css](http://necolas.github.io/normalize.css/) hjälpa mig med.
 
 
 
-###Bygg eget tema {#egettema}
+###Ladda ned Normalize {#downnorm}
 
-Jo, makefilen och katalogen `theme` är förberedd för att hjälpa dig med detta.
+Jag hämtar normalize.css från GitHub och sparar filen i katalogen `modules`. Jag döper filen till `normalize.less` för att LESS kompilatorn skall betrakta filen som en LESS fil.
 
-Gör så här för att komma igång.
+```bash
+$ wget https://necolas.github.io/normalize.css/latest/normalize.css -O modules/normalize.less
+```
 
-1. Gå in i katalogen `theme`.
-2. Skapa din fil `style.less`.
-3. sss
+
+
+###Gör Normalize till en modul {#normmod}
+
+Jag uppdaterar `modules.less` så att den importerar modulen.
+
+```css
+// Reset, or normalize the browser style
+@import url(normalize.less);
+```
+
+Jag behöver inte ange katalogen eftersom jag har angivit i makefilen att katalogen `modules` skall vara en del av *include pathen*. Det innebär att kompilatorn först letar i nuvarande katalog och därefter i katalogen `modules`. Det ger mig viss frihet att ersätta vissa moduler. Det kan vara bra för återanvändning i längden.
+
+Nu kan jag kompilera stylen och testa den. Det bör inte bli någon förändring rent utseendemässigt. Så vill du vara säker på att normalize.less är inkluderad så kan du titta i den genererade källkoden `build/css/style.css` som nu bör vara lite större än tidigare.
+
+
+
+###Nedladdning av Normalize som del i Makefile {#nednorm}
+
+Vad händer när det kommer uppdateringar till `normalize.css`? Ja, förr eller senare behöver du uppdatera. Tänk nu att vi kommer ha flera moduler så blir det rätt jobbigt att hålla koll på uppdateringar. Men tänk om vi fyllar på i makefilen?
+
+Vad sägs om ett make *target* som gör `make upgrade` genom att hämta hem senaste versionerna av alla moduler? Jag tycker det låter som en bra idè. Så här kan det se ut i makefilen.
+
+```bash
+# target: upgrade - Download latest version of all external LESS modules.
+.PHONY: upgrade
+upgrade:
+	@echo "$(ACTION)Upgrade external LESS modules$(NO_COLOR)"
+	wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O $(LESS_MODULES)/normalize.less
+```
+
+Så här kan det se ut när du kör det.
+
+```bash
+$ make upgrade
+--> Upgrade external LESS modules
+wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O modules/normalize.less
+```
+
+Det var vår första LESS modul, på vår långa resa där vi försöker skapa en god bas av LESS moduler för att bygga egna stylesheets.
+
+
+
+Regioner för att placera ut innehållet {#regioner}
+-------------------------------
+
+Hur HTML-koden genereras påverkar vilka möjligheter vi har att styla webbplatsen. När an har kontroll över både stylen och skapandet av HTML-koden så kan man anpassa dem för att få ren och snygg HTML-kod och enkel stylning av den.
+
+Men nu har vi redan färdigskapad HTML. Hur löser vi det? Som tur är så har jag koll på strukturen av HTML-koden. Jag tänkte att vi skulle ta ett steg fram och se vilka olika regioner som HTML-koden består av.
+
+Jag tänkte försöka skapa  en `regions.less` för att uppnå så att webbplatsen ser ut ungefär så här.
+
+[FIGURE src=/image/kurs/design/anax-flat-regions.png?w=w2 caption="Anax Flat stylad in i regioner."]
+
+Till min hjälp har jag delvis kunskapen om den template fil som används när HTML-koden genereras. Du kan själv studera den i katalogen `vendor/mos/anax/view/default/index.tpl.php`, eller via GitHub i repot mos/anax där [alla template-filerna  finns](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php), specifikt är det [`index.tpl.php`](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php) som skapar grunden för HTML sidan.
+
+Du bör nu kika igenom videoserien där jag visar hur jag bygger LESS modulen för `regions.less`. Men du kan också låna den färdiga `regions.less` som du hittar i kursrepot under `example/anax-flat-theme/regions.less`. Kanske vill du hellre kika på videorna i lugn och ro lite senare.
+
+VIDEO om att lyfta fram regionerna.
+
+Huvudsaken är att du lär dig styla upp nuvarande HTML struktur så att den ser lite vettig ut.
+
+
+
+En responsiv navbar {#navbar}
+-------------------------------
+
+Navbaren är som du förstår automatgenererad utifrån den information som finns i Anax Flat `config/navbar.php`. Dessutom har den en struktur som är förberedd för att stylas på ett repsonsivt sätt. Att göra det på egen hand från grunden kan ta sin lilla tid så jag tänkte att vi lånar en LESS modul som ger oss grundstylen till den responsiva navbaren.
+
+Den modulen jag tänkte låna finns på GitHub under namnet [mosbth/responsive-menu](https://github.com/mosbth/responsive-menu).
+
+Låt oss testa den.
+
+
+
+###Bekanta dig med `responsive-menu` {#downresp}
+
+Börja med att clona ned en kopia.
+
+```bash
+$ git clone https://github.com/mosbth/responsive-menu.git
+$ cd responsive-menu
+```
+
+Det ligger en `index.html` i repot, öppna den i webbläsaren för att testa hur menyn fungerar.
+
+Så här ser det ut när jag testar.
+
+VIDEO
+
+
+
+###Använd modulen `responsive-menu` {#useresp}
+
+Då försöker vi integrera den responsiva menyn in i våra LESS moduler. Det handlar om två filer som vi behöver. Jag väljer att hämta hem filerna med `wget` för att senare kunna integrera proceduren i makefilens `make upgrade`.
+
+Först hämtar jag hem LESS filen och sparar som en LESS modul.
+
+```bash
+$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.less -O modules/responsive-menu.less
+```
+
+Jag lägger in den så att den importeras i `modules.less`. Jag kan nu testa att kompilera stylen och ladda om webbsidan.
+
+Dock, innan allt fungerar så behöver jag hämta hem JavaScript-filen också. Denna sparar jag i katalogen `js`.
+
+```bash
+$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.js -O js/responsive-menu.less
+```
+
+Jag kan nu kompilera om stylen igen. Makefilen har redan inbyggt i sig att den kopierar katalogen `js` till rätt plats i Anax Flat under `htdocs/js`.
+
+Du behöver dubbelkolla att Anax Flat är inställt på att ladda filen. Det är en inställning i `config/theme.php` som skall se ut så här.
+
+```php
+//"javascripts" => [],
+"javascripts" => ["js/responsive-menu.js"],
+```
+
+Nu kan du testa menyn genom att ladda om din webbläsare.
+
+
+
+###Förbered för uppdateringar i makefilen {#respupgr}
+
+Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av responsiv menyn i fortsättningen.
+
+```bash
+# target: upgrade - Download latest version of all external LESS modules.
+.PHONY: upgrade
+upgrade:
+	@echo "$(ACTION)Upgrade external LESS modules$(NO_COLOR)"
+
+	# Normalizer
+	wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O $(LESS_MODULES)/normalize.less
+
+	# Responsive-menu
+	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
+	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.js -O js/responsive-menu.js
+```
+
+
+
+Styla header och menyn {#header}
+-------------------------------
+
+Style header och meny (finns i style.less).
+
+VIDEO
 
 
 
 Responsivitet {#resp}
 -------------------------------
 
-Responsiv är dess layout, pröva att ändra bredden på webbläsaren så ser du. Du kan även öppna webbplatsen i en mobil eller läsplatta så ser du att den är responsiv.
 
-
-
-Bygg webbplatsen i ett Git repo {#git}
--------------------------------
-
-I artikeln kommer vi att bygga basen till en webbplats. Denna webbplats kan vi spara på GitHub i ett Git repo. 
-
-.gitignore
 
 
 Avslutningsvis {#avslutning}

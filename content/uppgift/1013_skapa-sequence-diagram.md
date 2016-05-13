@@ -34,8 +34,8 @@ Starta med att kopiera filerna:
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me/kmom02/uml
 cp -ri example/uml/*.py me/kmom02/uml/
+cd me/kmom02/uml
 # Testa att koden funkar
 ./Controller.py
 ```

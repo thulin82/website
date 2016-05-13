@@ -52,7 +52,6 @@ Redirect /linux/proj5 /uppgift/linux-projekt-5
 Redirect /webapp/proj5 /uppgift/webapp-proj-5
 Redirect /htmlphp/proj6 /uppgift/bygg-ut-din-htmlphp-me-sida-till-version-6
 Redirect /cli /dbwebb-cli
-Redirect /dbwebb-cli /dbwebb-cli
 Redirect /dbwebb-inspect /dbwebb-cli/dbwebb-inspect
 Redirect /dbwebb-validate /dbwebb-cli/dbwebb-validate
 Redirect /facebook /social/facebook

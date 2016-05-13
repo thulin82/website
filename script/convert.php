@@ -391,7 +391,6 @@ foreach ($delete as $file) {
 
 // Redirects and urls removed
 $redirect["cli"] = "dbwebb-cli";
-$redirect["dbwebb-cli"] = "dbwebb-cli";
 $redirect["dbwebb-inspect"] = "dbwebb-cli/dbwebb-inspect";
 $redirect["dbwebb-validate"] = "dbwebb-cli/dbwebb-validate";
 $redirect["facebook"] = "social/facebook";
