@@ -14,6 +14,8 @@ Horisontellt grid för typsnitt.
 
 Övning med att lägga in style för alla html font element.
 
+Regioner & Grid.
+
 
 (SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
 

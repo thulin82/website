@@ -222,26 +222,7 @@ Genom att använda webbläsarens devtools kan du dock se vilka CSS-konstruktione
 
 Men hur gör man för att bygga en eget style?
 
-Jo, det kan du läsa om i artikeln "Bygg ett tema till Anax Flat".
-
-
-
-###Bygg eget tema {#egettema}
-
-Jo, makefilen och katalogen `theme` är förberedd för att hjälpa dig med detta.
-
-Gör så här för att komma igång.
-
-1. Gå in i katalogen `theme`.
-2. Skapa din fil `style.less`.
-3. sss
-
-
-
-Responsivitet {#resp}
--------------------------------
-
-Responsiv är dess layout, pröva att ändra bredden på webbläsaren så ser du. Du kan även öppna webbplatsen i en mobil eller läsplatta så ser du att den är responsiv.
+Jo, det kan du läsa om i artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
 
 
 
@@ -251,6 +232,7 @@ Bygg webbplatsen i ett Git repo {#git}
 I artikeln kommer vi att bygga basen till en webbplats. Denna webbplats kan vi spara på GitHub i ett Git repo. 
 
 .gitignore
+
 
 
 Avslutningsvis {#avslutning}
