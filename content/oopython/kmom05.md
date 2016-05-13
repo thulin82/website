@@ -72,7 +72,7 @@ Genomför följande övning för att träna dig.
 
 2. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".  
 
-3. 2. Läs igenom artikeln "[Rekursion](kunskap/rekursion)".
+3. Läs igenom artikeln "[Rekursion](kunskap/rekursion)".
 
 
 
