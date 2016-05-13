@@ -14,3 +14,23 @@ $ dbwebb --force --silent testrepo
 Optionen `--force` gör att du kan köra om testsuiten utan att först radera `me` katalogen.
 
 Optionen `--silent` ger att bara felutskrifter skrivs ut.
+
+
+
+Syntaxen i en testsuite {#syntax}
+---------------------------------
+
+Så här kan en fil `.dbwebb.tests` se ut.
+
+```bash
+# Init
+dbwebb init-me
+
+# Kmom01 lab1
+dbwebb recreate lab1
+cd me/kmom01/lab1 && ./answer.py; [[ $? = 1 ]]
+```
+
+Varje rad innehåller ett kommando som kan exekveras via `eval`. En sådan rad kallas för en *assertion*. En assertion måste leverera ett exitvärde av 0 för att betraktas som lyckad.
+
+En rad kan också vara tom eller börja med en `#` för kommentarsrader.
