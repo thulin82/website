@@ -1,7 +1,9 @@
 Testa ett kursrepo
 ==================================
 
-Detta är för de som utvecklar och testar kursrepon. I varje kursrepo kan finnas en fil `.dbwebb.tests` där varje rad är ett kommando som exekveras som en del i en testsuite. Kommandot måste returnera exit status 0 för att betraktas om en lyckad assertion.
+Detta är för de som utvecklar och testar kursrepon.
+
+I varje kursrepo kan finnas en fil `.dbwebb.tests`. Varje rad i filen är ett kommando som exekveras som en del i en testsuite. Kommandot måste returnera exit status 0 för att betraktas om en lyckad assertion.
 
 ```text
 $ dbwebb testrepo
