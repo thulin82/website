@@ -97,9 +97,9 @@ I Python finns det verktyg och moduler för att autogenerera UML-diagram och dok
 
 
 
-###Kmom05: Sorteringsalgoritmer och sökmotor {#kmom05}
+###Kmom05: Sorteringsalgoritmer och datastrukturer {#kmom05}
 
-Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem och lägga till en sökmotor på me-sidan.
+Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem samt titta närmare på datastrukturer.
 
 [Instruktion till kursmoment 05](oopython/kmom05).
 

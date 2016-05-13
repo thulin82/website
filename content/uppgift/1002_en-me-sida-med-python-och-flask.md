@@ -30,7 +30,7 @@ Vi ska skapa en me-sida som vi senare kommer bygga vidare på genom kursen. Utg�
 Krav {#krav}
 -----------------------
 
-Startfilen ska heta "app.py" och ska ligga i mappen kmom01/Flask.
+Startfilen ska heta "app.py" och ska ligga i mappen kmom01/flask.
 
 1. Applikationen ska använda Bootstrap.
 
@@ -47,8 +47,8 @@ Startfilen ska heta "app.py" och ska ligga i mappen kmom01/Flask.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate Flask
-dbwebb publish Flask
+dbwebb validate flask
+dbwebb publish flask
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
