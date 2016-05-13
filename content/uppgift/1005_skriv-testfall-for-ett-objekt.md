@@ -41,7 +41,9 @@ touch test_zoo.py
 
 1. Kopiera in koden från `main.py` där du skapat objekt.
 
-2. Skriv ett testfall för varje typ av attribut och för varje metod i klasserna. Du behöver med andra ord inte skriva ett test för varje sträng-attribut utan ta en av dem.
+2. Skriv ett testfall för varje typ av attribut och för varje metod i klasserna. Du behöver med andra ord inte skriva ett test för varje sträng-attribut utan ta en av dem.  
+
+3. Exekvera alla testfall och se till att alla går igenom.
 
 ```bash
 # Ställ dig i kurskatalogen
