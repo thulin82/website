@@ -102,7 +102,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-1. Gör uppgiften "[Återställ trasigt objekt](uppgift/aterstall-trasigt-objekt)"
+<!-- 1. Gör uppgiften "[Återställ trasigt objekt](uppgift/aterstall-trasigt-objekt)" -->
+Det finns inga extrauppgifter.
 
 
 Resultat & Redovisning  {#resultat_redovisning}
