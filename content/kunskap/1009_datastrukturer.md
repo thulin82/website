@@ -10,7 +10,7 @@ Datastrukturer
 
 [FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
 
-Imon programmering är en 'datastruktur' en struktur för att organisera data. Valet av datastruktur är viktigt då de har olika betydelse för prestanda och presterar olika beroende på vilka algoritmer som har planerats att användas. En datastruktur är en abstrakt beskrivning till skillnad från 'datatyper'. En datatyp kan vara exempelvis _Integer_, _String_ eller _boolean_. Det har en fast betydelse medan en datastruktur beskriver något _odefinierbart_, till exempel en lista eller array.
+Inom programmering är en 'datastruktur' en struktur för att organisera data. Valet av datastruktur är viktigt då de har olika betydelse för prestanda och presterar olika beroende på vilka algoritmer som har planerats att användas. En datastruktur är en abstrakt beskrivning till skillnad från 'datatyper'. En datatyp kan vara exempelvis _Integer_, _String_ eller _boolean_. Det har en fast betydelse medan en datastruktur beskriver något _odefinierbart_, till exempel en lista eller array.
 
 <!--more-->
 
