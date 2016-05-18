@@ -82,13 +82,13 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Sökalgoritmer som klasser](uppgift/lab5)" (lab 5)
 
-2. Gör uppgiften "[En sökmotor för JSON-fil](uppgift/sokmotor-for-json-fil)"
+2. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/terminalprogram-med-sortering-av-lista)"
 
 
 
 ###Extra {#extra}
 
-1. Använd datastrukturen "set" för att separera unika djur
+1. Lägg till ett val i menyn där du använder en ny klass: sorterad länkad lista.
 
 
 
