@@ -135,7 +135,70 @@ def merge_sort(items):
 
 
 
-Avslutningsvis {#avslutning}
-------------------------------
+Tidskomplexitet {#tidskomplexitet}
+------------------------------  
 
-Bra finish, länka till forumtråd eller liknande?
+En sak som skiljer de olika algoritmerna åt är deras [tidskomplexitet](https://en.wikipedia.org/wiki/Time_complexity). Tidskomplexitet skriver man ut med Det kan ta ett eget kursmoment att förklara ingående vad det är och hur man räknar på det så det kommer en förklaring av grunderna.  
+
+Tänk dig tre kuber som står på golvet:  
+1. Liten: 1x1x1 meter  
+2. Mellan: 10x10x10 meter  
+3. Stor: 100x100x100 meter  
+
+
+
+###Linjär tidskomplexitet {#linjar}  
+
+Tänk dig nu att du ska dra ett streck längs golvet runt kuberna. Tar det 1 minut att rita runt den lilla kuben tar det ca 10 minuter att rita runt den mellanstora och ca 100 minuter att rita ett streck runt den stora. Detta kallas för "linjär tidskomplexitet". När man beskriver tidskomplexitet pratar man om [Ordo](https://sv.wikipedia.org/wiki/Ordo) och [Big O](https://en.wikipedia.org/wiki/Big_O_notation). Linjär tidskomplexitet kan beskrivas med **O(n)**.  
+
+
+
+###Kvadratisk tidskomplexitet {#kvadratisk}  
+
+Nu är det dags att måla ena väggen på kuberna. Om det tar 1 minut att måla den lilla, tar det ca 100 minuter att måla den mellanstora och 10000 minuter att måla den stora.  
+
+Detta är för att den mellanstora är 10 gånger så stor som den lilla men ena väggen 10*10 gånger större. Det stora husets vägg är 100*100 gånger större. Kvadratisk tidskomplexitet kan beskrivas med **O(n²)**
+
+
+
+###Kubisk tidskomplexitet {#kubisk}  
+
+Om vi ska fylla kuberna med vatten. Tar det 1 minut att fylla den lilla kuben, tar det ca 1000 minuter att fylla den mellanstora kuben och ca 1 miljon minuter att fylla den stora.  
+
+Räknar vi på det är den mellanstora kubens volym 10*10*10 gånger större än den lilla kubens. Den stora kubens volym blir 100*100*100 gånger så stor. Kubisk tidskomplexitet kan beskrivas med **O(n³)**.  
+
+
+
+###Konstant tidskomplexitet {#konstant}  
+
+Konstant tidskomplexitet är den tid det tar att till exempel ta ett kort på kuberna. Det är samma tid för alla så det kan beskrivas med **O(1)**.
+
+
+
+###Allmänt om tidskomplexitet {#allmant}  
+
+Olika algoritmer har som sagt olika tidskomplexitet, beroende på olika faktorer som påverkar dem. Några exempel på faktorer är:  
+* loopar  
+* if-satser  
+* mängden variabler  
+* antal gånger en rekursiv funktion anropar sig själv  
+
+Alla faktorer slås ihop och kan räknas ut så att man får fram tidskomplexiteten. När man räknar på faktorerna använder man oftast **n** med högst värde. Har man med både **O(n²)** och **O(n³)** är det då **O(n³)** som tas med i beräkningen.  
+
+Vi kan titta i tabellen för att se hur tidskomplexiteten snabbt kan påverka tiden för en algoritm:  
+
+|  In-data  |  O(1)  |  O(n)      |  O(n²)    |
+|-----------|:-------|:-----------|:----------|
+|  1        | 17 sek | 1 sekund   | 1 sekund  |
+|  10       | 17 sek | 10 sekund  | 2 minuter |
+|  100      | 17 sek | 2 minuter  | 3 timmar  |
+|  1000     | 17 sek | 17 minuter | 12 dygn   |
+|  1 miljon | 17 sek | 12 dygn    | 30000 år  |
+
+Vi går inte in närmare på detta här utan nu har ni en kännedom om att det finns och används ofta i sorteringsalgoritmer för att se hur de kommer fungera med olika mängder element och vad man förvänta sig.
+
+
+Avslutningsvis {#avslutning}
+------------------------------  
+
+Det här var lite grunder om sorteringsalgoritmer. Hoppas ni har fått en liten förståelse vad som kan dölja sig bakom en `array.sort()` och liknande inbyggda funktioner. 
