@@ -82,13 +82,15 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Sökalgoritmer som klasser](uppgift/lab5)" (lab 5)
 
-2. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/terminalprogram-med-sortering-av-lista)"
+2. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/terminalprogram-med-sortering-av-lista)"  
+
+3. Skapa din me-sida version 5 i kmom05/flask5 genom att kopiera kmom04/flask4 och därefter göra eventuella uppdateringar som du själv bestämmer.
 
 
 
 ###Extra {#extra}
 
-1. Lägg till ett val i menyn där du använder en ny klass: sorterad länkad lista.
+1. Det finns ingen extrauppgift.
 
 
 
@@ -101,8 +103,8 @@ Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* ?
-* ?
+* Gjorde du nån uppdatering av mesidan? Om ja - vad gjorde du?
+* Har du fått mer förståelse för datastrukturer?
 * ?
 * ?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
