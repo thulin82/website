@@ -83,24 +83,21 @@ Dessa uppgifter skall utföras och redovisas.
 
 3. Gör uppgiften "[Skriv testfall för ett objekt](uppgift/skriv-testfall-for-ett-objekt)".  
 
-4. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"
+4. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 
-Fyll på din me-sida med redovisningstexten för det här kursmomentet:
-
-Kopiera din me-sida från föregående kursmoment och utgå från den koden.
+5. Skapa din me-sida version 2 i kmom02/flask2 genom att kopiera kmom01/flask och därefter göra eventuella uppdateringar som du själv bestämmer.
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -ri kmom01/Flask/ kmom02/Flask2/
-cd kmom02/Flask2
+dbwebb validate flask2
+dbwebb publish flask2
 ```
 
 
 
 ###Extra {#extra}
 
-1. Rita ett UML-diagram
+1. Rita ett UML-diagram - INTE KLAR
 
 
 
