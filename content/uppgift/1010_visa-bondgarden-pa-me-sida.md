@@ -30,7 +30,7 @@ Nu är det dags att presentera databasen "farm.sqlite" och dess tabeller på din
 Krav {#krav}
 -----------------------
 
-Utgå ifrån mappen "/kmom04/Flask4" och fortsätt arbeta med den.
+Utgå ifrån mappen "/kmom04/flask4" och fortsätt arbeta med den.
 
 1. Skapa en ny flik i din navbar där presentationen ska visas, tex "Bondgård".
 
@@ -47,10 +47,10 @@ Utgå ifrån mappen "/kmom04/Flask4" och fortsätt arbeta med den.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate Flask4
+dbwebb validate flask4
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. Glöm inte att göra `dbwebb publish Flask4`.
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. Glöm inte att göra `dbwebb publish flask4`.
 
 
 

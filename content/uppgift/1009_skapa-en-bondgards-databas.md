@@ -37,9 +37,9 @@ Kopiera din me-sida från föregående kursmoment och utgå från den koden.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom03/Flask3/ kmom04/Flask4/
-mkdir kmom04/Flask4/db
-cd kmom04/Flask4
+cp -ri kmom03/flask3/ kmom04/flask4/
+mkdir kmom04/flask4/db
+cd kmom04/flask4
 ```
 
 1. Skapa en databasfil med namnet "farm.sqlite"
@@ -67,11 +67,12 @@ Fyll på _animals_ med minst 10 djur.
 
 Fyll på _vehicles_ med minst 3 olika typer av fordon.  
 
-5. Spara databasfilen i `kmom04/Flask4/db`.
+5. Spara databasfilen i `kmom04/flask4/db`.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate Flask4
+dbwebb validate flask4
+dbwebb publish flask4
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

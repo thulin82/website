@@ -35,8 +35,8 @@ Kopiera din me-sida från föregående kursmoment och utgå från den koden.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom02/Flask/ kmom03/Flask3/
-cd kmom03/Flask3
+cp -ri kmom02/flask2/ kmom03/flask3/
+cd kmom03/flask3
 ```
 
 1. Skapa filen "person.py", vilken ska innehålla din personklass.
@@ -60,7 +60,8 @@ cd kmom03/Flask3
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate Flask3
+dbwebb validate flask3
+dbwebb publish flask3
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

@@ -30,15 +30,15 @@ Vi lägger till ett data-objekt till me-sidan som innehåller sid-relaterad info
 Krav {#krav}
 -----------------------
 
-(Om du inte gjort föregående övning först, börja med att kopiera mappen Flask)
+(Om du inte gjort föregående övning först, börja med att kopiera mappen flask)
 
 Kopiera din me-sida från föregående kursmoment och utgå från den koden.
 
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom02/Flask/ kmom03/Flask3/
-cd kmom03/Flask3
+cp -ri kmom02/flask2/ kmom03/flask3/
+cd kmom03/flask3
 ```
 
 1. Skapa filen "my_data.py", vilken ska innehålla din dataklass.
@@ -51,14 +51,15 @@ cd kmom03/Flask3
 
 3. Använd ditt objekt i din me-sida  
 
-6. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till data.png. Bifoga diagrammet i mappen Flask3/  
+6. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till data.png. Bifoga diagrammet i mappen flask3/  
 
-7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html i formatet .png. Bifoga filen i mappen Flask3/
+7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html i formatet .png. Bifoga filen i mappen flask3/
 
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate Flask3
+dbwebb validate flask3
+dbwebb publish flask3
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
