@@ -2,6 +2,7 @@
 author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
+    "2016-05-25": (PA, aar) Pre-release.
 category:
     - python
 ...
@@ -81,7 +82,7 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Regex](uppgift/lab4)" (lab 4)
+1. Gör uppgiften "[Python med regex](uppgift/python-med-regex)" (lab 3)
 
 2. Gör uppgiften "[Skapa en bondgårds-databas](uppgift/skapa-en-bondgards-databas)"
 

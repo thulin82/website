@@ -2,6 +2,7 @@
 author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
+    "2016-05-25": (PA, aar) Pre-release.
 category:
     - python
 ...
@@ -77,7 +78,7 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[???](???/lab2)" (lab 2)
+1. Gör uppgiften "[Python med mer Objekt och klasser](uppgift/python-med-mer-objekt-och-klasser)" (lab 2)
 
 2. Gör uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)"
 

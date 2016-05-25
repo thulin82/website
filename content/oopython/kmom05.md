@@ -2,6 +2,7 @@
 author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
+    "2016-05-25": (PA, aar) Pre-release.
 category:
     - python
 ...
@@ -80,7 +81,7 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Sökalgoritmer som klasser](uppgift/lab5)" (lab 5)
+1. Gör uppgiften "[Python med rekursiva funktioner](uppgift/python-med-rekursiva-funktioner)" (lab 4)
 
 2. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/terminalprogram-med-sortering-av-lista)"  
 

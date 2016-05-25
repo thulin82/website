@@ -2,6 +2,7 @@
 author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
+    "2016-05-25": (PA, aar) Pre-release.
 category:
     - python
 ...
@@ -86,7 +87,7 @@ Genomför följande övning för att träna dig.
 
 2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
 
-3. Läs igenom artikeln om "[arv](kunskap/arv)" i Python.
+3. Läs igenom artikeln om "[Arv med objekt](kunskap/arv)" i Python.
 
 
 
@@ -94,7 +95,7 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa objekt](uppgift/lab1)" (lab 1)
+1. Gör uppgiften "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser)" (lab 1)
 
 2. Gör uppgiften "[En me-sida med Python och Flask](uppgift/en-me-sida-med-python-och-flask)".
 
