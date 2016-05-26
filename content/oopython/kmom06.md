@@ -5,10 +5,10 @@ revision:
 category:
     - python
 ...
-Kmom06: Utvecklingsmetodik och TDD
+Kmom06: Bokningssystem
 ====================================
 
-INTRO
+Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler antal klasser än tidigare och tanken är att öva på att interagera mellan klasser och hantera flera klasser samtidigt.
 
 <!--more-->
 
@@ -66,27 +66,20 @@ Om du känner att du har tid och lust.
 
 ###Övningar {#ovningar}
 
-Genomför följande övning för att träna dig.
-
-1. Läs igenom artikeln "[Från idé till produkt](kunskap/fran-ide-till-produkt)".
-
-2. Jobba igenom övningen "[Testdriven utveckling (TDD)](kunskap/testdriven-utveckling)".
-
+Det finns inga övningar.
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[???](uppgift/lab6)" (lab 6)
-
-2. Gör uppgiften "[TDD med usecases](uppgift/tdd-med-usecases)"
+1. Gör uppgiften "[Bokningssystem](uppgift/bokningssystem)"
 
 
 
 ###Extra {#extra}
 
-1.
+Det finns inga extrauppgifter.
 
 
 
@@ -99,8 +92,8 @@ Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du bekant med begreppet "TDD" sedan tidigare?
-* Är du bekant med begreppet "usecases" sedan tidigare?
+* ?
+* ?
 * ?
 * ?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
