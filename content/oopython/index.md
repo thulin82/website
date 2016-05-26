@@ -105,9 +105,9 @@ Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika
 
 
 
-###Kmom06: Utvecklingsmetodik och TDD {#kmom06}
+###Kmom06: Bokningssystem {#kmom06}
 
-För att förbereda inför en produktionsmiljö går vi igenom vanliga steg från idé till produkt. Vi ska även titta på [TDD](https://sv.wikipedia.org/wiki/Testdriven_utveckling) och hur man kan arbeta med det.
+Det här är ett praktiskt kursmoment. Vi ska ska öva på att arbeta med flera klasser samtidigt och interagera mellan dem.
 
 [Instruktion till kursmoment 06](oopython/kmom06).
 
