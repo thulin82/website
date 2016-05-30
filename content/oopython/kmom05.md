@@ -38,7 +38,13 @@ Läs följande:
 
 Läs följande:
 
-1.
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+    * Ch5.8 Recursion
+    * Ch5.10 Infinite recursion
+    * Ch6.5 More recursion
+    * Ch6.7 One more example
+    * Ch6.8 Checking types
+
 
 2.
 

@@ -77,11 +77,9 @@ Genomför följande övning för att träna dig.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[???](???/lab3)" (lab 3?)
+1. Gör uppgiften "[Skapa person-objekt till me-sidan](uppgift/skapa-personobjekt-till-me-sida)"
 
-2. Gör uppgiften "[Skapa person-objekt till me-sidan](uppgift/skapa-personobjekt-till-me-sida)"
-
-3. Gör uppgiften "[Skapa data-objekt till me-sidan](uppgift/skapa-dataobjekt-till-me-sida)".
+2. Gör uppgiften "[Skapa data-objekt till me-sidan](uppgift/skapa-dataobjekt-till-me-sida)".
 
 
 
