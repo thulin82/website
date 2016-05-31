@@ -105,9 +105,9 @@ Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* ?
-* ?
-* ?
-* ?
+* Gjorde du extrauppgiften?
+* Var det svårt att komma igång med regex?
+* Kan du se nyttan och kraften med regex?
+* Var det svårt att komma igång med SQLAlchemy?  
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?

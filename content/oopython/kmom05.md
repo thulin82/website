@@ -38,7 +38,7 @@ Läs följande:
 
 Läs följande:
 
-1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Ch5.8 Recursion
     * Ch5.10 Infinite recursion
     * Ch6.5 More recursion
@@ -112,7 +112,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Gjorde du nån uppdatering av mesidan? Om ja - vad gjorde du?
 * Har du fått mer förståelse för datastrukturer?
-* ?
-* ?
+* Gick det bra att komma igång med rekursion?  
+* Känner du att du har förståelse för hur sorteringsalgoritmerna fungerar?  
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?

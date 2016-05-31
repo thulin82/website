@@ -114,6 +114,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du bekant med UML sedan tidigare?
 * Är du bekant med unittester sedan tidigare?
 * Gjorde du nån uppdatering av me-sidan? Om ja - vad gjorde du?
-* ?
+* Kan du se nyttan med UML och tester ur projektsynpunkt?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?

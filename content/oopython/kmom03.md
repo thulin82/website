@@ -98,9 +98,8 @@ Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* ?
-* ?
-* ?
-* ?
+* Vad tyckte du om Jinja2?
+* Vad tyckte du om strukturen på Flask-appen?
+* Gick det bra med autogenereringen?  
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
