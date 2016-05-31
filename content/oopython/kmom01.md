@@ -3,8 +3,9 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
     "2016-05-25": (PA, aar) Pre-release.
+    "2016-05-31": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Kmom01: Kom igång med objekt och Flask
 ====================================
@@ -32,7 +33,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist) 
+1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
     * Ch15 Classes and objects
     * Ch16 Classes and functions
     * Ch17 Classes and methods
@@ -54,7 +55,13 @@ Läs följande:
 
 ###Video  {#video}
 
-Titta på följande:
+Titta på följande videos av "TheMonkeyLords":  
+
+1. [Classes](https://www.youtube.com/watch?v=b9wfg-oXAKU&list=PL8830E081324343F1&index=19)  
+
+2. [More Classes](https://www.youtube.com/watch?v=gGMwx9JHpWc&list=PL8830E081324343F1&index=20)  
+
+3. [Inheritance](https://www.youtube.com/watch?v=QFNaBiHob50&list=PL8830E081324343F1&index=21)
 
 
 
