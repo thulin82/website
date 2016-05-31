@@ -73,7 +73,9 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Bokningssystem](uppgift/bokningssystem)"
+1. Gör uppgiften "[Bokningssystem](uppgift/bokningssystem)"  
+
+2. Skapa din me-sida version 6 i kmom06/flask6 genom att kopiera kmom05/flask5 och därefter göra eventuella uppdateringar som du själv bestämmer.
 
 
 
