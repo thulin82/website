@@ -21,6 +21,8 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
+[FIGURE src=/image/oopython/kmom10/classified.jpg?w=c5 class="right"]
+
 Du ska skapa en admin-sida till ett företag, "BlackOps Supplies", som hanterar material till sin personal.  
 
 Administratören ska kunna hyra ut material till personalen via ett gränssnitt där hanteringen sköts. Företaget har en förkärlek till Python och Flask så det måste användas. De påminner dig även om att klasser är ett bra medel för att uppnå struktur och kontroll.  
