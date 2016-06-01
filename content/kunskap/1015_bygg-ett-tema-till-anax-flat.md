@@ -53,6 +53,8 @@ Kika runt bland filerna och öppna dem i din texteditor. Bekanta dig med dem, de
 Verktyg för att kompilera och linta LESS {#less}
 -------------------------------
 
+**Installera som lokal dev miljö istället med packages.json**
+
 Innan vi kan kompilera LESS behöver vi en kompilator. Jag tänker installera en kompilator i form av ett NPM-paket.
 
 Du kan använda makefilen för att installera det som behövs.
@@ -149,18 +151,20 @@ Vad händer när det kommer uppdateringar till `normalize.css`? Ja, förr eller 
 Vad sägs om ett make *target* som gör `make upgrade` genom att hämta hem senaste versionerna av alla moduler? Jag tycker det låter som en bra idè. Så här kan det se ut i makefilen.
 
 ```bash
-# target: upgrade - Download latest version of all external LESS modules.
-.PHONY: upgrade
-upgrade:
-	@echo "$(ACTION)Upgrade external LESS modules$(NO_COLOR)"
+# target: upgrade-normalize - Download latest version of Normalize.
+.PHONY: upgrade-normalize
+upgrade-normalize:
+	@echo "$(ACTION)Upgrade LESS module - Normalize$(NO_COLOR)"
+
+	# Normalizer
 	wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O $(LESS_MODULES)/normalize.less
 ```
 
 Så här kan det se ut när du kör det.
 
 ```bash
-$ make upgrade
---> Upgrade external LESS modules
+$ make upgrade-normalize
+--> Upgrade LESS module - Normalize
 wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O modules/normalize.less
 ```
 
@@ -253,18 +257,19 @@ Nu kan du testa menyn genom att ladda om din webbläsare.
 Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av responsiv menyn i fortsättningen.
 
 ```bash
-# target: upgrade - Download latest version of all external LESS modules.
-.PHONY: upgrade
-upgrade:
-	@echo "$(ACTION)Upgrade external LESS modules$(NO_COLOR)"
-
-	# Normalizer
-	wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O $(LESS_MODULES)/normalize.less
+# target: upgrade-responsive-menu - Download latest version of Responsive menu.
+.PHONY: upgrade-responsive-menu
+upgrade-responsive-menu:
+	@echo "$(ACTION)Upgrade LESS module - Responsive menu$(NO_COLOR)"
 
 	# Responsive-menu
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.js -O js/responsive-menu.js
 ```
+
+Så här kan det se ut.
+
+asciinema/youtube
 
 
 
@@ -273,13 +278,30 @@ Styla header och menyn {#header}
 
 Style header och meny (finns i style.less).
 
-VIDEO
+VIDEO som visar steg för steg.
 
 
 
 Responsivitet {#resp}
 -------------------------------
 
+Styla responsivt.
+
+VIDEO steg för steg.
+
+
+
+Make upgrade {#resp}
+-------------------------------
+
+Förbered makefilen för att uppgradera alla externa LESS moduler.
+
+```bash
+# target: upgrade - Download latest version of all external LESS modules.
+.PHONY: upgrade
+upgrade: upgrade-normalize upgrade-responsive-menu
+	@echo "$(ACTION)Upgrade external LESS modules$(NO_COLOR)"
+```
 
 
 

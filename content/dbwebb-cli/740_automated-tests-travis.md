@@ -12,12 +12,13 @@ Varje gång man checkar in kod till kursrepot på GitHub, eller om någon gör e
 Nuvarande status {#status}
 ----------------------------------
 
-Så här ser nuvarande status ut för de senaste testerna som körts på Travis.
+Så här ser nuvarande status ut för de senaste testerna som körts på Travis och CircleCI.
 
-| Kursrepo | Status |
-|----------|--------|
-| [htmlphp](https://github.com/dbwebb-se/htmlphp) | [![Build Status](https://travis-ci.org/dbwebb-se/htmlphp.svg?branch=master)](https://travis-ci.org/dbwebb-se/htmlphp) |
-| [oopython](https://github.com/dbwebb-se/oopython) | [![Build Status](https://travis-ci.org/dbwebb-se/oopython.svg?branch=master)](https://travis-ci.org/dbwebb-se/oopython) |
+| Kursrepo | Status [Travis](https://travis-ci.org/) | Status [CircleCI](https://circleci.com/) |
+|----------|------|------|
+| [python](https://github.com/dbwebb-se/python) | [![Build Status](https://travis-ci.org/dbwebb-se/python.svg?branch=master)](https://travis-ci.org/dbwebb-se/python) | [![CircleCI](https://circleci.com/gh/dbwebb-se/python.svg?style=svg)](https://circleci.com/gh/dbwebb-se/python) |
+| [htmlphp](https://github.com/dbwebb-se/htmlphp) | [![Build Status](https://travis-ci.org/dbwebb-se/htmlphp.svg?branch=master)](https://travis-ci.org/dbwebb-se/htmlphp) | [![CircleCI](https://circleci.com/gh/dbwebb-se/htmlphp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/htmlphp) |
+| [oopython](https://github.com/dbwebb-se/oopython) | [![Build Status](https://travis-ci.org/dbwebb-se/oopython.svg?branch=master)](https://travis-ci.org/dbwebb-se/oopython) | [![CircleCI](https://circleci.com/gh/dbwebb-se/oopython.svg?style=svg)](https://circleci.com/gh/dbwebb-se/oopython) |
 
 Följande kursrepon är ännu inte överförda i senaste versionen av automatiserade tester.
 
@@ -26,7 +27,6 @@ Följande kursrepon är ännu inte överförda i senaste versionen av automatise
 | [oophp](https://github.com/mosbth/oophp) | [![Build Status](https://travis-ci.org/mosbth/oophp.svg?branch=master)](https://travis-ci.org/dbwebb-se/oophp) |
 | [phpmvc](https://github.com/dbwebb-se/phpmvc) | [![Build Status](https://travis-ci.org/dbwebb-se/phpmvc.svg?branch=master)](https://travis-ci.org/dbwebb-se/phpmvc) |
 | [javascript](https://github.com/mosbth/javascript) | [![Build Status](https://travis-ci.org/mosbth/javascript.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript) |
-| [python](https://github.com/mosbth/python) | [![Build Status](https://travis-ci.org/mosbth/python.svg?branch=master)](https://travis-ci.org/dbwebb-se/python) |
 | [javascript1](https://github.com/mosbth/javascript1) | [![Build Status](https://travis-ci.org/mosbth/javascript1.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript1) |
 | [linux](https://github.com/mosbth/linux) | [![Build Status](https://travis-ci.org/mosbth/linux.svg?branch=master)](https://travis-ci.org/dbwebb-se/linux) |
 | [webapp](https://github.com/mosbth/webapp) | [![Build Status](https://travis-ci.org/mosbth/webapp.svg?branch=master)](https://travis-ci.org/dbwebb-se/webapp) |
