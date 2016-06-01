@@ -25,7 +25,8 @@ return [
             "styleInline" => null,
 
             // JavaScript
-            "javascripts" => [],
+            //"javascripts" => [],
+            "javascripts" => ["js/mos-theme/responsive-menu.js"],
         ],
     ],
 
