@@ -153,8 +153,8 @@ site-build:
 	rsync -av vendor/mos/cimage/webroot/img/ htdocs/img/cimage/
 
 	# Copy from mos-theme
-	install -d htdocs/js/mos-theme
-	rsync -av theme/mos-theme/js/ htdocs/js/mos-theme/
+	#install -d htdocs/js/mos-theme
+	#rsync -av theme/mos-theme/js/ htdocs/js/mos-theme/
 
 	# Make cache parts writable
 	install --directory --mode 777 cache/cimage cache/anax
