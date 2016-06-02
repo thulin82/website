@@ -96,7 +96,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 2. Gör uppgiften "[Skapa en bondgårds-databas](uppgift/skapa-en-bondgards-databas)"
 
-3. Gör uppgiften "[Visa bondgården på me-sidan](uppgift/visa-bondgarden-pa-me-sida)".
+3. Gör uppgiften "[Visa bondgården på me-sidan](uppgift/visa-bondgarden-pa-me-sida)".  
+
+4. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 
 

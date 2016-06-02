@@ -88,7 +88,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 4. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 
-5. Skapa din me-sida version 2 i kmom02/flask2 genom att kopiera kmom01/flask och därefter göra eventuella uppdateringar som du själv bestämmer.
+5. Skapa din me-sida version 2 i kmom02/flask2 genom att kopiera kmom01/flask och därefter göra eventuella uppdateringar som du själv bestämmer.  
+
+6. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 ```bash
 # Ställ dig i kurskatalogen

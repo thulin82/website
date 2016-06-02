@@ -81,7 +81,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa person-objekt till me-sidan](uppgift/skapa-personobjekt-till-me-sida)"
 
-2. Gör uppgiften "[Skapa data-objekt till me-sidan](uppgift/skapa-dataobjekt-till-me-sida)".
+2. Gör uppgiften "[Skapa data-objekt till me-sidan](uppgift/skapa-dataobjekt-till-me-sida)".  
+
+3. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 
 
