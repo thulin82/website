@@ -3,7 +3,7 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Skapa ett person-objekt till me-sidan
 ===================================
@@ -35,7 +35,7 @@ Kopiera din me-sida från föregående kursmoment och utgå från den koden.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom02/flask2/ kmom03/flask3/
+cp -ri kmom02/flask2/* kmom03/flask3/
 cd kmom03/flask3
 ```
 

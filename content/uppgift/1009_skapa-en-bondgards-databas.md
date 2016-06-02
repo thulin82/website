@@ -3,7 +3,7 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Skapa en bondgårdssdatabas
 ===================================
@@ -37,8 +37,7 @@ Kopiera din me-sida från föregående kursmoment och utgå från den koden.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom03/flask3/ kmom04/flask4/
-mkdir kmom04/flask4/db
+cp -ri kmom03/flask3/* kmom04/flask4/
 cd kmom04/flask4
 ```
 
