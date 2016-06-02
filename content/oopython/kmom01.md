@@ -3,14 +3,14 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
     "2016-05-25": (PA, aar) Pre-release.
-    "2016-05-31": (PA, lew) Pre-release.
+    "2016-06-01": (PA, lew) Pre-release.
 category:
     - oopython
 ...
 Kmom01: Kom igång med objekt och Flask
 ====================================
 
-INTRO
+Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask", där vi skriver redovisningstexten och en kort presentation om oss själva. Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objekt-orienterad programmering.
 
 <!--more-->
 
@@ -55,13 +55,11 @@ Läs följande:
 
 ###Video  {#video}
 
-Titta på följande videos av "TheMonkeyLords":  
+Titta på följande videos om Flask av "TheNewBoston":  
 
-1. [Classes](https://www.youtube.com/watch?v=b9wfg-oXAKU&list=PL8830E081324343F1&index=19)  
+1. [Basic app](https://www.youtube.com/watch?v=ZVGwqnjOKjk)  
 
-2. [More Classes](https://www.youtube.com/watch?v=gGMwx9JHpWc&list=PL8830E081324343F1&index=20)  
-
-3. [Inheritance](https://www.youtube.com/watch?v=QFNaBiHob50&list=PL8830E081324343F1&index=21)
+2. [Routing](https://www.youtube.com/watch?v=27Fjrlx4s-o)
 
 
 

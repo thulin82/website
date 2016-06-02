@@ -75,7 +75,7 @@ Vi fyller på med 3 bilar:
 ```sql
 INSERT INTO cars (model, price, country, manufacturer) VALUES
     ("Mustang", 400000, "USA", "Ford"),
-    ("CX60", 595000, "Sweden", "Volvo"),
+    ("XC60", 595000, "Sweden", "Volvo"),
     ("E-Class", 745000, "Germany", "Mercedes")
 
 ```

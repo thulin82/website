@@ -3,16 +3,16 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Kmom06: Bokningssystem
 ====================================
 
-Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler antal klasser än tidigare och tanken är att öva på att interagera mellan klasser och hantera flera klasser samtidigt.
+Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler antal klasser än tidigare och tanken är att öva på att interagera mellan klasser och hantera flera klasser samtidigt i ett terminalprogram.
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom06/??????.png?w=w2 caption="Bild på något fint."]
+[FIGURE src=/image/oopython/kmom06/index_top.jpg?w=w2 caption="Ett annat sorts bokningssystem."]
 
 
 <!-- Flytta nedan text till eget dokumet/vy/block -->

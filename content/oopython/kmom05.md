@@ -3,17 +3,20 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
     "2016-05-25": (PA, aar) Pre-release.
+    "2016-06-01": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Kmom05: Sorteringsalgoritmer och datastrukturer
 ====================================
 
-INTRO
+Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Inbyggda sorteringsfunktioner baseras på en eller flera av de klassiska algoritmerna.  
+
+Vi ska även titta på några datastrukturer och implementera en egen som vi använder i ett terminalprogram.  
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom05/??????.png?w=w2 caption="Bild på något fint."]
+[FIGURE src=/image/oopython/kmom05/index_top.png?w=w2 caption="Bild på algoritmen Merge-sort."]
 
 
 <!-- Flytta nedan text till eget dokumet/vy/block -->

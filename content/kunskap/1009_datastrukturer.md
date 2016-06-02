@@ -3,12 +3,12 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Datastrukturer
 ===================================
 
-[FIGURE src=/image/snapvt16/python-list-shopping.png?w=c5&a=0,75,75,0 class="right"]
+[FIGURE src=/image/oopython/kmom05/datastructure_top.png?w=c5 class="right"]
 
 Inom programmering är en 'datastruktur' en struktur för att organisera data. Valet av datastruktur är viktigt då de har olika betydelse för prestanda och presterar olika beroende på vilka algoritmer som har planerats att användas. En datastruktur är en abstrakt beskrivning till skillnad från 'datatyper'. En datatyp kan vara exempelvis _Integer_, _String_ eller _boolean_. Det har en fast betydelse medan en datastruktur beskriver något _odefinierbart_, till exempel en lista eller array.
 
@@ -19,7 +19,7 @@ Det finns många olika datastrukturer i olika kategorier. Vi har "Linjära datas
 Många datastrukturer finns redan inbyggda i programmeringsspråken (tex lista i Python) och det finns färdiga moduler och bibliotek som har strukturen implementerad och klar. Det är dock viktigt att ha en insikt i hur de fungerar "på insidan".
 
 I artikeln kommer det tas upp tre olika datastrukturer.  
-* Stack (Linjär datastruktur)
+* Stack (Linjär datastruktur)  
 * Kö (Linjär datastruktur)  
 * Max Heap (Träd)
 
@@ -116,7 +116,7 @@ Metoderna som används är vanligtvis:
 4. .isEmpty() (Returnerar True/False beroende på om kön är tom)  
 5. .size() (Returnerar antalet element i kön)
 
-[FIGURE src=/image/oopython/kmom05/queue_explained.png caption="En kö med specifierat antal platser."]
+[FIGURE src=/image/oopython/kmom05/queue_explained.png caption="En kö utan specifierat antal platser."]
 
 En implementation av en Queue kan se ut som följer:  
 ```python

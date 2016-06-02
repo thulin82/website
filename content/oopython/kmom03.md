@@ -3,16 +3,18 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Kmom03: Autogenerering av UML och dokumentation
 ====================================
 
-INTRO
+Det finns färdiga verktyg för att generera UML diagram och dokumentation från färdig kod. Vi ska titta närmare på några verktyg och se hur de fungerar.  
+
+Vi ska även jobba vidare med Flask-appen och se hur grunderna i template-motorn Jinja2 kan fungera.
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom03/??????.png?w=w2 caption="Bild på något fint."]
+[FIGURE src=/image/oopython/kmom03/index_top.png?w=w2 caption="Flask, routes och Jinja2."]
 
 
 <!-- Flytta nedan text till eget dokumet/vy/block -->

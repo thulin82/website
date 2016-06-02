@@ -3,17 +3,22 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
     "2016-05-25": (PA, aar) Pre-release.
+    "2016-05-31": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Kmom04: Regex och databaser
 ====================================
 
-INTRO
+I det här kursmomentet övar vi oss på regex, hantering av SQLite-databas och HTTP-metoderna GET och POST i Flask.  
+
+Regex matchar textmönster och används framförallt för att extrahera specifik information ur större mängder text och text-filer.  
+
+Till Flask-appen använder vi SQLAlchemy för att mappa klasser mot tabeller i databsen. Vi hanterar sedan informationen med hjälp av GET och POST.
 
 <!--more-->
 
-[FIGURE src=/image/oopython/kmom04/??????.png?w=w2 caption="Bild på något fint."]
+[FIGURE src=/image/oopython/kmom04/index_top.png?w=w2 caption="Wooho regex!"]
 
 
 <!-- Flytta nedan text till eget dokumet/vy/block -->
@@ -46,8 +51,13 @@ Läs följande:
 
 ###Video  {#video}
 
-Titta på följande:
+Titta på följande video av "TheNewBoston":  
 
+1. [HTTP methods](https://www.youtube.com/watch?v=PWF_WyvgKqY)
+
+Titta på följande video av "Trevor Payne":  
+
+1. [Regular expressions](https://www.youtube.com/watch?v=ZdDOauFIDkw)
 
 
 ###Lästips {#lastips}
