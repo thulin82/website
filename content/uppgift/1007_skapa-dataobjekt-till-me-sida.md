@@ -30,16 +30,20 @@ Vi lägger till ett data-objekt till me-sidan som innehåller sid-relaterad info
 Krav {#krav}
 -----------------------
 
-(Om du inte gjort föregående övning först, börja med att kopiera mappen flask)
+**(Om du inte gjort föregående övning först, börja med att [göra den övningen](uppgift/skapa-personobjekt-till-me-sida))**  
 
-Kopiera din me-sida från föregående kursmoment och utgå från den koden.
+
+
+<!-- Kopiera din me-sida från föregående kursmoment och utgå från den koden.
 
 ```bash
 # Ställ dig i kurskatalogen
 cd me
 cp -ri kmom02/flask2/ kmom03/flask3/
 cd kmom03/flask3
-```
+``` -->  
+
+Färdig? Bra. Då kan vi fortsätta i mappen kmom03/flask3:  
 
 1. Skapa filen "my_data.py", vilken ska innehålla din dataklass.
 
