@@ -3,7 +3,7 @@ author: lew
 revision:
     "2016-04-13": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Kom igång med ramverket Flask
 ===================================

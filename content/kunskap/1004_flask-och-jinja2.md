@@ -3,7 +3,7 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Flask och Jinja2
 ===================================
@@ -181,4 +181,4 @@ Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Fundera lite på vad mer man kan göra med Flask och Jinja2. Det är oerhört kraftfullt och öppnar upp många möjligheter med Python-kod på webbsidan. 
+Fundera lite på vad mer man kan göra med Flask och Jinja2. Det är oerhört kraftfullt och öppnar upp många möjligheter med Python-kod på webbsidan.

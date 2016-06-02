@@ -3,7 +3,7 @@ author: aar
 revision:
     "2016-05-03": (PA, aar) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Introduktion till regex
 ===================================
