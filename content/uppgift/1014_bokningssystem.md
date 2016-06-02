@@ -69,7 +69,7 @@ cd me/kmom06/booking
 
 5. "Month" ska innehålla rätt antal "Day"-objekt. (Bortse från ev. skottår)  
 
-6. "Calender" ska innehålla ett år, (12 måndader, 365 dagar).  
+6. "Calender" ska innehålla ett år, (12 månader, 365 dagar).  
 
 ```bash
 # Ställ dig i kurskatalogen
