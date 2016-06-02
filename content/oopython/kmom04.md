@@ -33,6 +33,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+
 ###Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
@@ -43,9 +44,7 @@ Läs följande:
 
 Läs följande:
 
-1.
-
-2.
+Det finns inga extra artiklar.  
 
 
 
@@ -60,13 +59,17 @@ Titta på följande video av "Trevor Payne":
 1. [Regular expressions](https://www.youtube.com/watch?v=ZdDOauFIDkw)
 
 
+
 ###Lästips {#lastips}
 
 Om du känner att du har tid och lust.
 
 1. Öva dig med [regex korsord](https://regexcrossword.com/)
 
-2. Bekanta dig med [regex101](https://regex101.com/#python)
+2. Bekanta dig med [regex101](https://regex101.com/#python)  
+
+3. Även [regexpal](http://www.regexpal.com/) är ett bra verktyg.
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

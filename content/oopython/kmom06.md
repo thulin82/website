@@ -35,11 +35,7 @@ Läs följande:
 
 ###Artiklar {#artiklar}
 
-Läs följande:
-
-1.
-
-2.
+Det finns inga extra artiklar.
 
 
 
@@ -51,9 +47,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Om du känner att du har tid och lust.
-
-1.
+Det finns inga extra lästips.
 
 
 
@@ -67,6 +61,7 @@ Om du känner att du har tid och lust.
 ###Övningar {#ovningar}
 
 Det finns inga övningar.
+
 
 
 ###Uppgifter {#uppgifter}

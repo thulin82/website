@@ -40,9 +40,9 @@ Läs följande:
 
 Läs följande:
 
-1.
+1. [The art of unit testing](http://artofunittesting.com/definition-of-a-unit-test/)  
 
-2.
+2. [UML basics på IBM](http://www.ibm.com/developerworks/rational/library/769.html)  
 
 
 
@@ -54,9 +54,8 @@ Titta på följande video:
 
 ###Lästips {#lastips}
 
-Om du känner att du har tid och lust.
+Det finns inga extra lästips.  
 
-1.
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

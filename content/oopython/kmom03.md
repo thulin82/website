@@ -29,7 +29,7 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
-###Kurslitteratur  {#kurslitteratur}
+###Kurslitteratur {#kurslitteratur}
 
 Läs följande:
 
@@ -37,15 +37,11 @@ Läs följande:
 
 ###Artiklar {#artiklar}
 
-Läs följande:
-
-1.
-
-2.
+Det finns inga extra artiklar.
 
 
 
-###Video  {#video}
+###Video {#video}
 
 Titta på följande:
 
@@ -53,9 +49,8 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Om du känner att du har tid och lust.
+1. [Jinja2](http://jinja.pocoo.org/) går lite utanför kursramen. Det skadar dock aldrig att kika på.  
 
-1.
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}

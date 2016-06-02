@@ -41,15 +41,7 @@ Läs följande:
 
 Läs följande:
 
-1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
-    * Ch5.8 Recursion
-    * Ch5.10 Infinite recursion
-    * Ch6.5 More recursion
-    * Ch6.7 One more example
-    * Ch6.8 Checking types
-
-
-2.
+Det finns inga extra artiklar.
 
 
 
@@ -63,7 +55,9 @@ Titta på följande:
 
 Om du känner att du har tid och lust.
 
-1.
+1. [Datastructures - geeksforgeeks](http://www.geeksforgeeks.org/data-structures/)  
+
+2. [Sorting algoritms - geeksforgeeks](http://www.geeksforgeeks.org/fundamentals-of-algorithms/#SearchingandSorting)  
 
 
 

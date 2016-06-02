@@ -29,15 +29,10 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+
 ###Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
-
-1. [Think Python: How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)
-    * Ch15 Classes and objects
-    * Ch16 Classes and functions
-    * Ch17 Classes and methods
-    * Ch18 Inheritance
 
 
 
