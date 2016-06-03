@@ -3,7 +3,7 @@ author: lew
 revision:
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Kursen oopython
 ===================================================
@@ -99,7 +99,7 @@ I Python finns det verktyg och moduler för att autogenerera UML-diagram och dok
 
 ###Kmom05: Sorteringsalgoritmer och datastrukturer {#kmom05}
 
-Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem samt titta närmare på datastrukturer.
+Inom programmering finns några grundläggande sorteringsalgoritmer. Vi ska kika på dem samt titta närmare på datastrukturer och rekursion.
 
 [Instruktion till kursmoment 05](oopython/kmom05).
 
@@ -132,16 +132,13 @@ Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitt
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal artiklar som finns tillgängliga på nätet. Böckerna är väldigt lika men exemplen skiljer sig åt i dem, den ena boken fokuserar på datavetenskap och matematik medan den andra fokuserar på informatik och informationsbehandling. Det räcker att fokusera på en av böckerna och skumläsa den andra.
+Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet.
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[Python for Informatics - Exploring information](kunskap/boken-python-for-informatics-exploring-information)** -- Charles R Severance  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
-
-* **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
+* **[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)** -- Dusty Phillips  
+  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python. Boken går även in på objektorienterad programmering med klasser, objekt och arv. Det är huvudsakligen de delarna vi ska använda oss utav.
 
 
 
@@ -150,8 +147,8 @@ Det finns läsanvisningar i samband med varje kursmoment.
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
 
-* **[Dive into Python 3](kunskap/boken-dive-into-python-3)** -- Mark Pilgrim  
-  En intro-bok till Python 3 för den som redan kan Python 2 eller kan ett annat programmeringsspråk.
+* **[A Byte of Python](http://python.swaroopch.com)** -- Swaroop C H  
+  En intro-bok till Python 3. Den tar upp grunderna i Python men även en del objekt-orienterad programmering. Bra format och bra exempel.
 
 
 
@@ -160,15 +157,15 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Python for Informatics | Think Python       |
-|------------|------------------------|--------------------|
-| Kmom01     |                        |                    |
-| Kmom02     |                        |                    |
-| Kmom03     |                        |                    |
-| Kmom04     |                        |                    |
-| Kmom05     |                        |                    |
-| Kmom06     |                        |                    |
-| Kmom10     |                        |                    |
+| Kursmoment | Python 3 Object-oriented Programming |
+|------------|--------------------------------------|
+| Kmom01     | Ch 1, 2                              |
+| Kmom02     | Ch 3, 5, 12                          |
+| Kmom03     |                                      |
+| Kmom04     | Ch 8 - Regular Expressions           |
+| Kmom05     | Ch 7 - Queues                        |
+| Kmom06     | Ch 6                                 |
+| Kmom10     |                                      |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
