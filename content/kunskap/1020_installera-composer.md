@@ -56,8 +56,52 @@ Installera på Linux {#linux}
 
 
 
-Verifiera att Make fungerar {#test}
+Verifiera att Composer fungerar {#test}
 -------------------------------
+
+
+
+<!--
+
+Flytta till ett eget dokument om hur man installera och använder composer.
+
+Du kan alltid kontrollera vilka moduler som du tagit hem, de som nu ligger i `vendor` mappen.
+
+```bash
+$ composer info
+```
+
+Du kan också kontrollera varför en modul installerats genom att se vilken modul som är beroende av densamma. Så här kan du se vilken modul som krävde att `mos/ctextfilter` installerades.
+
+```bash
+$ composer require mos/ctextfilter
+```
+
+Om du vill vet mer om paketet så kan du använda composer för att öppna paketets hemsida.
+
+```bash
+$ composer home mos/ctextfilter
+$ composer home mos/anax
+```
+
+Du kan alltid uppdatera de nedladdade paketen för att få hem senaste ändringar.
+
+```bash
+$ composer update
+```
+
+Ibland får du ett meddelande om att uppdatera `composer`. Du kan hjälpa `composer` att uppdatera sig själv.
+
+```bash
+$ composer selfupdate
+```
+
+Du kan göra fler saker med `composer`. Använd hjälptexten för att snabbt få en översikt av vad du kan göra.
+
+```bash
+$ composer
+```
+-->
 
 
 

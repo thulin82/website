@@ -98,9 +98,6 @@ Om du känner att du har tid och kraft.
 
 
 
-###Att mäta hur optimerad en webbplats är {#optimerad}
-
-1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
 
 
 
@@ -145,11 +142,10 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör en me-sida.
+1. Gör en me-sida. Lägg den även på GitHub.
 
 2. Skapa ett tema till din me-sida som är gridbaserat och använder en responsive design.
 
-3. [Mät och jämför laddningstider på olika webbplatser](uppgift/jamfor-laddningstider-for-webbplatser).
 
 
 
