@@ -84,7 +84,7 @@ Om du känner att du har tid och lust.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](python/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](oopython/labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen](dbwebb-cli/clone).
 
