@@ -54,11 +54,14 @@ Läs följande:
 
 ###Video  {#video}
 
-Titta på följande videos om Flask av "TheNewBoston":  
+Titta på följande:  
 
-1. [Basic app](https://www.youtube.com/watch?v=ZVGwqnjOKjk)  
+1. Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 1.
 
-2. [Routing](https://www.youtube.com/watch?v=27Fjrlx4s-o)
+2. Titta på följande videos om Flask av "TheNewBoston":  
+
+    * [Basic app](https://www.youtube.com/watch?v=ZVGwqnjOKjk)  
+    * [Routing](https://www.youtube.com/watch?v=27Fjrlx4s-o)
 
 
 

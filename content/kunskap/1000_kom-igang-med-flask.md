@@ -25,10 +25,10 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 Installation {#installation}
 ------------------------------
 
-Sparka igång en terminal och installera Flask med pakethanteraren pip. Kör du Windows, starta en terminal som administratör och skippa `sudo`
+Sparka igång en terminal och installera Flask med pakethanteraren pip. Kör du Windows, starta en terminal som administratör och skippa `sudo`. Har du inte pip installerat, kika på [instruktionerna för pip](python-pakethantering-med-pip#installera).
 
 ```bash
-sudo pip install Flask
+sudo pip3 install Flask
 ```
 
 Bra, nu är det bara att köra igång.
