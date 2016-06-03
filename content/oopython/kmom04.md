@@ -38,6 +38,9 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
+[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 8 - Regular Expressions  
+
 
 
 ###Artiklar {#artiklar}

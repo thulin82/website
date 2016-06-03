@@ -34,6 +34,10 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
+[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 3 - When Objects Are Alike  
+    * Ch 5 - When to use Object-oriented Programming  
+    * Ch 12 - Testing Object-oriented Programs
 
 
 ###Artiklar {#artiklar}

@@ -31,7 +31,7 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur {#kurslitteratur}
 
-Läs följande:
+Det finns inga läsanvisningar.
 
 
 

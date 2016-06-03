@@ -31,6 +31,9 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
+[Python 3 Object-oriented Programming](kunskap/boken-python3-object-oriented-programming)  
+    * Ch 6 - Datastructures  
+
 
 
 ###Artiklar {#artiklar}
