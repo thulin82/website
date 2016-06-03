@@ -23,6 +23,9 @@ Regioner & Grid.
 
 Mer, osäker vilket kmom.
 
+Använd bifogat exempel som ger en stylechooser?
+Om att skriva bra CSS-kod (klasser).
+
 
 2. Mer
 
@@ -53,6 +56,28 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+###Tekniker för att skriva för webben {#skriva}
+
+1. Skriva för webben https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/
+
+
+1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär.
+
+
+
+###Introduktion till webbdesign {#webbdesign}
+
+
+
+###Introduktion till användbarhet för webben {#anvandbarhet}
+
+
+
+###Funktionsanpassad webb {#funktion}
+
+
+
+
 ###Kurslitteratur  {#kurslitteratur}
 
 Läs följande:
@@ -62,13 +87,6 @@ Läs följande:
 ###Artiklar {#artiklar}
 
 Läs följande:
-
-1. Läs om grunderna i Markdown.
-
-1. *Hitta artikel om att "Skriva för webben".*
-
-1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär.
-
 
 
 

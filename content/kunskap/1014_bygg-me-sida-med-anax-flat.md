@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-05-02: (PA, mos) Pre-release.
+    2016-06-03: (PA, mos) Pre-release.
 category:
     - design
     - ramverk
@@ -11,9 +11,13 @@ category:
 Bygg en me-sida med Anax Flat
 ===================================
 
-Vi skall använda ramverket Anax Flat för att bygga en me-sida. Ramverket Anax Flat är en variant av Anax som bygger på en webbplats som skapas med Markdown dokument tillsamman med YAML eller JSON som frontmatter. Frontmattern tillsammans med en väl definierad katalog och filstruktur fungerar som en ersättare till databasen.
+[FIGURE src=/image/snapvt16/favicon_128x128.png class="right"]
 
-När vi byggt vår webbplats börjar vi skapa ett tema till den, genom att använda LESS och ett gridbaserat LESS-ramverk.
+Vi skall använda ramverket Anax för att bygga en me-sida. Vi börjar med en tom katalog och hämtar hem alla komponenter vi behöver, till slut har vi vår egen variant av Anax, *Anax Flat*.
+
+Syftet med Anax Flat är att bygga en webbplats som skapas med Markdown dokument tillsamman med YAML eller JSON som *frontmatter*. Frontmattern, tillsammans med en väl definierad katalog och filstruktur fungerar som en ersättare till databasen.
+
+När vi byggt grunden till vår webbplats kan vi spara allt som ett eget repo på GitHub.
 
 <!--more-->
 
@@ -24,9 +28,7 @@ Förutsättning {#pre}
 
 Du har installerat `composer` och `make`.
 
-Du kan kompilera LESS-filer vid kommandoraden.
-
-Du har konfigurerat din PHP installation att hantera YAML.
+Du har konfigurerat din [PHP installation att hantera YAML](labbmiljo/php-yaml).
 
 
 
@@ -46,7 +48,11 @@ Anax Flat finns på GitHub och på Packagist. Jag väljer att installera Anax Fl
 $ composer require mos/anax-flat geshi/geshi:dev-master
 ```
 
-*Egentligen behöver du bara paketet `mos/anax-flat` men eftersom paketet `geshi/geshi` inte använder [sematisk versionshantering](http://semver.org/) så får vi även hämta hem det paketet genom att specificera senaste versionen som `dev-master`.*
+[INFO]
+**Not om `geshi/geshi`**
+
+Egentligen behöver du bara paketet `mos/anax-flat` men eftersom paketet `geshi/geshi` inte använder [sematisk versionshantering](http://semver.org/) så får vi även hämta hem det paketet genom att specificera senaste versionen som `dev-master`.
+[/INFO]
 
 Nu har du en fil `composer.json` och du har Anax Flat installerat under vendor-mappen. Då kan vi skapa en webbplats med hjälp av filer som ligger i Anax Flat.
 

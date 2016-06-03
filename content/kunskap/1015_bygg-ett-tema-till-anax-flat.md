@@ -26,6 +26,8 @@ Förutsättning {#pre}
 
 Du har jobbat igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
 
+Du kan kompilera LESS-filer vid kommandoraden.
+
 
 
 Börja med en fork {#fork}

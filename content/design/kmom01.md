@@ -10,7 +10,7 @@ Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det ha
 
 Hur bygger vi våra webbplatser för att underlätta för design och användbarhet?
 
-Vi skall använda ett PHP-baserat ramverk och bygga en me-sida med hjälp av det och sedan fylla me-sidan med innehåll och style. Stylen skapar vi med LESS vi skall skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som läsplatta som mobil.
+Vi skall använda ett PHP-baserat ramverk och bygga en me-sida som vi fyller med innehåll och style. Stylen skapar vi med LESS. Vi skall också skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
 
 Vi behöver alltså lära oss LESS och responsiv design till att börja med. Vi behöver också bekanta oss med begreppen webbdesign och användbarhet på webben.
 
@@ -52,11 +52,16 @@ Titta på följande:
 
 
 
+###Lästips {#lastips}
+
+Om du känner att du har tid och kraft.
+
+
+
 ###Tekniker för att skriva för webben {#skriva}
 
-1. Skriva för webben https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/
+1. Kika på vad Markdown innebär genom att läsa [John Grubers introduktion till Markdown](https://daringfireball.net/projects/markdown/basics). För att testa själv så öppnar du en [Gist](https://gist.github.com/) och skriver i Markdown, det gör att du kan testa olika konstruktioner under tiden som du läser om dem.
 
-1. Introduktion till Markdown.
 
 
 
@@ -64,7 +69,7 @@ Titta på följande:
 
 1. Bekanta dig med [LESS](http://lesscss.org/) och se vad det kan göra. 
 
-1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)" som fokuserar på skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor gör.
+1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)". Artikeln behandlar skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor är och gör.
 
 1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
 
@@ -84,14 +89,12 @@ Titta på följande:
 
 ###Responsive webbdesign {#responsiv}
 
-
-
-###Introduktion till webbdesign {#webbdesign}
-
-
-
-###Introduktion till användbarhet för webben {#anvandbarhet}
-
+* Mobile first
+* Responsive design
+* Olika webbplatser olika enheter
+* Progressive enhancement
+* Graceful degradation
+* Om media queries för att göra en responsiv webbplats
 
 
 
@@ -101,9 +104,6 @@ Titta på följande:
 
 
 
-###Lästips {#lastips}
-
-Om du känner att du har tid och kraft.
 
 
 
@@ -129,51 +129,15 @@ Installera labbmiljön för kursen.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. Övning composer, make. yaml.
+1. *Övning composer, make. yaml.*
 
-1. Övning för att komma igång med make och kompilera less (använd normalize + semantic.gr, media queries).
+1. *Övning för att komma igång med make och kompilera less (använd normalize + semantic.gr, media queries). Less-lint CSS-lint*
 
-1. Bygg webbplats med anax. Använd composer. Bifoga mall för standardsidor.
+1. Lär känna ramverket Anax Flat genom att bygga webbplats. JOaa igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
 
-1. Övning med navbar som är responsiv.
+1. Kom igång med LESS och skapa en struktur av LESS-filer, eller LESS-moduler. Det blir ett modulärt sätt att bygga upp sitt *tema* till webbplatsen. Gör detta genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
 
-1. Använd bifogat exempel som ger en stylechooser.
-
-
-
-
-1.  Kom igång med LESS, bygg en struktur av LESS-filer.
-
-Likställ stylen på alla webbläsare.
-Använd ett gridbaserat ramverk för ett vertikalt grid.
-
-Om att skriva bra CSS-kod (klasser).
-
-Less-lint
-CSS-lint
-Make
-
-Bilder med ![]()
-
-
-
-2. Responsive kontra mobile first.
-
-* Mobile first
-* Responsive design
-* Egna webbplatser olika enheter
-* Progressive enhancement
-* Graceful degradation
-
-Använd media queries för att göra en responsiv webbplats.
-
-
-
-
-
-
-
-
+*Bilder med ![]()*
 
 
 
