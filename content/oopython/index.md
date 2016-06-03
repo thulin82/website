@@ -148,7 +148,7 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 
 
 * **[A Byte of Python](http://python.swaroopch.com)** -- Swaroop C H  
-  En intro-bok till Python 3. Den tar upp grunderna i Python men även en del objekt-orienterad programmering. Bra format och bra exempel.
+  En intro-bok till Python 3. Den tar upp grunderna i Python men även en del objekt-orienterad programmering. Bra format och bra exempel. Det relevanta i boken hittas i kapitel 13.
 
 
 
