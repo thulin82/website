@@ -105,7 +105,7 @@ dbwebb publish flask2
 
 ###Extra {#extra}
 
-1. Rita ett UML-diagram - INTE KLAR
+1. Gör uppgiften "[Skapa ett klassdiagram](uppgift/skapa-klassdiagram)".
 
 
 
