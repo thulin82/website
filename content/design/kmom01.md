@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-04-11: (PA, mos) Arbetskopia.
+    2016-06-03: (PA, mos) Arbetskopia.
 ...
 Kmom01: Grid layout
 ====================================
@@ -40,22 +40,6 @@ Läs följande:
 
 
 
-###Artiklar {#artiklar}
-
-Läs följande:
-
-
-
-###Video  {#video}
-
-Titta på följande:
-
-
-
-###Lästips {#lastips}
-
-Om du känner att du har tid och kraft.
-
 
 
 ###Tekniker för att skriva för webben {#skriva}
@@ -72,8 +56,6 @@ Om du känner att du har tid och kraft.
 1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)". Artikeln behandlar skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor är och gör.
 
 1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
-
-1. Videoserie.
 
 
 
@@ -98,10 +80,11 @@ Om du känner att du har tid och kraft.
 
 
 
+###Video  {#video}
 
+Titta på följande:
 
-
-
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 0 och 1.
 
 
 
@@ -126,15 +109,14 @@ Installera labbmiljön för kursen.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. *Övning composer, make. yaml.*
-
 1. *Övning för att komma igång med make och kompilera less (använd normalize + semantic.gr, media queries). Less-lint CSS-lint*
 
-1. Lär känna ramverket Anax Flat genom att bygga webbplats. JOaa igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
+1. Lär känna ramverket Anax Flat genom att bygga webbplats. Jobba igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
 
 1. Kom igång med LESS och skapa en struktur av LESS-filer, eller LESS-moduler. Det blir ett modulärt sätt att bygga upp sitt *tema* till webbplatsen. Gör detta genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
 
-*Bilder med ![]()*
+*Bilder med ![](), lägg in som exempel i Anax Flat, tillsammans med lite ytterligare formatteringar.*
+
 
 
 
@@ -165,5 +147,6 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilken utvecklingsmiljö använder du?
-* ...
+* Är du sedan tidigare van att jobba i ramverk för at bygga webbplatser? Om ja, vilka ramverk/språk har du jobbat med?
+* Hur kändes det att jobba med Anax Flat och bygga din me-sida?
+* Vad tycker du om LESS så här långt, och det sättet vi jobbar med LESS-moduler i vårt tema?

@@ -1,9 +1,9 @@
 ---
 author: mos
 revision:
-    2016-05-11: (PA, mos) Pre-release.
+    2016-06-07: (PA, mos) Pre-release.
 category:
-    - design
+    - kurs-design
     - less
     - css
     - ramverk
@@ -12,6 +12,8 @@ category:
 ...
 Bygg ett tema till Anax Flat
 ===================================
+
+[FIGURE src=/image/snapvt16/favicon_128x128.png class="right"]
 
 Du har kommit igång med ramverket Anax Flat och du kan skapa ditt eget innehåll på webbplatsen. Nu är det dags att börja styla webbplatsen med CSS, eller rättare sagt med LESS.
 
@@ -26,14 +28,23 @@ Förutsättning {#pre}
 
 Du har jobbat igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
 
-Du kan kompilera LESS-filer vid kommandoraden.
+Du har installerat [`node` och `npm`](labbmiljo/node-och-npm).
+
+
+
+Videoserie {#video}
+-------------------------------
+
+Det finns en videoserie som visar hur jag jobbar igenom denna artikeln. Kika gärna på den samtidigt som du själv jobbar genom denna artikeln.
+
+De videor som är relaterade till denna artikel börjar på "[120 Anax Flat tema*](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)".
 
 
 
 Börja med en fork {#fork}
 -------------------------------
 
-På GitHub finns mosbth/ ett embryo till ett tema. Framförallt finns en makefile som hjälper dig att jobba med LESS på kommandoraden. Allt eftersom kommer vi bygga ut vårt tema genom att återanvända befintliga moduler tillsammans med de egna moduler vi skapar. Att samla allt i ett eget Git-repo känns som en god idé.
+På GitHub finns `canax/anax-flat-theme` ett embryo till ett tema. Framförallt finns en makefile som hjälper dig att jobba med LESS på kommandoraden. Allt eftersom kommer vi bygga ut vårt tema genom att återanvända befintliga moduler tillsammans med de egna moduler vi skapar. Att samla allt i ett eget Git-repo känns som en god idé.
 
 Grundtemat finns på [`canax/anax-flat-theme`](https://github.com/mosbth/anax-flat-theme). Forka den och klona den sedan till din installation av Anax Flat.
 
@@ -67,7 +78,7 @@ $ make npm-install
 $ make npm-version
 ```
 
-Nu har du två verktyg. Du har kommandot `lessc` som lintar, kompilerar och minifierar din styesheet. Du har även kommandot `csslint` som lintar din slutliga CSS-kod.
+Nu har du två verktyg. Du har kommandot `lessc` som lintar, kompilerar och minifierar din stylesheet. Du har även kommandot `csslint` som lintar din slutliga CSS-kod.
 
 Du kan testa att köra dem direkt via kommandoraden för att se att de fungerar.
 

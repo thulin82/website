@@ -44,6 +44,13 @@ Verktyg för att mäta SEO.
 > Översikt av W3Cs arbete
 
 
+4. Usablity undersökning ala Wellness.
+
+Läsanvisningar till:
+https://developers.google.com/web/fundamentals/?hl=en
+
+
+
 [FIGURE src=/image/snap/tema-typografi-grid.png?w=w2 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>

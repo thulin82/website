@@ -3,7 +3,7 @@ author: mos
 revision:
     2016-06-03: (A, mos) Första versionen.
 category:
-    - design
+    - kurs-design
     - ramverk
     - anax
     - anax-flat
