@@ -55,7 +55,9 @@ $ mkdir anax-flat
 $ cd anax-flat
 ```
 
-Anax Flat finns på GitHub och på Packagist. Jag väljer att installera Anax Flat med composer.
+Anax Flat finns på GitHub och på Packagist. Du kan kika på hur paketet [Anax Flat presenteras på Packagist](https://packagist.org/packages/mos/anax-flat).
+
+Jag väljer att installera Anax Flat med composer.
 
 ```text
 $ composer require mos/anax-flat geshi/geshi:dev-master
@@ -107,10 +109,10 @@ Här följer en förteckning av några av de kataloger som skapas.
 
 | Katalog        | Beskrivning                            |
 |----------------|----------------------------------------|
-| `cache/*`      | Temporär lagring av cachade filer.     |
-| `content/*`    | Filer som motsvarar innehållet i webbplatsen. Här redigerar vi innehållet i webbplatsen. |
-| `theme/*`      | Utvecklingsmiljö för att skapa ett nytt tema. |
-| `htdocs/*`     | Rooten till den publika delen av webbplatsen. Här lagras alla filer som skall vara tillgängliga via en länk. |
+| `cache/`       | Temporär lagring av cachade filer.     |
+| `content/`     | Filer som motsvarar innehållet i webbplatsen. Här redigerar vi innehållet i webbplatsen. |
+| `theme/`       | Utvecklingsmiljö för att skapa ett nytt tema. |
+| `htdocs/`      | Rooten till den publika delen av webbplatsen. Här lagras alla filer som skall vara tillgängliga via en länk. |
 
 Du kan nu öppna katalogen `htdocs` i din webbläsare, via din lokala webbserver. För min del gäller länken `http://localhost/anax-flat/htdocs` men du får justera den så att den passar just din installation.
 
@@ -242,6 +244,35 @@ Ladda om sidan på GitHub så ser du nu ditt repo.
 Innan du är klar så bör du lägga till en `README.md` samt en `LICENSE`. Själv använder jag MIT som licens. Vill du göra samma så kan du kopiera licensfilen från `vendor/mos/anax-flat/LICENSE` (glöm inte byta namnet i filen).
 
 Du kan se mitt halvfärdiga repo på [`mosbth/Anax-Flat-Me`](https://github.com/mosbth/Anax-Flat-Me), bara för att se hur det kan se ut.
+
+
+
+Tagga ditt repo med en version {#tag}
+-------------------------------
+
+När du är klar med uppdateringar av din kod och innehåll så skall du avslutningsvis tagga ditt repo. Du skall ge det en version så du kan komma ihåg vilket läge din kod hade vid just detta tillfället.
+
+Du skall välja version 1.0.0.
+
+Så här taggar du ditt repo med en version.
+
+```text
+# Börja med att committa alla ändringar du gjort
+$ git commit -a -m "Prepare to tag version"
+$ git push
+
+# Nu kan vi tagga koden med en version
+$ git tag -a 1.0.0 -m "My first version"
+$ git push --tags
+$ git tag
+```
+
+Om du gör ändringar och vill tagga en ny version så kan du tills vidare använda den tredje siffran och inkrementera den för varje ny version. Så här:
+
+* 1.0.1
+* 1.0.2
+
+Bra, nu har vi ordning på versionerna av koden.
 
 
 

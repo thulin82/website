@@ -50,6 +50,7 @@ Läsanvisningar till:
 https://developers.google.com/web/fundamentals/?hl=en
 
 
+[FIGURE src=/image/snap/tema-regioner-visa-grid.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
 
 [FIGURE src=/image/snap/tema-typografi-grid.png?w=w2 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]
 
@@ -69,6 +70,20 @@ Läsanvisningar  {#lasanvisningar}
 
 
 1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär.
+
+
+
+
+
+###Vad handlar grid-baserad layout om? {#grid}
+
+1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layou handlar om.
+
+1. Studera kort det gridbaserade ramverket [The Semantic Grid System](http://dbwebb-se.github.io/semantic.gs/webroot/) för att se hur man kan skapa gridbaserad layout med LESS.
+
+
+
+
 
 
 

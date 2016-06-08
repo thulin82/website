@@ -3,6 +3,7 @@ author: mos
 revision:
     2016-05-02: (PA, mos) Pre-release.
 category:
+    - kurs-design
     - verktyg
     - drift
 ...

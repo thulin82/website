@@ -3,22 +3,22 @@ author: mos
 revision:
     2016-06-03: (PA, mos) Arbetskopia.
 ...
-Kmom01: Grid layout
+Kmom01: LESS och Responsiv Design
 ====================================
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
-Hur bygger vi våra webbplatser för att underlätta för design och användbarhet?
+Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Det handlar främst om hur vi, som programmerare, rent tekniskt kan förbereda webbplatserna för design och användbarhet. Allt för att vi skall vara förberedda när det kommer en webbdesigner, eller användbarhets-designer, och berättar hur webbplatsen skall se ut.
 
-Vi skall använda ett PHP-baserat ramverk och bygga en me-sida som vi fyller med innehåll och style. Stylen skapar vi med LESS. Vi skall också skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
+<!--more-->
+
+För att komma igång snabbt så använder vi ett PHP-baserat ramverk för att bygga en me-sida som vi fyller med innehåll och style. Stylen skapar vi med LESS. Vi skall sedan skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
 
 Vi behöver alltså lära oss LESS och responsiv design till att börja med. Vi behöver också bekanta oss med begreppen webbdesign och användbarhet på webben.
 
 Öppna ditt sinne och låt oss börja.
 
-<!--more-->
-
-[FIGURE src=/image/snap/tema-regioner-visa-grid.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
+[FIGURE src=/image/snapvt16/anax-flat-start.png?w=w2 caption="En me-sida med PHP-ramverket Anax Flat."]
 
 
 
@@ -38,14 +38,15 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
+1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
+    * Kap 1: Layout and Composition
 
 
 
 ###Tekniker för att skriva för webben {#skriva}
 
 1. Kika på vad Markdown innebär genom att läsa [John Grubers introduktion till Markdown](https://daringfireball.net/projects/markdown/basics). För att testa själv så öppnar du en [Gist](https://gist.github.com/) och skriver i Markdown, det gör att du kan testa olika konstruktioner under tiden som du läser om dem.
-
 
 
 
@@ -59,24 +60,13 @@ Läs följande:
 
 
 
-###Vad handlar grid-baserad layout om? {#grid}
+###Responsiv webbdesign {#responsiv}
 
-1. Studera det gridbaserade ramverket [Semantic.gs](http://tylertate.github.io/semantic.gs/).
+1. Läs översiktligt artikeln som definierade begreppet "[Responsive Web Design](http://alistapart.com/article/responsive-web-design/)".
 
-1. Läs artikeln "[The Semantic Grid System: Page Layout For Tomorrow](http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/)". Skaffa dig en överblick av LESS och The Semantic Grid.
+1. Bläddra snabbt igenom artikeln "[Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514)" som definierade ett antal design mönster inom responsiv design.
 
-1. Läs artikeln "[Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?](http://coding.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/)". Vad handlar det om med alla varianter på layout av en webbsida? Skaffa dig en översikt. *(OBS GAMMAL ARTIKEL SÖK ERSÄTTARE)*
-
-
-
-###Responsive webbdesign {#responsiv}
-
-* Mobile first
-* Responsive design
-* Olika webbplatser olika enheter
-* Progressive enhancement
-* Graceful degradation
-* Om media queries för att göra en responsiv webbplats
+1. Kika snabbt på materialet då Google Developers visar hur man kommer igång med [grunderna i responsiv layout](https://developers.google.com/web/fundamentals/design-and-ui/responsive/). 
 
 
 
@@ -109,8 +99,6 @@ Installera labbmiljön för kursen.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. *Övning för att komma igång med make och kompilera less (använd normalize + semantic.gr, media queries). Less-lint CSS-lint*
-
 1. Lär känna ramverket Anax Flat genom att bygga webbplats. Jobba igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
 
 1. Kom igång med LESS och skapa en struktur av LESS-filer, eller LESS-moduler. Det blir ett modulärt sätt att bygga upp sitt *tema* till webbplatsen. Gör detta genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
@@ -124,9 +112,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör en me-sida. Lägg den även på GitHub.
-
-2. Skapa ett tema till din me-sida som är gridbaserat och använder en responsive design.
+1. Gör en me-sida. Lägg den även på GitHub. Skapa ett tema till din me-sida som använder en responsive design.
 
 
 

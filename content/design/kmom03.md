@@ -16,6 +16,9 @@ GA & Webadmin tools.
 
 Verktyg för att kontrollera SEO.
 
+
+Solved by FlexBox + Flexbox grid.
+
 <!--more-->
 
 **BILD**

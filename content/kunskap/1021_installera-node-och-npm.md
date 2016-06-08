@@ -27,9 +27,9 @@ Uppdatera/jämför artikeln på http://dbwebb.se/kunskap/kom-igang-med-node-js-p
 Läs mer {#mer}
 -------------------------------
 
-Du kan läsa mer om [Composer på webbplatsen](https://getcomposer.org/).
+Du kan läsa mer om [Node.js på webbplatsen](https://nodejs.org/).
 
-Du kan se vilka [PHP-paket som finns publicerade på Packagist](https://packagist.org/).
+Du kan läsa mer om [npm på webbplatsen](https://www.npmjs.com/). Där kan du också söka efter de paket som finns publicerade.
 
 
 

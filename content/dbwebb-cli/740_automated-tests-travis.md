@@ -19,6 +19,7 @@ Så här ser nuvarande status ut för de senaste testerna som körts på Travis 
 | [python](https://github.com/dbwebb-se/python) | [![Build Status](https://travis-ci.org/dbwebb-se/python.svg?branch=master)](https://travis-ci.org/dbwebb-se/python) | [![CircleCI](https://circleci.com/gh/dbwebb-se/python.svg?style=svg)](https://circleci.com/gh/dbwebb-se/python) |
 | [htmlphp](https://github.com/dbwebb-se/htmlphp) | [![Build Status](https://travis-ci.org/dbwebb-se/htmlphp.svg?branch=master)](https://travis-ci.org/dbwebb-se/htmlphp) | [![CircleCI](https://circleci.com/gh/dbwebb-se/htmlphp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/htmlphp) |
 | [oopython](https://github.com/dbwebb-se/oopython) | [![Build Status](https://travis-ci.org/dbwebb-se/oopython.svg?branch=master)](https://travis-ci.org/dbwebb-se/oopython) | [![CircleCI](https://circleci.com/gh/dbwebb-se/oopython.svg?style=svg)](https://circleci.com/gh/dbwebb-se/oopython) |
+| [design](https://github.com/mosbth/design) | [![Build Status](https://travis-ci.org/dbwebb-se/design.svg?branch=master)](https://travis-ci.org/dbwebb-se/design) | [![CircleCI](https://circleci.com/gh/dbwebb-se/design.svg?style=svg)](https://circleci.com/gh/dbwebb-se/design) | 
 
 Följande kursrepon är ännu inte överförda i senaste versionen av automatiserade tester.
 
@@ -31,7 +32,6 @@ Följande kursrepon är ännu inte överförda i senaste versionen av automatise
 | [linux](https://github.com/mosbth/linux) | [![Build Status](https://travis-ci.org/mosbth/linux.svg?branch=master)](https://travis-ci.org/dbwebb-se/linux) |
 | [webapp](https://github.com/mosbth/webapp) | [![Build Status](https://travis-ci.org/mosbth/webapp.svg?branch=master)](https://travis-ci.org/dbwebb-se/webapp) |
 | [webgl](https://github.com/mosbth/webgl) | [![Build Status](https://travis-ci.org/mosbth/webgl.svg?branch=master)](https://travis-ci.org/dbwebb-se/webgl) |
-| [design](https://github.com/mosbth/design) | [![Build Status](https://travis-ci.org/mosbth/design.svg?branch=master)](https://travis-ci.org/dbwebb-se/design) |
 
 
 
