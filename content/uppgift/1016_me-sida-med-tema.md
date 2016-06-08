@@ -49,6 +49,8 @@ Krav {#krav}
 
 1. På about-sidan lägger du in valfri text om kursen tillsammans med en godtycklig bild som du anser kompletterar sidans innehåll.
 
+1. På din about-sida skall du lägga en länk till GitHub-repot för din me-sida och för ditt tema.
+
 1. Byt ut den bilden som nu finns med som *flash-bild* på alla sidorna. Lägg dit en egen bild som du tycker passar. Du kan ha olika bilder på olika sidor, om du vill.
 
 1. Fyll i *ett utkast* till din redovisningstext för detta kursmomentet på rätt plats i sidan för redovisningar.

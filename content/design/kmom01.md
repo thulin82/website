@@ -103,18 +103,13 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Kom igång med LESS och skapa en struktur av LESS-filer, eller LESS-moduler. Det blir ett modulärt sätt att bygga upp sitt *tema* till webbplatsen. Gör detta genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
 
-*Bilder med ![](), lägg in som exempel i Anax Flat, tillsammans med lite ytterligare formatteringar.*
-
-
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör en me-sida. Lägg den även på GitHub. Skapa ett tema till din me-sida som använder en responsive design.
-
-
+1. Lös uppgiften "[Bygg en me-sida med Anax Flat och eget LESS tema](design/kmom01)".
 
 
 
