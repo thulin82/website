@@ -30,4 +30,4 @@ Varje fil som ligger i det uppladdade kursrepot behöver hanteras vid *validate*
 Något som inte borde laddas upp? {#tips}
 ----------------------------------
 
-Om du har tips på filer/kataloger som inte borde laddas upp, säg då till via en forumtråd.  Kanske har din editor några filer eller kataloger som automatgenereras, eller så är det några filer vi har missat att exkludera.
+Om du har tips på filer/kataloger som inte borde laddas upp, säg då till via en forumtråd eller issue.  Kanske har din editor några filer eller kataloger som automatgenereras, eller så är det några filer vi har missat att exkludera.

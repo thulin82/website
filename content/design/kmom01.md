@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-06-03: (PA, mos) Arbetskopia.
+    2016-06-08: (PA, mos) Arbetskopia.
 ...
 Kmom01: LESS och Responsiv Design
 ====================================
@@ -128,6 +128,7 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är du sedan tidigare van att jobba i ramverk för at bygga webbplatser? Om ja, vilka ramverk/språk har du jobbat med?
+* Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser? Om ja, vilka ramverk/språk har du jobbat med?
+* Det blev en del nya verktyg i labbmiljön, var de nya för dig eller kände du igen dem?
 * Hur kändes det att jobba med Anax Flat och bygga din me-sida?
 * Vad tycker du om LESS så här långt, och det sättet vi jobbar med LESS-moduler i vårt tema?

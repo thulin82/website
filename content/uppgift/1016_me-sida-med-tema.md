@@ -69,6 +69,8 @@ Krav {#krav}
 
 1. Footer och footerkolumnerna skall se bra ut och fungera responsivt.
 
+1. Se till att ditt tema passerar testerna som körs vid `make test`.
+
 
 
 ###Klar och taggad {#tag}

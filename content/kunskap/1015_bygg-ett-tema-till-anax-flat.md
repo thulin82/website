@@ -427,6 +427,19 @@ Jag hoppas du ser hur en makefil kan vara till hjälp att hålla ditt projekt up
 
 
 
+Testa ditt repo {#maketest}
+-------------------------------
+
+Du kan använda `make test` för att testa, *linta*, alla CSS- och LESS-filer i ditt repo. Det är bra så det inte slipper med några fel.
+
+```text
+$ make test
+```
+
+Om du får fel så försöker du rätta till dem. 
+
+
+
 Commita alla ändringar till GitHub {#commit}
 -------------------------------
 
