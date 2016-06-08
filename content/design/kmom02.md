@@ -3,21 +3,27 @@ author: mos
 revision:
     2016-04-11: (PA, mos) Arbetskopia.
 ...
-Kmom02: Typografi
+Kmom02: Grid Layout och Typografi
 ====================================
 
-Om typografi.
+Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sida.
 
-Om att matcha fonter på en webbplats.
+Vi skall titta på ett *vertikalt grid* som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, för ett visst vitt utrymme, så kallat *white space*.
 
-Horisontellt grid för typsnitt.
+Sedan tittar på på ett *horisontellt grid* som vi även kan kalla ett *typografiskt grid* där syftet är att alla typografiska element kan vila på en rad i ett tänkt horisontellt rutnät.
+
+När vi ändå är inne på ämnet typografi så håller vi oss kvar där och bygger ut vårt tema genom att förbereda för styling och varianter av typsnitt.
+
+
+Läsa:
+
+* Om allmän typografi.
+* Om att matcha fonter på en webbplats.
 
 Övning med att lägga in style för alla html font element.
+Om Markdown Extra med typografiska element.
 
-Regioner & Grid.
 
-
-(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
 
 <!--more-->
 
@@ -30,13 +36,19 @@ Om att skriva bra CSS-kod (klasser).
 2. Mer
 
 Introduktion till SEO
-Mer om Markdown
-Om Markdown Extra med typografiska element.
+(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
 
 
 3. Mäta
 
 Verktyg för att mäta SEO.
+
+Sätt upp egen site och börja mäta SEO.
+GA
+Bings motsvarighet
+Google webbmaster
+
+* Googles guide
 
 > Talande webläsare
 > Lagar om webben
@@ -64,14 +76,21 @@ Läsanvisningar  {#lasanvisningar}
 *(ca: 8-10 studietimmar)*
 
 
+###Kurslitteratur  {#kurslitteratur}
+
+Läs följande:
+
+1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
+
+    * Kap 4: Typography
+
+
+
 ###Tekniker för att skriva för webben {#skriva}
 
-1. Skriva för webben https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
-
-1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär.
-
-
+    * 3. Hur vi läser på webben
 
 
 
@@ -81,39 +100,7 @@ Läsanvisningar  {#lasanvisningar}
 
 1. Studera kort det gridbaserade ramverket [The Semantic Grid System](http://dbwebb-se.github.io/semantic.gs/webroot/) för att se hur man kan skapa gridbaserad layout med LESS.
 
-
-
-
-
-
-
-###Introduktion till webbdesign {#webbdesign}
-
-
-
-###Introduktion till användbarhet för webben {#anvandbarhet}
-
-
-
-###Funktionsanpassad webb {#funktion}
-
-
-
-###Att mäta hur optimerad en webbplats är {#optimerad}
-
-1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
-
-
-
-###Kurslitteratur  {#kurslitteratur}
-
-Läs följande:
-
-
-
-###Artiklar {#artiklar}
-
-Läs följande:
+1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär.
 
 
 
@@ -121,13 +108,13 @@ Läs följande:
 
 Titta på följande:
 
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 2.
 
 
 
 ###Lästips {#lastips}
 
-Om du känner att du har tid och kraft.
-
+Det finns inga extra lästips.
 
 
 
@@ -170,9 +157,8 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa]([BASEURL]design/redovisa).
+Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilken utvecklingsmiljö använder du?
 * ...

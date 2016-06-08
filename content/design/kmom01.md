@@ -48,6 +48,11 @@ Läs följande:
 
 1. Kika på vad Markdown innebär genom att läsa [John Grubers introduktion till Markdown](https://daringfireball.net/projects/markdown/basics). För att testa själv så öppnar du en [Gist](https://gist.github.com/) och skriver i Markdown, det gör att du kan testa olika konstruktioner under tiden som du läser om dem.
 
+1. Det är viktigt att ha koll på hur vi skall tänka när vi skriver för webben. Under kursen skall vi läsa igenom guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)". Du kan börja kort med följande kapitel, bara för att bekanta dig med materialet.
+
+    * 1. Innehållsförteckning
+    * 2. Förord
+
 
 
 ###Kom igång med LESS {#less}
@@ -75,6 +80,12 @@ Läs följande:
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 0 och 1.
+
+
+
+###Lästips {#lastips}
+
+Det finns inga extra lästips.
 
 
 

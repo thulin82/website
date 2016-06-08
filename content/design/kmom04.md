@@ -42,11 +42,18 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
+1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
+
+    * Kap 5: Imagery
 
 
-###Artiklar {#artiklar}
 
-Läs följande:
+###Tekniker för att skriva för webben {#skriva}
+
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+
+    * 5. Rubriker som ger resultat
+
 
 
 
@@ -55,13 +62,13 @@ Läs följande:
 
 Titta på följande:
 
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 4.
 
 
 
 ###Lästips {#lastips}
 
-Om du känner att du har tid och kraft.
-
+Det finns inga extra lästips.
 
 
 

@@ -22,6 +22,15 @@ Solved by FlexBox + Flexbox grid.
 
 https://design.google.com/ ?
 
+
+
+###Att mäta hur optimerad en webbplats är {#optimerad}
+
+1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
+
+
+
+
 <!--more-->
 
 **BILD**
@@ -43,11 +52,30 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
+1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
+
+    * Kap 2: Color
 
 
-###Artiklar {#artiklar}
 
-Läs följande:
+###Tekniker för att skriva för webben {#skriva}
+
+1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+
+    * 4. Målgrupper - vem vill du nå?
+
+
+
+###Introduktion till webbdesign {#webbdesign}
+
+
+
+###Introduktion till användbarhet för webben {#anvandbarhet}
+
+
+
+###Funktionsanpassad webb {#funktion}
+
 
 
 
@@ -56,13 +84,13 @@ Läs följande:
 
 Titta på följande:
 
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 3.
 
 
 
 ###Lästips {#lastips}
 
-Om du känner att du har tid och kraft.
-
+Det finns inga extra lästips.
 
 
 
