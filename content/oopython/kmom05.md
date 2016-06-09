@@ -4,6 +4,7 @@ revision:
     "2016-04-12": (PA, lew) Pre-release.
     "2016-05-25": (PA, aar) Pre-release.
     "2016-06-01": (PA, lew) Pre-release.
+    "2016-06-09": (PA, aar) Pre-release.
 category:
     - oopython
 ...
@@ -52,6 +53,7 @@ Det finns inga extra artiklar.
 
 Titta på följande:
 
+Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
 
 
 ###Lästips {#lastips}
