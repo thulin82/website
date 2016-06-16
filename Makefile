@@ -48,7 +48,7 @@ production-publish:
 # target: update - Publish website to local host.
 .PHONY: local-publish
 local-publish:
-	rsync -av --exclude old --exclude .git --exclude cache --delete "./" $(LOCAL_HTDOCS)
+	rsync -av --exclude old --exclude .git --exclude cache --exclude error.log --exclude access.log --delete "./" $(LOCAL_HTDOCS)
 	@[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
 
 
