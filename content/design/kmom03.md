@@ -24,6 +24,41 @@ https://design.google.com/ ?
 
 
 
+
+
+
+2. Mer
+
+Introduktion till SEO
+(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
+
+
+3. Mäta
+
+Verktyg för att mäta SEO.
+
+Sätt upp egen site och börja mäta SEO.
+GA
+Bings motsvarighet
+Google webbmaster
+
+* Googles guide
+
+> Talande webläsare
+> Lagar om webben
+> Forskning inom användbarhet
+> Översikt av W3Cs arbete
+
+
+4. Usablity undersökning ala Wellness.
+
+Läsanvisningar till: (write content for multidevice)
+https://developers.google.com/web/fundamentals/design-and-ui/content/?hl=en
+
+
+
+
+
 ###Att mäta hur optimerad en webbplats är {#optimerad}
 
 1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.

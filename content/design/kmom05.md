@@ -24,6 +24,7 @@ Whitespace.
 
 (Integrera social media, SEO strategi)
 
+bootstrap (eller annat)
 
 <!--more-->
 

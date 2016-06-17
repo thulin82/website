@@ -6,60 +6,21 @@ revision:
 Kmom02: Grid Layout och Typografi
 ====================================
 
-Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sida.
+Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
 
-Vi skall titta på ett *vertikalt grid* som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, för ett visst vitt utrymme, så kallat *white space*.
+Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*.
 
-Sedan tittar på på ett *horisontellt grid* som vi även kan kalla ett *typografiskt grid* där syftet är att alla typografiska element kan vila på en rad i ett tänkt horisontellt rutnät.
+Sedan tittar på på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen. Vårt horisontella grid skall inte bara gälla de typografiska elementen utan samtliga element som placeras ut på webbsidan.
 
-När vi ändå är inne på ämnet typografi så håller vi oss kvar där och bygger ut vårt tema genom att förbereda för styling och varianter av typsnitt.
-
-
-Läsa:
-
-* Om allmän typografi.
-* Om att matcha fonter på en webbplats.
-
-Övning med att lägga in style för alla html font element.
-Om Markdown Extra med typografiska element.
+Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt grid. Samtidigt förbereder vi temat för att bli enkelt att style med olika typsnitt.
 
 
 
 <!--more-->
 
-Mer, osäker vilket kmom.
-
 Använd bifogat exempel som ger en stylechooser?
-Om att skriva bra CSS-kod (klasser).
 
 
-2. Mer
-
-Introduktion till SEO
-(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
-
-
-3. Mäta
-
-Verktyg för att mäta SEO.
-
-Sätt upp egen site och börja mäta SEO.
-GA
-Bings motsvarighet
-Google webbmaster
-
-* Googles guide
-
-> Talande webläsare
-> Lagar om webben
-> Forskning inom användbarhet
-> Översikt av W3Cs arbete
-
-
-4. Usablity undersökning ala Wellness.
-
-Läsanvisningar till:
-https://developers.google.com/web/fundamentals/?hl=en
 
 
 [FIGURE src=/image/snap/tema-regioner-visa-grid.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
@@ -92,15 +53,43 @@ Läs följande:
 
     * 3. Hur vi läser på webben
 
+1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur markdown-texten i Anax Flat formatteras till HTML.
+
+
+
+###Typografisk webb {#type}
+
+Tänk dig en typografisk webbplats där all styling har lagts på de typografiska elementen. Hur kan det se ut? Kika på följande webbplatser och inhämta inspiration.
+
+1. [En praktisk guide till typografi på webben](http://webtypography.net/), en högst läsbar bok och samtidigt ett stilexempel på hur en typografiskt stilad webbplats kan se ut.
+
+1. AListApart är en webbplats som publicerar artiklar inom webb, kika här på [artiklar inom typografi](http://alistapart.com/topic/typography-web-fonts). Välj någon av artiklarna och kika på den samtidigt som du studerar dess typografi. 
+
+    * Om allmän typografi.
+    * Om att matcha fonter på en webbplats.
+
+    CtextFilter with Typography
+
+    Om Markdown Extra med typografiska element.
+
+
 
 
 ###Vad handlar grid-baserad layout om? {#grid}
 
 1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layou handlar om.
 
-1. Studera kort det gridbaserade ramverket [The Semantic Grid System](http://dbwebb-se.github.io/semantic.gs/webroot/) för att se hur man kan skapa gridbaserad layout med LESS.
+1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Gillar du artikel så kan du läsa mer om typografi på webben i de artikeltips som visas under artikelns "Further reading".
 
-1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär.
+1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/layout/) och sin [typografi](http://primercss.io/type/).
+
+
+
+###Styleguides för CSS {#styleguide}
+
+1. Kika snabbt igenom "[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)".
+
+1. Kika snabbt igenom de [kod guidelines](http://primercss.io/guidelines/) som gäller för GitHubs Primer.
 
 
 

@@ -11,7 +11,7 @@ category:
 Använd ett vertikalt grid med Anax Flat
 ===================================
 
-[FIGURE src=/image/snapvt16/nodejs-logo.png class="right"]
+[FIGURE src=/image/dummy class="right"]
 
 Vi har sedan tidigare byggt ett responsivt tema till Anax Flat och nu är det dags att bygga ut det med ett vertikalt grid.
 
@@ -32,9 +32,54 @@ Du har jobbat igenom materialet i artiklarna "[Bygg en me-sida med Anax Flat](ku
 
 
 
-Installera på Windows {#windows}
+Tekniker för grid {#tekniker}
 -------------------------------
 
+Grundern för ett grid kan skapas på olika sätt. I denna artikeln skall vi använda ett klassiskt sätt som bygger på tekniken med *float*. I en senare artikel skall vi testa en nyare teknik som bygger på *flex*.
+
+
+
+###Grid med klasser {#class}
+
+I de teknikerna vi väljer så vill vi undvika hårda kopplingar mellan CSS- och HTML-koden. Vissa grid-system har grid-klasser som man behöver lägga in i HTML-koden. Så här.
+
+```html
+<div class="row">
+    <div class="column-3">
+    <div class="column-3">
+    <div class="column-3">
+    <div class="column-3">
+</div>
+```
+
+Säg sedan att vi har följande CSS-kod.
+
+```css
+.row {
+    display: block;
+    width: 100%
+    
+    /* Just to visualize using colors */
+    background-color: #ccc;
+}
+
+.column-3 {
+    width: 
+}
+
+```
+
+
+
+*exempel från bootstrap.*
+
+
+
+https://material.google.com/layout/responsive-ui.html#
+
+http://less2css.org/ för att testa hur less blir css.
+
+http://www.cssfontstack.com/
 
 
 Installera på Mac OS {#macos}
