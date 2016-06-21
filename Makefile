@@ -3,6 +3,14 @@
 # Build website with environment
 #
 #
+# Colors
+NO_COLOR		= \033[0m
+TARGET_COLOR	= \033[32;01m
+OK_COLOR		= \033[32;01m
+ERROR_COLOR		= \033[31;01m
+WARN_COLOR		= \033[33;01m
+ACTION			= $(TARGET_COLOR)--> 
+HELPTEXT 		= "$(ACTION)" `egrep "^\# target: $(1) " Makefile | sed "s/\# target: $(1)[ ]\+- / /g"` "$(NO_COLOR)"
 
 WWW_SITE	:= v2.dbwebb.se
 WWW_LOCAL	:= local.$(WWW_SITE)
@@ -27,6 +35,7 @@ FONT_AWESOME = theme/mos-theme/style/font-awesome/fonts/
 # target: help - Displays help.
 .PHONY:  help
 help:
+	@echo $(call HELPTEXT,$@)
 	@echo "make [target] ..."
 	@echo "target:"
 	@egrep "^# target:" Makefile | sed 's/# target: / /g'
@@ -35,20 +44,23 @@ help:
 
 # target: update - Update codebase and publish by clearing the cache.
 .PHONY: update
-update: codebase-update site-build local-publish-clear
+update: codebase-update submodule-update site-build local-publish-clear
+	@echo $(call HELPTEXT,$@)
 
 
 
 # target: production-publish - Publish latest to the production server.
 production-publish:
+	@echo $(call HELPTEXT,$@)
 	ssh mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
 
 
 
-# target: update - Publish website to local host.
+# target: local-publish     - Publish website to local host.
 .PHONY: local-publish
 local-publish:
-	rsync -av --exclude old --exclude .git --exclude cache --exclude error.log --exclude access.log --delete "./" $(LOCAL_HTDOCS)
+	@echo $(call HELPTEXT,$@)
+	rsync -av --exclude old --exclude .git --exclude .solution --exclude .solutions --exclude cache --exclude error.log --exclude access.log --delete "./" $(LOCAL_HTDOCS)
 	@[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
 
 
@@ -56,31 +68,29 @@ local-publish:
 # target: local-cache-clear - Clear the cache.
 .PHONY: local-cache-clear
 local-cache-clear:
+	@echo $(call HELPTEXT,$@)
 	-sudo rm -f $(LOCAL_HTDOCS)/cache/anax/*
 
 
 
-#
-# 
 # target: local-publish-clear - Publish website to local host and clear the cache.
 .PHONY: local-publish-clear
 local-publish-clear: local-cache-clear local-publish
+	@echo $(call HELPTEXT,$@)
 
 
 
-#
-# Update codebase
-#
+# target: codebase-update    - Update codebase.
 .PHONY: codebase-update
 codebase-update:
+	@echo $(call HELPTEXT,$@)
 	git pull
-	composer update
+	composer install
 
 
 
-#
-# Update repo with all submodules
-#
+# target: submodule-init      - Init all submodules.
+# target: submodule-update    - Update all submodules.
 .PHONY: submodule-init submodule-update
 submodule-init:
 	git submodule update --init --recursive 

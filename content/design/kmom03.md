@@ -148,6 +148,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 Dessa uppgifter skall utföras och redovisas.
 
 
+3. [Mät och jämför laddningstider på olika webbplatser](uppgift/jamfor-laddningstider-for-webbplatser).
 
 
 ###Extra {#extra}

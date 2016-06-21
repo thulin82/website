@@ -1,0 +1,3 @@
+[submodule "htdocs/repo/design"]
+	path = htdocs/repo/design
+	url = https://github.com/dbwebb-se/design.git

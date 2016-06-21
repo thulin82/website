@@ -21,7 +21,7 @@ Vi har skapat ett eget dokument för [Frågor och Svar om våra utbildningar](ut
 
 Du får gärna [chatta med mig, våra lärare och studenter]([BASEURL]chatt) eller så kan du maila dina frågor direkt till mig.
 
-```txt
+```text
  .   Programansvarig
 ..:  Mikael Roos, mos@bth.se
 ```
