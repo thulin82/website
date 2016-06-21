@@ -588,6 +588,15 @@ Du behöver även en bild som representerar ditt grid. Här är en länk till et
 
 
 
+Använd `box-sizing: border-box` {#boxsising}
+------------------------------
+
+Jag har inte använt det i mina exempel av gridet. Men, en konstruktion som är bra att använda --- och gör att man slipper en del bekymmer --- är `box-sizing: border-box`. Den gör så att ett elements bredd och höjd räknar in eventuell padding och border. Det gör det enklare att kombinera style som säger `width: 100%` tillsammans med padding och border.
+
+Så, tipset är att lägga in konstruktionen i din mixin för kolumnerna.
+
+
+
 Avslutningsvis {#avslutning}
 ------------------------------
 

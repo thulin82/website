@@ -1,9 +1,9 @@
 ---
 author: mos
 revision:
-    2016-06-08: (PA, mos) Pre-release.
+    2016-06-08: (A, mos) Första utgåvan.
 category:
-    - kurs-design
+    - kurs/design
 ...
 Bygg en me-sida med Anax Flat och eget LESS tema
 ===================================
