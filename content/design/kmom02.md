@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-04-11: (PA, mos) Arbetskopia.
+    2016-06-22: (A, mos) Första utgåvan.
 ...
 Kmom02: Grid layout och Typografi
 ====================================
@@ -17,9 +17,6 @@ Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt g
 
 
 <!--more-->
-
-Använd bifogat exempel som ger en stylechooser?
-
 
 [FIGURE src=/image/snapvt16/grid-displayed.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
 
@@ -139,4 +136,7 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* ...
+* Hur känns det attvara styrd till ett vertikalt grid?
+* Hur känns det att jobba med ett typografiskt horisontellt/baseline grid?
+* Har du jobbat med liknande layouttekniker sedan tidigare?
+* Du börjar se hur man kan jobba med LESS, kommentarer på det?
