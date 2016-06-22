@@ -1,16 +1,16 @@
 ---
 author: mos
 revision:
-    2016-06-17: (PA, mos) Pre-release.
+    2016-06-23: (A, mos) Första versionen.
 category:
     - kurs/design
     - anax flat
     - theme
 ...
-Skapa ett horisontellt grid för typografi till Anax Flat
+Skapa ett horisontellt grid för typografi
 ===================================
 
-[FIGURE src=/image/dummy class="right"]
+[FIGURE src=/image/snapvt16/horisontellt-grid.png?w=c5&a=55,25,20,50 class="right"]
 
 Vi skall skapa ett typografiskt grid. Jag kallar det ett horisontellt grid för att skilja det från det vertikala gridet vi tidigare pratat om. Horisontellt eftersom gridet baseras på rader och egentligen fonternas *baseline*. Ett sådant här grid kan även kallas för baseline grid, men dess syfte är att skapa en rytm i sidan, en rytm som innebär att alla typografiska element delar en och samma multipel av en höjd. En sådan rytm kallas även för vertikal rytm.
 
@@ -19,8 +19,6 @@ Vi skall skapa ett typografiskt grid. Jag kallar det ett horisontellt grid för 
 När vi har skapat vårat horisontella grid så är vi redo att integrera det med det vertikala grid vi tidigare skapat. De båda griden skall samverka.
 
 Dessa båda grid blir basen i vår tekniska webbdesign.
-
-http://www.cssfontstack.com/
 
 
 
@@ -61,6 +59,13 @@ Det ger oss två olika magiska tal, 22 eller 24, enligt följande.
 ```
 
 Som jag sa, jag väljer 24 för mitt exempel idag.
+
+
+
+Körbart exempel {#exempel}
+------------------------------
+
+Du kan testa hela mitt exempel på typografiskt grid och stylning av typografiska element så att de matchar gridet via [typography.html](/repo/design/example/typography-grid/typography.html).
 
 
 
@@ -131,60 +136,156 @@ h1 {
 }
 ```
 
-Konstruktioner ser ut att stämma bra med tabellen ovan. För att testa kan vi sedan multiplicera fontens storlek med radhöjden och det bör bli vårt magiska tal, eller iallafall en multipel av vårt magiska tal.
+Konstruktioner ser ut att stämma bra med tabellen ovan. För att testa om det blev rätt så kan vi multiplicera fontens storlek med radhöjden. Det bör bli vårt magiska tal, eller iallafall en multipel av vårt magiska tal.
 
 Detta var den svåra biten. Nu gäller det bara att använda mixinen och säkerställa att samtliga typografiska element håller sig till vårt `@magicNumber`.
 
 
 
-
-
-Att sätta basfonten {#font}
+Att jobba med det magiska numret {#font}
 -------------------------------
 
+Låt oss se hur vi jobbar med det magiska numret för att styla H1.
+
+Som det är nu så matchar H1 det magiska numret. Alla margins, padding och border kommer nu att påverka detta. Det måste jag ta hänsyn till.
+
+Först väljer jag att nollställa alla top- och bottom-marginaler. 
+
+```less
+h1, h2, h3, h4, h5, h6 {
+    margin-top: @magicNumber;
+    margin-bottom: @magicNumber;
+}
+```
+
+Nu kan jag börja styla H1.
+
+```less
+h1 {
+    .fontSize(@fontSizeH1);
+    font-weight: normal;
+
+    border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
+    margin-bottom: @magicNumber - @borderSizeH1;
+}
+```
+
+Här väljer jag att lägga till en border, men då måste jag justera storleken på margin-bottom. Det är enkelt att styla alla typografiska element med en margin-bottom för att skapa utrymme mellan elementen.
+
+Om du väljer att även jobba med margin-top så måste du vara medveten om att *margin collapse*.
+
+Jag fortsätter att styla H1 och sätter att alla underrubriker skall ha ett litet större utrymme, här använder jag margin-top. 
+
+```less
+h1 {
+    // If header below h1, then assume larger margin top
+    & ~ h1,
+    & ~ h2,
+    & ~ h3,
+    & ~ h4,
+    & ~ h5,
+    & ~ h6,
+     {
+        margin-top: @magicNumber * 2;
+    }
+}
+```
+
+Men, om en H2 följer en H1 direkt så vill jag ha lite mindre utrymme.
+
+```less
+h1 {
+    // Single margin when subheader follows directly
+    & + h2 {
+        margin-top: @magicNumber;
+    }
+}
+```
+
+Du ser hur jag använder margin-bottom och margin-top för att styra mellanrummen mellan de typografiska elementen. Framförallt så kan du se att jag alltid använder `@magicNumber` för att matcha det typografiska gridet.
+
+Svårare än så är det inte att hålla sig till ett typografiskt grid.
 
 
 
+Att välja typsnitt {#typsnitt}
+-------------------------------
 
+Vilket typsnitt skall vi ha på vår webbplats? Vilken font skall vi välja? Ja, kanske har någon annan redan gjort beslutet åt oss. Annars får vi bestämma det själva.
 
+Det vi behöver är stabila font-familjer som fungerar över olika plattformar. Något i stil med följande.
 
+```less
+/**
+ * Typographic font families to choose from. 
+ */
+// Monospace
+@fontFamilyCourier:         "Courier New", Courier, monospace;
+@fontFamilyMonospace:       monospace;
 
+// Serif
+@fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
+@fontFamilyTimes:           Times, 'Times New Roman', serif;
+@fontFamilyGaramond:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
 
+// Sans-serif
+@fontFamilyHelvetica:       Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyCalibri:         Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyMyriadPro:       MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+@fontFamilyHelveticaNeue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyArial:           Arial, sans-serif;
+```
 
+Ovan är en samling fontfamiljer som jag själv letat upp och satt ihop vid något tillfälle. Jag väljer att lägga in dem som variabler i min LESS-fil så de blir enkla att använda vid behov.
 
+Leta gärna reda på andra fontfamiljer som du tycker passar.
 
+Så här sätter jag sedan de fontfamiljer jag tänker använda.
 
+```less
+/**
+ * Default font-families
+ */
+@fontFamilyHeadings:  @fontFamilyCambria;
+@fontFamilyBody:      @fontFamilyCalibri;
+@fontFamilyCode:      @fontFamilyCourier;
+```
 
+När man kombinerar typsnitt så kan det vara en god regel att välja en sans-serif till rubrikerna och en serif till body-texten. Eller vice versa. Det ger en trevlig visuell effekt.
 
+Bra, nu kan jag gå vidare och sätta typsnittet på till exempel rubrikerna.
 
+```less
+h1, h2, h3, h4, h5, h6 {
+    font-family: @fontFamilyHeadings;
+}
+```
 
+När det gäller basfonten så använder jag en mixin för att sätta den. Det är för att jag vill sätta både storlek, radhöjd och fontfamilj i en och samma inställning.
 
+```less
+.font(@fontSize: 100.01%, @fontFamily: @fontFamilyBody) {
+    font: @fontSize/@lineHeight @fontFamily;
+}
+```
 
+Anledningen till att sätta fontstorleken 100.01% är avrundningsfel i tidiga versioner av webbläsare, jag har valt att fortsätta använda det sättet.
 
+Nu kan jag sätta standardfonten.
 
+```less
+body {
+    .font();
+}
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Om du är osäker på vad resultatet borde bli så kan du dubbelkolla i LESS2CSS.
 
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Frågor i forumtråd.
+Vi har gått igenom grunderna i ett typografiskt grid. Ett grid som även kan kallas horisontellt grid eller baseline grid. 
+
+Som du ser så är det magiska numret inte så magiskt, enkel matematik. Men, oerhört viktigt att alltid hålla sig till, annars hamnar man utanför gridet.

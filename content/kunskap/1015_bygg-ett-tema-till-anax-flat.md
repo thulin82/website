@@ -57,13 +57,13 @@ Nu skapas en kopia av `canax/anax-flat-theme` och det hamnar på ditt eget konto
 Nu kan du clona din kopia av `canax/anax-flat-theme`. Gör det i rooten av din Anax Flat-katalog.
 
 ```text
-# Flytta till rooten av din Anax Flat
-$ git clone https://github.com/mosbth/anax-flat-theme.git theme
+# Flytta till rooten av din Anax Flat, ändra XXX till din egen användare
+$ git clone https://github.com/XXX/anax-flat-theme.git theme
 $ cd theme
 $ ls -l
 ```
 
-När jag clonade valde jag att spara till ett katalognamn `theme`.
+När jag klonade valde jag att spara till ett katalognamn `theme`.
 
 Kika nu runt bland filerna och öppna dem i din texteditor. Bekanta dig med dem, de innehåller inte så mycket för tillfället, bara ett skal.
 

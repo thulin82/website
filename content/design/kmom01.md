@@ -120,7 +120,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg en me-sida med Anax Flat och eget LESS tema](design/kmom01)".
+1. Lös uppgiften "[Bygg en me-sida med Anax Flat och eget LESS tema](uppgift/me-sida-med-tema)".
 
 
 

@@ -50,7 +50,7 @@ Låt oss börja från ingenting. En tom katalog. Skapa en ny katalog och döp de
 
 Om du jobbar i kursrepot så kan du skapa katalogen som `me/anax-flat`.
 
-```text
+```bash
 $ mkdir anax-flat
 $ cd anax-flat
 ```
@@ -59,15 +59,13 @@ Anax Flat finns på GitHub och på Packagist. Du kan kika på hur paketet [Anax 
 
 Jag väljer att installera Anax Flat med composer.
 
-```text
-$ composer require mos/anax-flat geshi/geshi:dev-master
+```bash
+$ composer require mos/anax-flat
+# Du behöver även installera PHP SmartyPants
+$ composer require michelf/php-smartypants 1.6.x-dev
+# Nu kan du uppdatera alla paketen som anax-flat består av
+$ composer update
 ```
-
-[INFO]
-**Not om `geshi/geshi`**
-
-Egentligen behöver du bara paketet `mos/anax-flat` men eftersom paketet `geshi/geshi` inte använder [sematisk versionshantering](http://semver.org/) så får vi även hämta hem det paketet genom att specificera senaste versionen som `dev-master`.
-[/INFO]
 
 Nu har du en fil `composer.json` och du har Anax Flat installerat under vendor-mappen. Då kan vi skapa en webbplats med hjälp av filer som ligger i Anax Flat.
 
@@ -78,7 +76,7 @@ Låna en Makefile {#make}
 
 Anax Flat innehåller en Makefile som vi kan återanvända. Makefilen innehåller vanliga kommandon som vi vill köra när vi bygger en webbplats med Anax Flat.
 
-```text
+```bash
 $ cp vendor/mos/anax-flat/Makefile .
 $ ls -l
 $ make help
