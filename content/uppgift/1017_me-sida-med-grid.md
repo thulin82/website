@@ -35,14 +35,6 @@ Du har en version av temat som ligger i katalogen `me/anax-flat/theme`. Det är 
 Krav {#krav}
 -----------------------
 
-stylechooser som visar vertikalt grid.
-
-stylechooser som visar horisontellt grid.
-exempelsida med typografi.
-
-exempelsida som visar att samtliga element matchar ett horisontellt grid.
-
-
 
 ###Del 1 Vertikalt grid {#vertikalt}
 
@@ -50,7 +42,7 @@ exempelsida som visar att samtliga element matchar ett horisontellt grid.
 
 1. Skapa ett target för `upgrade-grid` i din Makefile som hämtar hem senaste versionen av grid-filerna från [kursrepot på GitHub](https://github.com/dbwebb-se/design/tree/master/example/grid/fluid/less).
 
-1. Skapa en fil `modules/layout.less` där du stylar din Anax Flat enligt ditt valda grid. Förslagsvis använder du 960px som största storlek. Detta är nu basen i ditt aktiva tema. Kommentera bort din tidigare `regions.less`.
+1. Skapa en fil `modules/layout.less` där du stylar din Anax Flat enligt ditt valda grid. Förslagsvis använder du 960px som största storlek och gör 12 kolumner. Detta är nu basen i ditt aktiva tema. Kommentera bort din tidigare `regions.less`.
 
 1. Skapa en `modules/grid-helpers.less` och lägg en mixin som visualiserar gridet. Mixinen skall heta `.showGrid()` och ta ett argument som är gridets maximala storlek. De bilder du behöver lägger du enklast i `htdocs/img/grid`.
 

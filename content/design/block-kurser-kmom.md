@@ -1,7 +1,7 @@
 ####[design](design)
 
-* [01: LESS och Responsiv Design](design/kmom01)
-* [02: Grid layout och Typografi](design/kmom02)
+* [01: LESS och responsiv design](design/kmom01)
+* [02: Grid, layout och typografi](design/kmom02)
 * [03: Färg](design/kmom03)
 * [04: Bild](design/kmom04)
 * [05: Design](design/kmom05)

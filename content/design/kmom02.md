@@ -3,7 +3,7 @@ author: mos
 revision:
     2016-06-22: (A, mos) Första utgåvan.
 ...
-Kmom02: Grid layout och Typografi
+Kmom02: Grid, layout och typografi
 ====================================
 
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.

@@ -3,7 +3,7 @@ author: mos
 revision:
     2016-06-08: (PA, mos) Arbetskopia.
 ...
-Kmom01: LESS och Responsiv design
+Kmom01: LESS och responsiv design
 ====================================
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.

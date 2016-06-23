@@ -24,7 +24,14 @@ https://design.google.com/ ?
 
 
 
-inled med att skapa en stylechooser?
+Inled med att skapa en stylechooser?
+
+
+Visa undermenyerna på menyn.
+
+
+Välj x webbplatser att undersöka. Förklara varför du valde dem.
+Början på rapporten.
 
 
 
@@ -32,6 +39,9 @@ inled med att skapa en stylechooser?
 
 Introduktion till SEO
 (SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
+
+Lag:
+http://www.jajja.com/jajja-magazine/kaklagens-framtid/
 
 
 3. Mäta
