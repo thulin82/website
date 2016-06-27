@@ -211,7 +211,7 @@ foreach ($res as $doc) {
             $pos = min($pos1, $pos2);
             $key = substr($line, 0, $pos);
             $val = trim(substr($line, $pos + 1));
-            $revision[$key] = $val; 
+            $revision[$key] = $val;
         }
         //var_dump($revision);
     }
@@ -243,7 +243,7 @@ foreach ($res as $doc) {
         $content = yaml_emit($fm, YAML_UTF8_ENCODING) . $content;
     }
 
-    // Write file 
+    // Write file
     file_put_contents($file, $content);
     echo "Saved $file $redirects\n";
     //$res = readline();
@@ -372,6 +372,11 @@ $delete = [
     "python/labbmiljo",
     "webapp/labbmiljo",
     "webgl/labbmiljo",
+
+    "om/index.md",
+    "om/rattigheter.md",
+    "om/cookies.md",
+    "om",
 
 ];
 
