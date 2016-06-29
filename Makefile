@@ -173,7 +173,7 @@ site-build:
 
 	# Make cache parts writable
 	install --directory --mode 777 cache/cimage cache/anax cache/forum
-	ln -s ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache
+	ln -sf ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache
 	rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
 
 	# Sync to virtual host dir
