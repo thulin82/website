@@ -63,15 +63,43 @@ Redirect /linkedin /social/linkedin
 Redirect /twitter /social/twitter
 Redirect /youtube /social/youtube
 Redirect /bth /kurser/faq/bth-stodfunktioner
-Redirect /webtopic /kurser/arkiv/webtopic
-Redirect /htmlphp-v1 /kurser/arkiv/htmlphp-v1
-Redirect /oophp-v1 /kurser/arkiv/oophp-v1
-Redirect /phpmvc-v1 /kurser/arkiv/phpmvc-v1
-Redirect /kurser/bra-att-veta /kurser/faq
-Redirect /kurser/struktur /kurser/faq
+
+
+#
+# kurser/
+#
+Redirect /kurser/bra-att-veta   /kurser/faq
+Redirect /kurser/struktur       /kurser/faq
 Redirect /kurser/lektionsplan-och-rekommenderad-studieplan /kurser/faq/rekommenderad-studieplan
 Redirect /kurser/maste-jag-skaffa-kurslitteraturen /kurser/faq/maste-jag-skaffa-kurslitteraturen
 
+#
+# kurser/arkiv
+#
+Redirect /webtopic      /kurser/arkiv/webtopic
+Redirect /htmlphp-v1    /kurser/arkiv/htmlphp-v1
+Redirect /oophp-v1      /kurser/arkiv/oophp-v1
+Redirect /phpmvc-v1     /kurser/arkiv/phpmvc-v1
+
+#
+# Moved all courses to kurser/
+#
+Redirect /htmlphp       /kurser/htmlphp
+Redirect /oophp         /kurser/oophp
+Redirect /phpmvc        /kurser/phpmvc
+Redirect /javascript    /kurser/javascript
+
+Redirect /python        /kurser/python
+Redirect /javascript1   /kurser/javascript1
+Redirect /linux         /kurser/linux
+Redirect /webapp        /kurser/webapp
+
+Redirect /webgl         /kurser/webgl
+Redirect /oopython      /kurser/oopython
+Redirect /design        /kurser/design
+Redirect /ramverk1      /kurser/ramverk1
+Redirect /ramverk2      /kurser/ramverk2
+# matte1, telecom, test, indproj, exjobb
 
 
 # Rewrite to frontcontroller

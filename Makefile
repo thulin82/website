@@ -30,6 +30,9 @@ LESS 		 = theme/style_dbwebb.less
 LESS_OPTIONS = --strict-imports --include-path=theme/mos-theme/style/
 FONT_AWESOME = theme/mos-theme/style/font-awesome/fonts/
 
+# Cache
+FORUM_CACHE = $(LOCAL_HTDOCS)/htdocs/forum/cache
+
 
 
 # target: help - Displays help.
@@ -60,8 +63,10 @@ production-publish:
 .PHONY: local-publish
 local-publish:
 	@echo $(call HELPTEXT,$@)
-	rsync -av --exclude old --exclude .git --exclude .solution --exclude .solutions --exclude cache --exclude error.log --exclude access.log --delete "./" $(LOCAL_HTDOCS)
-	@[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
+	rsync -av --exclude old --exclude .git --exclude .solution --exclude .solutions --exclude error.log --exclude cache --exclude access.log --delete "./" $(LOCAL_HTDOCS)
+
+	@# Enable robots if available
+	[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
 
 
 
@@ -167,7 +172,8 @@ site-build:
 	#rsync -av theme/mos-theme/js/ htdocs/js/mos-theme/
 
 	# Make cache parts writable
-	install --directory --mode 777 cache/cimage cache/anax
+	install --directory --mode 777 cache/cimage cache/anax cache/forum
+	ln -s ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache
 	rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
 
 	# Sync to virtual host dir

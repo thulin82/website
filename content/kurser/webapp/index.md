@@ -1,4 +1,6 @@
 ---
+title: webapp
+
 author: mos
 revision:
   "2015-12-11": (E, mos) Inklusive kmom06 och översyn av syftet.
@@ -249,8 +251,3 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Du hittar [kursplanen genom att söka på kurskoden DV1546 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1546).
-
-
-
-
-

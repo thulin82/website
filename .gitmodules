@@ -1,3 +1,6 @@
 [submodule "htdocs/repo/design"]
 	path = htdocs/repo/design
 	url = https://github.com/dbwebb-se/design.git
+[submodule "htdocs/forum"]
+	path = htdocs/forum
+	url = git@bitbucket.org:mosbth/dbwebb-forum.git

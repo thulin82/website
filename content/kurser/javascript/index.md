@@ -1,4 +1,6 @@
 ---
+title: javascript
+
 author: mos
 revision:
   "2015-01-09": (F, mos) Text om studieplan för kurspaket.
@@ -197,6 +199,3 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 Du hittar [kursplanen genom att söka på kurskoden DV1483 via BTH's hemsida](<a href='http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1483'>http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1483</a>).
 
 Fram till och med vårterminen 2013 hade kursen kurskoden [DV1441](<a href='http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1441'>http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1441</a>).
-
-
-

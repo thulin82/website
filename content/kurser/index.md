@@ -1,5 +1,5 @@
 ---
-title: Jobba med kurserna
+title: Kurser
 
 views:
     blog-list:

@@ -7,7 +7,15 @@ created: "2013-09-26 18:49:27"
 CImage and img.php for image resize, crop and processing using PHP GD
 ==================================
 
-[FIGURE class="right" src="/kod-exempel/cimage/webroot/img.php?src=kodim07.png&w=200&c=140,140,520,340&sharpen" caption="Cropping a part of a [larger image](/kod-exempel/cimage/webroot/img.php?src=kodim07.png)." nolink]
+[INFO]
+**New website for CImage and img.php**
+
+*Update 2016-06-27.*
+
+Go to [cimage.se/doc](https://cimage.se/doc) to read the latest version of documentation on Cimage and img.php.
+[/INFO]
+
+[FIGURE class="right" src="/cimage/imgd.php?src=cimage/kodim07.png&w=200&c=140,140,520,340&sharpen" caption="Cropping a part of a [larger image](/cimage/imgd.php?src=cimage/kodim07.png)." nolink]
 
 `CImage` is a PHP class enabling resizing of images through scaling, cropping and filtering effects -- using PHP GD. The script `img.php` uses `CImage` to enable server-side image processing utilizing caching and optimization of the processed images.
 
@@ -91,7 +99,7 @@ Lets take some use cases to let you know when and how `img.php` might be useful.
 
 ### Make a thumbnail {#usecase-complex}
 
-[FIGURE class="right" src="/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=80&h=80&cf" caption="A thumbnail of 80x80 pixels." nolink]
+[FIGURE class="right" src="/cimage/imgd.php?src=cimage/kodim04.png&w=80&h=80&cf" caption="A thumbnail of 80x80 pixels." nolink]
 
 Lets say you have a larger image and you want to make a smaller thumbnail of it with a size of 80x80 pixels. You simply take the image and add constraints on `width`, `height` and you use the resize strategy `crop-to-fit` to crops out the parts of the image that does not fit.
 
@@ -105,7 +113,7 @@ To produce such a thumbnail, create a link like this:
 
 Perhaps you got an image from a friend. The image was taken with the iPhone and thus rotated. 
 
-[FIGURE class="right" src="/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=250" caption="Me from the iPhone." nolink]
+[FIGURE class="right" src="/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=250" caption="Me from the iPhone." nolink]
 
 The original image is looking like this one, scaled down to a width of 250 pixels. 
 
@@ -118,7 +126,7 @@ Lets call this *the URL-Photoshopper*. This is how the magic looks like.
 > `img.php?src=issue36/me-270.jpg&w=100&h=100&cf&aro`
 > `&rb=-25&a=8,30,30,38&f=grayscale&convolve=sharpen-alt`
 
-[FIGURE src="/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&h=100&cf&aro&rb=-25&a=8,30,30,38&f=grayscale&convolve=sharpen-alt" caption="Me as a thumbnail." nolink]
+[FIGURE src="/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&h=100&cf&aro&rb=-25&a=8,30,30,38&f=grayscale&convolve=sharpen-alt" caption="Me as a thumbnail." nolink]
 
 For myself, I use `img.php` to put up all images on my website, it gives me the power of affecting the resulting images - without opening up a photo-editing application.
 
@@ -137,7 +145,7 @@ Try it out by pointing your browser to the test file `webroot/test/test.php`. It
 
 ###Process your first image {#first}
 
-<img src="/kod-exempel/cimage/webroot/img.php?src=kodim04.png&amp;w=w2&amp;a=40,0,50,0" alt=''>
+<img src="/cimage/imgd.php?src=cimage/kodim04.png&amp;w=w2&amp;a=40,0,50,0" alt=''>
 
 Try it yourself by opening up an image in your browser. Start with 
 
@@ -191,7 +199,7 @@ Open an image through `img.php` by using its `src` attribute.
 
 It looks like this.
 
-[FIGURE src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=w1&save-as=jpg caption="A river, [kodimg13.png](/kod-exempel/cimage_/webroot/img/kodim13.png), from The Kodak Colorset." nolink]
+[FIGURE src=/cimage/imgd.php?src=cimage/kodim13.png&w=w1&save-as=jpg caption="A river, [kodimg13.png](/kod-exempel/cimage_/webroot/img/kodim13.png), from The Kodak Colorset." nolink]
 
 All images are stored in a directory structure and you access them as:
 
@@ -205,7 +213,7 @@ Create a thumbnail of the image by applying constraints on width and height, or 
 
 | `&width=150`        | `&height=150`       | `&w=150&h=150`      |
 |---------------------|---------------------|---------------------|
-| <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=150 alt=''> | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&h=150 alt=''> | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=150&h=150 alt=''> |
+| <img src=/cimage/imgd.php?src=cimage/kodim13.png&w=150 alt=''> | <img src=/cimage/imgd.php?src=cimage/kodim13.png&h=150 alt=''> | <img src=/cimage/imgd.php?src=cimage/kodim13.png&w=150&h=150 alt=''> |
 
 By setting `width`, `height` or both, the image gets resized to be *not larger* than the defined dimensions *and* keeping its original aspect ratio.
 
@@ -220,10 +228,10 @@ Creating a thumbnail with a certain dimension of width and height, usually invol
 
 | What                | The image           |
 |---------------------|---------------------|
-| **Original.** The original image resized with a max width and max height.<br>`?w=300&h=150` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=300&h=150 alt=''> |
-| **Stretch.** Stretch the image so that the resulting image has the defined width and height.<br>`?w=300&h=150&stretch` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=300&h=150&stretch alt=''> |
-| **Crop to fit.** Keep the aspect ratio and crop out the parts of the image that does not fit.<br>`?w=300&h=150&crop-to-fit` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=300&h=150&crop-to-fit alt=''> |
-| **Fill to fit.** Keep the aspect ratio and fill then blank space with a background color.<br>`?w=300&h=150&fill-to-fit=006600` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=300&h=150&fill-to-fit=006600 alt=''> |
+| **Original.** The original image resized with a max width and max height.<br>`?w=300&h=150` | <img src=/cimage/imgd.php?src=cimage/kodim13.png&w=300&h=150 alt=''> |
+| **Stretch.** Stretch the image so that the resulting image has the defined width and height.<br>`?w=300&h=150&stretch` | <img src=/cimage/imgd.php?src=cimage/kodim13.png&w=300&h=150&stretch alt=''> |
+| **Crop to fit.** Keep the aspect ratio and crop out the parts of the image that does not fit.<br>`?w=300&h=150&crop-to-fit` | <img src=/cimage/imgd.php?src=cimage/kodim13.png&w=300&h=150&crop-to-fit alt=''> |
+| **Fill to fit.** Keep the aspect ratio and fill then blank space with a background color.<br>`?w=300&h=150&fill-to-fit=006600` | <img src=/cimage/imgd.php?src=cimage/kodim13.png&w=300&h=150&fill-to-fit=006600 alt=''> |
 
 Learn to crop your images, creative cropping can make wonderful images from appearingly useless originals.
 
@@ -240,7 +248,7 @@ Fill to fit is useful when you have some image that must fit in a certain dimens
 > `img.php?src=kodim13.png&w=600&aspect-ratio=4`
 > `&crop-to-fit&sharpen&save-as=jpg&q=30`
 
-<img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&w=600&aspect-ratio=4&crop-to-fit&sharpen&save-as=jpg&q=30 alt=''>
+<img src=/cimage/imgd.php?src=cimage/kodim13.png&w=600&aspect-ratio=4&crop-to-fit&sharpen&save-as=jpg&q=30 alt=''>
 
 Here is a list of all parameters that you can use together with `img.php`, grouped by its basic intent of usage. 
 
@@ -413,7 +421,7 @@ This is the basic strategy that I'm using and this strategy is the driving force
 Scaling and resizing {#scale}
 --------------------------------------
 
-[FIGURE src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=250&save-as=jpg caption="A face of a girl, [kodimg04.png](/kod-exempel/cimage_/webroot/img/kodim04.png), from The Kodak Colorset." class="figure right" nolink]
+[FIGURE src=/cimage/imgd.php?src=cimage/kodim04.png&w=250&save-as=jpg caption="A face of a girl, [kodimg04.png](/kod-exempel/cimage_/webroot/img/kodim04.png), from The Kodak Colorset." class="figure right" nolink]
 
 You can control the resulting image dimension using `width` and `height`. You can use `width` to only set the width or `height` to only set the height. The image will keep its aspect ratio and calculate the corresponding width and height. 
 
@@ -430,10 +438,10 @@ Here follows some examples to  illustrate the resize strategies.
 
 | What                | The image           |
 |---------------------|---------------------|
-| **Original.** The original image resized with a max width and max height.<br>`?w=300&h=150` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=300&h=150 alt=''> |
-| **Stretch.** Stretch the image so that the resulting image has the defined width and height.<br>`?w=300&h=150&stretch` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=300&h=150&stretch alt=''> |
-| **Crop to fit.** Keep the aspect ratio and crop the parts of the image that does not fit.<br>`?w=300&h=150&crop-to-fit` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=300&h=150&crop-to-fit alt=''> |
-| **Fill to fit.** Keep the aspect ratio and fit the whole image in the dimension, fill out the remaining parts with a background color.<br>`?w=300&h=150&fill-to-fit=66000` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=300&h=150&fill-to-fit=660000 alt=''> |
+| **Original.** The original image resized with a max width and max height.<br>`?w=300&h=150` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=300&h=150 alt=''> |
+| **Stretch.** Stretch the image so that the resulting image has the defined width and height.<br>`?w=300&h=150&stretch` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=300&h=150&stretch alt=''> |
+| **Crop to fit.** Keep the aspect ratio and crop the parts of the image that does not fit.<br>`?w=300&h=150&crop-to-fit` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=300&h=150&crop-to-fit alt=''> |
+| **Fill to fit.** Keep the aspect ratio and fit the whole image in the dimension, fill out the remaining parts with a background color.<br>`?w=300&h=150&fill-to-fit=66000` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=300&h=150&fill-to-fit=660000 alt=''> |
 
 As one can see - stretching an image is not always a good solution.
 
@@ -447,12 +455,12 @@ Lets take an example where we want to create a thumbnail of the lady, we want to
 
 | What                | The image           |
 |---------------------|---------------------|
-| Crop to fit without defining the area.<br>`?w=150&h=150&crop-to-fit` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&h=150&crop-to-fit alt=''> |
-| Ignore the top 25% of the image.<br>`?w=150&h=150&crop-to-fit&area=25,0,0,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&h=150&crop-to-fit&area=25,0,0,0 alt=''> |
-| Ignore the right 20% of the image.<br>`?w=150&h=150&crop-to-fit&area=0,20,0,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&h=150&crop-to-fit&area=0,20,0,0 alt=''> |
-| Ignore the bottom 20% of the image.<br>`?w=150&h=150&crop-to-fit&area=0,0,20,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&h=150&crop-to-fit&area=0,0,20,0 alt=''> |
-| Ignore the left 35% of the image.<br>`?w=150&h=150&crop-to-fit&area=0,0,0,35` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&h=150&crop-to-fit&area=0,0,0,35 alt=''> |
-| Make it altogether to fit only the eyes and the mouth. It may take some tries to get it right.<br>`?w=150&h=150&crop-to-fit&area=25,20,20,35` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&h=150&crop-to-fit&area=30,20,25,35 alt=''> |
+| Crop to fit without defining the area.<br>`?w=150&h=150&crop-to-fit` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&h=150&crop-to-fit alt=''> |
+| Ignore the top 25% of the image.<br>`?w=150&h=150&crop-to-fit&area=25,0,0,0` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&h=150&crop-to-fit&area=25,0,0,0 alt=''> |
+| Ignore the right 20% of the image.<br>`?w=150&h=150&crop-to-fit&area=0,20,0,0` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&h=150&crop-to-fit&area=0,20,0,0 alt=''> |
+| Ignore the bottom 20% of the image.<br>`?w=150&h=150&crop-to-fit&area=0,0,20,0` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&h=150&crop-to-fit&area=0,0,20,0 alt=''> |
+| Ignore the left 35% of the image.<br>`?w=150&h=150&crop-to-fit&area=0,0,0,35` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&h=150&crop-to-fit&area=0,0,0,35 alt=''> |
+| Make it altogether to fit only the eyes and the mouth. It may take some tries to get it right.<br>`?w=150&h=150&crop-to-fit&area=25,20,20,35` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&h=150&crop-to-fit&area=30,20,25,35 alt=''> |
 
 
 ###Predefined sizes {#sizes}
@@ -462,9 +470,9 @@ There are a set of predefined sizes available in `img_config.php`. These are bas
 
 | What         | Parameters                | The image           |
 |--------------|---------------------------|---------------------|
-| One column, `c1`, 30px wide.       | `?w=c1&h=150&crop-to-fit` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=c1&h=150&crop-to-fit alt=''> |
-| Two columns width, `c2`, 30px * 2 + 10px = 70px wide. | `?w=c2&h=150&crop-to-fit` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=c2&h=150&crop-to-fit alt=''> |
-| Three columns, `c3`, 30px * 3 + 10px * 2 = 110px wide.     | `?w=c3&h=150&crop-to-fit` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=c3&h=150&crop-to-fit alt=''> |
+| One column, `c1`, 30px wide.       | `?w=c1&h=150&crop-to-fit` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=c1&h=150&crop-to-fit alt=''> |
+| Two columns width, `c2`, 30px * 2 + 10px = 70px wide. | `?w=c2&h=150&crop-to-fit` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=c2&h=150&crop-to-fit alt=''> |
+| Three columns, `c3`, 30px * 3 + 10px * 2 = 110px wide.     | `?w=c3&h=150&crop-to-fit` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=c3&h=150&crop-to-fit alt=''> |
 
 You can specify your own constants and map them to a size. You do this by editing the configuration file.
 
@@ -484,8 +492,8 @@ Here are some examples on how to use aspect ratio.
 
 | Aspect ratio, parameters          | The image           |
 |-----------------------------------|---------------------|
-| **16:9**<br>`&w=300&crop-to-fit&aspect-ratio=16:10` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&sa=jpg&w=300&ar=16:10&cf alt=''> |
-| **3:1**<br>`&w=300&crop-to-fit&aspect-ratio=3:1` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&sa=jpg&w=300&ar=3:1&cf alt=''> |
+| **16:9**<br>`&w=300&crop-to-fit&aspect-ratio=16:10` | <img src=/cimage/imgd.php?src=cimage/kodim13.png&sa=jpg&w=300&ar=16:10&cf alt=''> |
+| **3:1**<br>`&w=300&crop-to-fit&aspect-ratio=3:1` | <img src=/cimage/imgd.php?src=cimage/kodim13.png&sa=jpg&w=300&ar=3:1&cf alt=''> |
 
 The aspect ratio can be a float, for example `&aspect-ratio=1.6` or any of the predefined aspect ratios in `img_config.php`, as of this writing it includes 3:1, 3:2, 4:3, 8:5, 16:10, 16:9 and golden (for the golden ratio).
 
@@ -497,8 +505,8 @@ The aspect ratio can be inverted by prepending an exclamation mark `!` to the va
 
 | What, parameters          | The image           |
 |---------------------------|---------------------|
-| **!16:9**<br>`&h=200&crop-to-fit&aspect-ratio=!16:10` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&sa=jpg&h=200&ar=!16:10&cf alt=''> |
-| **!3:1**<br>`&h=200&crop-to-fit&aspect-ratio=!3:1` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&sa=jpg&h=200&ar=!3:1&cf alt=''> |
+| **!16:9**<br>`&h=200&crop-to-fit&aspect-ratio=!16:10` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&sa=jpg&h=200&ar=!16:10&cf alt=''> |
+| **!3:1**<br>`&h=200&crop-to-fit&aspect-ratio=!3:1` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&sa=jpg&h=200&ar=!3:1&cf alt=''> |
 
 Aspect ratio can be a good way to make all images the same size, or at least, having the same aspect ratio.
 
@@ -517,9 +525,9 @@ Applying `scale=25%` will reduce the image before processing. This can produce s
 
 | What         | Parameters          | The image           |
 |--------------|---------------------|---------------------|
-| Original     | `&w=300`            | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&sa=jpg&w=300 alt=''> |
-| Downsize to 10% | `&w=300&scale=10`  | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&sa=jpg&w=300&scale=10 alt=''> |
-| Downsize to 5% | `&w=300&scale=5`   | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim13.png&sa=jpg&w=300&scale=5 alt=''> |
+| Original     | `&w=300`            | <img src=/cimage/imgd.php?src=cimage/kodim13.png&sa=jpg&w=300 alt=''> |
+| Downsize to 10% | `&w=300&scale=10`  | <img src=/cimage/imgd.php?src=cimage/kodim13.png&sa=jpg&w=300&scale=10 alt=''> |
+| Downsize to 5% | `&w=300&scale=5`   | <img src=/cimage/imgd.php?src=cimage/kodim13.png&sa=jpg&w=300&scale=5 alt=''> |
 
 In both cases, the scaling is done as the first step in processing. In all cases the final image will have a width of 300px, so the scale parameter only affects the source image used prior resizing.
 
@@ -532,12 +540,12 @@ You can crop parts of an image by setting the *width*, *height*, *start_x* and *
 
 | What                | Parameters          | The image           |
 |---------------------|---------------------|---------------------|
-| Crop a portion of 300x300 pixels, start at the left, top corner, that is position 0, 0. | `?w=150&crop=300,300,0,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&crop=300,300,0,0 alt=''> |
-| Crop portion, start at the right, top corner. | `?w=150&crop=300,300,right,top` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&crop=300,300,right,top alt=''> |
-| Crop portion, start at the right, bottom corner. | `?w=150&crop=300,300,right,bottom` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&crop=300,300,right,bottom alt=''> |
-| Crop portion, start at the left, bottom corner. | `?w=150&crop=300,300,left,bottom` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&crop=300,300,left,bottom alt=''> |
-| Crop portion, start at the center, center. | `?w=150&crop=300,300,center,center` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&crop=300,300,center,center alt=''> |
-| Crop only the eyes and the mouth. | `?w=150&crop=200,220,190,300` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim04.png&w=150&crop=200,220,190,300 alt=''> |
+| Crop a portion of 300x300 pixels, start at the left, top corner, that is position 0, 0. | `?w=150&crop=300,300,0,0` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&crop=300,300,0,0 alt=''> |
+| Crop portion, start at the right, top corner. | `?w=150&crop=300,300,right,top` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&crop=300,300,right,top alt=''> |
+| Crop portion, start at the right, bottom corner. | `?w=150&crop=300,300,right,bottom` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&crop=300,300,right,bottom alt=''> |
+| Crop portion, start at the left, bottom corner. | `?w=150&crop=300,300,left,bottom` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&crop=300,300,left,bottom alt=''> |
+| Crop portion, start at the center, center. | `?w=150&crop=300,300,center,center` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&crop=300,300,center,center alt=''> |
+| Crop only the eyes and the mouth. | `?w=150&crop=200,220,190,300` | <img src=/cimage/imgd.php?src=cimage/kodim04.png&w=150&crop=200,220,190,300 alt=''> |
 
 Cropping is essential when trying to only get the most interesting part of the image.
 
@@ -553,7 +561,7 @@ The implementation of these filters are based on a [comment in the PHP manual](h
 The basis is to apply image processing based on a matrix, also called image convolution [^7].
 
 
-[FIGURE src=/kod-exempel/cimage/webroot/img.php?src=kodim22.png&w=w2&save-as=jpg caption="A red barn, [kodimg22.png](/kod-exempel/cimage_/webroot/img/kodim22.png), from The Kodak Colorset."  nolink]
+[FIGURE src=/cimage/imgd.php?src=cimage/kodim22.png&w=w2&save-as=jpg caption="A red barn, [kodimg22.png](/kod-exempel/cimage_/webroot/img/kodim22.png), from The Kodak Colorset."  nolink]
 
 Sharpening an image enhances its edges and textures and makes it more focused and sharp. 
 
@@ -566,8 +574,8 @@ In general, it seems like a good idea to add a sharpening effect when resizing i
 
 | Examples on filtering  |   |
 |------------------------|---|
-| Original. `?w=300&save-as=jpg` <img src=/kod-exempel/cimage/webroot/img.php?src=kodim22.png&w=300&save-as=jpg alt=''> | Sharpen. `?w=300&save-as=jpg&sharpen` <img src=/kod-exempel/cimage/webroot/img.php?src=kodim22.png&w=300&save-as=jpg&sharpen alt=''> |
-| Emboss. `?w=300&save-as=jpg&emboss` <img src=/kod-exempel/cimage/webroot/img.php?src=kodim22.png&w=300&save-as=jpg&emboss alt=''> | Blur. `?w=300&save-as=jpg&blur` <img src=/kod-exempel/cimage/webroot/img.php?src=kodim22.png&w=300&save-as=jpg&blur alt=''> |
+| Original. `?w=300&save-as=jpg` <img src=/cimage/imgd.php?src=cimage/kodim22.png&w=300&save-as=jpg alt=''> | Sharpen. `?w=300&save-as=jpg&sharpen` <img src=/cimage/imgd.php?src=cimage/kodim22.png&w=300&save-as=jpg&sharpen alt=''> |
+| Emboss. `?w=300&save-as=jpg&emboss` <img src=/cimage/imgd.php?src=cimage/kodim22.png&w=300&save-as=jpg&emboss alt=''> | Blur. `?w=300&save-as=jpg&blur` <img src=/cimage/imgd.php?src=cimage/kodim22.png&w=300&save-as=jpg&blur alt=''> |
 
 These are easy to use filters which quickly can add effects to the image. You can combine all three filters and they are then executed in this order, (1) blur, (2) emboss, (3) sharpen. These are the lasts effects that are applied to the image, just before saving it to disk.
 
@@ -638,17 +646,17 @@ The convolution expressions defined in `img_config.php` will add to, or overwrit
 
 Lets see an example on using convolution, based on this image.
 
-[FIGURE src="/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=w2&save-as=jpg" caption="A girl in `kodim15.png` from the Kodak image set."]
+[FIGURE src="/cimage/imgd.php?src=cimage/kodim15.png&w=w2&save-as=jpg" caption="A girl in `kodim15.png` from the Kodak image set."]
 
 | Example of convolution |                        |
 |------------------------|------------------------|
-| Lighten.<br>`?w=300&convolve=lighten`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&&convolve=lighten alt=''> | Darken.<br>`?w=300&convolve=darken`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=darken alt=''> |
-| Sharpen.<br>`?w=300&convolve=sharpen`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=sharpen alt=''> | Sharpen-alt.<br>`?w=300&convolve=sharpen-alt`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&&convolve=sharpen-alt alt=''> |
-| Blur.<br>`?w=300&convolve=blur`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=blur alt=''> | Gaussian blur.<br>`?w=300&convolve=gblur`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&&convolve=gblur alt=''> |
-| Mean.<br>`?w=300&convolve=mean`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=mean alt=''> | Motion.<br>`?w=300&convolve=motion`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&&convolve=motion alt=''> |
-| Emboss.<br>`?w=300&convolve=emboss`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=emboss alt=''> | Emboss alt.<br>`?w=300&convolve=emboss-alt`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&&convolve=emboss-alt alt=''> |
-| Edge.<br>`?w=300&convolve=edge`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=edge alt=''> | Edge alt.<br>`?w=300&convolve=edge-alt`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=edge-alt alt=''> |
-| Draw.<br>`?w=300&convolve=draw`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&&convolve=draw alt=''> | Combine several filters.<br>`&convolve=draw:edge-alt:emboss-alt:motion`<br><img src=/kod-exempel/cimage/webroot/img.php?src=kodim15.png&w=300&save-as=jpg&convolve=draw:edge-alt:emboss-alt:motion alt=''>
+| Lighten.<br>`?w=300&convolve=lighten`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&&convolve=lighten alt=''> | Darken.<br>`?w=300&convolve=darken`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=darken alt=''> |
+| Sharpen.<br>`?w=300&convolve=sharpen`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=sharpen alt=''> | Sharpen-alt.<br>`?w=300&convolve=sharpen-alt`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&&convolve=sharpen-alt alt=''> |
+| Blur.<br>`?w=300&convolve=blur`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=blur alt=''> | Gaussian blur.<br>`?w=300&convolve=gblur`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&&convolve=gblur alt=''> |
+| Mean.<br>`?w=300&convolve=mean`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=mean alt=''> | Motion.<br>`?w=300&convolve=motion`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&&convolve=motion alt=''> |
+| Emboss.<br>`?w=300&convolve=emboss`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=emboss alt=''> | Emboss alt.<br>`?w=300&convolve=emboss-alt`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&&convolve=emboss-alt alt=''> |
+| Edge.<br>`?w=300&convolve=edge`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=edge alt=''> | Edge alt.<br>`?w=300&convolve=edge-alt`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=edge-alt alt=''> |
+| Draw.<br>`?w=300&convolve=draw`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&&convolve=draw alt=''> | Combine several filters.<br>`&convolve=draw:edge-alt:emboss-alt:motion`<br><img src=/cimage/imgd.php?src=cimage/kodim15.png&w=300&save-as=jpg&convolve=draw:edge-alt:emboss-alt:motion alt=''>
 
 If you have some special filter that you use a lot, then create a constant for it in `img_config.php`. One place to change it, for all images on your website. 
 
@@ -659,7 +667,7 @@ Filters and effects from PHP GD {#filtersgd}
 
 There are a set of filters that are built in to PHP GD library. You can get an overview of these filters and their arguments by reviewing the documentation for [imagefilter()](http://www.php.net/manual/en/function.imagefilter.php).
 
-[FIGURE src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=w2&save-as=jpg caption="A house, [kodimg24.png](/kod-exempel/cimage_/webroot/img/kodim24.png), from The Kodak Colorset."  nolink]
+[FIGURE src=/cimage/imgd.php?src=cimage/kodim24.png&w=w2&save-as=jpg caption="A house, [kodimg24.png](/kod-exempel/cimage_/webroot/img/kodim24.png), from The Kodak Colorset."  nolink]
 
 Lets see some examples on using these filters. The base for all examples are:
 
@@ -673,7 +681,7 @@ This filter reverses all colors of the image.
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=negate` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=negate alt=''> | 
+| `&f=negate` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=negate alt=''> | 
 
 
 
@@ -683,7 +691,7 @@ This filter converts the image into grayscale.
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=grayscale` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=grayscale alt=''> | 
+| `&f=grayscale` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=grayscale alt=''> | 
 
 
 
@@ -693,8 +701,8 @@ This filter changes the brightness of the image. Use *arg1* to set the level of 
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=brightness,50` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=brightness,50 alt=''> | 
-| `&f=brightness,-50` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=brightness,-50 alt=''> | 
+| `&f=brightness,50` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=brightness,50 alt=''> | 
+| `&f=brightness,-50` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=brightness,-50 alt=''> | 
 
 
 
@@ -704,8 +712,8 @@ This filter changes the contrast of the image. Use *arg1* to set the level of co
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=contrast,20` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=contrast,20 alt=''> | 
-| `&f=contrast,-20` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=contrast,-20 alt=''> | 
+| `&f=contrast,20` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=contrast,20 alt=''> | 
+| `&f=contrast,-20` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=contrast,-20 alt=''> | 
 
 
 
@@ -715,9 +723,9 @@ This filter changes the contrast of the image. Use *arg1* to set the level of co
 
 | Usage                  |   |
 |------------------------|--:|
-| Enhance the green color `&f=colorize,0,30,0,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=colorize,0,30,0,0 alt=''> | 
-| Make it look golden with some brown tone `&f=colorize,100,60,0,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=colorize,100,60,0,0 alt=''> | 
-| Reduce the color red `&f=colorize,-60,0,0,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=colorize,-60,0,0,0 alt=''> | 
+| Enhance the green color `&f=colorize,0,30,0,0` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=colorize,0,30,0,0 alt=''> | 
+| Make it look golden with some brown tone `&f=colorize,100,60,0,0` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=colorize,100,60,0,0 alt=''> | 
+| Reduce the color red `&f=colorize,-60,0,0,0` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=colorize,-60,0,0,0 alt=''> | 
 
 
 
@@ -727,7 +735,7 @@ This filter uses edge detection to highlight the edges in the image.
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=edgedetect` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=edgedetect alt=''> | 
+| `&f=edgedetect` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=edgedetect alt=''> | 
 
 
 
@@ -737,7 +745,7 @@ This filter embosses the image and gives it a 3D look.
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=emboss` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=emboss alt=''> | 
+| `&f=emboss` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=emboss alt=''> | 
 
 
 
@@ -747,7 +755,7 @@ This filter blurs the image using the Gaussian method.
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=gaussian_blur` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=gaussian_blur alt=''> | 
+| `&f=gaussian_blur` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=gaussian_blur alt=''> | 
 
 
 
@@ -757,7 +765,7 @@ This filter blurs the image.
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=selective_blur` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=selective_blur alt=''> | 
+| `&f=selective_blur` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=selective_blur alt=''> | 
 
 
 
@@ -767,7 +775,7 @@ This filter uses mean removal to achieve a "sketchy" effect.
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=mean_removal` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=mean_removal alt=''> | 
+| `&f=mean_removal` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=mean_removal alt=''> | 
 
 
 
@@ -777,16 +785,16 @@ This filter makes the image smoother. Use *arg1* to set the level of smoothness.
 
 | Usage                  |   |
 |------------------------|--:|
-| Smooth `&f=smooth,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=smooth,0 alt=''> | 
-| Some smothness `&f=smooth,10` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=smooth,10 alt=''> | 
+| Smooth `&f=smooth,0` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=smooth,0 alt=''> | 
+| Some smothness `&f=smooth,10` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=smooth,10 alt=''> | 
 
 This filter applies a 9-cell convolution matrix where center pixel has the weight *arg1* and others weight of 1.0. Using negative values can produce some effects.
 
 | Usage                  |   |
 |------------------------|--:|
-| Make it unfocused `&f=smooth,-5` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=smooth,-5 alt=''> | 
-| Show me the edges `&f=smooth,-7` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=smooth,-7 alt=''> | 
-| Make it look sharper `&f=smooth,-10` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=smooth,-10 alt=''> | 
+| Make it unfocused `&f=smooth,-5` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=smooth,-5 alt=''> | 
+| Show me the edges `&f=smooth,-7` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=smooth,-7 alt=''> | 
+| Make it look sharper `&f=smooth,-10` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=smooth,-10 alt=''> | 
 
 
 
@@ -796,8 +804,8 @@ This filter applies pixelation effect to the image, use *arg1* to set the block 
 
 | Usage                  |   |
 |------------------------|--:|
-| `&f=pixelate,4,0` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=pixelate,4,0 alt=''> | 
-| `&f=pixelate,4,1` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=pixelate,4,1 alt=''> | 
+| `&f=pixelate,4,0` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=pixelate,4,0 alt=''> | 
+| `&f=pixelate,4,1` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=pixelate,4,1 alt=''> | 
 
 
 
@@ -807,10 +815,10 @@ You can combine up to eleven filters by naming them f, f0-f9.
 
 | Usage                  |   |
 |------------------------|--:|
-| Make it grayscale and lighter.<br>`&f=grayscale&f0=brightness,40` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,40 alt=''> | 
-| Make it grayscale, lighter and enhance contrast.<br>`&f=grayscale&f0=brightness,40`<br>`&f1=contrast,-20` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,40&f1=contrast,-20 alt=''> | 
-| Make it grayscale, lighter, enhance contrast & sharpen it.<br>`&f=grayscale&f0=brightness,40`<br>`&f1=contrast,-20&sharpen` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,40&f1=contrast,-20&sharpen alt=''> | 
-| Make it sepia, a bit old.<br>`&f=grayscale&f0=brightness,-10`<br>`&f1=contrast,-20`<br>`&f2=colorize,120,60,0,0&sharpen` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,-10&f1=contrast,-20&f2=colorize,120,60,0,0&sharpen alt=''> | 
+| Make it grayscale and lighter.<br>`&f=grayscale&f0=brightness,40` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,40 alt=''> | 
+| Make it grayscale, lighter and enhance contrast.<br>`&f=grayscale&f0=brightness,40`<br>`&f1=contrast,-20` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,40&f1=contrast,-20 alt=''> | 
+| Make it grayscale, lighter, enhance contrast & sharpen it.<br>`&f=grayscale&f0=brightness,40`<br>`&f1=contrast,-20&sharpen` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,40&f1=contrast,-20&sharpen alt=''> | 
+| Make it sepia, a bit old.<br>`&f=grayscale&f0=brightness,-10`<br>`&f1=contrast,-20`<br>`&f2=colorize,120,60,0,0&sharpen` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&f=grayscale&f0=brightness,-10&f1=contrast,-20&f2=colorize,120,60,0,0&sharpen alt=''> | 
 
 You can greatly enhance the perceived quality of the image by selecting a good combination of filters.
 
@@ -834,7 +842,7 @@ This gives you one place of changing your favorite combination of options. You t
 
 | Usage                  |   |
 |------------------------|--:|
-| Use ths shortcut for the sepia effect.<br>`&sc=sepia` | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg&sc=sepia alt=''> | 
+| Use ths shortcut for the sepia effect.<br>`&sc=sepia` | <img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg&sc=sepia alt=''> | 
 
 
 
@@ -851,8 +859,8 @@ You will need the PHP EXIF module for this to work on your own system.
 
 | Usage                  |   |
 |------------------------|--:|
-| Image taken with iPhone.<br>`&w=300` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=300 alt=''> | 
-| Same image but autorotated.<br>`&w=300&aro` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=300&aro alt=''> | 
+| Image taken with iPhone.<br>`&w=300` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=300 alt=''> | 
+| Same image but autorotated.<br>`&w=300&aro` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=300&aro alt=''> | 
 
 
 
@@ -862,7 +870,7 @@ If you need to rotate the image, you do so by adding the angle to rotate. This i
 
 | Usage                  |   |
 |------------------------|--:|
-| Image from iPhoto, rotated.<br>`&w=300&r=-90` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=300&r=-90 alt=''> | 
+| Image from iPhoto, rotated.<br>`&w=300&r=-90` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=300&r=-90 alt=''> | 
 
 
 
@@ -878,7 +886,7 @@ The difference can be spelled out as.
 | Rotate before or after resizing  |   |
 |----------------------------------|---|
 | Rotate before, final dimension as expected (same as `auto-rotate`).<br>`&w=100&h=200&rb=-90` | Rotate after, *expected* dimensions are inverted, width becomes height and height becomes width.<br>`&w=100&h=200&ra=-90` |
-| <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&h=200&cf&rb=-90 alt=''> | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&h=200&cf&ra=-90 alt=''> | 
+| <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&h=200&cf&rb=-90 alt=''> | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&h=200&cf&ra=-90 alt=''> | 
 
 
 
@@ -888,11 +896,11 @@ If you rotate the image in a non perpendicular angle you need to fill the backgr
 
 | Rotate and fill remaining space  |   |
 |----------------------------------|---|
-| Use auto rotation to get it right in the first place.<br>`&w=100&aro` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&aro alt=''> | 
-| Rotate 15 degrees, before processing. Resulting image keeps its dimensions,<br>`&w=100&aro&rb=15` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&aro&rb=15 alt=''> | 
-| Rotate 15 degrees, after processing. Resulting image gets unknown dimensions.<br>`&w=100&aro&ra=15` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&aro&ra=15 alt=''> | 
-| Rotate 15 degrees, after processing. Use `bgc, bg-color` to select the background color.<br>`&w=100&aro&ra=15&bgc=cccccc` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&aro&ra=15&bgc=cccccc alt=''> | 
-| Rotate 15 degrees, after processing. Combine with `a, area` to get only a part of the image and `height` together with `crop-to-fit` to make it all fit in a box of 100x100px.<br>`&w=100&aro&ra=15&a=20,30,40,20` | <img src=/kod-exempel/cimage/webroot/img.php?src=issue36/me-270.jpg&w=100&h=100&cf&aro&rb=15&a=20,30,40,20 alt=''> | 
+| Use auto rotation to get it right in the first place.<br>`&w=100&aro` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&aro alt=''> | 
+| Rotate 15 degrees, before processing. Resulting image keeps its dimensions,<br>`&w=100&aro&rb=15` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&aro&rb=15 alt=''> | 
+| Rotate 15 degrees, after processing. Resulting image gets unknown dimensions.<br>`&w=100&aro&ra=15` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&aro&ra=15 alt=''> | 
+| Rotate 15 degrees, after processing. Use `bgc, bg-color` to select the background color.<br>`&w=100&aro&ra=15&bgc=cccccc` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&aro&ra=15&bgc=cccccc alt=''> | 
+| Rotate 15 degrees, after processing. Combine with `a, area` to get only a part of the image and `height` together with `crop-to-fit` to make it all fit in a box of 100x100px.<br>`&w=100&aro&ra=15&a=20,30,40,20` | <img src=/cimage/imgd.php?src=cimage/issue36/me-270.jpg&w=100&h=100&cf&aro&rb=15&a=20,30,40,20 alt=''> | 
 
 
 
@@ -903,7 +911,7 @@ The file size for images should be small, as small can be. But file size is rela
 
 **`img.php?src=kodim07.png&w=630&save-as=jpg&sharpen&q=40`**
 
-[FIGURE src=/kod-exempel/cimage/webroot/img.php?src=kodim07.png&w=w2&save-as=jpg&sharpen&q=40 caption="Flowers, [kodimg07.png](/kod-exempel/cimage_/webroot/img/kodim07.png), from The Kodak Colorset. Good image and small filesize (26KB)." nolink]
+[FIGURE src=/cimage/imgd.php?src=cimage/kodim07.png&w=w2&save-as=jpg&sharpen&q=40 caption="Flowers, [kodimg07.png](/kod-exempel/cimage_/webroot/img/kodim07.png), from The Kodak Colorset. Good image and small filesize (26KB)." nolink]
 
 Lets take the flower-image above as an example, the original image is saved in PNG-format, 768 x 512 pixels and a file size (weight) of 557KB. Its a pretty heavy image. The above image is rescaled to a width of 630 pixels, saved in JPEG with a quality of 40. It is sharpened to reduce the fuzziness introduced in the resizing process. This all together reduces the file size to 26KB. That is a reduction to 5% of the original file size and a much more pleasant file size to download. Does it look good enough? Well, that will always depend on what you think, if its not good enough then increase the quality setting (and the file size) until you think its "good enough".
 
@@ -939,14 +947,14 @@ The different image formats JPEG [^1], PNG [^8] and GIF [^3] have each its pros 
 Change image format {#saveas}
 --------------------------------------
 
-It is possible to change the target file format. Here are some examples when changing file format using [kodim23.png](/kod-exempel/cimage/webroot/img.php?src=kodim23.png) as base. The original image is 768 x 512 pixels with 72 079 colors and a weight of 534KB.
+It is possible to change the target file format. Here are some examples when changing file format using [kodim23.png](/cimage/imgd.php?src=cimage/kodim23.png) as base. The original image is 768 x 512 pixels with 72 079 colors and a weight of 534KB.
 
 | What                     | Colors | File size | The image |
 |--------------------------|-------:|----------:|-----------|
-| Original as PNG 24-bit and resized. `?src=kodim23.png&w=300` | 43 272  | 89KB     | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300 alt=''> |
-| Save as JPEG. `?src=kodim23.png&w=300&save-as=jpg` | 43 272  | 7KB     | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&save-as=jpg alt=''> |
-| Save as GIF. `?src=kodim23.png&w=300&save-as=gif` | 256  | 32KB     | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&save-as=gif alt=''> |
-| Save as PNG 8-bit. `?src=kodim23.png&w=300&palette` | 157  | 19KB     | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&palette alt=''> |
+| Original as PNG 24-bit and resized. `?src=kodim23.png&w=300` | 43 272  | 89KB     | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300 alt=''> |
+| Save as JPEG. `?src=kodim23.png&w=300&save-as=jpg` | 43 272  | 7KB     | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&save-as=jpg alt=''> |
+| Save as GIF. `?src=kodim23.png&w=300&save-as=gif` | 256  | 32KB     | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&save-as=gif alt=''> |
+| Save as PNG 8-bit. `?src=kodim23.png&w=300&palette` | 157  | 19KB     | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&palette alt=''> |
 
 The parameter `save-as` can be used to save the target image as jpg, png or gif. Using the parameter `palette` reduces the number of colors to max 256 colors. GIF and PNG 8-bit images can have max 256 colors.
 
@@ -963,11 +971,11 @@ Here is an example on how the quality settings affect the file size and the visi
 
 | What     | Quality | File size | File size with post processing | The image |
 |----------|--------:|----------:|------:|----------:|
-| `&q=100` | 100     | 47KB      | 44KB  |<img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&save-as=jpg&q=100 alt=''> |
-| `&q=60`  | 60      | 7478B     | 7023B | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&save-as=jpg&q=60 alt=''> |
-| `&q=30`  | 30      | 5021B     | 4453B | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&save-as=jpg&q=30 alt=''> |
-| `&q=10`  | 10      | 2875B     | 2093B | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&save-as=jpg&q=10 alt=''> |
-| `&q=1`   | 1       | 1916B     | 938B  | <img src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=300&save-as=jpg&q=1 alt=''> |
+| `&q=100` | 100     | 47KB      | 44KB  |<img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&save-as=jpg&q=100 alt=''> |
+| `&q=60`  | 60      | 7478B     | 7023B | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&save-as=jpg&q=60 alt=''> |
+| `&q=30`  | 30      | 5021B     | 4453B | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&save-as=jpg&q=30 alt=''> |
+| `&q=10`  | 10      | 2875B     | 2093B | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&save-as=jpg&q=10 alt=''> |
+| `&q=1`   | 1       | 1916B     | 938B  | <img src=/cimage/imgd.php?src=cimage/kodim23.png&w=300&save-as=jpg&q=1 alt=''> |
 
 The default value for `q` is 60. 
 
@@ -991,7 +999,7 @@ Post processing of the JPEG image, using an external tool such as JPEGTRAN [^6] 
 PNG compression levels {#png-compression}
 --------------------------------------
 
-[FIGURE src=/kod-exempel/cimage/webroot/img.php?src=kodim23.png&w=c8 caption="A PNG-image looks the same, no matter what algorithm is used to compress it." class=right nolink]
+[FIGURE src=/cimage/imgd.php?src=cimage/kodim23.png&w=c8 caption="A PNG-image looks the same, no matter what algorithm is used to compress it." class=right nolink]
 
 PNG has nine algorithms for compression, namely 1 to 9. The default is to let the PHP GD implementation to choose the algorithm. The levels are a mix of file size and time to compress / uncompress. The PNG format is lossless so the resulting image is always exactly the same. 
 
@@ -1086,7 +1094,7 @@ For example, the following image is created like this:
 
 > `&w=300&save-as=jpg`
 
-<img src=/kod-exempel/cimage/webroot/img.php?src=kodim24.png&w=300&save-as=jpg alt=''>
+<img src=/cimage/imgd.php?src=cimage/kodim24.png&w=300&save-as=jpg alt=''>
 
 Its JSON-representation is retrieved like this:
 
@@ -1129,7 +1137,7 @@ Select the proper mode for `img.php`. Set it to "strict" or "production" to prev
 
 ###Put the installation directory outside web root {#outside}
 
-Edit the config file to put the installation directory -- and the cache directory -- outside of the web root. Best practice would be to store the installation directory and cache, outside of the web root. The only thing needed in the web root is `img.php` and `img_config.php` (if used) which can be placed, for example, in `/img/img.php` or just as `/img.php`.
+Edit the config file to put the installation directory -- and the cache directory -- outside of the web root. Best practice would be to store the installation directory and cache, outside of the web root. The only thing needed in the web root is `img.php` and `img_config.php` (if used) which can be placed, for example, in `/cimage/imgd.php` or just as `/img.php`.
 
 
 
@@ -1655,6 +1663,7 @@ Revision {#revision}
 --------------------------------------
 
 <span class='revision-history' markdown='1'>
+2016-06-27 (F, mos) Replaced by `cimage.se/doc`.  
 2015-07-25 (E, mos) Minor edits for release 0.7.1.  
 2015-02-10 (G, mos) Release 0.7.  
 2015-01-08 (F, mos) Release 0.6.1.  

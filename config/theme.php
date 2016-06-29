@@ -99,7 +99,7 @@ return [
             "region" => "body-end",
             "template" => "default/google-analytics",
             "data" => [
-                "account" => null,
+                "account" => UA-22093351-1,
             ],
             "sort" => -1
         ],

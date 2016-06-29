@@ -13,19 +13,19 @@ return [
     "items" => [
 
         "kurser" => [
-            "text"  =>"Kurser",
+            "text"  =>"<i class=\"fa fa-graduation-cap\"></i> Kurser",
             "url"   => $this->di->get("url")->create("kurser"),
             "title" => "Jobba med kurserna"
         ],
 
         "material" => [
-            "text"  =>"Material",
+            "text"  =>"<i class=\"fa fa-book\"></i> Material",
             "url"   => $this->di->get("url")->create("material"),
             "title" => "Kurs- och utbildningsmaterial"
         ],
 
         "community" => [
-            "text"  =>"Community",
+            "text"  =>"<i class=\"fa fa-users\"></i> Community",
             "url"   => $this->di->get("url")->create("community"),
             "title" => "Delta i communityn"
         ],
@@ -56,17 +56,17 @@ return [
         ],
 */
         "utbildning" => [
-            "text"  =>"Utbildning",
+            "text"  =>"<i class=\"fa fa-university\"></i> Utbildning",
             "url"   => $this->di->get("url")->create("utbildning"),
             "title" => "Läs om de utbildningar vi erbjuder inom webbprogrammering och webbutveckling"
         ],
-
+/*
         "om" => [
             "text"  =>"Om",
             "url"   => $this->di->get("url")->create("om"),
             "title" => "Läs om webbplatsen, de som står bakom och dess syfte"
         ],
-
+*/
     ],
  
 

@@ -62,6 +62,8 @@ Krav {#krav}
 
 1. Skapa en `modules/typography.less` där du aktiverar och eventuellt förändrar  stylen på dina typografiska element.
 
+1. Gör ett aktivt val när du väljer typsnitten till din webbplats.
+
 1. Gör så att alla övriga layoutlement på sidan också matchar det magiska numret. Det gäller till exempel för de margin-bottom du har mellan olika delar av sidan. Det är ingen exakt vetenskap, men använd `@magicNumber` där det finns möjlighet.
 
 1. Skapa ytterligare en sida `content/typography.md`. Lägg in den sidan i menyn. Fyll sidan med text och typografiska element som visar hur du stylat dem. Ungefär liknande textmassan som fanns i [exemplet](/repo/design/example/typography-grid/typography.html). När man tittar på den sidan skall gridet visas i bakgrunden. De typografiska elementen skall matcha gridet.

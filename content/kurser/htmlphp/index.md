@@ -1,4 +1,6 @@
 ---
+title: htmlphp
+
 author: mos
 revision:
   "2016-02-22": (B, mos) Bort med not om kursutveckling samt not ny kurskod från ht16.
@@ -257,7 +259,3 @@ Från och med hösten 2016 hittar du [kursplanen genom att söka på kurskoden P
 Mellan höstterminen 2013 och vårterminen 2016 hade kursen kurskoden [DV1462](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1462) och hette "Databaser, HTML, CSS och skriptbaserad PHP-programmering".
 
 Från 2010 till och med vårterminen 2013 hade kursen kurskoden [DV1401](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1401) och hette "Databaser, HTML, CSS och skriptbaserad PHP-programmering".
-
-
-
-

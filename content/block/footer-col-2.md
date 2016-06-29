@@ -1,4 +1,4 @@
-####Social
+####<i class="fa fa-users"></i> Social
 
 Skapa viktiga kontakter och bygg ditt nätverk. Använd [dbwebb's sociala nätverk](social) som en bas.
 

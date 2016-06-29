@@ -1,4 +1,6 @@
 ---
+title: python
+
 author: mos
 revision:
   "2015-01-09": (C, mos) Text om studieplan kurspaket.
@@ -226,9 +228,3 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Du hittar [kursplanen genom att söka på kurskoden DV1531 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1531).
-
-
-
-
-
-

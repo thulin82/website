@@ -1,4 +1,6 @@
 ---
+title: phpmvc
+
 author: mos
 revision:
   "2015-03-02": (K, mos) Bytte reflitteratur för HTML&CSS.
@@ -292,8 +294,3 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 Du hittar [kursplanen genom att söka på kurskoden DV1486 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486).
 
 Fram till och med vårterminen 2013 hade kursen kurskoden [DV1440](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1440).
-
-
-
-
-

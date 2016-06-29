@@ -1,4 +1,4 @@
-####Sök Webbprogrammering HT17
+####<i class="fa fa-university"></i> Sök Webbprogrammering HT17
 
 Ansökan till utbildningar för hösten 2017 öppnar den 15:e mars.
 

@@ -1,4 +1,6 @@
 ---
+title: webgl
+
 author: mos
 revision:
   "2015-11-29": (C, mos) Justerade namnen på kursmomenten.
@@ -13,14 +15,6 @@ Kursen "webgl"
 Kursen **Spelteknik för webben**, a.k.a. *webgl*, introducerar dig till webbteknologier för att jobba med 3D programmering i WebGL. Du får lära dig de grunder i JavaScript, HTML och CSS som krävs för att du skall kunna använda dina befintliga kunskaper i OpenGL och applicera dem i WebGL och 3D-programmering för webben.
 
 <!--more-->
-
-[INFO]
-**Kursutveckling pågår.**
-
-Kursen skall gå som en del i utbildningsprogrammet Civilingenjör i spel- och programvaruteknik och ges för första gången HT15.
-
-Allt material är arbetsmaterial och förändras efter hand. Kursmaterialet släpps med start den 2/11 2015.
-[/INFO]
 
 För att implementera ett webbaserat datorspel krävs en process där ett flertal olika tekniker samverkar. Kunskaper om hur, när och varför olika tekniker
 kan och bör nyttjas påverkar till hög grad i samtliga utvecklingsstadier. Kursen syftar till att studenten skall förstå hur spelteknik kan appliceras, utan
@@ -222,8 +216,3 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Du hittar [kursplanen genom att söka på kurskoden DV1506 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1506).
-
-
-
-
-

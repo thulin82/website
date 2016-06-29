@@ -1,4 +1,6 @@
 ---
+title: javascript1
+
 author: mos
 revision:
   "2016-03-04": (F, mos) Notis om nytt namn och ny kurskod.
@@ -238,7 +240,3 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 Du hittar [kursplanen genom att söka på kurskoden DV1532 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1532).
 
 Från och med vårterminen 2017 byter kursen namn till "Programmering med JavaScript" och får en ny [kurskod DV1561](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1561).
-
-
-
-

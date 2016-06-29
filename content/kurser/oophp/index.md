@@ -1,4 +1,6 @@
 ---
+title: oophp
+
 author: mos
 revision:
   "2015-03-02": (M, mos) Uppdatering av referenslitteraturen, la till mål och förkunskapskrav.
@@ -258,8 +260,3 @@ Kursplanen är kursens formella dokument som fastställts av högskolan. När ku
 Du hittar [kursplanen genom att söka på kurskoden DV1485 via BTH's hemsida](<a href='http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1485'>http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1485</a>).
 
 Fram till och med vårterminen 2013 hade kursen kurskoden [DV1127](<a href='http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1127'>http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1127</a>).
-
-
-
-
-

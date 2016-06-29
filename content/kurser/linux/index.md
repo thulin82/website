@@ -1,4 +1,6 @@
 ---
+title: linux
+
 author: mos
 revision:
   "2015-08-03": (B, mos) Klar med texter för kursmomenten.
@@ -255,8 +257,3 @@ Kursplan {#kursplan}
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
 Du hittar [kursplanen genom att söka på kurskoden DV1547 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1547).
-
-
-
-
-
