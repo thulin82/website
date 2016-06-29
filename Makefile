@@ -75,6 +75,7 @@ local-publish:
 local-cache-clear:
 	@echo $(call HELPTEXT,$@)
 	-sudo rm -f $(LOCAL_HTDOCS)/cache/anax/*
+	-sudo rm -f $(LOCAL_HTDOCS)/cache/forum/*
 
 
 
