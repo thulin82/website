@@ -45,9 +45,16 @@ help:
 
 
 
-# target: update - Update codebase and publish by clearing the cache.
-.PHONY: update
+# target: update-all - Update codebase and publish by clearing the cache.
+.PHONY: update-all
 update: codebase-update submodule-update site-build local-publish-clear
+	@echo $(call HELPTEXT,$@)
+
+
+
+# target: update - Update codebase (no submodules) and publish by clearing the cache.
+.PHONY: update
+update: codebase-update site-build local-publish-clear
 	@echo $(call HELPTEXT,$@)
 
 
