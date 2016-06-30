@@ -47,7 +47,7 @@ help:
 
 # target: update-all - Update codebase and publish by clearing the cache.
 .PHONY: update-all
-update: codebase-update submodule-update site-build local-publish-clear
+update-all: codebase-update submodule-update site-build local-publish-clear
 	@echo $(call HELPTEXT,$@)
 
 
