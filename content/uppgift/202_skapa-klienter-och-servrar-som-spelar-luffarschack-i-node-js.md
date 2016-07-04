@@ -1,8 +1,13 @@
 ---
 author: mos
-category: javascript
+category:
+    - kursen linux
+    - client/server
+    - nodejs
+    - javascript
 revision:
-  "2015-09-11": (A, mos) Första utgåvan i samband med kursen linux.
+    "2016-07-04": (B, mos) Lade till om default PORT och SERVER.
+    "2015-09-11": (A, mos) Första utgåvan i samband med kursen linux.
 updated: "2015-09-11 16:00:00"
 created: "2015-09-09 08:09:24"
 ...
@@ -38,11 +43,11 @@ Krav {#krav}
 
 ###Del 1 Spela lokalt {#del1}
 
-1\. Börja med att kopiera in klassfilen för `example/nodejs/gomoku/GomokuBoard.js`. Kopiera sedan in exemplet `example/nodejs/gomoku/index-random.js` och testkör så att det fungerar. Nu har du en bas att utgå ifrån. Testa att det går att köra.
+1. Börja med att kopiera in klassfilen för `example/nodejs/gomoku/GomokuBoard.js`. Kopiera sedan in exemplet `example/nodejs/gomoku/index-random.js` och testkör så att det fungerar. Nu har du en bas att utgå ifrån. Testa att det går att köra.
 
-2\. Du skall skapa ett program `index-game1.js` som använder modulen `GomokuBoard.js` för att spela luffarschack. Du kan utgå från koden i `index-random.js`.
+1. Du skall skapa ett program `index-game1.js` som använder modulen `GomokuBoard.js` för att spela luffarschack. Du kan utgå från koden i `index-random.js`.
 
-3\. Du skall kunna starta programmet och ange storleken på spelet, så här.
+1. Du skall kunna starta programmet och ange storleken på spelet, så här.
 
 | Kommando              | Vad skall hända |
 |-----------------------|-----------------|
@@ -59,7 +64,7 @@ Det kan se ut så här när du anger en plats för X/O.
 Gomoku$ 9 9
 ```
 
-4\. Du får gärna uppdatera koden i `GomokuBoard.js`, men det skall inte vara nödvändigt för att klara uppgiften.
+5\. Du får gärna uppdatera koden i `GomokuBoard.js`, men det skall inte vara nödvändigt för att klara uppgiften.
 
 
 
@@ -71,11 +76,15 @@ Gomoku$ 9 9
 import Router from "./router";
 //import Router from "../router/router";
 ```
-Nu har du en körbar server. Testa den.
+Nu har du en körbar server via `index-server.js`. Testa den.
 
-2\. Utöka servern `GomokuServer.js` med en metod `placeRandom()` som placerar ut brickan för nästa spelare på en slumpmässig plats på spelplanen.
+2\. Uppdatera skriptet så att det läser av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
 
-3\. Utöka API:et och lägg till följande. Verifiera att det fungerar med curl.
+3\. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost.
+
+4\. Utöka servern `GomokuServer.js` med en metod `placeRandom()` som placerar ut brickan för nästa spelare på en slumpmässig plats på spelplanen.
+
+5\. Utöka API:et och lägg till följande. Verifiera att det fungerar med curl.
 
 | Länk                      | Vad skall hända       |
 |---------------------------|-----------------------|
@@ -85,7 +94,7 @@ Nu har du en körbar server. Testa den.
 
 ###Del 3 Bygg ut klienten till servern {#del3}
 
-1\. Kopiera in koden för servern `example/nodejs/gomoku/GomokuClient.js` och `example/nodejs/gomoku/index-client.js`. Du har nu en klient som går att köra och som kan koppla upp sig mot servern. Testa det.
+1\. Kopiera in koden för servern `example/nodejs/gomoku/GomokuClient.js` och `example/nodejs/gomoku/index-client.js`. Du har nu en klient `index-client.js` som går att köra och som kan koppla upp sig mot servern. Testa det.
 
 2\. Utöka klienten med stöd för kommandot `place random`.
 
@@ -120,7 +129,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

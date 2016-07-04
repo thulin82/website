@@ -1,5 +1,5 @@
 ---
-title: Utbildningar i Webbprogrammering vid BTH
+title: Utbildningar BTH Webbprogrammering
 
 views:
     main:
@@ -82,31 +82,10 @@ views:
                                 type: content
                                 route: ./block-9
 
-    blog-list:
-        region: main
-        template: default/blog-list
-        sort: 2
-        data:
-            dateFormat: j F Y
-            meta: 
-                type: toc-route
-                route: blogg
-                orderby: publishTime
-                orderorder: desc
-
-
-    sidebar-1:
-        region: sidebar-right
-        template: default/block
-        data:
-            meta:
-                type: content
-                route: ./block-sidebar-1
-
-    columns-below:
-        region: columns-below
+    columns4:
+        region: columns-above
         template: default/columns
-        sort: 1
+        sort: 4
         data:
             class: col3
             meta:
@@ -116,19 +95,42 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: ./block-bottom-1
+                                route: ./block-10
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: ./block-bottom-2
+                                route: ./block-11
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: block/home/col-below-3
+                                route: ./block-12
+
+    columns5:
+        region: columns-above
+        template: default/columns
+        sort: 5
+        data:
+            class: col3
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: ./block-13
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: ./block-15
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: ./block-14
+
 
 ...
-<div class="block">
-    <h4>Senast om Utbildning i Bloggen</h4>
-</div>

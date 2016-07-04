@@ -2,9 +2,9 @@
 author: mos
 category: unix
 revision:
-  "2015-10-16": (B, mos) Stycke om att kopiera routern, bytte namn på mazerunner.sh
-    till mazerunner.bash.
-  "2015-09-02": (A, mos) Första utgåvan i samband med kursen linux.
+    "2016-06-04": (C, mos) Lade till krav på servern om LINUX_PORT + LINUX_SERVER
+    "2015-10-16": (B, mos) Stycke om att kopiera routern, bytte namn på mazerunner.sh till mazerunner.bash.
+    "2015-09-02": (A, mos) Första utgåvan i samband med kursen linux.
 updated: "2015-10-16 08:08:13"
 created: "2015-09-02 07:05:28"
 ...
@@ -116,6 +116,10 @@ Krav {#krav}
 
 1. Skapa ett skript `mazerunner.bash`. Sätt rättigheter på skriptet till 755. Skapa en symbolisk länk `mazerunner` som pekar på filen `mazerunner.bash`.
 
+1. Skriptet skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
+
+1. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost.
+
 1. Använd API:et för att lägga till följande funktioner i skriptet. Skriptet skall alltid skriva ut ett meddelande om det gick bra eller inte.
 
 | Kommando                | Vad skall hända |
@@ -168,7 +172,3 @@ Tips från coachen {#tips}
 Strukturera din kod med funktioner i bash. Då får du en bra struktur i första delen och i andra delen så kan du återanvända funktionerna.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

@@ -78,7 +78,7 @@ views:
                                 route: block/faq
 
     columns-below-1:
-        region: columns-below
+        region: columns-below-NO
         template: default/columns
         sort: 1
         data:

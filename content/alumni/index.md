@@ -5,7 +5,7 @@ views:
 Alumni
 ===========================
 
-Att göra! 
+
 
 GrillCon
 

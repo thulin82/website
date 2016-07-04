@@ -1,4 +1,6 @@
 ---
+title: Community
+
 views:
     columns1:
         region: columns-above
@@ -51,6 +53,7 @@ views:
                                 route: block/alumni
 
 ...
+<!--
 Community
 ===========================
 
@@ -67,3 +70,4 @@ Senaste bilden på instagram.
 Senaste builds on Travis & Scrutinizer?
 
 Om lärarteamet?
+-->

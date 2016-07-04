@@ -68,6 +68,12 @@ return [
             "sort" => -1
         ],
         [
+            "region" => "profile",
+            "template" => "default/navbar-max",
+            "data" => [],
+            "sort" => -1
+        ],
+        [
             "region" => "footer",
             "template" => "default/columns",
             "data" => [

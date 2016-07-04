@@ -101,6 +101,10 @@ Redirect /ramverk1      /kurser/ramverk1
 Redirect /ramverk2      /kurser/ramverk2
 # matte1, telecom, test, indproj, exjobb
 
+# Moved webutv and webprog to utbildning/
+Redirect /webutv    /utbildning/webbutveckling-och-programmering-30hp
+Redirect /webprog   /utbildning/webbprogrammering-och-databaser-30hp
+
 
 # Rewrite to frontcontroller
 RewriteCond %{REQUEST_FILENAME} !-f

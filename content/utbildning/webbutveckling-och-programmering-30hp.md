@@ -1,19 +1,63 @@
 ---
 author: mos
 revision:
-  "2016-03-11": (C, mos) Bort med länk till kursutvärdering eftersom den kräver inloggning
-    i forumet.
-  "2015-12-18": (B, mos) Om studietakter.
-  "2015-01-08": (A, mos) Första utgåvan inför vårterminen 2015.
+    2016-07-04: (D mos) Genomgången inför ht16.
+    "2016-03-11": (C, mos) Bort med länk till kursutvärdering eftersom den kräver inloggning i forumet.
+    "2015-12-18": (B, mos) Om studietakter.
+    "2015-01-08": (A, mos) Första utgåvan inför vårterminen 2015.
 updated: "2016-03-11 10:05:53"
 created: "2015-01-08 16:10:21"
+
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "/image/tema/trad/tree2.jpg?sc=banner1&a=0,0,15,0"
+
+    columns1:
+        region: columns-above
+        template: default/columns
+        sort: 1
+        data:
+            title: Kurspaket webutv
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/python/block-kurser-kmom
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/javascript1/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/linux/block-kurser-kmom
+                    column-4:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/webapp/block-kurser-kmom
+
 ...
-Kurspaket "Webbutveckling och programmering " (webutv)
+Webbutveckling och programmering 30hp
 ==================================
 
-Kurspaketet *webutv* består av fyra kurser som hjälper dig att komma igång med programmering och webbutveckling. 
+Kurspaketet "Webbutveckling och Programmering", också kallad **webutv**, består av fyra kurser som hjälper dig att komma igång med programmering och webbutveckling.
 
-Kurspaketet består av fyra olika kurser som ger dig en introduktion i programmering (Python), operativsystem (Linux) och webbutveckling (JavaScript, HTML, CSS) för traditionella skrivbordsdatorer, mobila enheter och läsplattor.
+Kurspaketet ger dig en introduktion i programmering (Python), operativsystem (Linux) och webbutveckling (JavaScript, HTML, CSS) för traditionella skrivbordsdatorer, mobila enheter och läsplattor.
+
+Kurspaketet omfattar 30hp och erbjuds på distans.
+
+Samma kurser ingår i programmet Webbprogrammering.
 
 <!--more-->
 
@@ -45,17 +89,9 @@ Du går kurserna efter varandra, i den ordning som visas ovan. När du är klar 
 Studietakt {#studietakt}
 -----------------------------------------------------------
 
-Från och med hösten 2015 finns det en studietakt på kurspaketet.
+Kurspaketet går på halvfart och du läser två kurser per termin. Du går två terminer, totalt ett års studier på halvfart. Du studerar 20 timmar varje vecka.
 
-* Halvfart 50% (20 studietimmar i veckan)
-
-Fram till och med vårterminen 2015 fanns även studietakten:
-
-* Kvartsfart 25% (10 studietimmar i veckan)
-
-Är du antagen till halvfart läser du två kurser per termin under två termin, dvs 1 års studier.
-
-Är du antagen till kvartsfart läser du en kurs per termin under fyra terminer, dvs 2 års studier.
+*Fram till och med vårterminen 2015 fanns även studietakten kvartsfart om 25% (10 studietimmar i veckan).*
 
 
 
@@ -66,8 +102,8 @@ Det finns rekommenderade studieplaner beroende på vilken studietakt du har. I d
 
 Det finns en studieplan för varje kurstakt. 
 
-* [Studieplan för kurspaketet, studietakt 25%](webutv/studieplan/25)
 * [Studieplan för kurspaketet, studietakt 50%](webutv/studieplan/50)
+* [Studieplan för kurspaketet, studietakt 25%](webutv/studieplan/25)
 
 
 
@@ -94,14 +130,3 @@ Vad säger andra studenter? {#andra}
 Kurspaketet webutv är nytt från och med vårterminen 2015. Kurserna python och javascript1 startade hösten 2014.
 
 Det finns ett syster-kurspaket [webprog](webprog) som funnits sedan tidigare. Läs vad [Pernilla](blogg/pernilla-gick-ut-kurspaket-med-ett-plus-i-kanten), [Gabriel](blogg/gabriel-fick-jobb-som-php-backend-programmerare), [DanielJ](blogg/danielj-visade-framfotterna-i-chatten-och-fick-jobb) och [Dennis](blogg/dennis-jobbar-med-sin-hobby-webbutveckling) säger om sina studier och vilka jobb de fick efter kurspaketet webprog. 
-
-
-
-Forum för kurspaketet {#forum}
------------------------------------------------------------
-
-Det finns ett eget [forum för frågor kring kurspaketet webutv](forum/viewforum.php?f=51). Ställ gärna frågor och funderingar där.
-
-
-
-

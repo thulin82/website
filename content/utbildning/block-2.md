@@ -6,4 +6,4 @@
 
 Läs tillsammans med campus-studenterna via distans. När du är klar kan du läsa ett tredje år på campus.
 
-Läs om programmet på BTHs webbplats ([ny version](http://www.bth.se/distansutbildningar/webbprogrammering/) | [gammal version](http://edu.bth.se/utbildning/utb_program.asp?PtKod=PAGWH16h)) samt [svar på vanliga frågor](t/4964).
+[Läs mer om programmet »](utbildning/webbprogrammering-120hp-distans)

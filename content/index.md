@@ -6,7 +6,7 @@ views:
         region: flash
         template: default/image
         data:
-            src: "/image/vimmel/varbild-dbwebb2.jpg"
+            src: "/image/tema/trad/tree2.jpg?sc=banner1&a=0,0,15,0"
 
     blog-list:
         region: main
@@ -27,31 +27,6 @@ views:
             meta:
                 type: content
                 route: block/home/sidebar-1
-
-    columns-above:
-        region: columns-above
-        template: default/columns
-        sort: 1
-        data:
-            class: col3
-            meta:
-                type: columns
-                columns:
-                    column-1:
-                        data:
-                            meta:
-                                type: content
-                                route: block/home/col-1
-                    column-2:
-                        data:
-                            meta:
-                                type: content
-                                route: block/home/col-2
-                    column-3:
-                        data:
-                            meta:
-                                type: content
-                                route: block/home/col-3
 
     columns-below:
         region: columns-below
@@ -76,9 +51,8 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: block/home/col-below-3
+                                route: uppgift/block-toc
 
 ...
-<div class="block">
-    <h4>Senast i Bloggen</h4>
-</div>
+Nyheter
+=========================

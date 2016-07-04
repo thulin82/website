@@ -2,10 +2,10 @@
 author: mos
 category: javascript
 revision:
-  "2015-10-16": (C, mos) Lade till krav på servern om LINUX_PORT och klienten om LINUX_PORT
-    + LINUX_SERVER samt krav om att servern skall skriva sitt pid till fil.
-  "2015-09-24": (B, mos) Tog bort det andra kommandot date i 1.5.
-  "2015-08-13": (A, mos) Första utgåvan i samband med kursen linux.
+    "2016-07-04": (D, mos) Default port skall vara 1337 och la till exempel om hur servern dödas med pid.
+    "2015-10-16": (C, mos) Lade till krav på servern om LINUX_PORT och klienten om LINUX_PORT + LINUX_SERVER samt krav om att servern skall skriva sitt pid till fil.
+    "2015-09-24": (B, mos) Tog bort det andra kommandot date i 1.5.
+    "2015-08-13": (A, mos) Första utgåvan i samband med kursen linux.
 updated: "2015-10-16 10:51:52"
 created: "2015-08-12 10:54:21"
 ...
@@ -41,9 +41,9 @@ Krav {#krav}
 
 ###Del 1 servern {#server}
 
-1\. Skriv ett *main-program* som startar din server, döp det till `index.js`. Din server skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll för att starta servern på just den porten.
+1\. Skriv ett *main-program* som startar din server, döp det till `index.js`. Din server skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll för att starta servern på just den porten. Standardport är annars 1337.
 
-2\. Din server skall skriva sitt pid till en fil som heter `pid`.
+2\. Din server skall skriva sitt pid till en fil som heter `pid`. När man kör kommandot `kill $( cat pid )` så skall din server stängas ned.
 
 3\. Skriv en server och spara den i filen `server.js`.
 
@@ -77,9 +77,9 @@ Krav {#krav}
 
 1. Skapa en klient till din server, lägg den i filen `client.bash`. Skriv klienten i Bash. 
 
-1. Skriptet skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot.
+1. Skriptet skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
 
-1. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern.
+1. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost.
 
 1. Kommandot `./client.bash hello` skall anropa serverns route `/`, med `curl` eller `wget`, och skriva ut svaret.
 
@@ -121,7 +121,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

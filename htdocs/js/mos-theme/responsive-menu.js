@@ -1,13 +1,16 @@
 /**
- * Setup the basis for the responsive menu.
+ * @preserve Setup the basis for the responsive menu.
+ * @author Mikael Roos <mos@dbwebb.se>
+ * @see {@link https://github.com/mosbth/responsive-menu}
  */
 (function() {
     "use strict";
 
     // Get the items needed for the menu to work.
     var menuButton = document.getElementById("rm-menu-button");
-    var menu = document.querySelector(".rm-default");
-    var submenus = document.getElementsByClassName("rm-submenu");
+    var menu = document.getElementById("rm-menu");
+    var menuMax = document.querySelector(".rm-max #rm-menu");
+    var submenus = document.getElementsByClassName("rm-submenu-button");
 
     // To support WordPress submenus
     var submenuswp = document.getElementsByClassName("sub-menu");
@@ -15,11 +18,25 @@
 
 
     /**
+     * Set the size of the max menu.
+     */
+    var setMaxMenuSize = function() {
+        if (menuMax === null) {
+            return;
+        }
+
+        menuMax.style.width  = window.innerWidth + "px";
+        menuMax.style.height = window.innerHeight + "px";
+    };
+    setMaxMenuSize();
+
+
+    /**
      * Show submenu where ever a li item holds a submenu. Used as callback
      * for li click events but only valid for the mobile version. The desktop
      * version uses hover instead och click events.
      */
-    var showSubmenu = function() {
+    var showSubmenu = function(event) {
         //console.log("Show submenu");
 
         if (this.parentNode.classList.contains("rm-desktop")) {
@@ -27,8 +44,11 @@
             return;
         }
 
-        this.classList.toggle("rm-submenu-open");
-        this.querySelector("ul").classList.toggle("rm-show-submenu");
+        this.parentElement.classList.toggle("rm-submenu-open");
+        this.parentElement.querySelector("ul").classList.toggle("rm-show-submenu");
+
+        //event.preventDefault();
+        event.stopPropagation();
     };
 
 
@@ -54,22 +74,14 @@
      */
     menuButton.addEventListener("click", function(event) {
 
-        var style = window.getComputedStyle(menu);
+        // Toggle display of menu
+        menuButton.classList.toggle("rm-clicked");
+        menu.classList.toggle("rm-clicked");
 
-        //console.log("Click: " + style.display);
-
-        if (style.display === "none") {
-            // Display the menu
+        // Toggle between desktop and mobile menu when no max menu enabled.
+        if (menuMax === null) {
             menu.classList.toggle("rm-mobile");
             menu.classList.toggle("rm-desktop");
-            menuButton.classList.toggle("rm-clicked");
-            menu.style.display = "block";
-        } else {
-            // Hide the menu
-            menu.style.display = "none";
-            menu.classList.toggle("rm-mobile");
-            menu.classList.toggle("rm-desktop");
-            menuButton.classList.toggle("rm-clicked");
         }
 
         event.preventDefault();
@@ -83,14 +95,23 @@
      */
     var clearMenu = function (event) {
         //console.log("Clear menu");
-        menu.style.display = "";
-        menu.classList.remove("rm-mobile");
-        menu.classList.add("rm-desktop");
+        // Add desktop and remove mobile, but not if max menu is enabled
+        if (menuMax === null) {
+            menu.classList.remove("rm-mobile");
+            menu.classList.add("rm-desktop");
+        }
+
+        // Remove clicked items
         menuButton.classList.remove("rm-clicked");
+        menu.classList.remove("rm-clicked");
+
         event.preventDefault();
     };
 
-    window.addEventListener("resize", clearMenu);
+    window.addEventListener("resize", function(event) {
+        clearMenu(event);
+        setMaxMenuSize();
+    });
     //document.addEventListener("click", clearMenu);
 
 })();

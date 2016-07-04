@@ -9,8 +9,12 @@ revision:
 updated: "2016-01-15 13:19:55"
 created: "2012-08-09 06:59:55"
 ...
-Chatta med IRC
+Chatta med IRC och Gitter
 ==================================
+
+I kurserna används IRC och Gitter som chatt-kanaler för umgänge och handledning.
+
+
 
 En IRC-kanal för webbprogrammerare {#webb}
 --------------------------------------------------------------
@@ -118,7 +122,3 @@ Kurspaket webprog:
 * [oophp](<a href='https://gitter.im/mosbth/oophp'>https://gitter.im/mosbth/oophp</a>)
 * [phpmvc](<a href='https://gitter.im/mosbth/phpmvc'>https://gitter.im/mosbth/phpmvc</a>)
 * [javascript](<a href='https://gitter.im/mosbth/javascript'>https://gitter.im/mosbth/javascript</a>)
-
-
-
-

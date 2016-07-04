@@ -12,24 +12,73 @@ revision:
   "2013-01-08": (A, mos) Första utgåvan inför vårterminen 2013.
 updated: "2016-03-14 14:07:31"
 created: "2015-01-07 13:27:17"
+
+views:
+    flash:
+        region: flash
+        template: default/image
+        data:
+            src: "/image/tema/trad/tree2.jpg?sc=banner1&a=0,0,15,0"
+
+    columns1:
+        region: columns-above
+        template: default/columns
+        sort: 1
+        data:
+            title: Kurspaket webprog
+            class: col4
+            classes: no-bullet
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/htmlphp/block-kurser-kmom
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/oophp/block-kurser-kmom
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/phpmvc/block-kurser-kmom
+                    column-4:
+                        data:
+                            meta:
+                                type: content
+                                route: kurser/javascript/block-kurser-kmom
+
+
 ...
-Kurspaket "Databaser, HTML, CSS, JavaScript och PHP" (webprog)
+Databaser, HTML, CSS, JavaScript och PHP 30hp
 ==================================
 
-Kurspaketet *webprog* består av fyra kurser som hjälper dig att utvecklas till webbprogrammerare. Kurserna omfattar tekniker som HTML, CSS, JavaScript, PHP och SQL med databaser i en Unix-miljö. Första kursen börjar på en grundläggande nivå och sedan stiger svårighetsgraden efter hand.
+Kurspaketet "Databaser, HTML, CSS, JavaScript och PHP", också kallad **webprog**, består av fyra kurser som hjälper dig att utvecklas till webbprogrammerare.
+
+Kurserna omfattar tekniker som HTML, CSS, JavaScript, PHP och SQL med databaser i en Unix-miljö. Första kursen börjar på en grundläggande nivå och sedan stiger svårighetsgraden efter hand.
 
 Ett paket för den som är allvarlig i sin strävan att bli duktig i Webbprogrammering med PHP och närliggande tekniker.
+
+Kurspaketet omfattar 30hp och erbjuds på distans.
+
+Motsvarande kurser ingår i programmet Webbprogrammering.
 
 <!--more-->
 
 [INFO]
-**Paus i antagningen till kurspaketet, från HT16 till HT17.**
+**Nästa antagning är HT17.**
 
 Den senaste antagningen till kurspaketets nuvarande utformning skedde inför vårterminen 2015.
 
 Under 2016 och 2017 kommer kurserna i kurspaketet få en genomgång i samband med att det nya distansprogrammet Webbprogrammering 120hp startar.
 
-Planen är att därefter erbjuda detta kurspaketet, i en uppdaterad utformning, inför hösten 2017.
+Inför hösten 2017 erbjuds kurspaketet i en ny utformning under namnet **"Webbprogrammering och Databaser"**.
+
+Du kan [läsa om detta i forumet](t/5097).
 [/INFO]
 
 
@@ -59,17 +108,9 @@ Du går kurserna efter varandra, i den ordning som visas ovan. När du är klar 
 Studietakt {#studietakt}
 -----------------------------------------------------------
 
-Från och med hösten 2015 finns det en studietakt på kurspaketet.
+Kurspaketet går på halvfart och du läser två kurser per termin. Du går två terminer, totalt ett års studier på halvfart. Du studerar 20 timmar varje vecka.
 
-* Halvfart 50% (20 studietimmar i veckan)
-
-Fram till och med vårterminen 2015 fanns även studietakten:
-
-* Kvartsfart 25% (10 studietimmar i veckan)
-
-Är du antagen till halvfart läser du två kurser per termin under två termin, dvs 1 års studier.
-
-Är du antagen till kvartsfart läser du en kurs per termin under fyra terminer, dvs 2 års studier.
+*Fram till och med vårterminen 2015 fanns även studietakten kvartsfart om 25% (10 studietimmar i veckan).*
 
 
 
@@ -80,8 +121,8 @@ Det finns rekommenderade studieplaner beroende på vilken studietakt du har. I d
 
 Det finns en studieplan för varje kurstakt. 
 
-* [Studieplan för kurspaketet, studietakt 25%](webprog/studieplan/25)
 * [Studieplan för kurspaketet, studietakt 50%](webprog/studieplan/50)
+* [Studieplan för kurspaketet, studietakt 25%](webprog/studieplan/25)
 
 
 
@@ -122,7 +163,3 @@ Forum för kurspaketet {#forum}
 -----------------------------------------------------------
 
 Det finns ett eget [forum för frågor kring kurspaketet webprog](forum/viewforum.php?f=26). Ställ gärna frågor och funderingar där.
-
-
-
-
