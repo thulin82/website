@@ -12,7 +12,7 @@ WARN_COLOR		= \033[33;01m
 ACTION			= $(TARGET_COLOR)--> 
 HELPTEXT 		= "$(ACTION)" `egrep "^\# target: $(1) " Makefile | sed "s/\# target: $(1)[ ]\+- / /g"` "$(NO_COLOR)"
 
-WWW_SITE	:= v2.dbwebb.se
+WWW_SITE	:= dbwebb.se
 WWW_LOCAL	:= local.$(WWW_SITE)
 SERVER_ADMIN := mos@$(WWW_SITE)
 
