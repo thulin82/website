@@ -14,6 +14,99 @@ Redirect 301 /kod-exempel/dynamic_menu.php  /kod-exempel/dynamic_php_menu
 Redirect 301 /kod-exempel/ https://arkiv.dbwebb.se/kod-exempel/
 
 
+#
+# Old redirects when moved old.dbwebb.se to v2.dbwebb.se
+#
+Redirect /javascript/kmom01/intro /kunskap/javascript-argh-maste-jag
+Redirect /opensource/cimage /opensource/cimage-and-img-php-for-image-resize-crop-and-processing-using-php-gd
+Redirect /opensource/stylephp /opensource/a-style-php-to-autocompile-less-with-lessphp
+Redirect /opensource/cform /opensource/cform-a-collection-of-php-classes-to-ease-working-with-html-forms
+Redirect /opensource/cdatabase /opensource/cdatabase-php-classes-for-working-with-sql-queries-and-databases
+Redirect /htmlphp/lab1 /uppgift/php-lab-1-grundkonstruktioner
+Redirect /htmlphp/lab2 /uppgift/php-lab-2-arrayer
+Redirect /htmlphp/lab3 /uppgift/php-lab-3-skapa-egna-funktioner
+Redirect /htmlphp/lab4 /uppgift/php-labb-4
+Redirect /htmlphp/lab5 /uppgift/php-labb-5
+Redirect /linux/lab1 /uppgift/linux-labb-1
+Redirect /linux/lab2 /uppgift/linux-labb-2
+Redirect /linux/lab3 /uppgift/linux-labb-3
+Redirect /linux/lab4 /uppgift/linux-labb-4
+Redirect /linux/lab5 /uppgift/linux-labb-5
+Redirect /webapp/lab1 /kunskap/kom-igang-och-skapa-en-mobil-webapp-med-jquery-mobile
+Redirect /webapp/lab2 /uppgift/webapp-labb-2
+Redirect /webapp/lab3 /uppgift/webapp-labb-3
+Redirect /webapp/lab4 /uppgift/webapp-labb-4
+Redirect /webapp/lab5 /uppgift/webapp-labb-5
+Redirect /htmlphp/me /uppgift/skapa-en-me-sida-i-kursen-htmlphp
+Redirect /webapp/me /uppgift/skapa-en-me-sida-i-kursen-webapp
+Redirect /linux/me /uppgift/skapa-en-me-sida-i-kursen-linux
+Redirect /htmlphp/proj5 /uppgift/htmlphp-projekt-5
+Redirect /linux/proj1 /uppgift/linux-projekt-1
+Redirect /linux/proj2 /uppgift/linux-projekt-2
+Redirect /linux/proj3 /uppgift/linux-projekt-3
+Redirect /linux/proj4 /uppgift/linux-projekt-4
+Redirect /linux/proj5 /uppgift/linux-projekt-5
+Redirect /webapp/proj5 /uppgift/webapp-proj-5
+Redirect /htmlphp/proj6 /uppgift/bygg-ut-din-htmlphp-me-sida-till-version-6
+Redirect /cli /dbwebb-cli
+Redirect /dbwebb-inspect /dbwebb-cli/dbwebb-inspect
+Redirect /dbwebb-validate /dbwebb-cli/dbwebb-validate
+Redirect /facebook /social/facebook
+Redirect /flickr /social/flickr
+Redirect /github /social/github
+Redirect /googleplus /social/googleplus
+Redirect /instagram /social/instagram
+Redirect /linkedin /social/linkedin
+Redirect /twitter /social/twitter
+Redirect /youtube /social/youtube
+Redirect /bth /kurser/faq/bth-stodfunktioner
+
+
+#
+# kurser/
+#
+Redirect /kurser/bra-att-veta   /kurser/faq
+Redirect /kurser/struktur       /kurser/faq
+Redirect /kurser/lektionsplan-och-rekommenderad-studieplan /kurser/faq/rekommenderad-studieplan
+Redirect /kurser/maste-jag-skaffa-kurslitteraturen /kurser/faq/maste-jag-skaffa-kurslitteraturen
+
+#
+# kurser/arkiv
+#
+Redirect /webtopic      /kurser/arkiv/webtopic
+Redirect /htmlphp-v1    /kurser/arkiv/htmlphp-v1
+Redirect /oophp-v1      /kurser/arkiv/oophp-v1
+Redirect /phpmvc-v1     /kurser/arkiv/phpmvc-v1
+
+#
+# Moved all courses to kurser/
+#
+Redirect /htmlphp       /kurser/htmlphp
+Redirect /oophp         /kurser/oophp
+Redirect /phpmvc        /kurser/phpmvc
+Redirect /javascript    /kurser/javascript
+
+Redirect /python        /kurser/python
+Redirect /javascript1   /kurser/javascript1
+Redirect /linux         /kurser/linux
+Redirect /webapp        /kurser/webapp
+
+Redirect /webgl         /kurser/webgl
+Redirect /oopython      /kurser/oopython
+Redirect /design        /kurser/design
+Redirect /ramverk1      /kurser/ramverk1
+Redirect /ramverk2      /kurser/ramverk2
+# matte1, telecom, test, indproj, exjobb
+
+# Moved webutv and webprog to utbildning/
+Redirect /webutv    /utbildning/webbutveckling-och-programmering-30hp
+Redirect /webprog   /utbildning/webbprogrammering-och-databaser-30hp
+
+
+#
+# Below from original dbwebb.se
+#
+
 # Older links that has moved permanent
 Redirect 301 /guide/kokbok-for-databasmodellering http://dbwebb.se/kunskap/kokbok-for-databasmodellering
 Redirect 301 /article/kokbok-for-databasmodellering http://dbwebb.se/kunskap/kokbok-for-databasmodellering
