@@ -128,6 +128,19 @@ return array(
 
 
      /**
+      * Change the default values for CImage quality and compression used
+      * when saving images.
+      *
+      * Default value:
+      *  jpg_quality:     null, integer between 0-100
+      *  png_compression: null, integer between 0-9
+      */
+      'jpg_quality'  => 85,
+      //'png_compression' => 1,
+
+
+
+     /**
      * Check that the imagefile is a file below 'image_path' using realpath().
      * Security constraint to avoid reaching images outside image_path.
      * This means that symbolic links to images outside the image_path will fail.
@@ -206,18 +219,18 @@ return array(
      *  jpeg_optimize:     false
      *  jpeg_optimize_cmd: '/usr/local/bin/jpegtran -copy none -optimize'
      */
-    /*
     'postprocessing' => array(
-        'png_filter'        => false,
-        'png_filter_cmd'    => '/usr/local/bin/optipng -q',
+        'png_filter'        => true,
+        //'png_filter_cmd'    => '/usr/local/bin/optipng -q',
+        'png_filter_cmd'    => '/usr/bin/optipng -q',
 
-        'png_deflate'       => false,
+        'png_deflate'       => true,
         'png_deflate_cmd'   => '/usr/local/bin/pngout -q',
 
-        'jpeg_optimize'     => false,
-        'jpeg_optimize_cmd' => '/usr/local/bin/jpegtran -copy none -optimize',
+        'jpeg_optimize'     => true,
+        //'jpeg_optimize_cmd' => '/usr/local/bin/jpegtran -copy none -optimize',
+        'jpeg_optimize_cmd' => '/usr/bin/jpegtran -copy none -optimize',
     ),
-    */
 
 
 
@@ -271,7 +284,7 @@ return array(
         //'sepia' => "&f=grayscale&f0=brightness,-10&f1=contrast,-20&f2=colorize,120,60,0,0&sharpen",
         "banner1" => "w=1100&h=96&cf",
         "banner2" => "w=c8&h=100&cf",
-        "forum" => "w=800",
+        "forum" => "w=800&sa=jpg",
     ),
 
 
