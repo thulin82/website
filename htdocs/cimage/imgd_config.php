@@ -271,6 +271,7 @@ return array(
         //'sepia' => "&f=grayscale&f0=brightness,-10&f1=contrast,-20&f2=colorize,120,60,0,0&sharpen",
         "banner1" => "w=1100&h=96&cf",
         "banner2" => "w=c8&h=100&cf",
+        "forum" => "w=800",
     ),
 
 
