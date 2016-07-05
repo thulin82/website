@@ -206,17 +206,18 @@ create-local-structure:
 # target: ssl-cert-create - One way to create the certificates.
 .PHONY: ssl-cert-create
 ssl-cert-create:
-	cd $(HOME)/git/letsencrypt
-	./letsencrypt-auto certonly --standalone -d $(WWW_SITE) -d www.$(WWW_SITE)
+	#cd $(HOME)/git/letsencrypt
+	#./letsencrypt-auto certonly --standalone -d $(WWW_SITE) -d www.$(WWW_SITE)
+	sudo certbot certonly --standalone -d $(WWW_SITE) -d www.$(WWW_SITE)
 
 
 
 # target: ssl-cert-update - Update certificates with new expiray date.
 .PHONY: ssl-cert-renew
 ssl-cert-update:
-	cd $(HOME)/git/letsencrypt
-	./letsencrypt-auto renew
-
+	#cd $(HOME)/git/letsencrypt
+	#./letsencrypt-auto renew
+	sudo certbot renew
 
 
 # target: install-fresh - Do a fresh installation of a new server.
@@ -273,7 +274,7 @@ virtual-host:
 	echo "$$VIRTUAL_HOST_80" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
 	echo "$$VIRTUAL_HOST_80_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
 	sudo a2ensite $(WWW_SITE) www.$(WWW_SITE)
-	sudo a2enmod rewrite
+	sudo a2enmod rewrite expires
 	sudo apachectl configtest
 	sudo service apache2 reload
 
