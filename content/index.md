@@ -20,9 +20,19 @@ views:
                 orderby: publishTime
                 orderorder: desc
 
+    aktuellt:
+        region: sidebar-right
+        template: default/block
+        sort: 1
+        data:
+            meta:
+                type: content
+                route: block/home/aktuellt
+
     sidebar-1:
         region: sidebar-right
         template: default/block
+        sort: 2
         data:
             meta:
                 type: content

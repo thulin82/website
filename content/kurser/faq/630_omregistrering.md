@@ -1,11 +1,11 @@
 ---
 author: mos
 revision:
-  "2015-12-18": (D, mos) Omregistrering för VT16 kurstillfällen.
-  "2015-08-26": (C, mos) Fler kurstillfällen för omregistrering inför ht15 samt förklaring
-    av läsperioder.
-  "2015-08-14": (B, mos) Uppdaterad med ny hantering inför ht15.
-  "2015-01-09": (A, mos) Första versionen, för att svara på vanliga frågor om omregistrering.
+    "2016-07-05": (E, mos) Omregistrering för HT16 kurstillfällen.
+    "2015-12-18": (D, mos) Omregistrering för VT16 kurstillfällen.
+    "2015-08-26": (C, mos) Fler kurstillfällen för omregistrering inför ht15 samt förklaring av läsperioder.
+    "2015-08-14": (B, mos) Uppdaterad med ny hantering inför ht15.
+    "2015-01-09": (A, mos) Första versionen, för att svara på vanliga frågor om omregistrering.
 updated: "2015-12-18 15:17:32"
 created: "2015-01-09 13:33:53"
 ...
@@ -51,38 +51,22 @@ Följande kurstillfällen finns tillgängliga för dig som omregistrerar dig. No
 
 
 
-###Omregistrering vårterminen 2016 {#vt16}
+###Omregistrering höstterminen 2016 {#ht16}
 
 | Kurs        | Läsperiod | Kurstakt | Kurstillfälle på ITs |
 |-------------|:---------:|:--------:|----------------------|
-| htmlphp     | lp3  | 50% | DV1462 VT16 Lp3 Databaser, HTML, CSS och skriptbaserad PHP-kp50 |
-| oophp       | lp4  | 50% | DV1485 VT16 Lp4 Databaser och Objektorienterad prog i PHP-kp50 |
-| phpmvc      | lp34 | 25% | DV1486 VT16 Lp34 Databasdrivna webbappl med PHP och MVC-kp25    |
-| phpmvc      | lp3  | 50% | DV1486 VT16 Lp3 Databasdrivna webbappl med PHP och MVC-kp50 |
-| javascript  | lp34 | 25% | DV1483 VT16 Lp34 JavaScript, jQuery och AJAX med HTML5, PHP-kp25 |
-| javascript  | lp4  | 50% | DV1483 VT16 Lp4 JavaScript, jQuery och AJAX med HTML5, PHP-kp50 |
-| python      | lp3  | 50% | DV1531 VT16 Lp3 Programmering och problemlös i Python-kp50 |
-| javascript1 | lp4  | 50% | DV1532 VT16 Lp4 Programmering med JavaScript, HTML och CSS-kp50  |
-| linux       | lp34 | 25% | DV1547 VT16 Lp34 Programmera webbtjänster på Linux-kp25 |
-| linux       | lp3  | 50% | DV1547 VT16 Lp3 Programmera webbtjänster på Linux-kp50 |
-| webapp      | lp4  | 50% | DV1546 VT16 Lp4 Webbapplikationer för mobila enheter-kp50 |
+| htmlphp     | lp1  | 50% | PA1439 H16 Lp1 Webbteknologier-program |
+| oophp       | lp12 | 25% | DV1485 H16 Lp12 Databaser och OO programmering i PHP-omreg |
+| phpmvc      | lp1  | 50% | DV1486 H16 Lp1 Databasdrivna webbappl med PHP och MVC-kp50 |
+| javascript  | lp12 | 25% | DV1483 VT16 Lp34 JavaScript, jQuery och AJAX med HTML5, PHP-kp25 |
+| javascript  | lp2  | 50% | DV1483 H16 Lp12 JavaScript, jQuery och AJAX med HTML5 o PHP-kp50 |
+| python      | lp1  | 50% | DV1531 H16 Lp1 Programmering och problemlös i Python-kp50 |
+| javascript1 | lp2  | 50% | DV1532 H16 Lp2 Programmering med JavaScript, HTML och CSS-kp50  |
+| linux       | lp1  | 50% | DV1547 H16 Lp1 Programmera webbtjänster på Linux-kp50 |
+| webapp      | lp2  | 50% | DV1546 H16 Lp2 Webbapplikationer för mobila enheter-kp50 |
+| webapp      | lp12 | 25% | DV1546 H16 Lp12 Webbapplikationer för mobila enheter-kp25 |
 
-
-
-###Omregistrering höstterminen 2015 {#ht15}
-
-| Kurs        | Läsperiod | Kurstakt | Kurstillfälle på ITs |
-|-------------|:---------:|:--------:|----------------------|
-| htmlphp     | lp1  | 50% | DV1462 H15 Lp1 Databaser, HTML, CSS och skriptbaserad PHP-kp50 |
-| oophp       | lp12 | 25% | DV1485 H15 Lp12 Databaser och objektorienterad prog i PHP-kp25 |
-| oophp       | lp2  | 50% | DV1485 H15 Lp2 Databaser och objektorienterad prog i PHP-kp50 |
-| phpmvc      | lp12 | 25% | DV1486 H15 Lp12 Databasdrivna webbappl med PHP och MVC-kp25    |
-| phpmvc      | lp1  | 50% | DV1486 H15 Lp1 Databasdrivna webbappl med PHP och MVC-kp50 |
-| javascript  | lp12 | 25% | DV1483 H15 Lp12 JavaScript, jQuery och AJAX med HTML5, PHP-kp25 |
-| javascript  | lp2  | 50% | DV1483 H15 Lp2 JavaScript, jQuery och AJAX med HTML5, PHP-kp50 |
-| python      | lp1  | 50% | DV1531 H15 Lp1 Programmering och Problemlös med Python-kp50 |
-| javascript1 | lp12 | 25% | DV1532 H15 Lp12 Programmering med JavaScript, HTML och CSS-kp25  |
-| javascript1 | lp2  | 50% | DV1532 H15 Lp2 Programmering med JavaScript, HTML och CSS-kp50 |
+Observera att htmlphp-kursen har bytt kurskod till PA1439.
 
 
 
@@ -136,7 +120,3 @@ Hjälp mig {#hjalp}
 --------------------------------------------------------------------
 
 Maila till dbwebb@bth.se så får du hjälp om du behöver diskutera din situation.
-
-
-
-
