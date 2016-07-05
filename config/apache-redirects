@@ -11,7 +11,7 @@ Redirect 410 /betapal
 Redirect 301 /example	/kod-exempel
 Redirect 301 /examples	/kod-exempel
 Redirect 301 /kod-exempel/dynamic_menu.php  /kod-exempel/dynamic_php_menu
-
+Redirect 301 /kod-exempel/ https://arkiv.dbwebb.se/kod-exempel/
 
 
 # Older links that has moved permanent

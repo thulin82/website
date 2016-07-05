@@ -19,7 +19,7 @@ RewriteRule ^image/(.*)$        cimage/imgd.php?src=$1 [QSA,NC,L]
 
 
 
-# Old redirects
+# Old redirects when moved old.dbwebb.se to v2.dbwebb.se
 Redirect /javascript/kmom01/intro /kunskap/javascript-argh-maste-jag
 Redirect /opensource/cimage /opensource/cimage-and-img-php-for-image-resize-crop-and-processing-using-php-gd
 Redirect /opensource/stylephp /opensource/a-style-php-to-autocompile-less-with-lessphp
