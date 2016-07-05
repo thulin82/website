@@ -25,6 +25,8 @@ Det är fortfarande mycket som skall göras, men jag tänkte att det var lika br
 
 Du kan felrapportera i chatten eller på [GitHub](https://github.com/dbwebb-se/website/issues).
 
+Det finns en forumtråd där jag lägger in [information om en del av de uppdateringar](t/5391) som görs. Det går bra att rapportera fel i den forumtråden.
+
 Håll ut, det blir säkert bra när det blir klart.
 
 /mos

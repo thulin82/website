@@ -214,7 +214,7 @@ ssl-cert-create:
 
 # target: ssl-cert-update - Update certificates with new expiray date.
 .PHONY: ssl-cert-renew
-ssl-cert-update:
+ssl-cert-renew:
 	#cd $(HOME)/git/letsencrypt
 	#./letsencrypt-auto renew
 	sudo certbot renew
