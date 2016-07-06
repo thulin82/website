@@ -52,7 +52,7 @@ Ett ramverk kan delas in i två delar, *application* och *system*.
 
 Katalogstrukturen skulle alltså kunna se ut så här till att börja med, och det gör den också i många ramverk.
 
-```txt
+```text
 Anax-MVC/
       └─ app/
       └─ system/
@@ -60,7 +60,7 @@ Anax-MVC/
 
 Men, för min del så vill jag dela upp det lite annorlunda, jag vill ha en katalogstruktur som visar ramverkets huvuddelar på översta nivån. Jag väljer följande katalogstruktur.
 
-```txt
+```text
 Anax-MVC/
       └─ app/
       └─ src/
@@ -932,6 +932,3 @@ Följande är referenser som använts som fotnötter i texten.
 [^5]: [Wikipedia: Service Location Patter](http://en.wikipedia.org/wiki/Service_locator_pattern).
 [^6]: [Wikipedia: Lazy initialization](http://en.wikipedia.org/wiki/Lazy_initialisation).
 [^7]: [Wikipedia: Design by contract](http://en.wikipedia.org/wiki/Design_by_contract).
-
-
-

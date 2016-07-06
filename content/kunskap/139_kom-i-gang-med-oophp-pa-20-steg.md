@@ -1152,7 +1152,7 @@ Varken speed, size eller weight finns med i klassdefinitionen för CMouse (eller
 
 Utskriften från ett sådant testprogram kan se ut så här.
 
-```txt
+```text
 I'm eating
 Piip, piip
 
@@ -1212,7 +1212,7 @@ Metoden `__call()` får två argument, det första är metodens namn och den and
 
 Utskriften från detta programmet kan se ut som följer:
 
-```txt
+```text
 I'm eating
 Piip, piip
 Calling object method 'Jump' high, with head first
@@ -1260,7 +1260,7 @@ echo "</pre>";
 
 Utskriften från exemplet kan se ut så här:
 
-```txt
+```text
 I'm eating
 Piip, piip
 

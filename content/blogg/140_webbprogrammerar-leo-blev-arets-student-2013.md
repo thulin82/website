@@ -24,7 +24,7 @@ Inför galan så nämnde Bobba att han skulle gå på galan och att han hade bli
 
 **Från irc-chatten, dagen då det hände.**
 
-```txt
+```text
 Day changed to 06 Dec 2013
 16:12 <@mos> Bobbzorzen: redo och välklädd?
 23:04 <@Bobbzorzen> Mycket

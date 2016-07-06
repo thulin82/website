@@ -95,7 +95,7 @@ När man skickar kommandon till tmux så används ett prefix som normalt är `ct
 
 De första raderna i filen `$HOME/.tmux.conf` ändrar prefix för kommandon i tmux.
 
-```txt
+```text
 # Bind C-a
 set-option -g prefix C-a
 unbind-key C-b
@@ -125,7 +125,7 @@ tmux ls
 
 Du kan starta en ny tmux-session, detacha dig från den och lista de aktiva sessionerna igen. Du har nu två sessioner när du kör `tmux ls`. Det kan se ut så här.
 
-```txt
+```text
 $ tmux ls
 0: 1 windows (created Wed Jul  1 09:52:52 2015) [196x58]
 1: 1 windows (created Wed Jul  1 09:59:44 2015) [196x58]
@@ -258,7 +258,7 @@ Du kan testa dina ändringar på en gång genom att starta tmux och öppna konfi
 
 Leta reda på följande rader.
 
-```txt
+```text
 # Set status bar
 set -g status-bg black
 set -g status-fg green
@@ -266,7 +266,7 @@ set -g status-fg green
 
 Byt plats på bakgrundsfärg och förgrundsfärg så här.
 
-```txt
+```text
 # Set status bar
 set -g status-bg green
 set -g status-fg black
@@ -276,7 +276,7 @@ Gå sedan till ditt tmux-fönster och tryck prefix följt av `r` så laddas konf
 
 Letar du i konfigfilen så kan du hitta att `r` är kopplat till att läsa om konfigfilen. Det ser ut så här.
 
-```txt
+```text
 # reload tmux conf
 bind-key r source-file ~/.tmux.conf
 ```
@@ -289,7 +289,3 @@ Avslutningsvis {#avslutning}
 Att lära sig tmux, eller annat motsvarande terminal multiplexer, är väl investerad tid för den som likt en webbprogrammerare spenderar mycket tid vid dator och terminal.
 
 Om du stöter på problem så kan du alltid [fråga i forumet om Unix och Linux](forum/viewforum.php?f=49).
-
-
-
-

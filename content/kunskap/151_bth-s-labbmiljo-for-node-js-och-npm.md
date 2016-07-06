@@ -40,7 +40,7 @@ Men, det är alltså samma maskiner som du når via ssh.student.bth.se och du ha
 
 Du loggar in som vanligt över ssh.
 
-```txt
+```text
 ssh mosstud@nodejs1.student.bth.se
 ```
 
@@ -50,7 +50,7 @@ Kommandon node och npm är installerade {#install}
 
 På båda maskinerna finns kommandona node och npm installerade.
 
-```txt
+```text
 >/usr/local/node/bin/node -v
 v0.8.18
 
@@ -114,9 +114,3 @@ Diskutera i forumet {#forumet}
 Den [ursprungliga forumtråden](f/10662), som beskrev hur man gör, finns kvar.
 
 Jag startade en ny forumtråd -- där vi kan samla saker som rör [node.js, npm och skolans labbmiljö](t/1823). Ställ dina frågor och funderingar i den tråden, eller kanske har du tips och tricks som kan förbättra labbmiljön.
-
-
-
-
-
-
