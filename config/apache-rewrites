@@ -1,0 +1,15 @@
+RewriteEngine on
+
+# /image/
+RewriteRule ^/image/(.*)$        /cimage/imgd.php?src=$1 [QSA,NC,L]
+
+# /forum
+RewriteRule ^/t/([0-9]+)$ /forum/viewtopic.php?t=$1 [NE,R=301,L]
+RewriteRule ^/f/([0-9]+)$ /forum/viewtopic.php?p=$1#p$1 [NE,R=301,L]
+
+# Rewrite to frontcontroller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /index.php/$1 [NC,L]
+
