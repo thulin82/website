@@ -112,6 +112,13 @@ submodule-update:
 	git pull --recurse-submodules && git submodule foreach git pull origin master
 
 
+# target: server-node-echo    - Start up the echo server.
+.PHONY: server-node-echo
+server-node-echo:
+	@echo $(call HELPTEXT,$@)
+	cd $(LOCAL_HTDOCS)/htdocs/repo/javascript/example/lekplats/broadcast-server-with-node-js-and-html5-websockets && nodejs websocket_broadcastserver.js 
+
+
 
 #
 # Build
