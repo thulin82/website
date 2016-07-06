@@ -4,3 +4,6 @@
 [submodule "htdocs/forum"]
 	path = htdocs/forum
 	url = git@bitbucket.org:mosbth/dbwebb-forum.git
+[submodule "htdocs/repo/javascript"]
+	path = htdocs/repo/javascript
+	url = https://github.com/dbwebb-se/javascript.git
