@@ -65,7 +65,7 @@ Administrationen har fixat ett excelark som visar samtliga salar på BTH i Karls
 
 Du hittar excelarket i ditt kursrepo under `example/proj/resources`. Information i excelarket ser ut ungefär så här.
 
-```txt
+```text
 H430	Unixlabb			Karlskrona	H-huset	4	Labrationssal	
 A303	Monsunen			Karlskrona	A-huset	3	Konferensrum	18
 ```
@@ -123,7 +123,7 @@ Skapa en server i Node.js (ES6) som kan visa och söka bland salar via följande
 
 Spara koden för servern, och det som servern behöver, i en underkatalog `bthappen/server`. Servern skall startas på följande sätt där man kan ange vilken port som servern skall använda.
 
-```txt
+```text
 bthappen/server/index.js --port <number>
 ```
 
@@ -137,7 +137,7 @@ Servern skall skriva ut en loggtext som visar vilken route den tar emot, från v
 
 Skapa en klient i Node.js (ES6) som du använder för att testa servern. Din klient skall vara byggd likt den klient du gjorde i kmom06. Den skall använda en egen prompt med modulen readline samt innehålla ett menysystem som ser ut så här.
 
-```txt
+```text
 Commands available:
 
  exit            Leave this program.
@@ -151,7 +151,7 @@ Commands available:
 
 Spara koden för klienten, och det som klienten behöver, i en underkatalog `bthappen/client`. Klienten skall startas på följande sätt där man kan ange vilken server och port som klienten skall använda för att koppla upp sig.
 
-```txt
+```text
 bthappen/client/index.js --server <server> --port <number>
 ```
 
@@ -235,7 +235,3 @@ Redovisning {#redovisning}
 # Ställ dig i kursrepot
 dbwebb publish me
 ```
-
-
-
-

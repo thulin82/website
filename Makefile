@@ -238,6 +238,7 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerAlias local.$${site}
 	ServerAlias do1.$${site}
 	ServerAlias do2.$${site}
+	ServerAlias bth1.$${site}
 	DocumentRoot $(HTDOCS_BASE)/$${site}/htdocs
 
 	<Directory />
@@ -252,6 +253,9 @@ ServerAdmin $(SERVER_ADMIN)
 		   ExpiresActive On
 		   ExpiresDefault "access plus 1 week"
 	</FilesMatch>
+
+	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
+	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
 
 	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
 	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined
@@ -291,6 +295,7 @@ ServerAdmin $(SERVER_ADMIN)
 	ServerName $${site}
 	ServerAlias do1.$${site}
 	ServerAlias do2.$${site}
+	ServerAlias bth1.$${site}
 	Redirect "/" "https://$${site}/"
 </VirtualHost>
 
@@ -317,6 +322,9 @@ ServerAdmin $(SERVER_ADMIN)
 		   ExpiresActive On
 		   ExpiresDefault "access plus 1 week"
 	</FilesMatch>
+
+	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
+	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
 
 	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
 	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined

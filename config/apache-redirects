@@ -103,6 +103,11 @@ Redirect /webutv    /utbildning/webbutveckling-och-programmering-30hp
 Redirect /webprog   /utbildning/webbprogrammering-och-databaser-30hp
 
 
+# download
+Redirect /apt-cyg /download/apt-cyg
+
+
+
 #
 # Below from original dbwebb.se
 #
@@ -151,7 +156,6 @@ Redirect /dbwebb2/kursbeskrivning		http://edu.bth.se/utbildning/utb_kurs.asp?Kur
 Redirect /lydia/tutorial			/forum/viewtopic.php?f=14&t=46
 Redirect /wip/oversikt				https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFpWbjlhVEMxc0VrSUZRTWU5LVVHT1E&usp=sharing
 Redirect /wip/kvalitet				https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGdVbkRGVXl0ZlZHelczV05hbFlkN1E&usp=sharing
-Redirect /f					/forum/viewtopic.php?t=
 Redirect /kurser/oversikt			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDl5ZEJTZzVIM28wOEt1S0xZbk5rcFE
 Redirect /msdnaa				/bloggg/msdnaa-studenter-far-fria-microsoft-produkter-under-studietiden
 #Redirect /linkedin				http://www.linkedin.com/groups/Webbprogrammering-och-Databaser-dbwebbse-3781398
@@ -160,6 +164,7 @@ Redirect /msdnaa				/bloggg/msdnaa-studenter-far-fria-microsoft-produkter-under-
 
 # forum redirects
 Redirect /forum/utbildning/htmlphp		/forum/viewforum.php?f=4
+#Redirect /forum/utbildning/design		/forum/viewforum.php?f=X
 Redirect /forum/utbildning/oophp		/forum/viewforum.php?f=37
 Redirect /forum/utbildning/phpmvc		/forum/viewforum.php?f=35
 Redirect /forum/utbildning/phpmvc-v2	/forum/viewforum.php?f=40
@@ -169,6 +174,7 @@ Redirect /forum/utbildning/javascript1  /forum/viewforum.php?f=42
 Redirect /forum/utbildning/linux        /forum/viewforum.php?f=46
 Redirect /forum/utbildning/webapp       /forum/viewforum.php?f=47
 Redirect /forum/utbildning/webgl        /forum/viewforum.php?f=56
+#Redirect /forum/utbildning/oopython     /forum/viewforum.php?f=x
 
 
 
