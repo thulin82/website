@@ -93,6 +93,14 @@ local-publish-clear: local-cache-clear local-publish
 
 
 
+# target: local-publish-forum - Publish website and clear forum template cache.
+.PHONY: local-publish-forum
+local-publish-forum: local-cache-clear local-publish
+	@echo $(call HELPTEXT,$@)
+	-sudo rm -f $(LOCAL_HTDOCS)/cache/forum/tpl_dbwebb-v2.0_*
+
+
+
 # target: codebase-update    - Update codebase.
 .PHONY: codebase-update
 codebase-update:
@@ -256,9 +264,9 @@ ServerAdmin $(SERVER_ADMIN)
 		Allow from all
 	</Directory>
 
-	<FilesMatch "\.(jpe?g|png|gif|js|css|svg)$">
-		   ExpiresActive On
-		   ExpiresDefault "access plus 1 week"
+	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
+		ExpiresActive On
+		ExpiresDefault "access plus 1 week"
 	</FilesMatch>
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
@@ -325,9 +333,9 @@ ServerAdmin $(SERVER_ADMIN)
 		Allow from all
 	</Directory>
 
-	<FilesMatch "\.(jpe?g|png|gif|js|css|svg)$">
-		   ExpiresActive On
-		   ExpiresDefault "access plus 1 week"
+	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
+		ExpiresActive On
+		ExpiresDefault "access plus 1 week"
 	</FilesMatch>
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
