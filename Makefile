@@ -272,6 +272,9 @@ ServerAdmin $(SERVER_ADMIN)
 	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
 	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
 
+	#LogLevel alert rewrite:trace6
+	# tail -f error.log | fgrep '[rewrite:'
+
 	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
 	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined
 </VirtualHost>
@@ -340,6 +343,9 @@ ServerAdmin $(SERVER_ADMIN)
 
 	Include $(HTDOCS_BASE)/$${site}/config/apache-redirects
 	Include $(HTDOCS_BASE)/$${site}/config/apache-rewrites 
+
+	#LogLevel alert rewrite:trace6
+	# tail -f error.log | fgrep '[rewrite:'
 
 	ErrorLog  $(HTDOCS_BASE)/$${site}/error.log
 	CustomLog $(HTDOCS_BASE)/$${site}/access.log combined
