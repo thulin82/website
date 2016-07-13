@@ -16,7 +16,7 @@ Redirect 301 /kod-exempel/ https://arkiv.dbwebb.se/kod-exempel/
 
 #
 #
-Redirect /kurser/javascript/lekplats/ /repo/javascript/example/lekplats/
+Redirect /kurser/javascript/lekplats /repo/javascript/example/lekplats
 #Redirect /javascript/lekplats/ /repo/javascript/example/lekplats/
 
 
