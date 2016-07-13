@@ -15,6 +15,12 @@ Redirect 301 /kod-exempel/ https://arkiv.dbwebb.se/kod-exempel/
 
 
 #
+#
+Redirect /javascript/lekplats/ /repo/javascript/example/lekplats/
+
+
+ 
+#
 # Old redirects when moved old.dbwebb.se to v2.dbwebb.se
 #
 Redirect /javascript/kmom01/intro /kunskap/javascript-argh-maste-jag
