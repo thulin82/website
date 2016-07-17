@@ -19,7 +19,7 @@ Till slut knyter vi ihop det genom att integrera multisidan i din me-webbplats. 
 
 Det blir en hel del PHP i detta kursmomentet.
 
-[FIGURE src=/image/snapvt15/me3-intro.png?w=w2 class="right" caption="En multisida i PHP, inte snygg, men det är koden bakom som räknas för tillfället."]
+[FIGURE src=/image/snapvt15/me3-intro.png?w=w2 caption="En multisida i PHP, inte snygg, men det är koden bakom som räknas för tillfället."]
 
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
@@ -116,7 +116,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Fick du hjälp av guiden php20? 
 * Vad tyckte du om videoserien från YouTube och Codecourse?
 * Vad tycker du om PHP-boken som är kurslitteratur?
-
-
-
-
