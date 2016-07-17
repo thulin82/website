@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-  "2013-12-10": (C, mos) Formaterade om inledningen.
+  "2013-12-10": (D, mos) Formaterade om inledningen.
   "2013-12-03": (C, mos) Läsanvisning om Object.create på MDN och Crockford om privata
     metoder.
   "2012-12-13": (B, mos) Lade till föreläsningsslides.
@@ -51,7 +51,7 @@ Böckerna ger dig grunden till de övningar som du senare skall göra.
 
 Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distansstudenten.
 
-* [Översikt av kursmomentet](<a href='https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom05-ht13.pdf'>https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom05-ht13.pdf</a>).
+* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom05-ht13.pdf).
 
 
 
@@ -101,7 +101,7 @@ Här följer lite kuriosa om matematik, fysik och krafter, överkurs för den so
 
 Gör följande övningar, de behövs för att klara uppgifterna. 
 
-* Häng med när Mikael försöker bygga grunderna till en klon av det [klassiska gamla spelet Asteroids](<a href='http://en.wikipedia.org/wiki/Asteroids_%28video_game%29'>http://en.wikipedia.org/wiki/Asteroids_%28video_game%29</a>).  
+* Häng med när Mikael försöker bygga grunderna till en klon av det [klassiska gamla spelet Asteroids](http://en.wikipedia.org/wiki/Asteroids_%28video_game%29).  
   kunskap/ett-spel-i-html5-canvas-med-javascript-och-prototypbaserad-programmering
    
 Jobba igenom övningen som innehåller kodningsövningar och en del läsanvisningar som du skall göra. Detta är kärnan i kursmomentet och ger dig grunden att stå på.
@@ -114,7 +114,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör ett enkelt spel i HTML5 Canvas. Du skall använda prototypbaserad programmering för att strukturera din kod. Ditt spel kan vara enkelt eller svårt. Hitta på någon egen enkel idé eller gör en klon av ett befintligt gammalt klassiskt spel. Planera så att du håller tiden för kursmomentet.
 
-Har du ingen bra idé så kan du välja att göra en klon av [Atarix Lunar Lander](<a href='http://en.wikipedia.org/wiki/Lunar_Lander_%28arcade_game%29'>http://en.wikipedia.org/wiki/Lunar_Lander_%28arcade_game%29</a>). Eller ett enkelt bilspel som styr runt på en bana i jakt på snabbare varvtider. Mer inspiration finner du på [Wikipedias kategori om Arcade-spel](<a href='http://en.wikipedia.org/wiki/Category:Arcade_games'>http://en.wikipedia.org/wiki/Category:Arcade_games</a>).
+Har du ingen bra idé så kan du välja att göra en klon av [Atarix Lunar Lander](http://en.wikipedia.org/wiki/Lunar_Lander_%28arcade_game%29). Eller ett enkelt bilspel som styr runt på en bana i jakt på snabbare varvtider. Mer inspiration finner du på [Wikipedias kategori om Arcade-spel](http://en.wikipedia.org/wiki/Category:Arcade_games).
 
 
 
@@ -145,7 +145,3 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-
