@@ -13,6 +13,11 @@ Redirect 301 /examples	/kod-exempel
 Redirect 301 /kod-exempel/dynamic_menu.php  /kod-exempel/dynamic_php_menu
 Redirect 301 /kod-exempel/ https://arkiv.dbwebb.se/kod-exempel/
 
+# Archive
+Redirect 301 /skalle/   https://arkiv.dbwebb.se/skalle/
+Redirect 301 /sylvanas/ https://arkiv.dbwebb.se/sylvanas/
+
+
 
 #
 #
