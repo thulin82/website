@@ -1,1 +1,1 @@
-../../labbmiljo/125_texteditor.md
+../../../labbmiljo/125_texteditor.md

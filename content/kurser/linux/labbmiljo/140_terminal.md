@@ -1,1 +1,1 @@
-../../labbmiljo/140_terminal.md
+../../../labbmiljo/140_terminal.md

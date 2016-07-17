@@ -1,1 +1,1 @@
-../../labbmiljo/120_operativsystem.md
+../../../labbmiljo/120_operativsystem.md

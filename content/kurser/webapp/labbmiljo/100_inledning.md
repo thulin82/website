@@ -1,1 +1,1 @@
-../../labbmiljo/block-inledning-generell.md
+../../../labbmiljo/100_inledning.md

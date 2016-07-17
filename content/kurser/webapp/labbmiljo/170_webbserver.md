@@ -1,1 +1,1 @@
-../../labbmiljo/block-webbserver-endast.md
+../../../labbmiljo/170_webbserver.md

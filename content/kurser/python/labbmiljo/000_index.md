@@ -1,1 +1,1 @@
-../../labbmiljo/000_index.md
+../../../labbmiljo/000_index.md

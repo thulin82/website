@@ -1,1 +1,1 @@
-../../labbmiljo/190_debian-server.md
+../../../labbmiljo/190_debian-server.md

@@ -1,1 +1,1 @@
-../../labbmiljo/200_firefox-os.md
+../../../labbmiljo/200_firefox-os.md

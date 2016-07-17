@@ -1,1 +1,1 @@
-../../labbmiljo/130_webblasare.md
+../../../labbmiljo/130_webblasare.md
