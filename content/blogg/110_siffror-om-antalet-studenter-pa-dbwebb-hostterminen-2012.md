@@ -19,7 +19,7 @@ Höstterminen har startat och alla är på plats. Låt oss kika på lite siffror
 Antalet ansökningar {#ansok}
 ------------------------------------------------------------
 
-Enligt webbplatsen <a href='http://statistik.vhs.se/'>http://statistik.vhs.se/</a> så var det 1230 ansökningar till kurserna och kurspaketen för höstterminen 2012. Det är en ökning med nästan 100% sedan vårterminen. 
+Enligt webbplatsen [statistik.vhs.se](http://statistik.vhs.se/) så var det 1230 ansökningar till kurserna och kurspaketen för höstterminen 2012. Det är en ökning med nästan 100% sedan vårterminen. 
 
 | Termin | Ansökningar fristående kurser | Ansökningar kurspaket | Totalt | Kommentar |
 |--------|------------------------------:|----------------------:|-------:|-----------|
@@ -75,6 +75,5 @@ Summering {#summering}
 
 Bortsett från att statistik är roligt så tycker jag att det är väldigt viktigt att ha koll på sin verksamhet. Siffror kan hjälpa dig att få en bild av det du sysslar med och kan ge ledtrådar till hur du kan utveckla din verksamhet.
 
-* Du kan diskutera denna artikel i forumet:  
-  <a href='http://dbwebb.se/forum/viewtopic.php?f=32&t=587'>http://dbwebb.se/forum/viewtopic.php?f=32&t=587</a>
+* Du kan diskutera denna artikel i [forumet](t/587).
   

@@ -19,17 +19,14 @@ Kurspaketet heter: "Databaser, HTML, CSS, JavaScript och PHP", omfattar 30hp och
 
 Du kan se detaljer på antingen BTH's hemsida eller via webbplatsen antagningen.se.
 
-* [Sök på databaser via BTH's hemsida](<a href='http://edu.bth.se/utbildning/utb_sok_resultat.asp?enkel-sok=Databaser&lang=sv'>http://edu.bth.se/utbildning/utb_sok_resultat.asp?enkel-sok=Databaser&lang=sv</a>)
-* [Sök på "Databaser, HTML, CSS, JavaScript och PHP" via antagningen.se](<a href='https://www.antagning.se/se/search?period=VT_2013&freeText=Databaser%2C+HTML%2C+CSS%2C+JavaScript+och+PHP'>https://www.antagning.se/se/search?period=VT_2013&freeText=Databaser%2C+HTML%2C+CSS%2C+JavaScript+och+PHP</a>)
+* [Sök på databaser via BTH's hemsida](http://edu.bth.se/utbildning/utb_sok_resultat.asp?enkel-sok=Databaser&lang=sv')
+* [Sök på "Databaser, HTML, CSS, JavaScript och PHP" via antagningen.se](https://www.antagning.se/se/search?period=VT_2013&freeText=Databaser%2C+HTML%2C+CSS%2C+JavaScript+och+PHP)
 
 Till höstterminen tog vi emot fler än 1200 ansökningar till kurserna i dbwebb-paketet. Jättekul att kurserna är attraktiva :-). Se till att du söker i tid, det finns inga garantier för att det kommer vara möjlighet för sen anmälan. 
 
-* Vill du se statistik för tidigare perioder så hittar du den på följande hemsida:  
-  <a href='http://statistik.vhs.se/'>http://statistik.vhs.se/</a>
+* Vill du se statistik för tidigare perioder så hittar du den på [statistik.vhs.se](http://statistik.vhs.se/).
 
 Varmt välkommen med din ansökan!
 
-* Läs mer om detta eller ställ dina frågor i forumtråden:  
-  <a href='http://dbwebb.se/f/3087'>http://dbwebb.se/f/3087</a>
-
+* Läs mer om detta eller ställ dina frågor i [forumtråden](f/3087).
  

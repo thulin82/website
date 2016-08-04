@@ -35,13 +35,13 @@ Git är ett versionshanteringssystem utvecklat av samma person som skapat Linux,
 Git är alltså ett verktyg för att konfigurationshantera programvara. Det fungerar enklast att skriva git-kommandon i terminalfönstret. Även om det finns visst stöd via grafiska verktyg så har jag för egen del inte funnit en bra klient, ännu. Så, här handlar det om terminalfönster.
 
 Webbplatsen för Git finns här:  
-  <a href='http://git-scm.com/'>http://git-scm.com/</a>
+  [git-scm.com/](http://git-scm.com/)
 
 
 På webbplatsen hittar vi dokumentation och vi hittar en trevlig liten interaktiv testapplikation som kan hjälpa oss att komma igång med Git.
 
 * Lär dig Git med en interaktiv övning på 15 minuter.  
-  <a href='http://try.github.com/'>http://try.github.com/</a>
+  [try.github.com/](http://try.github.com/)
 
 Så långt så bra, låt oss börja med att installera Git på vår egen maskin.
 
@@ -49,13 +49,11 @@ Så långt så bra, låt oss börja med att installera Git på vår egen maskin.
 
 ###Installera Git {#install-git}
 
-Börja med att ladda ned och installera programvaran för Git:
-
-* <a href='http://git-scm.com/download'>http://git-scm.com/download</a>
+Börja med att [ladda ned och installera programvaran](http://git-scm.com/download) för Git.
 
 Du kan följa med hur jag gör i följande video.
 
-[YOUTUBE src=QvZXkGrHi-Y width=630 caption=Mikael installerar Git.]
+[YOUTUBE src=QvZXkGrHi-Y width=630 caption="Mikael installerar Git."]
 
 Bra, Git är installerat och vi kan skapa vårt första repository.
 
@@ -112,7 +110,7 @@ Du kan följa med hur jag gör i följande video.
 De magiska orden som länkar ihop ditt lokala repo med ett repo på GitHub är alltså:
 
 ```bash
-git remote add origin <a href='https://github.com/dbwebb/hello'>https://github.com/dbwebb/hello</a>
+git remote add origin https://github.com/dbwebb/hello
 git push -u origin master
 ```
 
@@ -121,7 +119,7 @@ Nu har vi skapat ett repo som finns på GitHub. Bra, då kan vi börja jobba på
 [INFO]
 **Bugg i Git Windows 1.8.5 [^3]**
 
-När man pushar ett repo över https så fungerar inte interaktiv inloggning, man "promptas" inte för lösenord och användare. Använder man ssh-nycklar är det inget problem, annars behöver man [nedgradera till version 1.8.4](<a href='https://github.com/swcarpentry/bc/issues/234#issuecomment-33055444'>https://github.com/swcarpentry/bc/issues/234#issuecomment-33055444</a>).
+När man pushar ett repo över https så fungerar inte interaktiv inloggning, man "promptas" inte för lösenord och användare. Använder man ssh-nycklar är det inget problem, annars behöver man [nedgradera till version 1.8.4](https://github.com/swcarpentry/bc/issues/234#issuecomment-33055444).
 
 ```bash
 git --version
@@ -160,7 +158,7 @@ Jag brukar alltid använda mig av `git push` och från och med version 2.0 av Gi
 git config --global push.default simple
 ```
 
-* Läs mer på manualsidan för [`git-config` (sök på push.default)](<a href='http://git-scm.com/docs/git-config'>http://git-scm.com/docs/git-config</a>).
+* Läs mer på manualsidan för [`git-config` (sök på push.default)](http://git-scm.com/docs/git-config).
 
 [/INFO]
 
@@ -182,10 +180,10 @@ Du kan följa med hur jag gör i följande video.
 
 Läs gärna mer i manualen om respektive kommando:
 
-* [`git commit`](<a href='http://git-scm.com/docs/git-commit'>http://git-scm.com/docs/git-commit</a>)
-* [`git push`](<a href='http://git-scm.com/docs/git-push'>http://git-scm.com/docs/git-push</a>)
-* [`git tag`](<a href='http://git-scm.com/docs/git-tag'>http://git-scm.com/docs/git-tag</a>)
-* [`git config`](<a href='http://git-scm.com/docs/git-config'>http://git-scm.com/docs/git-config</a>)
+* [`git commit`](http://git-scm.com/docs/git-commit)
+* [`git push`](http://git-scm.com/docs/git-push)
+* [`git tag`](http://git-scm.com/docs/git-tag)
+* [`git config`](http://git-scm.com/docs/git-config)
 
 
 
@@ -197,19 +195,19 @@ Nu när repot finns på GitHub så är det enkelt för en och var att ladda ned 
 Vill man senare ladda ned den allra senaste varianten så görs det med `pull`.
 
 ```bash
-git clone <a href='https://github.com/dbwebb/hello'>https://github.com/dbwebb/hello</a>
+git clone https://github.com/dbwebb/hello
 
 git pull # hämta ned senaste ändringarna från repot på GitHub
 ```
 
 Du kan följa med hur jag gör i följande video.
 
-[YOUTUBE src=hCYgEqiKOjE width=613 caption=Mikael skapar konto på GitHub och länkar ihop det lokala repot med GitHub.]
+[YOUTUBE src=hCYgEqiKOjE width=613 caption="Mikael skapar konto på GitHub och länkar ihop det lokala repot med GitHub."]
 
 Läs gärna mer i manualen om respektive kommando:
 
-* [`git clone`](<a href='http://git-scm.com/docs/git-clone'>http://git-scm.com/docs/git-clone</a>)
-* [`git pull`](<a href='http://git-scm.com/docs/git-clone'>http://git-scm.com/docs/git-clone</a>)
+* [`git clone`](http://git-scm.com/docs/git-clone)
+* [`git pull`](http://git-scm.com/docs/git-clone)
 
 
 
@@ -220,9 +218,9 @@ Nu har du kommit igång med både Git och GitHub. Som du säkert förstår så �
 
 Lycka till och kämpa på!
 
-Dagens lästips är [manualen för Git](<a href='http://git-scm.com/book'>http://git-scm.com/book</a>).
+Dagens lästips är [manualen för Git](http://git-scm.com/book).
 
-När du blir varm i kläderna så kommer du att vilja sätta upp ssh-nycklar så att du slipper skriva lösenordet varje gång. Läs om hur du [sätter upp ssh-nycklarna på GitHub](<a href='https://help.github.com/articles/generating-ssh-keys'>https://help.github.com/articles/generating-ssh-keys</a>). Men det kan upplevas lite pilligt, när du gör det första gången.
+När du blir varm i kläderna så kommer du att vilja sätta upp ssh-nycklar så att du slipper skriva lösenordet varje gång. Läs om hur du [sätter upp ssh-nycklarna på GitHub](https://help.github.com/articles/generating-ssh-keys). Men det kan upplevas lite pilligt, när du gör det första gången.
 
 
 
@@ -233,17 +231,11 @@ Du kan diskutera denna artikel i forumet, eller ställa frågor kring Git och Gi
 
 
 
-
-
-
-
-
 Referenser {#referenser}
 ------------------------
 
 Följande är referenser som använts som fotnötter i texten.
 
-[^1]: [Wikipedia: Hur Git kom till](<a href='http://en.wikipedia.org/wiki/Git_%28software%29#History'>http://en.wikipedia.org/wiki/Git_%28software%29#History</a>).
-[^2]: [Stack Overflow: Push default ändras i Git 2.0](<a href='http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0'>http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0</a>).
-[^3]: [Git error Windows 1.8.5, "could not read Username for https:"](<a href='https://github.com/swcarpentry/bc/issues/234'>https://github.com/swcarpentry/bc/issues/234</a>).
-
+[^1]: [Wikipedia: Hur Git kom till](http://en.wikipedia.org/wiki/Git_%28software%29#History).
+[^2]: [Stack Overflow: Push default ändras i Git 2.0](http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0).
+[^3]: [Git error Windows 1.8.5, "could not read Username for https:"](https://github.com/swcarpentry/bc/issues/234).

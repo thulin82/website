@@ -9,7 +9,7 @@ created: "2013-03-22 09:50:32"
 RSS-flöden
 ==================================
 
-<img src='/img/glyphicons/png/glyphicons_397_rss.png' alt='[rss-icon]' title='RSS-flöde' /> RSS-flöden är ett bra sätt att ha koll på vad som händer på en webbplats. Följande flöden finns att bevaka från dbwebb.se. När du ser RSS-iconen  så vet du att det finns ett RSS-flöde kopplat till innehållet.
+RSS-flöden är ett bra sätt att ha koll på vad som händer på en webbplats. Följande flöden finns att bevaka från dbwebb.se. När du ser RSS-iconen  så vet du att det finns ett RSS-flöde kopplat till innehållet.
 
 
 
@@ -32,13 +32,9 @@ RSS flöden för forumet {#forum}
 RSS-flöden via FeedBurner {#feedburner}
 --------------------------------------
 
-Du kan även prenumerera på dbwebb´s RSS-flöden via [RSS-tjänsten FeedBurner](<a href='http://feedburner.google.com'>http://feedburner.google.com</a>). Här är länkarna:
+Du kan även prenumerera på dbwebb´s RSS-flöden via [RSS-tjänsten FeedBurner](http://feedburner.google.com). Här är länkarna:
 
-* [RSS för senaste posterna i bloggen](<a href='http://feeds.feedburner.com/dbwebb/blogg'>http://feeds.feedburner.com/dbwebb/blogg</a>)
-* [RSS för senast uppdaterade kunskapsartiklar](<a href='http://feeds.feedburner.com/dbwebb/kunskap'>http://feeds.feedburner.com/dbwebb/kunskap</a>)
-* [RSS för senast uppdaterade tips från coachen](<a href='http://feeds.feedburner.com/dbwebb/coachen'>http://feeds.feedburner.com/dbwebb/coachen</a>)
-* [RSS för senaste posterna i forumet](<a href='http://feeds.feedburner.com/dbwebb/forum'>http://feeds.feedburner.com/dbwebb/forum</a>)
-
-
-
-
+* [RSS för senaste posterna i bloggen](http://feeds.feedburner.com/dbwebb/blogg)
+* [RSS för senast uppdaterade kunskapsartiklar](http://feeds.feedburner.com/dbwebb/kunskap)
+* [RSS för senast uppdaterade tips från coachen](http://feeds.feedburner.com/dbwebb/coachen)
+* [RSS för senaste posterna i forumet](http://feeds.feedburner.com/dbwebb/forum)

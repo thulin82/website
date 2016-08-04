@@ -17,11 +17,11 @@ En svensk bok i Databasteknik och täcker det man behöver veta om grunderna, da
 
 Det finns en egen webbplats för boken där man kan ta del av visst material tillsammans med en webbkurs.
 
-* <a href='http://www.databasteknik.se/'>http://www.databasteknik.se/</a>
+* [www.databasteknik.se](http://www.databasteknik.se/)
 
 Boken får ett mycket bra betyg av mig :-D.
 
-Boken används som referenslitteratur i kursen [oophp](/oophp) och [phpmvc](/phpmvc). Boken täcker även det som undervisas i campuskursen Databasteknik.
+Boken används som referenslitteratur i kursen [oophp](oophp) och [phpmvc](phpmvc). Boken täcker även det som undervisas i campuskursen Databasteknik.
 
 
 
@@ -48,10 +48,4 @@ BTH's bibliotek kan ej erbjuda boken som e-bok.
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5350
-
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5350).

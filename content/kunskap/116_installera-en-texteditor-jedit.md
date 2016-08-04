@@ -18,6 +18,13 @@ En bra texteditor, eller utvecklingsmiljö, är A och O och kan spara dig mycket
 
 <!--more-->
 
+[WARNING]
+**Äldre artikel**
+
+Denna artikel är äldre och nyare information finns på [/labbmiljo](labbmiljo).
+
+[/WARNING]
+
 Vi har valt jEdit för att den finns till alla miljöer. Men du kan välja din egen editor, se i slutet av artikeln för andra förslag på editor. Är du osäker så börjar du med jEdit.
 
 
@@ -27,18 +34,16 @@ Installera en texteditor, jEdit {#installera}
 
 Vi behöver en texteditor och valet föll på den java-baserade jEdit. Den finns på alla plattformar och den har stöd för att editera filerna över ssh/sftp via en plugin.
 
-* Ladda ned och installera jEdit.  
-  <a href='http://www.jedit.org/index.php?page=download'>http://www.jedit.org/index.php?page=download</a>
+* [Ladda ned och installera jEdit](http://www.jedit.org/index.php?page=download).
 
-Om du inte har Java på din maskin så behöver du ladda ned och installera Java Runtime Environment (JRE).
-
-* <a href='http://www.oracle.com/technetwork/java/javase/downloads'>http://www.oracle.com/technetwork/java/javase/downloads</a>
+Om du inte har Java på din maskin så behöver du [ladda ned och installera Java Runtime Environment (JRE)](http://www.oracle.com/technetwork/java/javase/downloads).
 
 Installera jEdit.
 
 [FIGURE src=/image/kunskap/jedit.png?w=w1 caption="Editorn jEdit är installerad och uppstartad."]
 
 Bekanta dig med editorn. Skapa och spara en fil. Kolla menyerna. Lek runt lite. Anpassa editorn som du vill ha den.
+
 
 
 ###Ställ in jEdit för Unix linefeed {#linefeed}
@@ -48,6 +53,7 @@ Dubbelkolla att editorn är inställd på att göra radbrytningar med Unix stil.
 Öppna fönstret för inställningar under "Utilities -> Options" alternativt "Utilities -> Global Options".
 
 [FIGURE src=/image/kunskap/jedit_linefeed.jpg?w=w1 caption="Se till att du använder Unix stil på radbrytningar."]
+
 
 
 ###Ställ in jEdit för UTF-8 {#utf8}
@@ -72,17 +78,14 @@ Du kan ställa in teckenkodningen både i Global options och Buffer options. I b
 [INFO]
 **Tips.**
 
-* Läs mer om hur man gör inställningen till UTF8.  
-  <a href='http://db-o-webb.blogspot.com/2010/08/andra-teckenkodning-i-jedit.html'>http://db-o-webb.blogspot.com/2010/08/andra-teckenkodning-i-jedit.html</a>
+* [Läs mer om hur man gör inställningen till UTF8](http://db-o-webb.blogspot.com/2010/08/andra-teckenkodning-i-jedit.html).
 [/INFO]
 
 [INFO]
 **Tips.**
 
-Läs om UTF-8 och Byte Order Mark (BOM) på Wikipedia:
+[Läs om [UTF-8](http://en.wikipedia.org/wiki/UTF-8'>http://en.wikipedia.org/wiki/UTF-8) och [Byte Order Mark (BOM)](http://en.wikipedia.org/wiki/Byte_order_mark) på Wikipedia.
 
-* <a href='http://en.wikipedia.org/wiki/UTF-8'>http://en.wikipedia.org/wiki/UTF-8</a>
-* <a href='http://en.wikipedia.org/wiki/Byte_order_mark'>http://en.wikipedia.org/wiki/Byte_order_mark</a>
 [/INFO]
 
 
@@ -116,15 +119,8 @@ Fler texteditorer som rekommenderas {#fler}
 
 Här finns ytterligare ett par texteditorer som kan rekommenderas:
 
-* Textwrangler (Mac)  
-  <a href='http://www.barebones.com/products/textwrangler/download.html'>http://www.barebones.com/products/textwrangler/download.html</a>
+* [Textwrangler (Mac)](http://www.barebones.com/products/textwrangler/download.html)
 
-* Notepad++ (Windows) tillsammans med WinSCP för filöverföring  
-  <a href='http://notepad-plus-plus.org/download/'>http://notepad-plus-plus.org/download/</a>  
-  <a href='http://winscp.net/eng/download.php'>http://winscp.net/eng/download.php</a>
+* [Notepad++ (Windows)](http://notepad-plus-plus.org/download/) tillsammans med [WinSCP](http://winscp.net/eng/download.php) för filöverföring.
 
 Självklart kan du använda din favoriteditor också, men det är inte säkert att vi har en liknande och kan hjälpa dig om du får problem. Bortsett från det så är det fritt fram att pröva vilka editorer du vill. Se bara till att du ställer in teckenkodningen till UTF8 NO-BOM och använd Unix radbrytning.
-
-
-
-

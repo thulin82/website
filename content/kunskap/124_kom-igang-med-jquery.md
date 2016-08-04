@@ -1,6 +1,10 @@
 ---
 author: mos
 category: javascript
+revision:
+    2013-01-29: (C, mos) Kommentar om att sätta default width & height i paket 4.  
+    2012-11-22: (B, mos) Mindre justering i exempelprogrammet för lightbox efter Bellas kommentarer.  
+    2012-11-15: (A, mos) Första utgåvan.  
 published: "2013-01-29"
 updated: "2013-11-26 13:27:02"
 created: "2012-09-11 10:36:01"
@@ -39,18 +43,15 @@ Nio små exempel med jQuery {#exempel}
 
 I första kursmomentet i kursen javascript började vi använda jQuery. Vi valde att använda funktionen `.ready()` för att exekvera vår JavaScript kod när hela DOM-trädet hade laddats. Du kan läsa om det här:
 
-* Inkludera jQuery skriptet och använd `.ready()`funktionen.  
-  <a href='http://dbwebb.se/javascript/kmom01/intro#jquery'>http://dbwebb.se/javascript/kmom01/intro#jquery</a>
+* [Inkludera jQuery skriptet och använd `.ready()`funktionen](javascript/kmom01/intro#jquery).  
 
 Detta bör innebära att du redan inkluderat jQuery i dina exempelprogram och att du använder funktionen `.ready()`.
 
 Som alla programmeringsspråk så har även jQuery en referensmanual. Det är som vanligt av yttersta vikt att vi blir kompisar med den. Googla hej vilt men vill du ha facit så finns det en plats, den rätta platsen, refmanualen. Ta och bekanta dig med den, redan nu, genom att kika på hur funktionen `.ready()` beskrivs.
 
-* Referensmanualen för jQuery  
-  * <a href='http://api.jquery.com/'>http://api.jquery.com/</a>
+* [Referensmanualen för jQuery](http://api.jquery.com/)
 
-* Slå upp funktionen `.ready()` i jQuerys referensmanual  
-  <a href='http://api.jquery.com/ready/'>http://api.jquery.com/ready/</a>
+* [Slå upp funktionen `.ready()` i jQuerys referensmanual](http://api.jquery.com/ready/)
 
 
 
@@ -62,17 +63,17 @@ Varje exempel ryms inom en liten låda där jag stoppat in lite innehåll i form
 
 *`index.php`*
 
-~~~syntax=html
+```html
 <div id='box1' class='box'>
 <img src='/image/mikael-roos/me-1.jpg' alt='' />
 <h1>Mitt liv som liten</h1>
 <p>Se vad roligt man kan ha när man är liten.</p>  
 </div>
-~~~
+```
 
 Sedan har jag gett lådorna lite färg och form och placerat ut dem på webbsidan. Det gör jag med jQuery. Så här ser mina lådor ut och de innehåller all kod för denna övning.
 
-* <a href='http://dbwebb.se/javascript/lekplats/nine-small-examples-to-get-started-with-jquery/'>http://dbwebb.se/javascript/lekplats/nine-small-examples-to-get-started-with-jquery/</a>
+* [javascript/lekplats/nine-small-examples-to-get-started-with-jquery](javascript/lekplats/nine-small-examples-to-get-started-with-jquery)
 
 Men låt oss ta det steg för steg.
  
@@ -91,7 +92,7 @@ Gör nu ett eget exempel där du skriver lite text, en rubrik och en bild. När 
 
 Koden för detta skulle kunna se ut så här: 
 
-~~~syntax=javascript
+```javascript
 $(document).ready(function(){
 
   $('#box1 h1, #box1 p, #box1 img').click(function() {
@@ -100,18 +101,19 @@ $(document).ready(function(){
   });
   
 });
-~~~
+```
 
 Relevanta funktioner i jQuery äro följande (se till att du kollar in deras sida i manualen):
 
-* <a href='http://api.jquery.com/click/'>http://api.jquery.com/click/</a>
-* <a href='http://api.jquery.com/toggleClass/'>http://api.jquery.com/toggleClass/</a>
+* [click](http://api.jquery.com/click)
+* [toggleClass](http://api.jquery.com/toggleClass)
 
 Kika på mitt exempel, numero uno, nummer ett. Där kan du testa hur min variant fungerar och studera dess källkod. Eller kika på videon.
 
-[YOUTUBE src=9ZEuWi5nDU0 width=613 caption=Första paketet handlar om att välja element och ändra dess style.]
+[YOUTUBE src=9ZEuWi5nDU0 width=613 caption="Första paketet handlar om att välja element och ändra dess style."]
 
 Så, nu har du förstått hur exemplen fungerar, eller hur? Då går vi vidare.
+
 
 
 2. Event propagering och att stoppa den {#ovning2}
@@ -127,14 +129,12 @@ För att hindra ett sådant beteende kan man använda metoden `event.stopPropaga
 
 Skapa ditt egna exempel där du visar hur propagering av event sker, hur du fångar det och hur du stoppar det från att flöda vidare upp i kedjan.
 
-* Läs snabbt om metoden för att stoppa propagering av eventkedjan:  
-  <a href='http://api.jquery.com/event.stopPropagation/'>http://api.jquery.com/event.stopPropagation/</a>
+* Läs snabbt om metoden för att [stoppa propagering av eventkedjan](http://api.jquery.com/event.stopPropagation/).
 
-* Skumma även innehållsförteckningen över de olika funktioner som finns för att hantera events.  
-  <a href='http://api.jquery.com/category/events/'>http://api.jquery.com/category/events/</a>
+* Skumma även innehållsförteckningen över de [olika funktioner som finns för att hantera events](http://api.jquery.com/category/events/).
 
 
-[YOUTUBE src=7x92LloKDkY width=613 caption=Så här fungerar event propagering.]
+[YOUTUBE src=7x92LloKDkY width=613 caption="Så här fungerar event propagering."]
 
 
 
@@ -143,26 +143,26 @@ Skapa ditt egna exempel där du visar hur propagering av event sker, hur du fån
 
 Med jQuery kan vi skapa nya element och lägga till dem i dokumentet, vi kan även ta bort dem. Principen är enkel, man skapar ett nytt element och väljer var man vill placera det. Man använder samma grundstruktur på anropet som tidigare, skillnaden är att vi här skapar en paragraph istället för att välja ut en.
 
-~~~syntax=javascript
+```javascript
 // Select all paragraphs in the document and make them pink.
 $('p').addClass('pink');
 
 // Create a new paragraph and add it after the element that has #someId
 $('<p>This is a new paragraph</p>').insertAfter('#someId');
-~~~
+```
 
 Ser du skillnanden mellan de två anropen ovan? Likt men ändå två skilda saker, den första väljer ut alla paragrafer i dokumentet och den andra skapar en ny paragraf.
 
 Du kan även ta bort element från dokumentet.
 
-~~~syntax=javascript
+```javascript
 // Add an element and add handler to remove the element on click
 $('<div></div>')
   .insertAfter('#palette')
   .click(function() {
     $(this).remove();
   });
-~~~
+```
 
 **Koda loss nu.** 
 
@@ -170,12 +170,12 @@ Skapa nu ett exempel där du har en knapp och varje gång du trycker på knappen
 
 I denna övning är följande funktioner relevanta att slå upp i manualen:
 
-* <a href='http://api.jquery.com/insertBefore/'>http://api.jquery.com/insertBefore/</a>
-* <a href='http://api.jquery.com/insertAfter/'>http://api.jquery.com/insertAfter/</a>
-* <a href='http://api.jquery.com/remove/'>http://api.jquery.com/remove/</a>
-* <a href='http://api.jquery.com/keypress/'>http://api.jquery.com/keypress/</a>
+* [insertBefore](http://api.jquery.com/insertBefore/)
+* [insertAfter](http://api.jquery.com/insertAfter/)
+* [remove](http://api.jquery.com/remove/)
+* [keypress](http://api.jquery.com/keypress/)
 
-[YOUTUBE src=4UpSHiyUIyk width=613 caption=Så här lägger vi till och tar bort element ur DOM-trädet.]
+[YOUTUBE src=4UpSHiyUIyk width=613 caption="Så här lägger vi till och tar bort element ur DOM-trädet."]
 
 
 
@@ -184,19 +184,19 @@ I denna övning är följande funktioner relevanta att slå upp i manualen:
 
 Att räkna ut bredd och höjd på ett element kan vara lite klurigt, man måste tänka på både marginaler, ramar, padding och själva innehållet. För att hantera detta har jQuery ett par inbyggda funktioner som du kan kika på:
 
-* <a href='http://api.jquery.com/width/'>http://api.jquery.com/width/</a>
-* <a href='http://api.jquery.com/height/'>http://api.jquery.com/height/</a>
+* [width](http://api.jquery.com/width/)
+* [height](http://api.jquery.com/height/)
 
 Det kan också vara av intresse att kika på följande funktionern och se hur de skiljer sig mot `width()` och `height()`.
 
-* <a href='http://api.jquery.com/outerWidth/'>http://api.jquery.com/outerWidth/</a>
-* <a href='http://api.jquery.com/innerWidth/'>http://api.jquery.com/innerWidth/</a>
-* <a href='http://api.jquery.com/outerHeight/'>http://api.jquery.com/outerHeight/</a>
-* <a href='http://api.jquery.com/innerHeight/'>http://api.jquery.com/innerHeight/</a>
+* [outerWidth](http://api.jquery.com/outerWidth/)
+* [innerWidth](http://api.jquery.com/innerWidth/)
+* [outerHeight](http://api.jquery.com/outerHeight/)
+* [innerHeight](http://api.jquery.com/innerHeight/)
 
 Du kan också definera och läsa av ett elements dimensioner med funktionen `css('height')` och som du kan läsa i manualen så skiljer de sig lite åt i sitt beteende. 
 
-* <a href='http://api.jquery.com/css/'>http://api.jquery.com/css/</a>
+* [css](http://api.jquery.com/css/)
 
 [INFO]
 **Bra att veta**
@@ -215,7 +215,7 @@ Se till att bilden har en default width & height, innan du försöker ändra des
 
 Gör ett exempel där du via knappar kan ändra bredd och höjd på ett element, kika gärna på mitt exempel men vänta med att kika på källkoden tills du är klar (eller mörbultad).
 
-[YOUTUBE src=deXgBTiExgs width=613 caption=Att hantera storleken på ett element kan vara klurigt.]
+[YOUTUBE src=deXgBTiExgs width=613 caption="Att hantera storleken på ett element kan vara klurigt."]
 
 
 
@@ -226,8 +226,8 @@ Visst är det roligt med animeringar? Kanske kommer ni ihåg det gamla HTML-elem
 
 I jQuery's core finns det ett par enklare animeringar inbyggda. Kika snabbt på följande i manualen.
 
-* <a href='http://api.jquery.com/slideToggle/'>http://api.jquery.com/slideToggle/</a>
-* <a href='http://api.jquery.com/fadeToggle/'>http://api.jquery.com/fadeToggle/</a>
+* [slideToggle](http://api.jquery.com/slideToggle/)
+* [fadeToggle](http://api.jquery.com/fadeToggle/)
 
 Du kan även söka i manualen på `fade`eller `slide` så ser du ett par varianter av dessa funktioner.
 
@@ -235,7 +235,7 @@ Du kan även söka i manualen på `fade`eller `slide` så ser du ett par variant
 
 Gör ett exempel som visar hur du använder `slideToggle()` och `fadeToggle()`, eller dess syskon-funktioner, allt för att leka runt med lite animeringar på din webbsida.
 
-[YOUTUBE src=47RzLDfXgDQ width=613 caption=Mikael animerar sitt lilla exempelprogram.]
+[YOUTUBE src=47RzLDfXgDQ width=613 caption="Mikael animerar sitt lilla exempelprogram."]
 
 
 
@@ -250,25 +250,25 @@ Första steget till en lightbox är att skapa en halvt genomskinlig `div` som t�
 
 Steg två är att visa en laddnings-bild som som tyder på att något laddas. En sån där snurrande, animerad bild brukar fungera bra. 
 
-Googla på "[loader png](<a href='https://www.google.se/search?q=loader+png'>https://www.google.se/search?q=loader+png</a>)" eller "[animated loader](<a href='https://www.google.se/search?q=animated+loader'>https://www.google.se/search?q=animated+loader</a>)" så får du hjälp att hitta, eller skapa, din egen `loader.png`.  
+Googla på "[loader png]https://www.google.se/search?q=loader+png)" eller "[animated loader](https://www.google.se/search?q=animated+loader)" så får du hjälp att hitta, eller skapa, din egen `loader.png`.  
 
 När mål-bilden är färdigladdad så visar vi upp den och döljer laddnings-bilden.
 
 När användaren är klar så klickar han på bilden eller vid sidan av bilden och så skall allt återgå till ursprungsläget. Det kan vara bra att lägga till ett liknande event för `esc`-tangenten också.
 
-[Kursboken om jQuery]([]BASEPATH]kunskap/boken-jquery-novice-to-ninja) har ett kapitel om hur man bygger en lightbox och mitt exempel utgår från det kapitlet.
+[Kursboken om jQuery](kunskap/boken-jquery-novice-to-ninja) har ett kapitel om hur man bygger en lightbox och mitt exempel utgår från det kapitlet.
 
 Jag använde ett par nya funktioner när jag gjorde exemplet. Du kan ta en titt på dessa i manualen, du kan behöva dem.
 
-* <a href='http://api.jquery.com/scrollTop/'>http://api.jquery.com/scrollTop/</a>
-* <a href='http://api.jquery.com/animate/'>http://api.jquery.com/animate/</a>
-* <a href='http://api.jquery.com/hide/'>http://api.jquery.com/hide/</a>
-* <a href='http://api.jquery.com/attr/'>http://api.jquery.com/attr/</a>
-* <a href='http://api.jquery.com/remove/'>http://api.jquery.com/remove/</a>
+* [scrollTop](http://api.jquery.com/scrollTop/)
+* [animate](http://api.jquery.com/animate/)
+* [hide](http://api.jquery.com/hide/)
+* [attr](http://api.jquery.com/attr/)
+* [remove](http://api.jquery.com/remove/)
 
 Så här kan det se ut när det är klart.
 
-[YOUTUBE src=_MjUuqofhyE width=613 caption=En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser.]
+[YOUTUBE src=_MjUuqofhyE width=613 caption="En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser."]
 
 **Koda loss nu** och bygg din egna lightbox. Försök själv och se hur långt dina vingar bär dig. Annars tar du hjälp av exempel och källkod. Det är en bra idé att söka lite på "jquery lightbox" och kika på ett par exempel, innan du börjar ditt kodande, kanske kan du hitta lite inspiration?
 
@@ -283,13 +283,13 @@ Men här skall vi koda vårt eget galleri, allt för att förstå hur det kan fu
 
 Jag använde ett par nya funktioner när jag gjorde exemplet. Du kan ta en titt på dessa i manualen eftersom du kan behöva dem.
 
-* <a href='http://api.jquery.com/each/'>http://api.jquery.com/each/</a>
-* <a href='http://api.jquery.com/first/'>http://api.jquery.com/first/</a>
-* <a href='http://api.jquery.com/trigger/'>http://api.jquery.com/trigger/</a>
+* [each](http://api.jquery.com/each/)
+* [first](http://api.jquery.com/first/)
+* [trigger](http://api.jquery.com/trigger/)
 
 Så här ser mitt galleri ut när det blev klart.
 
-[YOUTUBE src=oPZ20VOQ58I width=613 caption=En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser.]
+[YOUTUBE src=oPZ20VOQ58I width=613 caption="En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser."]
 
 **Koda loss nu** och bygg ditt eget galleri. Försök själv och se hur långt dina vingar bär dig. Annars tar du hjälp av exempel och källkod. Liksom i förra övningen så är det en bra idé att söka lite på "jquery gallery" och kika på ett par exempel, innan du börjar ditt kodande, kanske kan du hitta lite inspiration?
 
@@ -303,18 +303,18 @@ Många webbplatser vill visa ett antal bilder på förstasidan och byta dem med 
 Tanken är att välja ut vissa bilder, låt säga fyra stycken. Placera dem i en container och stacka dem ovanpå varandra med hjälp av `z-index`. Vi använder JavaScript-funktionen `setInterval()` för att byta bild med jämna mellanrum.
 
 * JavaScript funktioner för att sätta på och stänga av ett intervall:    
-  <a href='https://developer.mozilla.org/en-US/docs/DOM/window.setInterval'>https://developer.mozilla.org/en-US/docs/DOM/window.setInterval</a>
-  <a href='https://developer.mozilla.org/en-US/docs/DOM/window.clearInterval'>https://developer.mozilla.org/en-US/docs/DOM/window.clearInterval</a>
+  [window.setInterval](https://developer.mozilla.org/en-US/docs/DOM/window.setInterval)  
+  [window.clearInterval](https://developer.mozilla.org/en-US/docs/DOM/window.clearInterval)
 
 Jag använde ett par nya funktioner när jag gjorde exemplet. Du kan ta en titt på dessa i manualen eftersom du kan behöva dem.
 
-* <a href='http://api.jquery.com/length/'>http://api.jquery.com/length/</a>
-* <a href='http://api.jquery.com/eq/'>http://api.jquery.com/eq/</a>
-* <a href='http://api.jquery.com/siblings/'>http://api.jquery.com/siblings/</a>
+* [length](http://api.jquery.com/length/)
+* [eq](http://api.jquery.com/eq/)
+* [siblings](http://api.jquery.com/siblings/)
 
 Så här ser min slideshow ut när den blev klart.
 
-[YOUTUBE src=ZrV8kBZBErs width=613 caption=En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser.]
+[YOUTUBE src=ZrV8kBZBErs width=613 caption="En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser."]
 
 **Koda loss nu** och bygg din egen slideshow. Försök själv och se hur långt dina vingar bär dig. Annars tar du hjälp av exempel och källkod. Liksom i förra övningen så är det en bra idé att söka lite på "jquery slideshow" och kika på ett par exempel, innan du börjar ditt kodande, kanske kan du hitta lite inspiration?
 
@@ -328,7 +328,7 @@ När man börjar skriva kod med jQuery så kommer man till en nivå där man vil
 
 Så här kan du skapa en egen plugin till jQuery, se följande kod som en mall för din plugin, men den är också en fungerande plugin, `fadeInOut()` som gör en `fadeOut()` följt av en `fadeIn()` på valda objekt. 
 
-~~~syntax=javascript
+```javascript
 (function($) {
 
   $.fn.fadeInOut = function(options) {
@@ -344,29 +344,29 @@ Så här kan du skapa en egen plugin till jQuery, se följande kod som en mall f
   }
 
 }) (jQuery);
-~~~
+```
 
 För att sedan använda pluginen så är det bara att göra som med alla andra funktioner och här kan jag nu ändra de default-värden som finns genom att skicka in ett objekt till funktionen.
 
-~~~syntax=javascript
+```javascript
 $('#box9 img.example').click(function() {
   $(this).fadeInOut({'duration':2000});
 });
-~~~
+```
 
 Pröva exemplet och studera även följande nya funktioner som använts i exemplet.
 
-* <a href='http://api.jquery.com/jQuery.extend/'>http://api.jquery.com/jQuery.extend/</a>
+* [jQuery.extend](http://api.jquery.com/jQuery.extend/)
 
 Det är en riktigt god idé att även studera jQuery's manual för att skriva en egen plugin.
 
-* <a href='http://docs.jquery.com/Plugins/Authoring'>http://docs.jquery.com/Plugins/Authoring</a>
+* [Plugins/Authoring](http://docs.jquery.com/Plugins/Authoring)
 
 **Koda loss nu** och skapa en egen plugin. Försök själv och se hur långt dina vingar bär dig. Annars tar du hjälp av exempel och källkod. Du kan själv välja idé för din plugin. Gör en liten och enkel, det är ett bra sätt att komma igång.
 
 Så här ser mitt exempelprogram ut.
 
-[YOUTUBE src=yjvpHvIzqKc width=613 caption=En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser.]
+[YOUTUBE src=yjvpHvIzqKc width=613 caption="En lightbox är bra att ha i sin verktygslåda när man bygger webbplatser."]
 
 
 
@@ -374,14 +374,3 @@ Avslutningsvis {#avslutning}
 --------------------------------------------------------
 
 Bra jobbat! Du har kämpat dig igenom de första stegen för att bemästra jQuery. Du är nu redo för lite större utmaningar. Glöm inte att gå tillbaka hit för att dubbelkolla och låna kod. Det är alltid enklare att ha något att utgå ifrån.
-
-
-Revisionshistoria {#revision}
---------------------------------------------------------
-
-<span class='revision-history' markdown='1'>
-2013-01-29 (C, mos) Kommentar om att sätta default width & height i paket 4.  
-2012-11-22 (B, mos) Mindre justering i exempelprogrammet för lightbox efter Bellas kommentarer.  
-2012-11-15 (A, mos) Första utgåvan.  
-</span>
-

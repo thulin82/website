@@ -16,5 +16,4 @@ Jag gör iallafall mitt för att det skall vara enklare att komma in i bokens v�
 
 Håll till godo, en god bok är aldrig fel. En dålig bok bör förbli oläst dock, det är okey men mig.
 
-* Böcker inom webbprogrammering, ett urval:  
-  <a href='http://dbwebb.se/kunskap/category/bok'>http://dbwebb.se/kunskap/category/bok</a>
+* [Böcker inom webbprogrammering, ett urval](kunskap/category/bok)

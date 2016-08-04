@@ -52,23 +52,23 @@ Klientprogramvara för IRC {#klient}
 
 För att använda IRC behöver du en klientprogramvara som du använder för att koppla upp dig mor irc-servern och kanalerna som finns på servern. Här följer en lista på klienter som inte kostar något och som stödjer olika plattformar. Testa några av dem och se vilken som passar dig bäst.
  
-[Irssi](<a href='http://www.irssi.org/'>http://www.irssi.org/</a>)
+[Irssi](http://www.irssi.org/)
 
 : Terminalbaserad klient och fungerar i win/mac/linux, perfekt att köra ihop med terminalprogrammet screen och hela tiden vara inloggad.
 
-[Firefox Chatzilla](<a href='https://addons.mozilla.org/en-US/firefox/addon/chatzilla/'>https://addons.mozilla.org/en-US/firefox/addon/chatzilla/</a>)
+[Firefox Chatzilla](https://addons.mozilla.org/en-US/firefox/addon/chatzilla/)
 
 : Java-baserad plugin till Firefox som fungerar på alla plattformar.
 
-[Colloquy](<a href='http://colloquy.info/'>http://colloquy.info/</a>)
+[Colloquy](http://colloquy.info/)
 
 : En klient för mac-användaren.
 
-[HexChat](<a href='http://hexchat.org/'>http://hexchat.org/</a>)
+[HexChat](http://hexchat.org/)
 
 : En klient för windows och linux/unix.
 
-[Miranda](<a href='http://www.miranda-im.org/'>http://www.miranda-im.org/</a>)
+[Miranda](http://www.miranda-im.org/)
 
 : En klient för windows.
 
@@ -96,7 +96,7 @@ Vill du bara chatta så skriver du ditt meddelande och trycker return. Vill du g
 
 : Säg om du tar en paus, `/me går och tar kaffe`.
 
-På webbplatsen <a href='http://www.irchelp.org/'>http://www.irchelp.org/</a> hittar du fler [kommandon för nybörjaren](<a href='http://www.irchelp.org/irchelp/irctutorial.html'>http://www.irchelp.org/irchelp/irctutorial.html</a>) och en [referensmanual](<a href='http://www.irchelp.org/irchelp/misc/ccosmos.html'>http://www.irchelp.org/irchelp/misc/ccosmos.html</a>) för den som vill lära sig mer.
+På webbplatsen www.irchelp.org/ hittar du fler [kommandon för nybörjaren](http://www.irchelp.org/irchelp/irctutorial.html) och en [referensmanual](http://www.irchelp.org/irchelp/misc/ccosmos.html) för den som vill lära sig mer.
 
 
 
@@ -107,18 +107,19 @@ Som ett komplement till irc finns en chatt på Gitter vilket kan vara enklare at
 
 Följande kanaler finns.
 
-* [dbwebb](<a href='https://gitter.im/mosbth/dbwebb'>https://gitter.im/mosbth/dbwebb</a>) (allmän kanal)
+* [dbwebb](https://gitter.im/mosbth/dbwebb) (allmän kanal)
+* [webbprogrammering](https://gitter.im/mosbth/webbprogrammering) (för programstudenter)
 
 Kurspaket webutv:
 
-* [python](<a href='https://gitter.im/mosbth/python'>https://gitter.im/mosbth/python</a>)
-* [javascript1](<a href='https://gitter.im/mosbth/javascript1'>https://gitter.im/mosbth/javascript1</a>)
-* [linux](<a href='https://gitter.im/mosbth/linux'>https://gitter.im/mosbth/linux</a>)
-* [webapp](<a href='https://gitter.im/mosbth/webapp'>https://gitter.im/mosbth/webapp</a>)
+* [python](https://gitter.im/mosbth/python)
+* [javascript1](https://gitter.im/mosbth/javascript1)
+* [linux](https://gitter.im/mosbth/linux)
+* [webapp](https://gitter.im/mosbth/webapp)
 
 Kurspaket webprog:
 
-* [htmlphp](<a href='https://gitter.im/mosbth/htmlphp'>https://gitter.im/mosbth/htmlphp</a>)
-* [oophp](<a href='https://gitter.im/mosbth/oophp'>https://gitter.im/mosbth/oophp</a>)
-* [phpmvc](<a href='https://gitter.im/mosbth/phpmvc'>https://gitter.im/mosbth/phpmvc</a>)
-* [javascript](<a href='https://gitter.im/mosbth/javascript'>https://gitter.im/mosbth/javascript</a>)
+* [htmlphp](https://gitter.im/mosbth/htmlphp)
+* [oophp](https://gitter.im/mosbth/oophp)
+* [phpmvc](https://gitter.im/mosbth/phpmvc)
+* [javascript](https://gitter.im/mosbth/javascript)

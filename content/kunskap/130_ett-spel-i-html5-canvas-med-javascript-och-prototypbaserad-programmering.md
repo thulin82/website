@@ -1,6 +1,9 @@
 ---
 author: mos
 category: artikel
+revision:
+    2016-02-18: (B, mos) Bort med länk till canvas cheatsheet.  
+    2012-12-06: (A, mos) Första utgåvan i samband med kursen JavaScript.  
 updated: "2012-12-06 14:42:18"
 created: "2012-12-06 14:41:47"
 ...
@@ -9,7 +12,7 @@ Ett spel i HTML5 Canvas med JavaScript och prototypbaserad programmering
 
 Detta blev en artikel om att göra ett spel i HTML5 Canvas med JavaScript. Du får se grunderna i hur du animerar ett spel i canvas och hur du styr din spelare. Det blev också en artikel om att använda objekt och prototyper i JavaScript. Så fort koden växer så gäller det att skapa förutsättningar för att organisera sin kod.
 
-I artikeln bygger jag upp grunderna till det [gamla klassiska spelet Asteroids](<a href='http://en.wikipedia.org/wiki/Asteroids_%28video_game%29'>http://en.wikipedia.org/wiki/Asteroids_%28video_game%29</a>). Det som blir kvar får du själv fylla på för att göra spelet klart. :-)
+I artikeln bygger jag upp grunderna till det [gamla klassiska spelet Asteroids](http://en.wikipedia.org/wiki/Asteroids_%28video_game%29). Det som blir kvar får du själv fylla på för att göra spelet klart. :-)
 
 <!--more-->
 
@@ -19,20 +22,16 @@ Då kör vi.
 
 
 
-
-
 HTML5 och `<canvas>` {#intro}
 --------------------------------------------------------------------
 
 Vi skall rita på en canvas, en HTML5 Canvas. Du behöver plugga på om canvas och vilka tekniker som finns för att rita. Om du är nybörjare på att rita så finns allt du behöver på Mozilla Developers Network.
 
-* Tutorial för att komma igång med att rita på HTML5 Canvas:  
-  <a href='https://developer.mozilla.org/en-US/docs/Canvas_tutorial'>https://developer.mozilla.org/en-US/docs/Canvas_tutorial</a>
+* Tutorial för att komma igång med att [rita på HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Canvas_tutorial).
 
 Någonstans måste man alltså börja, för min del blir det att bekanta mig med möjligheterna att rita på canvas. Så här blev mitt första stapplande exempel. 
 
-* Att komma igång och rita på en canvas:  
-  <a href='http://dbwebb.se/javascript/lekplats/drawing-on-canvas/'>http://dbwebb.se/javascript/lekplats/drawing-on-canvas/</a>
+* [Att komma igång och rita på en canvas](javascript/lekplats/drawing-on-canvas)
 
 
 
@@ -42,21 +41,20 @@ Animering på canvas, en gameloop {#animering}
 Att rita bilder är en sak, men hur kan man då få saker att röra sig och hur styr man dem med tangenterna? Det här handlar om två saker, först animering och sedan hantering av tangentbordstryck.
 
 
+
 ###`requestAnimationFrame()` {#animframe}
 
 Vi vill skapa en loop som ritar om canvasen med jämna mellanrum. För att göra det på bästa möjliga sätt så måste vi lära oss funktionen `requestAnimationFrame()`. Det handlar om att låta webbläsaren bestämma när uppdateringar av canvasen skall ske.
 
 Du kan läsa om funktionen `requestAnimationFrame()` på MDN:
 
-* <a href='https://developer.mozilla.org/en-US/docs/DOM/window.requestAnimationFrame'>https://developer.mozilla.org/en-US/docs/DOM/window.requestAnimationFrame</a>
+* [window.requestAnimationFrame](https://developer.mozilla.org/en-US/docs/DOM/window.requestAnimationFrame)
 
-Paul Irish har skrivit en artikel om en shim, en polyfill, som tar hand om kompabiliteten mellan webbläsare. Läs den artikeln och använd den koden som finns där.
-
-* <a href='http://paulirish.com/2011/requestanimationframe-for-smart-animating/'>http://paulirish.com/2011/requestanimationframe-for-smart-animating/</a>
+Paul Irish har skrivit en [artikel om en shim](http://paulirish.com/2011/requestanimationframe-for-smart-animating), en polyfill, som tar hand om kompabiliteten mellan webbläsare. Läs den artikeln och använd den koden som finns där.
 
 Så här ser koden ut:
 
-~~~syntax=javascript
+```javascript
 /** 
  * Shim layer, polyfill, for requestAnimationFrame with setTimeout fallback.
  * <a href='http://paulirish.com/2011/requestanimationframe-for-smart-animating/'>http://paulirish.com/2011/requestanimationframe-for-smart-animating/</a>
@@ -94,12 +92,11 @@ window.cancelRequestAnimFrame = (function(){
   render();
 })();
 
-~~~
+```
 
 Då har vi förutsättningarna för att skapa en animeringsloop, ellr en gameloop, som det också kallas. Det finns många tutorials om hur man skapar en sådan loop, en som jag fastat för är denna:
 
-* Bygg en gameloop med JavaScript:  
-  <a href='http://nokarma.org/2011/02/02/javascript-game-development-the-game-loop/index.html'>http://nokarma.org/2011/02/02/javascript-game-development-the-game-loop/index.html</a>
+* [Bygg en gameloop med JavaScript](http://nokarma.org/2011/02/02/javascript-game-development-the-game-loop/index.html)
 
 Det är en artikel där det förs lite resonemang till hur man bygger en gameloop.
 
@@ -109,7 +106,7 @@ Det är en artikel där det förs lite resonemang till hur man bygger en gameloo
 
 Vi är ju vana att fånga events från tangentbordet på följande sätt:
 
-~~~syntax=javascript
+```javascript
 document.onkeydown = function(event) {
   var key = event.key || event.which;
   switch(key) {
@@ -122,7 +119,7 @@ document.onkeydown = function(event) {
   };        
   console.log('Keypress: ' + event + ' key: ' + key);
 };
-~~~
+```
 
 Men, det fungerar inte så bra i vårt fall, när man håller nere en knapp så dröjer det ett litet tag innan det skapas ett nytt event. det tar tid och blir hackigt. Vi behöver ett bättre sätt som harmoniserar med gameloopen.
 
@@ -130,13 +127,11 @@ Lösningen blir att spara vilka tangenter som trycks ned och släpps, att spara 
 
 Samma webbplats som gav oss en förklaring till gameloopen ger oss också en lösning till att hantera knapptryckningar från tangentbordet.
 
-* Hantera input från tangentbordet i ett spel:  
-  <a href='http://nokarma.org/2011/02/27/javascript-game-development-keyboard-input/index.html'>http://nokarma.org/2011/02/27/javascript-game-development-keyboard-input/index.html</a>
+* [Hantera input från tangentbordet i ett spel](http://nokarma.org/2011/02/27/javascript-game-development-keyboard-input/index.html)
 
 Jag väljer den lösningen och får fram ett nytt exempel där jag nu kan styra ett objekt på min lilla spelplan.
 
-* En fyrkant som rör sig fram på spelplanen och styrs av tangenter:  
-  <a href='http://dbwebb.se/javascript/lekplats/canvas-animation-moving-and-steering-player-object/'>http://dbwebb.se/javascript/lekplats/canvas-animation-moving-and-steering-player-object/</a>
+* [En fyrkant som rör sig fram på spelplanen och styrs av tangenter](http://dbwebb.se/javascript/lekplats/canvas-animation-moving-and-steering-player-object/)
 
 
 
@@ -146,17 +141,18 @@ Prototypbaserad programmering {#prototypprog}
 Låt oss ta en liten paus från canvas-kodandet och kika lite på  de strukturer vi kan använda för att organisera vår kod.
 
 
+
 ###Starta spelet {#start}
 
 Själva starten av spelet ligger i en jQuery ready-funktion och initierar spelet och lämnar sedan över till gameloopen. Så här ser det ut:
 
-~~~syntax=javascript
+```javascript
 $(function(){
   Game.init('canvas1');
   Game.gameLoop();
   console.log('Ready to play.');  
 });
-~~~
+```
 
 Vi ser att hela spelet ligger i modulen `Game`.
 
@@ -166,7 +162,7 @@ Vi ser att hela spelet ligger i modulen `Game`.
 
 Först har vi den struktur som jag valt för min variabel `window.Game`, det är en variant av ett closure och ett module pattern.
 
-~~~syntax=javascript
+```javascript
 window.Game = (function(){
   var canvas, ct, player;
 
@@ -184,12 +180,11 @@ window.Game = (function(){
     'gameLoop': gameLoop
   }
 })();
-~~~
+```
 
 Här får vi ett objekt som är tänkt att innehålla själva spelet, ett samlingsobjekt med publika och privata delar.
 
-* Läs en välskriven artikel om "JavaScript Closures and the Module Pattern" som visar alternativ för implementationer:  
-  <a href='http://www.joezimjs.com/javascript/javascript-closures-and-the-module-pattern/'>http://www.joezimjs.com/javascript/javascript-closures-and-the-module-pattern/</a>
+* Läs en välskriven artikel om "[JavaScript Closures and the Module Pattern](http://www.joezimjs.com/javascript/javascript-closures-and-the-module-pattern)" som visar alternativ för implementationer:  
 
 
 
@@ -197,7 +192,7 @@ Här får vi ett objekt som är tänkt att innehålla själva spelet, ett samlin
 
 Om du kikar på koden för objektet `Key`, så ser du att det objektet skapas med en literal för objekt `{}`. Jämför det med objektet Vector som egentligen är en konstrutor. En konstruktor är en speciell funktion som används när man skapar nya objekt med `new`. Se följande kodexempel där två konstruktorer visas. 
 
-~~~syntax=javascript
+```javascript
 /**
  * All positions and forces 
  */
@@ -216,7 +211,7 @@ function Player(height, width, position, velocity) {
   this.position = position  || new Vector();      // Creating a new object of Vector
   this.velocity = velocity  || new Vector(1,1);   // Creating a new object of Vector
 }
-~~~
+```
 
 Här ser vi hur en konstruktor-funktion ser ut och hur ett nytt objekt kan skapas med `new`. En första uppenbar liknelse är ju att jämföra med klasser. Men det låter vi bli, vi säger blott att detta är en konstruktor för att skapa nya objekt.
 
@@ -226,7 +221,7 @@ Här ser vi hur en konstruktor-funktion ser ut och hur ett nytt objekt kan skapa
 
 I ett senare skede kommer vi att utöka objektet Vector och lägga dit en del funktioner för beräkningar mellan vektorer. Då kommer vi att lägga dem i objektets prototyp på följande vis.
 
-~~~syntax=javascript
+```javascript
 /**
  * All objects are Vectors
  */
@@ -249,7 +244,7 @@ Vector.prototype = {
   // Add itself with Vector
   iadd:  function (vector) { this.x += vector.x; this.y += vector.y; return this; }  
 }
-~~~
+```
 
 Fördelen med detta är att alla `Vector` objekt delar samma prototyp, det är alltså ett effektiv sätt att skapa en gemensam kodbas för många objekt. De objekt som vill skriva om, eller över, en funktion kan göra det. Då lagras den i själva objektet. När man sedan anropar funktionen, eller propertyn, så kollas först om den finns i objektet, sedan kollas om den finns i objektets prototyp. Den som först hittas används.
 
@@ -261,14 +256,11 @@ Fördelen med detta är att alla `Vector` objekt delar samma prototyp, det är a
 
 Innan du går vidare så bör du ha skaffat dig en förståelse för hur prototypbaserad programmering, objekt, konstruktorer och prototyper fungerar. Här finns att läsa på.
 
-* Om prototypbaserad programmering på Wikipedia:  
-  <a href='http://en.wikipedia.org/wiki/Prototype-based_programming'>http://en.wikipedia.org/wiki/Prototype-based_programming</a>
+* [Om prototypbaserad programmering på Wikipedia](http://en.wikipedia.org/wiki/Prototype-based_programming).  
 
-* Artikel om prototyper och arv i JavaScript:  
-  <a href='http://msdn.microsoft.com/en-us/magazine/ff852808.aspx'>http://msdn.microsoft.com/en-us/magazine/ff852808.aspx</a>
+* [Artikel om prototyper och arv i JavaScript](http://msdn.microsoft.com/en-us/magazine/ff852808.aspx).
 
-* Artikel om att skapa JavaScript objekt med ett annat objekt som mall:  
-  <a href='http://javascript.crockford.com/prototypal.html'>http://javascript.crockford.com/prototypal.html</a>
+* [Artikel om att skapa JavaScript objekt med ett annat objekt som mall](http://javascript.crockford.com/prototypal.html).
 
 Har du en känsla för vad det handlar om? Då spelar vi vidare.
 
@@ -281,14 +273,14 @@ Tanken är ju att göra Asteroids och det är ju ett rymdskepp som skall styras.
 
 För att lyckas med detta så dammar vi av lite kunskaper i cirklar, radianer, vinklar, sinus och cosinus. För att göra en enkel uppställning av matematiken så ser det ut så här:
 
-~~~syntax=javascript
+```javascript
 x += sin(rotation) * speed;
 y += cos(rotation) * speed;
-~~~
+```
 
 Så här kan det se ut när jag implementerar det i mitt objekt `Player`.
 
-~~~syntax=javascript
+```javascript
 Player.prototype.moveForward = function() {
   this.position.x += this.velocity.x * Math.cos(this.direction);
   this.position.y += this.velocity.y * Math.sin(this.direction);
@@ -306,10 +298,9 @@ Player.prototype.rotateLeft = function() {
 Player.prototype.rotateRight = function() {
   this.direction += Math.PI/30;
 };
-~~~
+```
 
-* Här kan du testa resultatet och flytta runt rymdskeppet med piltangenterna:  
-  <a href='http://dbwebb.se/javascript/lekplats/canvas-animation-moving-object-forward-backward-in-a-direction/'>http://dbwebb.se/javascript/lekplats/canvas-animation-moving-object-forward-backward-in-a-direction/</a>
+* Här kan du testa resultatet och [flytta runt rymdskeppet med piltangenterna](javascript/lekplats/canvas-animation-moving-object-forward-backward-in-a-direction/).
 
 
 
@@ -318,7 +309,7 @@ Krafter i form av acceleration och inbromsning {#acceleration}
 
 Ett rymdskepp måste kunna gasa och bromsa, det innebär att det skall gå fortare när det gasar och sakta in när det bromsas. Ett enkelt sätt att göra detta är att förändra skeppets acceleration, `this.acceleration`. Man får justera faktorerna tills det känns bra.
 
-~~~syntax=javascript
+```javascript
 Player.prototype.throttle = function() {
   this.acceleration += this.acceleration > 2 ? 0 : 0.5;
 };
@@ -332,10 +323,9 @@ Player.prototype.moveForward = function() {
   this.position.x += this.velocity.x * this.acceleration * Math.cos(this.direction);
   this.position.y += this.velocity.y * this.acceleration * Math.sin(this.direction);
 };
-~~~
+```
 
-* Nu kan man gasa och bromsa skeppet, nu börjar det likna något.  
-  <a href='http://dbwebb.se/javascript/lekplats/canvas-animation-throttle-ship/'>http://dbwebb.se/javascript/lekplats/canvas-animation-throttle-ship/</a>
+* Nu kan man [gasa och bromsa skeppet](javascript/lekplats/canvas-animation-throttle-ship), nu börjar det likna något.  
 
 
 
@@ -348,7 +338,7 @@ En första test när jag kör spelet i olika webbläsare visar att det går olik
 
 Först inför jag tiden, det gör jag i gameloopen.
 
-~~~syntax=javascript
+```javascript
 var gameLoop = function() {
   var now = Date.now();
   td = (now - (lastGameTick || now)) / 1000; // Timediff since last frame / gametick
@@ -357,13 +347,13 @@ var gameLoop = function() {
   update(td);
   render();
 };
-~~~
+```
 
 Nu gäller det att implementera så att resten av spelet förhåller sig till tidskillnaden `td`.
 
 För att ha en grund till alla beräkningar som komma skall så inför jag matematiska beräkningar på vektorer, det handlar om att multiplikation och addition av vektorer. Jag bygger ut mitt objekt `Vector` med ett par metoder i dess prototyp.
 
-~~~syntax=javascript
+```javascript
 /**
  * All objects are Vectors
  */
@@ -386,13 +376,13 @@ Vector.prototype = {
   // Add itself with Vector
   iadd:  function (vector) { this.x += vector.x; this.y += vector.y; return this; }  
 }
-~~~
+```
 
-Nu kan jag lägga ihop två vektorer och jag kan multiplera dem. Jag kan också göra addition och multiplikation med en skalär, bara ett värde. Den här typen av matematik är ovärderlig när man bygger spel. Om du är nybörjare så kan du alltid kika lite på [Wikipedia om vektorer](<a href='http://sv.wikipedia.org/wiki/Vektor'>http://sv.wikipedia.org/wiki/Vektor</a>).
+Nu kan jag lägga ihop två vektorer och jag kan multiplera dem. Jag kan också göra addition och multiplikation med en skalär, bara ett värde. Den här typen av matematik är ovärderlig när man bygger spel. Om du är nybörjare så kan du alltid kika lite på [Wikipedia om vektorer](http://sv.wikipedia.org/wiki/Vektor).
 
 Då fortsätter vi med ett objekt som kan hantera krafter av olika slag. Även krafter representeras av vektorer och det är ju bra nu när vi kan räkna med dem.
 
-~~~syntax=javascript
+```javascript
 /**
  * The forces around us.
  */
@@ -438,7 +428,7 @@ window.Forces = new Forces();
 window.Forces.addAcceleration('gravity', new Vector(0, 9.82));
 window.Forces.addDamping('drag', 0.97);
 window.Forces.addWind('wind', new Vector(0.5, 0));
-~~~
+```
 
 Det sista vi gör är att skapa tre olika krafter i vårt speluniversum i form av gravitation, luftmotstånd och vind. Krafterna kanske inte är representativa för Asteroidsspelet men de visar på hur krafterna fungerar. Tanken är att dessa krafter påverkar alla objekt på spelplanen.
 
@@ -446,12 +436,11 @@ Det sista vi gör är att skapa tre olika krafter i vårt speluniversum i form a
 
 Dessutom tycker jag nog att koden fortfarande ser tilltalande och övergripbar ut. Det är ju oerhört viktigt när vi fortsätter.
 
-Wikipedia är en bra källa när vi vill veta mer om krafter. Se till exempel [sidan om luftmotstånd, "drag"](<a href='http://en.wikipedia.org/wiki/Drag_%28physics%29'>http://en.wikipedia.org/wiki/Drag_%28physics%29</a>).
+Wikipedia är en bra källa när vi vill veta mer om krafter. Se till exempel [sidan om luftmotstånd, "drag"](http://en.wikipedia.org/wiki/Drag_%28physics%29).
 
 Hur blev då resultatet när krafter lades till och hänsyn togs till tidsskillnaden mellan uppdateringarna? Så här blev det:
 
-* Animering av rymdskepp med krafter:  
-  <a href='http://dbwebb.se/javascript/lekplats/canvas-animation-spaceship-with-forces/'>http://dbwebb.se/javascript/lekplats/canvas-animation-spaceship-with-forces/</a>
+* [Animering av rymdskepp med krafter](javascript/lekplats/canvas-animation-spaceship-with-forces).
 
 
 
@@ -464,20 +453,13 @@ Och du, vad tycker du om koden som blir resultatet så här långt? Känns det s
 
 Bra jobbat. Vill du fråga något så går det bra i forumet. Det finns en tråd dedikerad till denna artikel. Du når den på:
 
-* Diskutera denna artikel i forumet:  
-  f/4851
+[Diskutera denna artikel i forumet](f/4851).
 
 
 
-Revisionshistoria {#revision}
+Att göra {#gora}
 ------------------------------
 
-<span class='revision-history' markdown='1'>
-2016-02-18 (B, mos) Bort med länk till canvas cheatsheet.  
-2012-12-06 (A, mos) Första utgåvan i samband med kursen JavaScript.  
-</span>
-
-Att göra.
 
 1. Skjuta skott.
 1. Fler objekt på spelplanen, asteroiderna och motståndare som skjuter på mig.

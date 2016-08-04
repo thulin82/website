@@ -41,17 +41,11 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9780596517748]
 
-BTH's bibliotek kan [erbjuda boken som e-bok](<a href='http://goo.gl/KGE3Cj'>http://goo.gl/KGE3Cj</a>).
+BTH's bibliotek kan [erbjuda boken som e-bok](http://goo.gl/KGE3Cj).
 
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5356
-
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5356).

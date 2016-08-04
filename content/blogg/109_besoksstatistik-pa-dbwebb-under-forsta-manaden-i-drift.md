@@ -32,7 +32,7 @@ Vilket operativsystem är vanligast? {#os}
 
 [FIGURE src=/img/blog/besok-ht12-os.png caption="Windows är det vanligaste operativsystemet."]
 
-Windows är det i särklass mest vanliga operativsystemet. Det kanske jag borde tänka på, lite mer, när jag själv sitter i min Mac-miljö ;-). Kul att se att en använder FreeBSD, trots att jag vet att det är vår vän [boten Marvin](<a href='http://dbwebb.se/forum/viewtopic.php?f=21&t=20'>http://dbwebb.se/forum/viewtopic.php?f=21&t=20</a>) som hjälper oss i irc-chatten för att hålla kopp på nya inlägg i forumet.
+Windows är det i särklass mest vanliga operativsystemet. Det kanske jag borde tänka på, lite mer, när jag själv sitter i min Mac-miljö ;-). Kul att se att en använder FreeBSD, trots att jag vet att det är vår vän [boten Marvin](forum/viewtopic.php?f=21&t=20) som hjälper oss i irc-chatten för att hålla kopp på nya inlägg i forumet.
 
 Vilket mobilt operativsystem är vanligast? {#mobile-os}
 ------------------------------------------------------------
@@ -47,8 +47,7 @@ Summering {#summering}
 
 Så här ser det alltså ut på dbwebb.se under första månaden i trafik under hösten 2012. Det hjälper alltid att hålla koll på den miljö som ens kunder har.
 
-Google analytics är ett mycket vanligt verktyg för detta och vill man ha mer kontroll över hanteringen så kan man välja en opensource-variant som [Piwik](<a href='http://piwik.org/'>http://piwik.org/</a>). 
+Google analytics är ett mycket vanligt verktyg för detta och vill man ha mer kontroll över hanteringen så kan man välja en opensource-variant som [Piwik](http://piwik.org/). 
 
-* Du kan diskutera denna artikel i forumet:  
-  <a href='http://dbwebb.se/forum/viewtopic.php?f=23&t=586'>http://dbwebb.se/forum/viewtopic.php?f=23&t=586</a>
+* Du kan diskutera denna [artikel i forumet](t/586).
   

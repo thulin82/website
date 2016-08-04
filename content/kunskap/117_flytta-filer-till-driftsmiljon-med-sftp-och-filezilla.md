@@ -23,9 +23,7 @@ Installera sftp-klienten FileZilla {#installera}
 
 Vi behöver en sftp-klient för att flytta filerna från utvecklingsmiljön till driftsmiljön. 
 
-* Hämta hem och installera FileZilla från följande sida.  
-  <a href='http://FileZilla-project.org/download.php?show_all=1'>http://FileZilla-project.org/download.php?show_all=1</a>
-  ([undvik installationsprogrammet från SourceForge](t/2676)
+* [Hämta hem och installera FileZilla](http://FileZilla-project.org/download.php?show_all=1), [undvik installationsprogrammet från SourceForge](t/2676).
 
 Testa att logga in på `sftp.student.bth.se` alternativt `ssh.student.bth.se` (port 22) med ditt studentkonto (studentid och lösenord). Så här kan det se ut.
 
@@ -49,7 +47,7 @@ Driftsmiljön är skolans webbserver för studenter. Alla filer som du lägger i
 
 Testa genom att peka webbläsaren till följande adress.
 
-* <a href='http://www.student.bth.se/~mosstud'>http://www.student.bth.se/~mosstud</a>
+* [http://www.student.bth.se/~mosstud](http://www.student.bth.se/~mosstud)
 
 Byt ut `mosstud` till din egen studentakronym och testa igen. Det kan se ut så här när du lyckas.
 
@@ -72,7 +70,7 @@ Kopiera över dina testfiler du gjort lokalt och lägg dem under din nyskapade `
 
 Testa att det fungerade (byt ut `mosstud` till din egen akronym).
 
-* <a href='http://www.student.bth.se/~mosstud/htmlphp/'>http://www.student.bth.se/~mosstud/htmlphp/</a>
+* [http://www.student.bth.se/~mosstud/htmlphp/](http://www.student.bth.se/~mosstud/htmlphp/)
 
 
 **Problem med rättigheter?**
@@ -88,7 +86,3 @@ Så här blev det hos mig till slut.
 [FIGURE src=/image/kunskap/www_student_me.jpg?w=w1 caption="Katalogen me kopierad över till driftsmiljön och presenteras."]
 
 Bra, då har vi kontroll på både den lokala miljön och driftsmiljön.
-
-
-
-

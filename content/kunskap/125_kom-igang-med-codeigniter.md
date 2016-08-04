@@ -152,12 +152,12 @@ Så här ser vyn ut, det är ren HTML-kod tillsammans med utskrifter av PHP-vari
 
 **`application/views/hello_world.php:`**
 
-~~~syntax=php
+```php
 <!doctype html>
 <meta charset=utf-8>
 <title>Hello World</title>
 <?php echo htmlentities($arg1); ?>
-~~~
+```
 
 En enkel vy vars enda uppgift är att skriva ut `arg1` som kommer från kontrollern. 
 
@@ -474,4 +474,3 @@ Revisionshistoria {#revision}
 2012-09-13 (B, mos) Genomgången, testad och flyttad till dbwebb från WordPress.  
 2012-03-23 (A, Rickard Gimerstedt) Första utgåvan.  
 </span>
-

@@ -18,7 +18,7 @@ En bok för att komma igång med jQuery, nu i utgåva två. Ger en bra introdukt
 
 Så är det, jQuery är enkelt i sin utformning, JavaScript är svårare. För att kunna tillgodogöra sig boken så behövs nog en del kunskap i JavaScript.
 
-En sak jag vänder mig mot är att boken lever i en JavaScript-värld enbart, där lösningar och kodexempel skrivs utan tanke på att blanda in lösningar på serversidan. Men, det är ju nödvändigt, annars hade boken blivit mer komplex. Nu skrivs kodexempel som rena lösningar i jQuery där jag själv hade löst problemen genom att blanda in serversidan lite mer. Men det kan man ha i åtanke när man läser boken. jQuery är inte en "[silver bullet](<a href='http://en.wikipedia.org/wiki/No_Silver_Bullet'>http://en.wikipedia.org/wiki/No_Silver_Bullet</a>)"" som löser allt. Det måste ses i ett sammanhang.
+En sak jag vänder mig mot är att boken lever i en JavaScript-värld enbart, där lösningar och kodexempel skrivs utan tanke på att blanda in lösningar på serversidan. Men, det är ju nödvändigt, annars hade boken blivit mer komplex. Nu skrivs kodexempel som rena lösningar i jQuery där jag själv hade löst problemen genom att blanda in serversidan lite mer. Men det kan man ha i åtanke när man läser boken. jQuery är inte en "[silver bullet](http://en.wikipedia.org/wiki/No_Silver_Bullet)" som löser allt. Det måste ses i ett sammanhang.
 
 Men, boken är bra och välskriven och har ett antal bra och relevanta kod-exempel och ger en bra introduktion till jQuery. Boken får ett bra betyg av mig :-).
 
@@ -42,16 +42,10 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9780987153012]
 
-[BTH´s bibliotek kan erbjuda boken som e-bok](<a href='http://goo.gl/f5d86'>http://goo.gl/f5d86</a>).
+[BTH´s bibliotek kan erbjuda boken som e-bok](http://goo.gl/f5d86).
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5347
-
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5347).

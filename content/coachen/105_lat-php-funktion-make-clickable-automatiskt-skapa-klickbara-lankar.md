@@ -47,4 +47,3 @@ function make_clickable($text) {
 Du kan [testa funktionen via ett exempelprogram](kod-exempel/function_to_make_links_clickable/) och du kan ställa frågor om funktionen i  [forumtråden där flera bidrog till funktionen `make_clickable()`](t/254) genom att modifiera det reguljära uttrycket som från början hämtades från källkoden i Wordpress.
 
 Funktionen `make_clickable()` använder sig av [anonyma funktioner](http://php.net/manual/en/functions.anonymous.php) för callbacken, så du behöver minst version 5.3 av PHP.
-

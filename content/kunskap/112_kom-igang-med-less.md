@@ -24,17 +24,19 @@ Vi kikar på {less}, ett av många sätt att underlätta användandet av CSS. De
 
 Att komma igång med {less} är enkelt, allt vi behöver göra är att inkludera att JavaScript efter vi inkluderar vår {less}-kod:
 
-~~~syntax=html
+```html
 <script type="text/javascript" src="less.js"></script>
-~~~
+```
 
-JavaScriptet hittar vi på <a href='http://lesscss.org/'>http://lesscss.org/</a>, det är bara att ladda ner och inkludera på sidan vi vill använda det på. {less}-koden skriver vi i en egen fil som vi inkluderar innan JavaScriptet.
+JavaScriptet hittar vi på [lesscss.org](http://lesscss.org/), det är bara att ladda ner och inkludera på sidan vi vill använda det på. {less}-koden skriver vi i en egen fil som vi inkluderar innan JavaScriptet.
+
+
 
 ###Variabler, matematiska uttryck och inbyggda funktioner {#variabler}
 
 Vi börjar att leka med variabler, en möjlighet att extrahera till exempel färg, höjd och bredd från alla olika ställen i CSS:en och ha allt på ett och samma ställe.
 
-~~~syntax=css
+```css
 @boxwidth: 100;
 @boxheight: 100;
 @color: #ffa;
@@ -53,17 +55,19 @@ Vi börjar att leka med variabler, en möjlighet att extrahera till exempel fär
   background-color: darken(@color, 50%);
   color: lighten(@color, 50%);
 }
-~~~
+```
 
 I koden ovan skapar vi tre variabler för att sedan använda dem på olika element längre ner i CSS:en. I `#box` använder vi inbyggda funktioner för att manipulera färger vilket ger möjligheten att ha en och samma kod med ett oändligt antal färg-teman med väldigt få variabler. Sätt en bas-färg och använd de inbyggda funktionerna för att bygga upp resten av färgerna i egna variabler kanske? I `#box2` använder vi även matematiska uttryck för att ändra bredd och position. 
 
-[Exempel #1](<a href='http://dbwebb.se/exercises/less/example1.php'>http://dbwebb.se/exercises/less/example1.php</a>).
+[Exempel #1](exercises/less/example1.php).
+
+
 
 ###Mixins {mixins}
 
 Alla som har använt CSS har någon gång behövt definiera samma egenskaper på flera olika element och behövt kopiera samma kod till flera olika ställen. En lösning är att definiera alla gemensamma egenskaper på alla olika element samtidigt och definiera de individuella egenskaperna för sig men även det är onödigt krångligt när man istället kan använda mixins för att sätta ihopa ett antal egenskaper i en klass och tillämpa den klassen på olika ställen. Lägg sen även till möjligheten att definiera parametrar på klassen så har vi mixins:
 
-~~~syntax=css
+```css
 .pop{
   @pop: #f00;
   background-color: @pop;
@@ -113,7 +117,7 @@ footer{
   .rotate(180);
   .bordered(1em, double, #faa);
 }
-~~~
+```
 
 Överst har vi en mixin med namnet pop där vi definierar en del olika egenskaper. Kikar vi längst ner bland definitionerna så ser vi `&:hover`, en nästlad egenskap som gäller för `pop:hover` (`&` refererar till föräldern (parent) som i detta fall är `pop`).
 
@@ -123,19 +127,17 @@ Den tredje är en mixin som tar hand om rotation för flera olika webbläsare vi
 
 Resten är endast fler egenskaper på de olika element och tillämpning av definierade mixins. Slutresultatet är inte någon vacker sida direkt men vi har i alla fall lärt oss använda mixins.
 
-[Exempel #2](<a href='http://dbwebb.se/exercises/less/example2.php'>http://dbwebb.se/exercises/less/example2.php</a>).
+[Exempel #2](exercises/less/example2.php).
+
 
 
 Läs mer {#mer}
 --------------------------------------------------------------------
 
-Detta är bara en liten del av allt man kan använda just {less} till, läs mer på <a href='http://lesscss.org/'>http://lesscss.org/</a>.
+Detta är bara en liten del av allt man kan använda just {less} till, läs mer på [lesscss.org](http://lesscss.org/).
 
 Några minuter på google kan ge mycket intressant information om {less} och andra metoder för att använda en mer dynamisk version av stylesheets. Vill man kompilera {less} med php så finns det att läsa här.
 
 Twitters css-ramverk Bootstrap använder sig av less för att dynamiskt kunna generera koden, i projektet finns mycket exempelkod om man är intresserad.
 
 Någonting annat som kan vara intressant att läsa är semantic gs, grid layout med less, ett utmärkt exempel på stylesheet där man vanligtvis har mängder med onödig kod och variabler.
-
-
-

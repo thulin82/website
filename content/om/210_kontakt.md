@@ -11,4 +11,4 @@ Mikael Roos
 
 mos@dbwebb.se
 
-<a href='http://mikaelroos.se'>http://mikaelroos.se</a>
+[mikaelroos.se](http://mikaelroos.se)

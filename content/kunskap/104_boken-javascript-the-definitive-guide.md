@@ -42,7 +42,7 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9780596805524]
 
-[BTH´s bibliotek kan erbjuda boken som e-bok](<a href='http://goo.gl/RszLin'>http://goo.gl/RszLin</a>).
+[BTH´s bibliotek kan erbjuda boken som e-bok](http://goo.gl/RszLin).
 
 
 
@@ -50,6 +50,3 @@ Diskutera boken i forumet {#forum}
 ----------------------------------
 
 Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5345).
-
-
-

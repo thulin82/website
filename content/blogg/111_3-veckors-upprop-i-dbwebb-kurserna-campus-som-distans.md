@@ -38,7 +38,5 @@ Det är en rätt hög andel (ca 30%) av studenterna som inte lämnat in något k
 
 Om du undrar något kring hanteringen av uppropet så kan du fråga i forumet.
 
-* Ställ dina frågor om 3-veckorsuppropet i forumtråden:  
-  <a href='http://dbwebb.se/f/3778'>http://dbwebb.se/f/3778</a>
-
+* Ställ dina frågor om [3-veckorsuppropet i forumtråden](f/3778).
  

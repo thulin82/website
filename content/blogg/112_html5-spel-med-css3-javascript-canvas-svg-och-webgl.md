@@ -18,12 +18,10 @@ Som vanligt finns det inga svarta och vita svar, inte heller på denna fråga. M
 
 Häromdagen såg jag i ögat, en ny artikel, som säger sig vara "den kompletta guiden för att bygga HTML5 spel med canvas och SVG". Artikeln erbjuder dig in väg in i dessa nya tekniker. Det är en fullmatad artikel som ger få direkta svar men desto fler matnyttiga länkar. Mycket bra för den som vill sätta sig in i området.
 
-* Komplett guide för att bygga HTML5 spel med Canvas och SVG   
-	<a href='http://www.sitepoint.com/the-complete-guide-to-building-html5-games-with-canvas-and-svg/'>http://www.sitepoint.com/the-complete-guide-to-building-html5-games-with-canvas-and-svg/</a>
+* [Komplett guide för att bygga HTML5 spel med Canvas och SVG](http://www.sitepoint.com/the-complete-guide-to-building-html5-games-with-canvas-and-svg/)
 
 Artikeln är skriven av en Microsoftare och vi kan gissa att en anledning är att Microsoft  vill se mer och mer applikationer som baseras på HTML5 och JavaScript nu när de lanserar Windows 8.
 
 För en blivande webbprogrammerare finns det all anledning att ha ett extra öga på dessa tekniker.
 
-* Diskutera denna artikel i forumet:  
-  <a href='http://dbwebb.se/f/3888'>http://dbwebb.se/f/3888</a>
+* Diskutera denna artikel i [forumet](f/3888).

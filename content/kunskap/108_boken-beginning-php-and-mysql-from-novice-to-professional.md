@@ -17,7 +17,7 @@ En tjockare bok för den som vill ha en mer komplett vy över PHP och MySQL frå
 
 Boken får ett bra betyg av mig :-).
 
-Boken används som referenslitteratur i kursen [htmlphp](/htmlphp).
+Boken används som referenslitteratur i kursen [htmlphp](htmlphp).
 
 
 
@@ -37,15 +37,10 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9781430231141]
 
-[BTH´s bibliotek kan erbjuda boken som e-bok](<a href='http://goo.gl/oAHJS'>http://goo.gl/oAHJS</a>).
+[BTH´s bibliotek kan erbjuda boken som e-bok](http://goo.gl/oAHJS).
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5353
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5353).

@@ -31,15 +31,15 @@ Som en Webbprogrammerare, en WIP:are, så får du dels en specialitet i webbprog
 
 ###Yrkeskompassen ger vägledning {#yrkeskompassen}
 
-Låt oss först försöka svara på frågan om hur arbetsmarknaden ser ut. Vi tar hjälp av arbetsförmedlingen och deras "[Yrkeskompassen](<a href='http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Yrkeskompassen-extern-sokning.html'>http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Yrkeskompassen-extern-sokning.html</a>)" där de presenterar statistik på arbetsmarknadsläget och framtidsutsikterna per yrkesroll. 
+Låt oss först försöka svara på frågan om hur arbetsmarknaden ser ut. Vi tar hjälp av arbetsförmedlingen och deras "[Yrkeskompassen](http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Yrkeskompassen-extern-sokning.html)" där de presenterar statistik på arbetsmarknadsläget och framtidsutsikterna per yrkesroll. 
 
-Den yrkesrollen som en WIP:are får är närmast att jämföra med "Mjukvaru- och systemutvecklare". Via yrkeskompassen kan vi se en [översikt av nuläge och framtidsutsikter för denna yrkesrollen](<a href='http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Yrkeskompassen-extern-sokning.html?url=1886496582%2FYrkesbedomning.aspx&sv.url=12.172a79512211e45f0d800035'>http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Yrkeskompassen-extern-sokning.html?url=1886496582%2FYrkesbedomning.aspx&sv.url=12.172a79512211e45f0d800035</a>). Per dagens datum så ser framtidsutsikten mycket ljus ut. Arbetslösheten är lägre än genomsnittet och det är mycket liten konkurrens om jobben, både i nuläget och på längre sikt.
+Den yrkesrollen som en WIP:are får är närmast att jämföra med "Mjukvaru- och systemutvecklare". Via yrkeskompassen kan vi se en [översikt av nuläge och framtidsutsikter för denna yrkesrollen](http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Yrkeskompassen-extern-sokning.html?url=1886496582%2FYrkesbedomning.aspx&sv.url=12.172a79512211e45f0d800035). Per dagens datum så ser framtidsutsikten mycket ljus ut. Arbetslösheten är lägre än genomsnittet och det är mycket liten konkurrens om jobben, både i nuläget och på längre sikt.
 
 
 
 ###Var finns jobben 2012 och 2013? {#jobb-nu}
 
-När vi läser en rapport från arbetsförmedlingen som försöker svara på frågan om "[Var finns jobben 2012 och första halvåret 2013?](<a href='http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Prognoser/Riket/6-28-2012-Jobb-for-arbetssokande-med-god-utbildning.html'>http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Prognoser/Riket/6-28-2012-Jobb-for-arbetssokande-med-god-utbildning.html</a>)" så ser vi direkt att undertiteln är "Jobb för arbetssökande med god utbildning". Eftergymnasial utbildning är så gott som krav på dessa jobb. 
+När vi läser en rapport från arbetsförmedlingen som försöker svara på frågan om "[Var finns jobben 2012 och första halvåret 2013?](http://www.arbetsformedlingen.se/Om-oss/Statistik-prognoser/Prognoser/Prognoser/Riket/6-28-2012-Jobb-for-arbetssokande-med-god-utbildning.html)" så ser vi direkt att undertiteln är "Jobb för arbetssökande med god utbildning". Eftergymnasial utbildning är så gott som krav på dessa jobb. 
 
 Störst brist på arbetskraft är det bland annat på "Mjukvaru- och systemutvecklare". I rapporten står det också att läsa om "Efterfrågan på utbildade inom data och teknik":
 
@@ -124,7 +124,6 @@ Sådan här typ av input, om arbetsmarknadsläget och vad som efterfrågas av f�
 Diskutera {#diskutera}
 ----------------------------------------------------------
 
-* Diskutera vad du anser om detta i forumet:  
-  <a href='http://dbwebb.se/f/6656'>http://dbwebb.se/f/6656</a>
+Diskutera vad du anser om detta i [forumet](f/6656).
 
  

@@ -51,7 +51,7 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9781430227908]
 
-[BTH´s bibliotek kan erbjuda boken som e-bok](<a href='http://proquest.safaribooksonline.com.miman.bib.bth.se/book/programming/9781430238645/firstchapter'>http://proquest.safaribooksonline.com.miman.bib.bth.se/book/programming/9781430238645/firstchapter</a>).
+[BTH´s bibliotek kan erbjuda boken som e-bok](http://proquest.safaribooksonline.com.miman.bib.bth.se/book/programming/9781430238645/firstchapter).
 
 [INFO]
 **Revision 2 finns ute**
@@ -68,8 +68,3 @@ Diskutera boken i forumet {#forum}
 ----------------------------------
 
 Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5348).
-
-
-
-
-

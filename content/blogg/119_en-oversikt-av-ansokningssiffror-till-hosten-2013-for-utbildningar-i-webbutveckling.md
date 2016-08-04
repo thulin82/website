@@ -10,7 +10,7 @@ En översikt av ansökningssiffror till hösten 2013 för utbildningar i webbutv
 
 Vilka högskoleutbildningar finns för den som vill bli webbdesigner, webbutvecklare eller webbutvecklare? Här är en jämförelse mellan olika utbildningsprogram inom webbnischen där programmen leder till en högskoleexamen om minst 2 år.
 
-Låt oss analysera siffrorna för högskoleantagningen till höstterminen 2013. Källan till samtliga siffror är de som presenteras på <a href='http://statistik.vhs.se/'>http://statistik.vhs.se/</a> och undersökningen gäller program som ger en examen på 2 eller 3 år och som har `*webb*` i namnet.
+Låt oss analysera siffrorna för högskoleantagningen till höstterminen 2013. Källan till samtliga siffror är de som presenteras på [statistik.vhs.se](http://statistik.vhs.se/) och undersökningen gäller program som ger en examen på 2 eller 3 år och som har `*webb*` i namnet.
 
 <!--more-->
 

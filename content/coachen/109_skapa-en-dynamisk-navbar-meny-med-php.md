@@ -11,7 +11,7 @@ Varje webbplats har en meny, en navigeringsbar. Det är behändigt att skapa men
 
 <!--more-->
 
-För ett tag sedan skrev jag en tutorial om ["Create a dynamic menu / navigation bar with PHP"](http://dbwebb.se/kod-exempel/dynamic_php_menu/). Jag kikade igenom den och samma principer gäller. Är det första gången du skapar en meny med PHP så bör du utgå från tutorialen som tröskar igenom grunderna.
+För ett tag sedan skrev jag en tutorial om ["Create a dynamic menu / navigation bar with PHP"](kod-exempel/dynamic_php_menu/). Jag kikade igenom den och samma principer gäller. Är det första gången du skapar en meny med PHP så bör du utgå från tutorialen som tröskar igenom grunderna.
 
 Som en liten programmeringsövning så utgick jag från tutorialen och skapade en lite mer komprimerad variant för min egen del som jag tänker använda i ett projekt. Här ser du resultatet i form av kod och ett kodexempel.
 
@@ -62,4 +62,3 @@ function get_navbar($menu) {
 Så där ja, jag skapade ett [litet kodexempel](kod-exempel/dynamic-navbar-menu-with-php-version-2) för att visa hur det ser ut när det fungerar i ett sammanhang tillsammans med en liten stylesheet. Fördelen med en sådan här meny är att den går att konfigurera helt och hållet i arrayen. Det ser jag som smidigt.
 
 Fråga, kommentera eller föreslå förbättringar i forumet där jag skapat [en egen tråd för detta tips](t/1355).
-

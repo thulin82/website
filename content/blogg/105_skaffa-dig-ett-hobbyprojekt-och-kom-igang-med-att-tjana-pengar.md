@@ -10,13 +10,11 @@ Skaffa dig ett hobbyprojekt och kom igång med att tjäna pengar
 
 Till och från hittar man små guldkorn i omvärldsbevakningen som nu sköts av **ögat**.
 
-* Omvärldsbevakning med ögat:  
-  <a href='http://dbwebb.se/omvarldsbevakning'>http://dbwebb.se/omvarldsbevakning</a>
+* [Omvärldsbevakning med ögat](omvarldsbevakning)
   
 Ikväll hittade jag en artikel från Smashing Magazine som handlar om en webbdesigner som "tröttnat" på "jobbiga" kunder och tjatande chefer. Det handlar om att tjäna pengar på att leverera någon form av produkt eller tjänst istället. Läs hela artikeln på följande länk.
 
-* Smashing Magazine: Freelancing experiments - Passive Income Strategies For Web Designers  
-  <a href='http://www.smashingmagazine.com/2012/08/27/designer-passive-income-experiments/'>http://www.smashingmagazine.com/2012/08/27/designer-passive-income-experiments/</a>
+* [Smashing Magazine: Freelancing experiments - Passive Income Strategies For Web Designers](http://www.smashingmagazine.com/2012/08/27/designer-passive-income-experiments/)
 
 Artikeln är välskriven och för den intresserade så står det även siffror på hur mycket man kan tjäna på olika tjänster. Studera fördelar och nackdelar och se om du kommer fram till att ett 8-17 jobb är att föredra...
 

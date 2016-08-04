@@ -9,13 +9,13 @@ Ansökan
 
 ###Utbud och när kan man söka? {#ansok1}
 
-Kandidatprogrammet har antagning till höstterminen. Kurspaketet och fristående kurser har antagning till både hösttermin och vårtermin. Utbudet av fristående kurser varierar från termin till termin. Du hittar aktuellt utbud via [BTH’s hemsida för utbildning](<a href='http://edu.bth.se/utbildning/utb_sok_resultat.asp'>http://edu.bth.se/utbildning/utb_sok_resultat.asp</a>) eller genom att [söka på webbplatsen antagning.se](<a href='http://antagning.se/'>http://antagning.se/</a>). Tips från coachen är att söka i tid. Även om det kan vara öppet för sen anmälan så kan det minska det dina chanser att bli antagen.
+Kandidatprogrammet har antagning till höstterminen. Kurspaketet och fristående kurser har antagning till både hösttermin och vårtermin. Utbudet av fristående kurser varierar från termin till termin. Du hittar aktuellt utbud via [BTH’s hemsida för utbildning](http://edu.bth.se/utbildning/utb_sok_resultat.asp) eller genom att [söka på webbplatsen antagning.se](http://antagning.se/). Tips från coachen är att söka i tid. Även om det kan vara öppet för sen anmälan så kan det minska det dina chanser att bli antagen.
 
 
 
 ###Sen anmälan {#sen}
 
-Normalt är det öppet för sen anmälan. Du kan söka och [se om anmälan är öppen på antagning.se](<a href='http://antagning.se/'>http://antagning.se/</a>). De senaste åren har söktrycket ökat på dbwebb-kurserna så det bästa är att vara ute i god tid.
+Normalt är det öppet för sen anmälan. Du kan söka och [se om anmälan är öppen på antagning.se](http://antagning.se/). De senaste åren har söktrycket ökat på dbwebb-kurserna så det bästa är att vara ute i god tid.
 
 
 

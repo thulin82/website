@@ -252,7 +252,7 @@ I varje steg av vårt modellerande måste vi ta olika beslut, det finns ofta fle
 
 En beskrivning i text av vårt diagram kan se ut som följer.
 
-~~~syntax=sql
+```sql
 Film (id, titel, regissor, handling, #Kategori_typ)
 FilmBild (#Film_id, #Bild_id)
 Kategori (typ)
@@ -261,7 +261,8 @@ Skådespelare (id, namn, fodd, biografi)
 FilmSkadespelare (#Film_id, #Skadespelare_id)
 SkadespelareBild (#Bild_id, #Skadespelare_id)
 Betyg (id, #Film_id, varde, kommentar)
-~~~
+```
+
 
 
 Fysisk modellering {#fysiskm}
@@ -273,7 +274,7 @@ Det är du dags att skapa SQL DDL för vår databas. Vi väljer datatyper för a
 
 För vår modell skulle en enkel SQL DDL, för en delmängd av tabellerna, se ut som följer.
 
-~~~syntax=sql
+```sql
 CREATE TABLE Film
 (
   id INT,
@@ -293,11 +294,11 @@ CREATE TABLE Kategori
 (
   typ CHAR(10)
 );
-~~~
+```
 
 Innan den blir helt färdig måste vi komplettera den med primärnycklar och främmande nycklar. En uppdaterad SQL DDL, inklusive nyckeldefinitioner, kan se ut här.
 
-~~~syntax=sql
+```sql
 CREATE TABLE Film
 (
   id INT PRIMARY KEY NOT NULL, 
@@ -321,7 +322,7 @@ CREATE TABLE Kategori
 (
   typ CHAR(10) NOT NULL PRIMARY KEY
 );
-~~~
+```
 
 Det finns mycket mer att tänka på när man skapar SQL DDL, ta en titt i manualen på vad det finns för möjligheter med CREATE TABLE. Bland annat så kan man skapa index, olika begränsningar, default värden, teckenkodning och mycket mer. Läs referensmanualen för respektive databasserver så ser du vilka möjligheter som finns. Men, du klarar dig en bra bit med det här.
 
@@ -392,24 +393,16 @@ Det finns flera webbresurser som ger en bra introduktion och översikt till data
 
 Wikipedia ger en bra beskrivande introduktion, översikt och beskriver även olika notationer för att rita ER-diagram.
 
-* "Entity-relationship model"  
-  <a href='http://en.wikipedia.org/wiki/Entity-relationship_model'>http://en.wikipedia.org/wiki/Entity-relationship_model</a>
-  
+* "[Entity-relationship model](http://en.wikipedia.org/wiki/Entity-relationship_model)"  
+
 Wikipedia har även en översikt av begreppet "Data dictionary" som vi använder (och ofta används) som begrepp på en dokumentation av en databas.
 
-* "Data dictionary"  
-  <a href='http://en.wikipedia.org/wiki/Data_dictionary'>http://en.wikipedia.org/wiki/Data_dictionary</a>
-  
+* "[Data dictionary](http://en.wikipedia.org/wiki/Data_dictionary)"  
+
 Det finns ett IBM paper av Davor Gornik beskriver hur UML kan användas i ER-modellering. Du hittar det i pdf-format via nedanstående länk.
 
-* "Entity relationship modeling with UML"  
-  <a href='http://www.ibm.com/developerworks/rational/library/319.html'>http://www.ibm.com/developerworks/rational/library/319.html</a>
-  
+* "[Entity relationship modeling with UML](http://www.ibm.com/developerworks/rational/library/319.html)"  
+
 Ett annat papper som hanterar UML i ER-modellering är skrivet av Robert A. Maksimchuk och Erik J Naiburg. Du når papperet via nedanstående länk.
 
-* "Entity Relationship Modeling with UML"
-  <a href='http://www.information-management.com/infodirect/20030123/6268-1.html?type=printer_friendly'>http://www.information-management.com/infodirect/20030123/6268-1.html?type=printer_friendly</a>
-
-
-
-
+* "[Entity Relationship Modeling with UML](http://www.information-management.com/infodirect/20030123/6268-1.html?type=printer_friendly)"

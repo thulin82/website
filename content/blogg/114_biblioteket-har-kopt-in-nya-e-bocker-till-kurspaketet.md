@@ -39,11 +39,7 @@ Dessa böcker finns inte som e-bok i dagsläget:
 
 Inte komplett, men ändå rätt bra gjort av Sofia på biblioteket.
 
-* Du hittar samtliga böcker om webbprogrammering och webbutveckling i kunskap på följande länk:  
-  <a href='http://dbwebb.se/kunskap/category/bok'>http://dbwebb.se/kunskap/category/bok</a>
+* Du hittar samtliga [böcker om webbprogrammering och webbutveckling](kunskap/category/bok) i kunskap.
 
-
-* Det finns en tråd i forumet som diskuterar e-böcker som är tillgängliga via biblioteket. Fråga gärna där om du undrar något.  
-  <a href='http://dbwebb.se/f/2316'>http://dbwebb.se/f/2316</a>
-
+* Det finns en tråd i forumet som [diskuterar e-böcker som är tillgängliga](f/2316) via biblioteket. Fråga gärna där om du undrar något.  
  

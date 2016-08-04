@@ -23,12 +23,9 @@ Bästa sättet att börja får bli att skaffa koll på hur webbplatsen uppfattas
 
 Mitt allra första steg blir att ge lite ledtrådar till sökmotorerna hur jag vill att de skall titta på webbplatsen. Det gör jag med två filer.
 
-* robots.txt  
-  <a href='http://dbwebb.se/robots.txt'>http://dbwebb.se/robots.txt</a>
-  
-* sitemap.xml  
-  <a href='http://dbwebb.se/sitemap.xml'>http://dbwebb.se/sitemap.xml</a>
-  
+* [robots.txt](robots.txt)
+* [sitemap.xml](sitemap.xml)  
+
 Med dessa filer kan jag styra vilka delar jag vill skall synas och inte. Filerna är en rekommendation till sökmotorernas spindlar som letar igenom webbplatsen, de behöver inte följa dem om de inte vill. Det finns inga garantier.
 
 Om vi tar en titt på hur webbplatsen uppfattas i dagsläget så ser det inte så bra ut...
@@ -43,7 +40,5 @@ Operation sökmotor startat, första steget att ha koll är klart. Som alla proj
 
 Nu blir det uppstädning i indexet och borttagning av all de felaktiga länkarna.
 
-* Diskutera denna artikel i forumet:  
-  <a href='http://dbwebb.se/forum/viewtopic.php?f=23&t=522'>http://dbwebb.se/forum/viewtopic.php?f=23&t=522</a>
-
+* [Diskutera denna artikel i forumet](forum/viewtopic.php?f=23&t=522)
  

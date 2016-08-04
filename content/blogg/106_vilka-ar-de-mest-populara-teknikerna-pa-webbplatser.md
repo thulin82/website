@@ -8,7 +8,7 @@ created: "2012-09-11 06:01:23"
 Vilka är de mest populära teknikerna på webbplatser?
 ==================================
 
-Webbplatsen [W3Techs.com](<a href='http://w3techs.com'>http://w3techs.com</a>) samlar in data om vilka tekniker som används av webbplatser. 
+Webbplatsen [W3Techs.com](http://w3techs.com) samlar in data om vilka tekniker som används av webbplatser. 
 
 Av informationen ser vi att (augusti 2012):
 
@@ -30,5 +30,4 @@ Av informationen ser vi att (augusti 2012):
 
 Det är alltid bra att ha koll på omvärlden och veta vilka tekniker som är heta och vilka som är de mest använda. W3Techs bevakas numer av ögat.
 
-* W3Techs bevakas av ögat:  
-  <a href='http://dbwebb.se/omvarldsbevakning/feed/w3techs'>http://dbwebb.se/omvarldsbevakning/feed/w3techs</a>
+* [W3Techs bevakas av ögat](omvarldsbevakning/feed/w3techs)

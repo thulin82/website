@@ -13,6 +13,12 @@ En given förutsättning för en webbprogrammerare är en uppsättning av webbl�
 
 <!--more-->
 
+[WARNING]
+**Äldre artikel**
+
+Denna artikel är äldre och det finns nyare information om labbmiljön på [/labbmiljo](labbmiljo).
+
+[WARNING]
 
 
 
@@ -21,12 +27,12 @@ Firefox webbläsare {#firefox}
 
 I alla kurser här på dbwebb så använder vi Firefox som standard och referens webbläsare. Det blir helt enkelt enklare att felsöka om alla använder samma webbläsare. Det är främsta anledningen till att vi valt en webbläsare.
 
-* Hämta och installera Firefox på din dator.  
-  <a href='http://getfirefox.com/'>http://getfirefox.com/</a>
+* [Hämta och installera Firefox på din dator](http://getfirefox.com/'>http://getfirefox.com/).  
 
 [FIGURE src=/image/kunskap/firefox.png?w=w1 caption="Ladda ned och installera webbläsaren Firefox."]
 
-Chansen är stor att du redan har koll på Firefox som har en betydande marknadsandel. Men, om så inte är fallet så är det nu ett bra tillfälle att testa att din installation fungerar genom att starta Firefox och peka på en webbplats, tex <a href='http://bth.se/'>http://bth.se/</a>. Ägna lite tid åt att bekanta dig med menyerna, men i princip är det som vilken webbläsare som helst.
+Chansen är stor att du redan har koll på Firefox som har en betydande marknadsandel. Men, om så inte är fallet så är det nu ett bra tillfälle att testa att din installation fungerar genom att starta Firefox och peka på en webbplats, tex http://bth.se/. Ägna lite tid åt att bekanta dig med menyerna, men i princip är det som vilken webbläsare som helst.
+
 
 
 Statistik för webbläsare {#statistik}
@@ -34,10 +40,10 @@ Statistik för webbläsare {#statistik}
 
 Det kan vara bra att skaffa sig en känsla för vilka webbläsare som är marknadsledande. W3Schools är en av de webbplatser som presenterar statistik kring detta.
 
-* Statistik om marknadsandelar för webbläsare:  
-  <a href='http://www.w3schools.com/browsers/browsers_stats.asp'>http://www.w3schools.com/browsers/browsers_stats.asp</a>
+* [Statistik om marknadsandelar för webbläsare](http://www.w3schools.com/browsers/browsers_stats.asp).
 
 Som all statistik så får man ta det med en nypa salt, men det ger en vägledning till vilka webbläsare man bör testa sin webbplats med.
+
 
 
 Installera fler webbläsare {#fler}
@@ -69,6 +75,3 @@ Mobiler:
 * Android phone
 
 Det finns fler men om man börjar inse att webbplatsen måste vara mobil så har man kommit en bra bit på vägen.
-
-
-

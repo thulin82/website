@@ -19,9 +19,9 @@ Till vårterminen har vi antagit 125 nya studenter per studiefart på kurspakete
 
 Alla nya studenter har fått ett välkomstbrev som även finns som pdf-variant på följande sidor:
 
-* [KP605: Kurspaket Databaser, HTML, CSS, JavaScript och PHP, 30 högskolepoäng, VT-13 (100%)](<a href='http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP605&PaketStarttermin=20131&lang=sv'>http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP605&PaketStarttermin=20131&lang=sv</a>)
-* [KP606: Kurspaket Databaser, HTML, CSS, JavaScript och PHP, 30 högskolepoäng, VT-13 (50%)](<a href='http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP606&PaketStarttermin=20131&lang=sv'>http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP606&PaketStarttermin=20131&lang=sv</a>)
-* [KP607: Kurspaket Databaser, HTML, CSS, JavaScript och PHP, 30 högskolepoäng, VT-13 (25%)](<a href='http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP607&PaketStarttermin=20131&lang=sv'>http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP607&PaketStarttermin=20131&lang=sv</a>)
+* [KP605: Kurspaket Databaser, HTML, CSS, JavaScript och PHP, 30 högskolepoäng, VT-13 (100%)](http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP605&PaketStarttermin=20131&lang=sv)
+* [KP606: Kurspaket Databaser, HTML, CSS, JavaScript och PHP, 30 högskolepoäng, VT-13 (50%)](http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP606&PaketStarttermin=20131&lang=sv)
+* [KP607: Kurspaket Databaser, HTML, CSS, JavaScript och PHP, 30 högskolepoäng, VT-13 (25%)](http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP607&PaketStarttermin=20131&lang=sv)
 
 Om du känner dig vilsen så kan du börja läsa här:
 
@@ -48,7 +48,6 @@ Frågor {#fragar}
 
 Om du undrar något så frågar du i forumet.
 
-* Ställ dina frågor om terminsstarten i forumtråden:  
-  <a href='http://dbwebb.se/f/5195'>http://dbwebb.se/f/5195</a>
+* Ställ dina frågor om [terminsstarten i forumtråden](f/5195).
 
  

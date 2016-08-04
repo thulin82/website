@@ -2,12 +2,10 @@
 author: mos
 category: artikel
 revision:
-  "2013-04-22": (D, mos) Större uppdatering, mer beskrivande text, genomgångna test-program,
-    fler exempel samt eget repository på github.
-  "2012-11-26": (C, mos) Lade till testfall för valideringsregler för textfält samt
-    testfall för checkbox och multi-checkbox.
-  "2012-10-05": (B, mos) Flyttad från forumet till dbwebb och uppdaterad.
-  "2012-04-09": '(A, mos) Första utgåvan, publicerad på forumet: http://dbwebb.se/f/1424'
+    "2013-04-22": (D, mos) Större uppdatering, mer beskrivande text, genomgångna test-program, fler exempel samt eget repository på github.
+    "2012-11-26": (C, mos) Lade till testfall för valideringsregler för textfält samt testfall för checkbox och multi-checkbox.
+    "2012-10-05": (B, mos) Flyttad från forumet till dbwebb och uppdaterad.
+    "2012-04-09": '(A, mos) Första utgåvan, publicerad på forumet: http://dbwebb.se/f/1424'
 updated: "2013-04-22 09:13:55"
 created: "2012-10-05 09:02:50"
 ...
@@ -647,7 +645,3 @@ Summering {#summering}
 Man kan ha mycket nytta av att sköta formulärhanteringen på ett liknande sätt. När du väljer ett ramverk så bör du alltid titta på vilket inbyggt stöd det finns för formulärhantering. Det är en bra investering att använda en klass liknande `CForm` vid formulärhantering. Det är alltid en tröskel för att lära sig ett sådant här klassbibliotek, men det lönar sig i längden.
 
 Du kan [diskutera denna artikel samt `CForm` i forumet](t/275).
-
-
-
-

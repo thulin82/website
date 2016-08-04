@@ -8,16 +8,17 @@ Den traditionella höstgrillen för nya, befintliga och utgångna studenter på 
 <h4>Utbilda dig till webbprogrammerare vid BTH!</h4>
 -->
 
-<img src="/image/person/emma-pagwe.jpg?w=c7" alt="">
+[FIGURE src=/image/person/emma-pagwe.jpg?w=c7]
+
 Studera på utbildningsprogram och kurspaket i Webbprogrammering på campus & distans vid Blekinge Tekniska Högskola i Karlskrona.
 
 Till hösten 2016 startar vi ett nytt **distansprogram i Webbprogrammering** om 120hp. Sök det, kurspaketet webutv eller campus-programmet om 180hp.
 
-<img src="/image/bobba_webprog2.jpg?w=c7" alt="">
+[FIGURE src=/image/bobba_webprog2.jpg?w=c7]
 
 Välkommen med din ansökan så syns vi här!
 
-[Läs om våra utbildningar »](utbildning)<br><br>
+[Läs om våra utbildningar »](utbildning)
 
 
 <!--

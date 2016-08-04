@@ -1,6 +1,10 @@
 ---
 author: mos
 category: artikel
+revision:
+    2012-08-31: (C, mos) Omskriven och flyttad från WordPress till Lydia.  
+    2012-03-28: (B, mos) Flyttad från blogspot till WordPress.  
+    2010-09-16: (A, Rickard Gimerstedt) Första utgåvan.  
 updated: "2012-09-11 07:56:46"
 created: "2012-09-11 07:56:40"
 ...
@@ -19,17 +23,16 @@ html5shiv {#html5shiv}
 
 Det är ett litet JavaScript du behöver och det finns att nå via Googles servrar. Du inkluderar det i din webbsida på följande sätt.
 
-~~~syntax=javascript
+```javascript
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-~~~
+```
 
 Det betyder att för alla webbläsare som är IE och har en version som är mindre än 9 så kommer htmlshiven att inkluderas.
 
-Du kan läsa mer om html5shiv på Googles projektsida.
+Du kan läsa mer om [html5shiv på Googles projektsida](http://code.google.com/p/html5shiv).
 
-* <a href='http://code.google.com/p/html5shiv/'>http://code.google.com/p/html5shiv/</a>
 
 
 Ge dina HTML5 element en grundstil {#grund}
@@ -37,7 +40,7 @@ Ge dina HTML5 element en grundstil {#grund}
 
 I din CSS så kan du lägga till en grundstil för de nya HTML5 elementen. Följande CSS-kod kan hjälpa dig på vägen.
 
-~~~syntax=css
+```css
 /** --------------------------------------------------------------
  * HTML5 elements.
  *
@@ -46,17 +49,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
 audio,canvas,video{display:inline-block;}
 audio:not([controls]){display:none;}
 [hidden]{display:none;}
-~~~
+```
 
 Sådär, nu är du redo att använda de nya HTML5 elementen, även i äldre webbläsare.
-
-
-Revisionshistoria {#revision}
-------------------------------
-
-<span class='revision-history' markdown='1'>
-2012-08-31 (C, mos) Omskriven och flyttad från WordPress till Lydia.  
-2012-03-28 (B, mos) Flyttad från blogspot till WordPress.  
-2010-09-16 (A, Rickard Gimerstedt) Första utgåvan.  
-</span>
-

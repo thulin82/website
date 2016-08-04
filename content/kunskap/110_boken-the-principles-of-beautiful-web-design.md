@@ -18,7 +18,7 @@ En härlig bok om webdesign och dess komponenter. För den som vill lära sig me
 
 Boken får ett högt betyg av mig :-D.
 
-Boken används som referenslitteratur i kursen [htmlphp](/htmlphp).
+Boken används som referenslitteratur i kursen [htmlphp](htmlphp).
 
 
 
@@ -37,16 +37,11 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9780992279448]
 
-BTH's bibliotek kan [erbjuda boken som e-bok](<a href='http://goo.gl/G6ujQX'>http://goo.gl/G6ujQX</a>).
+BTH's bibliotek kan [erbjuda boken som e-bok](http://goo.gl/G6ujQX</).
 
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5351
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5351).

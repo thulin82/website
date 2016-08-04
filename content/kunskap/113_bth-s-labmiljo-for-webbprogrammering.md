@@ -17,15 +17,21 @@ Det finns en webbaserad labbmiljö där alla studenter kan skapa egna webbsidor 
 
 <!--more-->
 
+[WARNING]
+**Äldre artikel**
+
+Denna artikel är äldre och nyare information finns tillgänglig på [labbmiljo](labbmiljo).
+[/WARNING]
 
 
 
 Webbserver {#webbserver}
 --------------------------------------------------------------------
 
-* <a href='http://www.student.bth.se/~mosstud/index.html'>http://www.student.bth.se/~mosstud/index.html</a>
+* [www.student.bth.se/~mosstud/index.html](http://www.student.bth.se/~mosstud/index.html)
 
 Byt ut `~mosstud` mot ditt eget studentid och testa att öppna länken i en webbläsare. Du bör få upp en sida som säger något i stil med "Ändra mig!".
+
 
 
 Filserver {#filserver}
@@ -47,9 +53,9 @@ Alla filer som ligger under din katalog som heter `www` är tillgängliga via we
 
 Se till att filer och bibliotek är läsbara för alla (chmod 644 för filer och chmod 755 för bibliotek). Annars syns de inte i webbläsaren. När du skapar nya filer får de normalt rättigheterna som gör att de inte syns via webbläsaren. 
 
-* Läs mer i forumet om hur du ändrar filrättigheter:  
-  <a href='http://dbwebb.se/f/319'>http://dbwebb.se/f/319</a>
+* Läs mer i forumet om [hur du ändrar filrättigheter](f/319).
 [/INFO]
+
 
 
 Databasserver MySQL {#databasserver}
@@ -66,12 +72,11 @@ Du loggar sedan in med ditt studentkonto och du har en databas som heter samma s
 
 En textbaserad klient finns på `ssh.student.bth.se`. Du startar den på följande sätt:
 
-~~~syntax=html
+```html
 mos@seekers: mysql -p -h blu-ray.student.bth.se
-~~~
+```
 
-* PHPMyAdmin finns på följande länk:  
-  <a href='http://www.student.bth.se/phpmyadmin'>http://www.student.bth.se/phpmyadmin</a>
+* Administrera din databas med [PHPMyAdmin](http://www.student.bth.se/phpmyadmin).
 
 Om du är osäker på databaser och vill veta mer om hur du kommer igång med MySQL och dess olika klienter (och var de finns installerade) så läser du guiden "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)".
 
@@ -82,11 +87,12 @@ HTML, PHP och MySQL {#html}
 
 Följande inlägg visar exempel på hur du använder HTML, PHP och SQL  i labbmiljön.
 
-* <a href='http://db-o-webb.blogspot.com/2009/10/att-koppla-php-mot-databas.html'>http://db-o-webb.blogspot.com/2009/10/att-koppla-php-mot-databas.html</a>
+* [Joppla PHP mot databas](http://db-o-webb.blogspot.com/2009/10/att-koppla-php-mot-databas.html).
 
 När du kopplar dig mellan PHP och MySQL använder du en fil `config.php`. Där anger du lösenord och kopplingsdetaljer. Läs hur du skyddar ditt lösenord.
 
-* <a href='http://db-o-webb.blogspot.com/2010/01/php-och-mysql-skydda-din-configphp.html'>http://db-o-webb.blogspot.com/2010/01/php-och-mysql-skydda-din-configphp.html</a>
+* [Skydda din config.php](http://db-o-webb.blogspot.com/2010/01/php-och-mysql-skydda-din-configphp.html).
+
 
 
 Installera egen webbserver {#egen-miljo}
@@ -94,39 +100,27 @@ Installera egen webbserver {#egen-miljo}
 
 det är alltid en god idé att installera en egen utvecklingsmiljö på din hemmaskin.
 
-* WampServer på Windows (paket med Apache, PHP, MySQL och SQLite).  
-  <a href='http://db-o-webb.blogspot.com/2010/09/installera-wampserver-pa-windows.html'>http://db-o-webb.blogspot.com/2010/09/installera-wampserver-pa-windows.html</a>
+* [WampServer på Windows](http://db-o-webb.blogspot.com/2010/09/installera-wampserver-pa-windows.html) (paket med Apache, PHP, MySQL och SQLite).  
 
-* MAMP på Mac (paket med Apache, PHP, MySQL och SQLite).  
-  <a href='http://db-o-webb.blogspot.com/2010/09/installera-mamp-pa-os-x.html'>http://db-o-webb.blogspot.com/2010/09/installera-mamp-pa-os-x.html</a>
+* [MAMP på Mac](http://db-o-webb.blogspot.com/2010/09/installera-mamp-pa-os-x.html) (paket med Apache, PHP, MySQL och SQLite).  
 
-* Apache, PHP och MySQL på Windows Vista och Windows 7.  
-  <a href='http://db-o-webb.blogspot.com/2009/09/installera-apache-php-och-mysql-pa.html'>http://db-o-webb.blogspot.com/2009/09/installera-apache-php-och-mysql-pa.html</a>
+* [Apache, PHP och MySQL på Windows Vista och Windows 7](http://db-o-webb.blogspot.com/2009/09/installera-apache-php-och-mysql-pa.html).  
+
 
 
 Avancerat: Bra att ha tips {#avancerat}
 --------------------------------------------------------------------
 
-Editera inloggningsfilerna på `ssh.student.bth.se` för att ta bort autologout och strul med umask så du slipper göra chmod hela tiden.
+[Editera inloggningsfilerna](http://db-o-webb.blogspot.com/2009/09/sshstudentbthse-editera-initfilen-vid.html) på `ssh.student.bth.se` för att ta bort autologout och strul med umask så du slipper göra chmod hela tiden.
 
-* <a href='http://db-o-webb.blogspot.com/2009/09/sshstudentbthse-editera-initfilen-vid.html'>http://db-o-webb.blogspot.com/2009/09/sshstudentbthse-editera-initfilen-vid.html</a>
+[Sitt hemma med MySQL Workbench och jobba mot MySQL-servern](http://db-o-webb.blogspot.com/2010/09/kom-at-mysql-servern-med-mysql.html).
 
-Sitt hemma med MySQL Workbench och jobba mot MySQL-servern.
+[SSH och port forwarding med xterm](http://db-o-webb.blogspot.com/2009/09/ssh-port-forwarding-med-xterm.html)  (Linux/Unix/Mac) [och putty](http://db-o-webb.blogspot.com/2009/09/ssh-port-forwarding-med-putty.html) (Windows).
 
-* <a href='http://db-o-webb.blogspot.com/2010/09/kom-at-mysql-servern-med-mysql.html'>http://db-o-webb.blogspot.com/2010/09/kom-at-mysql-servern-med-mysql.html</a>
+Kommandot [screen finns installerat](http://db-o-webb.blogspot.com/2009/10/kommandot-screen-finns-pa.html) på ssh.student.bth.se.
 
-SSH och port forwarding med xterm (Linux/Unix/Mac) och putty (Windows).
+[Versionshantering med git, github och subversion (svn)](http://db-o-webb.blogspot.com/2010/02/versionshantering-med-git-github-och.html).
 
-* <a href='http://db-o-webb.blogspot.com/2009/09/ssh-port-forwarding-med-xterm.html'>http://db-o-webb.blogspot.com/2009/09/ssh-port-forwarding-med-xterm.html</a>
-* <a href='http://db-o-webb.blogspot.com/2009/09/ssh-port-forwarding-med-putty.html'>http://db-o-webb.blogspot.com/2009/09/ssh-port-forwarding-med-putty.html</a>
-
-Kommandot screen finns installerat på ssh.student.bth.se.
-
-* <a href='http://db-o-webb.blogspot.com/2009/10/kommandot-screen-finns-pa.html'>http://db-o-webb.blogspot.com/2009/10/kommandot-screen-finns-pa.html</a>
-
-Versionshantering med git, github och subversion (svn)
-
-* <a href='http://db-o-webb.blogspot.com/2010/02/versionshantering-med-git-github-och.html'>http://db-o-webb.blogspot.com/2010/02/versionshantering-med-git-github-och.html</a>
 
 
 MSDNAA {#msdnaa}
@@ -137,14 +131,11 @@ Visste du att du som student kan få tillgång till Microsofts programvaror?
 > ”MSDNAA, MSDN Academic Alliance är ett program som Microsoft startat. Programmet innebär att Microsoft ger studenter och forskare fri tillgång till större delen av Microsofts mjukvara gratis för att kunna användas i utbildning, utvärdering och forskning.
 Några exempel på mjukvara som medlemmar av MSDNAA får är Windows Server 2003, Windows Vista Business, Windows XP Professional och Visual Studio."
 
-* Läs mer och anmäl dig i forumet:  
-  <a href='http://dbwebb.se/f/3046'>http://dbwebb.se/f/3046</a>
+[Läs mer och anmäl dig i forumet](f/3046).
+
 
 
 Problem {#problem}
 --------------------------------------------------------------------
 
-[IT-supportens helpdesk](/bth#ithelpdesk) hjälper dig vid problem.
-
-
-
+[IT-supportens helpdesk](bth#ithelpdesk) hjälper dig vid problem.
