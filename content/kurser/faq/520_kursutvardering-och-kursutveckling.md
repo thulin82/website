@@ -1,15 +1,14 @@
 ---
 author: mos
 revision:
-  "2012-06-27": (A, mos) Första utgåvan.
-published: '2012-06-27 '
-updated: "2013-03-12 08:38:44"
-created: "2012-06-27 15:38:04"
+    "2016-08-04": (B, mos) Genomgången.
+    "2012-06-27": (A, mos) Första utgåvan.
 ...
 Kursutvärdering och kursutveckling
 ==================================
 
 Lite tankar om hur vi löpande jobbar med kursutvärdering och kursutveckling.
+
 
 
 Feedback är viktigt {#feedback}
@@ -24,6 +23,7 @@ All feedback är oerhört viktig för kursens kvalitet och vidare utveckling. F�
 * BTH's kursutvärdering.
 
 
+
 Löpande under kursens gång {#lopande}
 -------------------------------------
 
@@ -32,10 +32,12 @@ Att löpande samla in feedback är nästan det viktigaste för att få en känsl
 När det finns felaktigheter i kursmaterialet så försöker vi rätta till det omedelbart. Hittar du såna tveksamheter så är det bara att maila eller hojta till i chat eller forum. Förhoppningsvis är det enkla saker att rätta till och då gör vi det på en gång. Blir det lite mer tidskrävande så får vi lägga det på att-göra-listan.
 
 
+
 Återkoppla och betygsätt kursen {#aterkoppla}
 ---------------------------------------------
 
 Sista redovisningstexten är lite spännande för då får jag läsa studentens sista omdöme om kursen tillsammans med ett betyg. Det lilla textstycket tillsammans med betyget ger mig en bra vägledning i om vi är på rätt spår eller ej. Beroende på vad som sägs där så planerar jag större justeringar av kursen eller delar av kursen.
+
 
 
 Diskussioner i sal {#diskussioner}
@@ -46,10 +48,12 @@ På campus-kurserna har vi diskussioner i sal vilket är givande, det är alltid
 Ibland blir det spontana diskussioner i chatten där vi kan diskutera innehåll i kurser och kursmoment. Även där får jag möjlighet att ställa följdfrågor vilket gör att jag kan få bättre grepp om hur studenter upplever kurserna.
 
 
+
 BTH's kursutvärderingssystem {#bth}
 -----------------------------------
 
 Ett formulär som mailas ut i slutet av kursen och besvaras anonymt. Resultatet är framförallt viktigt för att det används till att jämföra BTH's kurser mot varandra. På det sättet är den utvärderingen viktig för mig. Jag kan också få fingervisning om det är något som inte dykt upp under kursens gång.
+
 
 
 Löpande kursutveckling {#utveckling}
@@ -62,12 +66,10 @@ Men jämna mellanrum, säg 2-3 års intervaller, så blir det dax för en störr
 Den stora utmaningen är att hålla en jämn takt med teknikens utveckling i webbprogrammeringens värld och erbjuda bra kurser med pedagogiskt och välskrivet material. Med din feedback blir det jobbet mycket enklare. Tack på förhand.
 
 
+
 Diskutera kursutveckling och kursfeedback {#lopande}
 -------------------------------------
 
 Fråga i forument om du har en direkt fråga som du vill ha besvarad kring detta ämne. 
 
-* Om kursutvärdering och kursutveckling i forumet:  
-  <a href='http://dbwebb.se/forum/viewtopic.php?f=30&t=594'>http://dbwebb.se/forum/viewtopic.php?f=30&t=594</a>
-
-
+* Om [kursutvärdering och kursutveckling i forumet](/t/594)

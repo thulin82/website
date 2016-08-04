@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-08-04": (G, mos) Justerade länkar.
     "2016-04-22": (F, mos) Uppdatering i samband med ny webbplats.
     "2015-01-09": (E, mos) Ny organisation.
     "2014-01-08": (D, mos) Lade till info om antagningsenheten.
@@ -52,14 +53,14 @@ Får du problem med ditt studentkonto eller IT-tjänsterna så [vänder du dig t
 Biblioteket {#biblioteket}
 --------------------------------------------------------------------
 
-[BTH's bibliotek](http://www.bth.se/bib'>http://www.bth.se/bib) kan hjälpa dig, även om du är distansstudent. Du kan låna e-böcker och söka i deras databaser.
+[BTH's bibliotek](https://www.bth.se/bibliotek/) kan hjälpa dig, även om du är distansstudent. Du kan låna e-böcker och söka i deras databaser.
 
 
 
 Institutionen DIPT {#dipt}
 --------------------------------------------------------------------
 
-Det lärarteam som undervisar på dbwebb-kurserna tillhör institutionen DIPT. Det är institutionen för Programvaruteknik.
+Det lärarteam som undervisar på dbwebb-kurserna tillhör institutionen DIPT, [institutionen för Programvaruteknik](https://www.bth.se/om-bth/organisation/fakulteten-for-datavetenskaper/dipt/).
 
 
 

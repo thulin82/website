@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-  "2016-04-22": (A, mos) Överflyttat till eget dokument.
+    "2016-08-04": (B, mos) Info om uppropet.
+    "2016-04-22": (A, mos) Överflyttat till eget dokument.
 ...
 Välkomstbrev och kursstart
 ==================================
@@ -32,4 +33,4 @@ När du har registrerat dig så kommer du automatiskt åt kursmaterialet via lä
 Upprop {#upprop}
 ----------------
 
-Första veckan sker ett upprop som du *måste* närvara på, annars är risken att du mister din studieplats. Detaljer om uppropet presenteras i läroplattformen ITs.
+Första veckan sker ett upprop som du *måste* närvara på, annars är risken att du mister din studieplats. Information om uppropet hittar du i välkomstbrevet och ytterligare information kan finnas i kurstillfället på ITs.

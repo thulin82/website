@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-08-04": (E, mos) Justerade vissa länkar.
     "2016-04-22": (D, mos) Överflyttad till ny webbplats.
     "2014-09-22": (C, mos) Inför hösten 2014.
     "2013-10-24": (B, mos) Uppdaterad med länk till "Jag har blivit avregistrerad?".
@@ -30,7 +31,7 @@ Kontrollera [din studieplan](rekommenderad-studieplan) för att se när du har 3
 Vad händer om jag inte klarar det? {#3v-miss}
 ------------------------------------------------------------
 
-Om du inte klarar kraven för 3-veckors uppropet så får du ett *tidigt avbrott* i kursen. Det tidiga avbrottet dateras tre veckor in i kursen. Om du har [CSN kan detta innebära ett problem för dig](t/2365). 
+Om du inte klarar kraven för 3-veckors uppropet så får du ett *tidigt avbrott* i kursen. Det tidiga avbrottet dateras tre veckor in i kursen. Om du har [CSN kan detta innebära ett problem för dig](/t/2365). 
 
 Har du fått ett tidigt avbrott kan du inte *kräva* att få tillbaka din studieplats, men har något fel skett så brukar det lösas i god anda.
 
@@ -48,7 +49,7 @@ Vi brukar vara flexibla med att ge mer tid till de som är aktiva på kurserna. 
 Felaktigt avregistrerad? {#3v-fel}
 ------------------------------------------------------------
 
-Kanske har du fått ett mail från CSN som säger att du avbrutit dina studier eller så kommer du inte längre åt kurserna på ITs. Då är sannolikheten stor att du blivit avregistrerad från kursen/kurserna i samband med en avstämning i enlighet med 3 veckors uppropet. Via [studentportalen](bth#studentportalen) kan du kolla din [registreringsstatus på kurserna](t/1135). Är du registrerad eller ej?
+Kanske har du fått ett mail från CSN som säger att du avbrutit dina studier eller så kommer du inte längre åt kurserna på ITs. Då är sannolikheten stor att du blivit avregistrerad från kursen/kurserna i samband med en avstämning i enlighet med 3 veckors uppropet. Via [studentportalen](bth-stodfunktioner#studentportalen) kan du kolla din [registreringsstatus på kurserna](/t/1135). Är du registrerad eller ej?
 
 Har du blivit felaktigt avregistrerad? **Om det har blivit fel så går det att göra "undo"**. Om du visar att du verkligen är aktiv på kursen så kan du bli återregistrerad, förutsatt att du uppfyller kriterierna för 3-veckors uppropet.
 

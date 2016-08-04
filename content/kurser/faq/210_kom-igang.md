@@ -38,19 +38,14 @@ Du har fått ett välkomstbrev, läs det, hur inspirerande det än ser ut att va
 
 Eller hur?
 
-Saknar du välkomstbrevet så sök på kursen via [BTHs kurshemsida](<a href='http://edu.bth.se/utbildning/utb_sok_utbildning.asp?lang=sv'>http://edu.bth.se/utbildning/utb_sok_utbildning.asp?lang=sv</a>) där alla utbildningar visas.
-
-Inför våren 2016 så finns välkomstbreven på respektive kurspakets sida på BTH webben.
-
-* [Webbutveckling och programmering 30 hp halvfart (webutv)](<a href='http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP641&PaketStarttermin=20161&lang=sv'>http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP641&PaketStarttermin=20161&lang=sv</a>)
-* [Databaser, HTML, CSS, JavaScript och PHP 30 hp halvfart (webprog)](<a href='http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP642&PaketStarttermin=20161&lang=sv'>http://edu.bth.se/utbildning/utb_kurspaket.asp?PaketAnmkod=KP642&PaketStarttermin=20161&lang=sv</a>)
+Saknar du välkomstbrevet så sök på kursen via [BTHs kurshemsida](http://edu.bth.se/utbildning/utb_sok_utbildning.asp) där alla utbildningar visas.
 
 
 
 Registrera dig på kurserna {#registrera}
 -----------------------------------------------------------
 
-Via [BTH's studentportal](bth#studentportalen) kan du registrera dig på de kurser som du skall gå. Gör det på en gång, du behöver vara registrerad på kursen för att få tillgång till Läroplattformen ITs.
+Via [BTH's studentportal](bth-stodfunktioner#studentportalen) kan du registrera dig på de kurser som du skall gå. Gör det på en gång, du behöver vara registrerad på kursen för att få tillgång till Läroplattformen ITs.
 
 Om du går flera kurser så kan de ha olika start och slutdatum. Du kan registrera dig på respektive kurs i samband med dess startdatum.
 
@@ -61,7 +56,7 @@ Bekanta dig med studentportalen, där står vilka kurser du är registrerad på,
 Bekanta dig med läroplattformen ITs {#its}
 -----------------------------------------------------------
 
-I välkomstbrevet läste du om [läroplattformen ITs](bth#its). Där finns kursens kurstillfälle som du deltar i. Kurstillfället på ITs innehåller allt kursmaterial.
+I välkomstbrevet läste du om [läroplattformen ITs](bth-stodfunktioner#its). Där finns kursens kurstillfälle som du deltar i. Kurstillfället på ITs innehåller allt kursmaterial.
 
 När du är registrerad på kursen så blir du automatiskt deltagare på rätt kurstillfälle på ITs. Det sker en överföring varje timme. Om du registrerar dig nu så får du tillgång till kurserna på ITs inom två timmar.
 
@@ -72,7 +67,7 @@ Allt kursmaterial är tillgängligt via ITs.
 Skaffa konto på dbwebb.se {#konto}
 -----------------------------------------------------------
 
-Allt kursmaterial finns även tillgängligt via webbplatsen <a href='http://dbwebb.se'>http://dbwebb.se</a>. Här finns även kursens diskussionsforum. För att komma åt forumet behöver du ett konto som du måste skaffa manuellt.
+Allt kursmaterial finns även tillgängligt direkt via webbplatsen [dbwebb.se][/]. Här finns även kursens diskussionsforum. För att komma åt forumet behöver du ett konto som du måste skaffa manuellt.
 
 Klicka uppe i högra hörnet av denna sidan för att skapa ett konto. Detta konto kommer du att ha kvar även efter dina studier. Det är en av fördelarna med att använda dbwebb.se för kursmaterialet, du kan använda det även efter studierna, kanske som ett nätverk av webbprogrammerare. Ett bättre forum, än vad ITs kan erbjuda, är en annan fördel med dbwebb.se.
 
@@ -83,17 +78,18 @@ Nåväl, skaffa dig nu ett konto på dbwebb.se. Hör av dig om det strular (koll
 Gör upprop i din första kurs {#upprop}
 -----------------------------------------------------------
 
-Nu är du redo att börja jobba med kursen. Gör först ett inlägg i uppropstråden i kursens forum. Du hittar dit via ITs eller så letar du dig fram via <a href='http://dbwebb.se/forum'>http://dbwebb.se/forum</a>.
+Nu är du redo att börja jobba med kursen. Gör först ett inlägg i uppropstråden i kursens forum. Du hittar dit via ITs eller så letar du dig fram via [forumet](/forum).
 
 Gör alltid upprop i respektive kurs när du startar den. Går du flera kurser på en termin så väntar du med upprop tills du verkligen sätter tänderna i kursen.
 
 
 
+<!--
 FAQ för allmänna kursfrågor {#faq}
 -----------------------------------------------------------
 
 Innan du sätter i gång så kan du gå till forumdelen "[Allmän kursinformation](forum/viewforum.php?f=30)" och kika in [FAQ:en för allmänna administrativa kursfrågor](t/1113). Bara så du vet var du hittar den.
-
+-->
 
 
 Klar -- då kör vi {#klar}
@@ -101,10 +97,6 @@ Klar -- då kör vi {#klar}
 
 Härligt. Då kan vi börja jobba. Det finns mycket mer att läsa och information att inhämta men det ***bästa sättet att komma i gång är att göra det första kursmomentet i din första kurs***. Då faller det mesta på plats.
 
-Du hittar kursmaterial till samtliga kurser via <a href='http://dbwebb.se/kurser'>http://dbwebb.se/kurser</a>.
+Du hittar kursmaterial till samtliga kurser via [/kurser](/kurser).
 
 **Varmt välkommen hit!**
-
-
-
-

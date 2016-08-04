@@ -20,7 +20,7 @@ Om kurslitteratur {#om-kurslitteratur}
 
 Varje kurs har kurslitteratur och referenslitteratur. I beskrivningen för varje kurs finns också läsanvisningar där du kan se i vilken omfattning som respektive bok används i kursen.
 
-Börja med att kika på [beskrivningen för kursen htmlphp](htmlphp), skrolla ned till stycket för *Kurslitteratur*. Läs igenom det för att få ett exempel på vad jag menar.
+Börja med att kika på [beskrivningen för kursen htmlphp](/kurser/htmlphp), skrolla ned till stycket för *Kurslitteratur*. Läs igenom det för att få ett exempel på vad jag menar.
 
 [FIGURE src=/image/snapshot/kurslitteratur.jpg&sa=jpg caption="Tänk när du läst alla dessa böcker, vilken kunskap du besitter."]
 
@@ -52,9 +52,11 @@ Ja, det gör det högst troligen. Det viktigaste är att du läser och har nytta
 Kurslitteratur som eböcker {#ebok}
 --------------------------------------
 
-Flera av kursböckerna finns som e-böcker via BTH's bibliotek. Det finns [information om kursböckerna](kunskap/kategori/bok), jag har skrivit lite om varje bok och det finns länk till eventuella eböcker.
+Flera av kursböckerna finns som e-böcker via BTH's bibliotek. Dessa eböcker kommer du åt med hjälp av ditt studentkonto.
 
-Viss kurslitteratur kan du också hitta på nätet. Vissa böcker finns som pdf:er. Vi har gjort en ansats att försöka samla en del av dem i en forumtråd ["Ett bibliotek av gratis eböcker för webbprogrammerare"](t/1717).
+För varje kursbok har jag lagt upp ett inlägg i /kunskap, se ett exempel på en [bok om JavaScript](/kunskap/boken-javascript-the-definitive-guide). Jag har skrivit lite om boken och det finns länk till eventuella eböcker.
+
+Viss kurslitteratur kan du också hitta på nätet. Vissa böcker finns som pdf:er. Vi har gjort en ansats att försöka samla en del av dem i en forumtråd ["Ett bibliotek av gratis eböcker för webbprogrammerare"](/t/1717).
 
 
 
@@ -70,7 +72,11 @@ Böcker ger fortfarande en aspekt där en sammansatt kunskap finns presenterad, 
 Samma bok i olika kurser {#samma}
 --------------------------------------
 
-Samma bok kan förekomma i flera kurser. Det kan vara referenslitteratur i en kurs och sedan kurslitteratur i nästa. Du kan få en översikt över [hur kurslitteraturen används](kunskap/oversikt-av-kurslitteratur-per-kurs) i olika kurser. Det kan vara bra att kika på den översikten när du planerar inköp av böcker.
+Samma bok kan förekomma i flera kurser. Det kan vara referenslitteratur i en kurs och sedan kurslitteratur i nästa.
+
+<!--
+ Du kan få en översikt över [hur kurslitteraturen används](/kunskap/oversikt-av-kurslitteratur-per-kurs) i olika kurser. Det kan vara bra att kika på den översikten när du planerar inköp av böcker.
+-->
 
 
 
@@ -82,7 +88,3 @@ En bok kan läsas kapitel per kapitel, från pärm till pärm. Men det går ocks
 Man kan också skumläsa, eller läsa snabbt, och hoppa över de delarna som man bedömer som mindre relevanta.
 
 Det handlar om lästeknik, när man läst ett par böcker så går det ofta väldigt snabbt att läsa nya böcker. Man tränar sig på att hitta det som är relevant i böckerna.
-
-
-
-

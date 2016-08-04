@@ -1,19 +1,25 @@
 ---
 author: mos
 category: artikel
-updated: "2012-11-08 08:25:05"
-created: "2012-11-08 08:23:08"
+revision:
+    2016-08-04: (E, mos) Genomgången och uppdaterad inför HT16.
+    2012-11-07: (D, mos) Överflyttad till Lydia från google docs och omstrukturerad att bara gälla SOLO taxonomin.  
+    2011-01-28: (C, mos) Genomgången inför VT11.  
+    2010-02-01: (B, mos) Omarbetad att gälla för distanskurserna i db-o-webb.  
+    2009-03-16: (A, mos) Första utgåvan, användes i projektkurserna.  
 ...
 Varför regnar det på bergssidan - ett exempel på SOLO taxonomin
 ==================================
 
-När du skriver redovisningstexterna så ombeds du vara välformulerad. Dina redovisningstexter ligger ju till delvis till grund för det betyg som du får på kursen. Eller som det står i [texten om betygsättning och bedömning](kurser/bedomning-och-betygsattning) som krav för godkänt på kurserna:
+När du skriver redovisningstexterna så ombeds du vara välformulerad. Dina redovisningstexter ligger ju till delvis till grund för det betyg som du får på kursen. Eller som det står i [texten om betygsättning och bedömning](/kurser/faq/bedomning-och-betygsattning) som krav för godkänt på kurserna:
 
 > *Redovisningstexterna är välskrivna, kompletta och ger en god bild av att studenten har förstått de olika övningarna. Studenten har god förmåga att reflektera över innehållet i övningarna och sin egen insats i kursmomentet.*
 
 Men hur kan man uttrycka sig för att motsvara dessa krav? 
 
 <!--more-->
+
+
 
 Vi tar och kikar på skrivningen för betyget Väl Godkänt, aningen annorlunda och det ställs klart högre krav på förmågan att uttrycka sig i texten.
 
@@ -23,10 +29,10 @@ Hur skall man då formulera sina redovisningstexter? Låt oss ta ett exempel.
 
 
 
-
-
 Varför regnar det på bergssidan? {#varfor}
 --------------------------------------------------------------------
+
+Låt oss ta en enkel fråga som exempel.
 
 > *Varför regnar det mer på den bergssida som vetter mot kusten än på den som vetter mot inlandet?*
 
@@ -83,11 +89,15 @@ Ett heltäckande svar, du har ett fokus på fenomenet i sitt sammanhang, du har 
 
 Detta exempel är hämtat från boken "Hur vi lär" av Marton, Hounsell, Entwistle, referat från Collins och Biggs, 1979. Det är en klassisk bok i pedagogik och har säkert lästs av flera lärare som skolats i pedagogik.
 
+Det skadar inte att förstå hur en lärare tänker.
+
+
 
 SOLO taxonomin {#solo}
 --------------------------------------------------------------------
 
-Det är SOLO taxonomin som ligger bakom resonemanget ovan. [SOLO taxonomin](<a href='http://en.wikipedia.org/wiki/Structure_of_Observed_Learning_Outcome'>http://en.wikipedia.org/wiki/Structure_of_Observed_Learning_Outcome</a>) som är ett verktyg, en modell, för bedöma hur studenter svarar på frågor.
+Det är SOLO taxonomin som ligger bakom resonemanget ovan. [SOLO taxonomin](http://en.wikipedia.org/wiki/Structure_of_Observed_Learning_Outcome) som är ett verktyg, en modell, för bedöma hur studenter svarar på frågor.
+
 
 
 ###Vilket fokus har svaret? {#fokus}
@@ -109,6 +119,7 @@ En bra taktik för att ge ett bättre svar är att tvinga sig själv till att ut
 Rätt använd kan SOLO taxonomin hjälp oss att förbättra vår förmåga till resonemang och även förmåga att kritiskt granska andra personers resonemang.
 
 
+
 ###Kategorisering av svaret i nivåer {#akademiskt}
 
 Med stöd av SOLO taxonomin kan en kategorisering av argumentationen och resonemanget ske. SOLO taxonomin består av 5 nivåer.
@@ -128,22 +139,10 @@ Dessa nivåer kallas även:
 5. Utvidgat abstrakta
 
 
+
 Avslutningsvis {#avslut}
 --------------------------------------------------------------------
 
 En sådan här modell ligger alltså bakom när dina svar och texter bedöms. Det kan vara bra att veta och om du tar detta som tips från coachen så kan du använda kunskapen för att utvidga och förbättra dina svar, texter och muntliga resonemang, både i skolan och i det vanliga livet utanför skolan. 
 
-* Du kan fråga eller diskutera om detta i forumet.  
-  <a href='http://dbwebb.se/f/4235'>http://dbwebb.se/f/4235</a>
-
-
-Revisionshistoria {#revision}
-------------------------------
-
-<span class='revision-history' markdown='1'>
-2012-11-07: (D, mos) Överflyttad till Lydia från google docs (<a href='http://dbwebb.se/text/howto'>http://dbwebb.se/text/howto</a>) och omstrukturerad att bara gälla SOLO taxonomin.  
-2011-01-28: (C, mos) Genomgången inför VT11.  
-2010-02-01: (B, mos) Omarbetad att gälla för distanskurserna i db-o-webb.  
-2009-03-16: (A, mos) Första utgåvan, användes i projektkurserna.  
-</span>
-
+* Du kan fråga eller diskutera om detta i forumet, det finns en speciell [tråd kopplad till denna artikel](/t/703).

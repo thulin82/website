@@ -18,7 +18,7 @@ Här kan du läsa om den planering som finns för kurser när du deltar i underv
 Schema och salsbokningar {#schema}
 ----------------------------
 
-På campus sker salsbokningen med hjälp av [BTH's schemasystem](http://schema.bth.se). Med hjälp av kurskoderna kan du själv söka ut ditt schema.
+På campus sker salsbokningen med hjälp av [BTH's schemasystem](http://schema.bth.se). Med hjälp av kurskoderna kan du själv söka ut ditt schema. Där ser du var du har föreläsning, labb och seminarier i respektive kurs.
 
 
 
@@ -28,3 +28,5 @@ Lektionsplan på campus {#lektionsplan}
 Det finns en lektionsplan till varje kurs och kurstillfälle. Lektionsplanen visar när du har lärarhandledda tillfällen såsom föreläsningar, seminarier, övningar och laborationer.
 
 Lektionsplanen visar också när du har obligatoriska tillfällen såsom redovisningar.
+
+Kika i lektionsplanen för att se när det finns inbokade tillfällen i ditt kurstillfälle.

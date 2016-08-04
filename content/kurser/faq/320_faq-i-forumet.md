@@ -13,7 +13,7 @@ I forumet finns det samlingar av frågor och svar som hjälper dig när du jobba
 Allmän FAQ {#allmanfaq}
 ------------------------------------------------------------
 
-I subforumet "[Allmän kursinformation](forum/viewforum.php?f=30)" finns en FAQ som avhandlar frågor, svar och lösningar på generella problem som kan röra alla kurserna.
+I subforumet "[Allmän kursinformation](/forum/viewforum.php?f=30)" finns en FAQ som avhandlar frågor, svar och lösningar på generella problem som kan röra alla kurserna.
 
 Kika där för att se vilken typ av information du kan hitta. Hittar du inte svaret så ställer du en fråga i samma forum.
 
