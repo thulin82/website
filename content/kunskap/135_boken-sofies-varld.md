@@ -25,7 +25,7 @@ Boken diskuterar vad vi kan veta, vad vi kan känna med våra sinnen och vad vi 
 
 Boken får ett utmärkt betyg av mig :-D. 
 
-Läs om [författaren Jostein Gaarder på Wikipedia](<a href='http://en.wikipedia.org/wiki/Jostein_Gaarder'>http://en.wikipedia.org/wiki/Jostein_Gaarder</a>).
+Läs om [författaren Jostein Gaarder på Wikipedia](http://en.wikipedia.org/wiki/Jostein_Gaarder).
 
 
 
@@ -46,9 +46,7 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9789129669510]
 
-* Läs om boken på Wikipedia  
-  <a href='http://sv.wikipedia.org/wiki/Sofies_v%C3%A4rld'>http://sv.wikipedia.org/wiki/Sofies_v%C3%A4rld</a>  
-  <a href='http://no.wikipedia.org/wiki/Sofies_verden'>http://no.wikipedia.org/wiki/Sofies_verden</a>
+* Läs om [boken på Wikipedia](http://sv.wikipedia.org/wiki/Sofies_v%C3%A4rld)
 
 
 
@@ -57,21 +55,11 @@ Om boken som film {#film}
 
 Boken är filmad.
 
-* Imdb om filmen Sofies verden (1999):  
-  <a href='http://www.imdb.com/title/tt0125507/'>http://www.imdb.com/title/tt0125507/</a>
+* [Imdb om filmen Sofies verden (1999)](http://www.imdb.com/title/tt0125507/).
 
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5375
-
-
-
-
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5375).

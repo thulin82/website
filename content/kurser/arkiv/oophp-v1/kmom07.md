@@ -420,7 +420,7 @@ I denna övning så valde jag följande färgschema för HTML-sidorna.
 
 ###Kommentarer om SVG, Inkscape och SVG clipart {#svgclipart}
 
-Ett riktigt äventyrsspel måste ha en grafisk representation av rummen så jag plockade fram SVG igen. Jag använde Inkscape för att rita bakgrundsbilden (gräs, himmel, sol). Jag tog Betty från en site med SVG-clipart (<a href='http://openclipart.org/'>http://openclipart.org/</a>). Jag importerade Betty till Inkscape och lade till henne i ett eget lager i bilden. Jag väljer att låta SVG-bilden ligga externt och jag väljer `<embed>` taggen för att inkludera bilden i min HTML-sida.
+Ett riktigt äventyrsspel måste ha en grafisk representation av rummen så jag plockade fram SVG igen. Jag använde Inkscape för att rita bakgrundsbilden (gräs, himmel, sol). Jag tog Betty från en site med SVG-clipart (http://openclipart.org/). Jag importerade Betty till Inkscape och lade till henne i ett eget lager i bilden. Jag väljer att låta SVG-bilden ligga externt och jag väljer `<embed>` taggen för att inkludera bilden i min HTML-sida.
 
 * Inkscape, SVG-ritvertyg (opensource):  
   <a href='http://www.inkscape.org/'>http://www.inkscape.org/</a>
@@ -750,6 +750,3 @@ Redovisning {#redovisning}
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

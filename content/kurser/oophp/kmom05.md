@@ -40,13 +40,13 @@ Det finns inga läsanvisningar till detta kursmomentet.
 
 Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distanstudenten.
 
-* [Översikt av kursmomentet](<a href='https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom05-ht13.pdf'>https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom05-ht13.pdf</a>).
+* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom05-ht13.pdf).
 
 
 
 ###Lästips {#lastips}
 
-Få en insikt i komplexiteten att skydda sig från Cross-Site Scripting (XSS) och relaterade sårbarheter. Läs en [PHP RFC som föreslår en SPL-klass Escaper](<a href='https://wiki.php.net/rfc/escaper'>https://wiki.php.net/rfc/escaper</a>). Det ger en bra genomgång i ämnet.
+Få en insikt i komplexiteten att skydda sig från Cross-Site Scripting (XSS) och relaterade sårbarheter. Läs en [PHP RFC som föreslår en SPL-klass Escaper](https://wiki.php.net/rfc/escaper). Det ger en bra genomgång i ämnet.
 
 
 
@@ -101,7 +101,3 @@ Se till att följande frågor besvaras i texten:
 * Berätta hur du tänkte när du löste uppgifterna, hur tänkte du när du strukturerade klasserna och sidkontrollerna?
 * Börjar du få en känsla för hur du kan strukturera din kod i klasser och moduler, eller kanske inte?
 * Snart har du grunderna klara i ditt Anax, grunderna som kan skapa många webbplatser, är det något du saknar så här långt, kanske några moduler som du känner som viktiga i ditt Anax?
-
-
-
-

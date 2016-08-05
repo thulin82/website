@@ -71,8 +71,8 @@ MVC-ramverk kommer i olika smaker och varianter. I denna kursen kommer du att se
 
 Förslag på artiklar för att komma i gång med tänket kring MVC-ramverk.
 
-* [Nettuts+: MVC for Noobs](<a href='http://net.tutsplus.com/tutorials/other/mvc-for-noobs/'>http://net.tutsplus.com/tutorials/other/mvc-for-noobs/</a>)
-* [Tutorial to build a PHP MVC framework](<a href='http://www.phpro.org/tutorials/Model-View-Controller-MVC.html'>http://www.phpro.org/tutorials/Model-View-Controller-MVC.html</a>)
+* [Nettuts+: MVC for Noobs](http://net.tutsplus.com/tutorials/other/mvc-for-noobs/)
+* [Tutorial to build a PHP MVC framework](http://www.phpro.org/tutorials/Model-View-Controller-MVC.html)
 
 
 
@@ -112,7 +112,7 @@ Jämför ett par av dina metoder med samma metoder i senaste versionen av Lydia.
 * CLydia::FrontControllerRoute()
 * CLydia::ThemeEngineRender()
 
-Du hittar [senaste versionen av klassen CLydia på GitHub](<a href='https://github.com/mosbth/lydia/blob/master/src/CLydia/CLydia.php'>https://github.com/mosbth/lydia/blob/master/src/CLydia/CLydia.php</a>), [senaste versionen av index.php](<a href='https://github.com/mosbth/lydia/blob/master/index.php'>https://github.com/mosbth/lydia/blob/master/index.php</a>) och [bootstrap.php](<a href='https://github.com/mosbth/lydia/blob/master/src/bootstrap.php'>https://github.com/mosbth/lydia/blob/master/src/bootstrap.php</a>).
+Du hittar [senaste versionen av klassen CLydia på GitHub](https://github.com/mosbth/lydia/blob/master/src/CLydia/CLydia.php), [senaste versionen av index.php](https://github.com/mosbth/lydia/blob/master/index.php) och [bootstrap.php](https://github.com/mosbth/lydia/blob/master/src/bootstrap.php).
 
 
 
@@ -137,7 +137,3 @@ Resultat & Redovisning  {#redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-

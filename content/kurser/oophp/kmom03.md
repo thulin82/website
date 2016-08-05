@@ -60,7 +60,7 @@ Läs följande referenslitteratur, om du har tillgång till dem.
 
 Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distanstudenten.
 
-* [Översikt av kursmomentet](<a href='https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom03-ht13.pdf'>https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom03-ht13.pdf</a>).
+* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom03-ht13.pdf).
 
 
 
@@ -112,7 +112,3 @@ Se till att följande frågor besvaras i texten:
 * Är du bekant med databaser sedan tidigare? Vilka?
 * Hur känns det att jobba med MySQL och dess olika klienter, utvecklingsmiljö och BTH driftsmiljö?
 * Hur gick SQL-övningen, något som var lite svårare i övningen, kändes den lagom?
-
-
-
-

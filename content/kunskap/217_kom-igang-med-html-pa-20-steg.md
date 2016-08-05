@@ -175,7 +175,7 @@ Nu kommer vi alltså in på att ange en start-tagg och en slut-tagg med **inneh�
 
 <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta</a>
 
-Lite andra inställningar kan vara saker som [charset](<a href='http://www.w3.org/International/questions/qa-what-is-encoding.en'>http://www.w3.org/International/questions/qa-what-is-encoding.en</a>), språk och typ av innehåll. Vi behöver initialt bara ange en sak för att våra svenska tecken ska se ut som de borde, och det är charset.
+Lite andra inställningar kan vara saker som [charset](http://www.w3.org/International/questions/qa-what-is-encoding.en), språk och typ av innehåll. Vi behöver initialt bara ange en sak för att våra svenska tecken ska se ut som de borde, och det är charset.
 
 Även denna ska alltid ligga i `head`-taggen, och kommer se ut såhär:
 
@@ -439,7 +439,7 @@ Det kan se ut såhär:
 
 T.ex så är `p` ett *blockelement*, medan `span` är ett *inline*.
 
-I HTML5 kallas block för *flow* och inline för *phrasing*, men det finns även fler kategorier. Dokumentationen anger alltid vilka kategorier ett element har, och det går att läsa om dem här: [Content categories](<a href='https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories'>https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories</a>)
+I HTML5 kallas block för *flow* och inline för *phrasing*, men det finns även fler kategorier. Dokumentationen anger alltid vilka kategorier ett element har, och det går att läsa om dem här: [Content categories](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories)
 [/INFO]
 
 
@@ -814,10 +814,6 @@ Här t.ex har vi tidigare exempel med `span` där det nu finns en klass. Senare 
 Gå vidare {#vidare}
 ---------------------------------------------------
 
-Det finns mycket i HTML5 som det går att läsa vidare om som inte finns med i denna guide. Ett par exempel är [definitonslistor](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl</a>), [details](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details</a>) och [summary](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary</a>), [aside](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside</a>), [ljud](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio</a>) och [film](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video</a>), [script](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script</a>), [style](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style</a>) och [link](<a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link'>https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link</a>).
+Det finns mycket i HTML5 som det går att läsa vidare om som inte finns med i denna guide. Ett par exempel är [definitonslistor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl), [details](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) och [summary](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary), [aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside), [ljud](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) och [film](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video), [script](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script), [style](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) och [link](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link).
 
 Det naturliga steget efter detta är att applicera CSS på sidan för att placera element och göra det fint visuellt.
-
-
-
-

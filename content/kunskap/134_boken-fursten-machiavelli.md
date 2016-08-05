@@ -18,7 +18,7 @@ Ett antal gånger har jag läst igenom boken och varje gång finner jag den lika
 
 Boken får ett utmärkt betyg av mig :-D. 
 
-Läs om [författaren Niccolò Machiavelli på Wikipedia](<a href='http://sv.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli'>http://sv.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli</a>).
+Läs om [författaren Niccolò Machiavelli på Wikipedia](http://sv.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli).
 
 
 
@@ -41,24 +41,13 @@ Om Boken {#om-boken}
 
 Det finns många olika utgåvor av boken, sök på namnet tills du hittar en som passar.
 
-* Project Gutenberg -- hämta en fri kopia av boken:  
-  <a href='http://www.gutenberg.org/ebooks/1232'>http://www.gutenberg.org/ebooks/1232</a>
+* Project Gutenberg -- [hämta en fri kopia av boken](http://www.gutenberg.org/ebooks/1232).
 
-* Läs om boken på Wikipedia  
-  <a href='http://sv.wikipedia.org/wiki/Fursten'>http://sv.wikipedia.org/wiki/Fursten</a>
+* Läs om [boken på Wikipedia](http://sv.wikipedia.org/wiki/Fursten).
 
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5373
-
-
-
-
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5373).

@@ -423,7 +423,7 @@ Så här blev det för mig.
 
 [FIGURE src=/img/oophp/kmom01/image10.png?w=w1 caption="Källkod för `common.php`."]
 
-Som du kan se i koden så väljer jag att jobba med strängar enligt HEREDOC. Det ser mycket bättre ut än alla dessa fnuttar (", '). [Läs om HEREDOC i refmanualen](<a href='http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc'>http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc</a>).
+Som du kan se i koden så väljer jag att jobba med strängar enligt HEREDOC. Det ser mycket bättre ut än alla dessa fnuttar (", '). [Läs om HEREDOC i refmanualen](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc).
 
 ~~~syntax=php
 <?php
@@ -602,8 +602,3 @@ Redovisning {#redovisning}
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-
-
-

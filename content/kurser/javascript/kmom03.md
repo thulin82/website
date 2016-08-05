@@ -46,7 +46,7 @@ Boken ger dig facit till de övningar som du senare skall göra.
 
 Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distansstudenten.
 
-* [Översikt av kursmomentet](<a href='https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom03-ht13.pdf'>https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom03-ht13.pdf</a>).
+* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom03-ht13.pdf).
 
 
 
@@ -54,7 +54,7 @@ Följande föreläsningsmaterial användes i samband med campus-kursen höstterm
 
 Kika på följande videor.
 
-1. Kika på [John Resig jQuery and the Open Source Process](<a href='https://vimeo.com/32957711'>https://vimeo.com/32957711</a>) när han pratar allmänt om projektet jQuery.
+1. Kika på [John Resig jQuery and the Open Source Process](https://vimeo.com/32957711) när han pratar allmänt om projektet jQuery.
 
 
 
@@ -68,7 +68,7 @@ Här finns mer att läsa, några av de viktigaste.
 * Dokumentation för jQuery's API:  
   <a href='http://api.jquery.com/'>http://api.jquery.com/</a>
 
-* Lär dig jQuery med [video och onlineövningar på try.jquery.com](<a href='http://try.jquery.com/'>http://try.jquery.com/</a>).
+* Lär dig jQuery med [video och onlineövningar på try.jquery.com](http://try.jquery.com/).
 
 * En online-video-kurs i jQuery, "Lär dig jQuery på 30-dagar", hög kvalitet och bra lärare:  
   <a href='http://dbwebb.se/forum/viewtopic.php?f=11&t=705'>http://dbwebb.se/forum/viewtopic.php?f=11&t=705</a>
@@ -76,7 +76,7 @@ Här finns mer att läsa, några av de viktigaste.
 * Graceful degradation versus progressive enhancement. Kika översiktligt på artikeln
   <a href='http://www.w3.org/community/webed/wiki/Graceful_degredation_versus_progressive_enhancement'>http://www.w3.org/community/webed/wiki/Graceful_degredation_versus_progressive_enhancement</a>
 
-* Läs om alternativen till jQuery och hur man gör saker utan jQuery på [You might not need jQuery](<a href='http://youmightnotneedjquery.com/'>http://youmightnotneedjquery.com/</a>).
+* Läs om alternativen till jQuery och hur man gör saker utan jQuery på [You might not need jQuery](http://youmightnotneedjquery.com/).
 
 
 
@@ -131,6 +131,3 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-

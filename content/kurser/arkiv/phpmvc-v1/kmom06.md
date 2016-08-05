@@ -43,23 +43,23 @@ Det finns inga läsanvisningar i kurslitteraturen till detta kursmoment.
 
 Läs följande artiklar som handlar om tankar kring layout på en webbsida.
 
-1) Vad innebär ett typografiskt horisontellt rutnät i webblayout? Läs artikeln "[Technical Web Typography: Guidelines and Techniques](<a href='http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/'>http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/</a>)".
+1) Vad innebär ett typografiskt horisontellt rutnät i webblayout? Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)".
 
-2) Vad handlar det om med alla varianter på layout av en webbsida? Läs artikeln "[Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?](<a href='http://coding.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/'>http://coding.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/</a>)". Det blir förhoppningsvis en inspiration som leder till att du läser på mer i ämnet.
+2) Vad handlar det om med alla varianter på layout av en webbsida? Läs artikeln "[Fixed vs. Fluid vs. Elastic Layout: What’s The Right One For You?](http://coding.smashingmagazine.com/2009/06/02/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/)". Det blir förhoppningsvis en inspiration som leder till att du läser på mer i ämnet.
 
 
 Studera följande webbsidor som handlar om LESS, lessphp och Semantic.gs. Du kommer att använda alla tre i kommande övningar så det är lika bra att du bekantar dig med deras manualsidor.
 
-1) [LESS](<a href='http://lesscss.org/'>http://lesscss.org/</a>), ett bättre sätt att skriva CSS-kod.
+1) [LESS](http://lesscss.org/), ett bättre sätt att skriva CSS-kod.
 
-2) [lessphp](<a href='http://leafo.net/lessphp/'>http://leafo.net/lessphp/</a>), en kompilator för LESS, skriven i PHP.
+2) [lessphp](http://leafo.net/lessphp/), en kompilator för LESS, skriven i PHP.
 
-3) [Semantic.gs](<a href='http://semantic.gs/'>http://semantic.gs/</a>), ett gridbaserat ramverk baserat på LESS.
+3) [Semantic.gs](http://semantic.gs/), ett gridbaserat ramverk baserat på LESS.
 
 Det finns en samling av artiklar i ämnet, här är ett par som jag kan rekommendera som startpunkt för att få bättre grepp om hur LESS; lessphp och Sematic.gs kan samverka.
 
-* Smashing Magazine: "[The Semantic Grid System: Page Layout For Tomorrow](<a href='http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/'>http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/</a>)".
-* NetTuts+: "[How to Squeeze the Most out of LESS](<a href='http://net.tutsplus.com/tutorials/php/how-to-squeeze-the-most-out-of-less/'>http://net.tutsplus.com/tutorials/php/how-to-squeeze-the-most-out-of-less/</a>)" 
+* Smashing Magazine: "[The Semantic Grid System: Page Layout For Tomorrow](http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/)".
+* NetTuts+: "[How to Squeeze the Most out of LESS](http://net.tutsplus.com/tutorials/php/how-to-squeeze-the-most-out-of-less/)" 
 
 
 ###Lektionsmaterial  {#lektionsmaterial}
@@ -75,13 +75,13 @@ Följande föreläsningsmaterial finns tillgängliga för campus-kursen. Present
 
 Här är fler kända CSS-ramverk som är bra att ha koll på. Ägna lite tid att ögna igenom deras webbplatser och studera hur dessa CSS-ramverk är uppbyggda.
 
-1) [Bootstrap från Twitter](<a href='http://twitter.github.com/bootstrap/'>http://twitter.github.com/bootstrap/</a>).
+1) [Bootstrap från Twitter](http://twitter.github.com/bootstrap/).
 
-2) [Blueprint, ett CSS ramverk](<a href='http://blueprintcss.org/'>http://blueprintcss.org/</a>).
+2) [Blueprint, ett CSS ramverk](http://blueprintcss.org/).
 
-3) [960 gs, ett CSS grid ramverk](<a href='http://960.gs/'>http://960.gs/</a>).
+3) [960 gs, ett CSS grid ramverk](http://960.gs/).
 
-4) Kika även på [Normalize.css](<a href='http://necolas.github.com/normalize.css/'>http://necolas.github.com/normalize.css/</a>) som är en möjlig ersättare till [Erik Meyers reset.css](<a href='http://meyerweb.com/eric/tools/css/reset/'>http://meyerweb.com/eric/tools/css/reset/</a>) som används i Lydia's tutorial om temat.
+4) Kika även på [Normalize.css](http://necolas.github.com/normalize.css/) som är en möjlig ersättare till [Erik Meyers reset.css](http://meyerweb.com/eric/tools/css/reset/) som används i Lydia's tutorial om temat.
 
 
 
@@ -112,7 +112,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 Känner du för en extra utmaning och djupdykning i ett CSS ramverk byggt på LESS?
 
-1) Använd [Bootstrap från Twitter](<a href='http://twitter.github.com/bootstrap/'>http://twitter.github.com/bootstrap/</a>) som grund i ditt tema. Du kan ha det i ditt grundtema eller så gör du ytterligare ett tema som baseras på Bootstrap.
+1) Använd [Bootstrap från Twitter](http://twitter.github.com/bootstrap/) som grund i ditt tema. Du kan ha det i ditt grundtema eller så gör du ytterligare ett tema som baseras på Bootstrap.
 
 
 
@@ -135,7 +135,3 @@ Resultat & Redovisning  {#redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-

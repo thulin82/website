@@ -40,7 +40,7 @@ Boken ger dig grunden till de övningar som du senare skall göra.
 
 Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distansstudenten.
 
-* [Översikt av kursmomentet](<a href='https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom06-ht13.pdf'>https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom06-ht13.pdf</a>).
+* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom06-ht13.pdf).
 
 
 
@@ -116,7 +116,3 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-

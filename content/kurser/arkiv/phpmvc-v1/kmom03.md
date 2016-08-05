@@ -62,10 +62,10 @@ Följande föreläsningsmaterial finns tillgängliga för campus-kursen. Present
 
 Kika gärna på manualerna till ett par kända PHP-ramverk. Det är ofta bra läsning för den som vill fördjupa sig i ramverkskodande, bli riktigt bra på PHP eller bara för att förstå grunderna i ramverkens uppbyggnad.
 
-1. [CodeIgniter](<a href='http://codeigniter.com/'>http://codeigniter.com/</a>)
-2. [Symphony](<a href='http://symfony.com/'>http://symfony.com/</a>)
-3. [FuelPHP](<a href='http://fuelphp.com/'>http://fuelphp.com/</a>)
-4. [Laravel](<a href='http://laravel.com/'>http://laravel.com/</a>)
+1. [CodeIgniter](http://codeigniter.com/)
+2. [Symphony](http://symfony.com/)
+3. [FuelPHP](http://fuelphp.com/)
+4. [Laravel](http://laravel.com/)
 
 
 
@@ -109,7 +109,7 @@ Följ tutorialen för att komma i gång med CodeIgniter, bygg samtidigt din egen
 
 I denna kursen så lagrar Lydia sina vyer i samma katalog som den kontroller som använder vyn. Ett vanligt sätt är dock att lagra vyerna i en egen katalog. Det gör Lydia i nuvarande version. Som en extra uppgift kan du kika på hur Lydia numer hanterar vyerna. Läs READE-sidan och kika på vyerna för att få ett par exempel på hur vyer kan se ut.
 
-* [Läs om Lydias hantering av vyer](<a href='https://github.com/mosbth/lydia/tree/master/views'>https://github.com/mosbth/lydia/tree/master/views</a>), via GitHub och README-filen i `lydia/views`.
+* [Läs om Lydias hantering av vyer](https://github.com/mosbth/lydia/tree/master/views), via GitHub och README-filen i `lydia/views`.
 
 
 ###Spam i gästböcker {#spam}
@@ -139,7 +139,3 @@ Resultat & Redovisning  {#redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-

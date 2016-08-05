@@ -54,14 +54,14 @@ Här är lästips kring de tekniker som används i kursmomentet.
 
 Kika på PHPDoc, det sättet som du bör skriva dina kommentarer på för att det skall gå att automatgenerera dokumentation från din kod.
 
-* [Wikipedia om PHPDoc](<a href='http://en.wikipedia.org/wiki/PHPDoc'>http://en.wikipedia.org/wiki/PHPDoc</a>)
+* [Wikipedia om PHPDoc](http://en.wikipedia.org/wiki/PHPDoc)
 
 
 PHP Documentor är ett verktyg som automatiskt skapar dokumentation av ditt PHP-projekt. Kika på det så du vet vad det handlar om. Pröva gärna att installera det och använd det för att dokumentera din egen kod.
 
-* [Wikipedia om PHPDocumentor](<a href='http://en.wikipedia.org/wiki/PhpDocumentor'>http://en.wikipedia.org/wiki/PhpDocumentor</a>)
+* [Wikipedia om PHPDocumentor](http://en.wikipedia.org/wiki/PhpDocumentor)
 
-* [PHPDocumentors officiella webbplats](<a href='http://www.phpdoc.org/'>http://www.phpdoc.org/</a>)
+* [PHPDocumentors officiella webbplats](http://www.phpdoc.org/)
 
 
 
@@ -115,7 +115,3 @@ Resultat & Redovisning  {#redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-

@@ -53,19 +53,19 @@ Följande föreläsningsmaterial finns tillgängliga för campus-kursen. Present
 
 ###Lästips {#lastips}
 
-1) Läs skriften ["Skriva för webben"](<a href='https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/'>https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/</a>). 
+1) Läs skriften ["Skriva för webben"](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/). 
 
 Dagens övning handlar om innehåll, men det kan också vara en god idé att kika lite på hur man bör skriva sina texter för webben. Till viss del kan det underlätta när vi skriver vår kod, om vi vet hur texterna bör skrivas och formateras så blir det enklare att erbjuda rätt tekniker.
 
 
-2) Läs om [Markdown syntax](<a href='http://daringfireball.net/projects/markdown/'>http://daringfireball.net/projects/markdown/</a>) och om programvaran [PHP Markdown Extra](<a href='http://michelf.ca/projects/php-markdown/extra'>http://michelf.ca/projects/php-markdown/extra</a>). 
+2) Läs om [Markdown syntax](http://daringfireball.net/projects/markdown/) och om programvaran [PHP Markdown Extra](http://michelf.ca/projects/php-markdown/extra). 
 
 Markdown är (1) en syntax för att skriva för webben i ett läsbart format och (2) ett verktyg för att formattera texten till HTML. Se extrauppgiften för en kodningsövning i Markdown.
 
 
-3) Läs på hur [The Open Web Application Security Project (OWASP) beskriver säkerhetsrisken med Cross Site Scripting (XSS)](<a href='https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29'>https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29</a>). En vanlig risk när man låter användaren skriva innehåll till webbplatsen.
+3) Läs på hur [The Open Web Application Security Project (OWASP) beskriver säkerhetsrisken med Cross Site Scripting (XSS)](https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29). En vanlig risk när man låter användaren skriva innehåll till webbplatsen.
 
-Det finns många fler säkerhetsrisker men det kan vara bra att lära sig terminologin som används hos OWASP. Läs även [checklistan om hur du skyddar dig mot XSS](<a href='https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet'>https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet</a>). Vill du se [olika varianter för att göra XSS](<a href='https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet'>https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet</a>) så finns det också.
+Det finns många fler säkerhetsrisker men det kan vara bra att lära sig terminologin som används hos OWASP. Läs även [checklistan om hur du skyddar dig mot XSS](https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet). Vill du se [olika varianter för att göra XSS](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet) så finns det också.
 
 
 
@@ -132,7 +132,3 @@ Resultat & Redovisning  {#redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-

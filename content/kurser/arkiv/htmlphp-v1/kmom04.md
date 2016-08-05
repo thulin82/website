@@ -446,7 +446,7 @@ Genom att använda bakgrundsbilder kan du uppnå effekter som sticker ut. Följa
 
 * <a href='http://dbwebb.se/style/?id=171'>http://dbwebb.se/style/?id=171</a>
 
-Bilderna i exemplet är ritade png-bilder men du kan naturligtvis lika gärna använda fotografier som bakgrund. Det fungerar på samma sätt. Exemplets bilder från [Openclipart](<a href='http://openclipart.org/'>http://openclipart.org/</a>) (SVG-bilder) och är redigerade i verktyget [Inkscape](<a href='http://inkscape.org/'>http://inkscape.org/</a>). Du kan läsa mer om det i följande artikel.
+Bilderna i exemplet är ritade png-bilder men du kan naturligtvis lika gärna använda fotografier som bakgrund. Det fungerar på samma sätt. Exemplets bilder från [Openclipart](http://openclipart.org/) (SVG-bilder) och är redigerade i verktyget [Inkscape](http://inkscape.org/). Du kan läsa mer om det i följande artikel.
 
 * Skapa bilder för din webbplats med SVG:  
   <a href='http://db-o-webb.blogspot.com/2010/10/skapa-bilder-for-din-webbplats-med-svg.html'>http://db-o-webb.blogspot.com/2010/10/skapa-bilder-for-din-webbplats-med-svg.html</a>
@@ -625,6 +625,3 @@ Redovisning {#redovisning}
 3. Skriv redovisningen på din me-sida. Skriv ett stycke (ca 15 meningar) om hur momentet funkade. Reflektera över svårigheter/problem/lösningar/resultatet, etc. Börjar du känna att du bemästrar CSS? Beskriv hur väl du kan CSS (nybörjare, erfaren). Vad tycker du om CSS så här långt in i kursen? Lyckades du med din style-väljare? Hur tänkte du när du gjorde din extra stylesheet och vad blev resultatet? Hur går det med ditt PHP:ande?
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

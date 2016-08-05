@@ -224,11 +224,6 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Du hittar [kursplanen genom att söka på kurskoden DV1486 via BTH's hemsida](<a href='http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486'>http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486</a>).
+Du hittar [kursplanen genom att söka på kurskoden DV1486 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1486).
 
-Fram till och med vårterminen 2013 hade kursen kurskoden [DV1440](<a href='http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1440'>http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1440</a>).
-
-
-
-
-
+Fram till och med vårterminen 2013 hade kursen kurskoden [DV1440](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1440).

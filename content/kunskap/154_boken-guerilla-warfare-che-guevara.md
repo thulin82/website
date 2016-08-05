@@ -49,11 +49,9 @@ Om Boken {#om-boken}
 
 Boken finns tillgänglig online och som pdf eller ebok.
 
-* Internet Archive -- hämta en fri kopia av boken:  
-  <a href='https://archive.org/details/GuerrillaWarfare_856'>https://archive.org/details/GuerrillaWarfare_856</a>
+* Internet Archive -- [hämta en fri kopia av boken](https://archive.org/details/GuerrillaWarfare_856).
 
-* Läs om boken på Wikipedia  
-  <a href='http://en.wikipedia.org/wiki/Guerrilla_Warfare_(book)'>http://en.wikipedia.org/wiki/Guerrilla_Warfare_(book)</a>
+* Läs om [boken på Wikipedia](http://en.wikipedia.org/wiki/Guerrilla_Warfare_(book))
 
 
 
@@ -61,10 +59,3 @@ Diskutera boken i forumet {#forum}
 ----------------------------------
 
 Det finns en forumtråd där du kan [berätta vad du tyckte om boken](t/1863).
-
-
-
-
-
-
-

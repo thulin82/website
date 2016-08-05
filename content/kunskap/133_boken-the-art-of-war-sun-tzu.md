@@ -20,7 +20,7 @@ En mycket välkänd och citerad bok om militära strategier för krig. Skriven a
 En historia om Sun Tzu {#sun}
 -----------------------------
 
-Det berättas att [Sun Tzu](<a href='http://en.wikipedia.org/wiki/Sun_Zi'>http://en.wikipedia.org/wiki/Sun_Zi</a>), författaren till boken, prövades i sin anställning som general för kungen av Wu. Provet bestod i att leda kungens harem och göra soldater av dem. Sun Tzu delade in de 180 konkubinerna i två avdelningar och satte två av kungens favoriter som ledare för respektive avdelning. 
+Det berättas att [Sun Tzu](http://en.wikipedia.org/wiki/Sun_Zi), författaren till boken, prövades i sin anställning som general för kungen av Wu. Provet bestod i att leda kungens harem och göra soldater av dem. Sun Tzu delade in de 180 konkubinerna i två avdelningar och satte två av kungens favoriter som ledare för respektive avdelning. 
 
 Sun Tzu började kommendera, de två konkubinerna fnittrade. Sun Tzu förklarade att det var hans ansvar att hans underordnade förstod hans order så han förklarade ordern igen. De två konkubinerna fnittrade igen. 
 
@@ -28,7 +28,7 @@ Sun Tzu beordrade då konkubinernas avrätting -- trots kungens protester.
 
 Efter att Sun Tzu utsett nya ledare så fungerade ordergivningen därefter smärtfritt.
 
-Källa: <a href='http://en.wikipedia.org/wiki/Sun_Zi#Life'>http://en.wikipedia.org/wiki/Sun_Zi#Life</a>
+[Källa Wikipedia](http://en.wikipedia.org/wiki/Sun_Zi#Life).
 
 
 
@@ -60,24 +60,13 @@ Om Boken {#om-boken}
 
 Det finns många olika utgåvor av boken, sök på namnet tills du hittar en som passar.
 
-* Project Gutenberg -- hämta en fri kopia av boken:  
-  <a href='http://www.gutenberg.org/ebooks/author/4349'>http://www.gutenberg.org/ebooks/author/4349</a>
+* Project Gutenberg -- [hämta en fri kopia av boken](http://www.gutenberg.org/ebooks/author/4349).
 
-* Läs om boken på Wikipedia  
-  <a href='http://en.wikipedia.org/wiki/The_Art_of_War'>http://en.wikipedia.org/wiki/The_Art_of_War</a>
+* Läs om [boken på Wikipedia](http://en.wikipedia.org/wiki/The_Art_of_War).  
 
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5374
-
-
-
-
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5374).

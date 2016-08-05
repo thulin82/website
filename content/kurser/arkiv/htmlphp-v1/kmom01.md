@@ -465,7 +465,7 @@ Varför används `&amp;` istället för tecknet `&` när vi länkar till Unicorn
 
 > **`&` did not start a character reference. (`&` probably should have been escaped as `&amp;`.)**
 
-`&` är ett tecken som har en speciell betydelse i HTML, därför ersätts den ofta med `&amp;` i HTML-koden. Annars validerar inte koden. Läs mer genom att googla på ["html entities"](<a href='https://www.google.com/?q=html+entities'>https://www.google.com/?q=html+entities</a>) eller läs i kurslitteraturen (Appendix A Character Entities).
+`&` är ett tecken som har en speciell betydelse i HTML, därför ersätts den ofta med `&amp;` i HTML-koden. Annars validerar inte koden. Läs mer genom att googla på ["html entities"](https://www.google.com/?q=html+entities) eller läs i kurslitteraturen (Appendix A Character Entities).
 </div>
 
 
@@ -601,7 +601,7 @@ En snabb och enkel uppdelning av `me.php`, `header.php` och `footer.php` kan se 
 
 Den övre delen av koden från `me.php` flyttas till filen `header.php`, inklusive logo och navigationsmenyn. Den nedre delen av filen `me.php` flyttas till filen `footer.php`. Jag väljer att skapa en ny underkatalog `incl` och lägger både `header.php` och `footer.php` i den katalogen. Det får bli en egen katalog för filer som inkluderas.
 
-Med hjälp av PHP-konstruktionen [`include()`](<a href='http://php.net/include'>http://php.net/include</a>) så inkluderas `header.php` och `footer.php` i `me.php`.
+Med hjälp av PHP-konstruktionen [`include()`](http://php.net/include) så inkluderas `header.php` och `footer.php` i `me.php`.
 
 ~~~
 <?php include("incl/header.php"); ?>
@@ -803,7 +803,7 @@ Det kommer att bli fler felmeddelanden innan kursen är slut, tro mig.
 
 [UPPGIFT]
 
-Med PHP-funktionen [`error_reporting()`](<a href='http://php.net/manual/en/function.error-reporting.php'>http://php.net/manual/en/function.error-reporting.php</a>) går att ställa in vilka felmeddelanden som visas, oavsett hur PHP är konfigurerat på servern. Ett bra sätt är att lägga anropet i en egen fil, det blir då enkelt att ändra.
+Med PHP-funktionen [`error_reporting()`](http://php.net/manual/en/function.error-reporting.php) går att ställa in vilka felmeddelanden som visas, oavsett hur PHP är konfigurerat på servern. Ett bra sätt är att lägga anropet i en egen fil, det blir då enkelt att ändra.
 
 För detta syfte skapar vi en ny fil, `incl/config.php`. Följande PHP-kod stoppar vi in i filen.
 
@@ -934,8 +934,3 @@ Redovisning {#redovisning}
 3. Skriv redovisningen på din me-sida. Skriv ett stycke (ca 15 meningar) om hur momentet funkade. Reflektera över svårigheter/problem/lösningar/resultatet, etc. Beskriv vilket operativsystem du sitter på och vilken/vilka webbläsare du normalt använder. Berätta även vilken utvecklingsmiljö du använder (editor, sftp-klient, etc). Om du använder den som rekommenderas så räcker det att säga det.
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-
-
-

@@ -10,7 +10,7 @@ Kom igång med HTML5 Websockets och Node.js
 
 HTML5 Websockets skapar nya möjligheter där webbläsaren kan ha en konstant uppkoppling mot en server där meddelanden både kan skickas och tas emot med minimal overhead. Möjligheten öppnar sig för att bättre bygga webbapplikationer som agerar i realtid. 
 
-För att komma igång med grunderna i HTML5 Websocket så bygger vi en enkel klient i webbläsaren som visar hur man kopplar upp sig mot en server, skickar och tar emot meddelanden, samt avslutar kopplingen. På serversidan använder vi [Node.js](<a href='http://nodejs.org/'>http://nodejs.org/</a>) för att skapa en server skriven i JavaScript. 
+För att komma igång med grunderna i HTML5 Websocket så bygger vi en enkel klient i webbläsaren som visar hur man kopplar upp sig mot en server, skickar och tar emot meddelanden, samt avslutar kopplingen. På serversidan använder vi [Node.js](http://nodejs.org/) för att skapa en server skriven i JavaScript. 
 
 <!--more-->
 
@@ -35,9 +35,9 @@ Node.js, JavaScript på servern {#nodejs}
 
 ###Installera Node.js {#installera-nodejs}
 
-Vi börjar med att installera node.js. [Node.js](<a href='http://nodejs.org/'>http://nodejs.org/</a>) ger en möjlighet att skriva JavaScript på servern och har blivit ett populärt verktyg bland JavaScript-programmerare. Det finns [en hel del moduler](<a href='https://npmjs.org/'>https://npmjs.org/</a>) i form av färdiga JavaScript-bibliotek som är enkla att ladda in och använda tillsammans med node.js.
+Vi börjar med att installera node.js. [Node.js](http://nodejs.org/) ger en möjlighet att skriva JavaScript på servern och har blivit ett populärt verktyg bland JavaScript-programmerare. Det finns [en hel del moduler](https://npmjs.org/) i form av färdiga JavaScript-bibliotek som är enkla att ladda in och använda tillsammans med node.js.
 
-Du kan ladda ned [Node.js från GitHub](<a href='http://github.com/joyent/node'>http://github.com/joyent/node</a>) men det enklaste sättet är att installera det via installationsprogrammet som du når via [hemsidan för Node.js](<a href='http://nodejs.org/'>http://nodejs.org/</a>).
+Du kan ladda ned [Node.js från GitHub](http://github.com/joyent/node) men det enklaste sättet är att installera det via installationsprogrammet som du når via [hemsidan för Node.js](http://nodejs.org/).
 
 Jag installerade både på Windows (enkelt) och på FreeBSD (kompilerade från GitHub, lite krångligare) bara för att testa och båda fungerade bra.
 
@@ -103,7 +103,7 @@ Bra, då vet vi att node.js fungerar och du har en fungerande http-server. Då g
 Om Websockets {#websockets}
 --------------------------------------------------------------------
 
-HTML5 Websockets API [^1][^2] ger möjligheten att ha en öppen koppling mellan webbläsaren och servern. Meddelanden kan både skickas och tas emot via denna koppling som är [full-duplex](<a href='http://en.wikipedia.org/wiki/Duplex_%28telecommunications%29'>http://en.wikipedia.org/wiki/Duplex_%28telecommunications%29</a>). Kopplingen är asynkron, så fort något sker med kopplingen så sker ett event som du kan koppla en eventhanterare till, precis som vanlig eventhantering i JavaScript i webbläsaren.
+HTML5 Websockets API [^1][^2] ger möjligheten att ha en öppen koppling mellan webbläsaren och servern. Meddelanden kan både skickas och tas emot via denna koppling som är [full-duplex](http://en.wikipedia.org/wiki/Duplex_%28telecommunications%29). Kopplingen är asynkron, så fort något sker med kopplingen så sker ett event som du kan koppla en eventhanterare till, precis som vanlig eventhantering i JavaScript i webbläsaren.
 
 När du använder websockets så har du alltid en klient och en server. I våra testfall så kör vi klienten i webbläsaren och servern i node.js. Det finns även websocketservrar som är implementerade i andra programmeringsspråk såsom PHP och Python, men jag har alltså valt att bygga servern i JavaScript och att köra den node.js.
 
@@ -154,7 +154,7 @@ Så här blev [min kod för `client.html`](kod-exempel/nodejs/client.html).
 
 [FIGURE src=/img/kunskap/javascript/node-js-websocket-connect.png caption="En websocket klient som kopplar upp sig mot en existerande websocket server."]
 
-Där har vi nu en fungerande klient för HTML5 Websockets. Nu kan det vara läsa att läsa på lite om grunderna i websockets och att bekanta sig med manualsidorna. Framförallt kan du bekanta dig med [Mozilla Developers Network och deras en sektion om Websockets](<a href='https://developer.mozilla.org/en-US/docs/WebSockets'>https://developer.mozilla.org/en-US/docs/WebSockets</a>). Vill du veta mer så har [websocket.org](<a href='http://www.websocket.org/'>http://www.websocket.org/</a>) information och enklare exempel och demo som ger grunderna i websockets. W3C utvecklar [specifikationen för HTML5 Websockets](<a href='http://dev.w3.org/html5/websockets/'>http://dev.w3.org/html5/websockets/</a>) och via websocket.org kan du komma åt specifikationen på websocket protokollet, [RFC 6455](<a href='http://datatracker.ietf.org/doc/rfc6455/?include_text=1'>http://datatracker.ietf.org/doc/rfc6455/?include_text=1</a>).
+Där har vi nu en fungerande klient för HTML5 Websockets. Nu kan det vara läsa att läsa på lite om grunderna i websockets och att bekanta sig med manualsidorna. Framförallt kan du bekanta dig med [Mozilla Developers Network och deras en sektion om Websockets](https://developer.mozilla.org/en-US/docs/WebSockets). Vill du veta mer så har [websocket.org](http://www.websocket.org/) information och enklare exempel och demo som ger grunderna i websockets. W3C utvecklar [specifikationen för HTML5 Websockets](http://dev.w3.org/html5/websockets/) och via websocket.org kan du komma åt specifikationen på websocket protokollet, [RFC 6455](http://datatracker.ietf.org/doc/rfc6455/?include_text=1).
 
 Bra, vi har en klient för HTML5 Websocket, då behöver vi bara en server också.
 
@@ -166,16 +166,16 @@ Skapa en server för websockets {#srv-ws}
 
 ###Installera modulen för websocket {#srv-ws-install}
 
-Websockets finns inte med som en standardmodul i Node.js. Vi behöver alltså leta upp en modul som hanterar Websockets och ladda ned den. Det finns flera att välja på och jag väljer följande modul, [en Websocket modul för Node.js](<a href='https://github.com/Worlize/WebSocket-Node'>https://github.com/Worlize/WebSocket-Node</a>)
+Websockets finns inte med som en standardmodul i Node.js. Vi behöver alltså leta upp en modul som hanterar Websockets och ladda ned den. Det finns flera att välja på och jag väljer följande modul, [en Websocket modul för Node.js](https://github.com/Worlize/WebSocket-Node)
 
 Jag väljer att installera version 1.0.3 av modulen, de senare versionerna har större krav på vad jag har installerat på min dator. Krav vilka jag inte uppfyllde. Däremot fungerar version 1.0.3 bra att installera, både på Windows och FreeBSD. Jag använder pakethanteraren `npm` som finns med som en central del i node.js.
 
-Bekanta dig snabbt med [`npm`](<a href='https://npmjs.org/'>https://npmjs.org/</a>). Installera sedan modulen websocket version 1.0.3 på följande sätt (skriv inte in procenttecknet, det representerar bara prompten).
+Bekanta dig snabbt med [`npm`](https://npmjs.org/). Installera sedan modulen websocket version 1.0.3 på följande sätt (skriv inte in procenttecknet, det representerar bara prompten).
 
 ```bash
 %npm install websocket@1.0.3
-npm http GET <a href='https://registry.npmjs.org/websocket/1.0.3'>https://registry.npmjs.org/websocket/1.0.3</a>
-npm http 304 <a href='https://registry.npmjs.org/websocket/1.0.3'>https://registry.npmjs.org/websocket/1.0.3</a>
+npm http GET https://registry.npmjs.org/websocket/1.0.3
+npm http 304 https://registry.npmjs.org/websocket/1.0.3
 websocket@1.0.3 node_modules/websocket
 ```
 
@@ -216,9 +216,9 @@ Låt nu se hur vi använder modulen för websocket för att skapa en server.
 
 Det första jag vill göra är att skapa en enkel websocket-server som fungerar som en echo-server. En echo-server är en server som tar emot alla meddelanden och skickar tillbaka samma meddelande. Det är en enkel server som innehåller alla grunderna som krävs för att senare göra svårare saker.
 
-Innan du börjar koda själv så kan du pröva en [existerande echo-server](<a href='http://www.websocket.org/echo.html'>http://www.websocket.org/echo.html</a>), och tillhörande klient, på websocket.org. Det är bara så att du ser hur det fungerar.
+Innan du börjar koda själv så kan du pröva en [existerande echo-server](http://www.websocket.org/echo.html), och tillhörande klient, på websocket.org. Det är bara så att du ser hur det fungerar.
 
-I websocket-modulens README finns [en echo-server](<a href='https://github.com/Worlize/WebSocket-Node/blob/master/README.md#server-example4'>https://github.com/Worlize/WebSocket-Node/blob/master/README.md#server-example4</a>) som jag tänker utgå ifrån. Jag fortsätter att använda webbservern som en del av min server, websocketservern behöver tillgång till en http-server. Ibland är det en fördel att både webbserver och websocketserver i samma process. Till exempel kan webbservern servera JavaScript-filer till webbläsaren. På det viset blir servern både en webbserver och en websocketserver, den kan hantera både http-trafik och websocket-trafik.
+I websocket-modulens README finns [en echo-server](https://github.com/Worlize/WebSocket-Node/blob/master/README.md#server-example4) som jag tänker utgå ifrån. Jag fortsätter att använda webbservern som en del av min server, websocketservern behöver tillgång till en http-server. Ibland är det en fördel att både webbserver och websocketserver i samma process. Till exempel kan webbservern servera JavaScript-filer till webbläsaren. På det viset blir servern både en webbserver och en websocketserver, den kan hantera både http-trafik och websocket-trafik.
 
 Jag modifierar lite i websocket-modulens exempelkod för echo-servern och får ihop min första variant. Glöm inte att lägga till koden för webbservern också, den behövs.
 
@@ -268,7 +268,7 @@ Spara koden i filen `echo-server.js` och sedan kan du kan starta servern i node.
 node echo-server.js
 ```
 
-Är du osäker på koden så tar du en titt i den utmärkta [dokumentationen för websocket-modulen](<a href='https://github.com/Worlize/WebSocket-Node/wiki/Documentation'>https://github.com/Worlize/WebSocket-Node/wiki/Documentation</a>).
+Är du osäker på koden så tar du en titt i den utmärkta [dokumentationen för websocket-modulen](https://github.com/Worlize/WebSocket-Node/wiki/Documentation).
 
 Så här blev koden för [min server](kod-exempel/nodejs/echo-server-1.js).
 
@@ -345,7 +345,7 @@ För att lösa det så gör jag en funktion som kontrollerar varifrån förfråg
 ```javascript
 // Always check and explicitly allow the origin
 function originIsAllowed(origin) {
-  if(origin === '<a href='http://dbwebb.se'>http://dbwebb.se</a>' || origin === '<a href='http://localhost'>http://localhost</a>') {
+  if(origin === 'http://dbwebb.se' || origin === 'http://localhost') {
     return true;    
   }
   return false;
@@ -405,14 +405,14 @@ För detta exemplet så valde jag att använda exakt samma klient, det enda jag 
 En bättre Websocket modul? {#ws-battre}
 --------------------------------------------------------------------
 
-Kika gärna på [modulen socket.io](<a href='http://socket.io/'>http://socket.io/</a>) som innehåller en lösning för websockets som stödjer flera (äldre) webbläsare genom "fallback"-lösningar till Flash och Ajax. Det kan vara ett bra alternativ när du vill köra websockets i produktionsmiljöer.
+Kika gärna på [modulen socket.io](http://socket.io/) som innehåller en lösning för websockets som stödjer flera (äldre) webbläsare genom "fallback"-lösningar till Flash och Ajax. Det kan vara ett bra alternativ när du vill köra websockets i produktionsmiljöer.
 
 
 
 Publish-subscribe designmönster {#pubsub}
 --------------------------------------------------------------------
 
-Ett vanligt sätt att strukturera sin kod i ett sådant här sammanhang är med stöd av designmönstret, design pattern, [Publish-subscribe](<a href='http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern'>http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern</a>). Du kan läsa artikeln ["WebSockets: A Guide"](<a href='http://buildnewgames.com/websockets/'>http://buildnewgames.com/websockets/</a>) för att insyn i hur du kan organisera din kod när den växer. Artikeln ger dig också en bra bakgrund till Websockets i allmänhet.
+Ett vanligt sätt att strukturera sin kod i ett sådant här sammanhang är med stöd av designmönstret, design pattern, [Publish-subscribe](http://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern). Du kan läsa artikeln ["WebSockets: A Guide"](http://buildnewgames.com/websockets/) för att insyn i hur du kan organisera din kod när den växer. Artikeln ger dig också en bra bakgrund till Websockets i allmänhet.
 
 
 
@@ -439,7 +439,6 @@ Referenser {#referenser}
 
 Följande är referenser som använts som fotnötter i texten.
 
-[^1]: [HTML5 Websockets API på W3C](<a href='http://dev.w3.org/html5/websockets/'>http://dev.w3.org/html5/websockets/</a>).
+[^1]: [HTML5 Websockets API på W3C](http://dev.w3.org/html5/websockets/).
 
-[^2]: [Wikipedia om Websockets](<a href='http://en.wikipedia.org/wiki/WebSocket'>http://en.wikipedia.org/wiki/WebSocket</a>).
-
+[^2]: [Wikipedia om Websockets](http://en.wikipedia.org/wiki/WebSocket).

@@ -57,17 +57,17 @@ Följande föreläsningsmaterial finns tillgängliga för campus-kursen. Present
 
 Här finns lästips om formulär och formulärhantering, för den som vill fördjupa sig.
 
-1. [PFBC](<a href='http://code.google.com/p/php-form-builder-class/'>http://code.google.com/p/php-form-builder-class/</a>) (PHP Form Builder Class), en fristående PHP-klass för att skapa formulär. Se även deras hemsida med [dokumentation och exempel](<a href='http://www.imavex.com/pfbc3.x-php5/'>http://www.imavex.com/pfbc3.x-php5/</a>).  
+1. [PFBC](http://code.google.com/p/php-form-builder-class/) (PHP Form Builder Class), en fristående PHP-klass för att skapa formulär. Se även deras hemsida med [dokumentation och exempel](http://www.imavex.com/pfbc3.x-php5/).  
 
-2. Läs om ["Säker hantering av formulär"](<a href='http://phpsec.org/projects/guide/2.html'>http://phpsec.org/projects/guide/2.html</a>).
+2. Läs om ["Säker hantering av formulär"](http://phpsec.org/projects/guide/2.html).
 
 
 3. Studera formulärhantering hos kända ramverk, läs så du får en känsla för hur de bygger upp formulärhanteringen.  
-  * [Formulärhantering i python med django](<a href='https://docs.djangoproject.com/en/dev/topics/forms/'>https://docs.djangoproject.com/en/dev/topics/forms/</a>)
-  * [Zend framework's egen form-klass](<a href='http://framework.zend.com/manual/2.1/en/user-guide/forms-and-actions.html'>http://framework.zend.com/manual/2.1/en/user-guide/forms-and-actions.html</a>)
-  * [Ramverkets Symphony's formulärhantering](<a href='http://symfony.com/doc/current/cookbook/form/index.html'>http://symfony.com/doc/current/cookbook/form/index.html</a>)
-  * CodeIgniter's [form_helper](<a href='http://codeigniter.com/user_guide/helpers/form_helper.html'>http://codeigniter.com/user_guide/helpers/form_helper.html</a>) och [form_validation](<a href='http://codeigniter.com/user_guide/libraries/form_validation.html'>http://codeigniter.com/user_guide/libraries/form_validation.html</a>)
-  * [Drupal formulärhantering](<a href='http://drupal.org/node/37775'>http://drupal.org/node/37775</a>)
+  * [Formulärhantering i python med django](https://docs.djangoproject.com/en/dev/topics/forms/)
+  * [Zend framework's egen form-klass](http://framework.zend.com/manual/2.1/en/user-guide/forms-and-actions.html)
+  * [Ramverkets Symphony's formulärhantering](http://symfony.com/doc/current/cookbook/form/index.html)
+  * CodeIgniter's [form_helper](http://codeigniter.com/user_guide/helpers/form_helper.html) och [form_validation](http://codeigniter.com/user_guide/libraries/form_validation.html)
+  * [Drupal formulärhantering](http://drupal.org/node/37775)
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -121,7 +121,3 @@ Resultat & Redovisning  {#redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-
-

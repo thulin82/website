@@ -48,7 +48,7 @@ Läs igenom kapitlen i en rask takt. Skumma de delarna som du känner verkar var
 
 Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distansstudenten.
 
-* [Översikt av kursmomentet](<a href='https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom02-ht13.pdf'>https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom02-ht13.pdf</a>).
+* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/javascript/javascript-kmom02-ht13.pdf).
 
 
 
@@ -96,7 +96,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 ###Extra {#extra}
 
-1. Bygg ut din spelplan för att bli ett mer "riktigt" [Boulder Dash](<a href='http://sv.wikipedia.org/wiki/Boulder_Dash'>http://sv.wikipedia.org/wiki/Boulder_Dash</a>). Eller så väljer du att jobba efter ett annat, valfritt spel.
+1. Bygg ut din spelplan för att bli ett mer "riktigt" [Boulder Dash](http://sv.wikipedia.org/wiki/Boulder_Dash). Eller så väljer du att jobba efter ett annat, valfritt spel.
 
 2. Lägg extra kraft på ditt Roulettespel.
 
@@ -120,6 +120,3 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 
 **Klart!** Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade.
-
-
-

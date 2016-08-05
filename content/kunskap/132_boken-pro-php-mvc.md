@@ -41,16 +41,10 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9781430241645]
 
-[BTH´s bibliotek kan erbjuda boken som e-bok](<a href='http://goo.gl/kYkxl'>http://goo.gl/kYkxl</a>).
+[BTH´s bibliotek kan erbjuda boken som e-bok](http://goo.gl/kYkxl).
 
 
 Diskutera boken i forumet {#forum}
 ----------------------------------
 
-Det finns en forumtråd där du kan fråga eller berätta vad du tyckte om boken:
-
-* f/5343
-
-
-
-
+Det finns en forumtråd där du kan [fråga eller berätta vad du tyckte om boken](f/5343).
