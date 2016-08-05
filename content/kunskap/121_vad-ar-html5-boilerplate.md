@@ -50,7 +50,7 @@ Läs mer {#mer}
 
 [Läs mer på hemsidan för HTML5Boilerplate](http://html5boilerplate.com/) eller lyssna på Paul Irish när han pratar om HTML5 Boilerplate i nedan timslånga video.
 
-[YOUTUBE src=qyM37XKkmKQ width=613 caption=Paul Irish pratar om HTML5 Boilerplate.]
+[YOUTUBE src=qyM37XKkmKQ width=613 caption="Paul Irish pratar om HTML5 Boilerplate."]
 
 
 
@@ -93,4 +93,3 @@ Revisionshistoria {#revision}
 2012-08-31 (B, mos) Flyttad från WordPress till Lydia.  
 2012-03-14 (A, rgi) Skriven för phpmvc-kursen. Rickard Gimersted skrev första versionen av detta dokument.  
 </span>
-

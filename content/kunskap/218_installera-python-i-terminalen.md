@@ -74,9 +74,9 @@ Nu har du Python på din dator.
 
 Kika kort på Kenneth när han visar hur du använder Python i terminalen och tillsammans med en texteditor.
 
-[YOUTUBE src=dRZF1Crf1wg width=630 caption=Kenneth kör Python i terminalen.]
+[YOUTUBE src=dRZF1Crf1wg width=630 caption="Kenneth kör Python i terminalen."]
 
-[YOUTUBE src=LokzBtJ-ssY width=630 caption=Kenneth kör Python via editor, fil och terminal.]
+[YOUTUBE src=LokzBtJ-ssY width=630 caption="Kenneth kör Python via editor, fil och terminal."]
 
 
 
@@ -126,7 +126,3 @@ Du har nu grunderna som krävs för att sätta igång och programmera med Python
 Har du fler förslag eller tips så kan vi ta det i [forumet för Python-frågor](forum/viewforum.php?f=44). 
 
 [Python finns installerat på studentservern](coachen/python-finns-pa-studentservern), troligen behöver du inte använda det men det kan vara bra att veta om.
-
-
-
-

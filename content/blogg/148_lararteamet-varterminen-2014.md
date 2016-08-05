@@ -18,7 +18,7 @@ Mikael Roos aka mos {#mos}
 
 Ni känner ju mig, om inte annat så kan ni kika på min trivsamma och välregisserade välkomsthälsning för att se hur jag ser ut just idag och hur mitt arbetsrum ser ut.
 
-[YOUTUBE src=3qUi72Tvbow width=630 caption=Mikael visar vilka webbplatser som gäller för att komma igång.]
+[YOUTUBE src=3qUi72Tvbow width=630 caption="Mikael visar vilka webbplatser som gäller för att komma igång."]
 
 Eller så kan ni läsa om mig i min [väldesignade me-sida i oophp-kursens](oophp/me/kmom01/me.php) första kursmoment.
 

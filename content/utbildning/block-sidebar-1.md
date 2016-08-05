@@ -19,7 +19,7 @@ Vi har skapat ett eget dokument för [Frågor och Svar om våra utbildningar](ut
 
 [FIGURE src="/image/mikael-roos/me-happy.jpg?w=c7&h=100&cf&a=30,10,35,30"]
 
-Du får gärna [chatta med mig, våra lärare och studenter]([BASEURL]chatt) eller så kan du maila dina frågor direkt till mig.
+Du får gärna [chatta med mig, våra lärare och studenter](chatt) eller så kan du maila dina frågor direkt till mig.
 
 ```text
  .   Programansvarig

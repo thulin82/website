@@ -102,7 +102,7 @@ I artikeln om "[Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med
 
 Här är videon.
 
-[YOUTUBE src=vveClJEC2m4 width=630 caption=Mikael bygger en HTMLsida och validerar den med W3C HTML validator.]
+[YOUTUBE src=vveClJEC2m4 width=630 caption="Mikael bygger en HTMLsida och validerar den med W3C HTML validator."]
 
 Ta nu din html-fil i ditt sandbox-exempel och validera den. Rätta till felen om det finns några.
 
@@ -110,7 +110,7 @@ I artikeln om "[Styla din sida med CSS och en extern stylesheet](coachen/styla-d
 
 Här är videon.
 
-[YOUTUBE src=4xQHd6ZSpQ8 width=630 caption=Mikael validerar en stylesheet med W3C CSS validator.]
+[YOUTUBE src=4xQHd6ZSpQ8 width=630 caption="Mikael validerar en stylesheet med W3C CSS validator."]
 
 Ta nu din stylesheet i ditt sandbox-exempel och validera den. Rätta till felen om det finns några.
 
@@ -127,7 +127,7 @@ I JavaScript finns verktyget [JSLint](http://www.jslint.com/) och en utveckling 
 
 I video-serien "[Kom igång med JavaScript och skriv din första kod](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_11l3iKwIKRM4DFuhtBeNE)" finns med ett avsnitt när jag använder JSHint.
 
-[YOUTUBE src=2QP1a--Hp5s width=630 caption=Mikael använder JSHint.]
+[YOUTUBE src=2QP1a--Hp5s width=630 caption="Mikael använder JSHint."]
 
 Kör alltid igenom din JavaScript-kod igenom JSHint. Det kan spara dig en hel de felsökning. JSHint hjälper dig att hitta potentiella problem i din kod.
 
@@ -163,7 +163,7 @@ Med det sagt, hur använder du då JSFiddle för att till exempel lägga upp exe
 
 Låt se hur det ser ut när jag lägger upp ett exempel i JSFiddle. Så kan du själv testa att lägga upp din sandbox därefter.
 
-[YOUTUBE src=_31-8HVvMhs width=630 caption=Mikael lägger upp sandbox-exemplet på JSFiddle.]
+[YOUTUBE src=_31-8HVvMhs width=630 caption="Mikael lägger upp sandbox-exemplet på JSFiddle."]
 
 Här är mitt färdiga exempel som du kan öppna i JSFiddle och testa att ändra.
 
@@ -213,7 +213,3 @@ Avslutningsvis {#avslutning}
 Du har nu grunderna som krävs för att sätta igång och utveckla program i webbmiljö med JavaScript.
 
 Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/javascript1).
-
-
-
-

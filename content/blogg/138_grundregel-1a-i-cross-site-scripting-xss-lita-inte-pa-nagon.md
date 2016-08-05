@@ -27,9 +27,8 @@ Så här såg sidan ut i sitt normalläge, innan det trevliga JavaScriptet med d
 
 När eftermiddagen hade gått och alla tvåor hade varit oerhört hjälpsamma och påhejade i irc-kanalerna så blev till slut resultatet, dokumenterat för framtida generationer, i avskräckande syfte, som följer.
 
-[YOUTUBE src=CYMR4BjHIeM width=630 caption=Studentföreningens sida som en XSS:ad variant.]
+[YOUTUBE src=CYMR4BjHIeM width=630 caption="Studentföreningens sida som en XSS:ad variant."]
 
 Vi glömmer det aldrig - "Trust no one". 
 
 Check på "Jag vet vad XSS kan innebära".
-

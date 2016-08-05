@@ -25,7 +25,7 @@ En kort sammanfattning av vad du skall göra:
 <!--more-->
 
 <!--
-[YOUTUBE src=3qUi72Tvbow width=630 caption=Mikael kommer visar vilka webbplatser som gäller för att komma igång.]
+[YOUTUBE src=3qUi72Tvbow width=630 caption="Mikael kommer visar vilka webbplatser som gäller för att komma igång."]
 -->
 
 

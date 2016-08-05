@@ -64,7 +64,7 @@ Ni kanske har sett Bobba i rollen som marknadsförare?
 
 I två år har Bobba varit med och prytt bilderna i BTHs katalog, förra året för Webbprogrammering och detta året för utbildningarna inom Programvaruteknik och Datavetenskap. Han har även *utsatt sig* för att bli inspelad och youtubad där han berättar om varför han sökte till BTH och Webbprogrammering.
 
-[YOUTUBE src=0g3dxQsVs9Q width=630 caption=Bobba berättar om varför han valde Webbprogrammering och BTH.]
+[YOUTUBE src=0g3dxQsVs9Q width=630 caption="Bobba berättar om varför han valde Webbprogrammering och BTH."]
 
 
 [FIGURE src=/image/vimmel/bobba-labbar.jpg?w=c8&sharpen caption="Bobba jobbar i labbsalen med sina egna studier, dagens meny är Linux och reguljära uttryck med `sed`." class=right]

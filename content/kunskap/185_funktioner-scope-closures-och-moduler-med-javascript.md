@@ -233,7 +233,7 @@ Du kan [testköra exempelprogrammen här](javascript1/repo/example/module/). Öp
 
 Det kan se ut så här när du testkör exempelprogrammen.
 
-[YOUTUBE src=793tN9d5ewU width=630 caption=Testkör exempelprogram genom att anropa funktionerna från Firebugs console.]
+[YOUTUBE src=793tN9d5ewU width=630 caption="Testkör exempelprogram genom att anropa funktionerna från Firebugs console."]
 
 
 
@@ -241,7 +241,3 @@ Avslutningsvis {#avslutning}
 -----------------------
 
 Det finns en egen tråd i forumet där du kan [diskutera det som artikeln tar upp](t/3042).
-
-
-
-

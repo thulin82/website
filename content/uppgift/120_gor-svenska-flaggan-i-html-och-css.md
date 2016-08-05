@@ -38,7 +38,7 @@ Leta reda på en "colorpicker", det finns som addon till Firefox. Med en "colorp
 
 Behöver du hjälp att komma i gång så kan du se hur jag löste första delen av uppgiften.
 
-[YOUTUBE src=2BPXAEBWyys width=630 caption=Mikael gör en flagga.]
+[YOUTUBE src=2BPXAEBWyys width=630 caption="Mikael gör en flagga."]
 
 Mitt exempelprogram från videon finns i [javascript1-repot](javascript1/repo/example/flag/flag1/).
 
@@ -86,7 +86,3 @@ Använd bilder där HTML och CSS inte räcker till.
 Det går att skapa trianglar och cirklar med CSS, men det är lite trixigt. Google på "CSS triangle" eller "CSS circle" för ledtrådar. Men ta det som överkus.
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-

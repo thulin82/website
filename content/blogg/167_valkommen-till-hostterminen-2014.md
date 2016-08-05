@@ -64,7 +64,7 @@ Vi försöker öka inslagen av visuella läromedel i kurserna, allt eftersom. De
 
 Det är inte alltid så lätt att spela in videofilmer...
 
-[YOUTUBE src=pRh-21VLreI width=630 caption=Mikael försöker komma underfund med sin nya inspelningsmiljö i Debian.]
+[YOUTUBE src=pRh-21VLreI width=630 caption="Mikael försöker komma underfund med sin nya inspelningsmiljö i Debian."]
 
 Som ett komplement till video har vi också använt en del inspelningar på terminalnivå. Det är ascii-animeringar av kommandon som händer vid terminalen. De är enkla att spela in och kan komplettera de texter och instruktioner som finns.
 
@@ -81,7 +81,7 @@ Till hösten har jag förändrat den [rekommenderade studieplanen för kurser oc
 
 När du tittar i studieplanen så var uppmärksam på det gröna som är den plan du bör följa.
 
-[YOUTUBE src=DWBzjBXCVyM width=630 caption=Mikael visar hur man kan tolka den rekommenderade studieplanen.]
+[YOUTUBE src=DWBzjBXCVyM width=630 caption="Mikael visar hur man kan tolka den rekommenderade studieplanen."]
 
 Se till att du skaffar dig en egen plan för dina studier. Om du börjar halka efter kan det vara svårt att ta igen. Så se till att du försöker följa din plan.
 

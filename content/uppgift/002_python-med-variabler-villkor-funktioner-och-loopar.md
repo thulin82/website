@@ -16,7 +16,7 @@ Jobba igenom grunderna i Python med datatyper, variabler, villkor, inbyggda funk
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Installera en labbmiljö till Python]([BASEURL]kunskap/installera-en-labbmiljo-till-python)".
+Du har jobbat igenom artikeln "[Installera en labbmiljö till Python](kunskap/installera-en-labbmiljo-till-python)".
 
 
 

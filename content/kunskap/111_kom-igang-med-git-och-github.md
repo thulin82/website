@@ -84,7 +84,7 @@ git commit -m "Initial commit"
 
 Du kan följa med hur jag gör i följande video.
 
-[YOUTUBE src=08akJnBmrwo width=630 caption=Mikael skapar ett Git repository.]
+[YOUTUBE src=08akJnBmrwo width=630 caption="Mikael skapar ett Git repository."]
 
 Nästa steg får bli att koppla ihop repositoryt med webbtjänsten GitHub.
 
@@ -105,7 +105,7 @@ Det vi skall göra nu är att skapa ett konto på GitHub och därefter länka sa
 
 Du kan följa med hur jag gör i följande video.
 
-[YOUTUBE src=f5vNcvG6z1Q width=613 caption=Mikael länkar det lokala repot till ett på GitHub.]
+[YOUTUBE src=f5vNcvG6z1Q width=613 caption="Mikael länkar det lokala repot till ett på GitHub."]
 
 De magiska orden som länkar ihop ditt lokala repo med ett repo på GitHub är alltså:
 
@@ -176,7 +176,7 @@ git push --tags
 
 Du kan följa med hur jag gör i följande video.
 
-[YOUTUBE src=8yulcmIfWD8 width=613 caption=Mikael jobbar med Git lokalt, gör en tagg och uppdaterar GitHub.]
+[YOUTUBE src=8yulcmIfWD8 width=613 caption="Mikael jobbar med Git lokalt, gör en tagg och uppdaterar GitHub."]
 
 Läs gärna mer i manualen om respektive kommando:
 

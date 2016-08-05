@@ -39,7 +39,7 @@ Ladda ned och starta installationsprogrammet. Du kan använda standardinställni
 
 Så här gör jag när jag installerar Cygwin.
 
-[YOUTUBE src=h_eTCIjEPyw width=630 caption=En snabb översikt av stegen för att installera Cygwin.]
+[YOUTUBE src=h_eTCIjEPyw width=630 caption="En snabb översikt av stegen för att installera Cygwin."]
 
 
 
@@ -75,7 +75,7 @@ apt-cyg
 
 Så här ser det ut när jag installerar `apt-cyg`.
 
-[YOUTUBE src=TMHCO-pau5E width=630 caption=Så här kommer man igång med pakethanteraren apt-cyg.]
+[YOUTUBE src=TMHCO-pau5E width=630 caption="Så här kommer man igång med pakethanteraren apt-cyg."]
 
 [INFO]
 **Installationslänken för apt-cyg**
@@ -127,7 +127,7 @@ chere
 man chere
 ```
 
-[YOUTUBE src=TMHCO-pau5E width=630 caption=Så här kommer man igång med Cygwin på Windows context meny.]
+[YOUTUBE src=TMHCO-pau5E width=630 caption="Så här kommer man igång med Cygwin på Windows context meny."]
 
 Det finns en forumtråd för [Cygwin och `chere`](t/4030), kika där om du får bekymmer.
 
@@ -141,7 +141,3 @@ Nu har du kommit igång med Cygwin. Det är ett ypperligt arbetsverktyg, du har 
 Har du tips, förslag eller frågor om Cygwin så finns det ett [subforum om Windows för Webbprogrammerare](forum/viewforum.php?f=55).
 
 Vill du lära dig mer om grunderna i Unix så finns artikeln ["20 steg för att komma i gång med Unix och terminalen"](kunskap/20-steg-for-att-komma-i-gang-med-unix-och-terminalen).
-
-
-
-

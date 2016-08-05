@@ -137,7 +137,7 @@ Nu har du Python på din dator.
 
 Kika kort på Robin när han kommer i gång med Python. Bara som en kort intro. Testa att skriva lite python-kod så att du känner dig hemma i terminalen och python.
 
-[YOUTUBE src=ZntSsAWg2ho width=630 caption=Robin kodar runt lite i Python.]
+[YOUTUBE src=ZntSsAWg2ho width=630 caption="Robin kodar runt lite i Python."]
 
 
 
@@ -165,7 +165,7 @@ Du kan även se allt [innehåll i det så kallade *repositoryt*](https://github.
 
 Se hur jag gjorde.
 
-[YOUTUBE src=EqgidcSZ_74 width=630 caption=Mikael kommer i gång med kursrepot för kursen.]
+[YOUTUBE src=EqgidcSZ_74 width=630 caption="Mikael kommer i gång med kursrepot för kursen."]
 
 
 
@@ -426,7 +426,7 @@ Pröva gärna att ladda hem det och installera på din maskin och se vad du tyck
 
 Här är en introduktionsvideo som visar hur du kommer igång med Python IDLE.
 
-[YOUTUBE src=bOvqYw1SZJg width=630 caption=Video som visar hur du kommer igång och skriver dina program i Python IDLE.]
+[YOUTUBE src=bOvqYw1SZJg width=630 caption="Video som visar hur du kommer igång och skriver dina program i Python IDLE."]
 
 Pröva gärna båda vägarna, Python IDLE och terminalen, så att du vet hur de fungerar. I kursen använder jag själv terminalen när jag kör mina program. Så det får bli *standard* för kursen. Men det finns inget som hindrar att du prövar andra verktyg, men blir det problem så ser du alltid till att köra programmet i terminalen. Vi behöver en gemensam bas att stå på.
 
@@ -489,7 +489,3 @@ Avslutningsvis {#avslutning}
 Du har nu grunderna som krävs för att sätta igång och programmera med Python.
 
 Har du fler förslag eller tips så tar vi det i forumet som har en [egen tråd](t/2495) för denna artikeln.
-
-
-
-

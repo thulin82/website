@@ -215,7 +215,7 @@ Kommandot `bin/dbwebb` {#dbwebb}
 
 Så här ser det ut när Mikael använder de vanligaste kommandona i `bin/dbwebb`.
 
-[YOUTUBE src=zhSdG89VyIw width=630 caption=Mikael använder de vanligaste kommandona i kommandot bin/dbwebb.]
+[YOUTUBE src=zhSdG89VyIw width=630 caption="Mikael använder de vanligaste kommandona i kommandot bin/dbwebb."]
 
 Här följer en förklaring av de vanligaste kommandona. Läs och testa.
 
@@ -372,7 +372,3 @@ Använd dessa trådar för att ställa frågor, eller skapa en ny om det passar 
 * [Forumtråd för kursrepo python](t/2545).
 * [Forumtråd för kursrepo javascript1](t/2546).
 * [Forumtråd för kommandot `bin/dbwebb`](t/2559).
-
-
-
-

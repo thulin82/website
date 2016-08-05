@@ -30,9 +30,9 @@ Introduktion {#intro}
 
 I tidernas begynnelse fanns det spelkonsoler likt denna.
 
-[YOUTUBE src=XNRx5hc4gYc width=630 caption=Världens första Pong-spelare 1969.]
+[YOUTUBE src=XNRx5hc4gYc width=630 caption="Världens första Pong-spelare 1969."]
 
-[YOUTUBE src=D-THUXZ1aE4 width=630 caption=Så här spelades squash, fotboll och tennis i slutet av 70-talet på den tidens spelkonsoler.]
+[YOUTUBE src=D-THUXZ1aE4 width=630 caption="Så här spelades squash, fotboll och tennis i slutet av 70-talet på den tidens spelkonsoler."]
 
 Du skall nu göra en klon av ett av dessa spel. Du kan själv välja vilken spelidé du tar. Försök att göra något som är personligt och lite annorlunda. Det är små saker som gör en bra helhet.
 
@@ -83,7 +83,3 @@ Du kan debugga genom att skriva ut feltexter till en fil. Det kan vara bra när 
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

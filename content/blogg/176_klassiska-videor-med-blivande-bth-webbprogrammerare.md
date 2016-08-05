@@ -19,9 +19,9 @@ Videor på WIP14 studenter {#wip14}
 
 Låt oss börja med årets videor. Det är dels Emma Thorén som är med på en kort-video om programmet och det är dels Viktor Andersson som deltar i en video om hur det är att bo som student i studentlägenheterna.
 
-[YOUTUBE src=LHyWLQwMfSw width=630 caption=Emma går första året på Webbprogrammering.]
+[YOUTUBE src=LHyWLQwMfSw width=630 caption="Emma går första året på Webbprogrammering."]
 
-[YOUTUBE src=mv-5d-8OiqQ width=630 caption=Viktor visar hur det ser ut hemma i studentlägenheten.]
+[YOUTUBE src=mv-5d-8OiqQ width=630 caption="Viktor visar hur det ser ut hemma i studentlägenheten."]
 
 Det kommer säkert att gå bra för både Emma och Viktor framöver, än så länge är de bara på sitt första år här.
 
@@ -32,7 +32,7 @@ Videor på WIP12 student {#wip12}
 
 Här är det Leopold Olsson, också känd som Leo och *Bobbzorzen*, som representerar årskull 12.
 
-[YOUTUBE src=0g3dxQsVs9Q width=630 caption=Den som klippte videon fick Leo att fokusera rätt mycket på PHP...]
+[YOUTUBE src=0g3dxQsVs9Q width=630 caption="Den som klippte videon fick Leo att fokusera rätt mycket på PHP..."]
 
 Nu går Leo sitt sista år här och jobbar nu med examensjobbet samtidigt som han deltar i det stora projektet med Ericsson som kund.
 
@@ -45,7 +45,7 @@ Videor på WIP09 och WIP10 studenter {#wip10}
 
 Denna videon innehåller Jane Strandberg (WIP10) och Olof Fredriksson (WIP09) som pratar om programmet Webbprogrammering. I chatten och forumet hittar du Jane som *Sylvanas* och Olof som *snafu*.
 
-[YOUTUBE src=xPIsl1Vf27Y width=630 caption=Jane och Olof som studenter på år 2 och år 3.]
+[YOUTUBE src=xPIsl1Vf27Y width=630 caption="Jane och Olof som studenter på år 2 och år 3."]
 
 Olof jobbar numer som webbutvecklare på Qvantel och Jane jobbar som lärare på BTH. Det gick alltså bra för dem även efter sina studier.
 
@@ -60,7 +60,7 @@ Videor på WIP09 student {#wip09}
 
 I den första videon som gjordes var huvudpersonen Joakim Olsson (WIP09), även kallad wasa.
 
-[YOUTUBE src=8GhdKPQ8VE0 width=630 caption=Joakim som en av de första studenterna på programmet.]
+[YOUTUBE src=8GhdKPQ8VE0 width=630 caption="Joakim som en av de första studenterna på programmet."]
 
 Joakim jobbar nu med programutvecklare på Visma Agda AB.
 

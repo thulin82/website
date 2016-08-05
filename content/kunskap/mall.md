@@ -280,7 +280,7 @@ Men ta detta som ren överkurs och bara om du är bekväm med användandet av li
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Detta var en introduktion till listor i Python. Har du frågor eller funderingar så tar vi det i [forumet för Python-frågor]([BASEURL]forum/viewforum.php?f=44). 
+Detta var en introduktion till listor i Python. Har du frågor eller funderingar så tar vi det i [forumet för Python-frågor](forum/viewforum.php?f=44). 
 
 
 

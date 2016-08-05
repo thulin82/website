@@ -22,6 +22,6 @@ Pröva gärna att ladda hem det och installera på din maskin och se vad du tyck
 
 Här är en introduktionsvideo som visar hur du kommer igång med Python IDLE.
 
-[YOUTUBE src=bOvqYw1SZJg width=630 caption=Video som visar hur du kommer igång och skriver dina program i Python IDLE.]
+[YOUTUBE src=bOvqYw1SZJg width=630 caption="Video som visar hur du kommer igång och skriver dina program i Python IDLE."]
 
 Pröva gärna båda vägarna, Python IDLE och terminalen, så att du vet hur de fungerar. I kursen använder jag själv terminalen när jag kör mina program. Så det får bli *standard* för kursen. Men det finns inget som hindrar att du prövar andra verktyg, men blir det problem så ser du alltid till att köra programmet i terminalen. Vi behöver en gemensam bas att stå på.

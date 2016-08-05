@@ -33,7 +33,7 @@ Du kommer också att använda enklare event-hantering i JavaScript för att kopp
 
 Behöver du hjälp att komma i gång så kan du se hur jag löste första delen av uppgiften.
 
-[YOUTUBE src=6GuJ8SPH_dA width=630 caption=Mikael gör en flagga med JavaScript.]
+[YOUTUBE src=6GuJ8SPH_dA width=630 caption="Mikael gör en flagga med JavaScript."]
 
 Mitt exempelprogram från videon finns i [javascript1-repot](javascript1/repo/example/flag/flag2/).
 
@@ -83,7 +83,3 @@ Lös uppgiften på ditt eget vis. Det är det viktigaste. Se hur bra dina vingar
 Kika i kodexemplen från [tutorialen](https://github.com/mosbth/javascript1/blob/master/tutorial/README.md) om du behöver stöd för din JavaScript-kodning, eller gå direkt till MDN om du känner dig lite mer erfaren.
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-

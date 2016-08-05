@@ -24,7 +24,7 @@ Programmering och problemlösning i Python. Lär Marvin att prata lite mer slump
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och stränghantering och du har byggt [andra delen av Marvin]([BASEURL]uppgift/din-egen-chattbot-marvin-steg-2).
+Du kan grunderna i Python och stränghantering och du har byggt [andra delen av Marvin](uppgift/din-egen-chattbot-marvin-steg-2).
 
 
 

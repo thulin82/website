@@ -400,7 +400,7 @@ Kan du göra så att du klickar med musen på bollen, håller nere musknappen oc
 
 Så här blev [exempelprogrammet för mig](javascript/lekplats/pushing-the-ball/).
 
-[YOUTUBE src=6aEeDZP_MgM width=630 caption=Flytta runt bollen genom att klicka på den.]
+[YOUTUBE src=6aEeDZP_MgM width=630 caption="Flytta runt bollen genom att klicka på den."]
 
 
 
@@ -783,7 +783,7 @@ Funktioner är både behändigt och kraftfullt i JavaScript, det är bra att lä
 
 Här kan du [testa mitt exempel](javascript/lekplats/animate-using-setTimeout/).
 
-[YOUTUBE src=Nb4nU2VsyIE width=630 caption=Exempel på hur man kan animera med `setTimeout()`.]
+[YOUTUBE src=Nb4nU2VsyIE width=630 caption="Exempel på hur man kan animera med `setTimeout()`."]
 
 
 

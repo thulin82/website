@@ -80,7 +80,7 @@ Det finns ett par videotutorials som visar hur jag installerar Cygwin med paketh
 
 Här är första videon i [serien](https://www.youtube.com/playlist?list=PLKtP9l5q3ce9qI5ds_F5DGaz7oAoS7Isw).
 
-[YOUTUBE src=-MQ8jsWkjQA width=630 caption=Mikael installerar Cygwin och pakethanteraren apt-cyg.]
+[YOUTUBE src=-MQ8jsWkjQA width=630 caption="Mikael installerar Cygwin och pakethanteraren apt-cyg."]
 
 
 
@@ -179,7 +179,3 @@ Avslutningsvis {#avslutning}
 --------------------------------------------------------------------
 
 Det finns en särskild [tråd i forumet](t/2451) för denna artikel. Ställ dina frågor där eller tipsa om alternativa tekniker med terminalen, pakethantering och vilka programvaror man bör installera som webbutvecklare.
-
-
-
-

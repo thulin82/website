@@ -856,7 +856,7 @@ Funktioner är både behändigt och kraftfullt i JavaScript, det är en central 
 
 Här kan du [testa mitt exempel](javascript/core/animate-using-setTimeout/).
 
-[YOUTUBE src=Nb4nU2VsyIE width=630 caption=Exempel på hur man kan animera med `setTimeout()`.]
+[YOUTUBE src=Nb4nU2VsyIE width=630 caption="Exempel på hur man kan animera med `setTimeout()`."]
 
 
 
