@@ -166,20 +166,20 @@ Det finns flera alternativa klienter för att koppla sig till MySQL. Det finns t
 
 En annan vanlig klient är den textbaserad klienten `mysql`. Du kan testa den genom att logga in på ssh.student.bth.se och skriva följande kommando.
 
-~~~syntax=html
+```html
 mos@seekers: mysql -p -h blu-ray.student.bth.se
-~~~
+```
 
 Så här kan det se ut.
 
 [FIGURE src=/img/oophp/kmom06/image09.png caption="MySQL command-line utility uppkopplad mot databasservern från ssh.student.bth.se."]
 
 Här är några enkla MySQL-kommandon för att komma igång och koppla dig mot en databas.
-~~~syntax=sql
+```sql
 mysql> show databases;
 mysql> use mos;
 mysql> show tables;
-~~~
+```
 
 Så här ser det ut när jag kör dem.
 
@@ -221,10 +221,10 @@ Välj en databas för att se dess struktur. Klicka på fliken SQL för att kunna
 
 Här följer några enkla MySQL-kommandon för att komma igång.
 
-~~~syntax=sql
+```sql
 show databases;
 show tables;
-~~~
+```
 
 Så här ser det ut när jag kör dem. Som du ser så har jag redan ett par tabeller i min databas.
 
@@ -258,13 +258,13 @@ Klicka på knappen "Spara" för att skapa tabellen och dess fält.
 
 I svarsrutan visas även SQL-koden som användes för att skapa tabellen. I mitt fall blev det följande SQL-sats.
 
-~~~syntax=sql
+```sql
 CREATE TABLE `mos`.`Kompis` (
 `namn` VARCHAR( 40 ) NOT NULL ,
 `alder` INT NOT NULL ,
 `smeknamn` CHAR( 8 ) NULL
 ) ENGINE = MYISAM;
-~~~
+```
 
 Pröva gärna att kopiera koden ovan och köra den direkt i MySQL CLU (den textbaserade mysql-klienten). Det blir ett felmeddelande men det verkar ju stämma förstås.
 
@@ -286,9 +286,9 @@ Välj tabellen och fliken "Struktur". Börja med att markera kolumnen ålder let
 
 I svarsformuläret som bekräftar ändringen så kan du se vilken SQL-sats som genomfördes.
 
-~~~syntax=sql
+```sql
 ALTER TABLE `Kompis` CHANGE `alder` `fodd` DATE NOT NULL
-~~~
+```
 
 Om du vill veta mer om `ALTER TABLE` så slår du upp det i MySQL's referensmanual.
 
@@ -298,9 +298,9 @@ Fortsätt nu att lägga till det nya id-fältet. Under tabellen så finns det en
 
 SQL koden som användes följer.
 
-~~~syntax=sql
+```sql
 ALTER TABLE `Kompis` ADD `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;
-~~~
+```
 
 Denna typen av ändringar går utmärkt att genomföra så länge det inte finns värden i tabellen. Även när det är värden i tabellen så går den att ändra, men då får man vara lite försiktig så man vet vad man gör. Ta alltid en backup innan du försöker göra ändringar i befintliga tabeller. Vi kommer testa funktioner för att ta backup senare i denna övning.
 
@@ -316,7 +316,7 @@ Låt oss lägga in lite rader i tabellen. Välj tabellen och fliken "Lägg till"
 
 SQL koden för de två första raderna följer.
 
-~~~syntax=sql
+```sql
 INSERT INTO `mos`.`Kompis` (
   `id` ,
   `namn` ,
@@ -328,7 +328,7 @@ VALUES (
 ), (
   NULL , 'Börje Hult', '1954-09-12', 'hultarn'
 );
-~~~
+```
 
 Ser bra ut va? Lägg till ytterligare fyra rader till i tabellen.
 
@@ -341,12 +341,12 @@ Välj tabellen och klicka på fliken "Visa". Där ser du samtliga rader som finn
 
 SQL koden för uppdateringen följer.
 
-~~~syntax=sql
+```sql
 UPDATE `mos`.`Kompis` 
 SET `namn` = 'Börje Halt', `smeknamn` = 'haltarn' 
 WHERE `Kompis`.`id` = 2 
 LIMIT 1 ;
-~~~
+```
 
 Bra, det funkade det också.
 
@@ -359,9 +359,9 @@ Visst ja, jag är ju inte kompis med Uno, han skall bort ur tabellen. Jag välje
 
 SQL koden för raderingen följer.
 
-~~~syntax=sql
+```sql
 DELETE FROM `Kompis` WHERE `Kompis`.`id` = 6 LIMIT 1 ;
-~~~
+```
 
 Bra, nu kan vi det här.
 
@@ -374,11 +374,11 @@ Pröva gärna att köra SQL-satserna MySQL CLU, det är bra att testa och leka r
 
 Välj tabellen och flik "Visa". Själva SQL-koden som används för att välja ett antal rader från tabellen är:
 
-~~~syntax=sql
+```sql
 SELECT * 
 FROM `Kompis` 
 LIMIT 0 , 30
-~~~
+```
 
 Välj nu fliken "SQL" så skall vi pröva att skriva lite egna frågor mot tabellen. Det är bra om du plockar fram manualsidan för "SELECT". Den kan bli användbar.
 
@@ -386,9 +386,9 @@ Välj nu fliken "SQL" så skall vi pröva att skriva lite egna frågor mot tabel
 
 Börja med att ställa följande enkla fråga som väljer ut samtliga rader i tabellen. Kör frågan och studera svaret.
 
-~~~syntax=sql
+```sql
 SELECT * FROM Kompis
-~~~
+```
 
 [FIGURE src=/img/oophp/kmom06/image21.jpg caption="Visar resultatet från vald SQL-sats."]
 
@@ -396,7 +396,7 @@ Tydligen lägger applikationen själv till koden `LIMIT 0,30`. Det är för att 
 
 Klicka på "Ändra" för att ändra SQL-satsen. Kör följande SQL-satser en och en och studera vilket resultat de ger. Använd referensmanualen för att slå upp mer exakt hur de olika varianterna fungerar.
 
-~~~syntax=sql
+```sql
 --
 -- Kommentarer i SQL skrivs med --
 --
@@ -410,7 +410,7 @@ SELECT fodd FROM Kompis WHERE namn LIKE '%Mi%';
 -- Att sortera resultatet
 SELECT * FROM Kompis ORDER BY namn ASC;
 SELECT namn, smeknamn FROM Kompis WHERE fodd < NOW() ORDER BY smeknamn DESC;
-~~~
+```
 
 Det verkar fungera bra va? Försök nu själv, kom på egna frågor och testa tills du kan detta.
 
@@ -426,14 +426,14 @@ Då går vi vidare och försöker räkna ut åldern.
 
 SQL är ett kraftfullt språk och det finns mycket att utforska inom det. I förra exemplet såg vi funktionen `NOW()` som returnerar dagens tid och datum. Pröva den genom att skriva följande `SELECT`-sats.
 
-~~~syntax=sql
+```sql
 -- Systemets tid och datum
 SELECT NOW();
-~~~
+```
 
 Fortsätt att testa fler inbyggda funktioner genom att testa följande SQL-satser.
 
-~~~syntax=sql
+```sql
 -- Datum och tid
 SELECT WEEK(NOW()) AS vecka;
 
@@ -446,7 +446,7 @@ SELECT LENGTH('hej') AS antal;
 
 -- Matematiska funktioner
 SELECT PI() + SQRT(2) + TAN(1) AS summan;
-~~~
+```
 
 Kapitel 11 i referensmanualen ger oss en god insyn i vilken typ av inbyggda funktioner som finns. Bekanta dig med dem, de kan spara mycket utvecklingstid.
 
@@ -457,10 +457,10 @@ Kapitel 11 i referensmanualen ger oss en god insyn i vilken typ av inbyggda funk
 
 Att räkna ut någons ålder borde vara enkelt, men nehe, det var det inte. Det första man skulle tänka sig att testa är ju att ta diffen mellan dagens datum och födelsedatumet. Pröva det så får vi se.
 
-~~~syntax=sql
+```sql
 -- Försök att räkna ut ålder
 SELECT ROUND((DATEDIFF(CURDATE(), '1968-03-07') / 365), 1) AS alder;
-~~~
+```
 
 Nu har ju inte alla år 365 dagar så det blir lite ungefärligt. Vill du se ett mer korrekt och exakt sätt att räkna ut åldern så finner du det referensmanualen.
 
@@ -468,11 +468,11 @@ Nu har ju inte alla år 365 dagar så det blir lite ungefärligt. Vill du se ett
 
 Pröva följande SQL-kod för att visa åldern på alla rader i din tabell.
 
-~~~syntax=sql
+```sql
 -- Visa alla kompisar och deras ålder
 SELECT *, (YEAR(CURDATE())-YEAR(fodd))-(RIGHT(CURDATE(),5)<RIGHT(fodd,5)) AS alder
 FROM Kompis;
-~~~
+```
 
 Lite krångligt men det funkar som det ska.
 
@@ -487,7 +487,7 @@ När man har lite långa och krångliga SQL-satser, som i föregående exempel, 
 
 Ta till exempel SQL-satsen som visade aldern och skapa en vy `VKompis`. Du gör det med följande SQL-sats.
 
-~~~syntax=sql
+```sql
 -- Skapa en vy som visar alla kompisar och deras ålder
 CREATE VIEW VKompis
 AS
@@ -498,7 +498,7 @@ FROM Kompis;
 SELECT * FROM VKompis;
 SELECT * FROM VKompis ORDER BY alder DESC;
 SELECT * FROM VKompis WHERE alder > 40 and alder < 65;
-~~~
+```
 
 När du väl skapat vyn så kan du använda den som en vanlig tabell. Nu fick du dessutom `VKompis` som en ny tabell/vy synlig i PHPMyAdmin. Klicka på den och inspektera den. 
 
@@ -514,15 +514,15 @@ Som du ser så hanteras vyer på liknande sätt som en vanlig tabell.
 
 Aggregerande funktioner kan användas för att göra beräkningar på innehåll i tabeller. Låt oss pröva att beräkna medelåldern för alla kompisar.
 
-~~~syntax=sql
+```sql
 -- Visa snittåldern för alla kompisar
 SELECT AVG(alder) AS snittalder
 FROM VKompis;
-~~~
+```
 
 Du kan även beräkna `MIN` och `MAX` värden eller beräkna antalet rader i ett resultat. Pröva följande SQL kod så ser du.
 
-~~~syntax=sql
+```sql
 -- Visa högsta åldern bland kompisarna
 SELECT MAX(alder) AS hogsta FROM VKompis;
 
@@ -531,7 +531,7 @@ SELECT MIN(alder) AS lagsta FROM VKompis;
 
 -- Visa antalet kompisar
 SELECT COUNT(id) AS antal FROM VKompis;
-~~~
+```
 
 Du kan läsa mer om aggregerande funktioner i referensmanualen.
 
@@ -570,7 +570,7 @@ Fälten `id` skall vara av typen `INTEGER`, defineras som primärnyckel och vara
 Det är dessa fält som gör att en kompis kan kopplas till en utrustning.
 SQL-koden som används för att skapa mina tabeller följer, jämför med den som används för att skapa dina egna tabeller.
 
-~~~syntax=sql
+```sql
 -- Skapa tabellen Utrustning
 CREATE TABLE `mos`.`Utrustning` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
@@ -583,7 +583,7 @@ CREATE TABLE `mos`.`KompisUtrustning` (
 `id_Kompis` INT NOT NULL ,
 `id_Utrustning` INT NOT NULL
 ) ENGINE = MYISAM
-~~~
+```
 
 
 ###11.3 Mata in värden {#mata-varden}
@@ -615,10 +615,10 @@ Bra, då skall vi se om vi kan koppla ihop vilken kompis som har vilken utrustni
 
 Kör följande SQL-sats och se vilket svar du får.
 
-~~~syntax=sql
+```sql
 -- Joina tabellerna
 SELECT * FROM Kompis, Utrustning, KompisUtrustning;
-~~~
+```
 
 Du borde få en lista med rader med osammanhängande information. Resultatet kallas en cross join eller cartesian product. Det innebär i korthet att varje rad har kopplats till varje rad i de andra tabellerna. Resultatet blir "antalet rader i Kompis" x "antalet rader i Utrustning" x "antalet rader i KompisUtrustning". I mitt fall blev det 160 rader (5 x 4 x 8).
 
@@ -626,15 +626,15 @@ Du borde få en lista med rader med osammanhängande information. Resultatet kal
 
 För att begränsa svaret så måste vi koppla ihop raderna. Vi vet ju till exempel att "Börje Halt" inte har någon utrustning så han borde ju inte synas i listan. Denna koppling kan vi göra med ett `WHERE`-villkor. Pröva följande SQL-sats.
 
-~~~syntax=sql
+```sql
 -- Joina tabellerna med villkor
 SELECT * FROM Kompis, Utrustning, KompisUtrustning
 WHERE Kompis.id = KompisUtrustning.id_Kompis;
-~~~
+```
 
 Det blev bättre, jag fick 32 rader. Men jag får fortfarande att alla kompisar har all utrustning och det stämmer ju inte. Vi utvidgar `WHERE`-villkoret. Pröva följande SQL-sats.
 
-~~~syntax=sql
+```sql
 -- Joina tabellerna med villkor
 SELECT * FROM Kompis, Utrustning, KompisUtrustning
 WHERE
@@ -642,7 +642,7 @@ WHERE
  AND
  Utrustning.id = KompisUtrustning.id_Utrustning    
 ;
-~~~
+```
 
 Sådärja, nu blev det 8 rader och det ser ut så som jag matat in.
 
@@ -650,7 +650,7 @@ Sådärja, nu blev det 8 rader och det ser ut så som jag matat in.
 
 Som du ser så återkommer kolumnerna id flera gånger och vi kan inte riktigt veta till vilken tabell de pekar. Detta blir ju lite dumt, det är viktigt hur man namnger kolumnerna i tabellen. För att göra en mer korrekt listning så får vi välja vilka kolumner vi vill visa. Pröva följande SQL-sats där vi väljer kolumner samt använder nyckelordet `AS` för att ge tabeller och kolumner ett "smeknamn".
 
-~~~syntax=sql
+```sql
 --
 -- Joina tabellerna med villkor och byt namn på kolumner och tabeller.
 --
@@ -671,7 +671,7 @@ WHERE
  AND
  U.id = KU.id_Utrustning    
 ;
-~~~
+```
 
 Det borde ge en snyggare visning av innehållet i tabellerna.
 
@@ -686,7 +686,7 @@ Låt oss nu jobba lite med tabellen och köra lite frågor mot den. Pröva med a
 
 Vi producerar lite SQL-satser för dessa frågor och testkör dem. För att göra saker enklare så skapar vi en vy av SELECT-satsen som joinade de tre tabellerna.
 
-~~~syntax=sql
+```sql
 --
 -- Skapa vy VKompisUtrustning av de joinade tabellerna
 --
@@ -709,11 +709,11 @@ WHERE
  AND
  U.id = KU.id_Utrustning    
 ;
-~~~
+```
 
 Kör nu följande SQL-satser för att svara på dina frågor.
 
-~~~syntax=sql
+```sql
 -- Visa alla kompisar och deras utrustning.
 SELECT *
 FROM VKompisUtrustning
@@ -737,7 +737,7 @@ SELECT *
 FROM VKompisUtrustning
 WHERE Namn = 'Micke Moped';
 ;
-~~~
+```
 
 Bra, nu kan vi det här.
 
@@ -785,7 +785,7 @@ Exemplet visar hur du kopplar dig från PHP-kod mot en MySQl-databas och ställe
 
 Om du studerar källkoden i filen så ser du följande viktiga sekvenser. Först hur kopplingen mot databasen sker.
 
-~~~syntax=php
+```php
 // ------------------------------------------------------------------------
 //
 // Connect to the database server
@@ -801,13 +801,13 @@ if (mysqli_connect_error()) {
   exit();
 }
 echo "<p>Connected successfully</p>";
-~~~
+```
 
 I exemplet så har man valt att lagra viss information i filen `config.php`. Mer om den lite längre ned.
 
 Efter att kopplingen skett så förbereds SQL-satsen i en sträng för att sedan exekveras mot databasen i en query.
 
-~~~syntax=php
+```php
 // ------------------------------------------------------------------------
 //
 // Prepare and perform a SELECT query
@@ -829,12 +829,12 @@ if(empty($search)) {
 $res = $mysqli->query($query) 
   or die("Could not query database, query =<br/><pre>{$query}</pre><br/>{$mysqli->error}");
 echo "<p>Query={$query}</p><p>Number of rows in resultset: " . $res->num_rows . "</p>";
-~~~
+```
 
 Därefter hanteras resultatet och skrivs ut, rad för rad. Sedan stängs resultatet med `close()` då det inte behövs mer.
 
 
-~~~syntax=php
+```php
 // ------------------------------------------------------------------------
 //
 // Show the results of the query
@@ -848,11 +848,11 @@ while($row = $res->fetch_object()) {
   $i++;
 }
 $res->close();
-~~~
+```
 
 Tills slut stängs även `mysqli`-objektet.
 
-~~~syntax=php
+```php
 // ------------------------------------------------------------------------
 //
 // Close the connection to the database
@@ -860,7 +860,7 @@ Tills slut stängs även `mysqli`-objektet.
 // <a href='http://php.net/manual/en/mysqli.close.php'>http://php.net/manual/en/mysqli.close.php</a>
 //
 $mysqli->close();
-~~~
+```
 
 Detta var i stort sett de viktiga delarna i exemplet. Nu är det snart dags att göra detta på egen hand. Först lite om filen `config.php`.
 
@@ -869,7 +869,7 @@ Detta var i stort sett de viktiga delarna i exemplet. Nu är det snart dags att 
 
 Innehållet i `config.php` ser ut som följer:
 
-~~~syntax=php
+```php
 <?php
 // ==================================================================
 // User Settings -- CHANGE HERE
@@ -896,7 +896,7 @@ define('DB_USER',     'mos');                    // <-- mysql db user
 define('DB_PASSWORD', 'secret password');        // <-- mysql db password
 define('DB_DATABASE', 'mos');                    // <-- mysql db name
 define('DB_HOST',     'blu-ray.student.bth.se'); // <-- mysql server host
-~~~
+```
 
 Ändra informationen till ditt eget studentkonto och ditt lösenord.
 
@@ -908,14 +908,14 @@ I filen används funktionen `define()` för att definera användarid, lösen, da
 
 Som en extra säkerhetsåtgärd så skall du skydda filens rättigheter det gör du med ett script som itsupporten har tillverkat. Du måste stå i samma katalog som filen `config.php` ligger i. Du kör scriptet med följande kommando. 
 
-~~~syntax=html
+```html
 mos@sweet: ls -l config.php 
 -rw-r--r-- 1 mos 500 407 2009-09-29 23:06 config.php
 mos@sweet: sudo chgrp_www-data
 [sudo] password for mos: 
 mos@sweet: ls -l config.php 
 -rw-r----- 1 mos www-data 407 2009-09-29 23:06 config.php
-~~~
+```
 
 Skriptet ändrar rättigheterna på filen `config.php` som ligger i det biblioteket du står. De nya rättigheterna gör att endast den användare som kör webservern kan läsa filen (och du själv förstås). Så här kan det se ut när jag kör kommandot i PuTTy.
 
@@ -962,6 +962,3 @@ Redovisning {#redovisning}
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

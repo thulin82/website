@@ -155,7 +155,7 @@ Ta och titta på min kod av dice och se hur jag hanterar _GET parametern. Pröva
 * Kasta tärning:  
   <a href='http://www.student.bth.se/~mos/oophp/mom04/dice1/dice.php'>http://www.student.bth.se/~mos/oophp/mom04/dice1/dice.php</a>
 
-~~~syntax=php
+```php
 // --------------------------------------------------------------------
 //
 // Take care of GET variables, and validate them
@@ -163,7 +163,7 @@ Ta och titta på min kod av dice och se hur jag hanterar _GET parametern. Pröva
 //$antal        = (empty($_GET['antal'])        ? "" : $_GET['antal']);
 $antal = filter_input(INPUT_GET, 'antal', FILTER_VALIDATE_INT);
 if($antal === FALSE) die("Felaktigt värde.");
-~~~
+```
 
 Läs sedan på om data filtrering i refmanualen.
 
@@ -183,7 +183,7 @@ Låt oss nu vidarutveckla vår tärning och vårt histogram över gjorda tärnin
 
 Ett vanligt sätt att strukturera sina program är att dela upp sin kod i filer och funktioner. En enkel funktion för tärningen skulle kunna se ut så här:
 
-~~~syntax=php
+```php
 // -------------------------------------------------------------------------
 //
 // Throw a dice, return the value.
@@ -191,7 +191,7 @@ Ett vanligt sätt att strukturera sina program är att dela upp sin kod i filer 
 function diceThrow() {
         return rand(1,6);
 }
-~~~
+```
 
 Refmanual beskriver funktioner här.  
 
@@ -275,14 +275,14 @@ Vi börjar med att göra en klass för histogrammet och fortsätter med en klass
 1\. Skapa en ny fil, `CHistogram.php`.
 
 2\. Kopiera funktionerna från `FHistogram.php` till `CHistogram.php` och omringa dem med följande språkkonstruktion:
-~~~syntax=php
+```php
 class CHistogram { // Start of class
 
  // Alla funktionerna följer inom klassdefinitionen
 
 
 } // End of class
-~~~
+```
 
 3\. Läs på om synligheten för variabler och metoder (public, protected, private):  
   * <a href='http://php.net/manual/en/language.oop5.visibility.php'>http://php.net/manual/en/language.oop5.visibility.php</a>
@@ -293,7 +293,7 @@ class CHistogram { // Start of class
 
 5\. Uppdatera `dice.php` så att det nu använder klassen `CHistogram` istället för funktionerna i i filen `FHistogram.php`. Du kommer säkert få några följdfel av dessa ändringar, felsök och fixa till dem.
 
-~~~syntax=php
+```php
 // Exempel på kod som är bra att ha i samband med klasser.
 
 // Skapa ett nytt objekt av en klass
@@ -301,7 +301,7 @@ $histogram = new CHistogram();
 
 // Anropa en metod i klassen
 $graf = $histogram->PrintGraf($slag);
-~~~
+```
 
 Testa så att det fungerar.
 
@@ -333,28 +333,28 @@ Vill du läsa på om PHP klasser och objekt så finns manualsidan här.
 
 Det vore bekvämt om klassen `CDice` kunde hålla koll på sin senaste slagna serie. Då kan man fråga ett objekt av klassen och be att få den senaste slagna serien. Kodmässigt skulle det kunna se ut så här i `dice.php`.
 
-~~~syntax=php
+```php
 // Rulla tärningen
 $dice->RollRepeatedly($antal);
 // Hämta föregående slagserie
 $slag = $dice->iLastThrows;
-~~~
+```
 
 Vi behöver alltså en medlemsvariabel, `$iLastThrows`, som kommer ihåg den senaste slagna serien.
 
 I klassen så lägger vi till följande kod för att definera medlemsvariablen.
 
-~~~syntax=php
+```php
   // --------------------------------------------------------------------
   //
   // Member variables
   //
   public $iLastThrows = Array();
-~~~
+```
 
 Uppdatera resten av koden i `CDice` så att medlemsvariabeln används och alltid innehåller rätt värden. Så här gjorde jag men det finns flera olika sätt att lösa detta på.
 
-~~~syntax=php
+```php
   // --------------------------------------------------------------------
   //
   // Throw a dice repeatedly, return the value(s).
@@ -366,7 +366,7 @@ Uppdatera resten av koden i `CDice` så att medlemsvariabeln används och alltid
     }        
     return $this->iLastThrows;
   }
-~~~
+```
 
 `$this` är en pekare till det egna/nuvarande objektet. `$this->iLastThrows` pekar på medlemsvariabeln.
 
@@ -414,11 +414,11 @@ Börja med att testa att arv fungerar.
 
 1\. Skapa en ny fil `CDiceSvg.php`. Skapa klassen `CDiveSvg` i filen och låt den ärva från `CDice`.
 
-~~~syntax=php
+```php
 require_once("CDice.php");
 
 class CDiceSvg extends CDice {  
-~~~
+```
 
 2\. Uppdatera din `Dice.php` och använd klassen `CDiceSvg` istället för `CDice`. Om det funkar så funkar ditt arv. Det är bra att testa små steg i taget.
 
@@ -501,6 +501,3 @@ Redovisning {#redovisning}
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

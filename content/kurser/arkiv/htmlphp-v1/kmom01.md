@@ -235,7 +235,7 @@ För att underlätta så tjuvstartar vi med en grundstruktur för HTML-koden. Gr
 
 Skapa en tom sida, döp den till `me.php`. Fyll den med följande kod.
 
-~~~syntax=html
+```html
 <!doctype html>
 <html>
 <head>
@@ -248,7 +248,7 @@ Skapa en tom sida, döp den till `me.php`. Fyll den med följande kod.
   <img src="img/me.jpg" alt="Bild på Mikael Roos">
 </body>        
 </html>
-~~~
+```
 
 Använd denna grundstruktur när du gör dina sidor. 
 
@@ -305,13 +305,13 @@ För att förenkla framtida kontroller så lägger vi till en länk till validat
 
 Skapa en footer till me-sidan och lägg in länken till validatorn där. Följande kod löser det.
 
-~~~
+```
   <hr>
   <div id="footer">
     <a href="http://validator.w3.org/check/referer">HTML5</a>
   </div>
 </body>
-~~~
+```
 
 För att det skall fungera måste din sida ligga på en webbserver som är publikt tillgänglig. Annars kommer validatorn inte åt din sida. Testa genom att ladda upp din me-sida till driftsmiljön.
 
@@ -349,7 +349,7 @@ Med CSS kan vi ge sidan färg och form. Vi kan styla HTML-elementen och bestämm
 
 Skapa en katalog som heter style och en fil som heter `stylesheet.css`. Lägg följande kod i filen.
 
-~~~
+```
 html {background: #cc6666;}
 body {
   margin: 8px auto;
@@ -373,14 +373,14 @@ div#footer a:link    { }
 div#footer a:visited { }
 div#footer a:hover   { text-decoration:underline;  color: #333333; }
 div#footer a:active  { }
-~~~
+```
 
 Peka ut din stylesheet genom att lägga till följande kod i `<head>`-elementet i HTML-koden (`me.php`).
 
-~~~
+```
     <link rel="stylesheet" href="style/stylesheet.css">
 </head>
-~~~
+```
 
 Testa i din utvecklingsmiljö och ladda sedan upp allt till driftsmiljön. Så här blev det för mig.
 
@@ -423,9 +423,9 @@ Bra. Om du får fel så försök rätta till det.
 
 För att underlätta validering av sidorna så lägger vi till en direktlänk. På samma sätt som vi gjorde med HTML-validatorn. Lägg till följande länk i din footer.
 
-~~~
+```
 <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
-~~~
+```
 
 Din webbserver behöver vara publik för att det skall fungera. Ladda upp sidorna på driftsservern för att testa validatorlänken.
 
@@ -491,7 +491,7 @@ En webbplats innehåller ofta en header med en logo, titel på siten och en navi
 Låt oss fixa till en header, innan vi går vidare. Följande kod hjälper oss på vägen.
 
 *HTML-kod*:
-~~~
+```
 <!-- Header -->
 <div id="top">
     <img src="img/logo.png" alt="htmlphp logo" width=300 height=70>
@@ -501,10 +501,10 @@ Låt oss fixa till en header, innan vi går vidare. Följande kod hjälper oss p
     <a href="me.php">Me</a>
     <a href="report.php">Redovisning</a>
 </nav>
-~~~
+```
 
 *CSS-kod:*
-~~~
+```
 /* header --------------------------------------------------------
  */
 div#top {}
@@ -527,7 +527,7 @@ nav.navmenu a:link    { }
 nav.navmenu a:visited { }
 nav.navmenu a:hover   { color: #111111; background: #999999; }
 nav.navmenu a:active  { }
-~~~
+```
 
 Du kan ordna en egen logo-bild eller bara låna min så länge. Ladda ned logo-bilden genom att högerklicka på den och välj *"Spara bild som..."*.
 
@@ -557,15 +557,15 @@ Bra. Nu börjar det likna något. Då är vi redo att strukturera sidorna med PH
 
 Kommentarer i HTML skrivs på följande sätt:
 
-~~~
+```
 <!-- text som är en vacker kommentar -->
-~~~
+```
 
 Kommentar i CSS skrivs på följande sätt.
 
-~~~
+```
 /* text som är en vacker kommentar */
-~~~
+```
 
 Använd kommentarer för att dokumentera din kod. Framförallt för din egen skull. Använd även kommentarsstycken för att strukturera koden så den blir översiktlig och lättläst.
 </div>
@@ -603,9 +603,9 @@ Den övre delen av koden från `me.php` flyttas till filen `header.php`, inklusi
 
 Med hjälp av PHP-konstruktionen [`include()`](http://php.net/include) så inkluderas `header.php` och `footer.php` i `me.php`.
 
-~~~
+```
 <?php include("incl/header.php"); ?>
-~~~
+```
 
 `<?php` är starttag för PHP-kod, `?>` är sluttag. Allt mellan taggarna betraktas och hanteras som PHP-kod. Det är webbservern som parsar PHP-koden innan den lämnar ifrån sig den resulterande HTML-sidan.
 
@@ -684,11 +684,11 @@ I `me.php` definerar vi en variabel (`$title`) och tilldelar den sidans titel ("
 
 `me.php`
 
-~~~syntax=php
+```php
 <?php
 $title = "Min Me-sida om mig själv";
 ?>
-~~~
+```
 
 * Källkod:  
 <a href='http://dbwebb.se/htmlphp/me/kmom01/try/source.php?dir=&file=me09.php'>http://dbwebb.se/htmlphp/me/kmom01/try/source.php?dir=&file=me09.php</a>
@@ -697,11 +697,11 @@ Samma sak gör vi i filen `report.php`. Här använder vi en annan titel på sid
 
 `report.php`
 
-~~~syntax=php
+```php
 <?php
 $title = "Mina redovisningar av kursmomenten";
 ?>
-~~~
+```
 
 * Källkod:  
 <a href='http://dbwebb.se/htmlphp/me/kmom01/try/source.php?dir=&file=report02.php'>http://dbwebb.se/htmlphp/me/kmom01/try/source.php?dir=&file=report02.php</a>
@@ -712,15 +712,15 @@ Byt ut raden som innehåller nuvarande title-taggen mot PHP-kod som skriver ut v
 
 Ursprunglig kod:
 
-~~~syntax=html
+```html
   <title>Me-sidan</title>
-~~~
+```
 
 Ny kod:
 
-~~~syntax=html
+```html
   <title><?php echo $title; ?></title>
-~~~
+```
 
 * Källkod:  
 <a href='http://dbwebb.se/htmlphp/me/kmom01/try/source.php?dir=incl&file=header02.php'>http://dbwebb.se/htmlphp/me/kmom01/try/source.php?dir=incl&file=header02.php</a>
@@ -784,17 +784,17 @@ Hittade du felen? Följande rader var ändrade och gjorde att felet inträffade.
 
 Felet i `me10.php`. Anledningen är ett försök att inkludera en fil som inte finns.
 
-~~~syntax=php
+```php
 <?php include("incl/nofooter.php"); ?>
-~~~
+```
 
 Felet i `report03.php`. Anledningen är ett felaktigt variabelnamn, borde varit `$title`.
 
-~~~syntax=php
+```php
 <?php
 $notitle = "Mina redovisningar av kursmomenten";
 ?>
-~~~
+```
 
 Det kommer att bli fler felmeddelanden innan kursen är slut, tro mig.
 
@@ -807,10 +807,10 @@ Med PHP-funktionen [`error_reporting()`](http://php.net/manual/en/function.error
 
 För detta syfte skapar vi en ny fil, `incl/config.php`. Följande PHP-kod stoppar vi in i filen.
 
-~~~syntax=php
+```php
 <?php
 error_reporting(-1);
-~~~
+```
 
 Nu behöver vi inkludera denna fil i me-sidan respektive redovisningssidan. I följande exempel är detta gjort.
 
@@ -912,7 +912,7 @@ Se till att spara varje kursmoment i en egen katalog. Då kan du alltid gå vida
 
 Här är förslag på en katalogstruktur som fungerar bra.
 
-~~~syntax=html
+```html
 www/htmlphp/kmom01
             kmom02
             kmom03
@@ -920,7 +920,7 @@ www/htmlphp/kmom01
             kmom05
             kmom06
             kmom10
-~~~
+```
 
 Lycka till med resten av kursen nu! Nu vet du hur det fungerar.
 [/INFO]

@@ -226,11 +226,11 @@ Gör på följande sätt:
 3. Gå in i den katalogen och skapa en fil som heter hello.php.
 4. Editera filen med din editor och skriv in följande kodsnutt:
 
-~~~syntax=php
+```php
 <?php
 echo "Hello World";
 ?>
-~~~
+```
 
 Peka webbläsaren på: 
 
@@ -279,19 +279,19 @@ PHP genererar felmeddelanden om problem inträffar, tex om du skriver felaktig k
 
 För att underlätta så se till att du alltid har felmeddelandena påslagna genom att lägga till följande kodrader.
 
-~~~syntax=php
+```php
 error_reporting(E_ALL);
-~~~
+```
 
 Uppdatera din fil `hello.php` med nedanstående kod. Kör den och se om du får ett felmeddelande liksom jag. Isåfall har du lyckats.
 
-~~~syntax=php
+```php
 <?php
 error_reporting(E_ALL);
 echo "Hello World";
 echo $i;
 ?>
-~~~
+```
 
 Så här blir det hos mig.
 
@@ -304,7 +304,7 @@ Felmeddelanden är bra, de är ofta korrekta och hjälper oss att finna felet.
 
 Lär dig kommentera din kod, både bra för att komma ihåg vad man gjorde och visa för någon annan. Kommentarer är också ett lysande felsökningsverktyg då man enkelt kan kommentera bort stora kodstycken för att finna problem. I PHP skrivs kommentarer på nedanstående två sätt.
 
-~~~syntax=php
+```php
 // ----------------------------------------------------------------------
 //
 // Två slashar (//) ger kommentar resten av raden.
@@ -312,7 +312,7 @@ Lär dig kommentera din kod, både bra för att komma ihåg vad man gjorde och v
 /*
     Allt blir bortkommenterat mellan dessa två start- och slut-tecken.
 */
-~~~
+```
 
 Se till att alltid ha en kommentar i början på varje fil som anger författare. Det är en bra början. Använd också kommentarer som avdelare i texten så att koden blir enklare att läsa.
 
@@ -348,11 +348,11 @@ Låt oss göra ett litet programmeringsexempel i PHP med variabler, strängar oc
 3. Konkatenera (slå ihop) strängarna, spara till en ny variabel `$s6`. Skriv ut `$s6`.
   * <a href='http://php.net/manual/en/language.operators.string.php'>http://php.net/manual/en/language.operators.string.php</a>
 
-~~~syntax=php
+```php
 $s6 = $s1 . $s2 . $s3 . $s4 . $s5;
 echo "Variabel 's6' innehåller " . $s6;
 echo "<br />";   // HTML-tecken för ny rad, ger ny rad
-~~~
+```
 
 Testa så att det går att köra programmet i din webbläsare. Glöm inte att sätta på felmeddelanden.
 
@@ -373,14 +373,14 @@ Skriv en `if`-sats som jämför värdet på `$t15` och `$t6`. Om värdet stämme
 * <a href='http://php.net/manual/en/control-structures.if.php'>http://php.net/manual/en/control-structures.if.php</a>
 * <a href='http://php.net/manual/en/language.operators.comparison.php'>http://php.net/manual/en/language.operators.comparison.php</a>
 
-~~~syntax=php
+```php
 if($t6 == $t15) {
   echo "YES <br />";
 }
 else {
   echo "Ajdå...<br />";
 }
-~~~
+```
 
 Om du känner att du behärskar detta så kan du som extra övning titta på ett alternativ till `if`-sats. Alternativet är mycket bra att använda ibland.
 
@@ -425,7 +425,7 @@ Så här blev det för mig.
 
 Som du kan se i koden så väljer jag att jobba med strängar enligt HEREDOC. Det ser mycket bättre ut än alla dessa fnuttar (", '). [Läs om HEREDOC i refmanualen](http://www.php.net/manual/en/language.types.string.php#language.types.string.syntax.heredoc).
 
-~~~syntax=php
+```php
 <?php
 $str = <<<EOD
 Example of string
@@ -433,7 +433,7 @@ spanning multiple lines
 using heredoc syntax.
 EOD;
 ?>
-~~~
+```
 
 [INFO]
 **Kom ihåg!**
@@ -441,10 +441,10 @@ EOD;
 Inget skräp efter HEREDOCs sluttecken. Inga tecken, inga mellanslag och inga tabbar.
 Dessutom måste sluttagen vara längst till vänster, den får inte vara intabbad.
 
-~~~syntax=php
+```php
    EOD;     // FEL
 EOD; //Rätt
-~~~
+```
 [/INFO]
 
 [FIGURE src=/img/oophp/kmom01/image11.png?w=w1 caption="Källkod för template.php."]

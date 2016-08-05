@@ -232,13 +232,13 @@ Flera av elementen ersätter det anonyma `<div>`-elementet och tillför semantis
 
 De nya elementen är just "nya", och de känns ofta inte igen av webbläsarna. Detta kan åtgärdas genom att definera dem i stylesheeten med en standard style. Följande kod löser det.
 
-~~~syntax=css
+```css
 /* html5 elements
 --------------------------------------------------------
 */
 header,footer,nav,article,section,
 aside,figure,figcaption{display:block;}
-~~~
+```
 
 * Se hela filen `style/stylesheet.css`:    
   <a href='http://dbwebb.se/htmlphp/me/kmom02/viewsource.php?dir=style&file=stylesheet.css'>http://dbwebb.se/htmlphp/me/kmom02/viewsource.php?dir=style&file=stylesheet.css</a>
@@ -338,7 +338,7 @@ Tanken är att använda den befintliga stylesheeten och endast tillföra ramar o
 
 Gör en ny fil, `style/debug.css`, och lägg in följande kod.
 
-~~~syntax=css
+```css
 @import url("stylesheet.css"); /* Import all styles from this file */
 
 /* add debug-information to some central elements
@@ -346,7 +346,7 @@ Gör en ny fil, `style/debug.css`, och lägg in följande kod.
 */
 body {background: beige;}
 header#above {background: blueviolet;}
-~~~
+```
 
 * Se hela källkoden till min `style/debug.css`  
   <a href='http://dbwebb.se/htmlphp/me/kmom02/viewsource.php?dir=style&file=debug.css'>http://dbwebb.se/htmlphp/me/kmom02/viewsource.php?dir=style&file=debug.css</a>
@@ -373,10 +373,10 @@ Principen är att ju närmare elementet som stylen defineras, desto viktigare ä
 
 Ett enkelt sätt att använda debug-stylen är att inkludera den som en alternativ extern stylesheet. Detta kan du göra genom att uppdatera din `incl/header.php`.
 
-~~~syntax=html
+```html
 <link rel="stylesheet" href="style/stylesheet.css" title="General stylesheet">
 <link rel="alternate stylesheet" href="style/debug.css" title="Debug stylesheet">
-~~~
+```
 
 Du kan nu, med Firefox, välja vilken stylesheet du vill använda. Gå till Firefox menyn och välj "Firefox -> View -> Page style", välj sedan den stylesheet du vill använda för att visa sidan.
 
@@ -499,10 +499,10 @@ Ett vanligt problem vid användadet av `float` är att det element som omsluter 
 
 Det som behövs för att åtgärda problemet är att lura webbläsaren att rita om sidan, i samband med det så lyckas webbläsaren finna korrekt storlek. En sådan omritning kan påtvingas med den konstruktion som är markerad i bildens CSS-kod.
 
-~~~syntax=css
+```css
 /* clearer fix */
 /* div#content {overflow:auto;} */
-~~~
+```
 
 Som du ser är själva konstruktionen bortkommenterad, ta bort kommentaren i exemplet och klicka på uppdatera. Blev det bättre? Det ska det bli.
 
@@ -641,11 +641,11 @@ Det är inte säkert att en webbläsare stödjer standardkonstruktionen för CSS
 
 I exemplen ovan så visas detta bl.a. i formen av följande konstruktion.
 
-~~~syntax=css
+```css
  -webkit-border-radius: 10px;
  -moz-border-radius: 10px;
  border-radius: 10px;
-~~~
+```
  
 Konstruktionen `border-radius` är en standard-konstruktionen i CSS3 medan `-moz` och `-webkit` är prefix till konstruktioner specifika för en viss familj av webbläsare.
 
@@ -712,9 +712,9 @@ En favicon defineras med en `<link>` i sidans header, inom HTML-elementet `<head
 
 Exempel på favicon.
 
-~~~syntax=html
+```html
 <link rel="shortcut icon" href="img/favicon.ico">
-~~~
+```
 
 I min me-sida finns tre varianter på favicons, en glider, en bth och en för dbwebb. Du kan titta på dem som bilder via följande länk, (filnamn börjar med `favicon_`). Du kan kopiera och använda dem som din egna favicon.
 
@@ -737,9 +737,9 @@ Det kan du göra via stylesheets och ett exempel ser du på följande länk i st
   
 Du behöver alltså lägga till följande kod i din stylesheet. Då visas alltid scrollbaren, oavsett hur lång sidan är.
 
-~~~syntax=html
+```html
 html { overflow-y: scroll; }
-~~~
+```
 
 [UPPGIFT VALFRI]
 
@@ -756,10 +756,10 @@ Lösningen innebär att definera ett `id` per sida och använda detta `id` för 
 
 Så här ser det ut om du studerar den genererade HTML-koden för ovanstående sida (`me.php`):
 
-~~~syntax=html
+```html
 <!-- The body id helps with highlighting current menu choice -->
 <body id='me' >
-~~~
+```
 
 Så här gjorde jag i `me.php`, jag valde ett `id` som hette samma sak som sidan.
 
@@ -767,24 +767,24 @@ Så här gjorde jag i `me.php`, jag valde ett `id` som hette samma sak som sidan
 
 `me.php`:
 
-~~~syntax=php
+```php
 <?php
 $pageId = "me";
 ?>
-~~~
+```
 
 `header.php`:
 
-~~~syntax=html
+```html
 <!-- The body id helps with highlighting current menu choice -->
 <body<?php if(isset($pageId)) echo " id='$pageId' "; ?>>
-~~~
+```
 
 **2)** Sätt ett `id` på varje menyval så att det blir enkelt att styla ett specifikt menyval.
 
 `header.php`
 
-~~~syntax=html
+```html
 <!-- Main navigation menu -->
 <nav class="navmenu">
  <a id="me-"     href="me.php">Me</a>
@@ -792,13 +792,13 @@ $pageId = "me";
  <a id="guide-"  href="guide.php">Guider</a>
  <a id="source-" href="viewsource.php">Källkod</a>
 </nav>
-~~~
+```
 
 **3)** Definera en style i stylesheeten som gäller när `body#id` och `a#id` stämmer överens.
 
 `stylesheet.css`:
 
-~~~syntax=css
+```css
 /* highlight current choice in navigation menu
 --------------------------------------------------------
 
@@ -807,7 +807,7 @@ body#me a#me-,
 body#report a#report-,
 body#guide a#guide-,
 body#source a#source- {background:#858585;border:2px solid #656565;}
-~~~
+```
 
 Denna lösning fungerar bra för mindre webbplatser. Nackdelen är att det är en hårdkodad lösning, för varje nytt menyval så måste man uppdatera koden. När det blir fler sidor så är det bättre att finna en flexiblare lösning som innefattar mer PHP-kodande. Men det överlåter vi till en senare övning.
 
@@ -829,20 +829,20 @@ Följande kod visar hur `$pageStyle` fungerar.
 
 `incl/header.php`:
 
-~~~syntax=html
+```html
 <!-- Each page can set $pageStyle to create additional style -->
 <?php if(isset($pageStyle)) : ?>
  <style type="text/css">
    <?php echo $pageStyle; ?>
  </style>
 <?php endif; ?>
-~~~
+```
 
 Ovanstående `if`-sats skriver ut innehållet i `$pageStyle` om den är definerad och har ett värde skilt från `null`. Innehållet i variabeln omringas av elementen  `<style>` och `</style>`. Värdet på variabeln kan sedan defineras i en sida, tex `me2.php`. 
 
 `me2.php`:
 
-~~~syntax=php
+```php
 // Define style thats specific for this page
 $pageStyle = '
 figure { 
@@ -856,7 +856,7 @@ figure {
 }
 ';
 
-~~~
+```
 
 Ovan kod definerar variabeln och lägger till style så att bildens ram får runda hörn och en tredimensionell skugga. Variabeln måste få sitt värde innan `header.php` inkluderas. 
 
@@ -907,6 +907,3 @@ Redovisning {#redovisning}
 3. Skriv redovisningen på din me-sida. Skriv ett stycke (ca 15 meningar) om hur momentet funkade. Reflektera över svårigheter/problem/lösningar/resultatet, etc. Beskriv hur väl du kan HTML/CSS (nybörjare, erfaren). Vad anser du om guiderna html20 och css20? Saknar du något i dem eller har du en annan syn på hur html/css skall organiseras? Me-sidan börjar bli en liten webbplats, vad tycker du om dess struktur av filer och kataloger, känns det okey eller ovant?
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

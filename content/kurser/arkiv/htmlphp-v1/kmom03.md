@@ -233,9 +233,9 @@ Det fanns ett exempel i förra kursmomentet, där vi ändrade style på me-sidan
 
 Studera "querystringen" och se hur den är uppbyggd för de olika exemplen. Studera även källkoden till `me3.php` och se hur `if`-satserna testar innehållet i `$_GET`.
 
-~~~syntax=php
+```php
 if(isset($_GET['border-radius'])) {
-~~~
+```
 
 * Källkod till `me3.php`.  
   <a href='http://dbwebb.se/htmlphp/me/kmom03/viewsource.php?dir=&file=me3.php#file'>http://dbwebb.se/htmlphp/me/kmom03/viewsource.php?dir=&file=me3.php#file</a>
@@ -250,13 +250,13 @@ Låt oss testa att använda informationen i variabeln `$_GET`. Gör på följand
 1. Skapa en ny sida, `kmom03_get.php`.
 2. Lägg in följande kod.
 
-~~~syntax=html
+```html
 <h1>Visa innehållet i <code>$_GET</code></h1>
 <p>Du anropade sidan med följande querystring:
 <code><?php echo $_SERVER['QUERY_STRING']; ?></code></p>
 <p><code>$_GET</code> innehåller följande:</p>
 <pre><?php print_r($_GET); ?></pre>
-~~~
+```
 
 3\. Testa sidan genom att anropa den på följande vis:
 
@@ -282,9 +282,9 @@ Min testsida validerade inte. Du kan se resultatet av valideringen på nedanstå
 
 Det beror på dessa `&`-tecken som hamnar i HTML-koden. Ett sätt att lösa detta är att använda en PHP-funktion som kodar om alla specialtecken till htmlentiteter. Ett `&`-tecken kodas då om till `&amp;` och det gillas av valideringen. Funktionen heter `htmlentities()`. Funktionen kan användas på följande sätt.
 
-~~~syntax=php
+```php
 <?php echo htmlentities($_SERVER['QUERY_STRING']); ?>
-~~~
+```
 
 Min `kmom03_get2.php` är uppdaterad och validerar. Testa att validera den i Unicorn.
 
@@ -308,7 +308,7 @@ Variabeln `$_GET` används ibland tillsammans med HTML-formulär. Låt oss göra
 
 2. Lägg in följande kod som ger ett formulär. Fortsätt att använda den kod som skriver ut innehållet i `$_GET`.
 
-~~~syntax=html
+```html
 <h1>Formulär och get-metoden</h1>
  <form method="get" action="?">
   <fieldset>
@@ -326,7 +326,7 @@ Variabeln `$_GET` används ibland tillsammans med HTML-formulär. Låt oss göra
   </p>
  </fieldset>
 </form>
-~~~
+```
 
 3\. Testa sidan.
 
@@ -380,17 +380,17 @@ Gör på följande sätt.
 
 2. Ändra den rad i koden som anger formulärets metod. Se exemplet nedan.
 
-~~~syntax=html
+```html
 <form method="get" action="?">skall ersättas med
 <form method="post" action="?">
-~~~
+```
 
 3\. Lägg till en kodrad som skriver ut innehållet i `$_POST`.
 
-~~~syntax=html
+```html
 <p><code>$_POST</code> innehåller följande:</p>
 <pre><?php print_r($_POST); ?></pre>
-~~~
+```
 
 4\. Testa sidan.
 
@@ -420,7 +420,7 @@ Låt oss göra ett testprogram där vi validerar och testar de inkommande variab
 
 2. Skriv följande kod för att kontrollera om användarkontot är definerat.
 
-~~~syntax=php
+```php
 <?php
 if(isset($_POST['account'])) {
         echo "<p>Kontot är definerat.</p>";
@@ -428,7 +428,7 @@ if(isset($_POST['account'])) {
         echo "<p>Kontot är EJ definerat.</p>";
 }
 ?>
-~~~
+```
 
 3\. Testa sidan.
 
@@ -500,10 +500,10 @@ Var det klurigt att få ihop det? Gör så gott du kan. Om du inte lyckas integr
 
 Det behövs en speciallösning för att få exemplet med get-formuläret att hamna på en sida med länken `?p=kmom03-getform`.
 
-~~~syntax=html
+```html
 <form method="get" action="?">
   <input type="hidden" name="p" value="kmom03-getform">
-~~~
+```
   
 Ett input-fält av typen hidden hjälper till. Du kan se hur jag gjorde det i min källkod till `kmom03_getform.php`.
 
@@ -511,9 +511,9 @@ Ett input-fält av typen hidden hjälper till. Du kan se hur jag gjorde det i mi
 
 I `kmom03_postform.php` och `kmom03_validate.php` räcker det att ändra action till den nya sidans länk.
 
-~~~syntax=html
+```html
 <form method="post" action="?p=kmom03-postform">
-~~~
+```
 
 (respektive `action="?p=kmom03-validate"`)
 
@@ -610,11 +610,11 @@ Sessioner används för att lagra information mellan sidanrop. Sessioner använd
 
 För att kunna använda variabeln `$_SESSION` så måste en session startas. Det gör vi med följande kod i filen `incl/config.php`.
 
-~~~syntax=php
+```php
 // start a named session
 session_name(preg_replace('/[:\.\/-_]/', '', __FILE__));
 session_start();
-~~~
+```
 
 Det är bra att alltid starta sessionen det första man gör. Det rekommenderas. Överst i config-filen blir därför bra. Studera min källkod hur jag gjorde.
 
@@ -676,7 +676,7 @@ Fint, då kan vi starta och förstöra en session, då kan det vara dax att lär
 
 Du kan tilldela, och läsa, en sessionsvariabel på följande sätt.
 
-~~~syntax=php
+```php
 $_SESSION['me'] = "dbwebb.se";
 if(isset($_SESSION['counter'])) {
   $_SESSION['counter'] = $_SESSION['counter'] + 1;
@@ -685,7 +685,7 @@ else
 {
   $_SESSION['counter'] = 1;
 }
-~~~
+```
 
 `me` tilldelas en vanlig sträng medan `counter` tilldelas värdet 1 (om den inte har ett tidigare värde) eller ökas på med värdet 1 (om den redan har ett värde).
 
@@ -782,21 +782,21 @@ Ibland vill man veta hur lång tid det tar att generera en sida. Just tidsåtgå
 
 Starta timern i filen `incl/config.php` med följande kod.
 
-~~~syntax=php
+```php
 // time page generation, display in footer. comment out to disable timing.
 $pageTimeGeneration = microtime(true);
-~~~
+```
 
 * Källkoden till `incl/config.php`  
   <a href='http://dbwebb.se/htmlphp/me/kmom03/viewsource.php?dir=incl&file=config.php#file'>http://dbwebb.se/htmlphp/me/kmom03/viewsource.php?dir=incl&file=config.php#file</a>
 
 Stoppa timern och skriv ut resultatet i footern med följande kod.
 
-~~~syntax=php
+```php
 <?php if(isset($pageTimeGeneration)) : ?>
 <p>Page generated in <?php echo round(microtime(true)-$pageTimeGeneration, 5); ?> seconds</p>
 <?php endif; ?>
-~~~
+```
 
 * Källkoden till `incl/footer.php`  
   <a href='http://dbwebb.se/htmlphp/me/kmom03/viewsource.php?dir=incl&file=footer.php#file'>http://dbwebb.se/htmlphp/me/kmom03/viewsource.php?dir=incl&file=footer.php#file</a>
@@ -819,6 +819,3 @@ Redovisning {#redovisning}
 3. Skriv redovisningen på din me-sida. Skriv ett stycke (ca 15 meningar) om hur momentet funkade. Reflektera över svårigheter/problem/lösningar/resultatet, etc. Beskriv hur väl du kan PHP (nybörjare, erfaren). Har du programmerat tidigare, i vilka språk? Känner du igen dig i PHP-koden? Vad tycker du om PHP så här långt in i kursen? Fick du hjälp av guiden php20? 
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

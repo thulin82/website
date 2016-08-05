@@ -500,7 +500,7 @@ Jag bestämde mig för att lagra filnamnet på stylesheeten i sessionen. I filen
 
 `incl/header.php`:
 
-~~~syntax=php
+```php
 <!-- links to external stylesheets -->
 <?php if(isset($_SESSION['stylesheet'])): ?>
  <link rel="stylesheet" href="style/<?php echo $_SESSION['stylesheet']; ?>">        
@@ -508,7 +508,7 @@ Jag bestämde mig för att lagra filnamnet på stylesheeten i sessionen. I filen
  <link rel="stylesheet" href="style/stylesheet.css" title="General stylesheet">
  <link rel="alternate stylesheet" href="style/debug.css" title="Debug stylesheet">
 <?php endif; ?>
-~~~
+```
 
 * Källkoden:  
   <a href='http://dbwebb.se/htmlphp/me/kmom04/viewsource.php?dir=incl&file=header.php'>http://dbwebb.se/htmlphp/me/kmom04/viewsource.php?dir=incl&file=header.php</a>
@@ -557,15 +557,15 @@ Själva koden i sidorna som gör det möjligt att skicka mellan dessa sidor är 
 
 Välj vilken sida som ska processa formuläret i `incl/style/choose_stylesheet.php`: 
 
-~~~syntax=html
+```html
 <form method="post" action="?p=choose-stylesheet-process">
-~~~
+```
 
 Redirect från processingsidan i `incl/style/choose_stylesheet_process.php`: 
 
-~~~syntax=php
+```php
 header("Location: <a href='http://$host$uri/$extra'>http://$host$uri/$extra</a>");
-~~~
+```
 
 Studera dessa två sidors källkod för att få kläm på hur det fungerar.
 

@@ -61,23 +61,23 @@ HTML5 Boilerplate på studentservern {#stud}
 [INFO]
 För att HTML5 Boilerplate ska fungera på studentservern krävs det att du ändrar i filen `.htaccess`. Du behöver kommentera bort följande rader.
 
-~~~syntax=html
+```html
 <IfModule mod_rewrite.c>
   RewriteCond %{HTTPS} !=on
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
-~~~
+```
 
 skall vara 
 
-~~~syntax=html
+```html
 #<IfModule mod_rewrite.c>
 #  RewriteCond %{HTTPS} !=on
 #  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 #  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
 #</IfModule>
-~~~
+```
 
 Om du inte gör detta så kommer du hela tiden bli länkad till webbplatsen **student.bth.se** (som inte finns) istället för webbplatsen **www.student.bth.se**. Det är det som rewrite-regeln säger.
 

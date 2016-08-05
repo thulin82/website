@@ -266,10 +266,10 @@ Enligt planen...
 
 Så här långt så ser databasmodellen inte särskilt avancerad ut. Det handlar om tabellerna `Rum` och `Rumkoppling`. Genom att läsa texten ovan så får vi fram följade struktur för tabellerna.
 
-~~~syntax=sql
+```sql
 Rum (#id, namn, beskrivning, grafik)
 Rumkoppling (#id, id_Rum1, id_Rum2, namn) 
-~~~
+```
 
 Varje Rum kan ha en eller flera Rumkopplingar. Varje Rumkoppling är länkat till 2 rum.
 
@@ -286,7 +286,7 @@ Använd ny PHPMyAdmin för att skapa tabellerna och lägga in rader som motsvara
 
 För min del resulterade tabellernas skapande i följande SQL-kod.
 
-~~~syntax=sql
+```sql
 CREATE TABLE `mos`.`Rum` (
 `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
 `namn` VARCHAR( 100 ) NOT NULL ,
@@ -300,7 +300,7 @@ CREATE TABLE `mos`.`Rumkoppling` (
 `id_Rum2` INT NOT NULL ,
 `namn` VARCHAR( 100 ) NOT NULL
 ) ENGINE = MYISAM
-~~~
+```
 
 
 ###Lägg in rum i tabellerna {#rum-tabell}
@@ -329,7 +329,7 @@ Lägg nu in dessa som rader i tabellen Rumkoppling. Så här blev innehållet i 
 
 Följande SQL-kod blev resultatet när jag lade in rummens kopplingar. Det gäller att ha koll på siffrorna så att rummen länkas rätt.
 
-~~~syntax=sql
+```sql
 INSERT INTO `mos`.`Rumkoppling` (
 `id` ,
 `id_Rum1` ,
@@ -345,7 +345,7 @@ NULL , '2', '3', 'Fortsätt stigen fram'
 ), (
 NULL , '3', '4', 'Gå in i grottan'
 );
-~~~
+```
 
 
 6. PHP-spelmotor {#spelmotor}
@@ -465,11 +465,11 @@ Bra, det gick använda samma kod som vi använde i förra övningen med kompis-s
 
 Då vidarutvecklar vi prototypen till att även visa rumkopplingarna. Den SQL-fråga vi behöver ställa är "Visa alla rumkopplingar som utgår från rummet med id = 1". I ren SQL kan de se ut så här.
 
-~~~syntax=sql
+```sql
 SELECT * 
 FROM `Rumkoppling` 
 WHERE id_Rum1 = 1
-~~~
+```
 
 Öppna upp PHPMyAdmin och pröva att ställa frågan. Så här ser det ut hos mig.
 
@@ -526,9 +526,9 @@ Blev det bra? Ja, bättre kod-struktur än innan. Däremot går det fortfarande 
 
 När vi skapade tabellen Rum så gjorde vi ett fält Grafik. Låt oss nu använda det fältet för att bestämma grafiken till spelet. Detta är ju än så länge hårdkodat in i filen `room.php` via följande kodrad.
 
-~~~syntax=html
+```html
 <embed type="image/svg+xml" src="img/bakgrund.svg" width="720" height="480" />
-~~~
+```
 
 Om vi istället sparar hela denna textrad i databasen så kan vi där bestämma vilken grafik som skall representera rummet. Låt oss pröva detta.
 
@@ -538,9 +538,9 @@ Lägg in en default-bakgrund i de andra rummen. Du kan använda följande bild o
 
 * <a href='http://www.student.bth.se/~mos/oophp/mom07/adventure06/img/no-where.svg'>http://www.student.bth.se/~mos/oophp/mom07/adventure06/img/no-where.svg</a>
 
-~~~syntax=html
+```html
 <embed type="image/svg+xml" src="img/no-where.svg" width="720" height="480" />
-~~~
+```
 
 
 ###Kommentar om att använda alternativ grafik {#alt-grafik}
@@ -554,9 +554,9 @@ Jag testade med en bild målad i Paint och den blev jättefin. Testa den här.
 
 Jag uppdaterade fältet grafik enligt följande.
 
-~~~syntax=html
+```html
 <img src="img/paint.jpg" />
-~~~
+```
 
 På samma sätt kan du använda egna foton som du tagit eller bilder som du hittat på nätet. Jag letade reda på en bild av en grotta, bara för att testa. Eftersom storleken på bilden är mindre än 720x480 så blir det lite konstigt. Jag använder en div med style för att försöka undvika problem med storleken.  Så här blev det.
 
@@ -565,9 +565,9 @@ På samma sätt kan du använda egna foton som du tagit eller bilder som du hitt
 
 Så här skrev jag i fältet grafik.
 
-~~~syntax=html
+```html
 <div style="background: url('img/cave.jpg') center center no-repeat; width: 720px; height: 480px;"> </div>
-~~~
+```
 
 Bilden är opensource enligt Wikimedia Commons.
 

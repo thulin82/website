@@ -198,7 +198,7 @@ Ok? Då sätter vi igång. Börja med att byt ut "Titel" och "Någon inledande t
 
 I ursprungskoden så var detta stycke kodat enligt:
 
-~~~syntax=php
+```php
 // -----------------------------------------------------------------------
 //
 // Error handling on/off
@@ -206,7 +206,7 @@ I ursprungskoden så var detta stycke kodat enligt:
 error_reporting(E_ALL);
 $debug = "";
 $debugEnable = FALSE;
-~~~
+```
 
 Kopiera in ovanstående kod till din hangman och testkör det. Vi kan förvänta oss att få ett par felmeddelanden.
 
@@ -258,7 +258,7 @@ Följande övning förutsätter att du har koll på formulär i HTML. Läs på e
 
 Leta reda på den del av filen som skapar själva formuläret, lägg dit följande kodsnutt.
 
-~~~syntax=php
+```php
 // ------------------------------------------------------------------------
 //
 // Create a form for managing input.
@@ -269,7 +269,7 @@ $form = <<< EOD
  <button type='submit'>Gissa</button>
 </form>
 EOD;
-~~~
+```
 
 Detta är ett exempel på ett enkelt formulär. Ett inmatningsfält, en submit-knapp och filen `hangman.php` skall anropas när man klickar på submit-knappen.
 
@@ -289,13 +289,13 @@ Testa nu att din fil fungerar, inga felmeddelanden va? Pröva att skriv in lite 
 
 Vi testar att skriva ut innehållet i arrayen (på rätt ställe i filen).
 
-~~~syntax=php
+```php
 // -------------------------------------------------------------------------
 //
 // Take care of GET variables
 //
 print_r($_GET);
-~~~
+```
 
 Funktionen `print_r()` är bra att ha, den kan skriva ut innehållet i en array.
 
@@ -303,7 +303,7 @@ Funktionen `print_r()` är bra att ha, den kan skriva ut innehållet i en array.
 
 Ett vanligt sätt att hantera en `_GET`-parameter är att plocka ut dess värde och lägga i en vanlig variabel. För att undvika felmeddelanden av typen `NOTICE` så bör man dock alltid kolla så att `_GET`-parametern inte är tom. Det kan man göra med funktionen `empty()`. Följande kod visar ett vanligt sätt att göra detta.
 
-~~~syntax=php
+```php
 // -------------------------------------------------------------------------
 //
 // Take care of GET variables
@@ -311,7 +311,7 @@ Ett vanligt sätt att hantera en `_GET`-parameter är att plocka ut dess värde 
 //print_r($_GET);
 $char = (empty($_GET['char']) ? "" : $_GET['char']);
 $debug .= "char = {$char}<br />";
-~~~
+```
 
 Du kommer ihåg den här kort-varianten av `if`-sats, eller?
 
@@ -324,7 +324,7 @@ Lite klurig att komma igång med men väldigt nyttig.
 
 I ett formulär så kan man ha dolda fält, fält som innehåller värden men som inte syns på sidan. Dessa anges som typen `hidden`. Låt oss pröva att lägga till två dolda fält i formuläret, ett som kan innehålla nuvarande ord och ett som kan innehålla alla tecken man gissat på.
 
-~~~syntax=php
+```php
 // -------------------------------------------------------------------------
 //
 // Create a form for managing input.
@@ -339,11 +339,11 @@ $form = <<< EOD
   </form>
 </div>
 EOD;
-~~~
+```
 
 Skapa också kod för att hantera `_GET`-parametrarna när de kommer in till skriptet.
 
-~~~syntax=php
+```php
 // -------------------------------------------------------------------------
 //
 // Take care of GET variables
@@ -355,7 +355,7 @@ $guessed = (empty($_GET['guessed']) ? "" : $_GET['guessed']);
 $debug .= "char = {$char}<br />";
 $debug .= "word = {$word}<br />";
 $debug .= "guessed = {$guessed}<br />";
-~~~
+```
 
 Testa och provkör, fungerar det? Gör submit och studera webb-länken. Ser du att något har lagts till i slutet av den? Det är på detta sättet som `_GET`-parametrarna skickas till skriptet. Så här ser länken ut hos mig:
 
@@ -387,11 +387,11 @@ En annan inbyggd variabel som är bra att ha är `_SERVER`. Den innehåller en h
 * <a href='http://www.w3.org/TR/html401/struct/text.html#h-9.3.4'>http://www.w3.org/TR/html401/struct/text.html#h-9.3.4</a>
 * <a href='http://php.net/manual/en/reserved.variables.server.php'>http://php.net/manual/en/reserved.variables.server.php</a>
 
-~~~syntax=php
+```php
 echo "<pre>";
 print_r($_SERVER);
 echo "</pre>";
-~~~
+```
 
 Som du ser så blir det en hel del spännande information som skrivs ut. Letar reda på parametern `PHP_SELF` och se vad det innehåller för värde.
 
@@ -399,7 +399,7 @@ Som du ser så blir det en hel del spännande information som skrivs ut. Letar r
 
 `PHP_SELF innehåller en "ren" länk till sidan, utan några parametrar. Låt oss använda den för att "starta om" spelet. Starta om men ett nytt ord och utan gissningar. Uppdatera ditt fomulär så att det ser ut ungefär som följande.
 
-~~~syntax=php
+```php
 // -------------------------------------------------------------------------
 //
 // Create a form for managing input.
@@ -415,7 +415,7 @@ $form = <<< EOD
   <a href='{$_SERVER['PHP_SELF']}'>Starta om</a>
 </div>
 EOD;
-~~~
+```
 Perfekt, då är vi klara med formuläret. Du kan se hur det fungerar hos mig.
 
 * <a href='http://www.student.bth.se/~mos/oophp/mom02/hangman3/hangman.php?word=programvaruteknik&guessed=ae&char=s'>http://www.student.bth.se/~mos/oophp/mom02/hangman3/hangman.php?word=programvaruteknik&guessed=ae&char=s</a>
@@ -440,7 +440,7 @@ Arrayer, är en kraftfull konstruktion i PHP, och mycket användbar. En styrka �
 
 Låt oss skapa en liten ordlista med 10 ord i en array.
 
-~~~syntax=php
+```php
 // --------------------------------------------------------------------------
 //
 // Create a wordlist and pick the word.
@@ -460,7 +460,7 @@ $words = Array(
 $theWord = $words[1];
 $debug .= "Ordlista: " . implode(', ', $words) . "<br />";
 $debug .= "Valt ord: '{$theWord}'<br />";
-~~~
+```
 
 Koden ovan skapar en ordlista med 10 ord och väljer ut ett ord, `$theWord`, som nuvarande ord.
 
@@ -484,13 +484,13 @@ Ofta vill man gå igenom alla element i en array och testa dem på något sätt.
 * <a href='http://php.net/manual/en/control-structures.foreach.php'>http://php.net/manual/en/control-structures.foreach.php</a>
 * <a href='http://php.net/manual/en/function.strlen.php'>http://php.net/manual/en/function.strlen.php</a>
 
-~~~syntax=php
+```php
 $debug .= "Ordens respektive längd: ";
 foreach($words as $w) {
   $debug .= "{$w} (" . strlen($w) . "), ";
 }
 $debug .= "<br />";
-~~~
+```
 
 
 ###4.3 Array-funktioner {#arrayfunc}
@@ -529,10 +529,10 @@ Jo, du plockar ut ett värde ur arrayen utan att ange ett index. GET-parametern 
 
 Vi använder den variant som tar 2 argument så att vi får ett slumptal som matchar antal ord i ordlistan. Jag väljer att använda funktion i samband med att jag tar emot GET-parametern.
 
-~~~syntax=php
+```php
 //$word = (empty($_GET['word']) ? "" : $_GET['word']);
 $word = (empty($_GET['word']) ? rand(0, 9) : $_GET['word']);
-~~~
+```
 
 Koden betyder att om GET-parametern word ej har ett värde, välj då ett slumpmässigt värde mellan 0 och 9.
 
@@ -588,7 +588,7 @@ Låt oss ta en kopia av klassen och spara i vår egen katalog. Gör så här.
 
 3. Testa så att det fungerar genom att skriva in följande kod i din hangman.php.
 
-~~~syntax=php
+```php
 //---------------------------------------------------------------------
 //
 // Create html for drawing the hanging man.
@@ -596,7 +596,7 @@ Låt oss ta en kopia av klassen och spara i vår egen katalog. Gör så här.
 require_once('CHangmanSVG.php');
 $hangman = new CHangmanSVG();
 $svgCode = $hangman->DrawPicture();
-~~~
+```
 
 Först inkluderas filen. Därefter skapas ett objekt av klassen `CHangmanSVG`. Därefter anropas metoden `DrawPicture()` och resultatet sparas i variabeln `$svgCode` (som sedan skrivs ut som en sträng).
 
@@ -608,11 +608,11 @@ Ta nu en liten stund och gå igenom filen `CHangmangSVG.php`. Där kan du se hur
 
 Pröva att lägga till någon av följande rader kod. Testa en rad i taget. Vad händer? Logiskt?
 
-~~~syntax=php
+```php
 $svgCode .= $hangman->DrawPartsOfPicture(9);
 $svgCode .= $hangman->DrawPartsOfPicture(5);
 $svgCode .= $hangman->DrawPartsOfPicture(2);
-~~~
+```
 
 Du borde få fram 3 nya bilder med olika delar av gubben uppritade. Tanken är att siffran skall spegla antalet misslyckade gissningar.
 
@@ -662,14 +662,14 @@ Bygg nu färdigt din egen variant av Hangman-spel. Tjuvkika på min implementati
 
 Som ett sista lilla bidrag så får du en variant av Hangman där jag sparat antalet gissningar och ritar ut bilden baserat på dem. Följande kodrader stoppade jag in på olika platser i filen. Du kan säkert se var.
 
-~~~syntax=php
+```php
 ...
 $guessed .= $char;
 ...
 $failed = strlen($guessed);
 ...
 $svgCode .= $hangman->DrawPartsOfPicture($failed);
-~~~
+```
 
 Och så här ser det ut när jag kör det.
 
@@ -730,6 +730,3 @@ Redovisning {#redovisning}
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

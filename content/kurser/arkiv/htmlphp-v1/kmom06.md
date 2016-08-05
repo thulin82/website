@@ -248,7 +248,7 @@ Allt styrs från filen `incl/blokket2/init.php`. Följ flödet i filen för att 
 
 Jag valde att skapa en tabell, Ads, med 4 kolumner.
 
-~~~syntax=sql
+```sql
 CREATE TABLE IF NOT EXISTS Ads
 (
   id INTEGER PRIMARY KEY NOT NULL UNIQUE, 
@@ -256,7 +256,7 @@ CREATE TABLE IF NOT EXISTS Ads
   description TEXT, 
   image TEXT
  );
-~~~
+```
  
 Känns det rimligt? Vi fortsätter så får vi se.
 
@@ -366,6 +366,3 @@ Redovisning {#redovisning}
 3. Skriv redovisningen på din me-sida. Skriv ett stycke (ca 15 meningar) om hur momentet funkade. Reflektera över svårigheter/problem/lösningar/resultatet, etc. Vad tycker du om databaser och SQLite? Hur gick guiden sqlite20 att genomföra? Hur gick det när du gjorde Blokket2? Lyckades du komma in i PHP och SQL-programmeringen? Är det svårt?
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-

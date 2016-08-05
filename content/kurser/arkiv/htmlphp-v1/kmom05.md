@@ -199,7 +199,7 @@ Nu vill vi läsa upp filens innehåll och visa den i textarean. Till det behövs
 
 En funktion likt följande, `getFileContents()`, kan lösa detta:
 
-~~~syntax=php
+```php
 function getFileContents($aFilename) {
   if(is_readable($aFilename)) {
         return file_get_contents($aFilename);
@@ -207,7 +207,7 @@ function getFileContents($aFilename) {
         return "Filen finns ej.";
   }
 }
-~~~
+```
 
 Jag lägger in funktionen i filen `src/common.php`. 
 
@@ -215,21 +215,21 @@ Funktionen anropas från filen `incl/style/edit_stylesheet.php`. Filnamnet skick
 
 Det behövs en extra säkerhetskoll på filnamnet. Följande kod löser det. Innan vi accepterar  sökvägen till filen så kontrollerar vi att den valda filen verkligen finns i arrayen som returneras från `readDirectory()`. Det löser säkerhetsproblematiken då vi definerar att endast befintliga filer i en specifik katalog kan visas. 
 
-~~~syntax=php
+```php
 $filename = null;
 if(isset($_POST['stylesheet']) && in_array($_POST['stylesheet'], $stylesheets))
 {
   $filename = $pathToStyles . $_POST['stylesheet'];
 }
-~~~
+```
 
 Stylesheetens innehåll hämtas sedan med följande anrop.
 
-~~~syntax=php
+```php
 <textarea>
 <?php if($filename) echo getFileContents($filename); ?>
 </textarea>
-~~~
+```
 
 * Se hur steg två fungerar via följande länk.  
   <a href='http://dbwebb.se/htmlphp/me/kmom05/style.php?p=edit-stylesheet2'>http://dbwebb.se/htmlphp/me/kmom05/style.php?p=edit-stylesheet2</a>
@@ -251,11 +251,11 @@ Jag väljer att göra ett "self-submitting" formulär, ett formulär som submitt
 
 `incl/style/edit_stylesheet3.php`:
 
-~~~syntax=php
+```php
 if(isset($_POST['doSave'])) {
   $resFromSave = putFileContents($filename, strip_tags($_POST['styleContent']));
 }
-~~~
+```
 
 Denna kod kontrollerar om submit-knappen med namnet "doSave" är tryckt (har ett värde), isåfall sparas filen med hjälp av funktionen `putFileContents()`. Funktionen tar filnamnet och innehållet i textarean som argument. Dessutom använder vi `strip_tags()` för att ta bort alla HTML-element och undviker därmed att någon lägger in JavaScript i vår stylesheet. Allt för säkerheten.
 
@@ -263,7 +263,7 @@ Funktionen `putFileContents()` lägger jag i filen `src/common.php`. Funktionen 
 
 `src/common.php`:
 
-~~~syntax=php
+```php
 function putFileContents($aFilename, $aContent) {
   if(is_writable($aFilename)) {
         file_put_contents($aFilename, $aContent);
@@ -272,17 +272,17 @@ function putFileContents($aFilename, $aContent) {
         return "Filen är inte skrivbar och kunde inte sparas.";
   }
 }
-~~~
+```
 
 Funktionen returnerar en sträng som säger om det gick bra att spara, detta meddelande skriver jag ut för att ge användaren feedback.
 
 `incl/style/edit_stylesheet3.php`:
 
-~~~syntax=php
+```php
 <?php if(isset($resFromSave)): ?>
 <p><output class="success"><?php echo $resFromSave ?></output></p>
 <?php endif; ?>
-~~~
+```
 
 * Så här ser det ut för mig.  
   <a href='http://dbwebb.se/htmlphp/me/kmom05/style.php?p=edit-stylesheet3'>http://dbwebb.se/htmlphp/me/kmom05/style.php?p=edit-stylesheet3</a>
@@ -386,11 +386,11 @@ Som du kan se så tillåter jag vissa HTML-element i annonstexten. Detta sker ge
 
 Se följande kod.
 
-~~~syntax=php
+```php
 if(isset($_POST['doSave'])) {
   $res = putFileContents($filename, strip_tags($_POST['content'], "<b><i><p><img>"));
 }
-~~~
+```
 
 För min del så har jag valt att tillåta HTML-elementen `<p><b><i><img>`. Du kan se exempel på användningen av HTML-elementen i mina annonser.
 
@@ -404,7 +404,7 @@ Vi jobbar med filer så operationen att lägga till en ny annons innebär att sk
 Själva PHP-koden för att skapa filen följer. 
 
 
-~~~syntax=php
+```php
 if(isset($_POST['doCreate'])) {
   $filename = $path . basename(trim(strip_tags($_POST['filename'])));
   if(empty($_POST['filename']))
@@ -422,7 +422,7 @@ if(isset($_POST['doCreate'])) {
         $files = readDirectory($path);
   }
 }
-~~~
+```
 
 * Så här blev det för mig.  
   <a href='http://dbwebb.se/htmlphp/me/kmom05/blokket.php?p=create'>http://dbwebb.se/htmlphp/me/kmom05/blokket.php?p=create</a>
@@ -440,7 +440,7 @@ Det är enkla sätt att undvika uppenbara säkerhetshål. Det är alltid viktigt
 
 Funktionen för att ta bort en fil från disk heter `unlink()`. Använd den för att införa funktionen att ta bort en annons. PHP-koden för att utföra detta följer.
 
-~~~syntax=php
+```php
 if(isset($_POST['doDelete'])) {
   if(isset($_POST['file']) && in_array($_POST['file'], $files))
   {
@@ -454,7 +454,7 @@ if(isset($_POST['doDelete'])) {
         $res = "Filen finns ej och kunde inte raderas.";
   }
 }
-~~~
+```
 
 * Så här blev det när jag integrerade koden i Blokket.  
   <a href='http://dbwebb.se/htmlphp/me/kmom05/blokket.php?p=delete'>http://dbwebb.se/htmlphp/me/kmom05/blokket.php?p=delete</a>
@@ -634,7 +634,3 @@ Redovisning {#redovisning}
 3. Skriv redovisningen på din me-sida. Skriv ett stycke (ca 15 meningar) om hur momentet funkade. Reflektera över svårigheter/problem/lösningar/resultatet, etc. Hur känns det med PHP-programmeringen, har du kommit in i det? Är det svårt? Vilka är dina tips till en ovan PHP-programmerare? Har du nytta av guiden php20?
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-
-

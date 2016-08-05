@@ -334,30 +334,30 @@ Objekt är en samling av namngivna värden som vanligen kallas "properties". Fö
 
 Här är ett exempel på ett objekt `myBall` som innehåller en bild på en boll och en placering av bollen på en tvådimensionell yta.
 
-~~~syntax=javascript
+```javascript
 var myBall = {};
 
 myBall.image = 'http://dbwebb.se/img/black_ball_64_64.png';
 myBall.position = {x:10, y:10}
 
 console.log(myBall.position.x); // prints out 10
-~~~
+```
 
 Ett objekt innehåller alltså inga properties från början, de kan defineras under resans gång, det är både bra och dåligt. Smidigt att inte behöva ha en spec på objektet utan att det går att modifiera dynamiskt under körningen, inte så bra när man skriver fel på namnet på en property och tror att man läser en befintlig property men istället definerar man en ny.
 
 I nedan exempel har jag stavat fel på propertyn för `x`. Jag tror jag flyttar objektet till position 27 men det gör jag inte. Jag definerar en ny property med namnet `X`. Sådant kan vara lurigt att felsöka.
 
-~~~syntax=javascript
+```javascript
 myBall.position.X = 27; 
 
 console.log('The x-position of my ball is: ' + myBall.position.x);
-~~~
+```
 
 Läs om [mutable objekt på Wikipedia](http://en.wikipedia.org/wiki/Immutable_object).
 
 Nu när vi har ett enkelt objekt kan vi lägga till metoder till det, vad sägs om en metod `draw()` för att rita ut objektet på skärmen? Vi kallar det metoder när funktioner är kopplade till ett objekt.
 
-~~~syntax=javascript
+```javascript
 myBall.HTMLelement = document.getElementById('ball');
 
 myBall.draw = function () {
@@ -368,18 +368,18 @@ myBall.draw = function () {
 }
 
 myBall.draw();
-~~~
+```
 
 När man exekverar en funktion i ett objekt kan man använda [`this`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/this) för att referera till det objekt (eller funktion) som äger funktionen [^5] [^6].
 
 Låt oss lägga till en eventhanterare för klick på bollen och kolla vad som är `this` i en eventhanterare.
 
-~~~syntax=javascript
+```javascript
 myBall.HTMLelement.addEventListener('click', function (event) {
   console.log('Clicked on: ' + event.clientX + ' x ' + event.clientY);
   console.log(this);
 });
-~~~
+```
 
 Om du testkör ovanstående kod så kommer du att se att `this` pekar på `myball.HTMLelement`, alltså det objekt/funktion som är ägare till funktionen. Bra, då har vi koll på det. Vi måste dock vara lite uppmärksamma på vilket objekt som verkligen är `this` i olika sammanhang. Men här gick det bra.
 
@@ -412,7 +412,7 @@ Det finns inga [associativa arrayer](http://en.wikipedia.org/wiki/Associative_ar
 
 Du kan använda array-literalen för att skapa och jobba med arrayer på följande sätt.
 
-~~~syntax=javascript
+```javascript
 var notMuch = [];
 var course = ['htmlphp', 'oophp', 'phpmvc', 'javascript'];
 
@@ -429,7 +429,7 @@ console.log(course[9]);      // 'mobile'
 course.length = 4;
 console.log(course.length);  // 4
 console.log(course[9]);      // undefined
-~~~
+```
 
 Du kan utöka arrayen dynamisk genom att tilldela den fler element på vissa positioner, en position som inte fått ett värde tilldelat har värdet `undefined`. När du sätter längden på en array kan du trunkera den, som i exemplet ovan där det finns ett element på position 9 som försvinner när vi sätter arrayens längd till 4.
 

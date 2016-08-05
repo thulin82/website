@@ -179,7 +179,7 @@ Kopiera från föregående kursmoment så att du har en webbsida att jobba i. G�
 
 Skapa en ny fil som innehåller klassen för spelkortet, `CCard.php`. Vi måste nu välja hur vi skall bygga klassen för att representera kortet. Jag väljer att göra på följande sätt. Om du vill göra en alternativ lösning så är det helt ok.
 
-~~~syntax=php
+```php
 class CCard {  
   // --------------------------------------------------------------------
   //
@@ -191,7 +191,7 @@ class CCard {
   private $iFaceUpOrDown;   // 0 down, 1 up
   
 } // End of Class
-~~~
+```
 
 Tanken är att ovanstående variabler skall kunna representera de nödvändiga spelkorten och dessutom kunna säga om de ligger upp eller ned.
 
@@ -204,7 +204,7 @@ Vi skapar en konstruktor för att initiera objekt av klassen. Läs på om konstr
 
 Jag låter konstruktorn ta argument så att det går att bestämma vilket kort som skapas. Så här gör jag.
 
-~~~syntax=php
+```php
 class CCard {  
   /* Definition of member variables here */
   // -----------------------------------------------------------------
@@ -220,13 +220,13 @@ class CCard {
   }
   
 } // End of Class
-~~~
+```
 
 Som du ser så använder jag default-värden i argumenten som skickas till konstruktor. Det innebär att jag kan välja om jag vill skicka med argument eller inte.
 
 Låt oss skapa en destruktor. Den kommer inte att göra något men det är mer av hyfs och vett att deklarera den. Om man alltid deklarerar den så vet man vad den gör.
 
-~~~syntax=php
+```php
 class CCard {  
   /* Definition of member variables here */
   /* Definition of construktor goes here */
@@ -241,11 +241,11 @@ class CCard {
   }
   
 } // End of Class
-~~~
+```
 
 Låt oss skriva lite kod som skapar objekt av klassen. Gör detta i `card.php`. Följande kodsnutt bör fungera.
 
-~~~syntax=php
+```php
 // ----------------------------------------------------------------------
 //
 // Create and test the CCard-class
@@ -254,7 +254,7 @@ require_once('CCard.php');
 $c1 = new CCard();
 $c2 = new CCard('S', 13);
 $c3 = new CCard('S', 13, 1);
-~~~
+```
 
 Testkör, så länge inget felmeddelande visas så är det bra. Visst vore det intressant att se när konstruktorn och destruktorn anropas? Lägg till en `echo` i konstruktorn och en `echo` i destruktorn och kör igen. Du får säkert en varning "Warning: Cannot modify header information - headers already sent by" men det gör inget för tillfället. Du borde nu se, via dina utskrifter, när respektive konstruktor och destruktor anropas (se bild längre ned för exempel på utskrift).
 
@@ -320,7 +320,7 @@ En kortlek var det ja. Börja med att skapa testprogrammet `deck.php` och klasse
 
 Klassens interna representation av kortleken kan göras på många olika sätt. Jag väljer att göra en array och lagra alla korten i den. Dessutom skapar jag en konstant som innehåller antalet kort i leken.
 
-~~~syntax=php
+```php
 require_once("CCard.php");
 class CDeck {  
   // ------------------------------------------------------------------
@@ -345,7 +345,7 @@ class CDeck {
   /* Definition for destructor goes here */
     
 } // End of Class
-~~~
+```
 
 Destruktorn definerar jag tom (som i klassen `CCard`). Jag skapar även en metod `InitDeckWithCards()` vars syfte är att initiera arrayen med korten. Jag väljer att definera den utanför konstruktorn eftersom den är användbar även för andra metoder.
 
@@ -424,7 +424,7 @@ Fortsätt nu att göra ditt eget testprogram för sessioner. Kodexempel finner d
 
 Vi måste alltid anropa funktionen `session_start()` innan vi kan jobba med sessions-variabeln. Om vi lagrar objekt i sessions-variablen så måste även klassdefinitionen vara känd. Så här kan du göra.
 
-~~~syntax=php
+```php
 <?php
 // Include class definitions
 require_once('CCardHand.php');
@@ -433,14 +433,14 @@ require_once('CDeck.php');
 session_start();
 
 ?>
-~~~
+```
 
 
 ###4.3 Initiera en session {#initiera-session}
 
 Vi initierar en ny session och lagrar variabler i sessions-arrayen enligt följande.
 
-~~~syntax=php
+```php
 //
 // Initiating a session and storing an object in the session variable
 //
@@ -453,14 +453,14 @@ session_regenerate_id();  // To avoid problems
 $_SESSION['hand']   = new CCardHand();
 $_SESSION['deck']   = new CDeck();
 $_SESSION['rounds'] = 0;
-~~~
+```
 
 
 ###4.4 Avsluta en session {#avsluta-seesion}
 
 Att avsluta en session innebär att man förstör allt som har med sessionen att göra. Det kan ofta bli problem när man utvecklar med sessioner och glömmer att förstöra dem på rätt sätt.
 
-~~~syntax=php
+```php
 //
 // Destroy a session.
 //
@@ -475,7 +475,7 @@ if (isset($_COOKIE[session_name()])) {
 }
 // Finally, destroy the session.
 session_destroy();
-~~~
+```
 
 Det kan vara bra att lägga koden för att radera sessionen i en egen PHP-fil. Då går det enkelt att inkludera koden när den behövs.
 
@@ -563,7 +563,7 @@ Börja med att skapa testprogrammet `highlow.php` och klassen `CHighCardLowCard.
 
 Klassens interna representation av spelet kan som vanligt göras på ett antal olika sätt. Jag väljer att använda kortleken som finns samt att lagra alla plockade kort i en array.
 
-~~~syntax=php
+```php
 require_once("CDeck.php");
 require_once("CCardHand.php");
 
@@ -590,7 +590,7 @@ class CHighCardLowCard {
   /* Definition for destructor goes here */
   
 } // End of Class
-~~~
+```
 
 Destruktorn definerar jag tom (som i tidigare klasser). Uppdatera ditt testprogram och testa att initiera ett objekt av klassen.
 
@@ -619,7 +619,7 @@ Själva koden för att starta ett spel låter jag se som följer.
 
 **`CHighCardLowCard.php`**
 
-~~~syntax=php
+```php
   // -------------------------------------------------------------------
   //
   // Start the game.
@@ -631,7 +631,7 @@ Själva koden för att starta ett spel låter jag se som följer.
     $card->FlipCard();
     $this->iHand->AddCard($card);
   }
-~~~
+```
 
 Jag blandar leken och slänger alla kort jag har på handen. Därefter plockar jag ett kort och vänder upp det.
 
@@ -640,7 +640,7 @@ I mitt testprogram används denna koden varje gång som ett nytt spel initieras.
 
 **`highlow.php`**
 
-~~~syntax=php
+```php
 // -----------------------------------------------------------------------
 //
 // Take care of GET variables
@@ -665,7 +665,7 @@ switch($doGame) {
     $debug .= 'Current session id is: ' . session_id() . '<br />';
   }
   break;
-~~~
+```
 
 
 ###5.7 `CHighCardLowCard.php`: `ShowGameStatus()` {#gamestatus}
@@ -674,7 +674,7 @@ Här återanvänder jag helt enkelt koden från korthanden som skriver ut hela k
 
 **`CHighCardLowCard.php`**
 
-~~~syntax=php
+```php
   // ------------------------------------------------------------------
   //
   // Show HTML for the current game status.
@@ -683,14 +683,14 @@ Här återanvänder jag helt enkelt koden från korthanden som skriver ut hela k
   public function ShowGameStatus() {
     return $this->iHand->GetCardsAsBox();
   }
-~~~
+```
 
 Bra med återanvändning. Samma gäller för testprogrammet där jag igen återanvänder strukturen från testprogrammet med sessioner.
 
 **`highlow.php`**
 
 
-~~~syntax=php
+```php
 // ---------------------------------------------------------------------
 //
 // Test the CHighCardLowCard-class
@@ -708,7 +708,7 @@ if(isset($_SESSION['game'])) {
 </p>
 EOD;
 }       
-~~~
+```
 
  
 ###5.8 `CHighCardLowCard.php`: `GuessAndPickCard()` {#pick-card}
@@ -717,7 +717,7 @@ Till att börja med så kan vi se hur jag anropar metoden från testprogrammet. 
 
 **`highlow.php`**
 
-~~~syntax=php
+```php
 /* Parts of the switch-case */
   case 'high':
   case 'low':   
@@ -729,7 +729,7 @@ Till att börja med så kan vi se hur jag anropar metoden från testprogrammet. 
     $debug .= 'Made a guess.';
   }
   break;
-~~~
+```
 
 Nu över till själva implementationen av metoden. Kommer du ihåg beskrivningen av metoden?
 
@@ -741,7 +741,7 @@ Ok, Jag behöver då plocka ett nytt kort och jämföra det värdet på senaste 
 
 **`CHighCardLowCard.php`**
 
-~~~syntax=php
+```php
   // ---------------------------------------------------------------------
   //
   // Guess and pick a card. Check if card value is higher or lower.
@@ -772,7 +772,7 @@ Ok, Jag behöver då plocka ett nytt kort och jämföra det värdet på senaste 
     
     return $success;
   }
-~~~
+```
 
 Som du ser så behövde jag en metod som plockade fram värdet på korten (`GetValue()`). Jag valde att implementera den metoden i klassen för Spelkort.
 
@@ -816,6 +816,3 @@ Redovisning {#redovisning}
 4. Kopiera texten och lämna in den på redovisningen (ITs) tillsammans med en länk till din me-sida. Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller komplettera (komplettera -> gör om -> gör bättre). Betyget baseras på din redovisningstext samt att din me-sida fungerar.
 
 5. Ta ytterligare en kopia av redovisningstexten och gör ett inlägg i forumet. Visa upp vad du gjort och berätta att du är klar. Lämna en länk till din me-sida.
-
-
-
