@@ -187,6 +187,10 @@ site-build:
 	# Copy from CImage
 	install -d htdocs/cimage
 	rsync -av vendor/mos/cimage/webroot/imgd.php htdocs/cimage/imgd.php
+	rsync -av vendor/mos/cimage/webroot/imgp.php htdocs/cimage/imgp.php
+	rsync -av vendor/mos/cimage/webroot/imgs.php htdocs/cimage/imgs.php
+	rsync -av vendor/mos/cimage/webroot/imgf.php htdocs/cimage/imgf.php
+	rsync -av vendor/mos/cimage/webroot/img.php htdocs/cimage/img.php
 	rsync -av vendor/mos/cimage/icc/ htdocs/cimage/icc/
 	rsync -av vendor/mos/cimage/webroot/img/ htdocs/img/cimage/
 
