@@ -4,7 +4,7 @@ RewriteEngine on
 # tail -f error.log | fgrep '[rewrite:'
 
 # cimage
-RewriteRule ^/image/(.*)$ /cimage/imgd.php?src=$1 [QSA,NC,L]
+RewriteRule ^/image/(.*)$ /cimage/imgf.php?src=$1 [QSA,NC,L]
 
 # forum
 RewriteRule ^/t/([0-9]+)$ /forum/viewtopic.php?t=$1 [NE,R=301,L]
