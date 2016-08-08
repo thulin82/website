@@ -159,8 +159,8 @@ Redirect /kursadmin				/forum/viewtopic.php?f=30&t=110
 Redirect /upprop				/forum/viewtopic.php?f=30&t=126
 Redirect /redovisningstext		/blogg/att-skriva-en-bra-redovisningstext/
 Redirect /me-sida				/blogg/artikel/vad-ar-en-me-sida/
-Redirect /bedomning-och-betygsattning		/kurser/bedomning-och-betygsattning/
-Redirect /grading				/kurser/bedomning-och-betygsattning/
+Redirect /bedomning-och-betygsattning		/kurser/faq/bedomning-och-betygsattning/
+Redirect /grading				/kurser/faq/bedomning-och-betygsattning/
 Redirect /htmlphp/kursbeskrivning		http://edu.bth.se/utbildning/utb_kurs.asp?Kurskod=DV1401
 Redirect /oophp/kursbeskrivning			http://edu.bth.se/utbildning/utb_kurs.asp?Kurskod=DV1127
 Redirect /dbwebb1/kursbeskrivning		http://edu.bth.se/utbildning/utb_kurs.asp?Kurskod=DV1223
@@ -358,7 +358,7 @@ Redirect /htmlphp/dv1401			http://edu.bth.se/utbildning/utb_kurs.asp?Kurskod=DV1
 Redirect /htmlphp/overview			https://docs.google.com/Doc?docid=0ASJ-Zb8R9RVmZGhoN2pjaHBfMjA0Z3czdHhyZHQ&hl=en
 Redirect /htmlphp/schedule/vt11                 https://spreadsheets.google.com/ccc?key=0AiJ-Zb8R9RVmdDc0ZUhoTlA2eWtlLWx2MktwbkhzeEE&hl=en&output=html&gid=5
 Redirect /htmlphp/schedule			https://spreadsheets.google.com/ccc?key=0AiJ-Zb8R9RVmdDc0ZUhoTlA2eWtlLWx2MktwbkhzeEE&hl=en&output=html
-Redirect /htmlphp/grading			/kurser/bedomning-och-betygsattning
+Redirect /htmlphp/grading			/kurser/faq/bedomning-och-betygsattning
 Redirect /htmlphp/kmom01/instruction		https://docs.google.com/Doc?docid=0ASJ-Zb8R9RVmZGhoN2pjaHBfNDMzOXc1YjczZmI&hl=en
 Redirect /htmlphp/kmom02/instruction		https://docs.google.com/Doc?docid=0ASJ-Zb8R9RVmZGhoN2pjaHBfNDYxcXM4NGY1Z2g&hl=en
 Redirect /htmlphp/kmom03/instruction		https://docs.google.com/Doc?docid=0ASJ-Zb8R9RVmZGhoN2pjaHBfNDY1Y2JkbjhoY2Q&hl=en
