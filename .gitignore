@@ -1,4 +1,4 @@
 vendor/
-composer.lock
 theme/
 build/
+config/error_reporting.php_

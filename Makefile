@@ -106,7 +106,7 @@ local-publish-forum: local-cache-clear local-publish
 codebase-update:
 	@echo $(call HELPTEXT,$@)
 	git pull
-	composer update
+	composer install
 
 
 
