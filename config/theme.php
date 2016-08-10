@@ -105,7 +105,12 @@ return [
             "region" => "body-end",
             "template" => "default/google-analytics",
             "data" => [
-                "account" => UA-22093351-1,
+                "account" => defined("GOOGLE_ANALYTICS")
+                    ? GOOGLE_ANALYTICS
+                    : null,
+                "domain" => defined("GOOGLE_ANALYTICS")
+                    ? "auto"
+                    : "none",
             ],
             "sort" => -1
         ],
