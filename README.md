@@ -3,11 +3,9 @@ dbwebb.se website
 
 [![Join the chat at https://gitter.im/mosbth/dbwebb](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mosbth/dbwebb?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This is (to be) the main website for dbwebb.se.
+This is the main website for dbwebb.se, live at [https://dbwebb.se](https://dbwebb.se/).
 
-Work to merge content from [dbwebb.se](http://dbwebb.se) is ongoing.
-
-You can check a live version, so far, at [v2.dbwebb.se](http://v2.dbwebb.se).
+Work to merge content from older dbwebb, available at [cc1.dbwebb.se](http://cc1.dbwebb.se) is ongoing.
 
 
 
@@ -15,6 +13,8 @@ For developers and maintainers
 --------------------------------
 
 This is how I do it on Debian/Linux.
+
+Inspect the Makefile to find out whats actually happens.
 
 
 
@@ -31,7 +31,13 @@ $ make virtual-host
 $ make update
 ```
 
-Now open your browser at `local.v2.dbwebb.se` and browse the website.
+Now open your browser at `local.dbwebb.se` and browse the website.
+
+If you need to upgrade your existing installation you can just redo it all.
+
+```
+$ make create-local-structure etc-hosts virtual-host update
+```
 
 
 
