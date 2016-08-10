@@ -33,7 +33,7 @@ Läs följande:
 
 Detta är kursens huvudbok, Läs den.
 
-1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
 
     * Ch1 Why should you learn to write programs?
     * Ch2 Variables, expressions and statements

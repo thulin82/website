@@ -50,12 +50,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
     * Ch12 Networked programs
     * Ch13 Using Web Services
-    * Ch14 Using databases and Structured Query Language (SQL)
-    * Ch16 Automating common tasks on your computer
-
+    * Ch15 Using databases and SQL  
+    
 
 
 ###Artiklar {#artiklar}
