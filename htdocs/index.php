@@ -19,7 +19,6 @@ $app = new \Anax\App\CAnaxDefault($di);
 call_user_func(function () use ($app) {
     $phpbb = new \Anax\AddOn\PHPBB\CInterface();
     $data = $phpbb->getSessionDetails(__DIR__ . "/forum/");
-
     $app->views->add("default/profile-phpbb", $data, "profile");
 });
 
