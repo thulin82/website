@@ -144,7 +144,7 @@ Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal art
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[Python for Everybody - Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-in-python3)** -- Charles R Severance  
+* **[Python for Everybody - Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)** -- Charles R Severance  
   En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
 
 * **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
