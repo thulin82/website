@@ -133,7 +133,7 @@ $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 echo "<pre>", print_r($res, true), "</pre>";
 ```
 
-Du kan [testköra ovanstående exempelkod på dbwebb](htmlphp/repo/example/pdo-sqlite/connect.php). Det bör se ut ungefär så här.
+Du kan [testköra ovanstående exempelkod på dbwebb](/repo/htmlphp/example/pdo-sqlite/connect.php). Det bör se ut ungefär så här.
 
 [FIGURE src=/image/snapvt15/pdo20-connect.png?w=w2 capition="Utskrift av resultatet från databasfrågan."]
 
@@ -250,7 +250,7 @@ $rows
 EOD;
 ```
 
-Du kan [testa skriptet i sin helhet på dbwebb](htmlphp/repo/example/pdo-sqlite/select-table.php) och du kan se dess [källkod på GitHub](https://github.com/mosbth/htmlphp/tree/master/example/pdo-sqlite/select-table.php).
+Du kan [testa skriptet i sin helhet på dbwebb](/repo/htmlphp/example/pdo-sqlite/select-table.php) och du kan se dess [källkod på GitHub](https://github.com/mosbth/htmlphp/tree/master/example/pdo-sqlite/select-table.php).
 
 Ta nu och gör ett likadant skript i din egen miljö. Kika på mitt skript och skriv av det. Det är en bättre taktik att lära sig, än att bara råkopiera skriptet. För mycket råkopiering straffar sig i längden.
 
@@ -389,7 +389,7 @@ Låt oss skapa ett testskript som har till uppgift att skapa tabellen och lägga
 
 [FIGURE src=/image/snapvt15/pdo-init.png?w=w2 caption="Initiera en databas genom att skapa tabellen och lägga till innehåll via SQL."]
 
-Du kan [testköra mitt skript på dbwebb](htmlphp/repo/example/pdo-sqlite/init.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/init.php).
+Du kan [testköra mitt skript på dbwebb](/repo/htmlphp/example/pdo-sqlite/init.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/init.php).
 
 Om du kikar på källkoden i skriptet så ser du att jag börjar med att göra DROP på tabellen, om den finns. Jag vill alltid starta med en tom tabell i detta fallet.
 
@@ -473,7 +473,7 @@ Sedan resultatsidan som visar att allt gick bra.
 
 [FIGURE src=/image/snapvt15/pdo-insert-success.png?w=w2 caption="Processingsidan visar att allt gick bra."]
 
-Du kan [testköra mitt skript på dbwebb](htmlphp/repo/example/pdo-sqlite/insert.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/insert.php).
+Du kan [testköra mitt skript på dbwebb](/repo/htmlphp/example/pdo-sqlite/insert.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/insert.php).
 
 Låt oss titta på koden som skiljer sig från tidigare exempel.
 
@@ -612,7 +612,7 @@ Så här blev det för mig.
 
 [FIGURE src=/image/snapvt15/pdo-update-save.png?w=w2 caption="Det gick bra att spara till databasen."]
 
-Du kan [testköra mitt skript på dbwebb](htmlphp/repo/example/pdo-sqlite/update.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/update.php).
+Du kan [testköra mitt skript på dbwebb](/repo/htmlphp/example/pdo-sqlite/update.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/update.php).
 
 Så vad skiljer från tidigare skript?
 
@@ -712,7 +712,7 @@ Så här blev det för mig.
 
 [FIGURE src=/image/snapvt15/pdo-delete-done.png?w=w2 caption="Det gick bra att radera raden från databasen."]
 
-Du kan [testköra mitt skript på dbwebb](htmlphp/repo/example/pdo-sqlite/delete.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/delete.php).
+Du kan [testköra mitt skript på dbwebb](/repo/htmlphp/example/pdo-sqlite/delete.php) och du kan [se källkoden på GitHub](https://github.com/mosbth/htmlphp/blob/master/example/pdo-sqlite/delete.php).
 
 Så vad skiljer från tidigare skript?
 
@@ -797,7 +797,3 @@ De manualer du har mest nytta av, i längden, är [PHP manualen för PDO](http:/
 Fråga gärna i forumet, det finns en [egen tråd om denna artikel](t/4314).
 
 Tänk på att nästa databas du lär dig, till exempel MySQL, också använder sig av PDO. Det blir då enkelt att komma in i hur det skall fungera, eftersom du nu kan grunderna i PHP PDO och i SQL. Att använda ett gemensamt gränsnitt likt PHP PDO kan ha sina fördelar.
-
-
-
-

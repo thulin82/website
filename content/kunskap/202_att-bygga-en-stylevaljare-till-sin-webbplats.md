@@ -30,7 +30,7 @@ Exempelkoden bygger på en multisida, det står om multisida i artikeln "[Bygg e
 Exempel på en styleväljare {#exempel}
 --------------------------------------
 
-I kursrepot finns ett [exempel på en styleväljare](https://github.com/mosbth/htmlphp/tree/master/example/stylechooser). Du kan testa det i [kursrepot på dbwebb](htmlphp/repo/example/stylechooser).
+I kursrepot finns ett [exempel på en styleväljare](https://github.com/mosbth/htmlphp/tree/master/example/stylechooser). Du kan testa det i [kursrepot på dbwebb](/repo/htmlphp/example/stylechooser).
 
 Låt nu se hur denna stylesheetväljare är uppbyggd.
 
@@ -108,7 +108,7 @@ Om du lägger koden i en sida kan det se ut så här (ungefär).
 
 [FIGURE src=/image/snapvt15/session-raknare.png?w=w2 caption="En räknare i sessionen som ökar med ett för varje gång sidan laddas om."]
 
-Här är ett [exempel där du kan testa koden](htmlphp/repo/example/session). Ladda om sida och se om räknaren ökas på med ett för varje omladdning.
+Här är ett [exempel där du kan testa koden](/repo/htmlphp/example/session). Ladda om sida och se om räknaren ökas på med ett för varje omladdning.
 
 
 
@@ -168,7 +168,7 @@ För tillfället räcker det att du inser att denna möjligheten till felsöknin
 Exempelprogram med sessionen {#session-exempel}
 ----------------------------------------------------------------
 
-I kursrepot för htmlphp finns exempelprogram för sessionen. Här kan du se dess [källkod](https://github.com/mosbth/htmlphp/tree/master/example/session) och här kan du [testa dem](htmlphp/repo/example/session/).
+I kursrepot för htmlphp finns exempelprogram för sessionen. Här kan du se dess [källkod](https://github.com/mosbth/htmlphp/tree/master/example/session) och här kan du [testa dem](/repo/htmlphp/example/session/).
 
 Testa, studera källkoden. Se hur det är uppbyggt och fungerar.
 
@@ -189,7 +189,7 @@ Sedan gör jag en multisida, men följande menyval.
 * Länkar som via `$_GET` kan byta stylesheet, till exempel `?style=XXX`.
 * Ett formulär, med en dropdown, för att byta stylesheet.
 
-Exempel i sin helhet kan [testas på dbwebb](htmlphp/repo/example/stylechooser) och [källkoden beskådas på GitHub](https://github.com/mosbth/htmlphp/tree/master/example/stylechooser).
+Exempel i sin helhet kan [testas på dbwebb](/repo/htmlphp/example/stylechooser) och [källkoden beskådas på GitHub](https://github.com/mosbth/htmlphp/tree/master/example/stylechooser).
 
 Ta och testa det exemplet så du vet hur det fungerar.
 
@@ -447,7 +447,3 @@ Det var grunderna i sessioner och vi såg hur vi kunde skapa en styleväljare ge
 Dessutom fick du prova på formulär med både GET och POST samt se hur en processingsida kan förbättra hanteringen av ett postat formulär.
 
 Om du stöter på problem så kan du alltid [fråga i forumet](forum).
-
-
-
-

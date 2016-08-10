@@ -133,7 +133,7 @@ clear: both;
 
 Att flyta element är ett enkelt sätt att delvis påverka layouten på de element som ritas ut, *renderas*, i webbläsaren.
 
-I ditt kursrepo har du ett exempelprogram som visar [hur float ser ut](htmlphp/repo/example/float/float.html) och du kan se den [defekten som kan lösas med en `clear`](htmlphp/repo/example/float/float-clear.html).
+I ditt kursrepo har du ett exempelprogram som visar [hur float ser ut](/repo/htmlphp/example/float/float.html) och du kan se den [defekten som kan lösas med en `clear`](/repo/htmlphp/example/float/float-clear.html).
 
 Se när jag testar exemplet.
 
@@ -150,7 +150,7 @@ Den "defekt" som du såg i *clear float*, det finns en liknande som kan se ungef
 
 Behovet av en sådan clearfix är för att flytande element inte påverkar den omslutande kontainerns höjd. Den omslutande kontainern/elementet, som innehåller det flytande elementet, har alltså ingen koll på hur högt det det är. 
 
-För att visa vad jag menar så finns det ett exempelprogram i ditt kursrepo, `example/clearfix`, du kan [testköra det här utan fixen](htmlphp/repo/example/clearfix/clear-no.html) och [här med fixen](htmlphp/repo/example/clearfix/clear.html).
+För att visa vad jag menar så finns det ett exempelprogram i ditt kursrepo, `example/clearfix`, du kan [testköra det här utan fixen](/repo/htmlphp/example/clearfix/clear-no.html) och [här med fixen](/repo/htmlphp/example/clearfix/clear.html).
 
 Min fix är att använda CSS-konstruktionen `overflow: auto` för att tvinga en omritning av elementet så att det lär känna sin rätta höjd.
 
@@ -236,7 +236,7 @@ div {
 
 En `outline` är en ram som inte påverkar layouten hos omgivande dokument, den tar inte upp någon plats, men syns likväl.
 
-Du kan själv [testköra exemplet](htmlphp/repo/example/css-layout/boxmodel.html) som finns i ditt kursrepo. 
+Du kan själv [testköra exemplet](/repo/htmlphp/example/css-layout/boxmodel.html) som finns i ditt kursrepo. 
 
 Så här ser det ut när jag testkör exemplet.
 
@@ -257,7 +257,7 @@ Som du märker så använder jag olika sätt att ange färger. Mestadels är det
 
 Du kan också ange färger enligt andra färgmodeller såsom HSL och RGB. Vill du ha hjälp att välja färger så kan du använda en färgväljare som hjälper dig komponera färger och visar dess färgkoder.
 
-Här är ett [exempel på en färgväljare](htmlphp/repo/example/colors/colorpicker.html). 
+Här är ett [exempel på en färgväljare](/repo/htmlphp/example/colors/colorpicker.html). 
 
 [FIGURE src=/image/snapvt15/colorpicker.png?w=w2 caption="En färgväljare hjälper dig att välja och jämföra färger."]
 
@@ -268,7 +268,7 @@ Färgerna kan även ha inslag av alpha-kanalen, så att de uppfattas som delvis 
 CSS3 för fler möjligheter till formgivning {#css3}
 --------------------------------------
 
-Utvecklingen med CSS3 har givit oss fler möjligheter att styla våra webbsidor. För att ta ett par enkla exempel så rör det sig om [runda hörn](htmlphp/repo/example/css3/border-radius.html), [skuggade element](htmlphp/repo/example/css3/box-shadow.html), [gradient](htmlphp/repo/example/css3/linear-gradient.html) och [genomskinliga färger](htmlphp/repo/example/css3/opacity.html).
+Utvecklingen med CSS3 har givit oss fler möjligheter att styla våra webbsidor. För att ta ett par enkla exempel så rör det sig om [runda hörn](/repo/htmlphp/example/css3/border-radius.html), [skuggade element](/repo/htmlphp/example/css3/box-shadow.html), [gradient](/repo/htmlphp/example/css3/linear-gradient.html) och [genomskinliga färger](/repo/htmlphp/example/css3/opacity.html).
 
 Webbläsarna har allt bättre stöd för CSS3, men vill man vara riktigt säker så bör man alltid kolla upp konstruktionen. Webbplatsen Can I Use hjälper dig att kolla om en viss konstruktion stöds i en viss webbläsare. Sök på [gradient på Can i Use](http://caniuse.com/#search=gradients) för att se hur bra stödet är i de olika webbläsarna.
 
@@ -362,7 +362,7 @@ Lägger vi nu till CSS-kod så kan vi styla klassen för att ge just detta menyv
 
 Vi har precis börjat lära oss PHP, men att styla nuvarande sidas menyval vill vi ändå göra. Principen är att använda PHP för att hitta länken till nuvarande sida, ta ut den delen som visar vilken sida det är, det vill säga filens namn. Namnet på filen vill vi jämföra mot tänkt menyval och om det matchar så skriver vi ut klassen för *selected*.
 
-För att göra en lång historia kortare, så finns det ett [exempelprogram som visar på delarna i lösningen](htmlphp/repo/example/navbar/me.php). Med stöd av det exempelprogrammet så kan du uppdatera din egen meny för att visa nuvarande sida.
+För att göra en lång historia kortare, så finns det ett [exempelprogram som visar på delarna i lösningen](/repo/htmlphp/example/navbar/me.php). Med stöd av det exempelprogrammet så kan du uppdatera din egen meny för att visa nuvarande sida.
 
 Resultatet blir att följande kod används, för varje menyval.
 
@@ -513,7 +513,7 @@ När jag testade webbplatsen på en läsplatta iPad mini så visades webbplatsen
 
 Att göra bra responsiv design är ett eget kapitel för en kurs, eller kursmoment, så vi nöjer oss med att se hur grundtekniken fungerar.
 
-I kursrepot finns ett [exempelprogram som visar hur den resonsiva layouten fungerar](htmlphp/repo/example/responsive/responsive.html). Pröva det exempelprogrammet och gör webbläsaren mindre eller större för att ändra utseendet (bakgrundsfärgen blir gul).
+I kursrepot finns ett [exempelprogram som visar hur den resonsiva layouten fungerar](/repo/htmlphp/example/responsive/responsive.html). Pröva det exempelprogrammet och gör webbläsaren mindre eller större för att ändra utseendet (bakgrundsfärgen blir gul).
 
 
 
@@ -547,10 +547,6 @@ Avslutningsvis {#avslutning}
 
 Nu är du redo att själv uppgradera din me-sida till en version 2, med samma features som jag använt.
 
-Exempelkoden finns i [kursrepot för htmlphp-kursen](https://github.com/mosbth/htmlphp/tree/master/example) och kan provköras på [dbwebb.se/htmlphp/repo/example/me](htmlphp/repo/example).
+Exempelkoden finns i [kursrepot för htmlphp-kursen](https://github.com/mosbth/htmlphp/tree/master/example) och kan provköras på [dbwebb.se/repo/htmlphp/example/me](/repo/htmlphp/example).
 
 Om du stöter på problem så kan du alltid [fråga i forumet](forum).
-
-
-
-

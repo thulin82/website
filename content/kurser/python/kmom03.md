@@ -30,7 +30,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Python for Informatics: Exploring information](kunskap/boken-python-for-informatics-exploring-information) 
+1. [Python for Everybody: Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3) 
     * Ch6 Strings
     * Ch7 Files
 

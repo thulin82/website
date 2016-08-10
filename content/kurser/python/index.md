@@ -144,7 +144,7 @@ Som kurslitteratur har jag valt följande böcker, tillsammans med ett antal art
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[Python for Informatics - Exploring information](kunskap/boken-python-for-informatics-exploring-information)** -- Charles R Severance  
+* **[Python for Everybody - Exploring data in Python3](kunskap/boken-python-for-everybody-exploring-data-using-python3)** -- Charles R Severance  
   En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i Python.
 
 * **[Think Python - How to Think Like a Computer Scientist](kunskap/boken-think-python-how-to-think-like-a-computer-scientist)** -- Allen B. Downey  
@@ -170,14 +170,14 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Python for Informatics | Think Python       | 
+| Kursmoment | Python for Everybody   | Think Python       | 
 |------------|------------------------|--------------------|
 | Kmom01     | Ch 1, 2                | Ch 1, 2            |
 | Kmom02     | Ch 3, 4, 5             | Ch 3, 5, 6, 7      |
 | Kmom03     | Ch 6, 7                | App A, Ch 8, 9, 14 | 
 | Kmom04     | Ch 8                   | Ch 10              |
 | Kmom05     | Ch 9, 10               | Ch 11, 12, 13      | 
-| Kmom06     | Ch 12, 13, 14, 16      |                    | 
+| Kmom06     | Ch 12, 13, 15          |                    | 
 | Kmom10     |                        |                    |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
