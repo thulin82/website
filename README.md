@@ -65,6 +65,22 @@ $ make local-publish-clear
 
 
 
+###Install all submodules
+
+Some content is available in external submodules. To install them, where you have the properties to do so, do like this.
+
+```
+$ make submodule-init local-publish
+```
+
+To keep updated, including all submodules.
+
+```
+$ make update-all
+```
+
+
+
 ###Help me
 
 * [Install YAML on Debian/Linux](http://dbwebb.se/t/5244).
