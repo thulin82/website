@@ -106,7 +106,7 @@ local-publish-forum: local-cache-clear local-publish
 codebase-update:
 	@echo $(call HELPTEXT,$@)
 	git pull
-	composer update
+	composer install
 
 
 
@@ -200,7 +200,7 @@ site-build:
 
 	# Make cache parts writable
 	install --directory --mode 777 cache/cimage cache/anax cache/forum
-	ln -sf ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache
+	if [ -d  $(LOCAL_HTDOCS)/htdocs/forum ]; then ln -sf ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache; fi
 	rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
 
 	# Sync to virtual host dir
