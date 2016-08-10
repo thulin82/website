@@ -10,6 +10,9 @@
 [submodule "htdocs/repo/htmlphp"]
 	path = htdocs/repo/htmlphp
 	url = https://github.com/dbwebb-se/htmlphp.git
+[submodule "htdocs/repo/oophp"]
+	path = htdocs/repo/oophp
+	url = https://github.com/dbwebb-se/oophp.git
 [submodule "htdocs/repo/python"]
 	path = htdocs/repo/python
 	url = https://github.com/dbwebb-se/python.git
@@ -22,15 +25,12 @@
 [submodule "htdocs/repo/webapp"]
 	path = htdocs/repo/webapp
 	url = https://github.com/dbwebb-se/webapp.git
-[submodule "htdocs/repo/oopython"]
-	path = htdocs/repo/oopython
-	url = https://github.com/dbwebb-se/oopython.git
-[submodule "htdocs/repo/oophp"]
-	path = htdocs/repo/oophp
-	url = https://github.com/dbwebb-se/oophp.git
-[submodule "htdocs/repo/phpmvc"]
-	path = htdocs/repo/phpmvc
-	url = https://github.com/dbwebb-se/phpmvc.git
 [submodule "htdocs/repo/webgl"]
 	path = htdocs/repo/webgl
 	url = https://github.com/dbwebb-se/webgl.git
+[submodule "htdocs/repo/phpmvc"]
+	path = htdocs/repo/phpmvc
+	url = https://github.com/dbwebb-se/phpmvc.git
+[submodule "htdocs/repo/oopython"]
+	path = htdocs/repo/oopython
+	url = https://github.com/dbwebb-se/oopython.git
