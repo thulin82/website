@@ -26,7 +26,7 @@ define("CIMAGE_BUNDLE", true);
  */
 $config = array(
 
-    'mode'         => 'development',               // 'production', 'development', 'strict'
+    //'mode'         => 'production',               // 'production', 'development', 'strict'
     //'image_path'   =>  __DIR__ . '/img/',
     //'cache_path'   =>  __DIR__ . '/../cache/',
     //'alias_path'   =>  __DIR__ . '/img/alias/',
