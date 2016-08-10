@@ -4,7 +4,7 @@
  * The variable $this is here related to $di.
  */
 
-if (!defined("ANAX_PRODUCTION")) {
+if (!defined("DBWEBB_PRODUCTION")) {
     return [
         "urlType"       => self::URL_CLEAN,
     ];
