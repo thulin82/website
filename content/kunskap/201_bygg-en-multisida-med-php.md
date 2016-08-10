@@ -29,7 +29,7 @@ Du har en me-sida liknande den från artikeln [Skapa en webbsida med HTML, CSS o
 Exempel på en multisida {#exempel}
 --------------------------------------
 
-I kursrepot finns ett [exempel på en multisida](https://github.com/mosbth/htmlphp/tree/master/example/multipage). Du kan testa det i [kursrepot på dbwebb](htmlphp/repo/example/multipage).
+I kursrepot finns ett [exempel på en multisida](https://github.com/mosbth/htmlphp/tree/master/example/multipage). Du kan testa det i [kursrepot på dbwebb](/repo/htmlphp/example/multipage).
 
 Låt nu se hur denna multisida är uppbyggd.
 
@@ -358,7 +358,3 @@ Avslutningsvis {#avslutning}
 Det var lite behändiga konstruktioner i PHP som ger dig en smidig struktur för undersidor som har sina egna menyer. En multisida passar bra för sidor som har ett innehåll som hänger ihop.
 
 Om du stöter på problem så kan du alltid [fråga i forumet](forum).
-
-
-
-

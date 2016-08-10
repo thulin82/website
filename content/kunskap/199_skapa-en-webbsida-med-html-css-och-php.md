@@ -521,10 +521,6 @@ Avslutningsvis {#avslutning}
 
 Nu har du kommit igång och du har grunden till en me-sida. En bra start!
 
-Exempelkoden finns i [kursrepot för htmlphp-kursen](https://github.com/mosbth/htmlphp/tree/master/example/me) och kan provköras på [dbwebb.se/htmlphp/repo/example/me](htmlphp/repo/example/me).
+Exempelkoden finns i [kursrepot för htmlphp-kursen](https://github.com/mosbth/htmlphp/tree/master/example/me) och kan provköras på [dbwebb.se/repo/htmlphp/example/me](/repo/htmlphp/example/me).
 
 Om du stöter på problem så kan du alltid [fråga direkt i kursens forum](forum/utbildning/htmlphp).
-
-
-
-

@@ -18,7 +18,7 @@ Dessutom gör du en labb för att komma igång med funktioner i PHP. Allt efters
 
 [YOUTUBE src=kSlrZk9RoNk width=630 caption="En styleväljare på Mikaels me-sida."]
 
-Här kan du testa exemplet som ligger till grund för resultatet, du hittar det i [kursrepot på dbwebb](htmlphp/repo/example/stylechooser).
+Här kan du testa exemplet som ligger till grund för resultatet, du hittar det i [kursrepot på dbwebb](/repo/htmlphp/example/stylechooser).
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -114,7 +114,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur lyckades du med din styleväljare, var det svårt? Det var ju både formulär, sessioner, POST, GET och lite till, hur kändes det? 
 * Hur tänkte du när du gjorde din extra stylesheet och vad tycker du om resultatet?
 * Hur går det med ditt PHP:ande? Börjar det bli mycket/svår kod, eller går det finfint?
-
-
-
-

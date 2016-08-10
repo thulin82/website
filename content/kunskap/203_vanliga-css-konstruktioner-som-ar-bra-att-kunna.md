@@ -302,7 +302,7 @@ Om du är intresserad av [HSL så kan du läsa mer på Wikipedia](http://en.wiki
 
 ###Hjälpmedel för att kombinera färger på en webbplats {#hjalpmedel-farger}
 
-Det finns många tips och trix om hur man kan färglägga en webbplats. Det är en vetenskap i sig. Ett av de verktyg jag fastnat för är en applikation där jag kan [välja färger enligt både hsl och rgb](htmlphp/repo/example/colors/colorpicker.html). Ett liknande verktyg är bra att ha i en webbprogrammerares verktygslåda.
+Det finns många tips och trix om hur man kan färglägga en webbplats. Det är en vetenskap i sig. Ett av de verktyg jag fastnat för är en applikation där jag kan [välja färger enligt både hsl och rgb](/repo/htmlphp/example/colors/colorpicker.html). Ett liknande verktyg är bra att ha i en webbprogrammerares verktygslåda.
 
 En artikel om färgschema kan du också hitta på Wikipedia, där namnges flera av de vanliga typerna av färgschema, tex monochromatic, analogous, complementary, triadic, tetradic med flera.  
 
@@ -352,7 +352,3 @@ Avslutningsvis {#avslutning}
 Det var en översikt om allmänt behändiga konstruktioner i CSS. Det ger dig lite material att jobba vidare på.
 
 [Fråga i forumet](forum) om du undrar över något eller behöver kompletterande information.
-
-
-
-
