@@ -21,7 +21,7 @@ Anledningarna till detta är flera, men vad bör man som ny student tänka på -
 Många hoppar av högskolestudier {#hoppa}
 -----------------------------------
 
-Det är troligen ingen hemlighet att en kurva över de som klarar sig hela vägen in i mål till examen, ofta se ut så här.
+Det är troligen ingen hemlighet att en kurva över de som klarar sig hela vägen in i mål till examen, ofta ser ut så här.
 
 [FIGURE src=/image/snapht16/genomstromning-program.png caption="Antalet studenter som klarar sig till examen."]
 
@@ -31,7 +31,7 @@ Som lärare är jag gärna självkritisk och försöker se vad jag kan göra fö
 
 Men, man måste förstå att även med sunkiga lärare så kan man utan större bekymmer klara sin utbildning. En hel del ligger an på studenten och individen själv.
 
-Det finns en del avhopp som inte går att påverka. Det är studenter som tycker de valt fel eller kom på att de inte ville bli programmerare när de väl insåg vad yrket innebar. Det kan finnas många själ till varför studenten avslutar sin utbildning, skäl som inte direkt kan påverkas av läraren eller studentens egen studieförmåga. Så är det.
+Det finns en del avhopp som inte går att påverka. Det är studenter som vill vara någon annanstans, tycker de valt fel eller kom på att de inte ville bli programmerare när de väl insåg vad yrket innebar. Det kan finnas många skäl till varför studenten avslutar sin utbildning, skäl som inte direkt kan påverkas av läraren eller studentens egen studieförmåga. Så är det.
 
 
 
@@ -44,7 +44,7 @@ Jag brukar säga att äldre studenter verkar klara sig bättre, jämfört med yn
 
 Förkunskaper är inte nödvändiga, nej. Allt startar från början så alla har lika goda chanser. Det händer ofta att jag ser att talangulla studenter slappnar av för mycket och blir omsprungna av de som kämpar (men saknade initiala förkunskaper).
 
-Kanske tycker de inledningsvis att saker är för enkla. Det är vanskligt. Se det istället som repetition och var glad att denna biten inte var så svår.
+Varför är det så? Kanske tyckte de inledningsvis att saker var för enkla. Det är vanskligt. Se det istället som repetition och var glad att denna biten inte var så svår.
 
 
 
@@ -58,6 +58,8 @@ Visst finns det mycket att tänka igenom som gör att du blir bättre förberedd
 ### Attityd {#attityd}
 
 Först så bör du fundera på hur mycket du verkligen vill klara av studierna. Är du här för att du vill "på riktigt", eller är du här för att någon annan tyckte du skulle läsa och du hade ju inget annat för dig?
+
+Vi pratar ju faktiskt om grunden till ett möjligt yrke som kommer ge dig och din familj mat på bordet fram till pensionen. Hus, båt, sommarstuga, husbil, porsche och en elcykel.
 
 Bestäm dig för att det verkligen är här du vill vara, och det är detta du vill göra. Med ambition, attityd och inställning kommer man långt.
 
@@ -81,9 +83,11 @@ All undervisning är inte guld och gröna skogar. Men se till att delta i alla f
 
 Eller bara hänga på för att träffa studiekompisar och ta en kopp kaffe.
 
-Du är ju här för att studera så att delta är ju typ *obligatoriskt* , oavsett vad.
+Du är ju här för att studera så att delta är ju typ *obligatoriskt* , oavsett vad. Låt ingen påstå något annat.
 
 Det är inte för lärarens skull som du deltar, det är för din egen skull.
+
+Om du börjar prioritera att slacka, så bör du överväga att läsa stycket om attityd, en gång till.
 
 
 
@@ -95,7 +99,7 @@ Räkna inte med att läraren kan inspirera dig.
 
 Om hen kan ge inspiration så kan du skatta dig lycklig. Men ha en plan B. [Ha alltid en plan B](/f/13574).
 
-På en högskola finns mycket kunskap men det är inte alltid lätttillgänglig eller stiligt serverad. Men om du själv väljer att kämpa till dig kunskapen, via hårt arbete, så finns det väldigt duktigt folk att fråga och diskutera med.
+På en högskola finns mycket kunskap men det är inte alltid lätttillgänglig eller stiligt serverad. Men om du själv väljer att kämpa till dig kunskapen, via hårt arbete, så finns det väldigt duktigt folk att fråga, ifrågasätta och diskutera med. De kan leda dig framåt, tills du klarar dig på egen hand.
 
 Du behöver finna en egen inspiration och drivkraft. Lyckas du med det så har du förutsättningen för att klara dig hela vägen. 
 
@@ -103,7 +107,7 @@ Du behöver finna en egen inspiration och drivkraft. Lyckas du med det så har d
 
 ###Skaffa dig en studiemiljö {#miljo}
 
-Rensa skrivbordet och datorn från sånt som distraherar dig från studierna. Fokusera på studierna så kommer du märka att det är rätt kul.
+Rensa skrivbordet och datorn från sånt som distraherar dig från studierna. Fokusera på studierna så kommer du märka att det är rätt kul och intressant.
 
 Tv-serierna kan du titta på strax innan du somnar.
 

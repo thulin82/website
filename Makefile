@@ -65,7 +65,7 @@ update: codebase-update site-build local-publish-clear
 # target: production-publish - Publish latest to the production server.
 production-publish:
 	@echo $(call HELPTEXT,$@)
-	ssh mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
+	ssh -p 2222 mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
 
 
 
