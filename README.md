@@ -25,7 +25,6 @@ Start by preparing your local development environment.
 ```
 $ git clone <the original or your forked repo>
 $ cd <the original or your forked repo>
-$ make create-local-structure
 $ make etc-hosts
 $ make virtual-host
 $ make update
@@ -36,7 +35,7 @@ Now open your browser at `local.dbwebb.se` and browse the website.
 If you need to upgrade your existing installation you can just redo it all.
 
 ```
-$ make create-local-structure etc-hosts virtual-host update
+$ make etc-hosts virtual-host update
 ```
 
 

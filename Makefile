@@ -3,6 +3,7 @@
 # Build website with environment
 #
 #
+
 # Colors
 NO_COLOR		= \033[0m
 TARGET_COLOR	= \033[32;01m
@@ -32,6 +33,9 @@ FONT_AWESOME = theme/mos-theme/style/font-awesome/fonts/
 
 # Cache
 FORUM_CACHE = $(LOCAL_HTDOCS)/htdocs/forum/cache
+
+# Publish
+EXCLUDE_ON_PUBLISH = --exclude old --exclude backup --exclude .git --exclude .solution --exclude .solutions --exclude error.log --exclude cache --exclude access.log --delete
 
 # Backup
 TODAY = `date +'%y%m%d'`
@@ -73,10 +77,14 @@ production-publish:
 .PHONY: local-publish
 local-publish:
 	@echo $(call HELPTEXT,$@)
-	rsync -av --exclude old --exclude backup --exclude .git --exclude .solution --exclude .solutions --exclude error.log --exclude cache --exclude access.log --delete "./" $(LOCAL_HTDOCS)
+	rsync -av $(EXCLUDE_ON_PUBLISH) config content htdocs vendor $(LOCAL_HTDOCS)
 
 	@# Enable upload of attachement to the forum
 	[ ! -d $(LOCAL_HTDOCS)/htdocs/forum/files ] ||  chmod 777 $(LOCAL_HTDOCS)/htdocs/forum/files
+
+	@# Recreate the link to the forum cache, since its not rsynced
+	if [ -d  $(LOCAL_HTDOCS)/htdocs/forum ]; then ln -sf ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache; fi
+		rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
 
 	@# Enable robots if available
 	[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
@@ -116,6 +124,14 @@ codebase-update:
 
 
 
+# target: forum-init      - Init the forum structure, run after publish.
+.PHONY: forum-init
+forum-init:
+	rsync -av htdocs/forum/files_/ $(LOCAL_HTDOCS)/cache/forum-files/
+	chmod -f 666 $(LOCAL_HTDOCS)/cache/forum-files/* || true
+
+
+
 # target: submodule-init      - Init all submodules.
 # target: submodule-update    - Update all submodules.
 .PHONY: submodule-init submodule-update
@@ -124,6 +140,7 @@ submodule-init:
 
 submodule-update:
 	git pull --recurse-submodules && git submodule foreach git pull origin master
+
 
 
 # target: server-node-echo    - Start up the echo server.
@@ -187,7 +204,6 @@ forum-no-activation:
 	echo "UPDATE phpbb_config SET config_value = 3 WHERE config_name = 'require_activation';" | mysql -uroot dbw_forum
 
 
-
 #
 # Build
 #
@@ -236,35 +252,17 @@ lint: less
 
 
 
-#
-# Build site from codebase
-#
+# target: site-build   - Create essential directories and copy from vendor.
 .PHONY: site-build
 site-build:
-	# Copy Anax images
-	#rsync -av vendor/mos/anax/webroot/img/ htdocs/img/
+	# Create and sync cache
+	bash -c "install --directory --mode 777 cache/{cimage,anax,forum,forum-files}"
+	rsync -av cache $(LOCAL_HTDOCS)
 
 	# Copy from CImage
 	install -d htdocs/cimage
-	rsync -av vendor/mos/cimage/webroot/imgd.php htdocs/cimage/imgd.php
-	rsync -av vendor/mos/cimage/webroot/imgp.php htdocs/cimage/imgp.php
-	rsync -av vendor/mos/cimage/webroot/imgs.php htdocs/cimage/imgs.php
-	rsync -av vendor/mos/cimage/webroot/imgf.php htdocs/cimage/imgf.php
-	rsync -av vendor/mos/cimage/webroot/img.php htdocs/cimage/img.php
-	rsync -av vendor/mos/cimage/icc/ htdocs/cimage/icc/
+	bash -c "rsync -av vendor/mos/cimage/webroot/{img,imgd,imgf,imgp,imgs}.php vendor/mos/cimage/icc/ htdocs/cimage"
 	rsync -av vendor/mos/cimage/webroot/img/ htdocs/img/cimage/
-
-	# Copy from mos-theme
-	#install -d htdocs/js/mos-theme
-	#rsync -av theme/mos-theme/js/ htdocs/js/mos-theme/
-
-	# Make cache parts writable
-	install --directory --mode 777 cache/cimage cache/anax cache/forum
-	if [ -d  $(LOCAL_HTDOCS)/htdocs/forum ]; then ln -sf ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache; fi
-	rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
-
-	# Sync to virtual host dir
-	rsync -av --exclude old --exclude .git --exclude cache/ --delete "./" $(LOCAL_HTDOCS)
 
 
 
@@ -274,12 +272,6 @@ etc-hosts:
 	echo "127.0.0.1 $(WWW_LOCAL)" | sudo bash -c 'cat >> /etc/hosts'
 	@tail -1 /etc/hosts
 
-
-
-# target: create-local-structure - Create needed local directory structure.
-.PHONY: create-local-structure
-create-local-structure:
-	install --directory $(HOME)/htdocs/$(WWW_SITE)/htdocs
 
 
 # target: ssl-cert-create - One way to create the certificates.
@@ -301,7 +293,7 @@ ssl-cert-renew:
 
 # target: install-fresh - Do a fresh installation of a new server.
 .PHONY: install-fresh
-install-fresh: create-local-structure etc-hosts virtual-host update
+install-fresh: etc-hosts virtual-host update
 
 
 
@@ -357,6 +349,7 @@ endef
 export VIRTUAL_HOST_80_WWW
 
 virtual-host:
+	install --directory $(LOCAL_HTDOCS)/htdocs
 	echo "$$VIRTUAL_HOST_80" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
 	echo "$$VIRTUAL_HOST_80_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
 	sudo a2ensite $(WWW_SITE) www.$(WWW_SITE)
