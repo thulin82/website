@@ -93,7 +93,7 @@ Om du börjar prioritera att slacka, så bör du överväga att läsa stycket om
 
 ###Finn din egen inspiration och drivkraft {#inspiration}
 
-Räkna inte med att detta är någon räkmacka som någon kommer att servera till dig, fint upplagd och fräscha räkor på fint porslin och fönsterbord.
+Räkna inte med att detta är någon räkmacka som någon kommer att servera till dig, fint upplagd med fräscha handskalade räkor på fint porslin och fönsterbord med vit linneduk.
 
 Räkna inte med att läraren kan inspirera dig. 
 
@@ -131,13 +131,13 @@ Fixa en okey bärbar dator med bra batteri så den klarar en hel dag i skolan. B
 
 Träna gärna, eller promenera. Rör på dig.
 
-Skaffa dig några kompisar som du kan ta en luch eller fika med.
+Skaffa dig några kompisar som du kan ta en lunch eller fika med.
 
-Har du inga kompisar så går du ned till fiket på stan och fikar iallafall, du kan snurra pokestops, titta på folket och få lite miljöombyte.
+Har du inga kompisar så går du ned till fiket på stan och fikar iallafall. Du kan alltid snurra pokestops och titta på folket för att få lite miljöombyte.
 
 Gör något socialt på kvällarna så du blir riktigt trött och somnar sött med läsplattan (och kurslitteraturen) på nattduksbordet.
 
-Aktivera dig i kårlivet. Det finns puber och studentorganisationer för olika intressen. Det är strålande tillfällen att finna umgänge med likasinnade.
+Aktivera dig i kårlivet. Det finns pubkvällar och studentorganisationer för olika intressen. Det är strålande tillfällen att finna umgänge med likasinnade.
 
 Men, om du hänger ute till sena natten så minns att du skall gå upp klockan 8 dagen efter. Ordning och reda. [Don't do the crime, if you can't do the time](http://www.urbandictionary.com/define.php?term=Don%27t%20do%20the%20crime%2C%20if%20you%20can%27t%20do%20the%20time.).
 
