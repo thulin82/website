@@ -73,7 +73,10 @@ production-publish:
 .PHONY: local-publish
 local-publish:
 	@echo $(call HELPTEXT,$@)
-	rsync -av --exclude old --exclude .git --exclude .solution --exclude .solutions --exclude error.log --exclude cache --exclude access.log --delete "./" $(LOCAL_HTDOCS)
+	rsync -av --exclude old --exclude backup --exclude .git --exclude .solution --exclude .solutions --exclude error.log --exclude cache --exclude access.log --delete "./" $(LOCAL_HTDOCS)
+
+	@# Enable upload of attachement to the forum
+	[ ! -d $(LOCAL_HTDOCS)/htdocs/forum/files ] ||  chmod 777 $(LOCAL_HTDOCS)/htdocs/forum/files
 
 	@# Enable robots if available
 	[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
@@ -146,6 +149,16 @@ backup:
 	rm -f backup/latest
 	ln -s $(TODAY) backup/latest
 
+
+
+# target: load-backup             - Load latest backup.
+.PHONY: load-backup
+load-backup:
+	@echo $(call HELPTEXT,$@)
+	
+	# Forum
+	zcat backup/latest/dbw_forum.gz | mysql -uroot dbw_forum
+	rsync -a --delete backup/latest/forum/files/ htdocs/forum/files/ 
 
 
 
