@@ -4,7 +4,7 @@ published: "2016-08-11"
 category:
     - kursnyheter
 ...
-Intro-veckan för webbprogrammering
+Introveckan för webbprogrammering
 ==================================
 
 [FIGURE src="/image/teambuilding.jpg?w=w2&h=200&cf"]
@@ -61,6 +61,22 @@ För att förbereda er:
 
 **Fredag eftermiddag:** Studentkåren har planerat in aktiviteter.
 
+
+
+Tillfällena i sal (tisdag-fredag förmiddag) {#tillfalle-i-sal}
+-----------------------------------
+Planen ser ut som följer:  
+
+Tisdag: Allmän information om hur det fungerar att studera dbwebbkurserna.  
+Onsdag: Labbmiljö PHP.  
+Torsdag: Labbmiljö Python, irc, Marvin, Gitter.  
+Fredag: dbwebb-scriptet och hur det ser ut.
+
+
+
+Övrigt {#ovrigt}
+-----------------------------------
+Kika gärna på [introduktionsveckan](http://www.bthstudent.se/ny-student/introduktionsveckan/). Där kommer det dyka upp nyttig information.
 
 
 /Andreas och Kenneth
