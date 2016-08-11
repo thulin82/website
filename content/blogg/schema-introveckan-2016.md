@@ -4,7 +4,7 @@ published: "2016-08-11"
 category:
     - kursnyheter
 ...
-Intro-veckan för webbprogrammering
+Introveckan för webbprogrammering
 ==================================
 
 [FIGURE src="/image/teambuilding.jpg?w=w2&h=200&cf"]
