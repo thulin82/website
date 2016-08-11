@@ -162,6 +162,32 @@ load-backup:
 
 
 
+# target: database-create         - Create needed databases.
+.PHONY: database-create
+database-create:
+	@echo $(call HELPTEXT,$@)
+	
+	# Forum
+	#create database dbw_forum;
+	#grant all on dbw_forum.* to 'dbwebb'@'localhost' identified by 'password';
+
+	#create database Anaxoophp; 
+	#grant all on Anaxoophp.* to acronym@localhost identified by 'password';  
+
+	#create database Movie; 
+	#grant all on Movie.* to 'acronym'@'localhost' identified by 'password';
+
+
+
+# target: forum-no-activation    - No activation of new users.
+.PHONY: forum-no-activation
+forum-no-activation:
+	@echo $(call HELPTEXT,$@)
+	
+	echo "UPDATE phpbb_config SET config_value = 3 WHERE config_name = 'require_activation';" | mysql -uroot dbw_forum
+
+
+
 #
 # Build
 #
