@@ -63,4 +63,20 @@ För att förbereda er:
 
 
 
+Tillfällena i sal (tisdag-fredag förmiddag) {#tillfalle-i-sal}
+-----------------------------------
+Planen ser ut som följer:  
+
+Tisdag: Allmän information om hur det fungerar att studera dbwebbkurserna.  
+Onsdag: Labbmiljö PHP.  
+Torsdag: Labbmiljö Python, irc, Marvin, Gitter.  
+Fredag: dbwebb-scriptet och hur det ser ut.
+
+
+
+Övrigt {#ovrigt}
+-----------------------------------
+Kika gärna på [introduktionsveckan](http://www.bthstudent.se/ny-student/introduktionsveckan/). Där kommer det dyka upp nyttig information.
+
+
 /Andreas och Kenneth
