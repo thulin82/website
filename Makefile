@@ -65,7 +65,7 @@ update: codebase-update site-build local-publish-clear
 # target: production-publish - Publish latest to the production server.
 production-publish:
 	@echo $(call HELPTEXT,$@)
-	ssh mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
+	ssh -p 2222 mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
 
 
 
@@ -73,7 +73,10 @@ production-publish:
 .PHONY: local-publish
 local-publish:
 	@echo $(call HELPTEXT,$@)
-	rsync -av --exclude old --exclude .git --exclude .solution --exclude .solutions --exclude error.log --exclude cache --exclude access.log --delete "./" $(LOCAL_HTDOCS)
+	rsync -av --exclude old --exclude backup --exclude .git --exclude .solution --exclude .solutions --exclude error.log --exclude cache --exclude access.log --delete "./" $(LOCAL_HTDOCS)
+
+	@# Enable upload of attachement to the forum
+	[ ! -d $(LOCAL_HTDOCS)/htdocs/forum/files ] ||  chmod 777 $(LOCAL_HTDOCS)/htdocs/forum/files
 
 	@# Enable robots if available
 	[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
@@ -146,6 +149,42 @@ backup:
 	rm -f backup/latest
 	ln -s $(TODAY) backup/latest
 
+
+
+# target: load-backup             - Load latest backup.
+.PHONY: load-backup
+load-backup:
+	@echo $(call HELPTEXT,$@)
+	
+	# Forum
+	zcat backup/latest/dbw_forum.gz | mysql -uroot dbw_forum
+	rsync -a --delete backup/latest/forum/files/ htdocs/forum/files/ 
+
+
+
+# target: database-create         - Create needed databases.
+.PHONY: database-create
+database-create:
+	@echo $(call HELPTEXT,$@)
+	
+	# Forum
+	#create database dbw_forum;
+	#grant all on dbw_forum.* to 'dbwebb'@'localhost' identified by 'password';
+
+	#create database Anaxoophp; 
+	#grant all on Anaxoophp.* to acronym@localhost identified by 'password';  
+
+	#create database Movie; 
+	#grant all on Movie.* to 'acronym'@'localhost' identified by 'password';
+
+
+
+# target: forum-no-activation    - No activation of new users.
+.PHONY: forum-no-activation
+forum-no-activation:
+	@echo $(call HELPTEXT,$@)
+	
+	echo "UPDATE phpbb_config SET config_value = 3 WHERE config_name = 'require_activation';" | mysql -uroot dbw_forum
 
 
 
