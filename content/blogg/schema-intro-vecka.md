@@ -39,18 +39,23 @@ Info om aktiviteterna {#info}
 
 **Tisdag eftermiddag:** Studievägledning informerar. Något om IT här... Plats: TBA.
 
-**Onsdag eftermiddag:** Vi samlas inne i Karlskrona, Hoglands Park. Ta buss 1 eller 7 och hoppa av vid hållplatsen "Hoglands Park" så syns vi där. Se till att fixa:  
-[Turf guide](http://wiki.turfgame.com/sv/wiki/Installations-_och_komma-ig%C3%A5ng-guide)  
-[map](https://turfgame.com/map)  
-[Turf](https://turfgame.com)  
+**Onsdag eftermiddag:** Vi samlas inne i Karlskrona, Hoglands Park. Ta buss 1 eller 7 och hoppa av vid hållplatsen "Hoglands Park" så syns vi där.  
 
-Det är tävlingsdags igen! 
+Se till att fixa:  
+
+* [Turf guide](http://wiki.turfgame.com/sv/wiki/Installations-_och_komma-ig%C3%A5ng-guide)
+* [map](https://turfgame.com/map)
+* [Turf](https://turfgame.com)
+  
+Det är tävlingsdags! 
 
 **Torsdag eftermiddag:** Vi samlas vid volleybollplanen utanför BTH.  
+
 För att förbereda er:  
-[geocaching.com/mobile](https://www.geocaching.com/mobile/)  
-[guide](https://www.geocaching.com/guide/)  
-[map karlskrona](https://www.geocaching.com/map/#?ll=56.17449,15.57848&z=14)  
+
+* [geocaching.com/mobile](https://www.geocaching.com/mobile/)  
+* [guide](https://www.geocaching.com/guide/)  
+* [map karlskrona](https://www.geocaching.com/map/#?ll=56.17449,15.57848&z=14)  
 
 **14:30-15:00 har biblioteket informationsträff. Plats: TBA.**  
 
