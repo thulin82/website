@@ -33,6 +33,9 @@ FONT_AWESOME = theme/mos-theme/style/font-awesome/fonts/
 # Cache
 FORUM_CACHE = $(LOCAL_HTDOCS)/htdocs/forum/cache
 
+# Backup
+TODAY = `date +'%y%m%d'`
+
 
 
 # target: help - Displays help.
@@ -125,6 +128,24 @@ submodule-update:
 server-node-echo:
 	@echo $(call HELPTEXT,$@)
 	cd $(LOCAL_HTDOCS)/htdocs/repo/javascript/example/lekplats/broadcast-server-with-node-js-and-html5-websockets && nodejs websocket_broadcastserver.js 
+
+
+
+# target: backup              - Take a backup of database and other essentials.
+.PHONY: backup
+backup:
+	@echo $(call HELPTEXT,$@)
+	install --directory backup/$(TODAY)
+	
+	# Forum
+	mysqldump -uroot dbw_forum | gzip > backup/$(TODAY)/dbw_forum.gz
+	install --directory backup/$(TODAY)/forum/files/
+	rsync -a $(LOCAL_HTDOCS)/htdocs/forum/files/ backup/$(TODAY)/forum/files/
+
+	# Point to latest successful backup
+	rm -f backup/latest
+	ln -s $(TODAY) backup/latest
+
 
 
 

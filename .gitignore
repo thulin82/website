@@ -2,3 +2,4 @@ vendor/
 theme/
 build/
 config/error_reporting.php
+backup/
