@@ -17,7 +17,7 @@ Lärarteamet består av:
 
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
-| ![Mikael](/image/mikael-roos/me-happy.jpg?w=100&h=100&cf) | Mikael&nbsp;Roos | mos   | mos@bth.se, [BTH](https://www.bth.se/?s=mos&searchtype=employee), [GitHub](https://github.com/mosbth), [Facebook](http://www.facebook.com/mikael.t.h.roos), [Google+](https://plus.google.com/u/0/+MikaelRoos/about),  [Twitter](http://twitter.com/mikael_roos), [Linkedin](http://www.linkedin.com/in/pt90mr), [Flickr](http://www.linkedin.com/in/pt90mr), [mikaelroos.se](http://mikaelroos.se) |
+| ![Mikael](/image/mikael-roos/me-happy.jpg?w=100&h=100&cf) | Mikael&nbsp;Roos | mos   | mos@bth.se, [BTH](https://www.bth.se/?s=mos&searchtype=employee), [GitHub](https://github.com/mosbth), [Facebook](http://www.facebook.com/mikael.t.h.roos), [Google+](https://plus.google.com/u/0/+MikaelRoos/about),  [Twitter](http://twitter.com/mikael_roos), [Linkedin](http://www.linkedin.com/in/pt90mr), [Flickr](http://www.flickr.com/photos/mikaelroos/), [mikaelroos.se](http://mikaelroos.se) |
 | ![Kenneth](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Kenneth&nbsp;Lewenhagen | lew   | klw@bth.se, [BTH](https://www.bth.se/?s=klw&searchtype=employee) |
 | ![Andreas](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Andreas&nbsp;Arnesson | zeldah   | aar@bth.se, [BTH](https://www.bth.se/?s=aar&searchtype=employee) |
 | ![Emil](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Emil&nbsp;Folino |    | efo@bth.se, [BTH](https://www.bth.se/?s=efo&searchtype=employee) |
