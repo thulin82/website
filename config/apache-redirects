@@ -111,9 +111,23 @@ Redirect /ramverk1      /kurser/ramverk1
 Redirect /ramverk2      /kurser/ramverk2
 # matte1, telecom, test, indproj, exjobb
 
+
+# Program Webbprogrammering 120/180 studieplan
+Redirect /program/webbprogrammering/studieplan/termin1 https://docs.google.com/spreadsheets/d/1CE0JMyajALOhRLTqfl6IzJXmD1QAM2UotlePXmslGS8/edit?usp=sharing
+
+# Kurspaket webutv
+Redirect /webutv/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFkxaUtQMTItZ1IydWZPNHMxSFQwa0E&usp=sharing
+Redirect /webutv/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFlXdHF6RWNYang2UEEwaFZFaG5SSnc&usp=sharing
+
+# Kurspaket webprog
+Redirect /webprog/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHJxeVo1cFlsTXlDd21NcEFsOW1iMkE&usp=sharing
+Redirect /webprog/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHZPc1h4VTVsZk1DZTdUbEZNNlpVdHc&usp=sharing
+Redirect /webprog/studieplan/100  https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFVUUUJsNGdTc3dmMHItUVdjQmhnMUE&usp=sharing
+
 # Moved webutv and webprog to utbildning/
 Redirect /webutv    /utbildning/webbutveckling-och-programmering-30hp
 Redirect /webprog   /utbildning/webbprogrammering-och-databaser-30hp
+
 
 
 # download
@@ -204,20 +218,6 @@ Redirect /kurspaket/studieplan/100  https://docs.google.com/spreadsheet/ccc?key=
 #Redirect /kurspaket/studieplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdEg3bGtGZWtHRmYtczFfM2I1NjR1RWc
 Redirect /kurspaket/studieplan	    /kurser/lektionsplan-och-rekommenderad-studieplan
 Redirect /kurspaket		            /kurser/hur-fungerar-kurspaketet 
-
-
-
-# Kurspaket webutv
-Redirect /webutv/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFkxaUtQMTItZ1IydWZPNHMxSFQwa0E&usp=sharing
-Redirect /webutv/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFlXdHF6RWNYang2UEEwaFZFaG5SSnc&usp=sharing
-
-
-
-
-# Kurspaket webprog
-Redirect /webprog/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHJxeVo1cFlsTXlDd21NcEFsOW1iMkE&usp=sharing
-Redirect /webprog/studieplan/50   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHZPc1h4VTVsZk1DZTdUbEZNNlpVdHc&usp=sharing
-Redirect /webprog/studieplan/100  https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFVUUUJsNGdTc3dmMHItUVdjQmhnMUE&usp=sharing
 
 
 
