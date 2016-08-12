@@ -18,6 +18,12 @@ Redirect 301 /skalle   https://arkiv.dbwebb.se/skalle/
 Redirect 301 /sylvanas https://arkiv.dbwebb.se/sylvanas/
 
 
+#
+#
+#
+Redirect /cal https://calendar.google.com/calendar/embed?src=7fvj57e11e6ct1tahn81b0ngb0%40group.calendar.google.com&ctz=Europe/Stockholm
+
+
 
 #
 #
@@ -83,6 +89,39 @@ Redirect /kurser/maste-jag-skaffa-kurslitteraturen /kurser/faq/maste-jag-skaffa-
 Redirect /kurser/kom-igang /kurser/faq/kom-igang
 Redirect /kurser/bedomning-och-betygsattning /kurser/faq/bedomning-och-betygsattning
 
+
+#
+# Lektions och studieplaner
+#
+Redirect /htmlphp/studieplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDc0ZUhoTlA2eWtlLWx2MktwbkhzeEE
+Redirect /htmlphp/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdEVGZXpvSm9DNGUzOUh1RXJ5ckNsakE
+Redirect /oophp/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGRKaUVVQ21KZXdwNTIxYkJHZklNSUE
+Redirect /oophp/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHFfa3BHY1pCUGdzd3pEcHE5ZW1PTGc
+Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGxWWmZwUE9oNGdiRDlFUDdaNzFPN1E
+Redirect /phpmvc/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGZOcW9CVkhZTXNEdzJobGM3dUpmVGc
+Redirect /javascript1/studieplan    https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFpSbGwxZXpfUThvSXZaVDRhZng5WkE&usp=sharing
+Redirect /python/studieplan         https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
+Redirect /webgl/lektionsplan        https://goo.gl/3F4Kju
+Redirect /javascript/studieplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdE9oSE00YVoxVi1HVjQ2eFZLVnV2bmc
+Redirect /javascript/lektionsplan	https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHlSZkp2QVEyVlRHdWRfUGVPTDdVR1E
+
+
+#
+#javascript
+#
+Redirect /javascript/forelasning-kursintroduktion       https://dl.dropbox.com/u/24315211/javascript/javascript-intro.pdf
+Redirect /javascript/forelasning-kursintroduktion.pdf	https://dl.dropbox.com/u/24315211/javascript/javascript-intro.pdf
+Redirect /javascript/kmom01/forelasning		https://dl.dropbox.com/u/24315211/javascript/javascript-kmom01.pdf
+Redirect /javascript/kmom01/forelasning.pd      https://dl.dropbox.com/u/24315211/javascript/javascript-kmom01.pdf
+Redirect /javascript/kmom02/forelasning         https://dl.dropbox.com/u/24315211/javascript/javascript-kmom02.pdf
+Redirect /javascript/kmom02/forelasning.pdf     https://dl.dropbox.com/u/24315211/javascript/javascript-kmom02.pdf
+Redirect /javascript/kmom03/forelasning.pdf	https://dl.dropbox.com/u/24315211/javascript/javascript-kmom03.pdf
+Redirect /javascript/kmom04/forelasning.pdf	https://dl.dropbox.com/u/24315211/javascript/javascript-kmom04.pdf
+Redirect /javascript/kmom05/forelasning.pdf     https://dl.dropbox.com/u/24315211/javascript/javascript-kmom05.pdf
+Redirect /javascript/kmom06/forelasning.pdf     https://dl.dropbox.com/u/24315211/javascript/javascript-kmom06.pdf
+
+
+
 #
 # kurser/arkiv
 #
@@ -112,8 +151,9 @@ Redirect /ramverk2      /kurser/ramverk2
 # matte1, telecom, test, indproj, exjobb
 
 
-# Program Webbprogrammering 120/180 studieplan
+# Program Webbprogrammering 120/180 studieplan & lektionsplan
 Redirect /program/webbprogrammering/studieplan/termin1 https://docs.google.com/spreadsheets/d/1CE0JMyajALOhRLTqfl6IzJXmD1QAM2UotlePXmslGS8/edit?usp=sharing
+Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://docs.google.com/spreadsheets/d/1CE0JMyajALOhRLTqfl6IzJXmD1QAM2UotlePXmslGS8/edit?usp=sharing
 
 # Kurspaket webutv
 Redirect /webutv/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFkxaUtQMTItZ1IydWZPNHMxSFQwa0E&usp=sharing
@@ -224,27 +264,6 @@ Redirect /kurspaket		            /kurser/hur-fungerar-kurspaketet
 #Program
 Redirect /wip/distans				https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFpnZ2dxSmxoRDVpcVNDRUcyUUg0cmc&usp=sharing
 
-#htmlphp
-Redirect /htmlphp/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDc0ZUhoTlA2eWtlLWx2MktwbkhzeEE
-Redirect /htmlphp/lektionsplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdEVGZXpvSm9DNGUzOUh1RXJ5ckNsakE
-
-#oophp
-Redirect /oophp/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGRKaUVVQ21KZXdwNTIxYkJHZklNSUE
-Redirect /oophp/lektionsplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHFfa3BHY1pCUGdzd3pEcHE5ZW1PTGc
-
-#phpmvc
-Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGxWWmZwUE9oNGdiRDlFUDdaNzFPN1E
-Redirect /phpmvc/lektionsplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGZOcW9CVkhZTXNEdzJobGM3dUpmVGc
-
-#javascript1
-Redirect /javascript1/studieplan https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFpSbGwxZXpfUThvSXZaVDRhZng5WkE&usp=sharing
-
-#python
-Redirect /python/studieplan https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
-
-#webgl
-Redirect /webgl/lektionsplan https://goo.gl/3F4Kju
-
 # phpmvc Obsolete
 Redirect 301 /phpmvc/oversikt			/phpmvc/
 Redirect 301 /phpmvc/kmom01/instruktion		/phpmvc/kmom01
@@ -293,24 +312,6 @@ Redirect /phpmvc/lydia-tema-vt13.pdf		https://dl.dropboxusercontent.com/u/243152
 Redirect /phpmvc/lydia-produktifiera            http://dl.dropbox.com/u/24315211/phpmvc/phpmvc-lydia-produktifiera.pdf
 Redirect /phpmvc/lydia-produktifiera.pdf        http://dl.dropbox.com/u/24315211/phpmvc/phpmvc-lydia-produktifiera.pdf
 Redirect /phpmvc/lydia-produktifiera-vt13.pdf	https://dl.dropboxusercontent.com/u/24315211/phpmvc/phpmvc-lydia-produktifiera-vt13.pdf
-
-
-#
-#javascript
-#
-Redirect /javascript/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdE9oSE00YVoxVi1HVjQ2eFZLVnV2bmc
-Redirect /javascript/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHlSZkp2QVEyVlRHdWRfUGVPTDdVR1E
-Redirect /javascript/forelasning-kursintroduktion       https://dl.dropbox.com/u/24315211/javascript/javascript-intro.pdf
-Redirect /javascript/forelasning-kursintroduktion.pdf	https://dl.dropbox.com/u/24315211/javascript/javascript-intro.pdf
-Redirect /javascript/kmom01/forelasning		https://dl.dropbox.com/u/24315211/javascript/javascript-kmom01.pdf
-Redirect /javascript/kmom01/forelasning.pd      https://dl.dropbox.com/u/24315211/javascript/javascript-kmom01.pdf
-Redirect /javascript/kmom02/forelasning         https://dl.dropbox.com/u/24315211/javascript/javascript-kmom02.pdf
-Redirect /javascript/kmom02/forelasning.pdf     https://dl.dropbox.com/u/24315211/javascript/javascript-kmom02.pdf
-Redirect /javascript/kmom03/forelasning.pdf	https://dl.dropbox.com/u/24315211/javascript/javascript-kmom03.pdf
-Redirect /javascript/kmom04/forelasning.pdf	https://dl.dropbox.com/u/24315211/javascript/javascript-kmom04.pdf
-Redirect /javascript/kmom05/forelasning.pdf     https://dl.dropbox.com/u/24315211/javascript/javascript-kmom05.pdf
-Redirect /javascript/kmom06/forelasning.pdf     https://dl.dropbox.com/u/24315211/javascript/javascript-kmom06.pdf
-
 
 
 #gamla
