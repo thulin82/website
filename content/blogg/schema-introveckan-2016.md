@@ -11,7 +11,9 @@ Introveckan för webbprogrammering
 
 Den första veckan närmar sig med stormsteg. Vi har planerat in lite aktiviteter för er både på förmiddagar och eftermiddagar på introveckan. Det blir kom igång med labbmiljö på förmiddagar och eftermiddagarna tar vi det lite lugnare och varvar BTH information med studier i GPS-relaterade aktiviteter i BTHs och Karlskronas omgivningar.  
 
-Tänk på att det inte är några "[akademiska kvartar](https://sv.wikipedia.org/wiki/Akademisk_kvart)" planerade här.
+Tänk på att det inte är några "[akademiska kvartar](https://sv.wikipedia.org/wiki/Akademisk_kvart)" planerade här.  
+
+Schemat finns även på: [dbwebb.se/cal](http://dbwebb.se/cal)
 
 Planen ser ut som följer:  
 
