@@ -70,13 +70,15 @@ Planen ser ut som följer:
 Tisdag: Allmän information om hur det fungerar att studera dbwebbkurserna.  
 Onsdag: Labbmiljö PHP.  
 Torsdag: Labbmiljö Python, irc, Marvin, Gitter.  
-Fredag: dbwebb-scriptet och hur det ser ut.
+Fredag: dbwebb-scriptet och hur det ser ut.  
+
+För er som läser på distans kan det vara en bra idé att börja så tidigt som möjligt med labbmiljön. Hjälp och stöd finns att få via Hangout.
 
 
 
 Övrigt {#ovrigt}
 -----------------------------------
-Kika gärna på [introduktionsveckan](http://www.bthstudent.se/ny-student/introduktionsveckan/). Där kommer det dyka upp nyttig information.
+Kika gärna på [introduktionsveckan](http://www.bthstudent.se/ny-student/introduktionsveckan/). Där kommer det dyka upp nyttig information från studentkåren om deras aktiviteter. Deras aktiviteter börjar redan den 20:e augusti och håller på i två veckor. Under första veckan börjar de sina aktiviteter efter kl. 15:00. 
 
 
 /Andreas och Kenneth
