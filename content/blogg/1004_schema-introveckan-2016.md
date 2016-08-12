@@ -1,6 +1,6 @@
 ---
 author: lew, aar
-published: "2016-08-11"
+published: "2016-08-12"
 category:
     - kursnyheter
 ...
