@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-08-12": (G, mos) Förtydliga att ej gäller kurspaket.
     "2016-04-22": (F, mos) Enbart om lektionsplan och schema.
     "2015-08-14": (E, mos) Kommenterade bort stycke om fristående kurser.
     "2015-01-08": (D, mos) Länkade till studieplanerna för respektive kurspaket.
@@ -11,7 +12,9 @@ revision:
 Schema och Lektionsplan
 ==================================
 
-Här kan du läsa om den planering som finns för kurser när du deltar i undervisningen vid ett program.
+Här kan du läsa om den planering som finns för kurser när du deltar i undervisningen vid ett program (campus & distans).
+
+*Varken lektionsplan eller schema berör de som går kurspaketet.*
 
 
 
@@ -19,6 +22,8 @@ Schema och salsbokningar {#schema}
 ----------------------------
 
 På campus sker salsbokningen med hjälp av [BTH's schemasystem](http://schema.bth.se). Med hjälp av kurskoderna kan du själv söka ut ditt schema. Där ser du var du har föreläsning, labb och seminarier i respektive kurs.
+
+**Notera** att en sal kan av olika anledningar vara bokade under en större eller mindre tidsrymd än vad lektionsplanen anger. En labbsal kan till exempel vara bokad mellan 8-17 --- för att studenter skall ha tillgång till salen. Men själva lektionen kanske bara pågår mellan 9-12 (står i lektionsplanen).
 
 
 
