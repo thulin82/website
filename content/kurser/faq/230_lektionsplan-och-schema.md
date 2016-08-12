@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2016-08-12": (G, mos) Förtydliga att ej gäller kurspaket.
+    "2016-08-12": (G, mos) Förtydliga att ej gäller kurspaket, la till gcal.
     "2016-04-22": (F, mos) Enbart om lektionsplan och schema.
     "2015-08-14": (E, mos) Kommenterade bort stycke om fristående kurser.
     "2015-01-08": (D, mos) Länkade till studieplanerna för respektive kurspaket.
@@ -27,7 +27,7 @@ På campus sker salsbokningen med hjälp av [BTH's schemasystem](http://schema.b
 
 
 
-Lektionsplan på campus {#lektionsplan}
+Lektionsplan {#lektionsplan}
 ----------------------------
 
 Det finns en lektionsplan till varje kurs och kurstillfälle. Lektionsplanen visar när du har lärarhandledda tillfällen såsom föreläsningar, seminarier, övningar och laborationer.
@@ -35,3 +35,16 @@ Det finns en lektionsplan till varje kurs och kurstillfälle. Lektionsplanen vis
 Lektionsplanen visar också när du har obligatoriska tillfällen såsom redovisningar.
 
 Kika i lektionsplanen för att se när det finns inbokade tillfällen i ditt kurstillfälle.
+
+För ett exempel så kan du se [lektionsplanen för programstudenter termin 1, läsperiod 1](/program/webbprogrammering/lektionsplan/lasperiod1).
+
+
+
+Google Kalender {#cal}
+----------------------------
+
+För att underlätta har vi satt ihop en kalender i Google Calendar som visar de tillfällen som gäller för programstudenter.
+
+Du når kalendern via [dbwebb.se/cal](/cal).
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=7fvj57e11e6ct1tahn81b0ngb0%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=Europe%2FStockholm" style="border-width:0" width="700" height="600" frameborder="0" scrolling="no"></iframe>

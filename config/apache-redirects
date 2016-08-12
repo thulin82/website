@@ -153,7 +153,7 @@ Redirect /ramverk2      /kurser/ramverk2
 
 # Program Webbprogrammering 120/180 studieplan & lektionsplan
 Redirect /program/webbprogrammering/studieplan/termin1 https://docs.google.com/spreadsheets/d/1CE0JMyajALOhRLTqfl6IzJXmD1QAM2UotlePXmslGS8/edit?usp=sharing
-Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://docs.google.com/spreadsheets/d/1CE0JMyajALOhRLTqfl6IzJXmD1QAM2UotlePXmslGS8/edit?usp=sharing
+Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://docs.google.com/spreadsheets/d/1USsEu479x5l7noML0ZdkTmt_RVZ3Jbu-_ELZyYOeNf8/edit?usp=sharing
 
 # Kurspaket webutv
 Redirect /webutv/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFkxaUtQMTItZ1IydWZPNHMxSFQwa0E&usp=sharing
