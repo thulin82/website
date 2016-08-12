@@ -72,8 +72,6 @@ Redirect /linkedin /social/linkedin
 Redirect /twitter /social/twitter
 Redirect /youtube /social/youtube
 Redirect /bth /kurser/faq/bth-stodfunktioner
-Redirect /kurser/bedomning-och-betygsattning /kurser/faq/bedomning-och-betygsattning
-
 
 #
 # kurser/
@@ -82,6 +80,8 @@ Redirect /kurser/bra-att-veta   /kurser/faq
 Redirect /kurser/struktur       /kurser/faq
 Redirect /kurser/lektionsplan-och-rekommenderad-studieplan /kurser/faq/rekommenderad-studieplan
 Redirect /kurser/maste-jag-skaffa-kurslitteraturen /kurser/faq/maste-jag-skaffa-kurslitteraturen
+Redirect /kurser/kom-igang /kurser/faq/kom-igang
+Redirect /kurser/bedomning-och-betygsattning /kurser/faq/bedomning-och-betygsattning
 
 #
 # kurser/arkiv
