@@ -33,7 +33,7 @@ För hösten 2016 är följande hjälplärare, i olika omfattning.
 
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
-| ![Pernilla](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Pernilla&nbsp;Silverblood | allinrep   | psl@bth.se |
+| ![Pernilla](/image/lararteam/pernilla.jpg?w=100&h=100&cf) | Pernilla&nbsp;Silverblood | allinrep   | psl@bth.se, [GitHub](https://github.com/pejg12) |
 
 
 
