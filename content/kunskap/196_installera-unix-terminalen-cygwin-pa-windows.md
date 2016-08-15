@@ -55,6 +55,20 @@ lynx -source dbwebb.se/apt-cyg > apt-cyg
 install apt-cyg /bin
 ```
 
+[WARNING]
+**lynx saknas**
+
+Om du får felmeddelande om att lynx saknas, ungefär så här:
+
+```bash
+$ lynx -source dbwebb.se/apt-cyg > apt-cyg
+bash: lynx: command not found
+```
+
+Läs då i forumet om hur du [installerar kommandot lynx för hand med Cygwins installationsprogram](/t/5487).
+[/WARNING]
+
+
 Klart. Nu kan du testa att installera kommandot `wget` med `apt-cyg`.
 
 ```text
