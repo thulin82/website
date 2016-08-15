@@ -20,7 +20,7 @@ return array(
      * Set mode as 'strict', 'production' or 'development'.
      *
      * Default values:
-     *  mode: 'production' 
+     *  mode: 'production'
      */
     'mode' => 'development',
     //'mode' => 'production', // 'development', 'strict'

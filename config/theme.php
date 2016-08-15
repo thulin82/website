@@ -108,9 +108,6 @@ return [
                 "account" => defined("GOOGLE_ANALYTICS")
                     ? GOOGLE_ANALYTICS
                     : null,
-                "domain" => defined("GOOGLE_ANALYTICS")
-                    ? "auto"
-                    : "none",
             ],
             "sort" => -1
         ],
