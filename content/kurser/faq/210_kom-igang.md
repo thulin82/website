@@ -12,7 +12,7 @@ created: "2013-01-08 09:57:19"
 Kom igång med kurserna
 ==================================
 
-Så, du är ny **distans-student** och har kommit in på dessa kurser? Bra, då är det dax att sätta igång att börja jobba. Tiden går snabbt när man har kul. I denna artikel finner du det viktigaste som du behöver veta för att komma igång.
+Så, du är ny student och har kommit in på dessa kurser? Bra, då är det dax att sätta igång att börja jobba. Tiden går snabbt när man har kul. I denna artikel finner du det viktigaste som du behöver veta för att komma igång.
 
 En kort sammanfattning av vad du skall göra:
 
