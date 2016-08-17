@@ -25,13 +25,13 @@ Följande kursrepon är ännu inte överförda i senaste versionen av automatise
 
 | Kursrepo | Status |
 |----------|--------|
-| [oophp](https://github.com/mosbth/oophp) | [![Build Status](https://travis-ci.org/mosbth/oophp.svg?branch=master)](https://travis-ci.org/dbwebb-se/oophp) |
+| [oophp](https://github.com/dbwebb-se/oophp) | [![Build Status](https://travis-ci.org/dbwebb-se/oophp.svg?branch=master)](https://travis-ci.org/dbwebb-se/oophp) |
 | [phpmvc](https://github.com/dbwebb-se/phpmvc) | [![Build Status](https://travis-ci.org/dbwebb-se/phpmvc.svg?branch=master)](https://travis-ci.org/dbwebb-se/phpmvc) |
-| [javascript](https://github.com/mosbth/javascript) | [![Build Status](https://travis-ci.org/mosbth/javascript.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript) |
-| [javascript1](https://github.com/mosbth/javascript1) | [![Build Status](https://travis-ci.org/mosbth/javascript1.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript1) |
-| [linux](https://github.com/mosbth/linux) | [![Build Status](https://travis-ci.org/mosbth/linux.svg?branch=master)](https://travis-ci.org/dbwebb-se/linux) |
-| [webapp](https://github.com/mosbth/webapp) | [![Build Status](https://travis-ci.org/mosbth/webapp.svg?branch=master)](https://travis-ci.org/dbwebb-se/webapp) |
-| [webgl](https://github.com/mosbth/webgl) | [![Build Status](https://travis-ci.org/mosbth/webgl.svg?branch=master)](https://travis-ci.org/dbwebb-se/webgl) |
+| [javascript](https://github.com/dbwebb-se/javascript) | [![Build Status](https://travis-ci.org/dbwebb-se/javascript.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript) |
+| [javascript1](https://github.com/dbwebb-se/javascript1) | [![Build Status](https://travis-ci.org/dbwebb-se/javascript1.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript1) |
+| [linux](https://github.com/dbwebb-se/linux) | [![Build Status](https://travis-ci.org/dbwebb-se/linux.svg?branch=master)](https://travis-ci.org/dbwebb-se/linux) |
+| [webapp](https://github.com/dbwebb-se/webapp) | [![Build Status](https://travis-ci.org/dbwebb-se/webapp.svg?branch=master)](https://travis-ci.org/dbwebb-se/webapp) |
+| [webgl](https://github.com/dbwebb-se/webgl) | [![Build Status](https://travis-ci.org/dbwebb-se/webgl.svg?branch=master)](https://travis-ci.org/dbwebb-se/webgl) |
 
 
 
