@@ -36,7 +36,7 @@ Följande kursrepon är ännu inte överförda i senaste versionen av automatise
 
 
 
-Konfigurering av testera {#config}
+Konfigurering av tester {#config}
 ----------------------------------
 
 Varje kursrepo har en konfigurationsfil `.travis.yml` respektive `circle.yml` som styr vad som testas. I princip är det den [lokala utvecklingsmiljön](development-environment) som används via följande kommandosekvens.
