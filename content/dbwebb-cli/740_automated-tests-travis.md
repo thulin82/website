@@ -5,14 +5,14 @@ updated: "2016-05-02 09:00:00"
 Automatiserade tester på Travis
 ==================================
 
-Varje gång man checkar in kod till kursrepot på GitHub, eller om någon gör en pull request, så körs en automatiserad testsuite på webbtjänsten Travis.
+Varje gång man checkar in kod till kursrepot på GitHub, eller om någon gör en pull request, så körs en automatiserad testsuite på webbtjänsterna Travis CI och CircleCI. CI står för continuous integration.
 
 
 
 Nuvarande status {#status}
 ----------------------------------
 
-Så här ser nuvarande status ut för de senaste testerna som körts på Travis och CircleCI.
+Så här ser nuvarande status ut för de senaste testerna som körts på Travis CI och CircleCI.
 
 | Kursrepo | Status [Travis](https://travis-ci.org/) | Status [CircleCI](https://circleci.com/) |
 |----------|------|------|
@@ -39,10 +39,10 @@ Följande kursrepon är ännu inte överförda i senaste versionen av automatise
 Konfigurering på Travis {#config}
 ----------------------------------
 
-Varje kursrepo har en konfigurationsfil `.travis.yml` som styr vad som testas. I princip är det den [lokala utvecklingsmiljön](development-environment) som används via följande kommandosekvens.
+Varje kursrepo har en konfigurationsfil `.travis.yml` respektive `circle.yml` som styr vad som testas. I princip är det den [lokala utvecklingsmiljön](development-environment) som används via följande kommandosekvens.
 
 ```bash
 $ make automated-tests-prepare automated-tests-check automated-tests-run
 ```
 
-Om du har installerat en lokal utvecklingsmiljö så kan du alltså köra exakt samma tester som körs via Travis.
+Om du har installerat en lokal utvecklingsmiljö så kan du alltså köra exakt samma tester som körs via Travis och CircleCI.
