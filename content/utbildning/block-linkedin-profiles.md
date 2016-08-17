@@ -23,6 +23,8 @@
 
 <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="sv_SE" data-type="vertical" data-theme="light" data-vanity="jane-strandberg-619a448a"><a class="LI-simple-link" href='https://se.linkedin.com/in/jane-strandberg-619a448a?trk=profile-badge'>Jane Strandberg</a></div>
 
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="wingerlang"><a class="LI-simple-link" href='https://se.linkedin.com/in/wingerlang?trk=profile-badge'>Johannes Winger-Lang</a></div>
+
 <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="mudhar"><a class="LI-simple-link" href='https://se.linkedin.com/in/mudhar?trk=profile-badge'>Ahmad Mudhar</a></div>
 
 <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="johannes-björk-8bb2922b"><a class="LI-simple-link" href='https://se.linkedin.com/in/johannes-bj%C3%B6rk-8bb2922b?trk=profile-badge'>Johannes Björk</a></div>
@@ -39,7 +41,6 @@
 <!--
 
 no ok
-<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="wingerlang"><a class="LI-simple-link" href='https://se.linkedin.com/in/wingerlang?trk=profile-badge'>Johannes Winger-Lang</a></div>
 
 not public
 
