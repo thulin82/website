@@ -198,7 +198,19 @@ Redirect /phpmvc-v2 /phpmvc
 Redirect 301 /kunskap/anvand-lydias-formularklass-cform-for-formularhantering	/kunskap/cform-en-php-klass-for-att-skapa-presentera-och-validera-html-formular
 
 #
+# Hangout rum
+#
+Redirect /hangout1  https://hangouts.google.com/call/y7r6gvdu4rehpfxeenuk5qujzee
+Redirect /hangout2  https://hangouts.google.com/call/j2luzm2xorbyvgd3nf5qcqk4tye
+Redirect /hangout3  https://hangouts.google.com/call/lzjzs5rbqzgddjhb3ybh6ifa6ye
+Redirect /hangout4  https://hangouts.google.com/call/qgl7zq55ifg4ngzmf35imgnzsae
+Redirect /hangout5  https://hangouts.google.com/call/kcmxdumbtjectfjq7w546anhqie
+Redirect /hangout6  https://hangouts.google.com/call/ddztaxbxofh7bgydtkxxyiupnue
+Redirect /hangout7  https://hangouts.google.com/call/xuy4t4yllfbjpegge3swlw5pome
+Redirect /hangout8  https://hangouts.google.com/call/5lzjila75jdmbht564lhelbtcue
+Redirect /hangout9  https://hangouts.google.com/call/hdznydsbrfbqlfzqx4he2xmf5me
 Redirect /hangout	https://hangouts.google.com/call/klwimzxpaulsxavkzhvgy4efdya
+
 Redirect /adobe		http://connect.sunet.se/dbwebb
 Redirect /klassrum	http://connect.sunet.se/dbwebb
 Redirect /msdnaa	https://docs.google.com/spreadsheet/viewform?formkey=dFR3OVBubTNzNmVUclFsTDVKc3RXWEE6MQ#gid=0

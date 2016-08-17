@@ -1,15 +1,16 @@
 ---
 author: mos
 revision:
-  "2016-03-14": (E, mos) Länk till IRC basic commands.
-  "2016-01-15": (D, mos) Stycke om Gitter.
-  "2014-08-21": (C, mos) Lade till stycke om statistik.
-  "2013-03-12": (B, mos) Bytte ut XChat mot HexChat.
-  "2012-09-01": (A, mos) Första utgåvan.
+    "2016-08-16": (F, mos) Lade till hangouts.
+    "2016-03-14": (E, mos) Länk till IRC basic commands.
+    "2016-01-15": (D, mos) Stycke om Gitter.
+    "2014-08-21": (C, mos) Lade till stycke om statistik.
+    "2013-03-12": (B, mos) Bytte ut XChat mot HexChat.
+    "2012-09-01": (A, mos) Första utgåvan.
 updated: "2016-01-15 13:19:55"
 created: "2012-08-09 06:59:55"
 ...
-Chatta med IRC och Gitter
+Chatta med IRC, Gitter och Hangouts
 ==================================
 
 I kurserna används IRC och Gitter som chatt-kanaler för umgänge och handledning.
@@ -123,3 +124,25 @@ Kurspaket webprog:
 * [oophp](https://gitter.im/mosbth/oophp)
 * [phpmvc](https://gitter.im/mosbth/phpmvc)
 * [javascript](https://gitter.im/mosbth/javascript)
+
+
+
+Hangouts i olika rum {#hangout}
+--------------------------------------------------------------
+
+I kurserna har vi labbhandledning via Google Hangouts. Där kan man ställa frågor, chatta -- via video om man så vill, och dela sin skärm.
+
+Ibland är det lärarledda hangouts och ibland kan du som student fixa din egen studiegrupp i ett av rummen.
+
+Vi har skapat 10 rum i hangouts, det första är samlingsrummet och de andra är grupprum (1-9), om man nu kan säga så.
+
+* [dbwebb.se/hangout](https://dbwebb.se/hangout)
+* [dbwebb.se/hangout1](https://dbwebb.se/hangout1)
+* [dbwebb.se/hangout2](https://dbwebb.se/hangout2)
+* [dbwebb.se/hangout3](https://dbwebb.se/hangout3)
+* [dbwebb.se/hangout4](https://dbwebb.se/hangout4)
+* [dbwebb.se/hangout5](https://dbwebb.se/hangout5)
+* [dbwebb.se/hangout6](https://dbwebb.se/hangout6)
+* [dbwebb.se/hangout7](https://dbwebb.se/hangout7)
+* [dbwebb.se/hangout8](https://dbwebb.se/hangout8)
+* [dbwebb.se/hangout9](https://dbwebb.se/hangout9)

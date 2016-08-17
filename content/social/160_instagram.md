@@ -10,7 +10,7 @@ Vi är aktiva på Instagram i form av hashtaggen `#dbwebb`. Tagga ditt instagram
 
 [Senaste på Instagram `#dbwebb` »](https://www.instagram.com/explore/tags/dbwebb/)
 
-[Senaste på Instagram `#bthril` »](https://www.instagram.com/explore/tags/bthirl/)
+[Senaste på Instagram `#bthirl` »](https://www.instagram.com/explore/tags/bthirl/)
 
 
 <hr>
