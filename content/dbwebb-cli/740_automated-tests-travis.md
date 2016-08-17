@@ -36,7 +36,7 @@ Följande kursrepon är ännu inte överförda i senaste versionen av automatise
 
 
 
-Konfigurering på Travis {#config}
+Konfigurering av testera {#config}
 ----------------------------------
 
 Varje kursrepo har en konfigurationsfil `.travis.yml` respektive `circle.yml` som styr vad som testas. I princip är det den [lokala utvecklingsmiljön](development-environment) som används via följande kommandosekvens.
@@ -45,4 +45,4 @@ Varje kursrepo har en konfigurationsfil `.travis.yml` respektive `circle.yml` so
 $ make automated-tests-prepare automated-tests-check automated-tests-run
 ```
 
-Om du har installerat en lokal utvecklingsmiljö så kan du alltså köra exakt samma tester som körs via Travis och CircleCI.
+Om du har installerat en lokal utvecklingsmiljö så kan du alltså köra exakt samma tester lokalt.
