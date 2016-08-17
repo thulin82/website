@@ -40,17 +40,43 @@ views:
                         data:
                             meta:
                                 type: content
+                                route: block/hangout
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: block/lararteam
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: block/social
+
+    columns3:
+        region: columns-above
+        template: default/columns
+        sort: 3
+        data:
+            class: col3
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
                                 route: block/github-community
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: block/social
+                                route: block/alumni
                     column-3:
                         data:
                             meta:
                                 type: content
-                                route: block/alumni
+                                route: block/empty
+
 
 ...
 <!--
