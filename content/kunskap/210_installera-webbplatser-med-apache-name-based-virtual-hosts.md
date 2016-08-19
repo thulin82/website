@@ -97,7 +97,7 @@ sudo vim linux.dbwebb.se.conf
 
 Den färdiga filen `linux.dbwebb.se.conf` kan se ut så här för min egen användare mos. Du kan behöva ändra sökvägarna så de passar till din användare.
 
-```text
+```html
 <VirtualHost *:80>
     ServerAdmin mos@linux.dbwebb.se
 
@@ -174,7 +174,7 @@ sudo apachectl stop
 
 En variant av konfigfilen skulle kunna se ut så här, om man väljer att använda en form av alias, variabel, som är tillgänglig i konfigurationsfilen. På [Apache-språk heter det Define](http://httpd.apache.org/docs/2.4/mod/core.html#define).
 
-```text
+```html
 <VirtualHost *:80>
     Define site linux.dbwebb.se
     Define path /home/mos/vhosts
@@ -248,7 +248,3 @@ Namnbaserade virtuall hostar med Apache är ett bra sätt att köra flera webbpl
 När man nu, som vi gjort, kombinerar detta med servar i VirtualBox, så får du en möjlighet att köra många webbplatser och att köra dem på många olika servrar som kan vara konfigurerade på olika sätt. Det kan vara ett kraftfullt verktyg för en webbprogrammerare.
 
 Om du stöter på problem så kan du alltid fråga i forumet. Det finns en egen tråd om [Apache Name-based Virtual Hosts](t/4341).
-
-
-
-
