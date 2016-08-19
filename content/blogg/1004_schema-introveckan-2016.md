@@ -40,7 +40,7 @@ Info om aktiviteterna {#info}
 
 **Tisdag till fredag förmiddag:** Klassen delas in i grupper och har genomgång av bl.a. labbmiljön med Andreas och Kenneth. Salarna vi använder är H429 och H430.  
 
-**Tisdag eftermiddag:** Studievägledning och IT informerar.  
+**Tisdag eftermiddag:** Studievägledning och IT informerar. Sal G340. 
 
 **Onsdag eftermiddag:** Vi samlas inne i Karlskrona, Hoglands Park. Ta buss 1 eller 7 och hoppa av vid hållplatsen "Hoglands Park" så syns vi där.  
 
@@ -60,7 +60,7 @@ För att förbereda er:
 * [Guide](https://www.geocaching.com/guide/)  
 * [Map Karlskrona](https://www.geocaching.com/map/#?ll=56.17449,15.57848&z=14)  
 
-**14:30-15:00 har biblioteket informationsträff.**  
+**14:30-15:00 har biblioteket informationsträff.**  Plats biblioteket.
 
 **Fredag eftermiddag:** Studentkåren har planerat in aktiviteter.
 
