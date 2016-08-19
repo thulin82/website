@@ -84,4 +84,20 @@ För er som läser på distans kan det vara en bra idé att börja så tidigt so
 Kika gärna på [introduktionsveckan](http://www.bthstudent.se/ny-student/introduktionsveckan/). Där kommer det dyka upp nyttig information från studentkåren om deras aktiviteter. Deras aktiviteter börjar redan den 20:e augusti och håller på i två veckor. Under första veckan börjar de sina aktiviteter efter kl. 15:00.
 
 
+
+Logg för vad som hände under introveckan {#logg}
+-----------------------------------
+
+Här loggar vi det som hänt under veckan och länkar till vissa delar av det material som gicks igenom.
+
+
+<!--
+###Måndagen
+
+* [Uppropsfilm via youtube](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_strrmFRWhLnPJzViNcwee) (bland annat). 
+* Mikaels minnesnotering om [instruktionen om vad han skall säga på uppropet](https://goo.gl/EbCkbM). Checka av och se om han fick med allt...
+
+-->
+
+
 /Andreas och Kenneth
