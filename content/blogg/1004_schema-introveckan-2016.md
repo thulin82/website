@@ -109,9 +109,13 @@ I match om tredje pris möttes lag Badboll mot Vi i femman.
 
 
 
-###Tisdagen 23/8 {#dag2}
+###Tisdagen 23/8 {#dag2}  
 
-* [Tisdagens genomgång](https://docs.google.com/presentation/d/10H-PgqcBb5Af9S5cXiJz107LqgIDRYsUM5Hx_-VbcuI/).
+Vi går gemensamt igenom lite information kring studerande vid BTH och dbwebb-kurserna. Vi kikar på nyttiga länkar och pratar om lite "kring-verktyg" som används under kurstiden.  
+
+Det finns även en [Hangout](https://dbwebb.se/irc#hangout) igång för de som inte är på plats.  
+
+* [Tisdagens slides](https://docs.google.com/presentation/d/10H-PgqcBb5Af9S5cXiJz107LqgIDRYsUM5Hx_-VbcuI/).
 
 
 
