@@ -113,7 +113,7 @@ I match om tredje pris möttes lag Badboll mot Vi i femman.
 
 Vi går gemensamt igenom lite information kring studerande vid BTH och dbwebb-kurserna. Vi kikar på nyttiga länkar och pratar om lite "kring-verktyg" som används under kurstiden.  
 
-Det finns även en [Hangout](https://dbwebb.se/irc#hangout) igång för de som inte är på plats.  
+Det finns även en [Hangout](https://dbwebb.se/irc#hangout) igång, mellan 10:00 och 12:00, för de som inte är på plats.  
 
 * [Tisdagens slides](https://docs.google.com/presentation/d/10H-PgqcBb5Af9S5cXiJz107LqgIDRYsUM5Hx_-VbcuI/).
 
