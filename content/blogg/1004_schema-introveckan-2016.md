@@ -109,7 +109,7 @@ I match om tredje pris möttes lag Badboll mot Vi i femman.
 
 ###Tisdagen 23/8 {#dag2}
 
-Info kommer.
+* [Tisdagens genomgång](https://docs.google.com/presentation/d/10H-PgqcBb5Af9S5cXiJz107LqgIDRYsUM5Hx_-VbcuI/).
 
 
 
