@@ -91,13 +91,18 @@ Logg för vad som hände under introveckan {#logg}
 Här loggar vi det som hänt under veckan och länkar till vissa delar av det material som gicks igenom.
 
 
-<!--
-###Måndagen
 
-* [Uppropsfilm via youtube](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_strrmFRWhLnPJzViNcwee) (bland annat). 
+###Måndagen 22/8 {#dag1}
+
+* [Film där du kan hänga med Mikael runt i BTHs lokaler](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_strrmFRWhLnPJzViNcwee) (bland annat). 
 * Mikaels minnesnotering om [instruktionen om vad han skall säga på uppropet](https://goo.gl/EbCkbM). Checka av och se om han fick med allt...
 
--->
+
+
+Avslutningsvis {#avslut}
+-----------------------------------
+
+Hör av dig i forum, chatt eller mail om du har frågor.
 
 
 /Andreas och Kenneth
