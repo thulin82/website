@@ -107,8 +107,9 @@ I match om tredje pris möttes lag Badboll mot Vi i femman.
 
 
 
-###Tsdagen 23/8 {#dag2}
+###Tisdagen 23/8 {#dag2}
 
+Info kommer.
 
 
 
