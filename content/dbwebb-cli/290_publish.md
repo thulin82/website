@@ -16,20 +16,20 @@ Om du är intresserad av vad som sker bakom kommandot `dbwebb publish` så kan d
 
 
 
-Snabbare publish med `fastpublish` {#fastpublish}
+Snabbare publish med `publishfast` {#publishfast}
 --------------------------------------
 
 Man kan göra en snabbare publish som hoppar över valideringsfasen.
 
 ```text
-$ dbwebb fastpublish kmom01
+$ dbwebb publishfast kmom01
 ```
 
 Att publicera snabbt kan var bra om man sitter och testar små ändringar och vill se om de fungerar.
 
 
 
-Felsök publiserad kod med `purepublish` {#purepublish}
+Felsök publiserad kod med `publishpure` {#publishpure}
 --------------------------------------
 
 Man kan göra en snabb publish som även hoppar över minifieringsfasen. Det är bra om du vill felsöka via de radnummer som anges i den publiserade koden. Minifieringsfasen ändrar radnumreringen i din källkod och det kan ibland vara enklare att felsöka på ominifierad kod.
@@ -37,7 +37,7 @@ Man kan göra en snabb publish som även hoppar över minifieringsfasen. Det är
 Publicera din kod oförvanskad och icke minifierad.
 
 ```text
-$ dbwebb purepublish kmom01
+$ dbwebb publishpure kmom01
 ```
 
 Bra för felsökning kopplad till radnummer.
