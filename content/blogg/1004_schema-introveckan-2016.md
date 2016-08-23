@@ -122,6 +122,15 @@ För programstudenter på distans finns mer information om introveckan i [forume
 
 
 
+###Onsdagen 24/8 {#dag3}  
+
+Vi fokuserar på att få ihop en labbmiljö åt alla. En som fungerar och känns bekväm för att hantera kursen Webbteknologier (htmlphp).  
+
+Det finns även en [Hangout](https://dbwebb.se/irc#hangout) igång, mellan 10:00 och 12:00, för de som inte är på plats. 
+
+En summering av Hangouten från tisdagen: [finns här](https://dbwebb.se/forum/viewtopic.php?f=30&t=5510#p45164)  
+
+ 
 
 Avslutningsvis {#avslut}
 -----------------------------------
