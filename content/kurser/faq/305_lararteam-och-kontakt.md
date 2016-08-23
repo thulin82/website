@@ -28,7 +28,7 @@ Lärarteamet består av:
 Utökat Lärarteam {#uteam}
 --------------------------------------
 
-Varje termin har vi ett större antal hjälplärare som hjälper till med handledning och rättning. Hjälplärare är ofta de studenter som går på campusprogrammet och som med gott betyg tar genomfört kursen de hjälper till i.
+Varje termin har vi ett större antal hjälplärare som hjälper till med handledning och rättning. Hjälplärare är ofta de studenter som går på campusprogrammet och som med gott resultat har genomfört kursen de hjälper till i.
 
 För hösten 2016 är följande hjälplärare, i olika omfattning.
 
