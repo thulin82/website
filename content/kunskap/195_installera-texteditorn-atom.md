@@ -2,9 +2,10 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2015-10-05": (C, mos) Not om externa beroenden för paket.
-  "2015-08-24": (B, mos) Not om Windows och Unix-stil på radslut.
-  "2015-03-31": (A, mos) Första utgåvan.
+    "2016-08-24": (D, mos) Bort blå ruta om LF.
+    "2015-10-05": (C, mos) Not om externa beroenden för paket.
+    "2015-08-24": (B, mos) Not om Windows och Unix-stil på radslut.
+    "2015-03-31": (A, mos) Första utgåvan.
 updated: "2015-08-24 08:36:21"
 created: "2015-03-31 09:10:29"
 ...
@@ -107,11 +108,13 @@ Vi vill använda radslut enligt Unix-style `\n`, också kallad LF. Det blir enkl
 
 Andra typer av radslut som du kan komma i kontakt med är Windows-style LF + CR `\n\r` och äldre Mac style CR `\r`.
 
+<!--
 [INFO]
 **Windows och Unix-stil på radslut**
 
 Om du sitter på Windows så behöver du installera en plugin för att få Unix-stil på dina radslut. Läs följande inlägg i forumet om hur du gör det, "[Unix line-endings i Atom för Windows](t/4438)".
 [/INFO]
+-->
 
 
 
@@ -181,6 +184,3 @@ En editor är ett oerhört viktigt arbetsverktyg för en webbprogrammerare. Oavs
 
 Har du tips, [förslag eller frågor om Atom](t/4054) så finns det en specifik forumtråd för det.
  
-
-
-
