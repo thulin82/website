@@ -136,7 +136,7 @@ Så här installerar jag mina paket från kommandoraden.
 *Notera att varje paket kan vara beroende av att ditt system har relaterade programvaror installerade. Du bör därför installera varje paket för sig så att du har koll på eventuella externa beroenden.*
 
 ```bash
-$ apm install linter linter-less linter-pylint linter-jscs linter-phpcs block-travel linter-jshint linter-phpmd linter-csslint linter-pep8 linter-shellcheck linter-htmlhint linter-php linter-xmllint remote-edit
+$ apm install linter linter-less linter-pylint linter-jscs linter-phpcs block-travel linter-jshint linter-phpmd linter-csslint linter-pep8 linter-shellcheck linter-htmlhint linter-php linter-xmllint
 ```
 
 
