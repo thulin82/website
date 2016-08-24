@@ -37,7 +37,7 @@ För hösten 2016 är följande hjälplärare, i olika omfattning.
 | Bild    | Vem         | Chatt | Kontakt och info |
 |---------|-------------|-------|------------------|
 | ![Rasmus](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Rasmus&nbsp;Appelkvist | TBA  | rasmus.a-91@hotmail.com |
-| ![Per](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Per&nbsp;Lennartsson | perlennartsson  | per7273@gmail.com |
+| ![Per](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Per&nbsp;Lennartsson | perlennartsson  | perlennartsson@outlook.com |
 | ![Emma](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Emma&nbsp;Thorén | emmtho  | emmtho9518@gmail.com |
 | ![Jesper](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Jesper&nbsp;Johnsson | TBA  | jesper.johnsson1995@hotmail.com |
 | ![David](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson | TBA  | divad1_agaren@hotmail.com |
