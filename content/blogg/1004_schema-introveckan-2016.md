@@ -130,6 +130,7 @@ Det finns även en [Hangout](https://dbwebb.se/irc#hangout) igång, mellan 10:00
 
 En summering av Hangouten från tisdagen: [finns här](https://dbwebb.se/forum/viewtopic.php?f=30&t=5510#p45164)  
 
+* [Onsdagens slides](https://docs.google.com/presentation/d/1gUQIiVTqeeMcXLYGhf1nsBh6tpcZzkubj20ZdcePEx0).
 
 
 ###Onsdagen eftermiddag --- Turftävling {#dag31}
@@ -153,6 +154,16 @@ Allt stabilt och nu är studenterna introducerade i Turf och har koll på Karlsk
 
 
 ###Torsdag 25/8 {#dag4}
+
+* [Torsdagens slides](https://docs.google.com/presentation/d/1sHpeThayzegucyS1iH6iVi2PvTtguO9CBwEQLfiAIBc/).
+
+Mer händer.
+
+
+
+###Fredag 26/8 {#dag4}
+
+* [Fredagens slides](https://docs.google.com/presentation/d/1y6duUK5V1Bgad6vhlIgGir3uRnS9Kgaaq67PtzMj4g0).
 
 Mer händer.
 
