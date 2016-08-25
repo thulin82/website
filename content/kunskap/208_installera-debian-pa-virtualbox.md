@@ -98,7 +98,6 @@ För att visa hur det fungerar så installerar vi SSH på servern.
 Men, innan vi gör det så behöver vi installera programmet `sudo` som låter oss köra program som root-användaren.
 
 Du kan se en [forumartikel om hur jag installerar `sudo`](t/4327) och samtidigt lägger in så att jag kan köra `sudo` utan att ange ett lösenord. Du kan göra likadant som jag gjorde.
-https://wiki.debian.org/SSH
 
 
 
@@ -206,7 +205,3 @@ Avslutningsvis {#avslutning}
 Nu har du kommit igång och du har den labbmiljö som krävs för att genomföra det första kursmomentet i kursen.
 
 Om du stöter på problem så kan du alltid [fråga i forumet om Utvecklings- Drift- och Servermiljö](forum/viewforum.php?f=23).
-
-
-
-
