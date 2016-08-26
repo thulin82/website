@@ -293,7 +293,7 @@ En webbplats innehåller ofta en header med en logo, titel på webbplatsen och k
 Först hämtar jag hem en bild som jag tänker använda som logo, jag sparar bilden i `img`-katalogen.
 
 ```text
-$ wget -O img/logo.jpg http://dbwebb.se/image/tema/trad/4.jpg?w=200
+$ wget -O img/logo.jpg "http://dbwebb.se/image/tema/trad/4.jpg?w=200"
 ```
 
 Så här kan det se ut i HTML-koden.
