@@ -117,6 +117,10 @@ Här kan ni se en översikt över var ni kommer ifrån. Ni är utspridda över s
 
 Det tar lite tid att ladda alla orterna i kartan, varje ortsnamn geokodas av Googles API, så de ploppar fram efterhand.
 
+Om jag bara lyckas få min karta ovan att fungera dynamiskt, så borde det se ut så här.
+
+[FIGURE src=/image/snapht16/var-bor-alla-distansare.png caption="Skärmdump av kartan som fungerar lokalt hos Mikael..."]
+
 
 
 Uppropet {#uppropet}
