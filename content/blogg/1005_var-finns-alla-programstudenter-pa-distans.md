@@ -189,5 +189,7 @@ Du kan säkert tycka det är mycket att sätta dig in i på en gång. Det är de
 
 Hör av dig i hangout, forum, chatt eller mail om du har frågor.
 
+Här är en [egen tråd i forumet om uppropet](t/5527). Fråga gärna där.
+
 
 /Mikael och resten av lärarteamet
