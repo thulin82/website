@@ -59,13 +59,13 @@ Repetera dina PHP-kunskaper. Kika snabbt igenom guiderna "[Kom i gång med PHP p
 
 Du har koll på MySQL, eller hur? Annars hjälper dig följande artiklar att komma igång. "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)", "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)" och "[Kom igång med PHP PDO och MySQL](kunskap/kom-igang-med-php-pdo-och-mysql)".
 
-Du kan databasen SQLite, annars finns [guiden som visar hur du kommer igång med SQLite](htmlphp/me/kmom06/guide.php?id=sqlite20).
+Du kan databasen SQLite, annars finns [guiden som visar hur du kommer igång med SQLite](kunskap/kom-igang-med-databasen-sqlite) samt "[Kom igång med SQLite och PHP PDO](kunskap/kom-igang-med-sqlite-och-php-pdo)".
 
 I kursen används Git och GitHub. Om du inte kan det så jobbar du igenom guiden "[Kom igång med Git och Github](kunskap/kom-igang-med-git-och-github)". 
 
 Anax är en webbmall för att bygga enklare PHP-drivna webbplatser, [läs om dess uppbyggnad](kunskap/anax-en-hallbar-struktur-for-dina-webbapplikationer).
 
-Du har koll på din labbmiljö och BTHs driftserver. Här är [artiklar om labbmiljö och driftsmiljö](kunskap/kategori/labbmiljo).
+Du har koll på din labbmiljö och BTHs driftserver. Här är [artiklar om labbmiljö och driftsmiljö](labbmiljo).
 
 
 

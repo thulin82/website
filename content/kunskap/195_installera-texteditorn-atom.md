@@ -95,7 +95,7 @@ Standardinställningen är att *soft tabs* används. Låt det vara på det viset
 Soft tabs betyder att en tab ersätts med ett motsvarande antal mellanslag. Det gör att det blir enklare att flytta filer mellan olika editorer och användare som kan ha olika inställningar.
 
 Ställ in *tab length* till 4 mellanslag.
-  
+ 
 [FIGURE src=/image/atom/atom-tab-length.png caption="Använd 4 mellanslag för att ersätta en tab."]
 
 Olika kodstandarder kan ha olika rekommendationer om storleken på en tab. De vanliga inställningarna är 2 eller 4 mellanslag. I kurserna använder vi 4.
@@ -106,7 +106,18 @@ Olika kodstandarder kan ha olika rekommendationer om storleken på en tab. De va
 
 Vi vill använda radslut enligt Unix-style `\n`, också kallad LF. Det blir enklast så, för en webbprogrammerare.
 
+Du kan se vilket radslut som används, genom att titta nere till höger. Öppna en ny fil (`ctrl-n`) och kika.
+
+[FIGURE src=/image/snapht16/atom-crlf-to-lf.png caption="På Windows är radbrytning CRLF standard."]
+
+För att ändra filens radslut så klicka på (i detta fallet) CRLF och byt till LF. Det skall se ut så här.
+
+[FIGURE src=/image/snapht16/atom-lf.png caption="Använd alltid Unix style radbrytning LF."]
+
+Det finns en formutråd som visar hur du byter default radbrytning till LF.
+
 Andra typer av radslut som du kan komma i kontakt med är Windows-style LF + CR `\n\r` och äldre Mac style CR `\r`.
+
 
 <!--
 [INFO]
