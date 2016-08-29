@@ -2,6 +2,7 @@
 author: mos
 category: webbprogrammering
 revision:
+    "2016-08-29": (E, mos) Mer info om att fixa LF.
     "2016-08-24": (D, mos) Bort blå ruta om LF.
     "2015-10-05": (C, mos) Not om externa beroenden för paket.
     "2015-08-24": (B, mos) Not om Windows och Unix-stil på radslut.
@@ -114,9 +115,11 @@ För att ändra filens radslut så klicka på (i detta fallet) CRLF och byt till
 
 [FIGURE src=/image/snapht16/atom-lf.png caption="Använd alltid Unix style radbrytning LF."]
 
-Det finns en formutråd som visar hur du byter default radbrytning till LF.
+Det finns en [forumtråd som visar hur du byter default radbrytning till LF](f/45202).
 
-Andra typer av radslut som du kan komma i kontakt med är Windows-style LF + CR `\n\r` och äldre Mac style CR `\r`.
+Förutom Windows style radbrytning LF + CR `\n\r` så kan du även komma i kontakt med äldre Mac style CR `\r`.
+
+Men vi kör alltid på LF.
 
 
 <!--
@@ -145,6 +148,8 @@ Atom har också ett kommandorads-interface till pakethanteringen. Det är trevli
 Så här installerar jag mina paket från kommandoraden. 
 
 *Notera att varje paket kan vara beroende av att ditt system har relaterade programvaror installerade. Du bör därför installera varje paket för sig så att du har koll på eventuella externa beroenden.*
+
+Det är inte nödvändigt att du installerar paketen nu, du kan ta det som det kommer, lite senare.
 
 ```bash
 $ apm install linter linter-less linter-pylint linter-jscs linter-phpcs block-travel linter-jshint linter-phpmd linter-csslint linter-pep8 linter-shellcheck linter-htmlhint linter-php linter-xmllint
