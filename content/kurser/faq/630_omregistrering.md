@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-08-29": (F, mos) Tog bort onödiga, icke fungerande länkar.
     "2016-07-05": (E, mos) Omregistrering för HT16 kurstillfällen.
     "2015-12-18": (D, mos) Omregistrering för VT16 kurstillfällen.
     "2015-08-26": (C, mos) Fler kurstillfällen för omregistrering inför ht15 samt förklaring av läsperioder.
@@ -30,7 +31,7 @@ Sist jag var där så fanns ansökningsblanketten under ["Mina e-tjänster - Ans
 
 Om din gamla kurskod skiljer sig från den nuvarande så anger du den gamla kurskoden, den som du tidigare var registrerad på.
 
-När det är klart -- om du får igenom din ansökan -- så får du en omregistrering i [Ladok](bth#ladok).
+När det är klart -- om du får igenom din ansökan -- så får du en omregistrering i studentdatabasen Ladok.
 
 Får du inte igenom din ansökan så får du pröva vid nästa kurstillfälle.
 
@@ -41,9 +42,9 @@ Kurstillfälle på ITs {#its}
 
 När du är omregistrerad så följer du det nya kurstillfället på ITs. Du skall *inte* lämna in redovisningar på ditt ursprungliga kurstillfälle. 
 
-Du får själv [lägga till dig på kurstillfället på ITs](t/102) (registreringsnyckel är "webbprogrammering"). 
+Du får själv lägga till dig på kurstillfället på ITs (registreringsnyckel är "webbprogrammering"). Välj först "Kurser -> Alla kurser" och därefter enligt bilden nedan.
 
-[FIGURE src=/image/skitch/20120118-itslearning-lagg-till-nya-kurser.jpg?w=w2 caption="Lägg till dig på rätt kurstillfälle på ITs."]
+[FIGURE src=/image/skitch/20120118-itslearning-lagg-till-nya-kurser.jpg?w=w2 caption="Lägg till dig på rätt kurstillfälle på ITs, sök efter kursens namn i kurskatalogen på ITs."]
 
 Det är viktigt att du ligger i rätt kurstillfälle. Varje kurstillfälle har rättningsfönster när kursmomenten rättas. Rättningsfönstret finns i den rekommenderade studieplanen. Du måste lämna in dina nya kursmoment enligt de tidplanerna för att du skall vara garanterad att få det rättat.
 
