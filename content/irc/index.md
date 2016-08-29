@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-08-29": (G, mos) Lade till gitter för kurspaketare.
     "2016-08-16": (F, mos) Lade till hangouts.
     "2016-03-14": (E, mos) Länk till IRC basic commands.
     "2016-01-15": (D, mos) Stycke om Gitter.
@@ -110,6 +111,7 @@ Följande kanaler finns.
 
 * [dbwebb](https://gitter.im/mosbth/dbwebb) (allmän kanal)
 * [webbprogrammering](https://gitter.im/mosbth/webbprogrammering) (för programstudenter)
+* [kurspaketare](https://gitter.im/mosbth/kurspaket) (för de som går något kurspaket)
 
 Kurspaket webutv:
 
