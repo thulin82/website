@@ -34,3 +34,6 @@
 [submodule "htdocs/repo/oopython"]
 	path = htdocs/repo/oopython
 	url = https://github.com/dbwebb-se/oopython.git
+[submodule "htdocs/repo/slides"]
+	path = htdocs/repo/slides
+	url = https://github.com/mosbth/slides.git
