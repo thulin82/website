@@ -18,6 +18,17 @@ Inspect the Makefile to find out whats actually happens.
 
 
 
+###Dependencies
+* Apache2 and PHP5 (with pecl and GD)
+```
+$ sudo apt-get install apache2 php5 libapache2-mod-php5 php5-dev php-pear php5-gd
+```
+
+* [Composer](https://getcomposer.org/download/)
+* [Yaml](https://dbwebb.se/t/5244)
+
+
+
 ###Fresh install
 
 Start by preparing your local development environment.
