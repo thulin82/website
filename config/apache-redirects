@@ -24,6 +24,8 @@ Redirect 301 /style     https://arkiv.dbwebb.se/style/
 #
 Redirect /cal https://calendar.google.com/calendar/embed?src=7fvj57e11e6ct1tahn81b0ngb0%40group.calendar.google.com&ctz=Europe/Stockholm
 
+Redirect /stream http://www.youtube.com/c/DbwebbSe/live
+
 
 
 #
