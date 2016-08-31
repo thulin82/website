@@ -3,9 +3,9 @@ author: mos
 revision:
     "2016-08-31": (E, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (D, mos) Bort med not om kursutveckling och länk till version 1.
-  "2015-08-27": (C, mos) Lade till länkar till introduktion om HTML och CSS.
-  "2015-08-17": (B, mos) Länk till forumet om statisk kodvalidering.
-  "2015-08-06": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
+    "2015-08-27": (C, mos) Lade till länkar till introduktion om HTML och CSS.
+    "2015-08-17": (B, mos) Länk till forumet om statisk kodvalidering.
+    "2015-08-06": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 Kmom01: Bygg en webbplats
 ==================================
