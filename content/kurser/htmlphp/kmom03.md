@@ -1,10 +1,11 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (D, mos) Bort med not om kursutveckling och länk till version 1.
-  "2015-08-24": (C, mos) Släppt till ht15.
-  "2015-08-06": (B, mos) Genomgången inför ht15.
-  "2015-03-17": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
+    "2016-08-31": (E, mos) Lade till rätt videoserie från youtube.
+    "2016-02-22": (D, mos) Bort med not om kursutveckling och länk till version 1.
+    "2015-08-24": (C, mos) Släppt till ht15.
+    "2015-08-06": (B, mos) Genomgången inför ht15.
+    "2015-03-17": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 Kmom03: Bygg multisida i PHP
 ==================================
@@ -58,7 +59,7 @@ Läs följande:
 
 Titta på följande:
 
-1. [Codecourse (phpacademy)](https://www.youtube.com/user/phpacademy), har flera videoserier om PHP. Kika på de fyra första i serien "[PHP Tips](https://www.youtube.com/playlist?list=PLBC2EFDE1797BC81F)" och se om du gillar den typen av läromaterial.
+1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 3.
 
 
 

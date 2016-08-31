@@ -1,8 +1,9 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
-  "2015-08-27": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
+    "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
+    "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
+    "2015-08-27": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 Kmom06: PHP, PDO och SQL
 ==================================
@@ -97,7 +98,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Fick du hjälp av SQLite-artikeln och dess kod, eller skrev du mycket kod själv?
 * Var det något som var extra utmanande i kursmomentet?
 * Nu när kursen närmar sig slutet, känns det som du har kommit in i HTML, CSS, PHP och SQL?
-
-
-
-

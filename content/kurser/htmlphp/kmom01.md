@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (D, mos) Bort med not om kursutveckling och länk till version 1.
+    "2016-08-31": (E, mos) Lade till rätt videoserie från youtube.
+    "2016-02-22": (D, mos) Bort med not om kursutveckling och länk till version 1.
   "2015-08-27": (C, mos) Lade till länkar till introduktion om HTML och CSS.
   "2015-08-17": (B, mos) Länk till forumet om statisk kodvalidering.
   "2015-08-06": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
@@ -69,7 +70,7 @@ Läs följande:
 
 Titta på följande:
 
-1. [Kom igång med PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-XEsrpZiaN-3mUJZFGyu-n), kika på video 1 och 2, bara för att få en känsla för hur det fungerar.
+1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 0 och 1.
 
 
 
@@ -136,7 +137,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du bekant med terminalen och Unix-kommandon sedan tidigare?
 * Gick det smärtfritt att installera labbmiljön eller fick du bekymmer?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-
-
-
-

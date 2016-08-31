@@ -1,8 +1,9 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
-  "2015-08-26": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
+    "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
+    "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
+    "2015-08-26": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 Kmom05: SQL och SQLite
 ==================================
@@ -57,7 +58,7 @@ Det finns inga artiklar.
 
 Titta på följande:
 
-Det finns inga videoförslag.
+1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
 
 
 
@@ -121,7 +122,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Var det lätt att förstå SQL eller kändes det som en helt ny teknik?
 * Hur gick det att utföra övningarna med enbart SQLite, var det något du fastnade på?
 * Hur gick det med övningarna i PDO och SQLite, var det något som tog extra mycket tid? 
-
-
-
-

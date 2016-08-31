@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
-  "2015-08-06": (B, mos) Genomgång inför ht15.
-  "2015-05-11": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
+    "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
+    "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
+    "2015-08-06": (B, mos) Genomgång inför ht15.
+    "2015-05-11": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 Kmom02: Bygg ut din webbplats
 ==================================
@@ -58,7 +59,7 @@ Titta på följande:
 
 1. [Kom i gång och installera Firebug som utvecklarverktyg]( coachen/kom-i-gang-och-installera-firebug-som-utvecklarverktyg).
 
-1. [Kom igång med PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-XEsrpZiaN-3mUJZFGyu-n), titta på video 2-11.
+1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 2.
 
 
 
@@ -115,7 +116,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur bekant är du med PHP och programmering rent allmänt, hur känns det att utveckla med PHP?
 * Vad tyckte du om PHP-labben, enkel eller utmanande?
 * Gjorde du någon av extrauppgifterna?
-
-
-
-

@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
-  "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
-  "2015-08-25": (B, mos) Genomgången och första versionen släppt.
-  "2015-06-03": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
+    "2016-08-31": (D, mos) Lade till rätt videoserie från youtube.
+    "2016-02-22": (C, mos) Bort med not om kursutveckling och länk till version 1.
+    "2015-08-25": (B, mos) Genomgången och första versionen släppt.
+    "2015-06-03": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 Kmom04: CSS och en styleväljare
 ==================================
@@ -53,7 +54,9 @@ Läs följande:
 
 ###Video  {#video}
 
-Det finns ingen video till detta kursmomentet.
+Titta på följande:
+
+1. Videoserien [Lär dig PHP](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_U0j3HFq9pTVWvr-YQvy0B) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 4.
 
 
 
