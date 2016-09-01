@@ -12,6 +12,10 @@ Kursen syftar till en orientering inom områden design och användbarhet, specif
 
 <!--more-->
 
+[WARNING]
+**Kursen är under utveckling. Ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/WARNING]
+
 
 
 Förkunskaper {#forkunskaper}

@@ -6,6 +6,10 @@ revision:
 Kmom05: Design
 ====================================
 
+[WARNING]
+**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/WARNING]
+
 Designa webbplats utifrån bild.
 
 (Olika typer av webbplatser kontra olika design).

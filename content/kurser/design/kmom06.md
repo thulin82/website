@@ -6,6 +6,10 @@ revision:
 Kmom06: Tema
 ====================================
 
+[WARNING]
+**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/WARNING]
+
 Bygg ett par teman. Något eget och något baserat på Bootstrap (elle rmotsvarande).
 
 (Olika språk, anpassa med int/loc) 

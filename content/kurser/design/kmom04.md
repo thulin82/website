@@ -6,6 +6,10 @@ revision:
 Kmom04: Bild
 ====================================
 
+[WARNING]
+**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/WARNING]
+
 Verktyg GIMP, inkscape.
 
 Shortcode för FIGURE.

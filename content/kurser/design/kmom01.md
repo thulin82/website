@@ -6,6 +6,10 @@ revision:
 Kmom01: LESS och responsiv design
 ====================================
 
+[INFO]
+**Kursmomentet är under utveckling --- men grunden finns på plats. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/INFO]
+
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
 Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Det handlar främst om hur vi, som programmerare, rent tekniskt kan förbereda webbplatserna för design och användbarhet. Allt för att vi skall vara förberedda när det kommer en webbdesigner, eller användbarhets-designer, och berättar hur webbplatsen skall se ut.

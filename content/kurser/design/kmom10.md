@@ -6,6 +6,10 @@ revision:
 Kmom10: Projekt och examination
 ====================================
 
+[WARNING]
+**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:

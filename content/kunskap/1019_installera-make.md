@@ -20,6 +20,9 @@ Men, Make är så mycket mer och det kan underlätta vardagen, för en webbprogr
 
 <!--more-->
 
+[WARNING]
+**Denna artikel är inte färdigskriven ännu. Den skall bli en del av kursen design hösten 2016.**
+[/WARNING]
 
 
 Läs mer {#mer}

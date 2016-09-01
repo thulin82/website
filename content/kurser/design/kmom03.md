@@ -6,6 +6,10 @@ revision:
 Kmom03: Färg
 ====================================
 
+[WARNING]
+**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/WARNING]
+
 Style för svart/vit, omvänt och lite färg samt mycket färg.
 
 SEO, beginners guide.

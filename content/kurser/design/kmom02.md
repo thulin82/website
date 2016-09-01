@@ -6,6 +6,10 @@ revision:
 Kmom02: Grid, layout och typografi
 ====================================
 
+[INFO]
+**Kursmomentet är under utveckling --- men grunden finns på plats. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
+[/INFO]
+
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
 
 Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*.
