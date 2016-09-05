@@ -160,7 +160,7 @@ Redirect /ramverk2      /kurser/ramverk2
 #
 # Where are all the course repos
 # 
-Redirect /kurser/javascript1/repo/   /repo/javascript1/
+Redirect /kurser/javascript1/repo   /repo/javascript1
 
 
 
