@@ -16,7 +16,7 @@ En enklare uppgift för att öva på att använda arrayer i JavaScript.
 
 <!--more-->
 
-Uppgiften går ut på att rita ut en spelplan som baddie kan interagera med, där spelplanen ska byggas med en array. Till förfogande finns ofullständig kod där vissa delar saknas och dessa ska fyllas i för att rita ut spelplanen. Baddie3 finns i kursrepot och du kan se den ofullständiga baddie3 [här](http://dbwebb.se/javascript1/repo/me/default/kmom04/baddie3/).
+Uppgiften går ut på att rita ut en spelplan som baddie kan interagera med, där spelplanen ska byggas med en array. Till förfogande finns ofullständig kod där vissa delar saknas och dessa ska fyllas i för att rita ut spelplanen. Baddie3 finns i kursrepot och du kan se den ofullständiga baddie3 [här](javascript1/repo/example/baddie/baddie2/).
 
 
 Förkunskaper {#forkunskaper}
@@ -88,7 +88,3 @@ Tips från coachen {#tips}
 Glöm inte att kontinuerligt testa det du gör, så att du snabbt hittar fel i koden.
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-

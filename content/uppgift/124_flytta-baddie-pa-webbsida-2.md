@@ -19,7 +19,7 @@ Uppgiften går ut på att få baddie att röra sig med hjälp av piltagenterna, 
 
 <!--more-->
 
-Baddie2 finns i kursrepot och du kan se och testa den ofullständiga baddie2 [här](javascript1/repo/me/default/kmom03/baddie2/).
+Baddie2 finns i kursrepot och du kan se och testa den ofullständiga baddie2 [här](javascript1/repo/example/baddie/baddie2/).
 
 
 
@@ -87,7 +87,3 @@ Tips från coachen {#tips}
 Glöm inte att kontinuerligt testa det du gör, så att du snabbt hittar fel i koden.
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-
