@@ -208,7 +208,7 @@ Scrapa information från en webbsida {#scrape}
 
 Att scrapa information från en webbsida innebär att man laddar hem webbsidan och låter ett program gå igenom innehållet på webbsidan för att hämta ut viss information.
 
-För att ta ett exempel. Förstasidan på dbwebb.se visar de tre senaste raderna från chatten. Säg nu att du vill åt den informationen för att använda den i något syfte. Bara som exempel alltså.
+För att ta ett exempel. Förstasidan på dbwebb.se visade (*i en tidigare version*) de tre senaste raderna från chatten. Säg nu att du vill åt den informationen för att använda den i något syfte. Bara som exempel alltså.
 
 Innan vi går vidare så vill jag bara poängtera att det inte alltid är önskvärt att scrapa en webbsidas innehåll. Det är inte heller säkert att det är uppenbart tillåtet att göra en sådan sak. Om du implementerar en dålig lösning kan det innebära att du lastar ned webbplatsen med dina requester. Kanske finns det ett API som du bör använda istället? Kanske är du ute och traskar i en grå area av vad som är tillåtet och inte. Innan du försöker scrapa information från en webbsida bör du dubbelkolla att det verkligen är det du vill göra. Sedan bör du implementera sedvanliga cachnings-algoritmer för att undvika att belasta webbplatsen.
 
@@ -315,7 +315,3 @@ Avslutningsvis {#avslutning}
 Du har nu fått ett par exempel på hur du kan lägga till moduler till Python och hur du kan bygga ut enkla skript till mer kompletta kommandon. Här har du en av Pythons styrkor som en blandning av riktigt programmeringsspråk och enklare skripthantering.
 
 Fråga gärna, eller kommentera artikeln i forumet. Artikeln har en [egen tråd](t/2973). 
-
-
-
-
