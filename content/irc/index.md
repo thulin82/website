@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-09-07": (H, mos) Utökade stycket om hangout.
     "2016-08-29": (G, mos) Lade till gitter för kurspaketare.
     "2016-08-16": (F, mos) Lade till hangouts.
     "2016-03-14": (E, mos) Länk till IRC basic commands.
@@ -148,6 +149,8 @@ Vi har skapat 1+10 rum i hangout. Det första är samlingsrummet (hangout) och d
 * [dbwebb.se/hangout](hangout)
 
 I samlingsrummet får vi plats 25 stycken och administratören behöver släppa in dig vid ditt allra första besök. Samlingsrummet måste startas igång av en administratör.
+
+I detta rummet håller vi schemalagda genomgångar och har labbhandledning.
 
 
 
