@@ -222,7 +222,9 @@ Redirect /hangout6  https://hangouts.google.com/call/ddztaxbxofh7bgydtkxxyiupnue
 Redirect /hangout7  https://hangouts.google.com/call/xuy4t4yllfbjpegge3swlw5pome
 Redirect /hangout8  https://hangouts.google.com/call/5lzjila75jdmbht564lhelbtcue
 Redirect /hangout9  https://hangouts.google.com/call/hdznydsbrfbqlfzqx4he2xmf5me
-Redirect /hangout	https://hangouts.google.com/call/klwimzxpaulsxavkzhvgy4efdya
+Redirect /hangout0	https://hangouts.google.com/call/klwimzxpaulsxavkzhvgy4efdya
+Redirect /hangout   https://hangouts.google.com/hangouts/_/dbwebb.se/dbwebb
+
 
 Redirect /adobe		http://connect.sunet.se/dbwebb
 Redirect /klassrum	http://connect.sunet.se/dbwebb

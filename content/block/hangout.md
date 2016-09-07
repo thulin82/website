@@ -3,6 +3,7 @@
 Videochatta med lärare och dina studentkollegor via Hangouts. Ett antal rum finns att tillgå.
 
 [hangout](hangout)
+[hangout0](hangout0)
 [hangout1](hangout1)
 [hangout2](hangout2)
 [hangout3](hangout3)

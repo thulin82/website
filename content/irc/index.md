@@ -134,17 +134,36 @@ Hangouts i olika rum {#hangout}
 
 I kurserna har vi labbhandledning via Google Hangouts. Där kan man ställa frågor, chatta -- via video om man så vill, och dela sin skärm.
 
-Ibland är det lärarledda hangouts och ibland kan du som student fixa din egen studiegrupp i ett av rummen.
+Ibland är det lärarledda hangouts och du kan fixa din egen studiegrupp i ett av rummen, med eller utan lärarstöd.
 
-Vi har skapat 10 rum i hangouts, det första är samlingsrummet och de andra är grupprum (1-9), om man nu kan säga så.
 
-* [dbwebb.se/hangout](https://dbwebb.se/hangout)
-* [dbwebb.se/hangout1](https://dbwebb.se/hangout1)
-* [dbwebb.se/hangout2](https://dbwebb.se/hangout2)
-* [dbwebb.se/hangout3](https://dbwebb.se/hangout3)
-* [dbwebb.se/hangout4](https://dbwebb.se/hangout4)
-* [dbwebb.se/hangout5](https://dbwebb.se/hangout5)
-* [dbwebb.se/hangout6](https://dbwebb.se/hangout6)
-* [dbwebb.se/hangout7](https://dbwebb.se/hangout7)
-* [dbwebb.se/hangout8](https://dbwebb.se/hangout8)
-* [dbwebb.se/hangout9](https://dbwebb.se/hangout9)
+###10 + 1 rum finns {#antal-rum}
+
+Vi har skapat 1+10 rum i hangout. Det första är samlingsrummet (hangout) och de andra är grupprum (hangout0-9). 
+
+
+
+####Samlingsrummet {#samling}
+
+* [dbwebb.se/hangout](hangout)
+
+I samlingsrummet får vi plats 25 stycken och administratören behöver släppa in dig vid ditt allra första besök. Samlingsrummet måste startas igång av en administratör.
+
+
+
+####Grupprum 0 till 9 {#grupprum}
+
+* [dbwebb.se/hangout0](hangout0)
+* [dbwebb.se/hangout1](hangout1)
+* [dbwebb.se/hangout2](hangout2)
+* [dbwebb.se/hangout3](hangout3)
+* [dbwebb.se/hangout4](hangout4)
+* [dbwebb.se/hangout5](hangout5)
+* [dbwebb.se/hangout6](hangout6)
+* [dbwebb.se/hangout7](hangout7)
+* [dbwebb.se/hangout8](hangout8)
+* [dbwebb.se/hangout9](hangout9)
+
+I grupprummen får vi plats 10 i varje rum och de är alltid öppna. Vill du bara ha ett grupprum för dig och dina studentkollegor så går det bra att ta ett av grupprummen.
+
+Grupprummen, ofta de med lägst nummer, kan också användas av lärare vid schemalagd handledning.
