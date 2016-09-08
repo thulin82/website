@@ -50,7 +50,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: ./block-ovrigt-material
+                                route: ./block-youtube
 
     columns-above-3:
         region: columns-above
@@ -76,6 +76,32 @@ views:
                             meta:
                                 type: content
                                 route: block/faq
+
+    columns-above-4:
+        region: columns-above
+        template: default/columns
+        sort: 4
+        data:
+            class: col3
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
+                                route: ./block-ovrigt-material
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: block/empty
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: block/empty
+
 
     columns-below-1:
         region: columns-below-NO
