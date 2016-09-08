@@ -1,10 +1,11 @@
 ---
 author: mos
-category: php
+category:
+    - php
+    - lab
 revision:
-  "2015-05-12": (A, mos) Första utgåvan i samband med kursen htmlphp version 2.
-updated: "2015-05-20 14:26:26"
-created: "2015-01-28 14:25:51"
+    "2016-09-08": (B, mos) Går att köra `php answer.php.
+    "2015-05-12": (A, mos) Första utgåvan i samband med kursen htmlphp version 2.
 ...
 PHP lab 2, arrayer
 ==================================
@@ -51,6 +52,8 @@ Materialet till labben skapas nu och sparas i din kurskatalog `me/kmom03/lab2` e
 
 Du kan testa dina lösningar genom att köra programmet `answer.php` i din webbläsare, via din lokala webbserver.
 
+Du kan också köra programmet [direkt i din terminal via `php answer.php`](t/5583).
+
 
 
 Krav {#krav}
@@ -90,7 +93,3 @@ Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 När du gör *publish* så körs även *validate*. Blir det för mycket fel när du kör *publish* så kan det bli enklare att bara göra *validate* till att börja med.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

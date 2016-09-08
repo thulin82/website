@@ -1,10 +1,12 @@
 ---
 author: mos
-category: php
+category:
+    - php
+    - lab
 revision:
-  "2015-08-27": (A, mos) Första utgåvan i samband med kursen htmlphp version 2.
-updated: "2015-08-27 14:11:28"
-created: "2015-01-28 14:27:13"
+    "2016-09-08": (C, mos) Går att köra `php answer.php.
+    "2016-02-18": (B, mos) lade till introduktionstext.
+    "2015-05-12": (A, mos) Första utgåvan i samband med kursen htmlphp version 2.
 ...
 PHP labb 5, PDO och SQLite
 ==================================
@@ -51,6 +53,8 @@ Materialet till labben skapas nu och sparas i din kurskatalog `me/kmom04/lab5` e
 
 Du kan testa dina lösningar genom att köra programmet `answer.php` i din webbläsare, via din lokala webbserver.
 
+Du kan också köra programmet [direkt i din terminal via `php answer.php`](t/5583).
+
 
 
 Krav {#krav}
@@ -88,7 +92,3 @@ Debugga och felsök genom att skriva ut variablernas olika innehåll med `echo`,
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
