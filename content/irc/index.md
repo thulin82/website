@@ -50,6 +50,13 @@ Det finns även [statistik för kanalen #wip](irssistats/wip.html) som är för 
 
 
 
+Vad har hänt senast i kanalen? {#senast}
+--------------------------------------------------------------
+
+Det finns en logg som visar de [senaste 100 inläggen i IRC-kanalen](irclog). Kika gärna vad som händer. I nästa steg så kanske du själv löser så du [alltid är inne på kanalen](t/4484).
+
+
+
 Klientprogramvara för IRC {#klient}
 --------------------------------------------------------------
 
