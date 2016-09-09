@@ -3,13 +3,14 @@ title: linux
 
 author: mos
 revision:
-  "2015-08-03": (B, mos) Klar med texter för kursmomenten.
-  "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
+    "2016-09-09": (C, mos) Bytte till rätt kursnamn.
+    "2015-08-03": (B, mos) Klar med texter för kursmomenten.
+    "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
 ...
 Kursen "linux"
 ==================================
 
-Kursen **Operativsystemet Linux**, a.k.a. *linux*, lär ut programmering med JavaScript och Node.js på serversidan i en Linux-miljö tillsammans med grunderna i operativsystemet Linux.
+Kursen **Programmera webbtjänster i Linux**, a.k.a. *linux*, lär ut programmering med JavaScript och Node.js på serversidan i en Linux-miljö tillsammans med grunderna i operativsystemet Linux.
 
 <!--more-->
 
