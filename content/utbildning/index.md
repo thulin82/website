@@ -30,7 +30,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: ./block-3
+                                route: ./block-16
 
     columns2:
         region: columns-above
@@ -80,7 +80,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: ./block-9
+                                route: ./block-3
 
     columns4:
         region: columns-above
@@ -105,7 +105,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: ./block-12
+                                route: ./block-9
 
     columns5:
         region: columns-above
@@ -130,7 +130,32 @@ views:
                         data:
                             meta:
                                 type: content
+                                route: ./block-12
+
+    columns6:
+        region: columns-above
+        template: default/columns
+        sort: 6
+        data:
+            class: col3
+            meta:
+                type: columns
+                columns:
+                    column-1:
+                        data:
+                            meta:
+                                type: content
                                 route: ./block-14
+                    column-2:
+                        data:
+                            meta:
+                                type: content
+                                route: block/empty
+                    column-3:
+                        data:
+                            meta:
+                                type: content
+                                route: block/empty
 
 
 ...
