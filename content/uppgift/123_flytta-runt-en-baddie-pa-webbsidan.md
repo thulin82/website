@@ -2,12 +2,13 @@
 author: sylvanas
 category: webbprogrammering
 revision:
-  "2016-04-06": (F, mos) Rätt länk till exempelprogram.
-  "2015-08-27": (E, mos) Uppgraderad till dbwebb-cli version 2.
-  "2015-02-12": (D, mos) Om att skriva fritt efter eget huvud.
-  "2014-08-19": (C, Sylvanas) Instruktion för kopiering av material tillagt.
-  "2014-08-11": (B, mos) Genomgången och mindre redigeringar i texten.
-  "2014-06-16": (A, Sylvanas) Första utgåvan i samband med kursen javascript1.
+    "2016-09-12": (G, mos) Rätt länk till exempelprogram.
+    "2016-04-06": (F, mos) Rätt länk till exempelprogram.
+    "2015-08-27": (E, mos) Uppgraderad till dbwebb-cli version 2.
+    "2015-02-12": (D, mos) Om att skriva fritt efter eget huvud.
+    "2014-08-19": (C, Sylvanas) Instruktion för kopiering av material tillagt.
+    "2014-08-11": (B, mos) Genomgången och mindre redigeringar i texten.
+    "2014-06-16": (A, Sylvanas) Första utgåvan i samband med kursen javascript1.
 updated: "2016-04-06 09:54:55"
 created: "2014-06-18 08:47:26"
 ...
@@ -18,7 +19,7 @@ En enklare uppgift för att öva på att använda variablar och skapa if- eller 
 
 <!--more-->
 
-Uppgiften går ut på att få en figur, en baddie, att röra sig på skärmen med hjälp av piltangenterna. Till förfogande finns ofullständig kod där vissa delar saknas och dessa ska fyllas i för att få baddie att röra sig. Baddie1 finns i kursrepot och du kan se den ofullständiga baddie1 [här](javascript1/repo/me/kmom02/baddie1/).
+Uppgiften går ut på att få en figur, en baddie, att röra sig på skärmen med hjälp av piltangenterna. Till förfogande finns ofullständig kod där vissa delar saknas och dessa ska fyllas i för att få baddie att röra sig. Baddie1 finns i kursrepot och du kan se den ofullständiga baddie1 [här](repo/javascript1/example/baddie/baddie1).
 
 
 Förkunskaper {#forkunskaper}
@@ -89,7 +90,3 @@ Det ska vara roligt att koda också, så lägg gärna ner lite tid på att hitta
 Om du vill testa hur långt dina vingar bär så försök hitta olika sätt att lösa uppgiften på.
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-
