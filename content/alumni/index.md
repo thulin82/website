@@ -37,16 +37,14 @@ views:
 Alumni
 ===========================
 
+Mer att notera i form av alumni aktiviteter och evenemang.
 
-
-GrillCon
-
-Innebandy
+Programråd
 
 Fredagslunch
 
 Mentorskap
 
-Projekt
+Projektkurser
 
 Exjobb
