@@ -45,14 +45,16 @@ Vi spelar innebandy varje torsdag klockan 15:30 -- 17:00 i Gräsviskhallen som l
 
 Här spelar lärarlaget, webbprogrammeringsstudenter, alumnis och andra hangarounds i en salig röra.
 
-Allt för att skapa nätverk, kontakter och för att hålla oss aktiva.
+[FIGURE src=/image/innebandy/action1.jpg?w=900&h=250&cf&a=0,0,20,10 caption="Även en webbprogrammerare bör hålla sig i form."]
 
-[FIGURE src=/image/innebandy/action1.jpg?w=900&h=200&cf&a=0,0,20,10 caption="Även en webbprogrammerare bör hålla sig i form."]
+Allt för att skapa nätverk, kontakter och för att hålla oss aktiva.
 
 
 
 Regler {#regler}
 ---------------------------
+
+[FIGURE src=/image/innebandy/action3.jpg?w=900&h=250&cf&a=15,10,0,15 caption="Att skjuta stenhårt är tillåtet i regelverket."]
 
 Klart vi har regler, hur skulle det vara annars. Vi håller oss till dem så gott det går.
 
