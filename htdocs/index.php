@@ -24,6 +24,7 @@ call_user_func(function () use ($app) {
 
 
 
+//$app->session();
 $app->loadRoutes();
 $app->router->handle();
 $app->theme->render();
