@@ -134,8 +134,8 @@ $ tmux ls
 Du har nu två sessioner som du kan göra *attach* till. Den första siffran är sessionens nummer och du kan attacha till den med `tmux a` eller `tmux attach`, så här.
 
 ```bash
-tmux attach 0
-tmux a 0
+tmux attach -t 0
+tmux a -t 0
 ```
 
 Du har nu två sessioner som du kan växla mellan. Det som är riktigt bra med detta är att du kan ha en session på en server, oavsett från vilken klient du loggar in, så kan du koppla dig till samma session. Det blir som att koppla upp sig till en helt färdig miljö. Detta är en av styrkorna med terminal multiplexer, att kunna spara en session som man jobbar med och ha tillgång till den från en annan klient.
