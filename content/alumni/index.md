@@ -12,6 +12,7 @@ views:
         template: default/columns
         sort: 1
         data:
+            title: Alumni - evenemang och aktiviteter
             class: col3
             meta:
                 type: columns
@@ -37,16 +38,14 @@ views:
 Alumni
 ===========================
 
+Mer att notera i form av alumni aktiviteter och evenemang. Efterhand skall de få var sin liten ruta ovanför.
 
-
-GrillCon
-
-Innebandy
+Programråd
 
 Fredagslunch
 
 Mentorskap
 
-Projekt
+Projektkurser
 
 Exjobb

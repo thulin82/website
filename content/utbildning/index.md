@@ -130,7 +130,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: ./block-12
+                                route: ./block-17
 
     columns6:
         region: columns-above
@@ -145,12 +145,12 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: ./block-14
+                                route: ./block-12
                     column-2:
                         data:
                             meta:
                                 type: content
-                                route: block/empty
+                                route: ./block-14
                     column-3:
                         data:
                             meta:

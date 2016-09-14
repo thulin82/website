@@ -1,9 +1,9 @@
 ####Innebandy
 
-[FIGURE src="/image/snapht16/linkedin.png?w=c8&h=100&cf&sharpen&a=0,0,0,0" caption="Johannes är med i alumni-nätverk."]
+[FIGURE src="/image/innebandy/action2.jpg?w=c8&h=100&cf&sharpen&a=0,0,0,0" caption="Vi håller igång!"]
 
-Vi försöker hålla kontakten med varandra via alumnigrupper på Linkedin. Där ser vi var studiekompisar och andra årgångar tar vägen.
+Vi håller igång och spelar innebandy en gång i veckan. Där samlas lärarteam, annat BTH-folk, webbprogrammeringsstudenter tillsammans med alumnin.
 
-Nätverk är viktiga, man vet aldrig när ens gamla studiekompis vill anställa en --  eller när man själv behöver rekrytera någon.
+Här bygger vi nätverk genom att slå varandra med klubbor och boll, samtidigt som vi håller oss i form.
 
-[Se våra alumnigrupper Linkedin »](social/linkedin)
+[Läs mer om vår innebandy »](alumni/innebandy)
