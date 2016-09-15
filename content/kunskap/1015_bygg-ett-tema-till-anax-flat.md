@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-06-07: (PA, mos) Pre-release.
+    2016-09-13: (A, mos) Testad och släppt.
 category:
     - kurs-design
     - less
@@ -72,7 +72,7 @@ Kika nu runt bland filerna och öppna dem i din texteditor. Bekanta dig med dem,
 Verktyg för att kompilera och linta LESS {#less}
 -------------------------------
 
-Innan vi kan börja bygga vårt tema behöver vi en lokal utvecklingsmiljö för att kompilera LESS till CSS. Jag tänker installera en kompilator i form av NPM-paket.
+Innan vi kan börja bygga vårt tema behöver vi en lokal utvecklingsmiljö för att kompilera LESS till CSS. Jag tänker installera en LESS-kompilator i form av NPM-paket.
 
 
 
@@ -115,7 +115,7 @@ $ node_modules/.bin/csslint --version
 
 Kommandona ovan är exakt samma som utförs av makefilen vid `make npm-version`. Kika i filen `Makefile` för att se likheten.
 
-Vi kommer låta makefilen sköta kompilering och lintning. Det blir mindre att skriva.
+Vi kommer låta makefilen sköta kompilering och lintning. Det blir mindre att skriva, vi sparar tid.
 
 
 
@@ -211,10 +211,10 @@ Vad händer när det kommer uppdateringar till `normalize.css`? Ja, förr eller 
 Vad sägs om ett make *target* som gör `make upgrade` genom att hämta hem senaste versionerna av alla moduler? Jag tycker det låter som en bra idè. Så här kan det se ut i makefilen.
 
 ```text
-# target: upgrade-normalize - Download latest version of Normalize.
+# target: upgrade-normalize       - Upgrade LESS module - Normalize.
 .PHONY: upgrade-normalize
 upgrade-normalize:
-	@echo "$(ACTION)Upgrade LESS module - Normalize$(NO_COLOR)"
+	@echo $(call HELPTEXT,$@)
 
 	# Normalizer
 	wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O $(LESS_MODULES)/normalize.less
@@ -251,7 +251,7 @@ Till min hjälp har jag kunskapen om den template fil som används när HTML-kod
 
 Du bör nu kika igenom videoserien där jag visar hur jag bygger LESS modulen för `regions.less`. Videorna heter "[120 Anax Flat tema, regions.less*](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)".
 
-**Men**, du kan också låna den färdiga `regions.less` som du hittar i kursrepot under `example/anax-flat-theme/regions.less`. Kanske vill du hellre kika på videorna i lugn och ro lite senare.
+**Men**, du kan också låna den färdiga `regions.less` som du hittar i kursrepot under `example/anax-flat/theme/regions.less`. Kanske vill du hellre kika på videorna i lugn och ro lite senare.
 
 
 
@@ -261,7 +261,8 @@ Vill du köra utan videor så gör du så här.
 
 ```text
 # Kopiera filen regions.less från kursrepot, ungefär så här
-$ cp ../../example/anax-flat-theme/regions.less modules
+$ cp ../../example/anax-flat/theme/regions.less modules
+$ ls -l modules
 ```
 
 Lägg till så filen inkluderas i `modules.less`.
@@ -328,7 +329,7 @@ Jag lägger in den så att den importeras i `modules.less`. Jag kan nu testa att
 Dock, innan allt fungerar så behöver jag hämta hem JavaScript-filen också. Den sparar jag i katalogen `js`.
 
 ```bash
-$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.js -O js/responsive-menu.less
+$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.js -O js/responsive-menu.js
 ```
 
 Jag kan nu kompilera om stylen igen. Makefilen har redan inbyggt i sig att den kopierar katalogen `js` till rätt plats i Anax Flat under `htdocs/js`.
@@ -349,10 +350,10 @@ Nu kan du testa menyn genom att ladda om din webbläsare.
 Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av den responsiva menyn i fortsättningen.
 
 ```text
-# target: upgrade-responsive-menu - Download latest version of Responsive menu.
+# target: upgrade-responsive-menu - Upgrade LESS module - Responsive menu
 .PHONY: upgrade-responsive-menu
 upgrade-responsive-menu:
-	@echo "$(ACTION)Upgrade LESS module - Responsive menu$(NO_COLOR)"
+	@echo $(call HELPTEXT,$@)
 
 	# Responsive-menu
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
@@ -417,10 +418,10 @@ Make upgrade {#upgrade}
 Låt oss förbered makefilen för att uppgradera alla externa LESS moduler via en `make upgrade`.
 
 ```text
-# target: upgrade - Download latest version of all external LESS modules.
+# target: upgrade                 - Upgrade external LESS modules.
 .PHONY: upgrade
 upgrade: upgrade-normalize upgrade-responsive-menu
-	@echo "$(ACTION)Upgrade external LESS modules$(NO_COLOR)"
+	@echo $(call HELPTEXT,$@)
 ```
 
 Jag hoppas du ser hur en makefil kan vara till hjälp att hålla ditt projekt uppdaterat samtidigt som det kan spara din värdefulla tid.

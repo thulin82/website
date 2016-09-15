@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-09-13: (B, mos) Testad inför kursstart.
     2016-06-03: (A, mos) Första versionen.
 category:
     - kurs-design
@@ -48,7 +49,7 @@ Börja med en tom katalog {#tom}
 
 Låt oss börja från ingenting. En tom katalog. Skapa en ny katalog och döp den till `anax-flat`. Se till att katalogen ligger på en plats där du kan öppna den via din lokala webbserver.
 
-Om du jobbar i kursrepot så kan du skapa katalogen som `me/anax-flat`.
+Om du jobbar i kursrepot så kan du jobba i katalogen `me/anax-flat`. Den katalogen skall redan finnas i ditt kursrepo så jobba gärna där.
 
 ```bash
 $ mkdir anax-flat
@@ -60,9 +61,9 @@ Anax Flat finns på GitHub och på Packagist. Du kan kika på hur paketet [Anax 
 Jag väljer att installera Anax Flat med composer.
 
 ```bash
-$ composer require mos/anax-flat
 # Du behöver även installera PHP SmartyPants
-$ composer require michelf/php-smartypants 1.6.x-dev
+$ composer require mos/anax-flat michelf/php-smartypants 1.6.x-dev
+
 # Nu kan du uppdatera alla paketen som anax-flat består av
 $ composer update
 ```
@@ -108,9 +109,11 @@ Här följer en förteckning av några av de kataloger som skapas.
 | Katalog        | Beskrivning                            |
 |----------------|----------------------------------------|
 | `cache/`       | Temporär lagring av cachade filer.     |
+| `config/`      | Konfigurationsfiler för webbplatsen.   |
 | `content/`     | Filer som motsvarar innehållet i webbplatsen. Här redigerar vi innehållet i webbplatsen. |
 | `theme/`       | Utvecklingsmiljö för att skapa ett nytt tema. |
 | `htdocs/`      | Rooten till den publika delen av webbplatsen. Här lagras alla filer som skall vara tillgängliga via en länk. |
+| `views/`       | View-filer som används för att mappa innehåll till layout i webbsidans regioner. |
 
 Du kan nu öppna katalogen `htdocs` i din webbläsare, via din lokala webbserver. För min del gäller länken `http://localhost/anax-flat/htdocs` men du får justera den så att den passar just din installation.
 
@@ -177,7 +180,7 @@ Det du ser överst i sidorna, mellan start taggen `---` och slut taggen `...` ä
 
 Vi kallar denna del sidornas *frontmatter*. Det är data om själva sidorna, vi kan kalla det *meta data*, eller *data om data*.
 
-Sak samma, det ger oss möjlighet att konfigurera hur sidorna presenteras. Ett exempel på detta såg du nyss i `report/.meta` och i `report/000_index.md`.
+Sak samma, det ger oss möjlighet att konfigurera hur sidorna presenteras. Exempel på hur det kan användas ser du i filerna `report/.meta` och i `report/000_index.md`.
 
 
 
@@ -199,6 +202,12 @@ Bygg webbplatsen i ett Git repo {#git}
 
 Det vi har gjort nu är att skapa basen till en webbplats. Denna webbplats kan vi spara på GitHub i ett eget Git repo. 
 
+
+
+###Skapa ett Git-repo av katalogen {#gitrepo}
+
+Du står i din katalog för anax-flat, till exempel i `me/anax-flat`.
+
 Det vi behöver göra, för att skapa ett Git repo av vår katalogstruktur, är följande.
 
 ```text
@@ -210,7 +219,6 @@ Vi skall inte committa alla filer, några vill vi inte committa och därför ska
 
 ```text
 cache/
-composer.lock
 vendor/
 ```
 
@@ -229,17 +237,27 @@ $ git commit -m "First commit"  # Verkställer ändringarna
 $ git status
 ```
 
-Nu kan du förbereda ett repo på GitHub. Skapa ett konto om du inte redan har det. Skapa sedan ett repo, du kan döpa det till vad du vill, eller bara till "Anax Flat".
+Bra, du har nu skapat ett Git-repo av dina filer. De är nu under kontroll av versionshanteringssystemet Git.
+
+
+
+###Koppla Git till GitHub {#koppla-github}
+
+Nu kan du skapa ett repo på GitHub. Skapa ett konto om du inte redan har det. Skapa sedan ett repo, du kan döpa det till vad du vill, eller bara till "Anax Flat". **OBS!** Klicka inte i att du skall skapa några filer, vi kommer ju att ladda upp de filerna vi redan har.
 
 Utför sedan de instruktioner du  ser på GitHub, under rubriken som säger något i stil med:
 
 > *"…or push an existing repository from the command line"*
 
-Ladda om sidan på GitHub så ser du nu ditt repo.
+[FIGURE src=/image/snapht16/design-create-github-repo.png?w=w2 caption="Instruktioner på GitHub när du skapar nytt tomt repo."]
+
+Ladda om sidan på GitHub så ser du nu ditt repo, om allt gick bra.
 
 [FIGURE src=/image/snapvt16/anax-flat-me-github.png?w=w2 caption="Anax Flat med me-sida på GitHub."]
 
-Innan du är klar så bör du lägga till en `README.md` samt en `LICENSE`. Själv använder jag MIT som licens. Vill du göra samma så kan du kopiera licensfilen från `vendor/mos/anax-flat/LICENSE` (glöm inte byta namnet i filen).
+Innan du är klar så bör du lägga till en `README.md`, `REVISION.md` samt en `LICENSE`. Själv använder jag MIT som licens. Vill du göra samma så kan du kopiera licensfilen från `vendor/mos/anax-flat/LICENSE` (glöm inte byta namnet i filen).
+
+Du kan hitta exempel på en `README.md` och på en `REVISION.md` i katalogen `vendor/mos/anax-flat`. 
 
 Du kan se mitt halvfärdiga repo på [`mosbth/Anax-Flat-Me`](https://github.com/mosbth/Anax-Flat-Me), bara för att se hur det kan se ut.
 
@@ -269,6 +287,8 @@ Om du gör ändringar och vill tagga en ny version så kan du tills vidare anvä
 
 * 1.0.1
 * 1.0.2
+
+Om du vill ha riktig ordning och reda så loggar du de ändringar du gör, och de taggar du skapar, i din `REVISION.md`.
 
 Bra, nu har vi ordning på versionerna av koden.
 
