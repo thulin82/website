@@ -59,7 +59,7 @@ Krav {#krav}
 
 ###Del 2 Temat {#tema}
 
-1. Skapa ett enklare bastema till din webbplats. Du behöver inte style jättemycket, det kommer fler möjligheter under kursen. Men, det måste vara ett gott grundtema. Inget slarv.
+1. Skapa ett enklare bastema till din webbplats. Du behöver inte styla jättemycket, det kommer fler möjligheter under kursen. Men, det måste vara ett gott grundtema. Inget slarv.
 
 1. Header-delen skall vara stylad och se bra ut.
 
@@ -77,7 +77,10 @@ Krav {#krav}
 
 1. När du är klar så committar du allt till GitHub och taggar båda repona som version 1.1.0. Om du behöver göra nya taggar så gör du enligt 1.1.1, 1.1.2 och så vidare. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen.
 
-1. Kopiera katalogen `me/anax-flat` till nuvarande kursmoment `me/kmom02` enligt följande.
+
+**NOTE NEJ?**
+
+1. Kopiera katalogen `me/anax-flat` till nuvarande kursmoment `me/kmom01` enligt följande.
 
 ```bash
 # Ställ dig i kursrepot
