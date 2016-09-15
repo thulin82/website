@@ -2,7 +2,8 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2015-05-12": (A, mos) Första utgåvan inför htmlphp version 2.
+    "2016-09-13": (B, mos) $page could be null.
+    "2015-05-12": (A, mos) Första utgåvan inför htmlphp version 2.
 updated: "2015-05-20 12:49:26"
 created: "2015-05-12 09:31:47"
 ...
@@ -286,7 +287,8 @@ Det är en bra idé. Det bör man alltid göra. Så här kan man göra det.
 $page = isset($_GET['page']) ? $_GET['page'] : null;
 
 // Validate all incoming
-is_string($page) or die("Incoming value for page must be a string.");
+is_string($page) or is_null($page)
+    or die("Incoming value for page must be a string.");
 
 // Continue to do actual work, now a bit more safe
 var_dump($page);
