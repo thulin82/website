@@ -184,6 +184,34 @@ Sak samma, det ger oss möjlighet att konfigurera hur sidorna presenteras. Exemp
 
 
 
+Lägg till innehåll och block {#add}
+-------------------------------
+
+Nu är Anax-Flat ett större ramverk som bygger på mycket kod i botten och dessutom har en viss uppfattning om hur vi skall skapa innehåll för webbplatsen. Låt oss kika på hur vi lägger till en ny sida och hur vi skapar ett block med separat innehåll samt knyter samman dessa.
+
+
+
+###Ny sida {#sida}
+
+För att skapa en ny sida så lägger vi till en fil i katalogen `content`. Du kan börja med en tom fil, eller kopiera filen `about.md`.
+
+För övningens skull så sparar jag den nya filen som `content/me.md`.
+
+Nu finns den på plats och ramverket kommer hitta den under webblänken `index.php/me`, på samma sätt som den tidigare hittade sidan "About" under webblänken `index.php/about` genom att filen `content/about.md` fanns på plats.
+
+Pröva att lägga till din nya sida.
+
+Om du även vill lägga till den i menyn, så behöver du redigera innehållet i filen `config/navbar.php`.
+
+
+
+###Nytt block {#block}
+
+
+
+
+
+
 Anpassa stylen {#style}
 -------------------------------
 
