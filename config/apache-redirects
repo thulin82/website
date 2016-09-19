@@ -17,6 +17,8 @@ Redirect 301 /kod-exempel https://arkiv.dbwebb.se/kod-exempel/
 Redirect 301 /skalle    https://arkiv.dbwebb.se/skalle/
 Redirect 301 /sylvanas  https://arkiv.dbwebb.se/sylvanas/
 Redirect 301 /style     https://arkiv.dbwebb.se/style/
+Redirect 301 /forms     https://arkiv.dbwebb.se/forms/
+
 
 
 #
