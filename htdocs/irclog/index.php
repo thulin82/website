@@ -30,10 +30,19 @@ if (!is_file($irclog)) {
 }
 
 $messages = json_decode(file_get_contents($irclog));
+
+// senaste nytt högst upp för att slippa skrolla
+$messages = array_reverse($messages);
 ?>
   <p><i>Loggfilen uppdaterad senast: <?= date("Y F d H:i:s", filemtime($irclog)) ?>.</i></p> 
 <table>
 <?php foreach ($messages as $message) : ?>
+<?php
+// skriv inte ut marvins forumsspam
+if (($message->user == "marvin") && (substr($message->msg, 0, 7) == "Forumet")) {
+  continue;
+}
+?>
 <tr>
   <td class="time"><?= $message->time ?></td>
   <td class="user"><?= htmlentities($message->user) ?></td>
