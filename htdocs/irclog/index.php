@@ -26,21 +26,26 @@
 <?php
 $irclog = "/home/mos/git/irc2phpbb/irclog.txt";
 if (!is_file($irclog)) {
-  die("No logfile found");
+    die("No logfile found");
 }
 
 $messages = json_decode(file_get_contents($irclog));
 
-// senaste nytt högst upp för att slippa skrolla
-$messages = array_reverse($messages);
+$sort = "Senaste inlägg visas sist (<a href=\"?\">ändra</a>)";
+if (!isset($_GET["asc"])) {
+    // senaste nytt högst upp för att slippa skrolla
+    $messages = array_reverse($messages);
+    $sort = "Senaste inlägg visas först (<a href=\"?asc\">ändra</a>)";
+}
 ?>
-  <p><i>Loggfilen uppdaterad senast: <?= date("Y F d H:i:s", filemtime($irclog)) ?>.</i></p> 
+  <p><i>Loggfilen uppdaterad senast: <?= date("Y F d H:i:s", filemtime($irclog)) ?>.</i></p>
+  <p><?= $sort ?>
 <table>
 <?php foreach ($messages as $message) : ?>
 <?php
 // skriv inte ut marvins forumsspam
 if (($message->user == "marvin") && (substr($message->msg, 0, 7) == "Forumet")) {
-  continue;
+    continue;
 }
 ?>
 <tr>
@@ -52,4 +57,3 @@ if (($message->user == "marvin") && (substr($message->msg, 0, 7) == "Forumet")) 
 </table>
 </body>
 </html>
-
