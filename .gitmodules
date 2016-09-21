@@ -37,3 +37,6 @@
 [submodule "htdocs/repo/slides"]
 	path = htdocs/repo/slides
 	url = https://github.com/mosbth/slides.git
+[submodule "htdocs/repo/htmlphp-me"]
+	path = htdocs/repo/htmlphp-me
+	url = git@bitbucket.org:mosbth/htmlphp-me.git
