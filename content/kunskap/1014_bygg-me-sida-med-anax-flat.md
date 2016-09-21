@@ -187,7 +187,9 @@ Sak samma, det ger oss möjlighet att konfigurera hur sidorna presenteras. Exemp
 Lägg till innehåll och block {#add}
 -------------------------------
 
-Nu är Anax-Flat ett större ramverk som bygger på mycket kod i botten och dessutom har en viss uppfattning om hur vi skall skapa innehåll för webbplatsen. Låt oss kika på hur vi lägger till en ny sida och hur vi skapar ett block med separat innehåll samt knyter samman dessa.
+Anax-Flat ett ramverk som bygger på en större mängd kod i botten. Ett ramverk brukar ha en viss uppfattning om hur vi skall skapa innehåll för webbplatsen. Ramverket styr oss.
+
+Låt oss kika på hur vi lägger till en ny sida och hur vi skapar ett block med separat innehåll samt knyter samman dessa.
 
 
 
@@ -195,20 +197,63 @@ Nu är Anax-Flat ett större ramverk som bygger på mycket kod i botten och dess
 
 För att skapa en ny sida så lägger vi till en fil i katalogen `content`. Du kan börja med en tom fil, eller kopiera filen `about.md`.
 
-För övningens skull så sparar jag den nya filen som `content/me.md`.
+För övningens skull så sparar jag den nya filen som `content/test.md`.
 
-Nu finns den på plats och ramverket kommer hitta den under webblänken `index.php/me`, på samma sätt som den tidigare hittade sidan "About" under webblänken `index.php/about` genom att filen `content/about.md` fanns på plats.
+Nu finns den på plats och ramverket kommer hitta den under webblänken `index.php/test`, på samma sätt som den tidigare hittade sidan "About" under webblänken `index.php/about` via filen `content/about.md`.
 
 Pröva att lägga till din nya sida.
 
-Om du även vill lägga till den i menyn, så behöver du redigera innehållet i filen `config/navbar.php`.
+Om du även vill lägga till sidan i menyn, så behöver du redigera innehållet i filen `config/navbar.php`. Testa gärna det också. Allt för att bekanta oss med det nya ramverkets struktur.
 
 
 
 ###Nytt block {#block}
 
+Säg vi vill lägga till ett block till en eller flera sidor. Till exempel ett block om oss själva som författare, en så kallad *byline*.
+
+En byline kan vara ett separat innehållsblock som kan förekomma på flera sidor i webbplatsen. Låt oss därför skapa det som ett eget block.
+
+Som mall kan du använda `content/block/footer.md`. Kopiera den till en ny fil `content/block/byline.md`.
+
+Modifiera så den ser ut som en enkel byline, eller bara ändra texten i den så du vet att rätt innehåll laddas.
+
+Men hur laddar man blocket i en sida?
 
 
+
+###Ladda block i sida {#laddablock}
+
+Man kan lägga in blocket via frontmattern, antingen direkt i en sida, eller via filen `.meta.md`.
+
+Filen `.meta.md` är speciell fil som ger en mall av frontmatter som påverkar alla sidor i den katalogen. Syntaxen är lika, oavsett om du lägger den i `.meta.md` eller direkt i filen `test.md`.
+
+Så här ser frontmattern ut. Pröva att lägga den direkt i filen `content/test.md`.
+
+```yaml
+---
+views:
+    byline:
+        region: after-main
+        template: default/content
+        sort: 1
+        data:
+            meta:
+                type: content
+                route: block/byline
+...
+```
+
+Ovan är `views` en kontainer av vyer. Benämningen `byline` är ett godtyckligt och unikt namn på en specifik vy.
+
+Regionen är en av de kända regionerna som finns i den *master template* som används. I ditt fall hittar du master templaten i `vendor/mos/anax/views/default/index.tpl.php`.
+
+Templaten är en av de templates som finns för att rendera vyer i regioner. Standarduppsättningen av vyerna ligger i samma katalog som master templaten.
+
+Data är den information som skickas till templaten för att renderas i regionen. I detta fallet är det en variant som ramverket stödjer där man kan inkludera innehåll från andra filer.
+
+Huh, måste jag lära mig allt detta?
+
+Nej, men lär dig de enkla grunderna så du kan skapa de webbsidor du vill. Lyssna på terminologin som används. Resten bokför du på kontot som rör hur ett ramverk kan fungera. I denna kursen så använder vi ett ramverk och bekantar oss med vissa av dess termer. I kommande kurser skall vi själva bygga liknande ramverk. Men det är senare, inte nu.
 
 
 
