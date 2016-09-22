@@ -225,9 +225,9 @@ Men hur laddar man blocket i en sida?
 
 Man kan lägga in blocket via frontmattern, antingen direkt i en sida, eller via filen `.meta.md`.
 
-Filen `.meta.md` är speciell fil som ger en mall av frontmatter som påverkar alla sidor i den katalogen. Syntaxen är lika, oavsett om du lägger den i `.meta.md` eller direkt i filen `test.md`.
+Filen `.meta.md` är speciell fil som ger en mall av frontmatter som påverkar alla sidor i den katalogen. Syntaxen är lika, oavsett om du lägger din frontmatter i `.meta.md` eller direkt i filen `test.md`.
 
-Så här ser frontmattern ut. Pröva att lägga den direkt i filen `content/test.md`.
+Så här ser frontmattern ut för att länka till blocket. Pröva att lägga den direkt i filen `content/test.md`.
 
 ```yaml
 ---
@@ -243,13 +243,13 @@ views:
 ...
 ```
 
-Ovan är `views` en kontainer av vyer. Benämningen `byline` är ett godtyckligt och unikt namn på en specifik vy.
+Ovan är `views:` en behållare, en kontainer, av vyer. Benämningen `byline:` är ett godtyckligt och unikt namn på en specifik vy. Man kan lägga till fler vyer för att ytterligare lägga till innehåll i sidan.
 
-Regionen är en av de kända regionerna som finns i den *master template* som används. I ditt fall hittar du master templaten i `vendor/mos/anax/views/default/index.tpl.php`.
+Regionen `after-main` är en av de kända regionerna som finns i den *master template* som används. I ditt fall hittar du master templaten i `vendor/mos/anax/views/default/index.tpl.php`.
 
-Templaten är en av de templates som finns för att rendera vyer i regioner. Standarduppsättningen av vyerna ligger i samma katalog som master templaten.
+Templaten `default/content` är en av de templates som finns för att rendera vyer i regioner. Standarduppsättningen av vyerna ligger i samma katalog som master templaten `vendor/mos/anax/views/default/`.
 
-Data är den information som skickas till templaten för att renderas i regionen. I detta fallet är det en variant som ramverket stödjer där man kan inkludera innehåll från andra filer.
+Data `data:`är den information som skickas till templaten för att renderas. I detta fallet är det en meta-variant som ramverket stödjer internt så att man kan inkludera innehåll från andra filer/block.
 
 Huh, måste jag lära mig allt detta?
 

@@ -75,10 +75,8 @@ Krav {#krav}
 
 ###Klar och taggad {#tag}
 
-1. När du är klar så committar du allt till GitHub och taggar båda repona som version 1.1.0. Om du behöver göra nya taggar så gör du enligt 1.1.1, 1.1.2 och så vidare. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen.
+1. När du är klar så committar du allt till GitHub och taggar båda repona som version 1.1.0. Om du behöver göra nya taggar så gör du enligt 1.1.1, 1.1.2 och så vidare. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen samt pusha upp till GitHub.
 
-
-**NOTE NEJ?**
 
 1. Kopiera katalogen `me/anax-flat` till nuvarande kursmoment `me/kmom01` enligt följande.
 
@@ -87,6 +85,8 @@ Krav {#krav}
 $ cd me
 $ rsync -av --delete --exclude vendor anax-flat/ kmom01/ && ln -sf ../anax-flat/vendor kmom01/
 ```
+
+Anledningen är att vi vill spara lite diskutrymme och endast ha en installation av vendor-mappen. Det vi gör är att vi lägger en länk från `kmom01/vendor` till `anax-flat/vendor`.
 
 1. Gör en `dbwebb publish` för att kolla att allt fungerar.
 
@@ -108,6 +108,6 @@ Tips från coachen {#tips}
 
 Ta det lugnt och försök förstå hur Anax Flat hanterar innehåll.
 
-Kom ihåg att om du förändrar innehåll i temat så kan du även behöva committa och tagga om din version av Anax Flat, eftersom temats filer kopieras dit. Tipset är att tagga i slutet, när du känner dig klar.
+Kom ihåg att om du förändrar innehåll i temat så kan du även behöva committa och tagga om din version av Anax Flat, eftersom temats filer kopieras dit. Tipset är att tagga allt i slutet, när du känner dig klar.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
