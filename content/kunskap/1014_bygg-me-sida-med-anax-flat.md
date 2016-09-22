@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-09-13: (B, mos) Testad inför kursstart.
+    2016-09-22: (B, mos) Testad inför kursstart.
     2016-06-03: (A, mos) Första versionen.
 category:
     - kurs-design
@@ -291,8 +291,8 @@ $ git status    # Visa vilka filer som är (inte) del av repot
 Vi skall inte committa alla filer, några vill vi inte committa och därför skapar vi en fil `.gitignore` som innehåller följande.
 
 ```text
-cache/
-vendor/
+cache
+vendor
 ```
 
 Nu kan vi köra `git status` följt av `git add` för att lägga till de filerna vi vill ha.
