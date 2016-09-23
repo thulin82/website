@@ -145,7 +145,7 @@ Så här kan det se ut när du är klar.
 
 Så här kan det se ut, ungefär.
 
-[ASCIINEMA src=1voz3ecbgsbu5dytp9sz5n2kb]
+[ASCIINEMA src=23368]
 
 
 2\. Validera och publicera din kod enligt följande.
