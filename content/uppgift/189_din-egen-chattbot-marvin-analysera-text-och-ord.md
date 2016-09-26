@@ -2,12 +2,13 @@
 author: mos
 category: python
 revision:
-  "2015-08-25": (F, mos) Uppgraderade till dbwebb v2.
-  "2015-05-04": (E, mos) Rättade filnamn på ordlistorna.
-  "2015-03-09": (D, mos) Förtydliga att alla filer ska ligga i katalogen.
-  "2015-03-03": (C, mos) Mindre textjustering samt rätt filnamn i krav 5.
-  "2015-02-09": (B, mos) Förtydligarde krav 4 och 5.
-  "2015-02-05": (A, mos) Första utgåvan i samband med uppdatering av kmom05 i kursen
+    "2016-09-26": (G, mos) Ändrade länk till inventariemarvin.
+    "2015-08-25": (F, mos) Uppgraderade till dbwebb v2.
+    "2015-05-04": (E, mos) Rättade filnamn på ordlistorna.
+    "2015-03-09": (D, mos) Förtydliga att alla filer ska ligga i katalogen.
+    "2015-03-03": (C, mos) Mindre textjustering samt rätt filnamn i krav 5.
+    "2015-02-09": (B, mos) Förtydligarde krav 4 och 5.
+    "2015-02-05": (A, mos) Första utgåvan i samband med uppdatering av kmom05 i kursen
     python.
 updated: "2015-08-25 14:02:34"
 created: "2015-02-03 11:25:31"
@@ -25,7 +26,7 @@ Programmering och problemlösning i Python. Lär Marvin lite mer, denna gången 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan grunderna i Python och listor och du har byggt [tredje delen av Marvin](uppgift/din-egen-chattbot-marvin-steg-3) samt [inventarie-Marvin](uppgift/din-egen-chattbot-marvin-steg-inventarie).
+Du kan grunderna i Python och listor och du har byggt [tredje delen av Marvin](uppgift/din-egen-chattbot-marvin-steg-3) samt [inventarie-Marvin](uppgift/din-egen-chattbot-marvin-inventarie).
 
 
 
@@ -115,7 +116,3 @@ Lär dig felsöka med debuggern, använd den när du får problem. Komplettera m
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
