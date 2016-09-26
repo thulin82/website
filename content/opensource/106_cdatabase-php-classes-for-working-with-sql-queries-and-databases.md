@@ -129,7 +129,7 @@ return [
 ];
 ```
 
-**Connection details for SQLite.**
+**Connection details for MySQL.**
 
 ```php
 return [
@@ -557,4 +557,3 @@ Revision {#revision}
 <span class='revision-history' markdown='1'>
 2014-04-17 (A, mos) First release on dbwebb/opensource as part of course material for phpmvc-course.  
 </span>
-
