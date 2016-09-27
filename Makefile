@@ -91,8 +91,8 @@ local-publish:
 
 	# Make soma parts writable
 	# https://dbwebb.se/repo/htmlphp/example/pdo-sqlite/
-	chmod 777 $(LOCAL_HTDOCS)/htdocs/rep/htmlphp/example/pdo-sqlite/db/
-	chmod 666 $(LOCAL_HTDOCS)/htdocs/rep/htmlphp/example/pdo-sqlite/db/*
+	chmod 777 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/
+	chmod 666 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/*
 
 
 
