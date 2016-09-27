@@ -89,6 +89,11 @@ local-publish:
 	@# Enable robots if available
 	[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
 
+	# Make soma parts writable
+	# https://dbwebb.se/repo/htmlphp/example/pdo-sqlite/
+	chmod 777 $(LOCAL_HTDOCS)/htdocs/rep/htmlphp/example/pdo-sqlite/db/
+	chmod 666 $(LOCAL_HTDOCS)/htdocs/rep/htmlphp/example/pdo-sqlite/db/*
+
 
 
 # target: local-cache-clear - Clear the cache.
