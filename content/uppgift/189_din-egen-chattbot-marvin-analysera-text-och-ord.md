@@ -8,8 +8,7 @@ revision:
     "2015-03-09": (D, mos) Förtydliga att alla filer ska ligga i katalogen.
     "2015-03-03": (C, mos) Mindre textjustering samt rätt filnamn i krav 5.
     "2015-02-09": (B, mos) Förtydligarde krav 4 och 5.
-    "2015-02-05": (A, mos) Första utgåvan i samband med uppdatering av kmom05 i kursen
-    python.
+    "2015-02-05": (A, mos) Första utgåvan i samband med uppdatering av kmom05 i kursen python.
 updated: "2015-08-25 14:02:34"
 created: "2015-02-03 11:25:31"
 ...
