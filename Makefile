@@ -16,6 +16,7 @@ HELPTEXT 		= "$(ACTION)" `egrep "^\# target: $(1) " Makefile | sed "s/\# target:
 WWW_SITE	:= dbwebb.se
 WWW_LOCAL	:= local.$(WWW_SITE)
 SERVER_ADMIN := mos@$(WWW_SITE)
+BASE_URL    = https://$(WWW_SITE)/
 
 GIT_BASE 	= git/$(WWW_SITE)
 HTDOCS_BASE = $(HOME)/htdocs
@@ -88,6 +89,19 @@ local-publish:
 
 	@# Enable robots if available
 	[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
+
+	# Make soma parts writable
+	# https://dbwebb.se/repo/htmlphp/example/pdo-sqlite/
+	chmod 777 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/
+	chmod 666 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/*
+
+
+
+# target: reinit-databases - Clear and reinit the databases used as example.
+.PHONY: reinit-databases
+reinit-databases:
+	@echo $(call HELPTEXT,$@)
+	wget --quiet -O /dev/null $(BASE_URL)repo/htmlphp/example/pdo-sqlite/init.php
 
 
 

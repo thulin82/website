@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-09-26": (D, mos) La till extrauppgift sql1.
     "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
     "2015-08-26": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
@@ -105,7 +106,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-Det finns inga extrauppgifter.
+Genomför följande extrauppgifter om du har tid och lust.
+
+1. Gör laborationen "[SQL lab 1, introduktion till SQL](uppgift/sql-lab-1-introduktion-till-sql)" som låter dig träna på SQL kommandon.
 
 
 

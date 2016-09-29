@@ -40,7 +40,7 @@ Du har nu irc-loggen `ircLog.txt`. Titta i den och bekanta dig med hur den ser u
 
 Skapa en fil, `log.txt`, och lägg den i samma katalog. Använd loggfilen för att skriva ned de kommandon du testar med. Det är dels för din egen del och dels för att läraren skall se hur du jobbat med övningen.
 
-Skapa en fil som heter `solution.bash`. Ge den rättigheter så filen blir körbar. 
+Skapa en fil som heter `solutions.bash`. Ge den rättigheter så filen blir körbar.
 
 ```bash
 touch solutions.bash
