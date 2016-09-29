@@ -2,18 +2,15 @@
 author: mos
 category: python
 revision:
-  "2015-08-25": (H, mos) Uppgraderade till dbwebb v2 samt la till extrauppgift om
-    ascii-bild.
-  "2015-04-22": (G, mos) Förtydligade att marvin4 inte skall stödjas.
-  "2015-03-09": (F, mos) Ändrade länken till inspect.
-  "2015-02-03": (E, mos) Gjorde SQLite som valbar.
-  "2015-01-07": (D, mos) Förtydligade att seo i kombination med `--input` inte behöver
-    url.
-  "2014-12-16": (C, mos) Tog bort extrauppgiften eftersom den ofta löstes med extern
-    modul som gjorde uppgiften svår att rättad.
-  "2014-12-01": (B, mos) Förtydligade att title i kombination med `--input` inte behöver
-    url.
-  "2014-10-15": (A, mos) Första utgåvan i samband med kursen python.
+    "2016-09-29": (I, mos) Länkade till exempel för asciibild.
+    "2015-08-25": (H, mos) Uppgraderade till dbwebb v2 samt la till extrauppgift om ascii-bild.
+    "2015-04-22": (G, mos) Förtydligade att marvin4 inte skall stödjas.
+    "2015-03-09": (F, mos) Ändrade länken till inspect.
+    "2015-02-03": (E, mos) Gjorde SQLite som valbar.
+    "2015-01-07": (D, mos) Förtydligade att seo i kombination med `--input` inte behöver url.
+    "2014-12-16": (C, mos) Tog bort extrauppgiften eftersom den ofta löstes med extern modul som gjorde uppgiften svår att rättad.
+    "2014-12-01": (B, mos) Förtydligade att title i kombination med `--input` inte behöver url.
+    "2014-10-15": (A, mos) Första utgåvan i samband med kursen python.
 updated: "2015-08-25 14:16:01"
 created: "2014-07-03 08:14:49"
 ...
@@ -194,7 +191,7 @@ Extrauppgift {#extra}
 
 1\. I uppgift 5 så kan du använda databasen SQLite, istället för att lagra på fil.
 
-2\. Hämta hem en bild från webben och skriv ut den som en ASCII-bild enligt följande. Använd biblioteket [Pillow](http://pillow.readthedocs.org/) för att lösa bildhanteringen.
+2\. Hämta hem en bild från webben och skriv ut den som en ASCII-bild enligt följande. Använd biblioteket [Pillow](http://pillow.readthedocs.org/) för att lösa bildhanteringen. Du kan se hur man kan göra i exemplet [`example/image`](https://github.com/dbwebb-se/python/tree/master/example/image).
 
 ```bash
 ./marvin-cli.py ascii <url-to-image> 
@@ -210,7 +207,3 @@ Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 Använd `--verbose` för att skriva ut massa debugg-utskrifter när du utvecklar och testar.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
