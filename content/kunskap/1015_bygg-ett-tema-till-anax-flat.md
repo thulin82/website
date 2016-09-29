@@ -247,15 +247,13 @@ Jag tänkte försöka skapa  en `regions.less` för att uppnå så att webbplats
 
 [FIGURE src=/image/kurs/design/anax-flat-regions.png?w=w2 caption="Anax Flat stylad in i regioner."]
 
-Till min hjälp har jag kunskapen om den template fil som används när HTML-koden genereras. Du kan själv studera den i katalogen `vendor/mos/anax/view/default/index.tpl.php`, eller via GitHub i repot mos/anax där [alla template-filerna  finns](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php), specifikt är det [`index.tpl.php`](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php) som skapar grunden för HTML sidan.
+Till min hjälp har jag kunskapen om den templatefil som används när HTML-koden genereras. Du kan själv studera den i katalogen `vendor/mos/anax/view/default/index.tpl.php`, eller via GitHub i repot mos/anax där [alla template-filerna  finns](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php), specifikt är det [`index.tpl.php`](https://github.com/mosbth/anax/blob/master/view/default/index.tpl.php) som skapar grunden för HTML sidan.
 
-Du bör nu kika igenom videoserien där jag visar hur jag bygger LESS modulen för `regions.less`. Videorna heter "[120 Anax Flat tema, regions.less*](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)".
-
-**Men**, du kan också låna den färdiga `regions.less` som du hittar i kursrepot under `example/anax-flat/theme/regions.less`. Kanske vill du hellre kika på videorna i lugn och ro lite senare.
+**För att komma framåt**, så kan du låna den färdiga `regions.less` som du hittar i kursrepot under `example/anax-flat/theme/regions.less`. Glöm inte kika på videorna där jag visar hur jag gör.
 
 
 
-###Kör på utan video {#utanvideo}
+###kopiera regions.less {#regions.less}
 
 Vill du köra utan videor så gör du så här.
 
@@ -281,7 +279,7 @@ I videoserien går jag igenom innehållet i filen `regions.less` i en lugnare ta
 En responsiv navbar {#navbar}
 -------------------------------
 
-Navbaren är, som du kanske kan ana, automatgenererad utifrån den information som finns i Anax Flat `config/navbar.php`. Dessutom har den en struktur som är förberedd för att stylas på ett repsonsivt sätt. Att göra det på egen hand från grunden kan ta sin lilla tid så jag tänkte att vi lånar en LESS modul som ger oss grundstylen till den responsiva navbaren.
+Navbaren är, som du kanske kan ana, automatgenererad utifrån den information som finns i Anax Flat `config/navbar.php`. Dessutom har den en struktur som är förberedd för att stylas på ett resonsivt sätt. Att göra det på egen hand från grunden kan ta sin lilla tid så jag tänkte att vi lånar en LESS modul som ger oss grundstylen till den responsiva navbaren.
 
 Återanvändning är ju bra, eller hur?
 
@@ -301,22 +299,33 @@ $ git clone https://github.com/mosbth/responsive-menu.git
 $ cd responsive-menu
 ```
 
-Det ligger en `index.html` i repot, öppna den i webbläsaren för att testa hur menyn fungerar.
+Det ligger en körbar version som visar hur menyn fungerar `htdocs/index.php` i repot, öppna den i webbläsaren för att testa hur menyn fungerar.
 
-Så här ser det ut när jag testar.
+Bekanta dig någorlunda översiktligt med källkoden som ligger i `htdocs`.
 
-**VIDEO**
+| Fil   | Syfte   |
+|-------|---------|
+| `index.php` | Inkluderar samtliga filer som behövs för att få ett körbart exempel. |
+| `menu.php`  | HTML-strukturen för menyn. |
+| `style/style.css`       | Stylesheet för menyn. |
+| `js/responsive-menu.js` | JavaScript kod som behövs av menyn. |
+
+Det är alltså detta som behövs för att få ett körbart exempel.
+
+Källkoden hittar vi i `src/less` respektive `src/js`.
 
 
 
 ###Använd modulen `responsive-menu` {#useresp}
 
-Då försöker vi integrera den responsiva menyn in i våra LESS moduler. Det handlar om två filer som vi behöver. Jag väljer att hämta hem filerna med `wget` för att senare kunna integrera proceduren i makefilens `make upgrade`.
+Då försöker vi integrera den responsiva menyn som vår egen LESS moduler. Det handlar om två filer som vi behöver. Jag väljer att hämta hem filerna med `wget` för att senare kunna integrera proceduren i makefilens `make upgrade-responsive-menu`.
+
+Jag ställer mig i rooten av temat `me/anax-flat/theme`.
 
 Först hämtar jag hem LESS-filen och sparar som en av våra LESS moduler.
 
 ```bash
-$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.less -O modules/responsive-menu.less
+$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O modules/responsive-menu.less
 ```
 
 Jag lägger in den så att den importeras i `modules.less`. Jag kan nu testa att kompilera stylen och ladda om webbsidan.
@@ -329,7 +338,7 @@ Jag lägger in den så att den importeras i `modules.less`. Jag kan nu testa att
 Dock, innan allt fungerar så behöver jag hämta hem JavaScript-filen också. Den sparar jag i katalogen `js`.
 
 ```bash
-$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.js -O js/responsive-menu.js
+$ wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/js/responsive-menu.js -O js/responsive-menu.js
 ```
 
 Jag kan nu kompilera om stylen igen. Makefilen har redan inbyggt i sig att den kopierar katalogen `js` till rätt plats i Anax Flat under `htdocs/js`.
@@ -342,25 +351,6 @@ Du behöver dubbelkolla att Anax Flat är inställt på att ladda filen. Det är
 ```
 
 Nu kan du testa menyn genom att ladda om din webbläsare.
-
-
-
-###Förbered för uppdateringar i makefilen {#respupgr}
-
-Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av den responsiva menyn i fortsättningen.
-
-```text
-# target: upgrade-responsive-menu - Upgrade LESS module - Responsive menu
-.PHONY: upgrade-responsive-menu
-upgrade-responsive-menu:
-	@echo $(call HELPTEXT,$@)
-
-	# Responsive-menu
-	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
-	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/responsive-menu.js -O js/responsive-menu.js
-```
-
-Bra. Då har vi integrerat en responsiv meny i vårt tema.
 
 
 
@@ -382,6 +372,25 @@ Uppdatera ditt Anax Flat i filen `config/theme.php` så att följande stylesheet
 Notera att länken ovan troligen har ett annat versionsnummer av Font Awesome. Du bör använda senaste möjliga versionen.
 
 Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av den responsiva menyn i fortsättningen.
+
+
+
+###Förbered för uppdateringar i makefilen {#respupgr}
+
+Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av den responsiva menyn i fortsättningen.
+
+```text
+# target: upgrade-responsive-menu - Upgrade LESS module - Responsive menu
+.PHONY: upgrade-responsive-menu
+upgrade-responsive-menu:
+	@echo $(call HELPTEXT,$@)
+
+	# Responsive-menu
+	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
+	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/srv/js/responsive-menu.js -O js/responsive-menu.js
+```
+
+Bra. Då har vi integrerat en responsiv meny i vårt tema.
 
 
 

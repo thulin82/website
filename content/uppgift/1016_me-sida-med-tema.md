@@ -99,7 +99,9 @@ $ dbwebb publish me
 Extrauppgift {#extra}
 -----------------------
 
-Det finns inga extrauppgifter.
+Lös följande extrauppgifter om du har tid och lust.
+
+1. Man kan importera FontAwesome som en LESS-modul. Men det kan vara lite utmanande. OM man gör det så behöver man även ta hand om en font-katalog och kopiera den från FontAwesome till `htdocs`. Ge dig på detta om du känner dig mogen för en utmaning.
 
 
 
