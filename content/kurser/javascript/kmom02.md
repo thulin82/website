@@ -78,7 +78,7 @@ Douglas är författaren till boken [JavaScript: The Good Parts](kunskap/boken-j
 Gör följande övning, de behövs för att klara uppgifterna. 
 
 * En programmeringsövning och genomgång av grunderna i JavaScript Core  
-  javascript/kmom02/programmera-javascript
+  [Programmering med grunderna i JavaScript](kurser/javascript/kmom02/programmera-javascript)
 
 Jobba igenom övningen som innehåller både läsning och kodningsövningar som du skall göra.
 Detta är kärnan i kmom02 och ger dig en nödvändig förutsättning inför resten av kursen.
