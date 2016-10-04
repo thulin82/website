@@ -91,7 +91,7 @@ Här finns mer att läsa, några av de viktigaste.
 Gör följande övningar, de behövs för att klara uppgifterna. 
 
 * Häng med när Mikael kommer igång med jQuery  
-  [Kom igång med jQuer](kunskap/kom-igang-med-jquery)
+  [Kom igång med jQuery](kunskap/kom-igang-med-jquery)
    
 Jobba igenom övningen som innehåller både läsanvisningar och kodningsövningar som du skall göra. Detta är kärnan i kursmomentet och ger dig en viktig grund att stå på.
 
