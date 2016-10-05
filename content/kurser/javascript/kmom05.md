@@ -102,7 +102,7 @@ Här följer lite kuriosa om matematik, fysik och krafter, överkurs för den so
 Gör följande övningar, de behövs för att klara uppgifterna. 
 
 * Häng med när Mikael försöker bygga grunderna till en klon av det [klassiska gamla spelet Asteroids](http://en.wikipedia.org/wiki/Asteroids_%28video_game%29).  
-  kunskap/ett-spel-i-html5-canvas-med-javascript-och-prototypbaserad-programmering
+  [Ett spel i HTML5 Canvas med JavaScript och prototypbaserad programmering](kunskap/ett-spel-i-html5-canvas-med-javascript-och-prototypbaserad-programmering)
    
 Jobba igenom övningen som innehåller kodningsövningar och en del läsanvisningar som du skall göra. Detta är kärnan i kursmomentet och ger dig grunden att stå på.
 

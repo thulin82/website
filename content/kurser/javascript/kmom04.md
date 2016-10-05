@@ -78,7 +78,7 @@ Här finns mer att läsa, några av de viktigaste.
 Gör följande övningar, de behövs för att klara uppgifterna. 
 
 * Häng med när Mikael bygger en kundvagn med utcheckningsfunktion.  
-  kunskap/kom-igang-med-jquery-och-ajax
+  [Kom igång med jQuery och Ajax](kunskap/kom-igang-med-jquery-och-ajax)
    
 Jobba igenom övningen som innehåller kodningsövningar och en del läsanvisningar som du skall göra. Detta är kärnan i kursmomentet och ger dig grunden att stå på.
 
