@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-09-13: (A, mos) Testad och släppt.
+    2016-10-06: (A, mos) Testad och släppt.
 category:
     - kurs-design
     - less
@@ -318,7 +318,7 @@ Källkoden hittar vi i `src/less` respektive `src/js`.
 
 ###Använd modulen `responsive-menu` {#useresp}
 
-Då försöker vi integrera den responsiva menyn som vår egen LESS moduler. Det handlar om två filer som vi behöver. Jag väljer att hämta hem filerna med `wget` för att senare kunna integrera proceduren i makefilens `make upgrade-responsive-menu`.
+Då försöker vi integrera den responsiva menyn som en av våra egna LESS moduler. Det handlar om två filer som vi behöver. Jag väljer att hämta hem filerna med `wget` för att senare kunna integrera proceduren i makefilens `make upgrade-responsive-menu`.
 
 Jag ställer mig i rooten av temat `me/anax-flat/theme`.
 
@@ -350,7 +350,7 @@ Du behöver dubbelkolla att Anax Flat är inställt på att ladda filen. Det är
 "javascripts" => ["js/responsive-menu.js"],
 ```
 
-Nu kan du testa menyn genom att ladda om din webbläsare.
+Nu kan du testa menyn genom att ladda om din webbläsare. Den bör se ut precis som tidigare.
 
 
 
@@ -375,6 +375,56 @@ Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sk
 
 
 
+###Lägg till den expanderande menyn {#expmenu}
+
+I exemplet för responsive-menu fanns med en andra, eller alternativ, expanderande meny. Låt oss använda den i vår webbplats.
+
+
+####Aktivera en andra meny {#menu2}
+
+Dels behöver vi ytterligare en navbar i `config/navbar.php`. Det finns ett kodstycke som redan ligger i filen som går att kommentera bort. Det blir som en helt ny meny med sina egna menyval.
+
+Kodstycket inleds med följande.
+
+```php
+// Used as menu together with responsive menu
+// Name of this menu
+"navbarMax" => [
+```
+
+Ta bort kommentaren runt detta kodstycke för att aktivera menyn.
+
+
+
+####Rendera den andra menyn {#menu2}
+
+Därefter behöver vi lägga till så att den andra menyn renderas i en vy och placeras ut i en region, det gör vi i `config/theme.php`. Det finns ett kodstycke som nu är bortkommenterat.
+
+Kodstycket består av följande.
+
+```php
+[
+    "region" => "profile",
+    "template" => "default/navbar-max",
+    "data" => [],
+    "sort" => -1
+],
+```
+
+Ta bort kommentaren runt detta kodstycke för att rendera menyn i regionen `profile` med hjälp av templaten `default/navbar-max`.
+
+
+
+####Resultatet {#navbarres}
+
+Ladda nu om sidan och om allt fungerar bör du se en meny som visas upp under knappen med tre horisontella streck i.
+
+[FIGURE src=/image/snapht16/anax-flat-responsive-menu.png?w=w2 caption="Två menyer aktiva, grundstyle på plats."]
+
+Om du kan se motsvarande bilden ovan, på din webbplats, då gick allt bra. Nu har du två menyer på plats och kan börja använda dem och styla dem. En bra start.
+
+
+
 ###Förbered för uppdateringar i makefilen {#respupgr}
 
 Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av den responsiva menyn i fortsättningen.
@@ -387,7 +437,7 @@ upgrade-responsive-menu:
 
 	# Responsive-menu
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
-	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/srv/js/responsive-menu.js -O js/responsive-menu.js
+	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/js/responsive-menu.js -O js/responsive-menu.js
 ```
 
 Bra. Då har vi integrerat en responsiv meny i vårt tema.
@@ -397,27 +447,52 @@ Bra. Då har vi integrerat en responsiv meny i vårt tema.
 Styla header och menyn {#header}
 -------------------------------
 
-Style header och meny (finns i style.less).
+Låt oss styla till headern av webbplatsen, bara lite enkelt så vi kommer igång.
 
-VIDEO som visar steg för steg.
+Det skulle kunna se ut så här när vi är klara. Nåja, klara och klara. Men ändå.
+
+[FIGURE src=/image/snapht16/anax-flat-style-header.png caption="En måttligt stylad header."]
+
+En start är det iallafall.
+
+Ovan style kan man uppnå med den stylen som ligger i kursrepots exempel-katalog `example/anax-flat/header.less`.
+
+Bör man lägga denna stylen som en egen återanvändbar modul eller bör man anse att den inte är generell utan kan samlas i `style.less`. Ja, det är en bedömning man får göra, båda varianterna fungerar.
 
 
 
 Responsivitet {#resp}
 -------------------------------
 
-Berätta kort om vad responsiv design innebär.
+Responsiv design innebär att man stylar webbplatsen så att den anpassar sig efter skärmens storlek. En responsiv webbplats fungerar både på små och stora skärmar, och alla varianter därimellan.
 
-* Mobile first
-* Responsive design
-* Olika webbplatser olika enheter
-* Progressive enhancement
-* Graceful degradation
-* Om media queries för att göra en responsiv webbplats
+Det kan vara att man väljer att designa webbplatsen till små enheter i första hand, så kallat *Mobile First*. Man väljer en layout som fungerar för små enheter och sedan skalar man upp den när skärmens bredd ökar.
 
-Styla responsivt.
+Vi har redan en webbplats som fungerar för större skärmar så i vårt fall handlar det om att få innehållet att även fungera på små enheter.
 
-VIDEO steg för steg.
+Vår lösning blir att använda *media queries* vid de brytpunkter som vi anser behövs. Vi har inte fasta brytpunkter utan väljer de som passar vår design. Fasta brytpunkter skulle kunna vara till exempel skärstorlek på en iPad2 eller iPhone 7 eller Samsung Galaxy. Men vi väljer alltså inte att hålla oss fast till dessa enheter.
+
+Så här kan en media query se ut när skärmens bredd blir mindre än 900 pixlar.
+
+```less
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+    
+    .navbar2 {
+        width: 50%;
+    }
+    
+    .profile {
+        width: 10%;
+    }
+}
+```
+
+Pröva nu att styla din webbplats responsivt med media queries.
+
+Jag har gjort en enkel variant och min exempelkod finns i kursrepot under `example/anax-flat/media-queries.less`. Kika gärna där för tips.
 
 
 
