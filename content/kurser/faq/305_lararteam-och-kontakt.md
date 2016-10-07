@@ -44,6 +44,8 @@ För hösten 2016 är följande hjälplärare, i olika omfattning.
 | ![Gustav](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Gustav&nbsp;Elmgren | TBA  | gustavelmgren@gmail.com |
 | ![Dennis](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Dennis&nbsp;Skoko | desk  | dennis.skoko@hotmail.com |
 | ![Hannes](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Hannes&nbsp;Alm | TBA  | hannes@almar.se |
+| ![Jakob](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Jakob&nbsp;Sandgren | Starmarket | sandgren.jakob@gmail.com |
+
 
 
 Kursadministrativt {#mail}
