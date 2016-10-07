@@ -32,6 +32,8 @@ Din version av Anax Flat skall ligga i katalogen `me/anax-flat` och vara ett ege
 
 Din version av temat skall ligga i katalogen `me/anax-flat/theme` och vara ett eget repo på GitHub som är taggat i minst version 1.0.0.
 
+Tipset är att hålla det enkelt i detta kursmomentet. Men strukturerat och ordningsamt. Det kommer fler kursmoment där du kommer få jobba vidare med stylen. Fokusera på att få alla delar på plats och bekanta dig med verktygen så att de känns naturliga i din utvecklingsprocess.
+
 
 
 Krav {#krav}
@@ -65,7 +67,9 @@ Krav {#krav}
 
 1. Menyn skall vara väl fungerande och responsiv.
 
-1. Innehållsdelen och eventuella sido kolumner skall se bra och och fungera responsivt.
+1. Du sskall använda två menyer, den "vanliga" (navbarTop) och den som är anpassad för små skärmar (navbarMax).
+
+1. Innehållsdelen och eventuella sidokolumner skall se bra och och fungera responsivt.
 
 1. Footer och footerkolumnerna skall se bra ut och fungera responsivt.
 
@@ -86,7 +90,9 @@ $ cd me
 $ rsync -av --delete --exclude vendor anax-flat/ kmom01/ && ln -sf ../anax-flat/vendor kmom01/
 ```
 
-Anledningen är att vi vill spara lite diskutrymme och endast ha en installation av vendor-mappen. Det vi gör är att vi lägger en länk från `kmom01/vendor` till `anax-flat/vendor`.
+Vi vill spara undan allt du gjort i kmom01-mappen, så vi tar helt enkelt en kopia av allt med kommandot `rsync`.
+
+Vi vill också spara lite diskutrymme och endast ha en installation av vendor-mappen. Det vi gör är att vi lägger en länk från `kmom01/vendor` till `anax-flat/vendor`.
 
 1. Gör en `dbwebb publish` för att kolla att allt fungerar.
 
@@ -101,7 +107,7 @@ Extrauppgift {#extra}
 
 Lös följande extrauppgifter om du har tid och lust.
 
-1. Man kan importera FontAwesome som en LESS-modul. Men det kan vara lite utmanande. OM man gör det så behöver man även ta hand om en font-katalog och kopiera den från FontAwesome till `htdocs`. Ge dig på detta om du känner dig mogen för en utmaning.
+1. Man kan importera FontAwesome som en LESS-modul. Men det kan vara lite utmanande. Om man gör det så behöver man även ta hand om en font-katalog och kopiera den från FontAwesome till `htdocs`. Ge dig på detta om du känner dig mogen för en utmaning. Det är så jag själv brukar göra i mina teman.
 
 
 
