@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-07: (B, mos) Genomgånen och testad.
     2016-06-08: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -67,7 +68,7 @@ Krav {#krav}
 
 1. Menyn skall vara väl fungerande och responsiv.
 
-1. Du sskall använda två menyer, den "vanliga" (navbarTop) och den som är anpassad för små skärmar (navbarMax).
+1. Du skall använda två menyer, den "vanliga" (navbarTop) och den som är anpassad för små skärmar (navbarMax).
 
 1. Innehållsdelen och eventuella sidokolumner skall se bra och och fungera responsivt.
 
@@ -79,10 +80,10 @@ Krav {#krav}
 
 ###Klar och taggad {#tag}
 
-1. När du är klar så committar du allt till GitHub och taggar båda repona som version 1.1.0. Om du behöver göra nya taggar så gör du enligt 1.1.1, 1.1.2 och så vidare. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen samt pusha upp till GitHub.
+1. När du är klar så committar du både `me/anax-flat` och `me/anax-flat/theme` till GitHub och taggar dem som version 1.1.0. Om du behöver göra fler taggar så gör du enligt 1.1.1, 1.1.2 och så vidare. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen samt pusha upp till GitHub.
 
 
-1. Kopiera katalogen `me/anax-flat` till nuvarande kursmoment `me/kmom01` enligt följande.
+1. Ta en kopia av katalogen `me/anax-flat` till nuvarande kursmoment `me/kmom01` enligt följande.
 
 ```bash
 # Ställ dig i kursrepot

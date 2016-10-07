@@ -1,14 +1,10 @@
 ---
 author: mos
 revision:
-    2016-06-08: (PA, mos) Arbetskopia.
+    2016-10-07: (A, mos) Första release.
 ...
 Kmom01: LESS och responsiv design
 ====================================
-
-[INFO]
-**Kursmomentet är under utveckling --- men grunden finns på plats. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
-[/INFO]
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
@@ -73,7 +69,7 @@ Läs följande:
 
 1. Läs översiktligt artikeln som definierade begreppet "[Responsive Web Design](http://alistapart.com/article/responsive-web-design/)".
 
-1. Bläddra snabbt igenom artikeln "[Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514)" som definierade ett antal design mönster inom responsiv design.
+1. Bläddra snabbt igenom artikeln "[Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514)" som definierar ett antal design mönster inom responsiv design.
 
 1. Kika snabbt på materialet då Google Developers visar hur man kommer igång med [grunderna i responsiv layout](https://developers.google.com/web/fundamentals/design-and-ui/responsive/). 
 
@@ -83,13 +79,17 @@ Läs följande:
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 0 och 1.
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 0 och 1. Videorna som börjar på 110* och 120* är kopplade till de artiklarna du skall jobba igenom under övningarna nedan. Titta på dem samtidigt som du jobbar igenom respektive artikel.
 
 
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Kika på följande om du är intresserad och finner det värt tiden.
+
+1. I övningarna introduceras du till Git och GitHub. Om du vill jobba igenom en separat övning med Git och GitHub så finns artikeln "[Kom igång med Git och GitHub](kunskap/kom-igang-med-git-och-github)".
+
+1. Ramverket du använder i kursen är Anax. Bekanta dig gärna med [Anax dokumentationen](anax).
 
 
 

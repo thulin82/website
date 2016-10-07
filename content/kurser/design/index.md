@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-04-11: (PA, mos) Arbetskopia.
+    2016-10-07: (PA, mos) Arbetskopia, kmom01 släppt.
 ...
 Kursen design
 ===================================================
@@ -72,9 +72,9 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: TBD {#kmom01}
+###Kmom01: LESS och responsiv design {#kmom01}
 
-TBD.
+Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
 [Instruktion till kursmoment 01](design/kmom01).
 
@@ -158,15 +158,15 @@ Läsanvisningar {#lasanvisning}
 
 Här följer en sammanställning av de läsanvisningar till kurslitteraturen som ges i varje kursmoment.
 
-| Kursmoment | Beautiful Web Design   | XXX                | 
-|------------|------------------------|--------------------|
-| Kmom01     |                        |                    |
-| Kmom02     |                        |                    |
-| Kmom03     |                        |                    |
-| Kmom04     |                        |                    |
-| Kmom05     |                        |                    |
-| Kmom06     |                        |                    |
-| Kmom10     |                        |                    |
+| Kursmoment | Beautiful Web Design   |
+|------------|------------------------|
+| Kmom01     | 1                      |
+| Kmom02     |                        |
+| Kmom03     |                        |
+| Kmom04     |                        |
+| Kmom05     |                        |
+| Kmom06     |                        |
+| Kmom10     |                        |
 
 
 

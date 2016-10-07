@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-06-08: (PA, mos) Arbetskopia.
+    2016-10-07: (A, mos) Första utgåvan.
 ...
 Resultat och redovisning
 ====================================
@@ -86,12 +86,9 @@ Du kan göra ett självtest med [`dbwebb inspect`](http://local.v2.dbwebb.se/dbw
 ```bash
 # Ställ dig i kursrepot och ange kursmomentet du vill inspektera
 dbwebb inspect kmom01
-
-# Eller lägg till kursens namn och stå var du vill
-dbwebb inspect design kmom01
 ```
 
-Gör alltid ett självtest så kanske du slipper en och annan onödig komplettering.
+Gör alltid ett självtest så kan du slippa onödiga kompletteringar.
 
 
 
