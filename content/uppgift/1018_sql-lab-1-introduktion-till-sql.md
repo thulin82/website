@@ -18,7 +18,7 @@ Laboration för att träna grunderna i SQL med databasen SQLite.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat en labbmiljö där du kan köra PHP, motsvarande [labbmiljön för kursen htmlphp](htmlphp/labbmiljo)".
+Du har installerat en labbmiljö där du kan köra PHP, motsvarande [labbmiljön för kursen htmlphp](htmlphp/labbmiljo).
 
 Du har tillgång till kommandot `dbwebb` och du har clonat ett kursrepot för htmlphp-kursen.
 
