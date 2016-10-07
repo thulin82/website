@@ -60,7 +60,7 @@ Redirect /webapp/lab2 /uppgift/webapp-labb-2
 Redirect /webapp/lab3 /uppgift/webapp-labb-3
 Redirect /webapp/lab4 /uppgift/webapp-labb-4
 Redirect /webapp/lab5 /uppgift/webapp-labb-5
-Redirect /htmlphp/me /uppgift/skapa-en-me-sida-i-kursen-htmlphp
+#Redirect /htmlphp/me /uppgift/skapa-en-me-sida-i-kursen-htmlphp
 Redirect /webapp/me /uppgift/skapa-en-me-sida-i-kursen-webapp
 Redirect /linux/me /uppgift/skapa-en-me-sida-i-kursen-linux
 Redirect /htmlphp/proj5 /uppgift/htmlphp-projekt-5
@@ -135,6 +135,7 @@ Redirect /htmlphp-v1    /kurser/arkiv/htmlphp-v1
 Redirect /oophp-v1      /kurser/arkiv/oophp-v1
 Redirect /phpmvc-v1     /kurser/arkiv/phpmvc-v1
 
+Redirect /htmlphp/me    https://arkiv.dbwebb.se/htmlphp/me/
 
 
 #
