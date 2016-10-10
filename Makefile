@@ -103,6 +103,9 @@ reinit-databases:
 	@echo $(call HELPTEXT,$@)
 	wget --quiet -O /dev/null $(BASE_URL)repo/htmlphp/example/pdo-sqlite/init.php
 
+	# oophp filmdatabas
+	wget --quiet -O /dev/null "https://arkiv.dbwebb.se/kod-exempel//gor-din-egen-filmdatabas/movie_reset.php?restore"
+
 
 
 # target: local-cache-clear - Clear the cache.
