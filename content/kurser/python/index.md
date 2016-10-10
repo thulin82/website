@@ -187,11 +187,11 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](python/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1).
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
-Går du på campus får du en lektionsplan i samband med kursstart.
+För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](python/studieplan) med vissa av de kurstillfällen som erbjuds.
 
 Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
 
