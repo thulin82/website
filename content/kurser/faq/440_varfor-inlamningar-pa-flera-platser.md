@@ -9,9 +9,9 @@ Varför gör jag inlämningar på flera ställen?
 *Varför (måste) jag lämna in min redovisning på flera platser (me-sida, forum, ITs)? Kan jag inte bara zippa ihop allt och dra iväg i ett mail, eller bara lämna in på ITs?*
 
 
-När du skall redovisa ett kursmoment så finns det alltid en text som beskriver hur du skall redovisa. Det är en instruktion som skall följas. Den ser olika ut för varje kurs, här är exempel på texten i [htmlphp-](kurser/htmlphp/redovisning) respektive [python-kursen](kurser/python/redovisning).
+När du skall redovisa ett kursmoment så finns det alltid en text som beskriver hur du skall redovisa. Det är en instruktion som skall följas. Den ser olika ut för varje kurs, här är exempel på texten i [htmlphp-](/kurser/htmlphp/redovisa) respektive [python-kursen](/kurser/python/redovisa).
 
-Det handlar om din me-sida, att lägga upp på forumet och att lägga in på ITs samt optionellt att testa din lämning med `dbwebb inspect`.
+Det handlar om din me-sida, att publicera med `dbwebb publish`, att lägga upp på forumet och att lägga in på ITs samt optionellt att testa din lämning med `dbwebb inspect`.
 
 
 
