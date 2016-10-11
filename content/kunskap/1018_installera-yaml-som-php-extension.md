@@ -79,7 +79,7 @@ c: d
 ...
 ```
 
-Har du inte stöd för yaml så får du ett felmeddelande istället.
+Har du inte stöd för yaml så får du ett felmeddelande.
 
 
 
@@ -88,7 +88,7 @@ Installera på Windows och XAMPP {#windows}
 
 I skriptet som testar om yaml finns installerat skrivs det ut detaljer om ditt system. Använd de detaljerna för att ladda hem det paketet av php-yaml som passar just ditt system.
 
-1. Du väljer (en stabil) version på nedladdningssidan och klickar på länken vid DLL.
+1. Du väljer (en stabil) version på [nedladdningssidan](http://pecl.php.net/package/yaml) och klickar på länken vid DLL. Välj nu det paket som matchar din PHP-installation.
 
 1. Öppna zip-filen. som laddas ned.
 
@@ -102,9 +102,9 @@ I skriptet som testar om yaml finns installerat skrivs det ut detaljer om ditt s
 extension=php_yaml.dll
 ```
 
-Du kan nu dubelkolla att php-yaml fungerar via terminalen.
+Du kan nu dubelkolla att php-yaml fungerar via terminalen. Det skall fungera både via `cmd.exe` och via Cygwin.
 
-Starta om Apache och testa sedan att det fungerar även via Apache.
+Starta om Apache och testa att det fungerar även via Apache.
 
 
 
@@ -182,7 +182,9 @@ Configuration
 
 I mitt exempel är konfigfilen `/Applications/XAMPP/xamppfiles/etc/php.ini`.
 
-Jag kan antingen öppna den filen i min texteditor och lägga till raden längst ned. Eller så gör jag det via kommandoraden.
+Jag kan antingen öppna den filen i min texteditor och lägga till raden längst ned. Gör det om du är osäker.
+
+Eller så gör jag det via kommandoraden.
 
 ```bash
 $ sudo sh -c 'echo "extension=yaml.so" >> /Applications/XAMPP/xamppfiles/etc/php.ini'
@@ -190,7 +192,7 @@ $ tail -1 /Applications/XAMPP/xamppfiles/etc/php.ini
 extension=yaml.so
 ```
 
-Du kan verifiera att det fungerar direkt via terminalen.
+Du kan verifiera att php-yaml nu fungerar via terminalen.
 
 Starta om apache och verifiera att det även fungerar där.
 
@@ -205,7 +207,7 @@ På min debian installerar jag först libyaml med apt-get.
 $ sudo apt-get install libyaml-dev
 ```
 
-Sedan installerar jag pecl.
+Sedan installerar jag pecl tillsammans med källkodsfiler för PHP-distributionen.
 
 ```bash
 $ sudo apt-get install php-pear php5-dev
@@ -214,7 +216,7 @@ $ sudo apt-get install php-pear php5-dev
 Med pecl installerar jag php-yaml. Jag väljer den versionen som finns tillgänglig och är stabil.
 
 ```bash
-$ sudo pecl install yaml-1.2.0
+$ sudo pecl install yaml
 ```
 
 På min debian har jag två olika konfigfiler för PHP, en för apache-varianten och en för cli. Jag behöver lägga till följande i dem båda.
