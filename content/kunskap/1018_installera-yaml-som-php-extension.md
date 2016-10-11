@@ -54,7 +54,7 @@ Du kan [provköra skriptet på dbwebb.se](repo/design/example/php-yaml/check-if-
 
 Som ett komplement kan du även testa att yaml fungerar direkt i terminalen.
 
-Först kontrollera om yaml finns i nuvarande konfiguration av PHP.
+Först kan du kontrollera om yaml finns i nuvarande konfiguration av PHP.
 
 ```bash
 $ php -i | grep yaml
@@ -69,7 +69,7 @@ yaml.output_width => 80 => 80
 
 Skrivs inget ut så har du inte stöd för yaml.
 
-Du kan även testa att använda yaml via PHP.
+Därefter kan du testa att använda yaml med PHP.
 
 ```bash
 $ php -r 'echo yaml_emit(["a" => "b", "c" => "d"]);' 
