@@ -66,8 +66,4 @@ Kan man inte göra det enklare?
 
 Tja, kan man kanske. Men hittills har jag inte funnit en väg som gör att jag kan minimera förfarandet. Det man kan ta bort är redovisningen i forumet men det är jag inte villig att göra. Det riskerar en del av communityn och det sättet jag vill se på hur vi delar med oss av våra strävanden. 
 
-Så nej.
-
-Det får alltså vara en variant av att gilla läget, så här funkar det. Det finns en tanke bakom varför det är så här och alternativen har ännu inte varit tillräckligt attraktiva.
-
-Copy & paste, sett i hela kursens omfattning så pratar vi inte om speciellt mycket jobb.
+Så nej. Det finns en tanke bakom varför det är så här och alternativen har ännu inte varit tillräckligt attraktiva.
