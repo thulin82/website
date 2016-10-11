@@ -1,10 +1,14 @@
 ---
 ...
-PHP och YAML
+PHP i pathen
 ==================================
 
-[YAML](http://yaml.org/), YAML Ain't Markup Language, är ett läsbart format på att skriva till exempel konfigurationsfiler till programmeringsspråk och applikationer.
+För att köra PHP som ett CLI direkt i terminalen så behöver den exekverbara PHP-filen ligga i sökvägen, PATH.
 
-Du skall installera YAML som en del av PHP så att du kan använda PHP-funktioner för att läsa YAML-data.
+Om du kan skriva följande i terminalen så är du redan klar.
 
-Jobba igenom artikeln "[Installera YAML för PHP](kunskap/installera-yaml-som-php-extension)", den visar hur du installerar YAML som en PHP extension.
+```
+$ php --version
+```
+
+Annars jobbar du igenom artikeln "[Lägg in PHP i pathen](kunskap/lagg-php-i-pathen)" som visar hur du löser det.
