@@ -138,7 +138,7 @@ Du kan välja att endast visa de bilder som är kopplade till objekten. Du behö
 
 Skapa ett gränssnitt för webbplatsens administratör. Följande delar skall finnas med.
 
-1. Administratören kan logga in på webbplatsen för att komma åt de administrativa funktionerna. Användare och lösenord kan vara *admin admin* eller *doe doe*.
+1. Administratören kan logga in på webbplatsen för att komma åt de administrativa funktionerna. Både *admin admin* och *doe doe* skall fungera som användarnamn och lösenord.
 
 2. Det skall gå att editera innehåll för objekten och artiklarna samt uppdatera dess informationen. Det skall gå att lägga till och ta bort objekt/artiklar.
 
