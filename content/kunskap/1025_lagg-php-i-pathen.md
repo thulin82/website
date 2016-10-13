@@ -30,11 +30,12 @@ Verifiera att det fungerar {#test}
 
 Så här kan du verifiera att det fungerar. Om det inte fungerar så forsätter du längre ned i artikeln för att installera, sedan kommer du tillbaka hit igen för att verifiera att allt fungerar som det ska.
 
-Var ligger PHP? Har jag flera installationer av PHP i pathen?
+Var ligger PHP? Har jag flera installationer av PHP i pathen? Vilken är min PATH?
 
 ```bash
 $ which php
 $ whereis php
+$ echo $PATH
 ```
 
 Öppna din terminal, kolla versionen på PHP och testkör ett PHP-skript.
@@ -91,6 +92,8 @@ Redigera så att sökvägen till din exekverbara `php.exe` kommer in i listan.
 Starta om `cmd.exe` och testa att det nu fungerar.
 
 Starta en Cygwin-terminal och verifiera att det även fungerar där.
+
+Om det inte fungerar, pröva att logga ut och logga in igen.
 
 
 
