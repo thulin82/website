@@ -187,4 +187,4 @@ $ composer
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det finns en [forumtråd om Composer](t/), ställ dina frågor där och tipsa gärna om hur du använder det.
+Det finns en [forumtråd om Composer](t/5795), ställ dina frågor där och tipsa gärna om hur du använder det.
