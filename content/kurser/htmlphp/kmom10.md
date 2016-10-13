@@ -80,7 +80,7 @@ Objekten skall finnas på en egen sida, tillgänglig via navbaren.
 
 Artiklarna skall finnas på en egen sida, tillgängliga via navbaren.
 
-Maggies artikel skall visas på en egen sida, den har ett innehåll som skiljer sig från övriga artiklar och dess innehåll ger en bra överblick av vad BMO handlar om. Använd bilder för att illustrera Maggies artikel.
+Maggy's artikel skall visas på en egen sida, den har ett innehåll som skiljer sig från övriga artiklar och dess innehåll ger en bra överblick av vad BMO handlar om. Använd bilder för att illustrera Maggy's artikel.
 
 
 
@@ -167,7 +167,3 @@ Redovisning {#redovisning}
 # Ställ dig i kursrepot
 dbwebb publish me
 ```
-
-
-
-
