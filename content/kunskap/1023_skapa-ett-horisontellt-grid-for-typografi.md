@@ -6,13 +6,15 @@ category:
     - kurs/design
     - anax flat
     - theme
+    - less
+    - css grid system
 ...
 Skapa ett horisontellt grid för typografi
 ===================================
 
 [FIGURE src=/image/snapvt16/horisontellt-grid.png?w=c5&a=55,25,20,50 class="right"]
 
-Vi skall skapa ett typografiskt grid. Jag kallar det ett horisontellt grid för att skilja det från det vertikala gridet vi tidigare pratat om. Horisontellt eftersom gridet baseras på rader och egentligen fonternas *baseline*. Ett sådant här grid kan även kallas för baseline grid, men dess syfte är att skapa en rytm i sidan, en rytm som innebär att alla typografiska element delar en och samma multipel av en höjd. En sådan rytm kallas även för vertikal rytm.
+Vi skall skapa ett typografiskt grid. Jag kallar det ett horisontellt grid för att skilja det från det vertikala gridet vi tidigare pratat om. Horisontellt eftersom gridet baseras på rader och fonternas *baseline*. Ett sådant här grid kan även kallas för baseline grid. Dess huvudsakliga syfte är att skapa en rytm i sidan, en rytm som innebär att alla typografiska element delar en och samma multipel av en höjd. En sådan rytm kallas även för vertikal rytm.
 
 <!--more-->
 
@@ -36,7 +38,7 @@ I ett horisontellt grid så finns det ett magiskt nummer som styr allt.
 
 Det magiska numret ger radernas höjd i gridet. Ett vanligt magiskt tal är 22. Eller 24. Jag väljer 24 idag.
 
-I bilden nedan finns gröna streck som visualiserar det horisontella gridet. Det är 24 pixlar mellan varje streck. Det är ett magiskt tal --- `@magicNumber: 24px;` --- mellan varje streck.
+I bilden nedan finns lusbruna streck som visualiserar det horisontella gridet. Det är 24 pixlar mellan varje streck. Det är ett magiskt tal --- `@magicNumber: 24px;` --- mellan varje streck.
 
 [FIGURE src=/image/snapvt16/horisontellt-grid.png?w=w2 caption="All typografi lutar mot en rad i det horisontella gridet."]
 
@@ -44,7 +46,7 @@ Det magiska talet är delvis framräknat utifrån basfontens storlek. Normalt ä
 
 Den andra delen är basfontens *line-height*, radhöjd. En line-height motsvarande 1 ger 16 pixlar och inget mellanrum mellan raderna. Radernas mellanrum är viktigt för texters läsbarhet. Fontens utseende kan kräva olika radhöjder. Två vanliga radhöjder är 1,375 och 1,5.
 
-Det ger oss två olika magiska tal, 22 eller 24, enligt följande.
+Det ger oss två olika magiska tal, 22 eller 24, enligt följande, kodat i LESS.
 
 ```less
 /**
@@ -102,11 +104,11 @@ Begrunda följande tabell med uträkningar.
  */
 ```
 
-Vänstra delen av tabellen rör elementets fontstorlek. Därefter kommer en beräkning med en multipel av `@magicNumber` som ger en radhöjd. Sista siffran är alltså den line-height som tillsammans med vald fontstorlek ger att det typgrafiska eleements höjd kommer att matcha det tänkta gridet.
+Vänstra delen av tabellen rör elementets fontstorlek. Därefter kommer en beräkning med en multipel av `@magicNumber` som ger en radhöjd. Sista siffran är alltså den line-height som tillsammans med vald fontstorlek ger att det typgrafiska elements höjd kommer att matcha det tänkta gridet.
 
-Mycket beräkningar och det finns naturligtvis en liknande tabell för det magisak talet 22.
+Mycket beräkningar och det finns naturligtvis en liknande tabell för det magiska talet 22.
 
-Till vår räddning är mixins. Med lite tur och lite baskunskaper i matematik så kan vi översätta ovan tabell till en formel som passar in i en mixin. Syftet med mixinen är att hjälpa oss beräkna radhöjden utifrån en godtycklig fontstorlek.
+Till vår räddning är mixins. Med lite läsning i manualen till LESS och lite baskunskaper i matematik så kan vi översätta ovan tabell till en formel som passar in i en mixin. Syftet med mixinen är att hjälpa oss beräkna radhöjden utifrån en godtycklig fontstorlek.
 
 ```less
 .fontSize(@fontSize) {
@@ -115,7 +117,7 @@ Till vår räddning är mixins. Med lite tur och lite baskunskaper i matematik s
 }
 ```
 
-Kan du se att formeln för lineheight matchar uträkningarna i tabellen ovan?
+Kan du se att formeln för line-height matchar uträkningarna i tabellen ovan?
 
 Du kan nu använda mixinen när du bestämmer fontstorleken på till exempel en `H1`, så här.
 
@@ -161,6 +163,10 @@ h1, h2, h3, h4, h5, h6 {
 Nu kan jag börja styla H1.
 
 ```less
+@fontSizeH1: 2.375em;
+@colorH1BorderBottom: #666;
+@borderSizeH1: 1px;
+
 h1 {
     .fontSize(@fontSizeH1);
     font-weight: normal;
@@ -170,7 +176,9 @@ h1 {
 }
 ```
 
-Här väljer jag att lägga till en border, men då måste jag justera storleken på margin-bottom. Det är enkelt att styla alla typografiska element med en margin-bottom för att skapa utrymme mellan elementen.
+Här väljer jag att lägga till en border, men då måste jag justera storleken på margin-bottom. Glöm inte att alla utrymmen måste matcha det magiska numret.
+
+Det är enklast att styla alla typografiska element med en margin-bottom för att skapa utrymme mellan elementen.
 
 Om du väljer att även jobba med margin-top så måste du vara medveten om att *margin collapse*.
 

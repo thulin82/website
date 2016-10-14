@@ -80,9 +80,9 @@ Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det ha
 
 
 
-###Kmom02: TBD {#kmom02}
+###Kmom02: Grid, layout och typografi {#kmom02}
 
-TBD.
+Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor. Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumneroch vi skall undersöka ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*.
 
 [Instruktion till kursmoment 02](design/kmom02).
 
@@ -161,7 +161,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kursmoment | Beautiful Web Design   |
 |------------|------------------------|
 | Kmom01     | 1                      |
-| Kmom02     |                        |
+| Kmom02     | 4                      |
 | Kmom03     |                        |
 | Kmom04     |                        |
 | Kmom05     |                        |

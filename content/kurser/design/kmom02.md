@@ -1,14 +1,11 @@
 ---
 author: mos
 revision:
+    2016-10-15: (B, mos) Testad och genomgången.
     2016-06-22: (A, mos) Första utgåvan.
 ...
 Kmom02: Grid, layout och typografi
 ====================================
-
-[INFO]
-**Kursmomentet är under utveckling --- men grunden finns på plats. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
-[/INFO]
 
 Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
 
@@ -140,7 +137,8 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känns det attvara styrd till ett vertikalt grid?
+* Hur känns det att vara styrd till ett vertikalt grid?
 * Hur känns det att jobba med ett typografiskt horisontellt/baseline grid?
 * Har du jobbat med liknande layouttekniker sedan tidigare?
 * Du börjar se hur man kan jobba med LESS, kommentarer på det?
+* HUr avancerat uppfattade du att detta kmom var?

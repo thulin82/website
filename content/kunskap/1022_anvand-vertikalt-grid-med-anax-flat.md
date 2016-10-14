@@ -6,6 +6,8 @@ category:
     - kurs/design
     - anax flat
     - theme
+    - less
+    - css grid system
 ...
 Använd ett vertikalt grid med Anax Flat
 ===================================
@@ -55,12 +57,14 @@ Notera att länken till stylesheeten har `rel=stylesheet/less` och att man kan s
 
 När man har en webbplats i produktion så vill man inte kompilera stylen på detta viset. Men vid utveckling så är det inte alls dumt. Bra att ha, helt enkelt.
 
+Du behöver inte installera LESS i webbläsaren för att följa exemplet. Allt finns redan på plats i kursrepot.
+
 
 
 Grid med CSS-klasser {#klass}
 -------------------------------
 
-Grunden för ett grid kan skapas på olika sätt. I denna artikeln skall vi använda ett klassiskt sätt som bygger på tekniken med *float*.
+Grunden för ett grid kan skapas på olika sätt. I denna artikeln skall vi använda ett klassiskt sätt som bygger på tekniken med *float*. Vi kommer också att titta på en senare teknik som bygger på *flexbox*.
 
 I vårt grid vill vi undvika hårda kopplingar mellan CSS- och HTML-koden. Vissa grid-system har varianter med grid-klasser som man lägger in i HTML-koden. Så här.
 
@@ -550,7 +554,7 @@ Man kan fråga sig om det numer kommer byggas speciellt många webbplatser som h
 
 Så, med det i tanken så förädlar jag koden bakom griddet ytterligare en gång. Nu rensar jag bort koden som fanns för att stödja fast bredd och kvar blir ett grid som enbart är fluid. Men det räcker troligen rätt långt.
 
-Det finns två exempel, ett som är gjort med tekniken [float](/repo/design/example/grid/fluid/grid-responsive-float.html) och ett som är gjort med [flex](/git/design/example/grid/fluid/grid-responsive-flex.html). Kika på dem och ta fram koden bakom dem. Lägg koden sida vid sida och se vad som skiljer dem åt. Du kommer att märka att det inte är så stor skillnad.
+Det finns två exempel, ett som är gjort med tekniken [float](/repo/design/example/grid/fluid/grid-responsive-float.html) och ett som är gjort med [flex](/repo/design/example/grid/fluid/grid-responsive-flex.html). Kika på dem och ta fram koden bakom dem. Lägg koden sida vid sida och se vad som skiljer dem åt. Du kommer att märka att det inte är så stor skillnad.
 
 En viktig likhet är att båda implementationerna av gridet har samma interface i form av mixins. Det innebär att du kan bygga en webbplats baserad på gridets mixins och du får möjlighet att byta ut gridets implementation, utan att störa webbplatsens utseende. Ett gemensamt interface. Det är bra det.
 
@@ -602,4 +606,4 @@ Avslutningsvis {#avslutning}
 
 Detta var en genomgång av tekniker bakom att implementera gridsystem med CSS och LESS. Vi har pratat om fixed, fluid och responsive varianter och du har sett grid-implementationer med både float och flex.
 
-Du har nu en grund att stå på när det blir dag sför dig att implementera ett eget grid i din webbplats.
+Du har nu en grund att stå på när det blir dags för dig att implementera ett eget grid i din webbplats.

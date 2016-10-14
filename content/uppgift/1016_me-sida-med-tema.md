@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-10-07: (B, mos) Genomgånen och testad.
+    2016-10-07: (B, mos) Genomgången och testad.
     2016-06-08: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -88,7 +88,7 @@ Krav {#krav}
 ```bash
 # Ställ dig i kursrepot
 $ cd me
-$ rsync -av --delete --exclude vendor anax-flat/ kmom01/ && ln -sf ../anax-flat/vendor kmom01/
+$ rsync -av --delete --exclude vendor --exclude node_modules --exclude build anax-flat/ kmom01/ && ln -sf ../anax-flat/vendor kmom01/
 ```
 
 Vi vill spara undan allt du gjort i kmom01-mappen, så vi tar helt enkelt en kopia av allt med kommandot `rsync`.

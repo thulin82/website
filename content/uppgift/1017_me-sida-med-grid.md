@@ -42,11 +42,11 @@ Krav {#krav}
 
 1. Skapa ett target för `upgrade-grid` i din Makefile som hämtar hem senaste versionen av grid-filerna från [kursrepot på GitHub](https://github.com/dbwebb-se/design/tree/master/example/grid/fluid/less).
 
-1. Skapa en fil `modules/layout.less` där du stylar din Anax Flat enligt ditt valda grid. Förslagsvis använder du 960px som största storlek och gör 12 kolumner. Detta är nu basen i ditt aktiva tema. Kommentera bort din tidigare `regions.less`.
+1. Skapa en fil `modules/layout.less` där du stylar din Anax Flat enligt ditt valda grid. Förslagsvis använder du mellan 960px till 1200px som största storlek och du använder 12 eller 24 kolumner. Detta är nu basen i ditt aktiva tema. Kommentera bort din tidigare `modules/regions.less` så den inte används från `modules.less`.
 
 1. Skapa en `modules/grid-helpers.less` och lägg en mixin som visualiserar gridet. Mixinen skall heta `.showGrid()` och ta ett argument som är gridets maximala storlek. De bilder du behöver lägger du enklast i `htdocs/img/grid`.
 
-1. Skapa en ny sida `content/grid.md`. Lägg in den sidan i menyn. När man tittar på den sidan skall gridet visas i bakgrunden.
+1. Skapa en ny sida `content/grid.md`. Lägg in den sidan i menyn. När man tittar på den sidan skall gridet visas i bakgrunden. Se till att sidan är fylld med innehåll i minst två kolumner så att gridet framgår tydligt.
 
 1. Gör ditt tema responsivt med media queries och förberett för mindre skärmar.
 
@@ -60,13 +60,13 @@ Krav {#krav}
 
 1. Gör så att båda `upgrade-typographic-grid` och `upgrade-grid` blir en del av target `upgrade` i din Makefile.
 
-1. Skapa en `modules/typography.less` där du aktiverar och eventuellt förändrar  stylen på dina typografiska element.
+1. I din `style.less` så aktiverar du typografin och förändrar stylen på dina typografiska element.
 
 1. Gör ett aktivt val när du väljer typsnitten till din webbplats.
 
-1. Gör så att alla övriga layoutlement på sidan också matchar det magiska numret. Det gäller till exempel för de margin-bottom du har mellan olika delar av sidan. Det är ingen exakt vetenskap, men använd `@magicNumber` där det finns möjlighet.
+1. Gör så att alla element på sidan matchar det magiska numret och lutar mot det typografiska gridet. Det gäller till exempel för de margin-bottom du har mellan olika delar av sidan, till exempel flash, main och footer-regionerna. Använd `@magicNumber` där det finns möjlighet och jobba främst med `margin-bottom`.
 
-1. Skapa ytterligare en sida `content/typography.md`. Lägg in den sidan i menyn. Fyll sidan med text och typografiska element som visar hur du stylat dem. Ungefär liknande textmassan som fanns i [exemplet](/repo/design/example/typography-grid/typography.html). När man tittar på den sidan skall gridet visas i bakgrunden. De typografiska elementen skall matcha gridet.
+1. Skapa en sida `content/typography.md`. Lägg in sidan i menyn. Fyll sidan med text och typografiska element som visar hur du stylat dem. Ungefär liknande textmassan som fanns i [exemplet](/repo/design/example/typography-grid/typography.html). När man tittar på den sidan skall gridet visas i bakgrunden. De typografiska elementen skall matcha gridet.
 
 
 
@@ -81,7 +81,7 @@ Krav {#krav}
 ```bash
 # Ställ dig i kursrepot
 $ cd me
-$ rsync -av --delete --exclude vendor anax-flat/ kmom02/ && ln -sf ../anax-flat/vendor kmom02/
+$ rsync -av --delete --exclude vendor --exclude node_modules --exclude build anax-flat/ kmom02/ && ln -sf ../anax-flat/vendor kmom02/
 ```
 
 1. Gör en `dbwebb publish` för att kolla att allt fungerar.

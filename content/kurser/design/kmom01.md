@@ -147,3 +147,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Det blev en del nya verktyg i labbmiljön, var de nya för dig eller kände du igen dem?
 * Hur kändes det att jobba med Anax Flat och bygga din me-sida?
 * Vad tycker du om LESS så här långt, och det sättet vi jobbar med LESS-moduler i vårt tema?
+* Kändes det som ett utmanande kursmoment? Det fanns videor som kompletterade artiklarna, hjälpte de dig att förstå materialet bättre?
