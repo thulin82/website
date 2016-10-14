@@ -109,7 +109,7 @@ hello:
     @echo "Hello World in a makefile using make."
 ```
 
-Om du får problem så hittar du filen i kursrepot för design-kursen i `example/Makefile`.
+Om du får problem så hittar du filen i kursrepot för design-kursen i [`example/Makefile`](https://github.com/dbwebb-se/design/blob/master/example/make/Makefile).
 
 Nu kan du köra kommandot `make` i samma katalog som du sparade filen `Makefile`.
 
