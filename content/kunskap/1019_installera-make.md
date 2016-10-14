@@ -94,7 +94,7 @@ Se till att du använder riktiga tabbar i din makefil. Troligen är din textedit
 
 Då prövar vi. Spara följande som en ny fil `Makefile` i en tom katalog som du skapar enbart för detta syftet.
 
-```txt
+```text
 #
 # This is a comment
 # Remember to use real tabs in the Makefile, no soft tabs (spaces).
