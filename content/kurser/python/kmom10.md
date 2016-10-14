@@ -63,7 +63,7 @@ Det skall gå att skicka in en parameter till `adventure.py`, enligt följande.
 
 | Kommando          |  Vad händer     |
 |-------------------|-----------------|
-| `-h`, `--help`    | Skriver ut en beskrivning av kommandot och vilka parameterar som fungerar. |
+| `-h`, `--help`    | Skriver ut en beskrivning av programmet och vilka parameterar som fungerar. |
 | `-i`, `--info`    | Skriver ut en beskrivning av spelet och spelets idé. |
 | `-v`, `--version` | Skriver ut versionen av spelet. |
 | `-a`, `--about`   | Skriver ut en kort beskrivning av dig själv, du som gjort spelet. |
@@ -189,7 +189,3 @@ Redovisning {#redovisning}
 # Ställ dig i kurskatalogen
 dbwebb publish me
 ```
-
-
-
-

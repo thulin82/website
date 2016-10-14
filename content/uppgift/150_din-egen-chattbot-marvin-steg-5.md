@@ -80,7 +80,7 @@ Krav {#krav}
 
 3. Följande options skall fungera.
 
-* `-h, --help` skall visa en hjälptext som beskriver ditt kommando och hur det används.
+* `-h, --help` skall visa en hjälptext som beskriver ditt program och hur det används.
 * `-v, --version` skall visa versionen av programmet.
 * `--verbose` skall innebära att mer text skrivs ut, kanske bra för debugging?
 * `-s, --silent` skall innebära att minimalt med utskrift sker, bra om man bara vill se svaret.
