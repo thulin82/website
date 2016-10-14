@@ -1,17 +1,27 @@
 ---
 author: mos
-category: labbmiljo
+category:
+    - labbmiljo
+    - php
 revision:
-  "2014-04-07": (A, mos) Första utgåvan i samband med phpmvc version 2.
+    "2016-10-13": (B, mos) Obsolete och länk till ersättande artikel.
+    "2014-04-07": (A, mos) Första utgåvan i samband med phpmvc version 2.
 updated: "2014-04-07 16:37:12"
 created: "2014-04-07 15:40:16"
 ...
 Installera Composer för pakethantering med PHP
 ==================================
 
-Composer är en pakethanterare till PHP, eller en *Dependency manager* som de kallar det. Denna artikel visar hur du hittar Composer på studentservern och hur du installerar den på din egen maskin.
+Composer är en pakethanterare till PHP, eller en *Dependency manager* som det även kallas. Denna artikel visar hur du installerar composer på din egen maskin.
 
 <!--more-->
+
+[INFO]
+**Uppdaterad artikel finns**
+
+Det finns en uppdaterad artikel som visar hur du [installerar Composer på din egen maskin](kunskap/installera-composer). Det rekommenderas att du läser den artikeln istället.
+
+[/INFO]
 
 
 
@@ -146,7 +156,3 @@ Ser det bra ut? Då är det bara att börja använda det.
 Stegen att installera Composer är samma oavsett din miljö. Det bör fungera på Linux, Unix, Mac och Windows. Se bara till att du har PHP 5.4 eller senare.
 
 Det finns ett foruminlägg för [Composer och denna artikel](t/2237) om du vill diskutera, kommentera eller ställa frågor.
-
-
-
-

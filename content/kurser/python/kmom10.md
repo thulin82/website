@@ -1,11 +1,12 @@
 ---
 author: mos
 revision:
-  "2015-08-25": (E, mos) Uppgraderade till dbwebb v2.
-  "2015-02-12": (D, mos, Sylvanas) Uppdaterade krav 6 och 5 (tog bort curses).
-  "2015-01-08": (C, mos) Bort blå ruta med kursutveckling pågår.
-  "2014-11-19": (B, mos) Tog bort `s` från kommandot se, det var duplicerat.
-  "2014-11-12": (A, mos) Första versionen till python ht14.
+    "2016-10-13": (F, mos) Bort med gammalt stycke om curses och tillåt väderstreck.
+    "2015-08-25": (E, mos) Uppgraderade till dbwebb v2.
+    "2015-02-12": (D, mos, Sylvanas) Uppdaterade krav 6 och 5 (tog bort curses).
+    "2015-01-08": (C, mos) Bort blå ruta med kursutveckling pågår.
+    "2014-11-19": (B, mos) Tog bort `s` från kommandot se, det var duplicerat.
+    "2014-11-12": (A, mos) Första versionen till python ht14.
 ...
 Kmom10: Projekt och examination
 ==================================
@@ -86,6 +87,8 @@ Väl i rummet kan du skriva vad du vill göra, det är kommandon som du kan ge t
 | `se`           | Titta dig runt omkring - spelet svarar med om det finns något särskilt att se i rummet. |
 | `l`, `ledtråd` | Ge en ledtråd, eller fler om det finns, en ledtråd för varje gång man skriver kommandot. |
 
+Du kan ersätta `fram` och `bak` med väderstreck, om du så önskar, dvs `norr`, `söder`, `väst`, `öst`.
+
 I ett rum finns det objekt. Ett objekt har en beskrivning. Ett objekt kan du göra något med, du kan interagera med det. När du interagerar med ett objekt så kan det ändra form. En stängd garderob kan öppnas. En stol kan flyttas. En vas kan tas sönder. När något händer med ett objekt så kan det leda till att ytterligare ett objekt kommer in i rummet. 
 
 För att ta ett exempel. Du har objektet *"Det är en vit garderob från Ikea, den ser väl använd ut. Dörren är stängd."*. Du gör kommandot `öppna garderob`, objektet ändrar form till att vara en öppen garderob (dess beskrivning ändras). Beskrivningen är nu *"Det är en öppen garderob, i garderoben finns en kristallkula."*. Objektet `kristallkula` tillkom när du öppnade garderoben. 
@@ -143,8 +146,6 @@ Följande kommandon skall fungera.
 
 
 ###Krav 5: Spara eller *Scrapa* (optionell) {#k5}
-
-<del>Gör spelet helt baserat på curses. Se till att hantera om spelare har olika storlekar på sin terminal. Det är rimligt att kräva en viss minsta storlek på terminafönstret. (kravet fanns med för hösten 14 och togs bort inför våren 15)</del>
 
 Du skall återanvända kunskaper från kursmoment 06, du har två möjligheter, välj en av dem.
 

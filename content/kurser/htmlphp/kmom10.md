@@ -80,7 +80,7 @@ Objekten skall finnas på en egen sida, tillgänglig via navbaren.
 
 Artiklarna skall finnas på en egen sida, tillgängliga via navbaren.
 
-Maggies artikel skall visas på en egen sida, den har ett innehåll som skiljer sig från övriga artiklar och dess innehåll ger en bra överblick av vad BMO handlar om. Använd bilder för att illustrera Maggies artikel.
+Maggy's artikel skall visas på en egen sida, den har ett innehåll som skiljer sig från övriga artiklar och dess innehåll ger en bra överblick av vad BMO handlar om. Använd bilder för att illustrera Maggy's artikel.
 
 
 
@@ -138,7 +138,7 @@ Du kan välja att endast visa de bilder som är kopplade till objekten. Du behö
 
 Skapa ett gränssnitt för webbplatsens administratör. Följande delar skall finnas med.
 
-1. Administratören kan logga in på webbplatsen för att komma åt de administrativa funktionerna. Användare och lösenord kan vara *admin admin* eller *doe doe*.
+1. Administratören kan logga in på webbplatsen för att komma åt de administrativa funktionerna. Både *admin admin* och *doe doe* skall fungera som användarnamn och lösenord.
 
 2. Det skall gå att editera innehåll för objekten och artiklarna samt uppdatera dess informationen. Det skall gå att lägga till och ta bort objekt/artiklar.
 
@@ -167,7 +167,3 @@ Redovisning {#redovisning}
 # Ställ dig i kursrepot
 dbwebb publish me
 ```
-
-
-
-
