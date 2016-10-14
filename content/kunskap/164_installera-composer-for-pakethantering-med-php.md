@@ -16,12 +16,12 @@ Composer är en pakethanterare till PHP, eller en *Dependency manager* som det �
 
 <!--more-->
 
-[INFO]
+[WARNING]
 **Uppdaterad artikel finns**
 
 Det finns en uppdaterad artikel som visar hur du [installerar Composer på din egen maskin](kunskap/installera-composer). Det rekommenderas att du läser den artikeln istället.
 
-[/INFO]
+[/WARNING]
 
 
 
