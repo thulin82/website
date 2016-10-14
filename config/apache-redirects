@@ -151,6 +151,7 @@ Redirect /javascript1   /kurser/javascript1
 Redirect /linux         /kurser/linux
 Redirect /webapp        /kurser/webapp
 
+Redirect /webgl/repo    /repo/webgl
 Redirect /webgl         /kurser/webgl
 Redirect /oopython      /kurser/oopython
 Redirect /design        /kurser/design
