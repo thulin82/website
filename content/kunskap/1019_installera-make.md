@@ -30,6 +30,13 @@ Läs mer om Make på [webbplatsen om GNU Make](http://www.gnu.org/software/make/
 
 
 
+Förutsättning {#pre}
+-------------------------------
+
+Du har installerat de [grundverktyg](labbmiljo) som ligger till grund för samtliga kurser.
+
+
+
 Installera på Windows Cygwin {#windows}
 -------------------------------
 
