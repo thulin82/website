@@ -61,10 +61,7 @@ Anax Flat finns på GitHub och på Packagist. Du kan kika på hur paketet [Anax 
 Jag väljer att installera Anax Flat med composer.
 
 ```bash
-# Du behöver även installera PHP SmartyPants
-$ composer require mos/anax-flat michelf/php-smartypants 1.6.x-dev
-
-# Nu kan du uppdatera alla paketen som anax-flat består av
+$ composer require mos/anax-flat
 $ composer update
 ```
 
