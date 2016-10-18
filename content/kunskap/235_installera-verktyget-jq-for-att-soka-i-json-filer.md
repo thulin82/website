@@ -2,7 +2,8 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2015-11-23": (A, mos) Första utgåvan inför kurs webapp.
+    "2016-10-18": (B, mos) Fel i exempel om hitta sista länet.
+    "2015-11-23": (A, mos) Första utgåvan inför kurs webapp.
 updated: "2015-11-23 16:06:17"
 created: "2015-11-23 16:05:20"
 ...
@@ -163,7 +164,7 @@ $ jq '.soklista.sokdata[0]' af.json
   "id": 10,
   "namn": "Blekinge län"
 }
-$ jq '.soklista.sokdata[0]' af.json
+$ jq '.soklista.sokdata[21]' af.json
 {
   "antal_ledigajobb": 1040,
   "antal_platsannonser": 293,
@@ -213,6 +214,3 @@ Ett verktyg likt jq kan vara behändigt när du jobbar med stora JSON filer och 
 
 Har du [tips, förslag eller frågor om artikeln](t/4861) så finns det en specifik forumtråd för det.
  
-
-
-
