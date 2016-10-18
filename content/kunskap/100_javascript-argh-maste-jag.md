@@ -2,6 +2,7 @@
 author: mos
 category: javascript
 revision:
+    2016-10-18: (H, mos) La till saknade länkar, redigerade bildstorlekar.
     2016-08-04: (G, mos) Korrigerade länkar.
     2015-12-02: (F, mos) Länk om jslint och polyfill gav 404, fixat.
     2013-11-26: (E, mos) Nu även i /kunskap.
@@ -120,7 +121,7 @@ Så här ser det ut för mig.
 
 * [Kodexempel "Hello World"](javascript/lekplats/hello-world/hello.html)
 
-[FIGURE src=/img/javascript/intro/001.jpg caption="Hello World som det ser ut för Mikael."]  
+[FIGURE src=/image/javascript/intro/001.jpg?w=w2 caption="Hello World som det ser ut för Mikael."]  
 
 Ta gärna och utöka programmet med dina egna konstruktioner, allt för att testa och leka runt. När du är klar så går vi vidare och bekantar oss med Firebug.
 
@@ -148,7 +149,7 @@ Vad vi behöver är hjälp och lite insikt i vad som är "best-practices" när d
 
 Så här ser första körningen ut för mig... hoppla... då gäller det bara att börja städa upp...
 
-[FIGURE src=/img/javascript/intro/002.jpg caption="Många felmeddelanden blev det i JSLint."]  
+[FIGURE src=/image/javascript/intro/002.jpg?w=w2 caption="Många felmeddelanden blev det i JSLint."]  
 
 Här följer en lista på de uppstädningar jag gjorde i min kod för att göra JSLint glad.
 
@@ -187,7 +188,7 @@ Ibland kör det ihop sig, man behöver hjälp med kodning och felsökning. Då �
 
 * [Mikael's "Hello World" i JSFiddle](http://jsfiddle.net/mikael_roos/Vrhk5/)
   
-[FIGURE src=/img/javascript/intro/003.jpg caption=""Hello World" i JSFiddle för att underlätta felsökning."]
+[FIGURE src=/image/javascript/intro/003.jpg?w=w2 caption=""Hello World" i JSFiddle för att underlätta felsökning."]
 
 Tanken är att man lägger upp sin kod, man skapar en "jsfiddle", och skickar länken till sin kollega och ber om hjälp och tips. Ett bra sätt att få hjälp och kollegan kan direkt testköra koden och utföra ändringar och test. När koden är klar kan kollegan skicka tillbaka länken till den nya "jsfiddlen". Ungefär så kan arbetsgången vara.
 
@@ -215,7 +216,7 @@ Om vi går händelserna lite i förväg så kan du ta och kika på min mall för
 
 * [javascript/lekplats/mall/](javascript/lekplats/mall)
 
-[FIGURE src=/img/javascript/intro/008.jpg caption="Min mall för testprogram, när den väl är klar."]
+[FIGURE src=/image/javascript/intro/008.jpg?w=w2 caption="Min mall för testprogram, när den väl är klar."]
 
 Här är en video där jag går igenom min resultat som blev min slutliga mall för testprogram, kika på den innan du fortsätter att läsa.
 
@@ -440,14 +441,15 @@ Det är enkelt att inkludera Modernizr, ladda ned JS-filen och inkludera den i s
 
 Så här kan det se ut när skriptet har körts och `<html class='no-js'>` modifierats av Modernizr.
 
-[FIGURE src=/img/javascript/intro/004.jpg caption="Många features stöds i min Firefox, det är bra det."]
+[FIGURE src=/image/javascript/intro/004.jpg?w=w2 caption="Många features stöds i min Firefox, det är bra det."]
 
 Jag har inte för avsikt att testa alla mina program i olika webbläsare, men nu kommer jag i alla fall vara förberedd för att hantera det. Modernizr kan vara en bra resurs, vi får se under kursens gång.
 
 Du kan skapa ditt egna libb på Modernizr och välja de delar som det skall innehålla, eller så kopierar du mitt bibliotek:
 
 * Mikael's Modernizr variant:  
-  js/modernizr.js
+  [js/modernizr.js](js/modernizr.js)
+
 
 
 ###jQuery och `ready()` {#jquery}
@@ -492,7 +494,7 @@ Då var vi klara. Jag är redo att skapa min lekplats för JS-kodande. Alla kode
 
 Så här ser det ut när jag kör testmallen (jag kan ha uppdaterat mallen sedan första kursmomentet så om du kör den nu kan bilden se aningen annorlunda ut).
 
-[FIGURE src=/img/javascript/intro/005.jpg caption="Mallen för testprogram är redo. Med Firebug kan du se vilka resurser som laddas."]
+[FIGURE src=/image/javascript/intro/005.jpg?w=w2 caption="Mallen för testprogram är redo. Med Firebug kan du se vilka resurser som laddas."]
 
 * [Källkoden till mallen](javascript/lekplats/source.php?dir=mall).
 
@@ -504,11 +506,11 @@ Jag lägger även upp en mall i JSFiddle för att snabbt skriva testprogram.
 
 * [Mikael's mall för testprogram i JSFiddle](http://jsfiddle.net/mikael_roos/bHhAz/).
 
-[FIGURE src=/img/javascript/intro/006.jpg caption="Mallen för testprogram, även i JSFiddle. Vi vet vad som väntar oss, felsökning och åter felsökning."]
+[FIGURE src=/image/javascript/intro/006.jpg?w=w2 caption="Mallen för testprogram, även i JSFiddle. Vi vet vad som väntar oss, felsökning och åter felsökning."]
 
 Glöm inte att köra din kod i JSLint med jämna mellanrum, kod-kvalitet är bra. Så här ser det ut när jag kör koden från min `main.js`.
 
-[FIGURE src=/img/javascript/intro/007.jpg caption="Koden i `main.js` passerar JSLint, stiligt."]
+[FIGURE src=/image/javascript/intro/007.jpg?w=w2 caption="Koden i `main.js` passerar JSLint, stiligt."]
 
 Kanske är du redan klar, men om inte så får du nu en uppgift, "get your hands dirty".
 
@@ -554,13 +556,13 @@ Tabellen nedan visar en översikt av olika webbläsare med renderingsmotor och J
 
 Ha denna tabellen i bakhuvudet när vi går vidare. Varje webbläsare är en egen produkt med egen kod och däri ligger också grunden till en del av de kompabilitetsproblem som finns mellan olika webbläsare. Naturligtvis i en kombination med hur W3C's standarder är skrivna. Webbplatsen [quirksmode](http://www.quirksmode.org/compatibility.html) är en bra resurs för att ha koll på hur väl olika webbläsare stödjer olika delar av specifikationerna.
 
-[FIGURE src=/img/javascript/intro/010.jpg caption="Quirksmode med lista över stödet av "DOM events" i webbläsare."]
+[FIGURE src=/image/javascript/intro/010.jpg?w=w2 caption="Quirksmode med lista över stödet av "DOM events" i webbläsare."]
 
 En liknande webbplats är "[When Can I Use](http://caniuse.com/)" som ger en översikt av stödet i olika webbläsare. I bilden nedan ser du en översikt över stödet för olika delar av JavaScript.
 
 * [caniuse.com/#cats=JS_API](http://caniuse.com/#cats=JS_API)
 
-[FIGURE src=/img/javascript/intro/013.jpg caption="När kan jag använda olika features i en viss webbläsare, bra information."]
+[FIGURE src=/image/javascript/intro/013.jpg?w=w2 caption="När kan jag använda olika features i en viss webbläsare, bra information."]
 
 Bra, då har vi koll på grunderna i en webbläsare. Det är liksom nödvändigt. Då går vi vidare.
 
@@ -587,7 +589,7 @@ I en webbläsare finns JS objektet `window`, det är det globala objektet som al
 
 Se följande bild som en illustration till objektet `window` och det globala scoopet.
 
-[FIGURE src=/img/javascript/intro/009.jpg caption="I Firebug går det utmärkt att exekvera JS-kod direkt via dess "Console"."]
+[FIGURE src=/image/javascript/intro/009.jpgw=w2 caption="I Firebug går det utmärkt att exekvera JS-kod direkt via dess "Console"."]
 
 Som en förklaring till ovanstående så öppnade jag en [tom webbsida](/javascript/lekplats/empty.html), du kan även öppna en tom webbsida genom att skriva `about:blank` i adress-fältet, och sedan skrev jag JS-kod i Firebugs "Console". Jag skapade en ny variabel som hamnade i det globala scoopet, dvs direkt under `window`.
 
@@ -612,7 +614,7 @@ MDN har samlat sitt material om DOM på en plats, gör en snabb koll på webbsid
 
 Via Firebug kan du detaljstudera innehållet i objekten `window` och `document` via menyvalet "DOM".
 
-[FIGURE src=/img/javascript/intro/011.jpg caption="En översikt av JavaScript objekt via Firebug menyval "DOM"."]
+[FIGURE src=/image/javascript/intro/011.jpg?w=w2 caption="En översikt av JavaScript objekt via Firebug menyval "DOM"."]
 
 Öppna en webbsida och välj Firebugs menyval för DOM. Studera vad `document` och `window` innehåller.
 
@@ -717,7 +719,7 @@ Testprogrammet skapar ett formulär som visar nuvarande storlek, ändra på vär
 
 * [Ändra storlek på div](javascript/lekplats/resize-element)
 
-[FIGURE src=/img/javascript/intro/012.jpg caption="Ändra storlek på ett element."]
+[FIGURE src=/image/javascript/intro/012.jpg?w=w2 caption="Ändra storlek på ett element."]
 
 I detta sammanhanget kan det vara bra att fräscha upp minnet och läsa på om ["hur stor är en div"](https://developer.mozilla.org/en/Determining_the_dimensions_of_elements)? 
 
@@ -830,7 +832,7 @@ Jag använder CSS3 transitions för att få mjuka övergångar när gubben rör 
 Du kan testa mitt exempel på följande länk.
 
 * "Mickey Mos" vandrar omkring:  
-  javascript/lekplats/move-around-css-sprite-using-css3-transitions
+  [javascript/lekplats/move-around-css-sprite-using-css3-transitions](javascript/lekplats/move-around-css-sprite-using-css3-transitions)
   
 Studera källkoden för exemplet och bekanta dig med vad som händer.
 
@@ -875,9 +877,9 @@ Låt mig visa hur detta kan fungera om man använder det på en baddie. Jag gör
 
 * [javascript/lekplats/css3-2d-transforms-with-transitions](javascript/lekplats/css3-2d-transforms-with-transitions)
 
-[FIGURE src=/img/javascript/intro/014.jpg caption="Så här ser det ut när det börjar."]
+[FIGURE src=/image/javascript/intro/014.jpg?w=w2 caption="Så här ser det ut när det börjar."]
 
-[FIGURE src=/img/javascript/intro/015.jpg caption="Här har jag klickat runt och flyttat runt min baddie."]
+[FIGURE src=/image/javascript/intro/015.jpg?w=w2 caption="Här har jag klickat runt och flyttat runt min baddie."]
 
 Så här fungerar det, först källkoden.
 
