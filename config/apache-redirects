@@ -149,10 +149,13 @@ Redirect /javascript    /kurser/javascript
 Redirect /python        /kurser/python
 Redirect /javascript1   /kurser/javascript1
 Redirect /linux         /kurser/linux
+
+Redirect /webapp/repo   /repo/webapp
 Redirect /webapp        /kurser/webapp
 
 Redirect /webgl/repo    /repo/webgl
 Redirect /webgl         /kurser/webgl
+
 Redirect /oopython      /kurser/oopython
 Redirect /design        /kurser/design
 Redirect /ramverk1      /kurser/ramverk1
