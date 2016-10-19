@@ -268,7 +268,7 @@ Redirect /msdnaa				/bloggg/msdnaa-studenter-far-fria-microsoft-produkter-under-
 
 # forum redirects
 Redirect /forum/utbildning/htmlphp		/forum/viewforum.php?f=4
-#Redirect /forum/utbildning/design		/forum/viewforum.php?f=53
+Redirect /forum/utbildning/design		/forum/viewforum.php?f=53
 Redirect /forum/utbildning/oophp		/forum/viewforum.php?f=37
 Redirect /forum/utbildning/phpmvc		/forum/viewforum.php?f=35
 Redirect /forum/utbildning/phpmvc-v2	/forum/viewforum.php?f=40
