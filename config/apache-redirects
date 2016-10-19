@@ -172,8 +172,11 @@ Redirect /kurser/javascript1/repo   /repo/javascript1
 
 
 # Program Webbprogrammering 120/180 studieplan & lektionsplan
-Redirect /program/webbprogrammering/studieplan/termin1 https://docs.google.com/spreadsheets/d/1CE0JMyajALOhRLTqfl6IzJXmD1QAM2UotlePXmslGS8/edit?usp=sharing
-Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://docs.google.com/spreadsheets/d/1USsEu479x5l7noML0ZdkTmt_RVZ3Jbu-_ELZyYOeNf8/edit?usp=sharing
+Redirect /program/webbprogrammering/studieplan/termin1 https://goo.gl/pqvkaj
+Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://goo.gl/av2XHO
+Redirect /program/webbprogrammering/lektionsplan/lasperiod2 https://goo.gl/HW07CY
+
+
 
 # Kurspaket webutv
 Redirect /webutv/studieplan/25   https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFkxaUtQMTItZ1IydWZPNHMxSFQwa0E&usp=sharing
