@@ -3,9 +3,10 @@ title: webgl
 
 author: mos
 revision:
-  "2015-11-29": (C, mos) Justerade namnen på kursmomenten.
-  "2015-10-11": (B, mos) Uppdateringar om respektive kursmoment.
-  "2015-10-07": (A, mos) Första preliminära revision inför kursstart HT2015.
+    "2016-10-19": (D, mos) Lade till rekommenderad studieplan.
+    "2015-11-29": (C, mos) Justerade namnen på kursmomenten.
+    "2015-10-11": (B, mos) Uppdateringar om respektive kursmoment.
+    "2015-10-07": (A, mos) Första preliminära revision inför kursstart HT2015.
 updated: "2015-10-06 19:51:12"
 created: "2015-10-06 19:51:08"
 ...
@@ -169,6 +170,8 @@ Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
 Går du på campus får du en [lektionsplan](webgl/lektionsplan) i samband med kursstart.
+
+Det finns en [rekommenderad studieplan](webgl/studieplan) som är kopplad till varje kurstillfälle.
 
 
 
