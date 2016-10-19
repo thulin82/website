@@ -119,21 +119,17 @@ Följande kanaler finns.
 
 * [dbwebb](https://gitter.im/mosbth/dbwebb) (allmän kanal)
 * [webbprogrammering](https://gitter.im/mosbth/webbprogrammering) (för programstudenter)
-* [kurspaketare](https://gitter.im/mosbth/kurspaket) (för de som går något kurspaket)
+* [kurspaketare](https://gitter.im/mosbth/kurspaket) (för de som går ett av kurspaketen)
 
-Kurspaket webutv:
+Länkar till kursspecifika gitter-kanaler, fördelade i de läsperioder kurserna normalt går.
 
-* [python](https://gitter.im/mosbth/python)
-* [javascript1](https://gitter.im/mosbth/javascript1)
-* [linux](https://gitter.im/mosbth/linux)
-* [webapp](https://gitter.im/mosbth/webapp)
+| lp1 | lp2 | lp3 | lp4 |
+|-----|-----|-----|-----|
+| [python](https://gitter.im/mosbth/python) | [javascript1](https://gitter.im/mosbth/javascript1) | [linux](https://gitter.im/mosbth/linux) | [webapp](https://gitter.im/mosbth/webapp) |
+| [htmlphp](https://gitter.im/mosbth/htmlphp) | [design](https://gitter.im/mosbth/design) | [oopython](https://gitter.im/mosbth/oopython) | [oophp](https://gitter.im/mosbth/oophp) |
+| |  [javascript](https://gitter.im/mosbth/javascript) | | [phpmvc](https://gitter.im/mosbth/phpmvc) |
+| | [webgl](https://gitter.im/mosbth/webgl) | | |
 
-Kurspaket webprog:
-
-* [htmlphp](https://gitter.im/mosbth/htmlphp)
-* [oophp](https://gitter.im/mosbth/oophp)
-* [phpmvc](https://gitter.im/mosbth/phpmvc)
-* [javascript](https://gitter.im/mosbth/javascript)
 
 
 
