@@ -106,7 +106,10 @@ Redirect /phpmvc/studieplan			https://docs.google.com/spreadsheet/ccc?key=0AiJ-Z
 Redirect /phpmvc/lektionsplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdGZOcW9CVkhZTXNEdzJobGM3dUpmVGc
 Redirect /javascript1/studieplan    https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdFpSbGwxZXpfUThvSXZaVDRhZng5WkE&usp=sharing
 Redirect /python/studieplan         https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdDY1amxWYU1ZMVYyQkNxRU1TaTRoZ3c&usp=sharing
-Redirect /webgl/lektionsplan        https://goo.gl/3F4Kju
+
+Redirect /webgl/lektionsplan    https://goo.gl/3F4Kju
+Redirect /webgl/studieplan      https://goo.gl/Sp5Fhz
+
 Redirect /javascript/studieplan		https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdE9oSE00YVoxVi1HVjQ2eFZLVnV2bmc
 Redirect /javascript/lektionsplan	https://docs.google.com/spreadsheet/ccc?key=0AiJ-Zb8R9RVmdHlSZkp2QVEyVlRHdWRfUGVPTDdVR1E
 
