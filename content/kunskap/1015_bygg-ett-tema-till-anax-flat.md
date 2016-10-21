@@ -522,7 +522,9 @@ Du kan använda `make test` för att testa, *linta*, alla CSS- och LESS-filer i 
 $ make test
 ```
 
-Om du får fel så försöker du rätta till dem. 
+Om du får fel så försöker du rätta till dem.
+
+Du kan ignorera CSS-felen som kommer från externa moduler. Så som vi jobbar för tillfället innebär det att vi får ignorera alla CSS-felen eftersom vår makefile inte kan skilja på vår egen kod och kod från externa moduler i lint-fasen. Kanske skulle man vilja att den gjorde det. Man kan ju rätta sina egna CSS-valideringsfel, inom rimliga gränser, men externa moduler får man nog ignorera oavsett vad.
 
 
 
