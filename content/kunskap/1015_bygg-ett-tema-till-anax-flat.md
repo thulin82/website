@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-21: (B, mos) Tog bort echo i makefilerna.
     2016-10-06: (A, mos) Testad och släppt.
 category:
     - kurs-design
@@ -214,7 +215,7 @@ Vad sägs om ett make *target* som gör `make upgrade` genom att hämta hem sena
 # target: upgrade-normalize       - Upgrade LESS module - Normalize.
 .PHONY: upgrade-normalize
 upgrade-normalize:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 
 	# Normalizer
 	wget --quiet https://necolas.github.io/normalize.css/latest/normalize.css -O $(LESS_MODULES)/normalize.less
@@ -433,7 +434,7 @@ Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sk
 # target: upgrade-responsive-menu - Upgrade LESS module - Responsive menu
 .PHONY: upgrade-responsive-menu
 upgrade-responsive-menu:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 
 	# Responsive-menu
 	wget --quiet https://raw.githubusercontent.com/mosbth/responsive-menu/master/src/less/responsive-menu.less -O $(LESS_MODULES)/responsive-menu.less
@@ -505,7 +506,7 @@ Låt oss förbered makefilen för att uppgradera alla externa LESS moduler via e
 # target: upgrade                 - Upgrade external LESS modules.
 .PHONY: upgrade
 upgrade: upgrade-normalize upgrade-responsive-menu
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 ```
 
 Jag hoppas du ser hur en makefil kan vara till hjälp att hålla ditt projekt uppdaterat samtidigt som det kan spara din värdefulla tid.
