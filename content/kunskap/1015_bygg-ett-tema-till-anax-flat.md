@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-10-21: (B, mos) Tog bort echo i makefilerna.
+    2016-10-21: (B, mos) Tog bort echo i makefilerna, cp av regions.less.
     2016-10-06: (A, mos) Testad och släppt.
 category:
     - kurs-design
@@ -254,13 +254,14 @@ Till min hjälp har jag kunskapen om den templatefil som används när HTML-kode
 
 
 
-###kopiera regions.less {#regions.less}
+###Kopiera regions.less {#regions.less}
 
 Vill du köra utan videor så gör du så här.
 
 ```text
-# Kopiera filen regions.less från kursrepot, ungefär så här
-$ cp ../../example/anax-flat/theme/regions.less modules
+# Kopiera filen regions.less från kursrepot
+# Du står i katalogen me/anax-flat/theme
+$ cp ../../../example/anax-flat/theme/regions.less modules
 $ ls -l modules
 ```
 
