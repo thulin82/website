@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-10-07: (PA, mos) Arbetskopia, kmom01 släppt.
+    2016-10-19: (PA, mos) Arbetskopia, kmom03 släppt.
 ...
 Kursen design
 ===================================================
@@ -88,9 +88,9 @@ Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar u
 
 
 
-###Kmom03: TBD {#kmom03}
+###Kmom03: Färg {#kmom03}
 
-TBD.
+Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi.
 
 [Instruktion till kursmoment 03](design/kmom03).
 
@@ -162,7 +162,7 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 |------------|------------------------|
 | Kmom01     | 1                      |
 | Kmom02     | 4                      |
-| Kmom03     |                        |
+| Kmom03     | 3                      |
 | Kmom04     |                        |
 | Kmom05     |                        |
 | Kmom06     |                        |

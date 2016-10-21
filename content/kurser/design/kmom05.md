@@ -10,6 +10,7 @@ Kmom05: Design
 **Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
 [/WARNING]
 
+<!--
 Designa webbplats utifrån bild.
 
 (Olika typer av webbplatser kontra olika design).
@@ -30,10 +31,13 @@ Whitespace.
 
 bootstrap (eller annat)
 
+-->
+
 <!--more-->
 
-**BILD**
 <!--
+**BILD**
+
 [FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
 -->
 

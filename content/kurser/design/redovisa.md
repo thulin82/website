@@ -33,12 +33,12 @@ Se till att du har taggat en ny version så att dina senaste ändringar finns me
 | Version | Kmom   |
 |---------|--------|
 | 1.0.*, 1.1.*   | kmom01 | 
-| 1.2.*   | kmom02 | 
-| 1.3.*   | kmom03 | 
-| 1.4.*   | kmom04 | 
-| 1.5.*   | kmom05 | 
-| 1.6.*   | kmom06 | 
-| 2.0.*   | kmom10 | 
+| 2.0.*   | kmom02 | 
+| 3.0.*   | kmom03 | 
+| 4.0.*   | kmom04 | 
+| 5.0.*   | kmom05 | 
+| 6.0.*   | kmom06 | 
+| 10.0.*   | kmom10 | 
 
 Det är viktigt att du taggar dina repon med rätt taggar. Annars tappar du historik och du kan få problem med inlämningarna.
 

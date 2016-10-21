@@ -85,9 +85,13 @@ Tänk dig en typografisk webbplats där all styling har lagts på de typografisk
 
 ###Video  {#video}
 
+Det finns inga videor.
+
+<!-- 
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 2.
+-->
 
 
 

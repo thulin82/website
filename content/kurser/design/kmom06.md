@@ -10,6 +10,7 @@ Kmom06: Tema
 **Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
 [/WARNING]
 
+<!-- 
 Bygg ett par teman. Något eget och något baserat på Bootstrap (elle rmotsvarande).
 
 (Olika språk, anpassa med int/loc) 
@@ -20,10 +21,13 @@ Bygg ett par teman. Något eget och något baserat på Bootstrap (elle rmotsvara
 
 (Cookis, lagar)
 
+-->
+
 <!--more-->
 
-**BILD**
 <!--
+**BILD**
+
 [FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
 -->
 
