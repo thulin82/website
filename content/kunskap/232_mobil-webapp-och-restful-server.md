@@ -1,6 +1,9 @@
 ---
 author: mos
 category: javascript
+revision:
+    2016-10-24: (B, mod) Formattering av bilder.
+    2015-11-23: (A, mos) Första utgåvan inför kurs webapp.  
 updated: "2015-11-23 14:31:09"
 created: "2015-10-27 11:17:32"
 ...
@@ -91,7 +94,7 @@ Säg att vi vill göra en sida i vår meapp som hämtar citat från en server, o
 
 Det skulle kunna se ut så här.
 
-[FIGURE src=/image/snapht15/ajax-marvin.png?w=w2 class="left" caption="Marvin, en figur från en bok, ger oss citat via Ajax."]
+[FIGURE src=/image/snapht15/ajax-marvin.png?w=w2 caption="Marvin, en figur från en bok, ger oss citat via Ajax."]
 
 Koden i sidan innehåller två exempel. Dels ett med jQuerys kompletta metod `ajax()` och ett med en kortare variant som heter `getJSON()`. Låt se hur koden ser ut.
 
@@ -209,7 +212,7 @@ Att felsöka Ajax kan till en början vara lite klurigt. Du kan använda webblä
 
 Därefter kan du öppna devtools flik Network som visar dig de requests som gör. Klickar du på en request får du fram dess svar, *response body*, vilket är det svaret du får in i success-funktionen.
 
-[FIGURE src=/image/snapht15/ajax-marvin-devtools.png?w=w2 class="left" caption="Debugga Ajax via devtools Console och Network."]
+[FIGURE src=/image/snapht15/ajax-marvin-devtools.png?w=w2 caption="Debugga Ajax via devtools Console och Network."]
 
 Bra, då har vi bekantat oss med Ajax så som det görs i jQuery.
 
@@ -224,7 +227,7 @@ Tanken är att skapa en sida som bygger upp sitt innehåll från JSON-data. Prin
 
 När sidan är klar kan den se ut så här.
 
-[FIGURE src=/image/snapht15/ajax-af-total.png?w=w2 class="left" caption="Sida som visar antalet lediga jobb samt platsannonser."]
+[FIGURE src=/image/snapht15/ajax-af-total.png?w=w2 caption="Sida som visar antalet lediga jobb samt platsannonser."]
 
 Låt nu se hur sidan byggs upp.
 
@@ -392,7 +395,7 @@ JSON till en ListView {#jsonlistview}
 
 Nu vill jag visa en översikt av lediga tjänster och platsannonser för Sveriges alla län. Sidan skulle kunna se ut så här.
 
-[FIGURE src=/image/snapht15/ajax-af-lista.png?w=w2 class="left" caption="Sida som visar antalet lediga jobb samt platsannonser."]
+[FIGURE src=/image/snapht15/ajax-af-lista.png?w=w2 caption="Sida som visar antalet lediga jobb samt platsannonser."]
 
 Informationen finns i samma JSON-fil som jag nyligen cachat. Låt se hur vi kan lösa detta.
 
@@ -416,7 +419,7 @@ Till att börja med en tom lista. Om något går snett, om sidan inte uppdateras
 
 
 
-###Eventet `beforepageshow` {#listviewbefore}
+###Eventet `pagebeforeshow` {#listviewbefore}
 
 Då använder vi eventet `pagebeforeshow` för att uppdatera listan.
 
@@ -481,7 +484,7 @@ Det har gått rätt bra så här långt. Nu blir det naturligt att nästa steg b
 
 Resultatet kan se ut så här.
 
-[FIGURE src=/image/snapht15/ajax-af-undersida.png?w=w2 class="left" caption="Undersida som visar lediga jobb och antal platsannonser i Blekinge."]
+[FIGURE src=/image/snapht15/ajax-af-undersida.png?w=w2 caption="Undersida som visar lediga jobb och antal platsannonser i Blekinge."]
 
 All information finns i JSON-filen men hur kan vi länka till och visa en sådan här undersida?
 
@@ -519,7 +522,7 @@ En tom div för `#af-undersida` och tanken är att fylla den med innehåll.
 
 
 
-###Event `beforepageshow` {#subbefore}
+###Event `pagebeforeshow` {#subbefore}
 
 På samma sätt som tidigare så lägger vi till en `pagebeforeshow` där vi kan uppdatera sidans innehåll.
 
@@ -687,7 +690,7 @@ afSubPageId = to.substring(length);
 $(":mobile-pagecontainer").pagecontainer("change", "#af-sida");
 ```
 
-Klart. Nu har vi kopplat in oss på routingen som sker i jQm och hänvisat till den undersida som vi ville ladda. När sidan laddas triggas eventet `beforepageshow` som uppdaterar sidan baserat på värdet i `afSubPageId`.
+Klart. Nu har vi kopplat in oss på routingen som sker i jQm och hänvisat till den undersida som vi ville ladda. När sidan laddas triggas eventet `pagebeforeshow` som uppdaterar sidan baserat på värdet i `afSubPageId`.
 
 Min kod tar här inte hänsyn till att man skulle kunna direktlänka till en undersida. Det är dock inga större svårigheter att lösa det. Man får bara se till att hantera att JSON-filen laddas och att routingen inte bryr sig om från vilken sida man kommer.
 
@@ -711,11 +714,3 @@ Avslutningsvis {#avslutning}
 Vi har nu gått igenom en del av Ajax tillsammans med jQuery och jQueryMobile och sett hur vi kan använda JSON-data för att dynamiskt skapa sidornas innehåll och även skapa länkar till, och visa upp, dynamiskt skapade undersidor.
 
 Har du [tips, förslag eller frågor om artikeln](t/4859) så finns det en specifik forumtråd för det.
- 
-
-
-Revisionshistoria {#revisionshistoria}
---------------------------------------
-
-<span class='revision-history' markdown='1'>
-2015-11-23 (A, mos) Första utgåvan inför kurs webapp.  
