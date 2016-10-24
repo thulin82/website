@@ -41,7 +41,7 @@ För hösten 2016 är följande hjälplärare, i olika omfattning.
 | ![Emma](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Emma&nbsp;Thorén | emmtho  | emmtho9518@gmail.com |
 | ![Jesper](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Jesper&nbsp;Johnsson | TBA  | jesper.johnsson1995@hotmail.com |
 | ![David](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | David&nbsp;Andersson | TBA  | divad1_agaren@hotmail.com |
-| ![Gustav](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Gustav&nbsp;Elmgren | TBA  | gustavelmgren@gmail.com |
+| ![Gustav](/image/lararteam/gel.jpg?w=100&h=100&cf) | Gustav&nbsp;Elmgren | gel  | gustavelmgren@gmail.com [LinkedIn](https://www.linkedin.com/in/gustav-elmgren-4035a07a) |
 | ![Dennis](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Dennis&nbsp;Skoko | desk  | dennis.skoko@hotmail.com |
 | ![Hannes](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Hannes&nbsp;Alm | TBA  | hannes@almar.se |
 | ![Jakob](https://www.gravatar.com/avatar/2a164af5e32410f882d734f0816a4ed5?s=100) | Jakob&nbsp;Sandgren | Starmarket | sandgren.jakob@gmail.com |
