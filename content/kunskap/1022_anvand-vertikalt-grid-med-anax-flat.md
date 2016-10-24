@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-24: (B, mos) La till en intro till artikeln.
     2016-06-21: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -33,8 +34,30 @@ Du har jobbat igenom materialet i artiklarna "[Bygg en me-sida med Anax Flat](ku
 
 
 
+Exempel i kursrepot {#exempel}
+-------------------------------
+
+Informationen i denna artikel bygger på de exempelprogram som återfinns i kursrepot under [`example/grid`](/repo/design/example/grid/).
+
+I [`example/grid/css/css`](/repo/design/example/grid/css) så bygger vi upp en enkel gridlayout med CSS-klasser. Vi kikar på hur en sådan CSS-fil kan genereras med JavaScript. Detta fungerar som en introduktion till konceptet och för att komma igång med tankarna kring hur ett grid fungerar.
+
+Vi går sedan raskt vidare till [`example/grid/less`](/repo/design/example/grid/less) där vi bygger ett liknande grid med LESS-kod som baseras på ett litet "grid-ramverk" som heter "The Semantic Grid System". Vi tittar på hur mixinen löser det som vi kunde lösa med CSS/JavaScript.
+
+Så här långt har vi koncepten om fluid och fixed grid. Nu för vi över det till ett responsivt grid med media queries.
+
+I tredje exemplet [`example/grid/flex`](/repo/design/example/grid/flex) så visar vi hur tekniken med CSS FlexBox kan användas i vårt LESS-baserade grid, som ett alternativ till layout med float.
+
+Avslutningsvis finns det sista exemplet [`example/grid/fluid`](/repo/design/example/grid/fluid) som visar hur ett renodlat fluid-grid kan implementeras med antingen float eller Flexbox som modell för layouten.
+
+Det kan vara en god idé att du klickar runt bland exemplen innan du fortsätter att läsa. Det kan ju inte skada att få en visuell bild av vart artikeln tänker ta dig.
+
+
+
+
 Kompilera LESS i webbläsaren {#komp}
 -------------------------------
+
+Du behöver inte installera LESS i webbläsaren för att följa exemplet i kursrepot. Allt finns redan på plats i exempelkoden. Följande stycke är bara för att förklara hur exempelkoden är uppbyggd med tanke på LESS och kompileringen av LESS.
 
 I de exempel som vi nu kommer att studera så valde jag att kompilera LESS på klientsidan med JavaScript. Det kan vara en bra teknik att jobba med när man utvecklar LESS. Man slipper kompilera om stylen efter varje ändring eftersom det sker automatiskt när man laddar om sidan.
 
@@ -51,13 +74,11 @@ less = {
 <script src="../../js/less.min.js"></script>
 ```
 
-Man laddar ned scriptet med kompilatorn via [webbplatsen lesscss.org](http://lesscss.org/#download-options).
+Man laddar ned scriptet med kompilatorn via [webbplatsen lesscss.org](http://lesscss.org/#download-options). I kursrepot finns detta redan nedladdat och ligger i katalogen [`example/js`](/repo/design/example/js).
 
 Notera att länken till stylesheeten har `rel=stylesheet/less` och att man kan skicka in inställningar till kompilatorn via objektet `less`.
 
 När man har en webbplats i produktion så vill man inte kompilera stylen på detta viset. Men vid utveckling så är det inte alls dumt. Bra att ha, helt enkelt.
-
-Du behöver inte installera LESS i webbläsaren för att följa exemplet. Allt finns redan på plats i kursrepot.
 
 
 
