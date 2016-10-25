@@ -44,7 +44,7 @@ För hösten 2016 är följande hjälplärare, i olika omfattning.
 | ![Gustav](/image/lararteam/gel.jpg?w=100&h=100&cf) | Gustav&nbsp;Elmgren | gel  | gustavelmgren@gmail.com [LinkedIn](https://www.linkedin.com/in/gustav-elmgren-4035a07a) |
 | ![Dennis](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Dennis&nbsp;Skoko | desk  | dennis.skoko@hotmail.com |
 | ![Hannes](/image/lararteam/no-image-yet.jpg?w=100&h=100&cf) | Hannes&nbsp;Alm | TBA  | hannes@almar.se |
-| ![Jakob](https://www.gravatar.com/avatar/2a164af5e32410f882d734f0816a4ed5?s=100) | Jakob&nbsp;Sandgren | Starmarket | sandgren.jakob@gmail.com |
+| ![Jakob](https://www.gravatar.com/avatar/2a164af5e32410f882d734f0816a4ed5?s=100) | Jakob&nbsp;Sandgren | starmarket | sandgren.jakob@gmail.com |
 | ![Jonas](/image/lararteam/palkess.jpg?w=100&h=100&cf) | Jonas&nbsp;Andersson | Palkess | jonas.andersson.web@gmail.com |
 
 
