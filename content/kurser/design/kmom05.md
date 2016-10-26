@@ -117,7 +117,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
+1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-laddningstider-och-anvandbarhet)".
 
 
 
