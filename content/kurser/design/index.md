@@ -208,7 +208,7 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
 | Kmom05 - kmom10 | Projekt á 2.5hp               |
 
-Läs mer om [rapportering av resultat](urser/faq/resultatrapportering).
+Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
 
 

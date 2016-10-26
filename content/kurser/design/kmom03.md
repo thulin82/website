@@ -57,7 +57,7 @@ Läs följande:
 
 ###Webbdesign och användbarhet {#webbdesign}
 
-Det finns inga artiklar inom detta området.
+Det finns inga artiklar.
 
 <!--
 Läs följande artiklar.
