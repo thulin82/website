@@ -27,6 +27,110 @@ Golden ratio.
 
 -->
 
+<!-- 
+Verktyg GIMP, inkscape.
+
+Shortcode för FIGURE.
+
+Responsiva bilder
+
+Egna foton kontra fototjänster
+
+Google pagespeed och optimering av bilder (verktyg för kolla bilder/optimera).
+
+Fotoblog?
+
+LESS för att visa bilder.
+
+-->
+
+
+
+<!--
+SEO, beginners guide.
+
+Microformats.
+
+GA & Webadmin tools.
+
+Verktyg för att kontrollera SEO.
+
+
+https://design.google.com/ ?
+
+
+Visa undermenyerna på menyn.
+
+Välj x webbplatser att undersöka. Förklara varför du valde dem.
+Början på rapporten.
+
+
+
+2. Mer
+
+Introduktion till SEO
+(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
+
+Lag:
+http://www.jajja.com/jajja-magazine/kaklagens-framtid/
+
+
+3. Mäta
+
+Verktyg för att mäta SEO.
+
+Sätt upp egen site och börja mäta SEO.
+GA
+Bings motsvarighet
+Google webbmaster
+
+* Googles guide
+
+> Talande webläsare
+> Lagar om webben
+> Forskning inom användbarhet
+> Översikt av W3Cs arbete
+
+
+4. Usablity undersökning ala Wellness.
+
+Läsanvisningar till: (write content for multidevice)
+https://developers.google.com/web/fundamentals/design-and-ui/content/?hl=en
+
+
+
+
+
+###Att mäta hur optimerad en webbplats är {#optimerad}
+
+1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
+
+-->
+
+
+<!--
+Designa webbplats utifrån bild.
+
+(Olika typer av webbplatser kontra olika design).
+
+Ikoner. FontAwesome.
+
+Spritemap.
+
+Texturer (?)
+
+Whitespace.
+
+(Flexbox)
+
+(Funktionsanpassad webbplats)
+
+(Integrera social media, SEO strategi)
+
+bootstrap (eller annat)
+
+-->
+
 <!--more-->
 
 <!--
@@ -108,6 +212,12 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
+<!--
+1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
+
+
+1. Skapa logo i inkspake?
+-->
 
 
 

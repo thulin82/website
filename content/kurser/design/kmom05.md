@@ -10,114 +10,21 @@ Kmom05: Bild
 **Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
 [/WARNING]
 
-Kursmomentet har ett fokus på att hantera och presentera bilder i olika storlekar i webbplatsen.
+Låt oss ägna ett kursmoment åt att ta bilder och publicera dem på en webbplats.
 
-<!-- 
-Verktyg GIMP, inkscape.
+Vi behöver vara medvetna om att bilder kan vara tunga att ladda och det vill vi hitta sätt att hantera. Hur tunga (stora) behöver bilder vara när de skall visas på en webbplats? Behöver de vara lika tunga på en desktop och på en mobil enhet?
 
-Shortcode för FIGURE.
+Kan man ha olika bilder som visas på olika enheter? Det låter som en vettig idé.
 
-Responsiva bilder
+Är det skillnad på foton och skärmdumpar? Ja, låt oss undersöka det.
 
-Egna foton kontra fototjänster
+Om man vill beskära bilder, är det vettigt och hur gör man då? Ja vi har ju alltid fotoredigeringsprogram likt Gimp, men låt oss kika på alternativ som kan passa en webbprogrammerare.
 
-Google pagespeed och optimering av bilder (verktyg för kolla bilder/optimera).
+Låt oss testa runt och placera och beskära dessa bilder för att visa att vi bemästrat området. Inklusive responsivitet med bilder.
 
-Fotoblog?
-
-LESS för att visa bilder.
-
--->
+Innan du påbörjar kursmomentet så kan du ta en sväng ut i skogen, eller staden, ta med din kamera och fota loss lite. Så får du lite material att lägga upp på din me-sida.
 
 
-
-<!--
-SEO, beginners guide.
-
-Microformats.
-
-GA & Webadmin tools.
-
-Verktyg för att kontrollera SEO.
-
-
-Solved by FlexBox + Flexbox grid.
-
-
-https://design.google.com/ ?
-
-
-Visa undermenyerna på menyn.
-
-Välj x webbplatser att undersöka. Förklara varför du valde dem.
-Början på rapporten.
-
-
-
-2. Mer
-
-Introduktion till SEO
-(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
-
-Lag:
-http://www.jajja.com/jajja-magazine/kaklagens-framtid/
-
-
-3. Mäta
-
-Verktyg för att mäta SEO.
-
-Sätt upp egen site och börja mäta SEO.
-GA
-Bings motsvarighet
-Google webbmaster
-
-* Googles guide
-
-> Talande webläsare
-> Lagar om webben
-> Forskning inom användbarhet
-> Översikt av W3Cs arbete
-
-
-4. Usablity undersökning ala Wellness.
-
-Läsanvisningar till: (write content for multidevice)
-https://developers.google.com/web/fundamentals/design-and-ui/content/?hl=en
-
-
-
-
-
-###Att mäta hur optimerad en webbplats är {#optimerad}
-
-1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
-
--->
-
-
-<!--
-Designa webbplats utifrån bild.
-
-(Olika typer av webbplatser kontra olika design).
-
-Ikoner. FontAwesome.
-
-Spritemap.
-
-Texturer (?)
-
-Whitespace.
-
-(Flexbox)
-
-(Funktionsanpassad webbplats)
-
-(Integrera social media, SEO strategi)
-
-bootstrap (eller annat)
-
--->
 
 <!--more-->
 
@@ -155,11 +62,24 @@ Läs följande:
 
 
 
+###Webbdesign och användbarhet {#webbdesign}
+
+1. Läs översiktligt igenom artikeln "[Moz om Page Speed](https://moz.com/learn/seo/page-speed)". Den förbereder dig för en av uppgifterna.
+
+1. Kika snabbt på Googles "[
+PageSpeed Insights Rules](https://developers.google.com/speed/docs/insights/rules)" för att snabba upp sidor.
+
 
 
 ###Video  {#video}
 
-Det finns inga videor.
+Kika på följande video.
+
+1. Moderskeppet är duktiga på foto och video, du kan hämta inspiration från deras fria youtube-kanal. Jag hittade att följande spellistor känns delvis relevanta för detta kursmoment.
+
+    * [Guider om Foto](https://www.youtube.com/playlist?list=PL7jFK1saS1_Aexc_tx2wWClpQOShZkD2_)
+    * [Inspiration för fotografer](https://www.youtube.com/playlist?list=PL7jFK1saS1_DGvKLYHOBb9HlCd_6id-vS)
+    * [Bilder och upphovsrätt för designers](https://www.youtube.com/playlist?list=PL7jFK1saS1_DYHuwI_r5U7vVeY6RhZlIM)
 
 <!--
 Titta på följande:
@@ -171,7 +91,11 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Kika igenom följande tips.
+
+1. [GIMP](https://www.gimp.org/) är en fri variant till bildbehandlingsprogram. Det kan vara ett bra verktyg att ha installerat, även om man är webbprogrammerare.
+
+1. [Inkscape](https://inkscape.org/en/) är ett fritt program för att rita och hantera bilder i vektorgrafik såsom SVG. Ett typiskt bra verktyg att ha i sin verktygslåda som webbprogrammerare.
 
 
 
@@ -193,12 +117,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-
-<!--
-3. [Mät och jämför laddningstider på olika webbplatser](uppgift/jamfor-laddningstider-for-webbplatser).
--->
-
-<!-- gå tillbaka till analysis color och fixa till bilderna -->
+1. Gör uppgiften "[Utvärdera webbplatsers laddningstid och användbarhet](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
 
 
 

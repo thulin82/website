@@ -11,7 +11,7 @@ category:
 Utvärdera webbplatsers färgval och känslan de signalerar
 ===================================
 
-Du skall välja ut 7 olika webbplatser och dokumentera deras färgpalett och beskriva känslan du får via respektive webbplats. Du skall argumentera kring känslan som signaleras, via färgvalen, och om den känns relevant för webbplatsens profil.
+Du skall välja ut ett antal olika webbplatser och dokumentera deras färgpalett och beskriva känslan du får via respektive webbplats. Du skall argumentera kring känslan som signaleras, via färgvalen, och om den känns relevant för webbplatsens profil.
 
 Du kan jobba i grupp för att lösa denna uppiften. Förslagsvis jobbar du i grupp med 2 till 5 medlemmar per grupp.
 
@@ -37,9 +37,11 @@ $ cd me/anax-flat/content
 $ rsync -av report/{.meta,000_index.md,100_intro.md} analysis/
 ```
 
+Lägg till så sidan syns i din navbar.
+
 Skapa filen `content/analysis/400_colorscheme.md`. Det är här du skriver dokumentationen för denna uppgiften.
 
-Även om ni jobbar i grupp så skall var och en av er lägga in analysen i sin egen me-sida.
+Även om ni jobbar i grupp så skall var och en av er lägga in varsin analys i sin egen me-sida.
 
 När du dokumenterar en färgpalett så kan du lägga den direkt i dokumentet via HTML-kod. Ungefär så här, i en tabell till exempel.
 
@@ -56,7 +58,7 @@ När du dokumenterar en färgpalett så kan du lägga den direkt i dokumentet vi
 Krav {#krav}
 -----------------------
 
-1. Välj ut 7 webbplatser som skall analyseras. Ta en snapshot (bild) på respektive webbplats och lägg i analysen.
+1. Välj ut 4 webbplatser som skall analyseras. Ta en snapshot (bild) på respektive webbplats och lägg i analysen.
 
 1. För varje webbplats, gör följande:
     1. Dokumentera och visualisera färgpaletten som används.

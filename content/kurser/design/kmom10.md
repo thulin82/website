@@ -49,6 +49,12 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 ###Krav 1, 2, 3: Grunden {#k1}
 
+<!--
+utöka/förändra urvalet av webbplatser och jobba igenom undersökningarna igen.
+-->
+
+<!-- gå tillbaka till analysis color och fixa till bilderna -->
+
 
 
 ###Krav 4:  (optionell) {#k4}
