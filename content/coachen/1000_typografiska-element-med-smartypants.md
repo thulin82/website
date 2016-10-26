@@ -3,7 +3,9 @@ author: mos
 category:
     - kurs/design
     - mos/ctextfilter
-created: "2016-06-17 11:00"
+revision:
+    "2016-10-26": (B, mos) Tog bort stycke om beta version av SmartyPants.
+    "2016-06-17": (A, mos) Första versionen.
 ...
 Typografiska element för webben med SmartyPants
 ==================================
@@ -42,16 +44,6 @@ Här är ett par exempel på när man kan använda dessa typografiska element.
 > Artikeln om PHP --- lång som den var --- påminde mig om boken *Sagan om Ringen*.
 
 Klassisk typografi är vacker och kan förhöja känslan hos den som besöker din webbplats.
-
-###Lägg till 
-
-För att använda PHP Smartypants så kan du behöva lägga till det i din egen `composer.json`, eftersom det (när jag testade) inte fanns en version som inte var en dev-version.
-
-```bash
-$ composer require "michelf/php-smartypants": "1.6.x-dev"
-```
-
-Men, det kan vara värt att kolla upp senaste versionen a PHP SmartyPants på packagist.
 
 
 [^1]: [Ellips](https://sv.wikipedia.org/wiki/Uteslutningstecken) och [ellipsis](https://en.wikipedia.org/wiki/Ellipsis).
