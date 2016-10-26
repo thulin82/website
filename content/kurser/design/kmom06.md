@@ -23,6 +23,8 @@ Bygg ett par teman. Något eget och något baserat på Bootstrap (elle rmotsvara
 
 (Cookis, lagar)
 
+Golden ratio.
+
 -->
 
 <!--more-->

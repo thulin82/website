@@ -70,9 +70,9 @@ Läs följande artiklar.
 
 1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layou handlar om.
 
-1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Gillar du artikel så kan du läsa mer om typografi på webben i de tips som visas under artikelns "Further reading".
+1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Denna artikel hanterar samma teknik som tas upp i övningen och uppgiften så se det som en bakgrundsartikel.
 
-1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/layout/) och [typografi](http://primercss.io/type/).
+1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/layout/) och [typografi](http://primercss.io/type/). Se det som ett exempel på hur ett ramverk för grid och typografi kan se ut.
 
 
 
@@ -80,11 +80,9 @@ Läs följande artiklar.
 
 Tänk dig en typografisk webbplats där all styling har lagts på de typografiska elementen. Hur kan det se ut? Kika på följande webbplatser och inhämta inspiration.
 
-1. [En praktisk guide till typografi på webben](http://webtypography.net/), en högst läsbar bok och samtidigt ett stilexempel på hur en typografiskt stilad webbplats kan se ut.
+1. [En praktisk guide till typografi på webben](http://webtypography.net/), en högst läsbar bok och samtidigt ett stilexempel på hur en typografiskt stilad webbplats kan se ut. Läs Introduktionen och kapitlet 2.2 Vertical Motion. Övrigt kan du se online-boken som en resurs in i typografins värld.
 
-1. AListApart är en webbplats som publicerar artiklar inom webb, kika här på [artiklar inom typografi](http://alistapart.com/topic/typography-web-fonts). Välj någon av artiklarna och kika på den samtidigt som du studerar dess typografi. 
-
-1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik om används till webbplatsen dbwebb.
+1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik om används till webbplatsen dbwebb när det handlar om typografiska element.
 
 
 

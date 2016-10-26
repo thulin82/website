@@ -9,7 +9,9 @@ Kmom04: Färg
 
 Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Många teman, men finns det då ett sätt att skriva sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända temats bas-kod?
 
-Ja, låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt lära oss grunderna i färglära.
+Låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt lära oss grunderna i färglära.
+
+Vi kikar även på lite typografi, som en del i att skapa smakfulla teman.
 
 
 
@@ -60,9 +62,9 @@ Lös följande artiklar.
 
 1. Läs [kapitel 13 i boken Web Design - The Complete Reference](http://www.webdesignref.com/chapters/13/ch13-16.htm). Det handlar om "Color and Usability" och "The Hidden Meaning of Colors" och ger en kort introduktion till färger och webbdesign.
 
-<!--
-* Nilesen om typografi
--->
+1. Kika snabbt igenom artikeln "[A More Modern Scale for Web Typography](http://typecast.com/blog/a-more-modern-scale-for-web-typography)". Poängen med artikeln är att hantera typsnitt på ett responsivt sätt. Fundera igenom om detta konceptet är något för dig.
+
+1. Gå tillbaka till boken [En praktisk guide till typografi på webben](http://webtypography.net/) och se om du hitta något kapitel i den som kan inspirera dig till typografiska mästerverk i dina teman.
 
 
 
