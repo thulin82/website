@@ -119,7 +119,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-1. När du jobbar med val av typografi, välj gärna typsnitt från till exempel Googles online typsnitt.
+Det finns ingen extrauppgift.
 
 
 

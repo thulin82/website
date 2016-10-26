@@ -54,6 +54,14 @@ Var inte rädd för att kasta koden och börja om.
 [/INFO]
 
 
+[INFO]
+**TIPS.**
+
+När du jobbar med val av typografi, välj gärna typsnitt från till exempel Googles online typsnitt, [Google Fonts](https://fonts.google.com/).
+[/INFO]
+
+
+
 Krav {#krav}
 -----------------------
 
