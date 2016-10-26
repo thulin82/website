@@ -7,6 +7,7 @@
     "use strict";
 
     // Get the items needed for the menu to work.
+    var body = document.getElementsByTagName("body")[0];
     var menuButton = document.getElementById("rm-menu-button");
     var menu = document.getElementById("rm-menu");
     var menuMax = document.querySelector(".rm-max #rm-menu");
@@ -63,7 +64,14 @@
 
     // To support WordPress menus
     Array.prototype.filter.call(submenuswp, function(element) {
-        element.parentNode.addEventListener("click", showSubmenu);
+        // Add a clickable button to (max) menu
+        var button = document.createElement("a");
+        button.setAttribute("href", "#");
+        button.setAttribute("class", "rm-submenu-button");
+        button.addEventListener("click", showSubmenu);
+        element.parentNode.insertBefore(button, element.parentNode.firstChild);
+
+        //element.parentNode.addEventListener("click", showSubmenu);
         //console.log("found submenuwp");
     });
 
@@ -75,8 +83,9 @@
     menuButton.addEventListener("click", function(event) {
 
         // Toggle display of menu
-        menuButton.classList.toggle("rm-clicked");
         menu.classList.toggle("rm-clicked");
+        menuButton.classList.toggle("rm-clicked");
+        body.classList.toggle("rm-modal");
 
         // Toggle between desktop and mobile menu when no max menu enabled.
         if (menuMax === null) {
@@ -91,8 +100,20 @@
 
 
     /**
+     * Prevent touch event scrolling & closing maxmenu on iOS
+     */
+    /*
+    menuMax.addEventListener("scroll", function(event) {
+        event.stopPropagation();
+    });
+*/
+
+
+
+    /**
      *
      */
+    /*
     var clearMenu = function (event) {
         //console.log("Clear menu");
         // Add desktop and remove mobile, but not if max menu is enabled
@@ -102,14 +123,16 @@
         }
 
         // Remove clicked items
+        body.classList.remove("rm-modal");
         menuButton.classList.remove("rm-clicked");
         menu.classList.remove("rm-clicked");
 
         event.preventDefault();
     };
+*/
 
-    window.addEventListener("resize", function(event) {
-        clearMenu(event);
+    window.addEventListener("resize", function(/* event */) {
+        //clearMenu(event);
         setMaxMenuSize();
     });
     //document.addEventListener("click", clearMenu);
