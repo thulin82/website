@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-26: (C, mos) Ändrade upplägg för clearfix och dess användning.
     2016-10-24: (B, mos) La till en intro till artikeln.
     2016-06-21: (A, mos) Första utgåvan.
 category:
@@ -234,9 +235,7 @@ För att förstå vad resultatet kommer att bli i CSS-klassen så kikar vi på m
     margin-left:  -1 * @totalWidth / @gridSystemWidth * @gutterWidth / 2;
     margin-right: -1 * @totalWidth / @gridSystemWidth * @gutterWidth / 2;
 
-    &::after {
-        .clearfix();
-    }
+    .clearfix();
 }
 ```
 
@@ -248,9 +247,11 @@ För att få en komplett bild så vill vi även se vad mixinen `.clearfix()` res
  * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
  */
 .clearfix() {
-    content: "";
-    display: block;
-    clear:both;
+    &::after {
+        content: "";
+        display: block;
+        clear:both;
+    }
 }
 ```
 
@@ -547,9 +548,7 @@ Skillnaden ligger i hur mixinen för `.row()` och `.column()` är implementerade
     margin-left:  -1 * @totalWidth / @gridSystemWidth * @gutterWidth / 2;
     margin-right: -1 * @totalWidth / @gridSystemWidth * @gutterWidth / 2;
 
-    &::after {
-        .clearfix();
-    }
+    .clearfix();
 }
 
 /**
