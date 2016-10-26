@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-10-19: (PA, mos) Arbetskopia, kmom03 släppt.
+    2016-10-26: (A, mos) Strukturen omarbetad och 4 kmom publicerade.
 ...
 Kursen design
 ===================================================
@@ -72,7 +72,7 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: LESS och responsiv design {#kmom01}
+###Kmom01: Ramverk och innehåll {#kmom01}
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
@@ -80,41 +80,43 @@ Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det ha
 
 
 
-###Kmom02: Grid, layout och typografi {#kmom02}
+###Kmom02: LESS och responsiv design {#kmom02}
 
-Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor. Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumneroch vi skall undersöka ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*.
+Då är det dags att vi skapar vårt eget tema till webbplatsen. Låt oss fylla vår me-sida med style med hjälp av LESS ooch en god och modulariserad kodstruktur.
+
+Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
 
 [Instruktion till kursmoment 02](design/kmom02).
 
 
 
-###Kmom03: Färg {#kmom03}
+###Kmom03: Grid, layout och typografi {#kmom03}
 
-Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi.
+Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor. Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner och vi skall undersöka ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*.
 
 [Instruktion till kursmoment 03](design/kmom03).
 
 
 
-###Kmom04: TBD {#kmom04}
+###Kmom04: Färg  {#kmom04}
 
-TBD.
+Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi.
 
 [Instruktion till kursmoment 04](design/kmom04).
 
 
 
-###Kmom05: TBD {#kmom05}
+###Kmom05: Bilder {#kmom05}
 
-TBD.
+Kursmomentet har ett fokus på att hantera och presentera bilder i olika storlekar i webbplatsen.
 
 [Instruktion till kursmoment 05](design/kmom05).
 
 
 
-###Kmom06: TBD {#kmom06}
+###Kmom06: Design {#kmom06}
 
-TBD.
+Kursmomentet jobbar med olika designelement på en webbplats.
 
 [Instruktion till kursmoment 06](design/kmom06).
 
@@ -160,12 +162,12 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 
 | Kursmoment | Beautiful Web Design   |
 |------------|------------------------|
-| Kmom01     | 1                      |
-| Kmom02     | 4                      |
-| Kmom03     | 3                      |
-| Kmom04     |                        |
-| Kmom05     |                        |
-| Kmom06     |                        |
+| Kmom01     |                        |
+| Kmom02     | 1                      |
+| Kmom03     | (1), 4                 |
+| Kmom04     | 2, (4)                 |
+| Kmom05     | 5                      |
+| Kmom06     | 3                      |
 | Kmom10     |                        |
 
 

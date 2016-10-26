@@ -1,107 +1,25 @@
 ---
 author: mos
 revision:
-    2016-04-11: (PA, mos) Arbetskopia.
+    2016-10-26: (B, mos) Bytte plats från kmom03 till kmom04.
+    2016-10-21: (A, mos) Första utgåvan.
 ...
-Kmom04: Bild
+Kmom04: Färg
 ====================================
 
-[WARNING]
-**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
-[/WARNING]
+Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Många teman, men finns det då ett sätt att skriva sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända temats bas-kod?
 
-Kursmomentet har ett fokus på att hantera och presentera bilder i olika storlekar i webbplatsen.
-
-<!-- 
-Verktyg GIMP, inkscape.
-
-Shortcode för FIGURE.
-
-Responsiva bilder
-
-Egna foton kontra fototjänster
-
-Google pagespeed och optimering av bilder (verktyg för kolla bilder/optimera).
-
-Fotoblog?
-
-LESS för att visa bilder.
-
--->
+Ja, låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt lära oss grunderna i färglära.
 
 
-
-<!--
-SEO, beginners guide.
-
-Microformats.
-
-GA & Webadmin tools.
-
-Verktyg för att kontrollera SEO.
-
-
-Solved by FlexBox + Flexbox grid.
-
-
-https://design.google.com/ ?
-
-
-Visa undermenyerna på menyn.
-
-Välj x webbplatser att undersöka. Förklara varför du valde dem.
-Början på rapporten.
-
-
-
-2. Mer
-
-Introduktion till SEO
-(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
-
-Lag:
-http://www.jajja.com/jajja-magazine/kaklagens-framtid/
-
-
-3. Mäta
-
-Verktyg för att mäta SEO.
-
-Sätt upp egen site och börja mäta SEO.
-GA
-Bings motsvarighet
-Google webbmaster
-
-* Googles guide
-
-> Talande webläsare
-> Lagar om webben
-> Forskning inom användbarhet
-> Översikt av W3Cs arbete
-
-
-4. Usablity undersökning ala Wellness.
-
-Läsanvisningar till: (write content for multidevice)
-https://developers.google.com/web/fundamentals/design-and-ui/content/?hl=en
-
-
-
-
-
-###Att mäta hur optimerad en webbplats är {#optimerad}
-
-1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
-
--->
 
 <!--more-->
 
-<!--
-**BILD**
+[FIGURE src=/image/snapht16/theme-base.png?w=w2 caption="Detta är mitt bastema i exemplet."]
 
-[FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
--->
+[FIGURE src=/image/snapht16/theme-custom.png?w=w2 caption="Detta är mitt anpassade `custom` tema."]
+
+[FIGURE src=/image/snapht16/theme-variables.png?w=w2 caption="Nu har jag ytterligare anpassat genom att ändra värden för variabler."]
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -119,7 +37,8 @@ Läs följande:
 
 1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
-    * Kap 5: Imagery
+    * Kap 2: Color
+    * Kap 4: Typography (repetera)
 
 
 
@@ -130,32 +49,44 @@ Läs följande:
     * 5. Rubriker som ger resultat
 
 
+
+###Webbdesign och användbarhet {#webbdesign}
+
+Lös följande artiklar.
+
+1. Läs artikeln "[The Characteristics of Minimalism in Web Design](https://www.nngroup.com/articles/characteristics-minimalism/)".
+
+1. Läs artikeln "[An Introduction to Color Theory for Web Designers](https://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)" som ger insyn i hur man väljer färger för en webbplats.
+
+1. Läs [kapitel 13 i boken Web Design - The Complete Reference](http://www.webdesignref.com/chapters/13/ch13-16.htm). Det handlar om "Color and Usability" och "The Hidden Meaning of Colors" och ger en kort introduktion till färger och webbdesign.
+
 <!--
-
-
-###Introduktion till användbarhet för webben {#anvandbarhet}
-
-1. Läs artikeln "[Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability/)" av Jakob Nielsen.
-
-
-
-###Funktionsanpassad webb {#funktion}
-
+* Nilesen om typografi
 -->
 
 
 
 ###Video  {#video}
 
+Det finns inga videor.
+
+<!--
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 4.
+-->
 
 
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Följande tips hjälper dig igenom kursmomentet.
+
+1. Leta reda på en färgväljare (color chooser) som hjälper dig att välja färger och förstå färgscheman som monokromatiskt, kompletterande och triadiskt.
+
+1. Läs på om grunderna om färgteori och om hur man kan blanda dem förutsatt olika färgscheman.
+
+1. Ta reda på vad en färgpalett (color palette) innebär för en webbplats och studera exempel på färgpaletter.
 
 
 
@@ -170,6 +101,7 @@ Det finns inga extra lästips.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
+1. Jobba igenom artikeln "[Skapa en familj av teman till Anax Flat](kunskap/skapa-en-familj-av-teman-till-anax-flat)".
 
 
 
@@ -177,18 +109,15 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
+1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
 
-<!--
-3. [Mät och jämför laddningstider på olika webbplatser](uppgift/jamfor-laddningstider-for-webbplatser).
--->
-
-<!-- gå tillbaka till analysis color och fixa till bilderna -->
+1. Utför uppgiften "[Bygg en bas och en familj av teman](uppgift/en-bas-och-en-familj-av-teman)".
 
 
 
 ###Extra {#extra}
 
-Det finns inga extra uppgifter.
+1. När du jobbar med val av typografi, välj gärna typsnitt från till exempel Googles online typsnitt.
 
 
 
@@ -201,5 +130,8 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilken utvecklingsmiljö använder du?
-* ...
+* Hur känner du inför färger och webbplatser? Föredrar du något särskilt ljust, mörkt, färgglatt?
+* Har du funderat på hur webbplatsers färgskala och färgsättning påverkar besökarens känsla av webbplatsen? Bidrar val av typsnitt till den känslan?
+* Hur känns din LESS-struktur så här långt?
+* Hur valde du att göra med ditt eget `default` tema?
+* Var det något särskilt som du uppfattade som utmanande i detta kmom?

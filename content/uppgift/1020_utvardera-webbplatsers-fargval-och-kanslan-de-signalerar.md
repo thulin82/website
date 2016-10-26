@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-26: (B, mos) La till fråga om typografival.
     2016-10-21: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -36,7 +37,7 @@ $ cd me/anax-flat/content
 $ rsync -av report/{.meta,000_index.md,100_intro.md} analysis/
 ```
 
-Skapa filen `content/analysis/300_colorscheme.md`. Det är här du skriver dokumentationen för uppgiften.
+Skapa filen `content/analysis/400_colorscheme.md`. Det är här du skriver dokumentationen för denna uppgiften.
 
 Även om ni jobbar i grupp så skall var och en av er lägga in analysen i sin egen me-sida.
 
@@ -61,6 +62,7 @@ Krav {#krav}
     1. Dokumentera och visualisera färgpaletten som används.
     1. Notera vilken typ av färgschema som använts.
     1. Notera om och vilken accentfärg som använts.
+    1. Notera val av typsnitt för H1-H6 och brödtext, kommentera om det är serif eller sans-serif.
     1. Diskutera och skriv två meningar om hur webbplatsens färgval gynnar/ogynnar den profil ni uppfattar att webbplatsen vill ha.
 
 1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.

@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-10-26: (C, mos) Omstrukturerad efter feedback.
+    2016-10-26: (C, mos) Flyttad från kmom01 till 02 efter feedback.
     2016-10-15: (B, mos) Testad och genomgången.
     2016-06-22: (A, mos) Första utgåvan.
 ...
@@ -14,15 +14,19 @@ Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur 
 
 Vi behöver alltså lära oss LESS och responsiv design.
 
-Vi behöver också bekanta oss med begreppen webbdesign och användbarhet på webben.
+Vi behöver också fortsätta att bekanta oss med begreppen webbdesign och användbarhet på webben.
+
+Vi håller det enkelt för att komma igång med hur LESS fungerar tillsammans med Anax Flat och hur vi kan jobba med ett tema via moduler i LESS.
+
+I nästa kmom bygger vi vidare på temat, så det kommer mer.
 
 
 
 <!--more-->
 
-[FIGURE src=/image/kurs/design/anax-flat-no-theme.png?w=w2 caption="Tomt tema, någonstans skall vi börja."]
+[FIGURE src=/image/kurs/design/anax-flat-no-theme.png?w=w2 caption="Ett tomt tema, någonstans skall vi börja."]
 
-[FIGURE src=/image/kurs/design/anax-flat-regions.png?w=w2 caption="VI jobbar med regioner som vi göra responsiva."]
+[FIGURE src=/image/kurs/design/anax-flat-regions.png?w=w2 caption="Vi jobbar med regioner som vi göra responsiva."]
 
 
 
@@ -144,4 +148,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad tycker du om LESS så här långt, och det sättet vi jobbar med LESS-moduler i vårt tema?
 * Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
 * Har du varit bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad tycker du om make så här långt?
-* Fann du nytta i de videor som var kopplade tilld etta kursmoment?
+* Fann du nytta i de videor som var kopplade till detta kursmoment?

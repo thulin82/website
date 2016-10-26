@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-26: (B, mos) Ändrade vilket versionsnummer som skall gälla.
     2016-10-21: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -30,9 +31,9 @@ Du har läst kurslitteraturen och skaffat dig kunskaper om grundläggande färgt
 Introduktion {#intro}
 -----------------------
 
-Du har en version av Anax Flat som ligger i katalogen `me/anax-flat`. Det är ett eget repo på GitHub som är taggat i minst version 2.\*.
+Du har en version av Anax Flat som ligger i katalogen `me/anax-flat`. Det är ett eget repo på GitHub som är taggat i minst version 3.\*.
 
-Du har en version av temat som ligger i katalogen `me/anax-flat/theme`. Det är ett eget repo på GitHub som är taggat i minst version 2.\*.
+Du har en version av temat som ligger i katalogen `me/anax-flat/theme`. Det är ett eget repo på GitHub som är taggat i minst version 3.\*.
 
 Du skall nu jobba främst i `me/anax-flat/theme`.
 
@@ -84,15 +85,13 @@ Krav {#krav}
 
 1. Se till att ditt tema passerar testerna som körs vid `make test`.
 
-1. När du är klar så committar du allt till GitHub och taggar båda repona som version 3.0.0. Om du behöver göra nya taggar så gör du enligt 3.0.1, 3.0.2 och så vidare. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen.
+1. Kör `git status`och se till att alla filer, som skall vara en del av dina båda repon `me/anax-flat` och `me/anax-flat/theme`, verkligen är en del av repot.
 
-1. Kopiera katalogen `me/anax-flat` till nuvarande kursmoment `me/kmom03` enligt följande.
+1. Du committar och taggar de båda repona som version 4.0.0.
 
-```bash
-# Ställ dig i kursrepot
-$ cd me
-$ rsync -av --delete --exclude vendor --exclude node_modules --exclude build anax-flat/ kmom03/ && ln -sf ../anax-flat/vendor kmom03/
-```
+1. Pusha upp repona till GitHub, inklusive taggarna.
+
+1. Om du behöver göra fler taggar så gör du enligt 4.0.1, 4.0.2 och så vidare. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen samt pusha upp till GitHub.
 
 1. Gör en `dbwebb publish` för att kolla att allt fungerar.
 

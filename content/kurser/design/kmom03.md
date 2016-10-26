@@ -1,24 +1,28 @@
 ---
 author: mos
 revision:
-    2016-10-21: (A, mos) Första utgåvan.
+    2016-10-26: (C, mos) Flyttad från 02 till 03 efter feedback.
+    2016-10-15: (B, mos) Testad och genomgången.
+    2016-06-22: (A, mos) Första utgåvan.
 ...
-Kmom03: Färg
+Kmom03: Grid, layout och typografi
 ====================================
 
-Låt oss leka runt lite genom att skapa olika stilar, teman, för vår webbplats. Säg att vi nu skall skapa ett antal teman, ett ljust tema, ett mörkt, ett färgfullt och ett tema som står ut på grund av sin typografi. Många teman, men finns det då ett sätt att skriva sin LESS-kod så att man bygger upp en struktur som gör det enkelt att återanvända temats bas-kod?
+Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
 
-Ja, låt oss se hur vi kan strukturera LESS-koden på ett smart sätt och samtidigt lära oss grunderna i färglära.
+Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*.
+
+Sedan tittar på på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen. Vårt horisontella grid skall inte bara gälla de typografiska elementen utan samtliga element som placeras ut på webbsidan.
+
+Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt grid. Samtidigt förbereder vi temat för att bli enkelt att style med olika typsnitt.
 
 
 
 <!--more-->
 
-[FIGURE src=/image/snapht16/theme-base.png?w=w2 caption="Detta är mitt bastema i exemplet."]
+[FIGURE src=/image/snapvt16/grid-displayed.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
 
-[FIGURE src=/image/snapht16/theme-custom.png?w=w2 caption="Detta är mitt anpassade `custom` tema."]
-
-[FIGURE src=/image/snapht16/theme-variables.png?w=w2 caption="Nu har jag ytterligare anpassat genom att ändra värden för variabler."]
+[FIGURE src=/image/snapvt16/typografiskt-grid.png?w=w2 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -36,7 +40,8 @@ Läs följande:
 
 1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
-    * Kap 2: Color
+    * Kap 1: Layout and Composition (repetera)
+    * Kap 4: Typography
 
 
 
@@ -44,19 +49,42 @@ Läs följande:
 
 1. Läs följande kapitel i guiden "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
 
-    * 4. Målgrupper - vem vill du nå?
+    * 3. Hur vi läser på webben
+
+1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur markdown-texten i Anax Flat formatteras till HTML.
 
 
 
 ###Webbdesign och användbarhet {#webbdesign}
 
-Lös följande artiklar för att orientera dig.
+Det finns inga artiklar inom detta området.
 
-1. Läs artikeln "[The Characteristics of Minimalism in Web Design](https://www.nngroup.com/articles/characteristics-minimalism/)".
+<!--
+Läs följande artiklar.
 
-1. Läs artikeln "[An Introduction to Color Theory for Web Designers](https://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)" som ger insyn i hur man väljer färger för en webbplats.
+* Nilesen gridlayout
+-->
 
-1. Läs [kapitel 13 i boken Web Design - The Complete Reference](http://www.webdesignref.com/chapters/13/ch13-16.htm). Det handlar om "Color and Usability" och "The Hidden Meaning of Colors" och ger en kort introduktion till färger och webbdesign.
+
+###Vad handlar grid-baserad layout om? {#grid}
+
+1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layou handlar om.
+
+1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Gillar du artikel så kan du läsa mer om typografi på webben i de tips som visas under artikelns "Further reading".
+
+1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/layout/) och [typografi](http://primercss.io/type/).
+
+
+
+###Typografisk webb {#type}
+
+Tänk dig en typografisk webbplats där all styling har lagts på de typografiska elementen. Hur kan det se ut? Kika på följande webbplatser och inhämta inspiration.
+
+1. [En praktisk guide till typografi på webben](http://webtypography.net/), en högst läsbar bok och samtidigt ett stilexempel på hur en typografiskt stilad webbplats kan se ut.
+
+1. AListApart är en webbplats som publicerar artiklar inom webb, kika här på [artiklar inom typografi](http://alistapart.com/topic/typography-web-fonts). Välj någon av artiklarna och kika på den samtidigt som du studerar dess typografi. 
+
+1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik om används till webbplatsen dbwebb.
 
 
 
@@ -64,7 +92,7 @@ Lös följande artiklar för att orientera dig.
 
 Det finns inga videor.
 
-<!--
+<!-- 
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 3.
@@ -74,13 +102,7 @@ Titta på följande:
 
 ###Lästips {#lastips}
 
-Följande tips hjälper dig igenom kursmomentet.
-
-1. Leta reda på en färgväljare (color chooser) som hjälper dig att välja färger och förstå färgscheman som monokromatiskt, kompletterande och triadiskt.
-
-1. Läs på om grunderna om färgteori och om hur man kan blanda dem förutsatt olika färgscheman.
-
-1. Ta reda på vad en färgpalett (color palette) innebär för en webbplats och studera exempel på färgpaletter.
+Det finns inga extra lästips.
 
 
 
@@ -95,7 +117,9 @@ Följande tips hjälper dig igenom kursmomentet.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. Jobba igenom artikeln "[Skapa en familj av teman till Anax Flat](kunskap/skapa-en-familj-av-teman-till-anax-flat)".
+1. Jobba igenom artikeln "[Använd ett vertikalt grid med Anax Flat](kunskap/anvand-vertikalt-grid-med-anax-flat)" som visar dig grunden i att implementera ett grid i CSS och LESS.
+
+1. Jobba igenom artikeln "[Skapa ett horisontellt grid för typografi](kunskap/skapa-ett-horisontellt-grid-for-typografi)" som visar hur du skapar en vertikal rytm i din webbplats.
 
 
 
@@ -103,9 +127,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
-
-1. Utför uppgiften "[Bygg en bas och en familj av teman](uppgift/en-bas-och-en-familj-av-teman)".
+1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/me-sida-med-grid)".
 
 
 
@@ -124,8 +146,8 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känner du inför färger och webbplatser? Föredrar du något särskilt ljust, mörkt, färgglatt?
-* Har du funderat på hur webbplatsers färgskala och färgsättning påverkar besökarens känsla av webbplatsen?
-* Hur känns din LESS-struktur så här långt?
-* Hur valde du att göra med ditt eget `default` tema?
-* Var det något särskilt som du uppfattade som utmanande i detta kmom?
+* Hur känns det att vara styrd till ett vertikalt grid, hämmande eller stödjande?
+* Hur känns det att jobba med ett typografiskt horisontellt/baseline grid, ser du någon poäng med det?
+* Har du jobbat med liknande layouttekniker sedan tidigare?
+* Du börjar se hur man kan jobba med LESS, kommentarer på det?
+* Hur uppfattade du nivån på detta kmom? Svårt, lagom, många nya begrepp?

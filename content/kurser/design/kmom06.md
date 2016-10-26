@@ -3,12 +3,14 @@ author: mos
 revision:
     2016-04-11: (PA, mos) Arbetskopia.
 ...
-Kmom06: Tema
+Kmom06: Design
 ====================================
 
 [WARNING]
 **Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
 [/WARNING]
+
+Kursmomentet jobbar med olika designelement på en webbplats.
 
 <!-- 
 Bygg ett par teman. Något eget och något baserat på Bootstrap (elle rmotsvarande).
@@ -47,7 +49,7 @@ Läs följande:
 
 1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
-    * Kap ?
+    * Kap 3 Texture
 
 
 
@@ -60,11 +62,23 @@ Läs följande:
 
 
 
+###Webbdesign och användbarhet {#webbdesign}
+
+Läs följande artiklar.
+
+* TBD
+
+
+
 ###Video  {#video}
 
+Det finns inga videor.
+
+<!--
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 6.
+-->
 
 
 
@@ -110,5 +124,5 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilken utvecklingsmiljö använder du?
+* ...
 * ...

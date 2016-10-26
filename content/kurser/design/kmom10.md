@@ -68,7 +68,7 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1\. På din redovisningssida, `me/redovisning.cgi`, skriv följande:
+1\. På din redovisningssida, skriv följande:
 
 1.1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
@@ -78,7 +78,7 @@ Redovisning {#redovisning}
 
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/python) och berätta att du är klar.
+3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/design) och berätta att du är klar.
 
 4\. Se till att samtliga kursmoment validerar.
 
