@@ -25,7 +25,7 @@ Boken används som referenslitteratur i kursen [htmlphp](htmlphp).
 Om Boken {#om-boken}
 --------------------
 
-[FIGURE src=/img/bok/principles-of-beautiful-web-design.jpg?w=w2 caption="Del av bokens omslag."]
+[FIGURE src=/image/bok/principles-of-beautiful-web-design.jpg?w=w2 caption="Del av bokens omslag."]
 
 <table>
 <tr><th>Titel:</th><td>The Principles of Beautiful Web Design<td></tr>
