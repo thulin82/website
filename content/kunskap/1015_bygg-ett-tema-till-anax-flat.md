@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-26: (C, mos) Bytte namn på videoserien.
     2016-10-21: (B, mos) Tog bort echo i makefilerna, cp av regions.less.
     2016-10-06: (A, mos) Testad och släppt.
 category:
@@ -38,7 +39,7 @@ Videoserie {#video}
 
 Det finns en videoserie som visar hur jag jobbar igenom denna artikeln. Kika gärna på den samtidigt som du själv jobbar genom denna artikeln.
 
-De videor som är relaterade till denna artikel börjar på "[120 Anax Flat tema*](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)".
+De videor som är relaterade till denna artikel börjar på "[210 Anax Flat tema*](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)".
 
 
 

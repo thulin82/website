@@ -48,11 +48,9 @@ Läs följande:
 
 
 
-###Introduktion till webbdesign {#webbdesign}
+###Webbdesign och användbarhet {#webbdesign}
 
 Lös följande artiklar för att orientera dig.
-
-1. Läs artikeln "[Top 10 Mistakes in Web Design](https://www.nngroup.com/articles/top-10-mistakes-web-design/)" skriven av Jakob Nielsen.
 
 1. Läs artikeln "[The Characteristics of Minimalism in Web Design](https://www.nngroup.com/articles/characteristics-minimalism/)".
 

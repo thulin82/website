@@ -1,27 +1,30 @@
 ---
 author: mos
 revision:
+    2016-10-26: (C, mos) Omstrukturerad efter feedback.
     2016-10-15: (B, mos) Testad och genomgången.
     2016-06-22: (A, mos) Första utgåvan.
 ...
-Kmom02: Grid, layout och typografi
+Kmom02: LESS och responsiv design
 ====================================
 
-Låt oss titta på gridbaserad layout, ett grid som bestämmer var vi placerar ut innehållet på webbplatsens sidor.
+Då är det dags att vi skapar vårt eget tema till webbplatsen. Låt oss fylla vår me-sida med style med hjälp av LESS ooch en god och modulariserad kodstruktur.
 
-Vi skall titta på ett **vertikalt grid** som ger oss rader och kolumner tillsammans med mellanrum¸ *gutter*, som skapar ett vitt utrymme, så kallat *white space*.
+Stylen skapar vi med LESS, en preprocessor till CSS. Vi skall skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
 
-Sedan tittar på på ett **horisontellt grid** som vi även kan kalla ett *typografiskt grid*, eller ett *baseline grid* där syftet är att alla typografiska element vilar på en rad i ett tänkt horisontellt rutnät för att skapa en *vertical rythm* i de typografiska elementen. Vårt horisontella grid skall inte bara gälla de typografiska elementen utan samtliga element som placeras ut på webbsidan.
+Vi behöver alltså lära oss LESS och responsiv design.
 
-Vi bygger ut vårt tema med LESS-moduler som löser vertikalt och horisontellt grid. Samtidigt förbereder vi temat för att bli enkelt att style med olika typsnitt.
+Vi behöver också bekanta oss med begreppen webbdesign och användbarhet på webben.
 
 
 
 <!--more-->
 
-[FIGURE src=/image/snapvt16/grid-displayed.png?w=w2 caption="Placera ut webbsidans innehåll som regioner i ett rutnät (grid)."]
+[FIGURE src=/image/kurs/design/anax-flat-no-theme.png?w=w2 caption="Tomt tema, någonstans skall vi börja."]
 
-[FIGURE src=/image/snapvt16/typografiskt-grid.png?w=w2 caption="Skapa en grundtypografi som matchar ett horisontellt grid."]
+[FIGURE src=/image/kurs/design/anax-flat-regions.png?w=w2 caption="VI jobbar med regioner som vi göra responsiva."]
+
+
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -39,7 +42,7 @@ Läs följande:
 
 1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
-    * Kap 4: Typography
+    * Kap 1: Layout and Composition
 
 
 
@@ -49,55 +52,54 @@ Läs följande:
 
     * 3. Hur vi läser på webben
 
-1. Läs kort och översiktligt om [PHP Markdown Extra](https://michelf.ca/projects/php-markdown/extra/) som stöds av [klassen `CTextFilter`](https://github.com/mosbth/ctextfilter) som ligger bakom hur markdown-texten i Anax Flat formatteras till HTML.
+
+
+###Webbdesign och användbarhet {#webbdesign}
+
+Läs följande artiklar.
+
+1. Läs artikeln "[The Fold Manifesto: Why the Page Fold Still Matters](https://www.nngroup.com/articles/page-fold-manifesto/)".
+
+1. Läs artikeln "[Menu Design: Checklist of 15 UX Guidelines to Help Users](https://www.nngroup.com/articles/menu-design/)".
 
 
 
-###Typografisk webb {#type}
+###Kom igång med LESS {#less}
 
-Tänk dig en typografisk webbplats där all styling har lagts på de typografiska elementen. Hur kan det se ut? Kika på följande webbplatser och inhämta inspiration.
+1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)". Artikeln behandlar skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor är och gör.
 
-1. [En praktisk guide till typografi på webben](http://webtypography.net/), en högst läsbar bok och samtidigt ett stilexempel på hur en typografiskt stilad webbplats kan se ut.
+1. Bekanta dig med [LESS](http://lesscss.org/) och se vad det kan göra. Det är uppbyggd som ett programmeringsspråk, så kika på både på "Language reference" och på "Function reference".
 
-1. AListApart är en webbplats som publicerar artiklar inom webb, kika här på [artiklar inom typografi](http://alistapart.com/topic/typography-web-fonts). Välj någon av artiklarna och kika på den samtidigt som du studerar dess typografi. 
-
-1. Det finns många typografiska element som kan vara vackra, men aningen svåra att få med i sin löpande text på webben. Kika i artikeln "[Typografiska element för webben med SmartyPants](coachen/typografiska-element-med-smartypants)" om vilken teknik om används till webbplatsen dbwebb.
+1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
 
 
 
-###Vad handlar grid-baserad layout om? {#grid}
+###Responsiv webbdesign {#responsiv}
 
-1. Läs två artiklar om "[History of the design grid I](https://99designs.com/blog/tips/history-of-the-grid-part-1/)" och "[History of the design grid II](https://blog.99cluster.com/blog/tips/history-of-the-grid-part-2/)" för att få en överblick om vad gridbaserad layou handlar om.
+1. Läs översiktligt artikeln som definierade begreppet "[Responsive Web Design](http://alistapart.com/article/responsive-web-design/)".
 
-1. Läs artikeln "[Technical Web Typography: Guidelines and Techniques](http://coding.smashingmagazine.com/2011/03/14/technical-web-typography-guidelines-and-techniques/)" och ta reda på vad ett typografiskt horisontellt rutnät i webblayout innebär. Gillar du artikel så kan du läsa mer om typografi på webben i de tips som visas under artikelns "Further reading".
+1. Bläddra snabbt igenom artikeln "[Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514)" som definierar ett antal design mönster inom responsiv design.
 
-1. [Primer](http://primercss.io/) är GitHub’s interna CSS ramverk. Deras manual finns på webben. Läs artiklarna där de kort beskriver sin [layout](http://primercss.io/layout/) och [typografi](http://primercss.io/type/).
-
-
-
-###Styleguides för CSS {#styleguide}
-
-1. Kika snabbt igenom "[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)".
-
-1. Kika snabbt igenom [kod-guidelines för GitHubs Primer](http://primercss.io/guidelines/).
+1. Kika snabbt på materialet då Google Developers visar hur man kommer igång med [grunderna i responsiv layout](https://developers.google.com/web/fundamentals/design-and-ui/responsive/). 
 
 
 
 ###Video  {#video}
 
-Det finns inga videor.
-
-<!-- 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 2.
--->
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 2. Videorna som börjar på 210* är kopplade till en av de artiklar du skall jobba igenom under övningarna nedan. Titta på dem samtidigt som du jobbar igenom artikeln.
+
 
 
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Kika igenom följande styleguides till CSS för att få en känsla av hur du bör/kan skriva din CSS-kod.
+
+1. Kika snabbt igenom "[Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.xml)".
+
+1. Kika snabbt igenom [kod-guidelines för GitHubs Primer](http://primercss.io/guidelines/).
 
 
 
@@ -112,9 +114,7 @@ Det finns inga extra lästips.
 
 Genomför följande övning för att förbereda inför uppgifterna.
 
-1. Jobba igenom artikeln "[Använd ett vertikalt grid med Anax Flat](kunskap/anvand-vertikalt-grid-med-anax-flat)" som visar dig grunden i att implementera ett grid i CSS och LESS.
-
-1. Jobba igenom artikeln "[Skapa ett horisontellt grid för typografi](kunskap/skapa-ett-horisontellt-grid-for-typografi)" som visar hur du skapar en vertikal rytm i din webbplats.
+1. Kom igång med LESS och skapa en struktur av LESS-filer, eller LESS-moduler. Det blir ett modulärt sätt att bygga upp sitt *tema* till webbplatsen. Gör detta genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
 
 
 
@@ -122,7 +122,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Utför uppgiften "[Bygg ut ditt tema med stöd för vertikalt och horisontellt grid](uppgift/me-sida-med-grid)".
+1. Lös uppgiften "[Bygg en ut ditt Anax Flat med eget LESS tema](uppgift/anax-flat-med-eget-tema)".
 
 
 
@@ -141,8 +141,7 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känns det att vara styrd till ett vertikalt grid?
-* Hur känns det att jobba med ett typografiskt horisontellt/baseline grid?
-* Har du jobbat med liknande layouttekniker sedan tidigare?
-* Du börjar se hur man kan jobba med LESS, kommentarer på det?
-* HUr avancerat uppfattade du att detta kmom var?
+* Vad tycker du om LESS så här långt, och det sättet vi jobbar med LESS-moduler i vårt tema?
+* Hur kändes det att kompilera LESS till CSS, var det något du reflekterade över?
+* Har du varit bekant med Makefiler och make sedan tidigare, eller något liknande byggverktyg? Vad tycker du om make så här långt?
+* Fann du nytta i de videor som var kopplade tilld etta kursmoment?

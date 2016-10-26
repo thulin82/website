@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-26: (C, mos) bort med referenser till att ändra temat.
     2016-09-22: (B, mos) Testad inför kursstart.
     2016-06-03: (A, mos) Första versionen.
 category:
@@ -67,6 +68,8 @@ $ composer update
 
 Nu har du en fil `composer.json` och du har Anax Flat installerat under vendor-mappen. Då kan vi skapa en webbplats med hjälp av filer som ligger i Anax Flat.
 
+Dubbelkolla vilka filer och kataloger som du nu har i katalogen `me/anax-flat`. Så här långt är de alla relaterade till kommandot composer.
+
 
 
 Låna en Makefile {#make}
@@ -108,9 +111,8 @@ Här följer en förteckning av några av de kataloger som skapas.
 | `cache/`       | Temporär lagring av cachade filer.     |
 | `config/`      | Konfigurationsfiler för webbplatsen.   |
 | `content/`     | Filer som motsvarar innehållet i webbplatsen. Här redigerar vi innehållet i webbplatsen. |
-| `theme/`       | Utvecklingsmiljö för att skapa ett nytt tema. |
 | `htdocs/`      | Rooten till den publika delen av webbplatsen. Här lagras alla filer som skall vara tillgängliga via en länk. |
-| `views/`       | View-filer som används för att mappa innehåll till layout i webbsidans regioner. |
+| `view/`        | View-filer som används för att mappa innehåll till layout i webbsidans regioner. |
 
 Du kan nu öppna katalogen `htdocs` i din webbläsare, via din lokala webbserver. För min del gäller länken `http://localhost/anax-flat/htdocs` men du får justera den så att den passar just din installation.
 
@@ -135,6 +137,13 @@ Denna ändring gör du i konfigurationsfilen `config/theme.php`. Leta reda på r
 ```
 
 Webbplatsen är språkanpassad och de delar som stödjer det kommer nu att ge svenska meddelanden istället för engelska.
+
+[INFO]
+**Anax-Flat delvis förberedd**
+
+Spåkstödet i Anax Flat är inte komplett, grunden finns på plats men språkstöd är inte helt implementerar, så ovan stycke är delvis en sanning med modifikation. Än så länge.
+
+[/INFO]
 
 
 
@@ -263,7 +272,7 @@ Genom att använda webbläsarens devtools kan du dock se vilka CSS-konstruktione
 
 Men hur gör man för att bygga en eget style?
 
-Jo, det kan du läsa om i artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)". Men det tar vi strax. Låt oss avsluta denna artikel först.
+Jo, det kan du läsa om i artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)". Men det tar vi vid ett senare tillfälle. Låt oss först avsluta denna artikel.
 
 
 
@@ -367,6 +376,6 @@ Bra, nu har vi ordning på versionerna av koden.
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Nu har du kommit igång med Anax Flat och du kan anpassa webbplatsen med ditt eget innehåll.
+Nu har du kommit igång med Anax Flat och du kan anpassa webbplatsen med ditt eget innehåll. Det är en god start.
 
-Förslagsvis går du nu vidare och ser hur du kan skapa din egen style för webbplatsen genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
+Dessutom blev det en snabb intro till Git och GitHub.

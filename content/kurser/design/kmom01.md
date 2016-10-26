@@ -1,24 +1,27 @@
 ---
 author: mos
 revision:
+    2016-10-26: (B, mos) Omstrukturerad efter feedback.
     2016-10-07: (A, mos) Första release.
 ...
-Kmom01: LESS och responsiv design
+Kmom01: Ramverk och innehåll
 ====================================
 
 Låt oss kika på några av de mjukare aspekterna inom webbprogrammering. Det handlar om webbdesign och användbarhet. Men det handlar också om snabba sidladdningar, sökmotoroptimering, att skriva för webben och hur vi väljer att organisera webbplatsens material.
 
-Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Det handlar främst om hur vi, som programmerare, rent tekniskt kan förbereda webbplatserna för design och användbarhet. Allt för att vi skall vara förberedda när det kommer en webbdesigner, eller användbarhets-designer, och berättar hur webbplatsen skall se ut.
+Hur bygger vi våra webbplatser för att underlätta för design och användbarhet? Det handlar främst om hur vi, som programmerare, rent tekniskt kan förbereda webbplatserna för design och användbarhet. Allt för att vi skall vara förberedda när det kommer en webbdesigner, eller designer inom användbarhet, och berättar hur webbplatsen skall se ut.
 
 <!--more-->
 
-För att komma igång snabbt så använder vi ett PHP-baserat ramverk för att bygga en me-sida som vi fyller med innehåll och style. Stylen skapar vi med LESS. Vi skall sedan skapa en struktur av LESS-filer som blir enkla att återanvända. Stylen vi skapar gör vi *responsiv* så att den anpassar sig för skärmens storlek. Våra webbplatser måste fungera lika bra på desktop som på läsplatta och mobil.
-
-Vi behöver alltså lära oss LESS och responsiv design till att börja med. Vi behöver också bekanta oss med begreppen webbdesign och användbarhet på webben.
+För att komma igång snabbt så använder vi ett PHP-baserat ramverk för att bygga en me-sida som vi fyller med innehåll genom att skriva Markdown. I nästa kursmoment börjar vi jobba med stylen av webbplatsen.
 
 Öppna ditt sinne och låt oss börja.
 
 [FIGURE src=/image/snapvt16/anax-flat-start.png?w=w2 caption="En me-sida med PHP-ramverket Anax Flat."]
+
+Under kursens gång så kommer du att introduceras till ett par tekniker som är bra att ha för en webbprogrammerare. En av de är versionshantering med Git och GitHub.
+
+[FIGURE src=/image/snapvt16/anax-flat-me-github.png?w=w2 caption="Ditt material skall paketeras som ett git-repo och publiceras på GitHub."]
 
 
 
@@ -36,11 +39,7 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
-
-1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
-
-    * Kap 1: Layout and Composition
+Bläddra lite i kursboken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)". Bara för att bekanta dig med den, vi börjar läsa i samband med nästa kmom.
 
 
 
@@ -55,23 +54,13 @@ Läs följande:
 
 
 
-###Kom igång med LESS {#less}
+###Webbdesign och användbarhet {#webbdesign}
 
-1. Bekanta dig med [LESS](http://lesscss.org/) och se vad det kan göra. 
+Läs följande artiklar.
 
-1. Läs översiktligt Kalles artikel om CSS preprocessors, "[CSS Preprocessors are cool](http://dbwebb.se/article/Kalle_CSS_LESS_SASS.pdf)". Artikeln behandlar skillnader och likheter mellan LESS och SASS. Artikeln är också en god introduktion till vad en CSS pre-processor är och gör.
+1. Läs artikeln "[Top 10 Mistakes in Web Design](https://www.nngroup.com/articles/top-10-mistakes-web-design/)" skriven av Jakob Nielsen.
 
-1. Kika på hur du kan nollställa style med [Normalize.css](http://necolas.github.com/normalize.css/) samt läs snabbt om hur [Normalize fungerar](http://nicolasgallagher.com/about-normalize-css/) och vem som använder det.
-
-
-
-###Responsiv webbdesign {#responsiv}
-
-1. Läs översiktligt artikeln som definierade begreppet "[Responsive Web Design](http://alistapart.com/article/responsive-web-design/)".
-
-1. Bläddra snabbt igenom artikeln "[Multi-Device Layout Patterns](http://www.lukew.com/ff/entry.asp?1514)" som definierar ett antal design mönster inom responsiv design.
-
-1. Kika snabbt på materialet då Google Developers visar hur man kommer igång med [grunderna i responsiv layout](https://developers.google.com/web/fundamentals/design-and-ui/responsive/). 
+1. Läs artikeln som ger en kort introduktion till användbarhet, "[Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability/)" skriven av Jakob Nielsen.
 
 
 
@@ -79,7 +68,7 @@ Läs följande:
 
 Titta på följande:
 
-1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 0 och 1. Videorna som börjar på 110* och 120* är kopplade till de artiklarna du skall jobba igenom under övningarna nedan. Titta på dem samtidigt som du jobbar igenom respektive artikel.
+1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 0 och 1. Videorna som börjar på 110* är kopplade till en av de artiklar du skall jobba igenom under övningarna nedan. Titta på dem samtidigt som du jobbar igenom artikeln.
 
 
 
@@ -90,6 +79,8 @@ Kika på följande om du är intresserad och finner det värt tiden.
 1. I övningarna introduceras du till Git och GitHub. Om du vill jobba igenom en separat övning med Git och GitHub så finns artikeln "[Kom igång med Git och GitHub](kunskap/kom-igang-med-git-och-github)".
 
 1. Ramverket du använder i kursen är Anax. Bekanta dig gärna med [Anax dokumentationen](anax).
+
+1. Anax Flat kan sägas vara ett flat-file framework. Bekanta dig kort med ett annat sådant ramverk som heter [Grav](https://getgrav.org/) och är byggt med PHP. Du kan kika på vilka feature det har och kika översiktligt på dess dokumentation.
 
 
 
@@ -116,7 +107,6 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 1. Lär känna ramverket Anax Flat genom att bygga webbplats. Jobba igenom artikeln "[Bygg en me-sida med Anax Flat](kunskap/bygg-me-sida-med-anax-flat)".
 
-1. Kom igång med LESS och skapa en struktur av LESS-filer, eller LESS-moduler. Det blir ett modulärt sätt att bygga upp sitt *tema* till webbplatsen. Gör detta genom att jobba igenom artikeln "[Bygg ett tema till Anax Flat](kunskap/bygg-ett-tema-till-anax-flat)".
 
 
 
@@ -124,7 +114,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Lös uppgiften "[Bygg en me-sida med Anax Flat och eget LESS tema](uppgift/me-sida-med-tema)".
+1. Lös uppgiften "[Bygg en me-sida med Anax Flat](uppgift/me-sida-med-anax-flat)".
 
 
 
@@ -146,5 +136,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är du sedan tidigare van att jobba i ramverk för att bygga webbplatser? Om ja, vilka ramverk/språk har du jobbat med?
 * Det blev en del nya verktyg i labbmiljön, var de nya för dig eller kände du igen dem?
 * Hur kändes det att jobba med Anax Flat och bygga din me-sida?
-* Vad tycker du om LESS så här långt, och det sättet vi jobbar med LESS-moduler i vårt tema?
 * Kändes det som ett utmanande kursmoment? Det fanns videor som kompletterade artiklarna, hjälpte de dig att förstå materialet bättre?
