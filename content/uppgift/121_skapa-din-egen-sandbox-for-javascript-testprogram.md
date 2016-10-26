@@ -2,9 +2,10 @@
 author: mos
 category: javascript
 revision:
-  "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
-  "2014-08-11": (B, mos) Genomgången och uppdaterade hur kopieringen görs.
-  "2014-06-26": (A, mos) Första utgåvan i samband med javascript1.
+    "2016-10-26": (D, mos) Bytte länkar i förkunskaper.
+    "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
+    "2014-08-11": (B, mos) Genomgången och uppdaterade hur kopieringen görs.
+    "2014-06-26": (A, mos) Första utgåvan i samband med javascript1.
 updated: "2015-08-27 07:41:46"
 created: "2014-06-13 13:47:10"
 ...
@@ -19,7 +20,7 @@ Skapa en mall för dina testprogram med HTML, CSS och JavaScript enligt den stan
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Labbmiljö för JavaScript i webbläsaren](kunskap/labbmiljo-for-javascript-i-webblasaren)" och därmed har du denna uppgiften så gott som löst.
+Du har jobbat igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)" och därmed har du denna uppgiften så gott som löst.
 
 
 
@@ -73,7 +74,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
