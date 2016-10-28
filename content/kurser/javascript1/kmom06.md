@@ -12,7 +12,7 @@ När kodbasen växer blir det mer och mer viktigt att ha en bra struktur på den
 
 <!--more-->
 
-[FIGURE src=/kod-exempel/hangman-svg/hangman-validates-inline.svg caption="En SVG-bild till ett hänga gubben-spel som byggs enligt module pattern."]
+[FIGURE src=/img/hangman/hangman-validates-inline.svg caption="En SVG-bild till ett hänga gubben-spel som byggs enligt module pattern."]
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -104,7 +104,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Kan du jämföra "module pattern" med någon annat liknande datastruktur?
 * Känns "module pattern som en bra kodstruktur"?
 * Var boken "Learning JavaScript Design Patterns" lättläst eller lite för svår?
-
-
-
-
