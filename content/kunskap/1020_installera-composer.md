@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-10-28: (B, mos) Ändrade install --mode till -m på Mac.
     2016-10-13: (A, mos) Första utgåvan.
 category:
     - labbmiljo
@@ -92,7 +93,7 @@ $ php composer.phar --version
 Bra, nu vet du att den nedladdade filen fungerar. Placera den nu i en katalog som ligger i din path.
 
 ```bash
-$ sudo install --mode=0755 composer.phar $HOME/bin/composer
+$ sudo install -m 0755 composer.phar $HOME/bin/composer
 $ ls -l $HOME/bin/composer
 $ composer --version
 ```
