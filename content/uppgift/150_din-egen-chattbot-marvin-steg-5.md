@@ -61,7 +61,7 @@ Så här kan det se ut.
 ./marvin-cli.py title http://dbwebb.se
 ```
 
-Ett argument in om `<>` skall finnas med, ett argument inom `[]` kan finnas med.
+Ett argument inom `<>` skall finnas med, ett argument inom `[]` kan finnas med.
 
 I denna uppgiften börjar du på ett nytt vitt blad, du ska inte stödja den gamla funktionaliteten som redan finns i ditt Marvin. Du ska bara koda in de nya kraven i din `marvin-cli`.
 
