@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-01: (B, mos) Nytt krav om att länka till temat på github.
     2016-10-26: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -50,6 +51,8 @@ Krav {#krav}
 1. Innehållsdelen och eventuella sidokolumner skall se bra och och fungera responsivt.
 
 1. Footer och footerkolumnerna skall se bra ut och fungera responsivt.
+
+1. På din about-sida skall du lägga en länk till GitHub-repot för ditt tema.
 
 1. Se till att ditt tema passerar testerna som körs vid `make test`.
 
