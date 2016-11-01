@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-    2016-10-26: (C, mos) bort med referenser till att ändra temat.
+    2016-11-01: (D, mos) Bort med referenser till YAML.
+    2016-10-26: (C, mos) Bort med referenser till att ändra temat.
     2016-09-22: (B, mos) Testad inför kursstart.
     2016-06-03: (A, mos) Första versionen.
 category:
@@ -31,8 +32,6 @@ Förutsättning {#pre}
 -------------------------------
 
 Du har installerat [`composer`](labbmiljo/composer) och [`make`](labbmiljo/make).
-
-Du har konfigurerat din [PHP installation att hantera YAML](labbmiljo/php-yaml).
 
 
 
