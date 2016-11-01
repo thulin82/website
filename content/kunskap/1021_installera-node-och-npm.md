@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-01: (B, mos) Bytte ut nodejs mode node i verifiering.
     2016-10-14: (A, mos) Första utgåvan.
 category:
     - labbmiljo
@@ -110,7 +111,7 @@ Hello World
 Du kan också köra node interaktivt och evaluera JavaScript rad för rad. Programmet visar att den är redo för inmatning med prompten `>`.
 
 ```bash
-$ nodejs
+$ node
 > console.log("Hej")
 Hej
 >
@@ -118,19 +119,19 @@ Hej
 
 Så här kan det se ut.
 
-[ASCIINEMA src=24691]
+[ASCIINEMA src=91267]
 
 Du kan också låta nodejs köra JavaScript-program som finns i filer.
 
 ```bash
 $ echo "console.log('Hello')" > hello.js
-$ nodejs hello.js
+$ node hello.js
 Hello
 ```
 
 Så här kan det se ut.
 
-[ASCIINEMA src=24692]
+[ASCIINEMA src=91268]
 
 
 
