@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
-  "2014-09-17": (C, mos) Förtydligade kravet om 15 meningar.
-  "2014-08-11": (B, mos) Gemomgången och smärre justeringar.
-  "2014-06-13": (A, mos) Första utgåvan för javascript1 kursen.
+    "2016-11-01": (D, mos) Bort med dbwebb.
+    "2014-09-17": (C, mos) Förtydligade kravet om 15 meningar.
+    "2014-08-11": (B, mos) Gemomgången och smärre justeringar.
+    "2014-06-13": (A, mos) Första utgåvan för javascript1 kursen.
 ...
 Resultat och redovisning
 ==================================
@@ -30,8 +31,8 @@ Ladda upp din kurskatalog med alla dina övningar genom att göra följande komm
 
 ```bash
 cd javascript1
-bin/dbwebb validate kmom01
-bin/dbwebb publish kmom01
+dbwebb validate kmom01
+dbwebb publish kmom01
 ```
 
 Rätta eventuella fel som dyker upp. Det som du laddar upp måste vara felfritt. 
@@ -42,8 +43,8 @@ För att publicera samtliga kursmoment gör du så här:
 
 ```bash
 cd javascript1
-bin/dbwebb validate me
-bin/dbwebb publish me
+dbwebb validate me
+dbwebb publish me
 ```
 
 Då valideras och publiceras hela din me-katalog, inklusive samtliga kursmoment. Se till att du aldrig publicerar något som har valideringsfel. Rätta dem i så fall.
@@ -74,7 +75,3 @@ Klart! {#klar}
 Läs gärna dina med-studenters inlämningar och ställ dina frågor i forumet. Se till att du får dina frågor besvarade. Skapa alltid en tråd i forumet om du funderar på något.
 
 Ta en kort mental paus innan du ger dig på nästa kursmoment.
-
-
-
-
