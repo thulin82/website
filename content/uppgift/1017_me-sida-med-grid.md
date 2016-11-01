@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-01: (D, mos) Bort med krav om makefile för typografiskt grid.
     2016-10-31: (C, mos) Förtydligade hur man jobber med typografi och det hotrisontella gridet, kopiering kontra modifiering.
     2016-10-26: (B, mos) Omarbetad efter feedback.
     2016-06-22: (A, mos) Första utgåvan.
@@ -32,6 +33,8 @@ Du har en version av Anax Flat som ligger i katalogen `me/anax-flat`. Det är et
 
 Du har en version av temat som ligger i katalogen `me/anax-flat/theme`. Det är ett eget repo på GitHub som är taggat i minst version 2.\*.
 
+En filosofi som kan komma till nytta här är [POGE - Principle of good enough](https://en.wikipedia.org/wiki/Principle_of_good_enough). Att försöka matcha gridet <abbr title="En sak eller uppfattning har drivits bortom vad som är rimligt.">in absurdum</abbr> kan vara kostsamt, beroende på ens förmåga.
+
 
 
 Krav {#krav}
@@ -55,29 +58,23 @@ Krav {#krav}
 
 
 
-###Del 2 Horisontellt grid {#horisontellt}
+###Del 2 Horisontellt grid (testa) {#horisontellt}
 
-1. Kopiera de relevanta LESS-filer som finns i exemplet under `example/typography-grid/less/typography-*`. Lägg till dem så att de finns med i ditt tema. 
+1. Aktivera det typografiska grider genom att kopiera de relevanta LESS-filer som finns i exemplet under `example/typography-grid/less/typography-*`. Lägg till dem så att de finns med i ditt tema. Aktivera typografin.
 
-1. Skapa ett target för `upgrade-typographic-grid` i din Makefile som hämtar hem senaste versionen av LESS-filerna från [kursrepot på GitHub](https://github.com/dbwebb-se/design/tree/master/example/typography-grid/less).
-
-1. Gör så att båda `upgrade-typographic-grid` och `upgrade-grid` blir en del av target `upgrade` i din Makefile.
-
-1. I din `style.less` så aktiverar du typografin. Verifiera att det fungerar med de exempefiler du kopierat.
-
-1. Skapa en sida `content/typography.md`. Lägg in sidan i menyn. Fyll sidan med text och typografiska element som visar hur du stylat dem. Ungefär liknande textmassan som fanns i [exemplet](/repo/design/example/typography-grid/typography.html). När man tittar på den sidan skall gridet visas i bakgrunden. De typografiska elementen skall matcha gridet.
-
-1. Gör så att alla element på sidan matchar det magiska numret och lutar mot det typografiska gridet. Det gäller till exempel för de margin-bottom du har mellan olika delar av sidan, till exempel flash, main och footer-regionerna. Använd `@magicNumber` där det finns möjlighet och jobba främst med `margin-bottom`.
+1. Skapa en sida `content/typography.md`. Lägg in sidan i menyn. Fyll sidan med text och typografiska element som visar hur du stylat dem. Ungefär som textmassan som fanns i [exemplet](/repo/design/example/typography-grid/typography.html). När man tittar på sidan skall gridet visas i bakgrunden. De typografiska elementen skall *någorlunda väl* matcha gridet.
 
 
 
-###Del 3 Typografisk layout {#typografi}
+###Del 3 Typografisk layout (anpassa) {#typografi}
 
-1. Ta exempelkoden och gör den till din egen. Det kan vara en god idè att modifiera grundfilerna för det horisontella grid  som du kopierat i föregående steg. Men, du kan inte modifiera de kopierade filerna eftersom de skrivs över vid en `make update`. Du behöver alltså skapa nya egna filer, där du lägger din egen modifierade variant till det horisontella gridet.
+1. Ta exempelkoden för det horisontella grider och *gör den till din egen*. Du kan fritt modifiera grundfilerna för det horisontella grid som du kopierat i föregående steg.
 
-1. Bygg nu ut ditt tema med en egenvald typografisk layout. Gör ett aktivt val för typsnitt och storlekar och eventuella ramar, etc.
+1. Kodstruktur. Försök separera basen för ditt horisontella grid och din specifika anpassning av typografin. Lägg det som går att återanvända på en plats, och den specifika anpassningen på en annan plats, i dina LESS-moduler.
 
-1. Försök separera basen för ditt horisontella grid och din specifika anpassning av typografin. Lägg det som går att återanvända på en plats, och den specifika anpassningen på en annan plats, i dina LESS-moduler.
+1. Bygg ut ditt tema med en egenvald typografisk layout. Gör ett aktivt val för typsnitt och storlekar och eventuella ramar, etc.
+
+1. Gör så att alla element på sidan matchar det magiska numret och lutar mot det typografiska gridet. Det gäller till exempel för de margin-bottom du har mellan olika delar av sidan, till exempel flash, main och footer-regionerna. Använd `@magicNumber` där det finns möjlighet och jobba främst med `margin-bottom`. Gör det *tillräckligt bra*.
 
 
 
