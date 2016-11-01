@@ -3,13 +3,13 @@ title: javascript1
 
 author: mos
 revision:
-  "2016-03-04": (F, mos) Notis om nytt namn och ny kurskod.
-  "2015-03-02": (E, mos) Uppdatering av referenslitteratur till Staflins bok om HTML
-    & CSS.
-  "2015-01-19": (D, mos) Bort blå ruta om kursutveckling.
-  "2015-01-09": (C, mos) Text om studieplan för kurspaket.
-  "2014-11-02": (B, mos) Samtliga kursmoment klara (förutom projektet).
-  "2014-06-18": (A, mos) Första revisionen inför kursstart HT2014.
+    "2016-11-01": (G, mos) Ladok moment och skrev om lektionsplan/studieplan.
+    "2016-03-04": (F, mos) Notis om nytt namn och ny kurskod.
+    "2015-03-02": (E, mos) Uppdatering av referenslitteratur till Staflins bok om HTML & CSS.
+    "2015-01-19": (D, mos) Bort blå ruta om kursutveckling.
+    "2015-01-09": (C, mos) Text om studieplan för kurspaket.
+    "2014-11-02": (B, mos) Samtliga kursmoment klara (förutom projektet).
+    "2014-06-18": (A, mos) Första revisionen inför kursstart HT2014.
 ...
 Kursen javascript1
 ==================================
@@ -197,13 +197,26 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](javascript1/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1).
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
-Går du på campus får du en lektionsplan i samband med kursstart.
+För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](javascript1/studieplan) kopplad till de kurstillfällen som erbjuds.
 
-Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
+Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
+
+Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
+
+Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
+
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
+
+
+
+Lärarstöd och handledning {#handledning}
+----------------------------------------
+
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
 
 
 
@@ -214,12 +227,18 @@ Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättnin
 
 
 
-Lärarstöd och handledning {#handledning}
-----------------------------------------
+Ladok {#ladok}
+------------------------
 
-I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
+Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
 
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).  
+| Kursens moment  | Ladok moment enligt kursplan  |
+|-----------------|-------------------------------|
+| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
+| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
+| Kmom05 - kmom10 | Projekt á 2.5hp               |
+
+Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
 
 
