@@ -2,11 +2,11 @@
 author: mos
 category: bok
 revision:
-  "2015-03-02": (D, mos) Uppdaterade till sixth edition och ändrade länken till BTHs
-    ebok.
-  "2013-01-25": (C, mos) Info om e-bok.
-  "2013-01-12": (B, mos) Uppdaterad med information om revision 6.
-  "2012-06-28": (A, mos) Första revisionen.
+    "2016-11-01": (E, mos) Bort med direktlänken till BTHs ebok.
+    "2015-03-02": (D, mos) Uppdaterade till sixth edition och ändrade länken till BTHs ebok.
+    "2013-01-25": (C, mos) Info om e-bok.
+    "2013-01-12": (B, mos) Uppdaterad med information om revision 6.
+    "2012-06-28": (A, mos) Första revisionen.
 updated: "2015-03-02 15:03:53"
 created: "2012-06-28 12:05:24"
 ...
@@ -42,7 +42,7 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9780596805524]
 
-[BTH´s bibliotek kan erbjuda boken som e-bok](http://goo.gl/RszLin).
+BTH´s bibliotek kan erbjuda boken som e-bok.
 
 
 
