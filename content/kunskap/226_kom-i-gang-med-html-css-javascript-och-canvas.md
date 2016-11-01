@@ -211,9 +211,9 @@ Låt se hur det ser ut när jag lägger upp ett exempel i JSFiddle. Så kan du s
 
 Här är mitt färdiga exempel som du kan öppna i JSFiddle och testa att ändra.
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/mikael_roos/pK8cc/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/mikael_roos/pK8cc/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Länken till exemplet är [http://jsfiddle.net/mikael_roos/pK8cc/](http://jsfiddle.net/mikael_roos/pK8cc/).
+Länken till exemplet är [https://jsfiddle.net/mikael_roos/pK8cc/](https://jsfiddle.net/mikael_roos/pK8cc/).
 
 Glöm inte att korta och små fiddlar är enklare att hantera för den som hjälper dig. Göra bara fiddlarna så att de visar på problemet. Ta bort all annan kod. Det exemplet som jag visar är alltså i största laget. Om jag till exempel hade problem med en confirm-popup så skulle jag bara visat den delen av koden.
 
