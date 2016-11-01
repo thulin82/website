@@ -8,16 +8,6 @@ created: "2015-10-06 19:42:45"
 Kmom03: Kuber och texturer
 ==================================
 
-[INFO]
-**Kursutveckling pågår.**
-
-Material är arbetsmaterial och förändras efter hand. 
-
-Kursen ges första gången höstterminen 2015 med start i november.
-
-Detta kursmoment <strike>släpps måndagen den 30:e</strike> släpptes den 29:e november 2015.
-[/INFO]
-
 Du fortsätter att öva på programmering med JavaScript. Denna gången är det fokus på arrayer och objekt. Samtidigt fördjupar du dig i WebGL med texturer, MVP-matrisen och du ritar kuber i en 3D-värld.
 
 <!--more-->
@@ -137,7 +127,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Berätta kort om hur du löste uppgiften om kuber och texturer?
 * Känner du att du har en god bas i WebGL? Vad känner du att du saknar?
 * Var det något som krånglade eller tog extra mycket tid?
-
-
-
-
