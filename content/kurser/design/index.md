@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-01: (B, mos) Skrev om lektionsplan/studieplan.
     2016-10-26: (A, mos) Strukturen omarbetad och 4 kmom publicerade.
 ...
 Kursen design
@@ -175,9 +176,17 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-Varje kurs och kurstillfälle har en [rekommenderad studieplan](design/studieplan).
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin1).
 
-Vissa av kurstillfällena har även en [lektionsplan](design/lektionsplan) som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda.
+Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
+
+För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](design/studieplan) kopplad till de kurstillfällen som erbjuds.
+
+Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
+
+Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
+
+Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
 
 Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
@@ -186,7 +195,7 @@ Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studiepla
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).  
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
 
 
 
