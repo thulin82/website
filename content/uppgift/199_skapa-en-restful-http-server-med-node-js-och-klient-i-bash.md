@@ -55,11 +55,11 @@ Krav {#krav}
 
 ```javascript
 {
-    "uname": "Utskiften av kommandot uname -a",
+    "uname": "Utskiften av kommandot uname -a"
 }
 ``` 
 
-7\. På routen `/sum` skall servern summera alla argument som kommer i querystring efter enligt `/sum?2&3` skall ge svaret 5 i en JSON struktur `{ sum: 5 }` enligt `application/json`. Routern skall klara oändligt antal parametrar i querystringen.  
+7\. På routen `/sum` skall servern summera alla argument som kommer i querystring efter enligt `/sum?2&3` skall ge svaret 5 i en JSON struktur `{ "sum": 5 }` enligt `application/json`. Routern skall klara oändligt antal parametrar i querystringen.  
 
 8\. På routen `/filter?value1&value2&value3` skall servern filtrera bort alla värden som är större än 42. De kvarvarande värdena skall samlas i en array och skickas tillbaka i svaret i ett JSON-objekt. Till exempel så ger routen `/filter?1&2&3&42&99` svaret:
 
