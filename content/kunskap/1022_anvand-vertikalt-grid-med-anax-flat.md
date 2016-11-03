@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-01: (D, mos) la till avslutande div.
     2016-10-26: (C, mos) Ändrade upplägg för clearfix och dess användning.
     2016-10-24: (B, mos) La till en intro till artikeln.
     2016-06-21: (A, mos) Första utgåvan.
@@ -92,10 +93,10 @@ I vårt grid vill vi undvika hårda kopplingar mellan CSS- och HTML-koden. Vissa
 
 ```html
 <div class="row">
-    <div class="column-3">
-    <div class="column-3">
-    <div class="column-3">
-    <div class="column-3">
+    <div class="column-3">Column 3</div>
+    <div class="column-3">Column 3</div>
+    <div class="column-3">Column 3</div>
+    <div class="column-3">Column 3</div>
 </div>
 ```
 
