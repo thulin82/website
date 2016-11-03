@@ -151,7 +151,7 @@ Gör så här för att kompilera och uppdatera stylesheeten i ditt Anax Flat.
 
 ```text
 $ make less-install
-``` 
+```
 
 Du behöver konfigurera ditt Anax Flat att använda denna nya stylesheet. Det gör du via filen `config/theme.php` genom att ändra följande.
 
@@ -275,7 +275,7 @@ Lägg till så filen inkluderas i `modules.less`.
 
 Bygg om temat och ladda om sidan. Du borde nu se en liknande bild jag visar i föregående stycke.
 
-I videoserien går jag igenom innehållet i filen `regions.less` i en lugnare takt. 
+I videoserien går jag igenom innehållet i filen `regions.less` i en lugnare takt.
 
 
 
@@ -458,7 +458,7 @@ Det skulle kunna se ut så här när vi är klara. Nåja, klara och klara. Men �
 
 En start är det iallafall.
 
-Ovan style kan man uppnå med den stylen som ligger i kursrepots exempel-katalog `example/anax-flat/header.less`.
+Ovan style kan man uppnå med den stylen som ligger i kursrepots exempel-katalog `example/anax-flat/theme/header.less`.
 
 Bör man lägga denna stylen som en egen återanvändbar modul eller bör man anse att den inte är generell utan kan samlas i `style.less`. Ja, det är en bedömning man får göra, båda varianterna fungerar.
 
@@ -482,11 +482,11 @@ Så här kan en media query se ut när skärmens bredd blir mindre än 900 pixla
     .site-logo-text {
         width: 40%;
     }
-    
+
     .navbar2 {
         width: 50%;
     }
-    
+
     .profile {
         width: 10%;
     }
