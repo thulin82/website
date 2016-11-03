@@ -1,7 +1,8 @@
 ---
 author: mos
 revision:
-    2016-11-01: (D, mos) la till avslutande div.
+    2016-11-01: (E, mos) Förtydligande om användning av container().
+    2016-11-01: (D, mos) La till avslutande div.
     2016-10-26: (C, mos) Ändrade upplägg för clearfix och dess användning.
     2016-10-24: (B, mos) La till en intro till artikeln.
     2016-06-21: (A, mos) Första utgåvan.
@@ -399,7 +400,7 @@ Det finns en mixin `.container()` eller `.container-fixed()` som kan användas t
 }
 ```
 
-Avslutningsvis så använder vi mixinen i CSS klassen `.wrap`.
+Avslutningsvis så använder vi mixinen i CSS klassen `.wrap`. Jag väljer att använda containern utan en fast bredd, den är alltså fluid. Men jag sätter ändå en `max-width` för jag vill inte att den skall bli större än en viss bredd. Det blir alltså fluid med en max bredd.
 
 ```css
 .wrap {
