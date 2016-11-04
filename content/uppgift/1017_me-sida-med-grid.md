@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-04: (F, mos) Tillbaka och förtydliga krav om dubbla kolumner.
     2016-11-04: (E, mos) Bort med krav om dubbla kolumner.
     2016-11-01: (D, mos) Bort med krav om makefile för typografiskt grid.
     2016-10-31: (C, mos) Förtydligade hur man jobber med typografi och det hotrisontella gridet, kopiering kontra modifiering.
@@ -53,7 +54,7 @@ Krav {#krav}
 
 1. Skapa en `modules/grid-helpers.less` och lägg en mixin som visualiserar gridet. Mixinen skall heta `.showGrid()` och ta ett argument som är gridets maximala storlek. De bilder du behöver lägger du enklast i `htdocs/img/grid`.
 
-1. Skapa en ny sida `content/grid.md`. Lägg in den sidan i menyn. När man tittar på den sidan skall gridet visas i bakgrunden. Se till att sidan är fylld med innehåll.
+1. Skapa en ny sida `content/grid.md`. Lägg in den sidan i menyn. När man tittar på den sidan skall gridet visas i bakgrunden. Se till att sidan är fylld med innehåll. Sidan skall innehålla minst en [sidebar](t/5890) (sidebar-left eller sidebar-right) med innehåll.
 
 1. Gör ditt tema responsivt med media queries och förberett för mindre skärmar.
 
