@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-11-04": (D, mos) Lade till extrauppgift om login.
     "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
     "2015-08-27": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
@@ -81,7 +82,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-Det finns inga extra uppgifter.
+Gör följande extrauppgifter om du har tid och lust.
+
+1. Lägg till en inloggning på din mesida och styr så att man måste vara inloggad för att kunna redigera (lägga till, uppdatera, radera) i databasen. kursrepot innehåller ett exempel [`example/login`](https://dbwebb.se/repo/htmlphp/example/login/login.php) som du kan utgå ifrån.
 
 
 
