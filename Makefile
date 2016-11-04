@@ -85,15 +85,14 @@ local-publish:
 
 	@# Recreate the link to the forum cache, since its not rsynced
 	if [ -d  $(LOCAL_HTDOCS)/htdocs/forum ]; then ln -sf ../../cache/forum  $(LOCAL_HTDOCS)/htdocs/forum/cache; fi
-		rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
+	rsync -av "./cache/" $(LOCAL_HTDOCS)/cache/
 
 	@# Enable robots if available
-	[ ! -f $(ROBOTSTXT) ] ||  cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
+	[ ! -f $(ROBOTSTXT) ] || cp $(ROBOTSTXT) "$(LOCAL_HTDOCS)/htdocs/robots.txt" 
 
 	# Make soma parts writable
 	# https://dbwebb.se/repo/htmlphp/example/pdo-sqlite/
-	chmod 777 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/
-	chmod 666 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/*
+	if [ -d $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/ ]; then chmod 777 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/; chmod 666 $(LOCAL_HTDOCS)/htdocs/repo/htmlphp/example/pdo-sqlite/db/*; fi
 
 
 
@@ -153,10 +152,10 @@ forum-init:
 # target: submodule-update    - Update all submodules.
 .PHONY: submodule-init submodule-update
 submodule-init:
-	git submodule update --init --recursive 
+	-git submodule update --init --recursive 
 
 submodule-update:
-	git pull --recurse-submodules && git submodule foreach git pull origin master
+	-git pull --recurse-submodules && git submodule foreach git pull origin master
 
 
 
