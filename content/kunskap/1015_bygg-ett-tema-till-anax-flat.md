@@ -495,7 +495,7 @@ Så här kan en media query se ut när skärmens bredd blir mindre än 900 pixla
 
 Pröva nu att styla din webbplats responsivt med media queries.
 
-Jag har gjort en enkel variant och min exempelkod finns i kursrepot under `example/anax-flat/media-queries.less`. Kika gärna där för tips.
+Jag har gjort en enkel variant och min exempelkod finns i kursrepot under `example/anax-flat/theme/media-queries.less`. Kika gärna där för tips.
 
 
 

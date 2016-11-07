@@ -52,7 +52,7 @@ Krav {#krav}
 
 1. Fundera över din kodstruktur i ditt exempelprogram.
 
-1. Studera koden i de exempelprogram som heter `example/sandboxWebGL3*/` samt `example/sandboxWebGL4*/`.
+1. Studera koden i de exempelprogram som heter `example/sandboxWebGL3*/` samt `example/sandboxWebGL4*/`. Observera att exempel filerna använder `example/lib/webgl-utils.js`, så kopiera den filen till din katalog.
 
 1. Gå igenom din egen kodstruktur och uppdatera den så du blir nöjd.
 
@@ -64,7 +64,7 @@ dbwebb validate sandbox3
 dbwebb publish sandbox3
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -72,7 +72,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 
 1. Kopiera alla filerna i din uppdaterade sandbox3 och lägg dem i katalogen `me/kmom02/tri`.
 
-1. Utgå ifrån exemplen i boken kapitel 4 samt exempelprogrammen `example/sandboxWebGL3*/` och `example/sandboxWebGL4*/`.
+1. Utgå ifrån exemplen i boken kapitel 4 samt exempelprogrammen `example/sandboxWebGL3*/` och `example/sandboxWebGL4*/`. Observera att exempel filerna använder `example/lib/webgl-utils.js`, så kopiera den filen till din katalog.
 
 1. Gör en kontrollpanel med knappar som kan lägga till godtyckligt antal trianglar.
 
@@ -90,7 +90,7 @@ dbwebb validate tri
 dbwebb publish tri
 ```
 
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -105,7 +105,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
