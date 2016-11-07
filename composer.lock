@@ -159,16 +159,16 @@
         },
         {
             "name": "mos/anax",
-            "version": "v2.5.17",
+            "version": "v2.5.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/anax.git",
-                "reference": "81e1dd79c0d2392af67d1c70a1502caca2216697"
+                "reference": "748128a132ef49ed743c1ddbeff8cf7c705c4e07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/anax/zipball/81e1dd79c0d2392af67d1c70a1502caca2216697",
-                "reference": "81e1dd79c0d2392af67d1c70a1502caca2216697",
+                "url": "https://api.github.com/repos/mosbth/anax/zipball/748128a132ef49ed743c1ddbeff8cf7c705c4e07",
+                "reference": "748128a132ef49ed743c1ddbeff8cf7c705c4e07",
                 "shasum": ""
             },
             "require": {
@@ -209,7 +209,7 @@
                 "micro",
                 "mvc"
             ],
-            "time": "2016-10-18 17:45:46"
+            "time": "2016-11-07 11:04:26"
         },
         {
             "name": "mos/cimage",
@@ -271,16 +271,16 @@
         },
         {
             "name": "mos/ctextfilter",
-            "version": "v1.2.15",
+            "version": "v1.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mosbth/ctextfilter.git",
-                "reference": "6ebbddf8a7c28db2a5fdfe9ed604f144731a342f"
+                "reference": "4c5b2bd3f76798665e2dc7207281cb4882098692"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/6ebbddf8a7c28db2a5fdfe9ed604f144731a342f",
-                "reference": "6ebbddf8a7c28db2a5fdfe9ed604f144731a342f",
+                "url": "https://api.github.com/repos/mosbth/ctextfilter/zipball/4c5b2bd3f76798665e2dc7207281cb4882098692",
+                "reference": "4c5b2bd3f76798665e2dc7207281cb4882098692",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +292,9 @@
             },
             "suggest": {
                 "ext-json": "*",
-                "ext-yaml": "*"
+                "ext-yaml": "*",
+                "mustangostang/spyc": "^0.6",
+                "symfony/yaml": "^3.1"
             },
             "type": "library",
             "extra": {
@@ -328,7 +330,7 @@
                 "markdown",
                 "shortcode"
             ],
-            "time": "2016-10-18 14:07:21"
+            "time": "2016-10-31 12:22:27"
         },
         {
             "name": "scrivo/highlight.php",
