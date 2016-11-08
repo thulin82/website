@@ -1,6 +1,9 @@
 ---
 author: mos
 category: javascript
+revision:
+    "2016-11-07": (B, mos) Genomgången inför ht16.
+    "2015-11-11": (A, mos) Uppdaterad och omskriven i samband med webgl-kursen.
 updated: "2015-11-11 14:53:54"
 created: "2015-10-11 16:30:43"
 ...
@@ -31,10 +34,16 @@ Använd manualerna flitigt. Lär dig slå upp i dem. Använd Mozilla Developer N
 
 Du finner samtliga exempelprogram på [dbwebb under javascript/core](javascript/core).
 
+Se till att du kan skriva dina egna exempelprogram för att testa olika koncept. För enklare konstruktioner kan du använda webbläsarens console eller en interaktiv session i node. För större exempelprogram kan du spara i en egen fil och köra i webbläsaren. 
+
 
 
 Lexikalisk struktur {#lexikalisk}
 --------------------------------------------------------
+
+
+
+###Allmänt {#allman}
 
 JavaScript gör skillnad på små och stora bokstäver, nyckelordet `while` måste skrivas exakt så och inte `WHILE`. Variablerna `avar` och `aVar` är två skilda variabler.
 
@@ -42,7 +51,11 @@ JS bryr sig inte om blanka tecken som mellanslag och tabb. Du kan använda dem s
 
 Semikolon avslutar ett "statement", men de är valfria. Därför kan du köra program även om de saknar semikolon. Bäst är att ha koll på sina semikolon och alltid lägga dit dem där de ska vara. Annars kommer interpretatorn att gissa sig fram till om det behövs ett semikolon eller ej. Gissningar kan leda till problem. 
 
-Kommentarer är samma som i C++, dvs. `//` för en-rads kommentarer och `/* */` för kommentarer som spänner över flera rader. Det finns också stöd för DocBlock kommentarer `/** */` och då i samverkan med externa verktyg för dokumentation [^3].
+Kommentarer är samma som i PHP och C++. `//` för en-rads kommentarer och `/* */` för kommentarer som spänner över flera rader. Det finns också stöd för DocBlock kommentarer `/** */` och då i samverkan med externa verktyg för automatgenererande dokumentation [^3].
+
+
+
+###Literaler {#literal}
 
 När du skriver in ett värde  i JavaScript är det en "literal" som kan tolkas som ett värde och en typ.
 
@@ -62,6 +75,12 @@ undefined       // Ett odefinierat värde
 [1, 2, "three"] // En array med tre värden
 ```
 
+Pröva att skriva in någon av literalerna för att se hur JavaScript tolkar dem.
+
+
+
+###Identifierare {#identifierare}
+
 En identifierare är en sträng som används för att namnge en variabel eller funktion. Reglerna för identifierare liknar andra programmeringsspråk.
 
 > En identifierare börjar med en bokstav `a-z, A-Z`, understreck `_` eller dollartecken `$` och följs därefter av bokstav `a-z, A-Z`, understreck `_`, dollartecken `$` eller siffror `0-9`.
@@ -77,60 +96,265 @@ M64
 i
 ```
 
+Pröva att skriva in en identifierare och tilldela den ett värde av en literal.
+
+```javascript
+var myValue = [1, 2, "three"];
+myValue;
+```
+
+
+
+###Reserverade ord {#reserved}
+
 Det finns ett antal [reserverade ord i JavaScript](https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words), dessa kan vara bra att ha lite koll på, kika på dem innan du går vidare. Du kan inte använda reserverade ord som namn på variabler.
 
-Bra, då gör vi ett litet testprogram.
+Vilka ord som är reserverade kan skifta mellan olika versioner av JavaScript, du gör bäst i att undvika dem, oavsett vilken version du använder.
+
+
+
+###Ett litet program {#litet}
+
+Så här kan ett [litet program](javascript/core/basic/basic.js) se ut i JavaScript. Spara undan det i en fil och kör det.
+
+```javascript
+/**
+ * This is some basics in JavaScript.
+ */
+
+// One line comment
+
+var someValue = 42;
+var someString = "42";
+
+if (someValue == "42") {
+    console.log("Yes, its 42 alright.");
+}
+
+if (someString === "42") {
+    console.log("Yes, its 42 alright.");
+}
+
+// Short syntax for an if statement
+var res = someValue === 42 ? 42 : "42";
+console.log(res);
+
+var i = 0;
+while (i < 42) {
+    i++;
+}
+console.log(i);
+
+for (i = 37; i <= 42; i++) {
+    console.log(i);
+}
+
+function alpha(x, y) {
+    return x + y;
+}
+
+console.log(alpha(40, 2));
+```
+
+Syntaxen är till stor del likt C/C++/PHP.
+
+Tilldelning är ett `=`, jämförelse av värden är `==` och jämförelse av både typ och värde är `===`. Det rekommenderas att använda `===` för att vara på den säkra sidan.
+
+
+
+###Funktion som variabel {#func-exp}
+
+Notera att en funktion kan tilldelas till en variabel. Programmeringsspråk som erbjuder den möjligheten brukar sägas ha stöd för *first-class functions* [^9]. Sådana konstruktioner är vanliga i programmeringsspråk som stödjer programmeringsparadigmen funktionell programmering [^12].
+
+```javascript
+var a = function (x) { return x + 1; };
+console.log(a(41)); 
+```
+
+På det sättet kan en funktion skickas som en parameter till en funktion, eller som en del av en array eller objekt.
 
 
 
 ###Övning {#uppgift-1}
 
-Gör ett litet program som skriver ut literaler tillsammans med dess typ. Du kan ta fram typen för en literal med hjälp av [operatorn](https://developer.mozilla.org/en/JavaScript/Reference/Operators) [`typeof`](https://developer.mozilla.org/en/JavaScript/Reference/Operators/typeof).
+Gör ett litet program som skriver ut literaler tillsammans med dess typ. Du kan ta fram typen för en literal med hjälp av [operatorn](https://developer.mozilla.org/en/JavaScript/Reference/Operators) [`typeof`](https://developer.mozilla.org/en/JavaScript/Reference/Operators/typeof). Svaret blir en sträng som representerar typen.
 
 Så här blev [resultatet för mig](javascript/core/literals-and-their-type-using-typeof/).
 
 [FIGURE src=/image/snapht15/js-literals.png caption="Literaler och dess typ som det upplevs av JavaScripts `typeof` operator."]
 
-Okey, då ser vi hur JavaScript upplever typerna för de olika literalerna. De två sifforna är *number* och flera av literalerna upplevdes som *object*.
+Nu ser vi hur JavaScript upplever typerna för de olika literalerna. De två sifforna är *number* och flera av literalerna upplevdes som *object*.
 
-Notera att en function kan tilldelas en variabel. Programmeringsspråk som erbjuder den möjligheten brukar sägas ha stöd för *first-class functions* [^9].
-
-Låt oss fortsätta studera grunderna så att vi får bättre grepp om typerna som javaScript erbjuder.
+Låt oss fortsätta studera grunderna så att vi får bättre grepp om typerna som JavaScript erbjuder.
 
 
 
-Datatyper och värden {#datatyper}
+Värden och Datatyper {#datatyper}
 --------------------------------------------------------
 
-I JavaScript finns ett antal objektbaserade datatyper. Följande lista ger en översikt.
+
+
+###Primitiva värden {#primitives}
+
+JavaScript har ett antal primitiva värden.
+
+* Boolska variabler som `true` och `false`.
+* Numeriska värden som `42` och `4.2`.
+* Strängar som `"mumin"` och `'mumin'`.
+* Icke-värden i form av `null` och `undefined`.
+
+De är primitiver, enkla värden.
+
+
+
+###Objekt {#objekt}
+
+De literaler som representerar ett icke-primitivt värde representeras som ett objekt.
+
+Alla nedan har samma värde för `typeof()`, alla är `"object"`.
+
+* `[]` array literal.
+* `{}` objekt literal.
+* `/./` ett reguljärt uttryck.
+
+En funktion har också en upplevd typ i form av `"function"`.
+
+```javascript
+> typeof(function(){})
+'function'
+```
+
+I samtliga fall så är dessa icke-primitiva värden en instans av `Object`, det ursprungliga objektet i en hierarki av JavaScript objekt. 
+
+```javascript
+[] instanceof Object
+[] instanceof Array
+true
+
+/./ instanceof Object
+/./ instanceof RegExp
+true
+
+> a = {}
+{}
+> a instanceof Object
+true
+
+> a = function(){}
+[Function]
+> a instanceof Object
+true
+> a instanceof Function
+true
+```
+
+Det finns alltså en objekthierarki dit ett värde hör, baserat på dess typ.
+
+
+
+###Objektbaserade datatyper {#datatyp}
+
+I JavaScript finns ett antal objektbaserade datatyper. Följande lista ger en översikt. Dessa inbyggda objekt innehåller inbyggda funktioner som kan användas för att jobba med värden av respektive typ.
 
 | Namn       | Syfte                                         |
 |------------|-----------------------------------------------|
 | [`Number`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Number) | Siffror, tal, nummer |
 | [`String`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/String) | Strängar och tecken |
 | [`Boolean`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Boolean) | Boolska värden, `sant` eller `falskt` |
-| [`Function`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function) | Funktioner som exekverbar kod |
-| [`Object`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object) | En osorterad lista av `key:value` |
+| [`Object`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Object) | Moderobjektet, samt en osorterad lista av `key:value` |
 | [`Array`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array) | En sorterad lista av numrerade värde |
-| [`Date`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date) | Datum och datumhantering |
+| [`Function`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function) | Funktioner som exekverbar kod |
 | [`RegExp`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/RegExp) | Reguljära uttryck |
-| [`Error`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Error) | Felhantering för syntax och fel under körning |
-| [`undefined`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/undefined) | En variabel som inte givits ett värde har värdet undefined som är en egen typ. |
-| [`null`](https://developer.mozilla.org/sv-SE/docs/Web/JavaScript/Reference/Global_Objects/null) | Null är avsaknaden av ett värde, men ändå ett medvetet värde som blivit tilldelat till en variabel. Det är en egen typ. |
 
 Varje datatyp är representerad som ett objekt med medlemsvariabler och metoder. Dessa används när man jobbar med värden som är av en viss typ. Objektets medlemmar och metoder avgör vad man kan göra med ett värde som är av en viss typ.
 
-Det är `number`, `string`, `boolean` och `Object` som är grundtyperna i JavaScript. Typerna `Number`, `String`, `Boolean`, `Function`, `Array`, `Date` och `RegExp` är en variant, en specialisering, av typen `Object`.
+Till exempel kan du ta reda på längden av en sträng på följande sätt.
 
-Samtliga objekttyper är något som kallas globala objekt, se översikten av det som defineras inom "[Global Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)" i JavaScript.
+```javascript
+> "Mumintrollet".length
+12
+> "Mumintrollet".charAt(1)
+'u'
+```
+
+Det som sker är att strängliteralen omvandlas automatiskt till ett String-object och dess property `length` avläses och metoden `String.charAt()` anropas.
+
+På det viset kan man säga att även primitiverna har en koppling till ett objekt som i sin tur bestämmer vad man kan göra med värdet.
+
+En strängliteral blir alltså till ett String-objekt vilket är kopplat till objektet Object. De metoder och properties som finns i `Object` och i `String` kan användas.
+
+Se detta exempel som använder en metod som finns i `Object`.
+
+```javascript
+> a = 42
+42
+> a.toString()
+'42'
+```
+
+Detta är grunden i hur värden och datatyper byggs upp och vilka metoder som finns tillgängliga.
+
+
+
+###Fler objekttyper utan literaler {#fler-typer}
+
+Låt oss titta på två andra objekttyper inte har en egen literal.
+
+| Namn       | Syfte                                         |
+|------------|-----------------------------------------------|
+| [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) | Datum och datumhantering |
+| [`Error`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Error) | Felhantering för syntax och fel under körning |
+
+Dessa objekt skapar man med operatorn `new` så här.
+
+```javascript
+// Date
+> a = new Date()
+Mon Nov 07 2016 18:05:33 GMT+0100 (CET)
+> a instanceof Object
+true
+> a instanceof Date
+true
+> typeof(a)
+'object'
+
+// Error
+> e = new Error()
+[Error]
+> e instanceof Object
+true
+> e instanceof Error
+true
+> typeof(e)
+'object'
+```
+
+Här skapar vi alltså en instans av objektet och får därmed tillgång till de metoder som objektet implementerar.
+
+
+
+###Sammanfattningsvis om typer och värden {#sammanfatt-typ}
+
+Det är `number`, `string`, `boolean` som är primitiver och resten är specialiserade objekttyper. Typerna `Number`, `String`, `Boolean`, `Function`, `Array`, `Date` och `RegExp` är en variant, en specialisering, av typen `Object`.
+
+Funktionen `typeof()` svarar med en upplevd typ i form an en sträng.
+
+Uttrycket `instanceof` testar om ett objekt/värde/variabel är av en viss Objekt.
+
+Samtliga objekttyper är något som kallas globala objekt, de innehåller metoder och properties som kan användas för att jobba med dem och de värden de representerar.
 
 Till dessa tillkommer `undefined` och `null`.
+
+| Namn       | Syfte                                         |
+|------------|-----------------------------------------------|
+| [`undefined`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/undefined) | En variabel som inte givits ett värde har värdet undefined som är en egen typ. |
+| [`null`](https://developer.mozilla.org/sv-SE/docs/Web/JavaScript/Reference/Global_Objects/null) | Null är avsaknaden av ett värde, men ändå ett medvetet värde som blivit tilldelat till en variabel. Det är en egen typ. |
 
 En variabel som ännu inte blivit tilldelad ett värde sägs ha värdet `undefined`. En funktion som inte returnerar något sägs returnera `undefined`. Ett odefinierat värde, helt enkelt.
 
 Man kan tilldela en variabel ett värde `null` som kan sägas innebära avsaknaden av värde. Vill man undvika `undefined` kan man explicit tilldela en variabel `null`. Internt representeras `null` av ett objekt, iallafall enligt funktionen `typeof()` och det kan kännas lite udda, men det är inget som bör störa oss. 
 
-Vi tar och kikar lite djupare in i var och en av dessa, samtidigt som vi gör lite övningar. Då kör vi.
+Vi tar och kikar lite djupare in i var och en av dessa, samtidigt som vi gör lite övningar. Då fortsätter vi.
 
 
 
@@ -170,6 +394,25 @@ Math.tan(2)       // Return tangent of 2
 
 Det är objektet [`Number`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number) som används när du jobbar med nummer. Konvertering av värden sker automatiskt mellan literal och objekt, ofta spelar det ingen roll men det är bra att veta om man vill ha lite extra koll. Kika på objektet Number för att se vilka standardfunktioner som det erbjuder.
 
+Var uppmärksam på Nan och Infinity i dina beräkningar. Se följande exempel.
+
+```javascript
+> 1/0
+Infinity
+> 0/0
+NaN
+> 0/1
+0
+
+> NaN > Infinity
+false
+> Infinity > NaN
+false
+> Infinity < (Infinity + 1)
+false
+> Infinity + 1
+Infinity
+```
 
 
 ###Övning nummer {#uppgift-2}
@@ -192,7 +435,47 @@ Strängkonkatenering sker med operatorn `+` eller `+=`.
 
 Det finns en samling med sträng-funktioner som är samlade i objektet [`String`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String).
 
-JavaScript konverterar automatiskt mellan nummer och strängar vid behov. Vill du ha mer kontroll på hur konvertering sker kan du använda funktionerna [`parseInt()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/parseInt) och [`parseFloat()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/parseFloat) för att konvertera strängar till nummer och [`toString()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toString) för att konvertera nummer till strängar. 
+###Typkonvertering {#typkonv}
+
+JavaScript konverterar automatiskt mellan nummer och strängar vid behov. Se följande som ett exempel på hur värden av olika typer kan läggas ihop via automatiks typkonvertering.
+
+```javascript
+> 1 + 1
+2
+> "1" + 1
+'11'
+> 1 + "1"
+'11'
+> 1 + true
+2
+> "1" + true
+'1true'
+> true + 1
+2
+> true + 1 + NaN
+NaN
+```
+
+Försök undvika att värden av olika typer beräknas på detta atuomatiska sätt, det kan bli en potentiell felkälla i din kod.
+
+
+
+###Kontrollerad typkonvertering {#typkonv-kontr}
+
+Vill du ha mer kontroll på hur konvertering sker kan du använda funktionerna [`parseInt()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/parseInt) och [`parseFloat()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/parseFloat) för att konvertera strängar till nummer och [`toString()`](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Number/toString) för att konvertera nummer till strängar. 
+
+Notera att `toString` anropas som en metod på ett objekt, medan `parseInt` och `parseFloat` kan anropas som en funktion.
+
+```javascript
+> a = 42
+42
+> a.toString()
+'42'
+> parseInt("42 mopeder")
+42
+```
+
+Vid sidan av alla objekt finns även en uppsättning av [globala funktioner](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects), där `parseInt` och `parseFloat` är två av dem.
 
 
 
@@ -269,9 +552,9 @@ Funktioner kan skapas på olika sätt, jämför följande sätt att använda och
 function square (x) {           // Traditionellt sätt, 
   return x*x;                   // att jämföra med C/C++, PHP.  
 }
-val = square(x)
+val = square(x);
 
-var square = function (x) {     // Funktions literal, 
+var square = function (x) {     // Funktions literal / Funktion expression, 
   return x*x;                   // funktionen tilldelas en variabel
 }
 val = square(x);
@@ -350,7 +633,9 @@ Så här blev mitt [testprogram för tärningen](javascript/core/throwing-dice-u
 Objekt {#objekt}
 --------------------------------------------------------
 
-Objekt är en samling av namngivna värden som vanligen kallas "properties". För att referera till ett objekts property används punkt. Man skapar enklast ett objekt med objekt-literalen `{}`.
+Objekt är en samling av namngivna värden som vanligen kallas "properties". För att referera till ett objekts property används punkt. I andra programmeringsspråk kan du se konstruktionen som en 
+
+Man kan skapa ett objekt med objekt-literalen `{}`.
 
 Här är ett exempel på ett objekt `myBall` som innehåller en bild på en boll och en placering av bollen på en tvådimensionell yta.
 
@@ -373,24 +658,26 @@ myBall.position.X = 27;
 console.log('The x-position of my ball is: ' + myBall.position.x);
 ```
 
-Nu har vi ett enkelt objekt och kan lägga till metoder. Vad sägs om en metod `draw()` för att rita ut objektet på skärmen? Vi kallar det metoder när funktioner är kopplade till ett objekt.
+Nu har vi ett enkelt objekt och kan lägga till metoder. Eller ja, metoder i form av en property som är en funktion. Det är alltså inget speciellt med en metod, bara ytterligare en property som kan innehålla allt som en vanlig variabel kan innehålla.
+
+
+
+###Objekt och `this` {#this}
+
+Vad sägs om en metod `draw()` för att rita ut objektet på skärmen? Vi kallar det metoder när funktioner är kopplade till ett objekt.
 
 ```javascript
 myBall.HTMLelement = document.getElementById('ball');
 
 myBall.draw = function () {
-    this.HTMLelement.style.backgroundImage = 'url(' + this.image + ')';
-    this.HTMLelement.style.top = this.position.y + 'px';
-    this.HTMLelement.style.left = this.position.x + 'px';
-    console.log('Drawing ball.');
+   this.HTMLelement.style.backgroundImage = 'url(' + this.image + ')';
+   this.HTMLelement.style.top = this.position.y + 'px';
+   this.HTMLelement.style.left = this.position.x + 'px';
+   console.log('Drawing ball.');
 }
 
 myBall.draw();
 ```
-
-
-
-###Objekt och `this` {#this}
 
 När man exekverar en funktion i ett objekt kan man använda [`this`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/this) för att referera till det objekt som anropade funktionen [^5] [^6].
 
@@ -406,7 +693,7 @@ myBall.HTMLelement.addEventListener('click', function (event) {
 Om du testkör ovanstående kod så kommer du att se att `this` pekar på `myball.HTMLelement`, alltså det objekt/funktion som är ägare till funktionen. Bra, då har vi koll på det. Vi måste dock vara lite uppmärksamma på vilket objekt som verkligen är `this` i olika sammanhang. Men här gick det bra.
 
 
-
+<!--
 ###Urmodern till alla objekt {#urmoder}
 
 Det finns en Object wrapper som är urmodern till alla JavaScript objekt, läs om vilka [metoder den erbjuder](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object). Alla nya objekt skapas med en mall som kallas `Object.prototype`. Därför får alla nya objekt tillgång till de metoder och properties som definieras i [Object.prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype). 
@@ -434,6 +721,8 @@ myObject instanceof Object // true
 Vi lämnar den prototypbaserade objektmodellen tills vidare, vi får ta mer om det en annan dag.
 
 Fint, då har vi lite koll på hur objekt fungerar.
+
+-->
 
 
 
@@ -926,3 +1215,5 @@ Följande är referenser som använts som fotnötter i texten.
 [^10]: [Mutable objects](https://en.wikipedia.org/wiki/Immutable_object)
 
 [^11]: [Self invoking anonymous function (siaf) or immediately invoked function expressen (iife/iffy)](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression)
+
+[^12]: [Functional programming](https://en.wikipedia.org/wiki/Functional_programming)

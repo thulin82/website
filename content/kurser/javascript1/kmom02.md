@@ -35,6 +35,12 @@ Läs följande:
 1. [Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming) 
     * [Ch2 Program structure](http://eloquentjavascript.net/02_program_structure.html)
 
+<!--
+1. [Speaking JavaScript](kunskap/boken-speaking-javascript)
+
+    * Chapter 1. Basic JavaScript
+-->
+
 
 
 ###Artiklar {#artiklar}
@@ -66,6 +72,10 @@ Titta på följande:
 
 Det finns inga lästips.
 
+<!--
+1. Artikel "[The World's Most Misunderstood Programming Language](http://javascript.crockford.com/javascript.html)" från 2001 av Douglas Crockford där han förklarar varför han tror att JavaScript fick dåligt rykte inledningsvis.
+-->
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -77,6 +87,11 @@ Det finns inga lästips.
 ###Övningar {#ovningar}
 
 Det finns inga övningar.
+
+
+<!--
+1. Läs igenom artiklen "[Programmering med grunderna i JavaScript](kunskap/programmering-med-grunderna-i-javascript)". Om du gör exempelprogrammen så kan du spara dem i kursrepot under me/kmom02/core.
+-->
 
 
 
@@ -110,7 +125,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du programmerat i JavaScript tidigare?
 * Vad tycker du är det svåraste, mest utmanande i utveckling med HTML, CSS och JavaScript - så här långt?
 * Hur gick det att utföra respektive uppgift, vilken tog mest tid och vilken var mest lärorik?
-
-
-
-

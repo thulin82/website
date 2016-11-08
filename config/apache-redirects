@@ -33,6 +33,7 @@ Redirect /stream http://www.youtube.com/c/DbwebbSe/live
 #
 #
 Redirect /kurser/javascript/lekplats /repo/javascript/example/lekplats
+Redirect /kurser/javascript/core /repo/javascript/example/core
 #Redirect /javascript/lekplats/ /repo/javascript/example/lekplats/
 
 
