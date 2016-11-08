@@ -42,3 +42,5 @@ Här följer några av föregångarna till Anax.
 * [Medes](https://github.com/mosbth/medes) (användes i dbwebb1 & 2, *om jag minns rätt*)
 
 I princip går tankarna på Anax tillbaka till tiden då programmet Webbprogrammering startade. Egentligen några år tidigare till och med. Men det är nu historia och koden såg då helt annorlunda ut.
+
+Anax är byggt av Mikael Roos.
