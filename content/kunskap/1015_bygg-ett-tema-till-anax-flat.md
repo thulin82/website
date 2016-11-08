@@ -374,8 +374,6 @@ Uppdatera ditt Anax Flat i filen `config/theme.php` så att följande stylesheet
 
 Notera att länken ovan troligen har ett annat versionsnummer av Font Awesome. Du bör använda senaste möjliga versionen.
 
-Jag förbereder för uppgraderingar genom att uppdatera makefilen så att den sköter nedladdningar av den responsiva menyn i fortsättningen.
-
 
 
 ###Lägg till den expanderande menyn {#expmenu}
@@ -454,7 +452,7 @@ Låt oss styla till headern av webbplatsen, bara lite enkelt så vi kommer igån
 
 Det skulle kunna se ut så här när vi är klara. Nåja, klara och klara. Men ändå.
 
-[FIGURE src=/image/snapht16/anax-flat-style-header.png caption="En måttligt stylad header."]
+[FIGURE src=/image/snapht16/anax-flat-style-header.png?w=w2 caption="En måttligt stylad header."]
 
 En start är det iallafall.
 
