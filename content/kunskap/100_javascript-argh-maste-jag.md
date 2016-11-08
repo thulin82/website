@@ -532,12 +532,12 @@ Innan vi går vidare så behöver vi säga något om webbläsare och dess huvudk
 
 ###Renderingsmotorer i webbläsare {#renderingsmotor}
 
-[Gecko](<a href='https://developer.mozilla.org/en/Gecko'>https://developer.mozilla.org/en/Gecko</a>) är Mozillas renderingsmotor som används i Firefox, det är den som ansvarar för att rita upp själva webbsidan utifrån HTML-dokumentet som utgör källan. Olika webbläsare har olika [renderingsmotorer](<a href='http://en.wikipedia.org/wiki/Web_browser_engine'>http://en.wikipedia.org/wiki/Web_browser_engine</a>), se tabellen längre ned för en översikt av webbläsare och dess renderingsmotor.
+[Gecko](https://developer.mozilla.org/en/Gecko) är Mozillas renderingsmotor som används i Firefox, det är den som ansvarar för att rita upp själva webbsidan utifrån HTML-dokumentet som utgör källan. Olika webbläsare har olika [renderingsmotorer](http://en.wikipedia.org/wiki/Web_browser_engine), se tabellen längre ned för en översikt av webbläsare och dess renderingsmotor.
 
 
 ###Implementationer av JavaScript {#implementationer}
 
-Det finns standalone motorer för JS, såsom [Rhino](<a href='https://developer.mozilla.org/en/Rhino'>https://developer.mozilla.org/en/Rhino</a>) och [node.js](<a href='http://nodejs.org/'>http://nodejs.org/</a>) som låter dig skriva JavaScript-kod på servern som en vanlig applikation. Men denna kursen handlar om att köra JS i en webbläsare. Olika webbläsare har olika implementationer av JS och därmed skiljer också implementationerna åt, på gott och ont. 
+Det finns standalone motorer för JS, såsom [Rhino](https://developer.mozilla.org/en/Rhino) och [node.js](http://nodejs.org/) som låter dig skriva JavaScript-kod på servern som en vanlig applikation. Men denna kursen handlar om att köra JS i en webbläsare. Olika webbläsare har olika implementationer av JS och därmed skiljer också implementationerna åt, på gott och ont. 
 
 Det finns många implementationer av JavaScript, [Wikipedia har en lista](http://en.wikipedia.org/wiki/List_of_ECMAScript_engines). Kika i tabellen längre ned för att se de vanligaste webbläsarna och namnen på deras JavaScript-motor.
 

@@ -104,7 +104,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 ###Extra {#extra}
 
-1. Använd CSS3 transforms och transitions för att skapa extra konster med din baddie, kanske en [stående dubbel saltomortal framåt](<a href='http://sv.wikipedia.org/wiki/Saltomortal'>http://sv.wikipedia.org/wiki/Saltomortal</a>).
+1. Använd CSS3 transforms och transitions för att skapa extra konster med din baddie, kanske en [stående dubbel saltomortal framåt](http://sv.wikipedia.org/wiki/Saltomortal).
 
 
 Resultat & Redovisning  {#resultat_redovisning}
