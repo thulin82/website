@@ -83,4 +83,4 @@ Studenten kan överklaga ett beslut om avstängning och varning av disciplinnäm
 Mer funderingar? {#fraga}
 -----------------------------------
 
-Har du frågor och funderingar kring detta så kan du ställa dem i forumet som har en [tråd kopplad till detta dokumentet](t/5828).
+Har du frågor och funderingar kring detta så kan du ställa dem i forumet som har en [tråd kopplad till detta dokumentet](t/5909).
