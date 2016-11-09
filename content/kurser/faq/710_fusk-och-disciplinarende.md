@@ -8,18 +8,20 @@ Fusk och Disciplinnämnden
 
 Plagiering, fusk, att medvetet försöka vilseleda --- är olika benämningar på otillåtna medel när man studerar på dessa kurser.
 
-Vi har generellt en väldigt öppen syn på hur vi tittar på andras kodlösningar och hur vi återanväder dem och exempelkod. Men det finns en gräns när studenten medvetet försöker vilseleda genom otillåten kopiering av kod eller texter.
+Vi har generellt en väldigt öppen syn på hur vi tittar på andras kodlösningar och hur vi återanvänder dem och exempelkod. Men det finns en gräns när studenten medvetet försöker vilseleda genom otillåten kopiering av kod eller texter.
 
-Man skall alltid försöka göra koden till sin egen, inte råkopiera, det leder inte till något som är bra.
+Man skall alltid försöka göra koden till sin egen, inte råkopiera, så är grundtanken.
 
 
 
 Misstanke om medveten vilseledning {#misstanke}
 -----------------------------------
 
-När vi uppmärksammar misstanke om medveten vilseledning så gör vi en egen undersökning och försöker se omfattningen samt om vi kan styrka misstanken. Om vi finner misstanken styrkt så resulterar det i ett informationsmail till studenten och en anmälan till disciplinnämnden.
+När vi uppmärksammar misstanke om medveten vilseledning så gör vi en egen undersökning och försöker se omfattning samt om vi kan styrka misstanken. Om vi finner misstanken styrkt så resulterar det i ett informationsmail till studenten och en anmälan till disciplinnämnden.
 
-Eventuella inlämnande redovisningar som berörs av anmälan, låter vi vara orörda tills disciplinnämnden har kommit med sitt utslag. Därefter tar kursens examinator ett eget beslut om hur de skall hanteras.
+Normalt handlar det om vilseledning som kan styrkas i en större omfattning.
+
+Eventuella inlämnande redovisningar som berörs av anmälan, låter vi vara orörda tills disciplinnämnden har kommit med sitt utslag. Därefter tar kursens examinator ett eget beslut om hur de skall hanteras. Examinatorns beslut kan inte överklagas.
 
 I övrigt händer inget förräns disciplinnämnden är klar med ärendet. Tills vidare kan du fortsätta med dina studier som vanligt.
 
@@ -73,7 +75,8 @@ Om rektor beslutar att utdela varning, kan studenten begära att beslutet ska un
 Ett beslut om avstängning meddelas av disciplinnämnden och ska tillämpas genast, om annat inte föreskrivs i beslutet. Avstängning får ske under en eller flera perioder, dock högst sex månader. Ett beslut om avstängning innebär att studenten under tiden för avstängningen inte får delta i någon form av verksamhet inom ramen för utbildningen vid högskolan, d.v.s. förbud att delta i föreläsningar, seminarier, laborationer, examination, handledning eller dyl. Ett beslut om avstängning innebär också att studenten inte får använda högskolans IT-resurser samt vistas i högskolans lokaler.
 
 När en student blir avstängd meddelas bl.a. berörd sektion, IT-avdelningen, Studerandeavdelningen vid högskolan och Centrala studiestödsnämnden (CSN).
-Studenten kan överklaga ett beslut om avstängning och varning av disciplinnämnden hos Förvaltningsrätten.”
+
+Studenten kan överklaga ett beslut om avstängning och varning av disciplinnämnden hos Förvaltningsrätten.
 
 
 
