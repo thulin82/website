@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-09: (E, mos) Förtydligade att byling skall stylas och ha bild.
     2016-11-01: (D, mos) Bort referens till temat.
     2016-10-26: (C, mos) Omstrukturerad efter feedback.
     2016-10-07: (B, mos) Genomgången och testad.
@@ -44,7 +45,7 @@ Krav {#krav}
 
 1. Förstasidan skall innehålla en hälsning/presentation av/om dig tillsammans med minst en bild.
 
-1. Lägg till en byline till förstasidan. Du kan ha samma byline på fler sidor om du vill.
+1. Lägg till en byline (bild och text om dig) till förstasidan. Du kan ha samma byline på fler sidor om du vill. Styla din byline med HTML och inline CSS direkt i ditt Markdown-dokument.
 
 1. På about-sidan lägger du in valfri text om kursen tillsammans med en godtycklig bild som du anser kompletterar sidans innehåll.
 
