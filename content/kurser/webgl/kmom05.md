@@ -8,16 +8,6 @@ created: "2015-10-06 19:43:59"
 Kmom05: Projekt och examination
 ==================================
 
-[INFO]
-**Kursutveckling pågår.**
-
-Material är arbetsmaterial och förändras efter hand. 
-
-Kursen ges första gången höstterminen 2015 med start i november.
-
-Detta kursmoment <strike>släpps måndagen den 7:e</strike> släpptes den 8:e december 2015.
-[/INFO]
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:
@@ -119,7 +109,3 @@ Redovisning {#redovisning}
 # Ställ dig i kurskatalogen
 dbwebb publish me
 ```
-
-
-
-
