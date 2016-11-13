@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-11-10": (G, mos) La till ktillfälle webgl.
     "2016-08-29": (F, mos) Tog bort onödiga, icke fungerande länkar.
     "2016-07-05": (E, mos) Omregistrering för HT16 kurstillfällen.
     "2015-12-18": (D, mos) Omregistrering för VT16 kurstillfällen.
@@ -66,6 +67,7 @@ Följande kurstillfällen finns tillgängliga för dig som omregistrerar dig. No
 | linux       | lp1  | 50% | DV1547 H16 Lp1 Programmera webbtjänster på Linux-kp50 |
 | webapp      | lp2  | 50% | DV1546 H16 Lp2 Webbapplikationer för mobila enheter-kp50 |
 | webapp      | lp12 | 25% | DV1546 H16 Lp12 Webbapplikationer för mobila enheter-kp25 |
+| webgl       | lp2  | 50% | DV1506 H16 Lp2 Spelteknik för webben (campus) |
 
 Observera att htmlphp-kursen har bytt kurskod till PA1439.
 

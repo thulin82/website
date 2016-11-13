@@ -2,7 +2,8 @@
 author: mos
 category: javascript
 revision:
-    2016-10-24: (B, mod) Formattering av bilder.
+    2016-11-11: (C, mos) Ändrade länk till quote.php.
+    2016-10-24: (B, mos) Formattering av bilder.
     2015-11-23: (A, mos) Första utgåvan inför kurs webapp.  
 updated: "2015-11-23 14:31:09"
 created: "2015-10-27 11:17:32"
@@ -137,7 +138,7 @@ Låt oss titta på funktionen för `#ajax` länken.
 window.getMarvinQuoteByAjax = function() {
 
     $.ajax({
-        url: 'http://dbwebb.se/javascript/lekplats/get-going-with-jquery-ajax/quote.php',
+        url: 'https://dbwebb.se/repo/javascript/example/lekplats/get-going-with-jquery-ajax/quote.php',
         dataType: 'json',
 
         success: function(data){
@@ -180,7 +181,7 @@ Funktionen `getJSON()` är en kortvariant av `ajax()`. Det blir mindre kod att s
  */
 window.getMarvinQuoteByGetJSON = function() {
 
-    var url = "http://dbwebb.se/javascript/lekplats/get-going-with-jquery-ajax/quote.php";
+    var url = "https://dbwebb.se/repo/javascript/example/lekplats/get-going-with-jquery-ajax/quote.php";
 
     $.getJSON(url, function(data){
       $('#quote').fadeOut(function() {
