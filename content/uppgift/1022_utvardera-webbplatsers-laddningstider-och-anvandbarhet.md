@@ -39,7 +39,7 @@ När du mäter laddningstid så använd shift-ctrl-r så att webbläsaren inte a
 Krav {#krav}
 -----------------------
 
-1. Skapa filen `content/analysis/400_speed-and-usability.md`. Det är här du skriver dokumentationen för denna uppgiften.
+1. Skapa filen `content/analysis/500_speed-and-usability.md`. Det är där du skriver dokumentationen för denna uppgiften.
 
 1. Skapa ett excelark, till exempel Google Kalkylark. För allt du nu skall mäta, dokumentera det i excelarket.
 
@@ -52,7 +52,7 @@ Krav {#krav}
 
 1. Sammanfatta ditt resultat och skriv ett stycke om vilka de vanligaste förbättringsåtgärderna verkar vara för ditt urval av webbplatser.
 
-1. Bestäm en gräns för absolut laddningstid som du själv uppfattar som snabb eller långsam webbplats. Skriv ett stycke om hur ditt urval av webbplatser klarar ditt gränsvärde och hur du upplever det.
+1. Bestäm en gräns för absolut laddningstid som du själv uppfattar som snabb eller långsam webbplats. Skriv ett stycke om hur ditt urval av webbplatser klarar ditt gränsvärde och hur du upplever webbplatsernas snabbhet.
 
 1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
 
