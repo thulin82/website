@@ -89,10 +89,10 @@ I [artikelns forumtråd](t/5854) kan du ge din feedback till författaren och vi
 Peer reviewed {#peer}
 -----------------------
 
-Denna artikel är ännu inte peer-reviewed.
+Följande har läst denn artikel, givit sin feedback och samtalat om artikelns innehåll.
 
-| Reviewer |
-|----------|
+| Granskare |
+|-----------|
 |TBD |
 |TBD |
 |TBD |
