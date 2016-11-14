@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-14: (G, mos) Förenklade kraven och gjorde endast två delar.
     2016-11-04: (F, mos) Tillbaka och förtydliga krav om dubbla kolumner.
     2016-11-04: (E, mos) Bort med krav om dubbla kolumner.
     2016-11-01: (D, mos) Bort med krav om makefile för typografiskt grid.
@@ -62,11 +63,15 @@ Krav {#krav}
 
 ###Del 2 Horisontellt grid (testa) {#horisontellt}
 
-1. Aktivera det typografiska grider genom att kopiera de relevanta LESS-filer som finns i exemplet under `example/typography-grid/less/typography-*`. Lägg till dem så att de finns med i ditt tema. Aktivera typografin.
+1. Aktivera det typografiska grider genom att kopiera de relevanta LESS-filer som finns i exemplet under `example/typography-grid/less/typography-*`. Lägg till dem så att de finns med i ditt tema. Aktivera typografin och förändra den som du vill.
 
 1. Skapa en sida `content/typography.md`. Lägg in sidan i menyn. Fyll sidan med text och typografiska element som visar hur du stylat dem. Ungefär som textmassan som fanns i [exemplet](/repo/design/example/typography-grid/typography.html). När man tittar på sidan skall gridet visas i bakgrunden. De typografiska elementen skall *någorlunda väl* matcha gridet.
 
+1. Gör så att alla regioner på sidan (till exempel flash, main och footer-regionerna) matchar det magiska numret och lutar mot det typografiska gridet. Använd `@magicNumber` där det finns möjlighet och jobba främst med `margin-bottom`. Gör det *tillräckligt bra*.
 
+
+
+<!--
 
 ###Del 3 Typografisk layout (anpassa) {#typografi}
 
@@ -75,8 +80,7 @@ Krav {#krav}
 1. Kodstruktur. Försök separera basen för ditt horisontella grid och din specifika anpassning av typografin. Lägg det som går att återanvända på en plats, och den specifika anpassningen på en annan plats, i dina LESS-moduler.
 
 1. Bygg ut ditt tema med en egenvald typografisk layout. Gör ett aktivt val för typsnitt och storlekar och eventuella ramar, etc.
-
-1. Gör så att alla element på sidan matchar det magiska numret och lutar mot det typografiska gridet. Det gäller till exempel för de margin-bottom du har mellan olika delar av sidan, till exempel flash, main och footer-regionerna. Använd `@magicNumber` där det finns möjlighet och jobba främst med `margin-bottom`. Gör det *tillräckligt bra*.
+-->
 
 
 
