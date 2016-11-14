@@ -2,8 +2,8 @@
 author:
     - mos
 revision:
-    "2016-11-14": (B, mos) Omstrukturering efter feedback och funderingar.
-    "2016-10-28": (A, mos) Första utgåvan i format av ett utkast.
+    "2016-11-14": "(B, mos) Omstrukturering efter feedback och funderingar."
+    "2016-10-28": "(A, mos) Första utgåvan i format av ett utkast."
 category:
     - metod
     - teacher portfolio
@@ -91,11 +91,11 @@ Peer reviewed {#peer}
 
 Denna artikel är ännu inte peer-reviewed.
 
-| Reviewer | Version reviewed | Comments | Version uppdaterad |
-|----------|------------------|----------|-----------------|
-|TBD | | | | 
-|TBD | | | | 
-|TBD | | | | 
+| Reviewer |
+|----------|
+|TBD |
+|TBD |
+|TBD |
 
 
 

@@ -39,9 +39,10 @@ return [
 
     // Wrapper for section of revision history
     "revision-history" => [
-        "start" => "\n\n\n" . t("Revision history") . " {#revision}\n-------------\n\n<span class=\"revision-history\">\n",
-        "end"   => "</span>\n",
+        "start" => "\n\n\n" . t("Revision history") . " {#revision}\n-------------\n\n<div class=\"revision-history\">\n",
+        "end"   => "</div>\n",
         "class" => "revision-history",
+        "source" => "https://github.com/dbwebb-se/website/tree/master/content",
     ],
 
     // Filter to load content
