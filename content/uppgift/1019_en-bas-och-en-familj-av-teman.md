@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-14: (C, mos) Förtydligade att även separata stylesheets fungerar.
     2016-10-26: (B, mos) Ändrade vilket versionsnummer som skall gälla.
     2016-10-21: (A, mos) Första utgåvan.
 category:
@@ -41,7 +42,7 @@ I varje tema kan du använda vitt, svart och nyanser av grått som grund.
 
 När du väljer färger så kan du även lägga till nyanser av en färg, där du jobbat med färgmättnad eller ljusnivå på färgen.
 
-I din tekniska lösning så är du begränsad till den temaväljare som finns med i ditt Anax Flat. Du måste bygga dina teman så att temaväljaren kan användas.
+I din tekniska lösning så är du begränsad till den temaväljare som finns med i ditt Anax Flat. Du måste bygga dina teman så att temaväljaren kan användas. Men din [temaväljare kan konfigureras](t/5923) för att hantera både stylesheets och klasser och din [makefile kan generera flera stylesheets](t/5922).
 
 [INFO]
 **TIPS.**
@@ -69,19 +70,19 @@ Krav {#krav}
 
 ###En familj av teman {#teman}
 
-1. Skapa ett bastema `base` som ger dig grunden för din temafamilj. Det spelar ingen roll om temat inte ser så bra ut. Detta är bara grunden. Tanken är att man måste anpassa det med en specifik temaklass för att det skall se ut som ett mer riktigt tema.
+1. Skapa ett bastema `base` som ger dig grunden för din temafamilj. Det spelar ingen roll om temat inte ser så bra ut. Detta är bara grunden. Tanken är att man måste anpassa det för att det skall se ut som ett mer riktigt tema.
 
 1. Skapa en ny sida i `content/theme.md` och lägg den i menyn. I sidan beskriver du varje anpassat tema som du nu kommer att skapa. Skriv vad som inspirerade dig och visa den färgpalett du jobbat med samt identifiera eventuell accentfärg.
 
-1. Skapa en temaklass för `light` som ger ett ljust tema med mycket vitt. Det blir en vit och ljus webbplats. Om du vill kan du använda svart och nyanser av grått för att komplettera det ljusa. 
+1. Skapa ett tema för `light` som ger ett ljust tema med mycket vitt. Det blir en vit och ljus webbplats. Om du vill kan du använda svart och nyanser av grått för att komplettera det ljusa. 
 
-1. Skapa en temaklass för `color` som bygger vidare på temat `light` och ger en liten och smakfull färgsättning av temat. Välj ett monochromatiskt färgschema. Låt gärna en av nyanserna vara en accentfärg.
+1. Skapa ett tema för `color` som bygger vidare på temat `light` och ger en liten och smakfull färgsättning av temat. Välj ett monochromatiskt färgschema. Låt gärna en av nyanserna vara en accentfärg.
 
-1. Skapa en temaklass för `dark` som inverterar temat `light` och ger en mörk bakgrund och ljus text. Välj sedan ett kompletterande färgschema och låt den ena vara dominerande färg och den andra en accentfärg.
+1. Skapa ett tema för `dark` som inverterar temat `light` och ger en mörk bakgrund och ljus text. Välj sedan ett kompletterande färgschema och låt den ena vara dominerande färg och den andra en accentfärg.
 
-1. Skapa en temaklass för `colorful`. Du kan använda `light` eller `dark` som bas. Välj sedan ett triadiskt färgschema och skapa ett färgfullt tema.
+1. Skapa ett tema för `colorful`. Du kan använda `light` eller `dark` som bas. Välj sedan ett triadiskt färgschema och skapa ett färgfullt tema.
 
-1. Skapa en temaklass `typography` där du främst jobbar med typografin och de typgrafiska element. Välj typsnitt som är smakfulla och kompletterar varandra men välj dem så att de "står ut" så man kan identifiera webbplatsen såsom stylad med typografiska element. Du kan välja vilket färgschema som du vill som bas, eller återanvänd någon av de som du redan gjort.
+1. Skapa ett tema `typography` där du främst jobbar med typografin och de typgrafiska element. Välj typsnitt som är smakfulla och kompletterar varandra men välj dem så att de "står ut" så man kan identifiera webbplatsen såsom stylad med typografiska element. Du kan välja vilket färgschema som du vill som bas, eller återanvänd någon av de som du redan gjort.
 
 1. Välj ett av dina teman som ditt `default` tema. Eller skapa ett eget personligt tema. Det är temaklassen `default` som används som grundinställning, innan du ändrat värde i temaväljaren.
 
