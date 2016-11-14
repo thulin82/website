@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-11-14: (B, mos) Genomgången, smärre justeringar i text.
     2016-10-21: (A, mos) Första versionen.
 category:
     - kurs/design
@@ -63,7 +64,11 @@ I vår version av Anax Flat finns en temaväljare som är förberedd för att ha
 
 Du kan testa din temaväljare under routen `index.php/theme-selector`.
 
-Tekniken bygger på att man använder en CSS-klass i HTML-elementet `<html>` som pekar ut vilket tema man vill använda.
+Tekniken bygger i sitt grundutförande på att man använder en CSS-klass i HTML-elementet `<html>` som pekar ut vilket tema man vill använda. Men du kan själv konfigurera temaväljaren till att använda separata stylesheets och/eller CSS-klasser på `<html>` elementet.
+
+
+
+###Att använda html-klasser för enklare temaändringar {#htmlclass}
 
 Tanken är att man har ett bastema och sen väljer man en CSS-klass för det anpassade temat, resultatet blir det som visas i webbläsaren.
 
@@ -103,7 +108,7 @@ Eller så ser den ut så här.
 <html class="custom">
 ```
 
-Ser du skillnaden och kan du ser hur det vi kallar temat kopplas mellan LESS och HTML?
+Ser du skillnaden och kan du se hur det vi kallar temat kopplas mellan LESS och HTML med klassen på `<html>`-elementet?
 
 
 
@@ -209,7 +214,7 @@ Om vi kikar på LESS-koden så ser den nu ut så här.
 @import url(base.less);
 @import url(custom.less);
 
-// Here we change variables, another way to make customisations to out themes.
+// Here we change variables, another way to make customizations to our themes.
 @magicNumber: 22px;
 
 @h1BottomBorderSize:    4px;
@@ -229,7 +234,7 @@ Ser du att du kan definiera variabler i LESS-moduler och senare ge dem nya värd
 Måste man ha med CSS-klassen i HTML {#fraga}
 -------------------------------
 
-Måste man bygga strukturen med en CSS-klass i `<html>`-elementet? kan man inte bara göra separata stylesheets?
+Måste man bygga strukturen med en CSS-klass i `<html>`-elementet? Kan man inte bara göra separata stylesheets?
 
 Jodå, visst kan man göra det. Det är ju delvis så som exemplet är uppbyggt. Så det är en väg att gå.
 
@@ -250,4 +255,4 @@ Det viktiga är att vi får upp ögonen för hur vi kan jobba med LESS-kod för 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Du har fått en översyn av hur du kan jobba med LESS i form av moduler. Du har sett hur variabler fungerar i LESS och du har sett hur u kan koppla ett tema mellan LESS och HTML-koden via en CSS-klass.
+Du har fått en översyn av hur du kan jobba med LESS i form av moduler. Du har sett hur variabler fungerar i LESS och du har sett hur du kan koppla ett tema mellan LESS och HTML-koden via en CSS-klass.
