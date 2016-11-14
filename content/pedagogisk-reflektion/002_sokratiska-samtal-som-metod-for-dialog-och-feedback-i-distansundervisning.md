@@ -65,6 +65,14 @@ Exempel på sokratiska samtal {#exempel}
 
 För att visa hur metoden implementeras och kan fungera så presenteras ett par exempel på samtal gjorda enligt vår variant av sokratiska samtal.
 
+Följande exempel är i min mening samtal som kan anses vara utförda inom ramen för det sokratiska samtalet.
+
+* [Undermålig feedback](t/5893)
+* [Att få svar på en frågeställning utan att någon svarar](pedagogisk-reflektion/att-fa-svar-pa-en-fragestallning-utan-att-nagon-svarar)
+* 
+[Om svårigheten att ge bra feedback](pedagogisk-reflektion/svarigheten-att-ge-bra-feedback)
+
+Exemplen visar alla samtal som försöker belysa en frågeställning och via aktivt sökande finna eventuella svar på frågeställningarna. Exemplen följer inte strikt någon formell metod eller är begränsade av något sätt att uttrycka sig. Men gemensamt är att de strävar efter att finna svar, belysa frågeställningar, genom samtal.
 
 
 
