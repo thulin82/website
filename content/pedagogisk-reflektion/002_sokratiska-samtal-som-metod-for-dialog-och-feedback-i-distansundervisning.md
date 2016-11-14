@@ -71,14 +71,14 @@ För att visa hur metoden implementeras och kan fungera så presenteras ett par 
 Diskussion om artikeln {#diskussion}
 -----------------------
 
-I [artikelns forumtråd](t/5854) kan du ge din feedback till författaren och vidare diskutera ämnet som artikeln hanterar.
+I [artikelns forumtråd](t/5925) kan du ge din feedback till författaren och vidare diskutera ämnet som artikeln hanterar.
 
 
 
 Peer reviewed {#peer}
 -----------------------
 
-Följande har läst denn artikel, givit sin feedback och samtalat om artikelns innehåll.
+Följande har läst denna artikel, givit sin feedback och samtalat om artikelns innehåll.
 
 | Granskare |
 |-----------|
@@ -88,4 +88,4 @@ Följande har läst denn artikel, givit sin feedback och samtalat om artikelns i
 
 
 
-[^1]: [Wikipedia om Sokrates]( https://sv.wikipedia.org/wiki/Sokrates)
+[^1]: [Wikipedia om Sokrates](https://sv.wikipedia.org/wiki/Sokrates)
