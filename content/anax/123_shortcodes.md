@@ -67,3 +67,29 @@ Ett exempel som ger en terminal med Asciinema.
 Genererar HTML-kod som inkluderar Asciinema i sidan, så här.
 
 [ASCIINEMA src=26240 caption="Någon som spelar Gomoku."]
+
+
+
+Information med &#x005B;`INFO`&#x005D; {#info}
+-----------------------------------
+
+Om du wrappar ett block av text inom &#x005B;`INFO`&#x005D; och &#x005B;`/INFO`&#x005D; så kommer det att bli en blå ruta som representerar information till läsaren.
+
+[INFO]
+**Bra att veta**
+
+Om du wrappar ett block av markdown-text inom &#x005B;`INFO`&#x005D; och &#x005B;`/INFO`&#x005D; så kommer det att bli en blå ruta som representerar information till läsaren.
+[/INFO]
+
+
+
+Varning med &#x005B;`WARNING`&#x005D; {#varning}
+-----------------------------------
+
+Om du wrappar ett block av text inom &#x005B;`WARNING`&#x005D; och &#x005B;`/WARNING`&#x005D; så kommer det att bli en gul ruta som representerar ett varningsmeddelande för läsaren.
+
+[WARNING]
+**Var nu försiktig**
+
+Om du wrappar ett block av text inom &#x005B;`WARNING`&#x005D; och &#x005B;`/WARNING`&#x005D; så kommer det att bli en gul ruta som representerar ett varningsmeddelande för läsaren.
+[/WARNING]
