@@ -5,7 +5,7 @@ revision:
 category:
     - kurs/design
 ...
-Bygg en ut ditt Anax Flat tema med stöd för bilder
+Bygg ut ditt Anax Flat tema med stöd för bilder
 ===================================
 
 Du skall lägga till LESS-moduler som hjälper dig att presentera bilder på olika sätt. För att visa att det fungerar bygger du en blogg "Dagens Bild".
