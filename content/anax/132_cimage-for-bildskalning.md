@@ -20,6 +20,8 @@ Det skapar katalogen `htdocs/cimage` med följande innehåll.
 | `imgd_config.php` | Konfigurationsfilen för skriptet som säger var bilder och cache-katalogen finns. |
 | `icc/`            | Filer för färgprofiler, används vid konvertering till sRGB |
 
+Det finns en [forumtråd som hanterar hur du konfigurerar Cimage](t/5907).
+
 
 
 Skala om bilder {#skala}
