@@ -136,7 +136,7 @@ I kursrepot design finns ett exempel som visar hur ett [fixed](/repo/design/exam
 
 Gridet är baserat på ett antal CSS-klasser. CSS-klasserna genereras utifrån ett tänkt grid. I detta fallet är det 12 kolumner där varje kolumn är 60px bred och mellanrummet är 20px. När det är procent så omräknas pixlarna till %.
 
-Vad händer då om man vill ha en annan storlek på gridet? Då kan man generera en ny CSS-fil. I exemplet finns med en [grid-generator](http://local.v2.dbwebb.se/repo/design/example/grid/css/generate-css.html) som via JavaScript skapar CSS-koden.
+Vad händer då om man vill ha en annan storlek på gridet? Då kan man generera en ny CSS-fil. I exemplet finns med en [grid-generator](/repo/design/example/grid/css/generate-css.html) som via JavaScript skapar CSS-koden.
 
 [FIGURE src=/image/snapvt16/grid-generate.png?w=w2 caption="Generera CSS-kod till ett grid med javaScript."]
 
