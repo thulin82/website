@@ -141,7 +141,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Integrera din webbplats så den drar nytta av [CImage](anax/cimage-for-bildskalning) och [snygga länkar](anax/snygga-lankar).
 
-1. Gör uppgiften "[Bygg en ut ditt Anax Flat tema med stöd för bilder](uppgift/anax-flat-tema-med-bilder)".
+1. Gör uppgiften "[Bygg ut ditt Anax Flat tema med stöd för bilder](uppgift/anax-flat-tema-med-bilder)".
 
 
 
