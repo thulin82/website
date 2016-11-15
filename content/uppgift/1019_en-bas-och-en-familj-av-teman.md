@@ -44,6 +44,8 @@ När du väljer färger så kan du även lägga till nyanser av en färg, där d
 
 I din tekniska lösning så är du begränsad till den temaväljare som finns med i ditt Anax Flat. Du måste bygga dina teman så att temaväljaren kan användas. Men din [temaväljare kan konfigureras](t/5923) för att hantera både stylesheets och klasser och din [makefile kan generera flera stylesheets](t/5922).
 
+Du bör läsa lite mer om temaväljaren, det finns en [beskrivning i Anax manualen](anax).
+
 [INFO]
 **TIPS.**
 
