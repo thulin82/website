@@ -53,7 +53,7 @@ I din Anax Flat finns en färdig fil i `htdocs/.htaccess_wwwstudent`. Du kan kop
 
 Det är en anpassad variant som fungerar både lokalt på din utvecklingsmiljö och på studentservern med dess speciella inställningar.
 
-Du behöver dock redigera filen och lägga in din studentakroymn på den platsen där det nu står `~mosstud`.
+Du behöver dock redigera filen och lägga in din studentakronym på de platser där det nu står `~mosstud`.
 
 
 
