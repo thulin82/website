@@ -283,7 +283,7 @@ Följ länken som skrivs ut och leta dig fram till `example/cgi` och testa de tv
 
 Testa nu att göra ditt eget cgi-skript. Ta din befintliga fil `hello.py` och gör om den till ett cgi-skript som du publicerar. Lägg det i katalogen `me/kmom01/hello`.
 
-Nu kan du alltså även skapa en webbsida med Python. Bra, bra. Vi kommer inte göra så många sådana, det blir ett par stycken, men jag tänkte att är lite kul att se hur det fungerar. Det är ett sätt man kan använda Python på. Ett av många.
+Nu kan du alltså även skapa en webbsida med Python. Bra, bra. Vi kommer inte göra så många sådana, det blir ett par stycken, men jag tänkte att det är lite kul att se hur det fungerar. Det är ett sätt man kan använda Python på. Ett av många.
 
 
 

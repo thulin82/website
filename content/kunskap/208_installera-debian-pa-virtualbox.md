@@ -78,7 +78,7 @@ När du är klar kan du logga in på din nya Debian server med antingen root-anv
 Copy & paste mellan din dator och den virtuella maskinen  {#copy}
 ---------------------------------
 
-Ibland vill man kopiera text mellan sin valiga desktop och den virtuella maskinen man kör i VirtualBox. Det är en inställning och det finns ett foruminlägg som visar "[Virtual Box och copy & paste till hostmaskinen](t/4063)".
+Ibland vill man kopiera text mellan sin vanliga desktop och den virtuella maskinen man kör i VirtualBox. Det är en inställning och det finns ett foruminlägg som visar "[Virtual Box och copy & paste till hostmaskinen](t/4063)".
 
 Gör den inställningen, det sparar lite tid när du behöver kopiera saker.
 

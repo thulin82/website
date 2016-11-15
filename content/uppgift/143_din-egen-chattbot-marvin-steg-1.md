@@ -15,7 +15,7 @@ created: "2014-07-03 07:51:23"
 Din egen chattbot - Marvin - steg 1
 ==================================
 
-Programmering och problemlösning i Python, du skall bygga en chattbot Marvins som kan svara på "alla" dina frågor.
+Programmering och problemlösning i Python, du skall bygga en chattbot Marvin som kan svara på "alla" dina frågor.
 
 <!--more-->
 

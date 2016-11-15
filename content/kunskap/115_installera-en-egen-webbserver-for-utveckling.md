@@ -28,7 +28,7 @@ Det finns ett antal sätt att installera Apache och PHP. Välj ett som du känne
 
 Som rekommenderad miljö på Windows och Mac OS används [XAMPP](https://www.apachefriends.org/index.html). 
 
-Jag har valt att använda XAMPP eftersom den är open source och fungerar bra. XAMPP är lätt att installera och komma igång med och den har ett trevligt och har ett enkelt gränssnitt. Dessutom finns den både till Windows, Mac OS och Linux.
+Jag har valt att använda XAMPP eftersom den är open source och fungerar bra. XAMPP är lätt att installera och komma igång med och den har ett trevligt och enkelt gränssnitt. Dessutom finns den både till Windows, Mac OS och Linux.
 
 [Tidigare användes WAMPServer (Windows) och MAMP (Mac)](#aldre). Alla tre fungerar för kurserna och du kan välja vilken du vill. Får du problem så kommer jag troligen be dig använda XAMPP.
 

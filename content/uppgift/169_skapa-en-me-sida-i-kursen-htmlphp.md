@@ -57,7 +57,7 @@ dbwebb publish me1
 
 Kommandot `dbwebb validate` kör igenom ett antal valideringsverktyg som kontrollerar hur din kod ser ut. Om valideringsverktygen anser att du skriver felaktig kod så får du varningar som du måste rätta till.
 
-Om du inte förstår varningarna så försöker du hitta svar till dem. Eller så frågar du i forumet. Denna typen verktyg som gör av statisk kodvalidering är oumbärliga verktyg för en professionell utvecklare.
+Om du inte förstår varningarna så försöker du hitta svar till dem. Eller så frågar du i forumet. Denna typen av verktyg som gör statisk kodvalidering är oumbärliga verktyg för en professionell utvecklare.
 
 Kommandot `dbwebb publish` gör samma sak som `dbwebb validate` samt att det dessutom publicerar din webbplats på studentservern. När din webbplats publiceras så minifieras också dess innehåll. 
 

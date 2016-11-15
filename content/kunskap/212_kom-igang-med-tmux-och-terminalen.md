@@ -31,7 +31,7 @@ Fördelen med tmux {#fordel}
 
 För den som är van att jobba i terminalen så erbjuder tmux en möjlighet att skapa många fönster och hoppa mellan dem, varje fönster kan köra sina egna program.
 
-Tmux startar en session som man kan *detacha* från och *attacha* till. Det gör at tman kan starta igång ett antal program på en server och nästa gång man loggar in på servern så kan man koppla sig till den sessionen och ha hela arbetsmiljön färdig.
+Tmux startar en session som man kan *detacha* från och *attacha* till. Det gör att man kan starta igång ett antal program på en server och nästa gång man loggar in på servern så kan man koppla sig till den sessionen och ha hela arbetsmiljön färdig.
 
 
 
