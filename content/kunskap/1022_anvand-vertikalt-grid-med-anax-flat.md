@@ -524,7 +524,7 @@ Grunden i vyn ser ut *ungefär* så här.
 
 Varje *rad* är omringad av en outer-wrap och en inner-wrap. Det är något vi kan utnyttja till styling, om vi vill.
 
-Det finns två exempel som visar hur du kan style gridet på HTML-kod likt Anax Flat. Det är [`less/grid-anax-flat.html`](/repo/design/example/grid/less/grid-anax-flat.html) och [`less/grid-anax-flat-rowbased.html`](/repo/design/example/grid/less/grid-anax-flat-rowbased.html).
+Det finns två exempel som visar hur du kan styla gridet på HTML-kod likt Anax Flat. Det är [`less/grid-anax-flat.html`](/repo/design/example/grid/less/grid-anax-flat.html) och [`less/grid-anax-flat-rowbased.html`](/repo/design/example/grid/less/grid-anax-flat-rowbased.html).
 
 Studera de två exemplen för att se hur de skiljer sig åt i respektive `layout.less`.
 
@@ -617,7 +617,7 @@ Du behöver även en bild som representerar ditt grid. Här är en länk till et
 Använd `box-sizing: border-box` {#boxsising}
 ------------------------------
 
-Jag har inte använt det i mina exempel av gridet. Men, en konstruktion som är bra att använda --- och gör att man slipper en del bekymmer --- är `box-sizing: border-box`. Den gör så att ett elements bredd och höjd räknar in eventuell padding och border. Det gör det enklare att kombinera style som säger `width: 100%` tillsammans med padding och border.
+Jag har inte använt det i mina exempel av gridet. Men, en konstruktion som är bra att använda --- och gör att man slipper en del bekymmer --- är `box-sizing: border-box`. Den gör så att ett elements bredd och höjd räknar in eventuell padding och border. Det gör det enklare att kombinera den style som säger `width: 100%` tillsammans med padding och border.
 
 Så, tipset är att lägga in konstruktionen i din mixin för kolumnerna.
 
