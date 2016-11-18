@@ -34,7 +34,7 @@ Skapa en struktur för din rapport, din analys, det kommer fler sådana här upp
 ```bash
 # Gå till kursrepot
 $ cd me/anax-flat/content
-$ rsync -av report/{.meta,000_index.md,100_intro.md} analysis/
+$ rsync -av report/{.meta.md,000_index.md,100_intro.md} analysis/
 ```
 
 Lägg till så sidan syns i din navbar.
