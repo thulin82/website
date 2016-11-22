@@ -86,7 +86,7 @@ Krav {#krav}
 
 1. Skapa ett tema `typography` där du främst jobbar med typografin och de typgrafiska element. Välj typsnitt som är smakfulla och kompletterar varandra men välj dem så att de "står ut" så man kan identifiera webbplatsen såsom stylad med typografiska element. Du kan välja vilket färgschema som du vill som bas, eller återanvänd någon av de som du redan gjort.
 
-1. Välj ett av dina teman som ditt `default` tema. Eller skapa ett eget personligt tema. Det är temaklassen `default` som används som grundinställning, innan du ändrat värde i temaväljaren.
+1. Välj ett av dina teman som ditt standard tema. Eller skapa ett eget personligt tema som du använder som standard tema, det tema som visas när man inte använder temaväljaren.
 
 1. Se till att dina teman fungerar som responsiva teman.
 
