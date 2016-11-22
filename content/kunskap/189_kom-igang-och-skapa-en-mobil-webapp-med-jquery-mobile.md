@@ -74,7 +74,14 @@ wget http://code.jquery.com/jquery-2.1.4.js
 wget http://code.jquery.com/jquery-2.1.4.min.js
 ```
 
-Du väljer att plocka ned den allra senaste releasen som finns. 
+[WARNING]
+**jQuery Mobile stödjer inte allra senaste versionen av jQuery**
+
+De versionerna som jag använder ovan fungerar tillsammans. Men i skrivande stund (2016-11-22) så fungerar jQueryMobile inte med den allra senaste versionen av jQuery. Välj därför de versionerna du ser ovan, eller dubbelkolla vad som gäller för tillfället, eftersom sånt ändrar sig över tiden.
+
+[/WARNING]
+
+<del>Du väljer att plocka ned den allra senaste releasen som finns.</del>
 
 Så, nu har jag alla filer lokalt. Det är bra då jag kan jobba med dem lokalt, utan att vara uppkopplad.
 
@@ -515,6 +522,3 @@ Avslutningsvis {#avslutning}
 
 Har du [tips, förslag eller frågor om artikeln](t/4579) så finns det en specifik forumtråd för det.
  
-
-
-
