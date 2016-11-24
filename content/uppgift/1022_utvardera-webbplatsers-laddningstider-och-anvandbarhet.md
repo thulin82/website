@@ -46,8 +46,8 @@ Krav {#krav}
 1. Välj ut 4 webbplatser som skall analyseras.
 
 1. För varje webbplats, gör följande:
-    1. Välj ut tre sidor som skall mätas med Google Pagespeed. Mät och notera betygen för mobile, desktop, speed och usability.
-    1. För varje sida, mät med devtools flik networks och notera den absoluta laddningstiden tillsammans med antalet resurser som laddas samt sidans totala storlek.
+    1. Välj ut tre sidor som skall mätas med Google Pagespeed. Mät på både Mobile och Desktop. Notera de betyg som ges.
+    1. För varje sida, mät med devtools flik networks och notera sidans laddningstid tillsammans med antalet resurser som laddas samt sidans totala storlek.
     1. Diskutera och skriv två meningar om hur webbplatsen kan förbättra sig.
 
 1. Sammanfatta ditt resultat och skriv ett stycke om vilka de vanligaste förbättringsåtgärderna verkar vara för ditt urval av webbplatser.
