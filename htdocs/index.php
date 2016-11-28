@@ -24,6 +24,19 @@ call_user_func(function () use ($app) {
 
 
 
+/**
+ * Add HTML classes based on query string.
+ */
+if ($app->request->hasGet("vgrid")) {
+    $app->theme->appendToVariable("htmlClass", "vgrid");
+}
+
+if ($app->request->hasGet("hgrid")) {
+    $app->theme->appendToVariable("htmlClass", "hgrid");
+}
+
+
+
 //$app->session();
 $app->loadRoutes();
 $app->router->handle();
