@@ -28,9 +28,9 @@ SSL_APACHE_CONF = /etc/letsencrypt/options-ssl-apache.conf
 SSL_PEM_BASE 	= /etc/letsencrypt/live/$(WWW_SITE)
 
 # Theme
-LESS 		 = theme/style_dbwebb.less
-LESS_OPTIONS = --strict-imports --include-path=theme/mos-theme/style/
-FONT_AWESOME = theme/mos-theme/style/font-awesome/fonts/
+LESS 			:= theme/style_dbwebb.less
+LESS_OPTIONS 	:= --strict-imports --include-path=theme/modules:theme/modules/vertical-grid/less:theme/modules/typographic-grid/less:theme/modules/responsive-menu/src/less:theme/modules/figure/less:theme/mos-theme/style
+FONT_AWESOME	:= theme/mos-theme/style/font-awesome/fonts/
 
 # Cache
 FORUM_CACHE = $(LOCAL_HTDOCS)/htdocs/forum/cache
@@ -251,7 +251,19 @@ less: prepare-build
 	#cp build/css/style.css htdocs/css/style.css
 	cp build/css/style.min.css htdocs/css/style.min.css
 
-	rsync -av theme/mos-theme/js/ htdocs/js/mos-theme/
+	# Grid images§
+	install -d htdocs/img/theme/
+	rsync -av theme/modules/vertical-grid/img/ htdocs/img/theme/vertical-grid/
+	rsync -av theme/modules/typographic-grid/img/ htdocs/img/theme/typographic-grid/
+
+	# Theme js
+	install -d htdocs/js/theme/
+	rsync -av theme/js/ htdocs/js/theme/
+
+	# Responsive menu
+	rsync -av theme/modules/responsive-menu/htdocs/js/responsive-menu.min.js htdocs/js/theme
+
+	# Font awesome
 	rsync -av $(FONT_AWESOME) htdocs/fonts/
 
 
