@@ -1,16 +1,11 @@
 ---
 author: mos
 revision:
+    2016-11-28: (B, mos) La till manualen om CImage som läsresurs.
     2016-11-15: (A, mos) Första utgåvan.
 ...
 Kmom05: Bild
 ====================================
-
-[INFO]
-**I stort sett klart...**
-
-Det saknas en sammanhållande artikel som ger lite kött på benen om bildhantering. Men, för en early bird så finns förövrigt allt material framme som man kan sätta tänderna i och jobba. Den artikeln som saknas är inte kritisk för att genomföra kursmomentet och kanske kommer den inte förrän till föreläsningen i kmom05.
-[/INFO]
 
 [FIGURE src="image/dbwebbisar.jpg?w=200&h=150&a=0,20,20,50&cf" class="right"]
 
@@ -121,7 +116,9 @@ Genomför följande övning för att förbereda inför uppgifterna.
 1. I kursrepot `example/figure` finns två exempel som visar hur man kan jobba med `<figure>` och uppnå responsiva bilder. Studera och undersök exemplet och försök förstå hur det fungerar och hur det är uppbyggt. Där hittar du LESS-kod du kan låna till uppgiften.
     * [Figure and figcaption](repo/design/example/figure/figure.html)
     * [Figure and figcaption med media queries](repo/design/example/figure/figure-responsive.html)
- 
+
+1. Lär dig hur CImage fungerar och lär dig samtidigt en del av hur bildhantering på webben kan fungera. Gå översiktligt igenom [manualen för CImage](https://cimage.se/), för att få en uppfattning om koncepten kring bildhantering.
+
 <!--
 Bildlära.
 
