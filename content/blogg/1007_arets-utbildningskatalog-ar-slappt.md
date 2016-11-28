@@ -32,7 +32,7 @@ Så här säger Filip om sina studier.
 
 [FIGURE src=/image/snapht16/katalog-2017-filip-sager.jpg?w=w2&cf&a=55,45,15,15 caption="Filip studier och framtidsplaner."]
 
-> *Filip studerar tredje året på utbildningen WEbbprogrammering på Campus Gräsvik i Karlskrona. Fascineras över den snabbar utvecklingen som hänt inom webb och ser fram emot att veta hur webben ser ut om tio år. I framtiden ser jag mig sittandes bakom en datorskärm och gör det jag älskar mest, knacka kod.*
+> *Filip studerar tredje året på utbildningen Webbprogrammering på Campus Gräsvik i Karlskrona. Fascineras över den snabbar utvecklingen som hänt inom webb och ser fram emot att veta hur webben ser ut om tio år. I framtiden ser jag mig sittandes bakom en datorskärm och gör det jag älskar mest, knacka kod.*
 
 Gott jobbat Filip!
 
