@@ -1,9 +1,12 @@
 ---
 title: oopython
 
-author: lew
+author:
+    - lew
+    - mos
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2016-11-28": (B, mos) Text till kursplanen.
+    "2016-04-12": (A, lew) Pre-release.
 category:
     - oopython
 ...
@@ -12,6 +15,7 @@ Kursen oopython
 
 Kursen **Objektorienterad design och programmering med Python**, a.k.a. *oopython*, lär ut objektorienterad analys och design tillsammans med objektorienterad programmering med Python.
 
+Kursen använder sig till stor del av webbaserade teknologier och programmen som skapas publiceras på en webbserver.
 
 <!--more-->
 
@@ -33,10 +37,10 @@ Innehåll {#innehall}
 
 Kursen omfattar följande områden:
 
-* Allmän problemlösning och strukturerad programmering.
-* Grundläggande programmering i Python med variabler, loopar, funktioner, argument.
-* Felsökning, felkoder och tekniker att debugga sitt program.
-* Översikt av Pythons standardbibliotek och användande av datastrukturer och algoritmer, filhantering, koppling till databaser, grafiska gränssnitt och skapande av webbsidor.
+* Objektorienterade programmeringstekniker i Python.
+* Objektorienterad analys och design med UML.
+* Objektorienterade programmeringskonstruktioner.
+* Webbaserade teknologier för att bygga webbtjänster med Python.
 * Utvecklingsmiljö och verktyg för programvaruutveckling med Python samt publicera kod på en driftserver och visa resultat via webbsidor
 
 
@@ -50,15 +54,24 @@ Mål {#mal}
 
 Efter genomförd kurs skall studenten:
 
-* påvisa grundläggande kunskaper i problemlösning med strukturerad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* påvisa grundläggande kunskaper i problemlösning med objektorienterad programmering i Python genom att skriftligen beskriva och sammanfatta erfarenheter och observationer från övningar och projekt.
+* påvisa grundläggande kunskaper i att använda objektorienterade tekniker i webbmiljö genom att tillämpa dem i praktiska övningar och projekt.
+
 
 
 ###Färdighet och förmåga {#fardighet}
 
 Efter genomförd kurs skall studenten:
 
-* utifrån en specifikation kunna utveckla en lösning i Python samt dokumentera och via text kunna presentera denna lösning.
-* ha god praktisk förmåga att hantera de verktyg och utvecklingsmiljöer som används vid utveckling och felsökningar med Python.
+* självständigt, utifrån en specifikation, kunna utveckla en webbaserad objektorienterad lösning i Python samt dokumentera och via text kunna presentera denna lösning.
+* ha god praktisk förmåga att hantera de verktyg och utvecklingsmiljöer som används vid utveckling och felsökningar med Python i webbmiljö.
+
+
+
+###Värderingsförmåga och förhållningssätt {#formaga}
+
+* påvisa god förmåga att välja mellan objektorienterad programmering kontra procedurell programmering vid en given problemställning.
+
 
 
 Kursmoment {#kursmoment}
@@ -176,18 +189,28 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](oooopython/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar.
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2).
 
-Går du på campus får du en lektionsplan i samband med kursstart.
+<!--
+Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
-Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
+För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](python/studieplan) kopplad till de kurstillfällen som erbjuds.
+-->
+
+Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
+
+Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
+
+Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
+
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
-Betygsättning {#betyg}
-------------------------
+Lärarstöd och handledning {#handledning}
+----------------------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
 
 
 
@@ -200,16 +223,16 @@ Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens k
 |-----------------|-------------------------------|
 | Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
 | Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
-| Kmom05 - kmom10 | Uppgift 3 á 2.5hp             |
+| Kmom05 - kmom10 | Projekt á 2.5hp               |
+
+Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
 
 
 
-Lärarstöd och handledning {#handledning}
-----------------------------------------
+Betygsättning {#betyg}
+------------------------
 
-I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
-
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).  
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
