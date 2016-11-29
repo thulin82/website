@@ -10,9 +10,9 @@ Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget desig
 
 Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Vi pratar om webbplatsens design och känslan den ger när man tittar på den. Det kan vara de små sakerna som gör det, *the final touch*.
 
-Nåväl, låt oss jobba vidare med olika designer för webbplatser för att träna vår känsla för de små detaljerna. Kanske är det för mycket symmetetri och ett osymmetriskt element skapar balans. Kanske är det förhållandet mellan sidans element. Eller är det rörelse som saknas? Eller en liten den som gör sidan med framträdande, tongivande.
+Nåväl, låt oss jobba vidare med olika designer för webbplatser för att träna vår känsla för de små detaljerna. Kanske är det för mycket symmetetri och ett osymmetriskt element skapar balans. Kanske är det förhållandet mellan sidans element. Eller är det rörelse som saknas? Eller kan ett litet designelement vara det som gör att sidan blir mer framträdande och tongivande.
 
-Låt oss träna.
+Låt oss träna på designprinciper och designelement och se om det hjälper oss att jobba med "the final touch".
 
 
 
