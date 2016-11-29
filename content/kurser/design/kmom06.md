@@ -103,7 +103,7 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Utvärdera design principer som webbplatser använder sig av](uppgift/utvardera-webbplatsers-funktion)".
+1. Gör uppgiften "[Utvärdera designprinciper som webbplatser använder sig av](uppgift/utvardera-webbplatsers-designprinciper)".
 
 1. Gör uppgiften "[Skapa teman enligt designprinciper](uppgift/anax-flat-tema-enligt-designprinciper)".
 

@@ -5,7 +5,7 @@ revision:
 category:
     - kurs/design
 ...
-Utvärdera design principer som webbplatser använder sig av
+Utvärdera designprinciper som webbplatser använder sig av
 ===================================
 
 Du skall välja ut ett antal olika webbplatser och studera dem utifrån aspekten design principer.
