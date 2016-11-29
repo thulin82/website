@@ -1,128 +1,24 @@
 ---
 author: mos
 revision:
-    2016-04-11: (PA, mos) Arbetskopia.
+    2016-11-29: (A, mos) Första utgåva.
 ...
 Kmom06: Design
 ====================================
 
-[WARNING]
-**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
-[/WARNING]
-
 Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
 
-Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Nu pratar vi designmässigt. Det kan vara de små sakerna som gör det.
+Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Vi pratar om webbplatsens design och känslan den ger när man tittar på den. Det kan vara de små sakerna som gör det, *the final touch*.
 
-Nåväl, låt oss jobba vidare med olika designer för webbplatser för att träna vår känsla för de små detaljerna. Kanske är det för mycket symmetetri och ett osymmetriskt element skapar balans. Kanske är det förhållandet mellan sidans element. Eller är det rörelse som saknas?
+Nåväl, låt oss jobba vidare med olika designer för webbplatser för att träna vår känsla för de små detaljerna. Kanske är det för mycket symmetetri och ett osymmetriskt element skapar balans. Kanske är det förhållandet mellan sidans element. Eller är det rörelse som saknas? Eller en liten den som gör sidan med framträdande, tongivande.
 
 Låt oss träna.
 
 
-<!-- 
-
-bakgrundsbild
-
-små bilder utspritt
-
-linjer, streck
-
-(logo)
-
-färger med 
-
-osync med position relativce
-
-boken balance
-
-Gör egen logo, ritverktyg, med hjälp av logon, skapa tema som gr igen i logon. 
-Fixa och laga. Små saker och detaljer. Testa på din omgivning.
-
-Tema som sträcker sig över hela skärmen.
-
--->
-
-
-<!--
-SEO, beginners guide.
-
-Microformats.
-
-GA & Webadmin tools.
-
-Verktyg för att kontrollera SEO.
-
-
-
-Välj x webbplatser att undersöka. Förklara varför du valde dem.
-Början på rapporten.
-
-
-
-2. Mer
-
-Introduktion till SEO
-(SSL http://www.jajja.com/jajja-magazine/fordjupning-betydelsen-av-https/)
-
-Lag:
-http://www.jajja.com/jajja-magazine/kaklagens-framtid/
-
-
-3. Mäta
-
-Verktyg för att mäta SEO.
-
-Sätt upp egen site och börja mäta SEO.
-GA
-Bings motsvarighet
-Google webbmaster
-
-* Googles guide
-
-> Talande webläsare
-> Lagar om webben
-> Forskning inom användbarhet
-> Översikt av W3Cs arbete
-
-
-4. Usablity undersökning ala Wellness.
-
-Läsanvisningar till: (write content for multidevice)
-https://developers.google.com/web/fundamentals/design-and-ui/content/?hl=en
-
-
-
-
-
-###Att mäta hur optimerad en webbplats är {#optimerad}
-
-1. Kika snabbt på verktygen är [YSlow](http://yslow.org/) och [Google Pagespeed](https://developers.google.com/speed/pagespeed/) som mäter hur optimerad en webbplats är. Du kommer använda dess verktygen i en av uppgifterna.
-
--->
-
-
-<!--
-Designa webbplats utifrån bild.
-
-(Olika typer av webbplatser kontra olika design).
-
-Ikoner. FontAwesome.
-
-Spritemap.
-
-Texturer (?)
-
-Whitespace.
-
-(Funktionsanpassad webbplats)
-
--->
 
 <!--more-->
 
 <!--
-**BILD**
-
 [FIGURE src=/image/snapht14/python-marvin2.png?w=w2 caption="Marvin skall nu lära sig lite mer och få en bättre struktur."]
 -->
 
@@ -164,6 +60,8 @@ Läs följande artiklar.
 
 * Studera ett par olika design principer, vad de innebär och fundera på om du kan dra nytta av dem i din design. Du hittar dem i [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/).
 
+* Läs mer om design principer i "[Design Elements & Principles](https://designschool.canva.com/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 design principer.
+
 
 
 ###Video  {#video}
@@ -193,8 +91,11 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-Genomför följande övning för att förbereda inför uppgifterna.
+Det finns ingen övning.
 
+<!--
+Genomför följande övning för att förbereda inför uppgifterna.
+-->
 
 
 
@@ -202,12 +103,11 @@ Genomför följande övning för att förbereda inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-<!--
-1. Gör uppgiften "[Utvärdera webbplatsers färgval och känslan de signalerar](uppgift/utvardera-webbplatsers-fargval-och-kanslan-de-signalerar)".
+1. Gör uppgiften "[Utvärdera design principer som webbplatser använder sig av](uppgift/utvardera-webbplatsers-funktion)".
 
+1. Gör uppgiften "[Skapa teman enligt designprinciper](uppgift/anax-flat-tema-enligt-designprinciper)".
 
-1. Skapa logo i inkspake?
--->
+1. Gör uppgiften "[Skapa teman med designelement till ditt Anax Flat](uppgift/anax-flat-tema-med-designelement)".
 
 
 
@@ -230,5 +130,7 @@ Läs [instruktionen om hur du skall redovisa](design/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* ...
-* ...
+* Hur känns det att tänka i termer av designprinciper?
+* Fick du en känsla av att design element kan vara ett sätt att med mindre medel påverka en design, eller hur upplevde du det?
+* Har du själv en uppfattning om "the final touch" och vad det kan vara i sammanhanget webbdesign?
+* Har du under kursen skapat dig en känsla för begreppen god design och vad som är subjektiv och objektivt inom det området?

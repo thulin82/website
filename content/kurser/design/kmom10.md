@@ -55,6 +55,16 @@ utöka/förändra urvalet av webbplatser och jobba igenom undersökningarna igen
 
 <!-- gå tillbaka till analysis color och fixa till bilderna -->
 
+<!--
+Designa webbplats utifrån bild.
+
+(Funktionsanpassad webbplats)
+4. Usablity undersökning ala Wellness.
+
+(logo)
+
+-->
+
 
 
 ###Krav 4:  (optionell) {#k4}

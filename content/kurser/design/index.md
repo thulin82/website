@@ -117,7 +117,9 @@ Kursmomentet har ett fokus på att hantera och presentera bilder i olika storlek
 
 ###Kmom06: Design {#kmom06}
 
-Kursmomentet jobbar med olika designelement på en webbplats.
+Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
+
+Vi tittar på "the final touch" i form av design element och designprinciper.
 
 [Instruktion till kursmoment 06](design/kmom06).
 
