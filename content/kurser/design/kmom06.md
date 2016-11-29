@@ -29,7 +29,7 @@ Låt oss träna på designprinciper och designelement och se om det hjälper oss
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 6-8 studietimmar)*
 
 
 ###Kurslitteratur  {#kurslitteratur}
@@ -39,7 +39,7 @@ Läs följande:
 1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
     * Kap 3 Texture
-    * Kap 1 Layout and Composition (läs om delarna med Balance, Unity, Emphasis)
+    * Kap 1 Layout and Composition (repetera kapitlet, främst delarna med Balance, Unity, Emphasis)
 
 
 
@@ -58,9 +58,9 @@ Läs följande artiklar.
 
 * I artikeln "[Multi-Device Content](https://developers.google.com/web/fundamentals/design-and-ui/responsive/content?hl=en)" ges en mängd specifika tips till vad man bör tänka på när man skapar innehåll för webbens olika enheter (mobil, desktop).
 
-* Studera ett par olika design principer, vad de innebär och fundera på om du kan dra nytta av dem i din design. Du hittar dem i [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/).
+* Studera ett par olika designprinciper, vad de innebär och fundera på om du kan dra nytta av dem i din design. Du hittar dem i [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/).
 
-* Läs mer om design principer i "[Design Elements & Principles](https://designschool.canva.com/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 design principer.
+* Läs mer om designprinciper i "[Design Elements & Principles](https://designschool.canva.com/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 designprinciper.
 
 
 
@@ -85,7 +85,7 @@ Det finns inga extra lästips.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-10 studietimmar)*
+*(ca: 10-12 studietimmar)*
 
 
 
