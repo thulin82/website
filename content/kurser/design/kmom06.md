@@ -10,40 +10,37 @@ Kmom06: Design
 **Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
 [/WARNING]
 
-Kursmomentet jobbar med olika designelement på en webbplats.
+Det finns ett begrepp "the final touch" som jag vill ta upp i sammanhanget design. Det handlar om det sista penseldraget och att se när man är "färdig" med sin design.
+
+Ibland händer det att man tittar på sin webbplats och ser att den inte känns komplett, något saknas, men man har svårt att sätta fingret på vad det är. Nu pratar vi designmässigt. Det kan vara de små sakerna som gör det.
+
+Nåväl, låt oss jobba vidare med olika designer för webbplatser för att träna vår känsla för de små detaljerna. Kanske är det för mycket symmetetri och ett osymmetriskt element skapar balans. Kanske är det förhållandet mellan sidans element. Eller är det rörelse som saknas?
+
+Låt oss träna.
+
 
 <!-- 
-Bygg ett par teman. Något eget och något baserat på Bootstrap (elle rmotsvarande).
 
-(Olika språk, anpassa med int/loc) 
+bakgrundsbild
 
-(Användbarhet)
+små bilder utspritt
 
-(Licens och rättigheter)
+linjer, streck
 
-(Cookis, lagar)
+(logo)
 
-Golden ratio.
+färger med 
 
--->
+osync med position relativce
 
-<!-- 
-Verktyg GIMP, inkscape.
+boken balance
 
-Shortcode för FIGURE.
+Gör egen logo, ritverktyg, med hjälp av logon, skapa tema som gr igen i logon. 
+Fixa och laga. Små saker och detaljer. Testa på din omgivning.
 
-Responsiva bilder
-
-Egna foton kontra fototjänster
-
-Google pagespeed och optimering av bilder (verktyg för kolla bilder/optimera).
-
-Fotoblog?
-
-LESS för att visa bilder.
+Tema som sträcker sig över hela skärmen.
 
 -->
-
 
 
 <!--
@@ -56,10 +53,6 @@ GA & Webadmin tools.
 Verktyg för att kontrollera SEO.
 
 
-https://design.google.com/ ?
-
-
-Visa undermenyerna på menyn.
 
 Välj x webbplatser att undersöka. Förklara varför du valde dem.
 Början på rapporten.
@@ -121,13 +114,7 @@ Texturer (?)
 
 Whitespace.
 
-(Flexbox)
-
 (Funktionsanpassad webbplats)
-
-(Integrera social media, SEO strategi)
-
-bootstrap (eller annat)
 
 -->
 
@@ -156,6 +143,7 @@ Läs följande:
 1. Läs i boken "[The principles of Beautiful Web Design](kunskap/boken-the-principles-of-beautiful-web-design)".
 
     * Kap 3 Texture
+    * Kap 1 Layout and Composition (läs om delarna med Balance, Unity, Emphasis)
 
 
 
@@ -172,7 +160,9 @@ Läs följande:
 
 Läs följande artiklar.
 
-* TBD
+* I artikeln "[Multi-Device Content](https://developers.google.com/web/fundamentals/design-and-ui/responsive/content?hl=en)" ges en mängd specifika tips till vad man bör tänka på när man skapar innehåll för webbens olika enheter (mobil, desktop).
+
+* Studera ett par olika design principer, vad de innebär och fundera på om du kan dra nytta av dem i din design. Du hittar dem i [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/).
 
 
 
@@ -224,6 +214,10 @@ Dessa uppgifter skall utföras och redovisas.
 ###Extra {#extra}
 
 Det finns inga extra uppgifter.
+
+<!--
+Visa undermenyerna på menyn.
+-->
 
 
 
