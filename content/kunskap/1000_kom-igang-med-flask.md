@@ -114,9 +114,9 @@ Du får självklart använda ett annat tema om du vill. De flesta teman har bara
 
 Nu kör vi.
 
-Först skapar vi filerna som behövs.
+Först stänger vi ner servern (ctrl-c) och skapar vi filerna som behövs.
 
-Från roten:
+Använd terminalen och ställ dig i "my_app":
 ```bash
 mkdir templates static
 mkdir static/styles
@@ -250,13 +250,14 @@ Vi kommer behöva lägga till en route i `app.py` och skapa en ny sida i /templa
 
 ###Skapa ny sida i /templates {#skapa-ny-sida-i-templates}
 
-Börja med att skapa filen. Den har samma struktur som `index.html` så vi kopierar bara den. Öppna index.html i editorn och lägg till ett `<li>` element för den nya sidan, under  
+Börja med att skapa filen på följande sätt:  
+Den har samma struktur som `index.html` så vi kopierar bara den. Öppna index.html i editorn och lägg till ett `<li>` element för den nya sidan, under  
 `<li class="active"><a href="/">Hem</a></li>`:
 ```html
 <li><a href="/about">Om</a></li>
 ```
 
-Nu kan vi kopiera innehållet i index.html till filen about.html.
+Nu kan vi kopiera innehållet i index.html till filen vi döper till about.html.
 
 Från roten:
 
