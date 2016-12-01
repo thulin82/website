@@ -38,9 +38,11 @@ Bra, nu är det bara att köra igång.
 Skapa en enkel webbapplikation {#skapa-enkel-app}
 ------------------------------
 
-Skapa en mapp med namnet "my_app" och gå in i den:
+Skapa en mapp, me/kmom01/my_app och gå in i den:
 
 ```bash
+# Ställ dig i kursens rotkatalog
+$ cd me/kmom01
 $ mkdir my_app
 $ cd my_app
 ```
