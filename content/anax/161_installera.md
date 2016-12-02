@@ -24,4 +24,4 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/canax/anax-flat/master/bi
 
 Öppna din webbläsare mot katalogen `htdocs`.
 
-Du har nu en katalogstruktur som liknar den som finns på [webbplatsen dbwebb.se](https://github.com/dbwebb-se/website).
+Du har nu en katalogstruktur som liknar den som finns på [repot för webbplatsen dbwebb.se](https://github.com/dbwebb-se/website).
