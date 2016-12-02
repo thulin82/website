@@ -268,7 +268,7 @@ cp templates/index.html templates/about.html
 Öppna filen `about.html` i en editor. Vill du ha en annan titel ändrar du det här:
 
 ```html
-<title>About</title>
+<title>Om</title>
 ```
 
 När man klickat på "Om" i navbaren ska det menyvalet vara aktivt. Vi skiftar så rätt `<li>`-element har rätt klass:
