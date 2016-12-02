@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-02: (D, mos) Lade till videoserie om vgrid.
     2016-10-26: (C, mos) Flyttad från 02 till 03 efter feedback.
     2016-10-15: (B, mos) Testad och genomgången.
     2016-06-22: (A, mos) Första utgåvan.
@@ -88,13 +89,9 @@ Tänk dig en typografisk webbplats där all styling har lagts på de typografisk
 
 ###Video  {#video}
 
-Det finns inga videor.
-
-<!-- 
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[Teknisk webbdesign och användbarhet](https://www.youtube.com/playlist?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)", kika på de videor som börjar på 3.
--->
 
 
 

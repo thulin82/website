@@ -53,8 +53,8 @@ Läs följande:
 4. [MDN Tutorial: Getting started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started). Gå snabbt igenom guiden (Part I: The Basics of CSS) översiktligt för att bekanta dig med CSS och se vad du kan göra med CSS. 
 
 5. Bekanta dig med guiden [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) och läs följande kapitel.
-    * [Ch 3: JavaScript Overview](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/JavaScript_Overview) en kort introduktion till JavaScript.
-    * [Ch 4: Values, variables, and literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Values,_variables,_and_literals)
+    * [Ch 1: Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction) en kort introduktion till JavaScript.
+    * [Ch 2: Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 
 
 

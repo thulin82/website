@@ -94,6 +94,10 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Se till att du har koll på vad som händer i övningarna. De utgör basen för hela kursen.
 
+<!--
+(Olika språk, anpassa med int/loc) 
+-->
+
 
 
 ###Uppgifter {#uppgifter}
@@ -131,7 +135,3 @@ Se till att följande frågor besvaras i texten:
 * Vad anser du om strukturen i Anax, gjorde du några egna förbättringar eller något du hoppade över?
 * Gick det bra att inkludera `source.php`? Gjorde du det som en modul i ditt Anax?
 * Gjorde du extrauppgiften med GitHub?
-
-
-
-
