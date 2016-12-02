@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-02: (B, mos) Mer material inkl videoserie.
     2016-11-29: (A, mos) Första utgåva.
 ...
 Kmom06: Design
@@ -14,6 +15,9 @@ Nåväl, låt oss jobba vidare med olika designer för webbplatser för att trä
 
 Låt oss träna på designprinciper och designelement och se om det hjälper oss att jobba med "the final touch".
 
+[FIGURE src=/image/snapht16/design-van-gogh.jpg?w=w2 caption="Tavla Starry Night av Van Gogh, används ofta i undervisning av Art & Design Principles."]
+
+Tanken är inte att vi skall bli webbdesigners. Tanken är att vi skall studera några av de tekniker som en designers använder sig av och därmed kan vi bättre förstå hur design fungerar i grunden och det hjälper oss att förstå bakomliggande principer och det hjälper vår dialog med designers.
 
 
 <!--more-->
@@ -62,11 +66,14 @@ Läs följande artiklar.
 
 * Läs mer om designprinciper i "[Design Elements & Principles](https://designschool.canva.com/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 designprinciper.
 
+* Hämta inspiration till designeffekter via exempel från CodePen. Här är en [CodePen sökning på "effects"](http://codepen.io/search/pens?q=effects) som ger en god start in bland exempel.
 
 
 ###Video  {#video}
 
-Det finns inga videor.
+Titta på följande:
+
+1. Det finns en spellista, [Design -- principer och element](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-oz7aoBkk-oEn4xzGbtqxU), som samlat ett par korta videor som visualiserar och förklarar designprinciper och designelement. Titta där för att få en uppfattning om de begrepp och tekniker som designers använder. I videoserien finns även en föreläsning om "Elements & Principles of Art" som kan vara intressant att titta på i sammanhanget.
 
 <!--
 Titta på följande:
@@ -79,6 +86,7 @@ Titta på följande:
 ###Lästips {#lastips}
 
 Det finns inga extra lästips.
+
 
 
 
