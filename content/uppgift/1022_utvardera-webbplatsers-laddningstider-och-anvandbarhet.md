@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-02: (B, mos) La till krav om att beskriva urvalet och metoden.
     2016-10-26: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -40,6 +41,10 @@ Krav {#krav}
 -----------------------
 
 1. Skapa filen `content/analysis/500_speed-and-usability.md`. Det är där du skriver dokumentationen för denna uppgiften.
+
+1. Börja med ett inledande stycke som beskriver hur du gjort urvalet.
+
+1. Beskriv också hur du mätt de olika delarna. Det blir en kort beskrivning av din metod.
 
 1. Skapa ett excelark, till exempel Google Kalkylark. För allt du nu skall mäta, dokumentera det i excelarket.
 
