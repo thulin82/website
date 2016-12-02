@@ -58,7 +58,7 @@ Läs följande artiklar.
 
 * I artikeln "[Multi-Device Content](https://developers.google.com/web/fundamentals/design-and-ui/responsive/content?hl=en)" ges en mängd specifika tips till vad man bör tänka på när man skapar innehåll för webbens olika enheter (mobil, desktop).
 
-* Studera ett par olika designprinciper, vad de innebär och fundera på om du kan dra nytta av dem i din design. Du hittar dem i [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/).
+* Studera ett par olika designprinciper, vad de innebär och fundera på om du kan dra nytta av dem i din design. Du hittar dem i [Visual Literacy](http://www.educ.kent.edu/community/VLO/Design/principles/). En offline-kopia av webbplatsen finns i dokumentet [vl.pdf](article/vl.pdf).
 
 * Läs mer om designprinciper i "[Design Elements & Principles](https://designschool.canva.com/design-elements-principles/)" som visualiserar, beskriver och exemplifierar 20 designprinciper.
 
