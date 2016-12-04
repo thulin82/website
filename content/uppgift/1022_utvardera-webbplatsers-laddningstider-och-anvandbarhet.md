@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-04: (D, mos) Ta en snapshot på webbplatsen.
     2016-12-04: (C, mos) Använd snittvärde som mätvärde.
     2016-12-02: (B, mos) La till krav om att beskriva urvalet och metoden.
     2016-10-26: (A, mos) Första utgåvan.
@@ -52,6 +53,7 @@ Krav {#krav}
 1. Välj ut 4 webbplatser som skall analyseras.
 
 1. För varje webbplats, gör följande:
+    1. Ta en snapshot på webbplatsen.
     1. Välj ut tre sidor som skall mätas med Google Pagespeed. Mät på både Mobile och Desktop. Notera de betyg som ges.
     1. För varje sida, mät med devtools flik networks och notera sidans laddningstid tillsammans med antalet resurser som laddas samt sidans totala storlek. För varje sida gör mätningen tre gånger och ta snittet av mätvärdena.
     1. Diskutera och skriv två meningar om hur webbplatsen kan förbättra sig.
