@@ -51,6 +51,36 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 <!--
 utöka/förändra urvalet av webbplatser och jobba igenom undersökningarna igen.
+
+egen favicon
+
+tre teman.
+företag, artist, webbprogrammerare
+?vgrid
+?hgrid
+
+direktlänk till tema och landningssida
+
+egen logo
+
+extra tema till dbwebb?
+m infodok
+
+thheme selector med cookie
+
+analys skriva för webben
+
+gå igenom analyserna gjorda.
+
+egna stylade LESS moduler
+
+beskriv strukturen på teman och LESS modulerna
+
+analys användbarhet 101
+
+
+paper om programmeringserfarenhet
+
 -->
 
 <!-- gå tillbaka till analysis color och fixa till bilderna -->

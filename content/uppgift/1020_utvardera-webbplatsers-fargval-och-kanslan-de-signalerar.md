@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-04: (C, mos) Berätta hur urvalet gjordes.
     2016-10-26: (B, mos) La till fråga om typografival.
     2016-10-21: (A, mos) Första utgåvan.
 category:
@@ -58,7 +59,7 @@ När du dokumenterar en färgpalett så kan du lägga den direkt i dokumentet vi
 Krav {#krav}
 -----------------------
 
-1. Välj ut 4 webbplatser som skall analyseras. Ta en snapshot (bild) på respektive webbplats och lägg i analysen.
+1. Välj ut 4 webbplatser som skall analyseras, berätta hur du gjorde urvalet. Ta en snapshot (bild) på respektive webbplats och lägg i analysen. 
 
 1. För varje webbplats, gör följande:
     1. Dokumentera och visualisera färgpaletten som används.
