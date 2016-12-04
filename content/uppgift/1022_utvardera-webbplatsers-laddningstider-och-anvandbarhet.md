@@ -54,7 +54,7 @@ Krav {#krav}
 
 1. För varje webbplats, gör följande:
     1. Ta en snapshot på webbplatsen.
-    1. Välj ut tre sidor som skall mätas med Google Pagespeed. Mät på både Mobile och Desktop. Notera de betyg som ges.
+    1. Välj ut tre sidor (bifoga länkarna) som skall mätas med Google Pagespeed. Mät på både Mobile och Desktop. Notera de betyg som ges.
     1. För varje sida, mät med devtools flik networks och notera sidans laddningstid tillsammans med antalet resurser som laddas samt sidans totala storlek. För varje sida gör mätningen tre gånger och ta snittet av mätvärdena.
     1. Diskutera och skriv två meningar om hur webbplatsen kan förbättra sig.
 
