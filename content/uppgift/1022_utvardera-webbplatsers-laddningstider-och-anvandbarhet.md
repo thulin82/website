@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-12-04: (D, mos) Ta en snapshot på webbplatsen.
+    2016-12-04: (D, mos) Ta en snapshot på webbplatsen och rangordna dem.
     2016-12-04: (C, mos) Använd snittvärde som mätvärde.
     2016-12-02: (B, mos) La till krav om att beskriva urvalet och metoden.
     2016-10-26: (A, mos) Första utgåvan.
@@ -59,6 +59,8 @@ Krav {#krav}
     1. Diskutera och skriv två meningar om hur webbplatsen kan förbättra sig.
 
 1. Sammanfatta ditt resultat och skriv ett stycke om vilka de vanligaste förbättringsåtgärderna verkar vara för ditt urval av webbplatser.
+
+1. Rangordna dina webbplatser baserat på deras mätvärden och kommentera resultatet.
 
 1. Bestäm en gräns för absolut laddningstid som du själv uppfattar som snabb eller långsam webbplats. Skriv ett stycke om hur ditt urval av webbplatser klarar ditt gränsvärde och hur du upplever webbplatsernas snabbhet.
 
