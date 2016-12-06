@@ -36,6 +36,7 @@ Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopi
 # Ställ dig i kurskatalogen
 cd me
 cp -ri kmom02/mini-zoo/*.py kmom02/test/
+cd test
 touch test_zoo.py
 ```
 

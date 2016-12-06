@@ -46,7 +46,7 @@ Starta med att skapa filerna:
 ```bash
 # Ställ dig i kurskatalogen
 cd me/kmom02/minizoo
-touch mini_zoo.py animal.py house.py bird.py fish.py mammal.py
+touch mini_zoo.py animal.py house.py bird.py fish.py mammal.py main.py
 ```
 
 1. Namngivning ska ske enligt diagrammet
