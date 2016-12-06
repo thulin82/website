@@ -30,7 +30,7 @@ Du vet vad en [sandbox](uppgift/skapa-din-egen-sandbox-for-javascript-testprogra
 Introduktion {#intro}
 -----------------------
 
-[FIGURE src=/kod-exempel/hangman-svg/hangman-validates-inline.svg caption="En SVG-bild till hänga gubbe-spel."]
+[FIGURE src=/img/hangman/hangman-validates-inline.svg caption="En SVG-bild till hänga gubbe-spel."]
 
 Hänga gubben, i detta sammanhanget, är ett gissningsspel där det slumpas fram ett ord (från en lista av ord) och sedan gissar spelaren vilka bokstäver som finns i ordet. Vid varje felaktig gissning ritas delar av en bild ut och när alla delarna är utritade så har spelaren förlorat. Om spelaren lyckas gissa alla bokstäver i ordet så vinner spelaren.
 
@@ -106,7 +106,3 @@ Tips från coachen {#tips}
 Lös uppgiften på ditt eget vis. Det är det viktigaste. Se hur bra dina vingar bär.
 
 **Lycka till och ställ frågor i forumet om du behöver hjälp!**
-
-
-
-
