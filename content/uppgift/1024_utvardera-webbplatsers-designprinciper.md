@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-06: (B, mos) Berätta om urval och metod.
     2016-11-29: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -43,7 +44,7 @@ Krav {#krav}
 
 1. Skapa filen `content/analysis/600_design-principles.md`. Där skriver du dokumentationen för denna uppgiften.
 
-1. Välj ut 4 webbplatser som skall analyseras. Gör ett väl genomtänkt urval och välj webbplatser där du kan finna spår av olika designprinciper.
+1. Välj ut 4 webbplatser som skall analyseras. Gör ett väl genomtänkt urval och välj webbplatser där du kan finna spår av olika designprinciper. Berätta hur du gjorde ditt urval. Berätta även om du använde något speciellt bakgrundsmaterial som definierade designprinciper.
 
 1. För varje webbplats, gör följande (skriv kortfattat, 1-2 meningar om varje):
     1. Kommentera webbplatsens mål och syfte. Varför finns webbplatsen till?
