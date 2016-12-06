@@ -30,7 +30,7 @@ För att färdigställa produkten behöver den testas. Vi skriver unittester fö
 Krav {#krav}
 -----------------------
 
-Kopiera din Marvin från föregående kursmoment och utgå från den koden. Kopiera även filen med citat.
+Kopiera din kod från föregående uppgift och utgå från den koden.
 
 ```bash
 # Ställ dig i kurskatalogen
