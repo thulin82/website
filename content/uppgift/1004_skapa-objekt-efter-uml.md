@@ -53,7 +53,7 @@ touch mini_zoo.py animal.py house.py bird.py fish.py mammal.py main.py
 
 2. Metoderna `get_*` ska returnera en sträng utifrån listan
 
-3. I varje klass ska det finnas en överlagrad `__str__()`-metod som skriver ut allt om objektet på ett godtyckligt sätt. Arv ska användas även här. ex:  
+3. I varje klass ska det finnas en överlagrad `__str__()`-metod som skriver ut allt om objektet på ett godtyckligt sätt. Relationerna ska stämma med diagrammet ovan.  
     * `animal` ska skriva ut information om sig själv.  
     * `house` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla djur i listan.  
     * `mini_zoo` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla hus i listan.  
