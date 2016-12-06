@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-06: (B, mos) La till snapshots som krav.
     2016-11-15: (A, mos) Första utgåvan.
 category:
     - kurs/design
@@ -44,6 +45,8 @@ Krav {#krav}
 1. Lägg till en LESS modul som ger dig en responsiv grund till elementet `<figure>`. Du kan utgå/kopiera från exemplet om du vill. Se till att de media queries du använder fungerar tillsammans med ditt eget tema.
 
 1. Bygg en testsida `content/images.md` där du visar att din LESS-struktur fungerar genom att visa upp bilder i olika storlekar. Lägg sidan i menyn och använd shortcoden `[FIGURE]` när du visar bilderna.
+
+1. På din testsida, lägg till två ytterligare bilder som är skärmdumpar, snapshots av delar av din skärm eller av applikationer.
 
 1. Skapa en blogg under `content/blogg` där bloggens tema är "Dagens Bild". Lägg till länken i din meny.
 
