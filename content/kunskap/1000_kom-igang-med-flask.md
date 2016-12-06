@@ -81,6 +81,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
+    """ Main route """
     return "Välkommen!"
 
 if __name__ == "__main__":
@@ -228,6 +229,7 @@ Bra, nu kan vi använda den i vår route:
 ```python
 @app.route("/")
 def main():
+    """ Main route """
     return render_template("index.html")
 ```
 
@@ -291,6 +293,7 @@ Vi öppnar filen `app.py` igen och tittar på routen. Lägg till följande kod u
 ```python
 @app.route("/about")
 def show_about():
+    """ About route """
     return render_template("about.html")
 ```
 
