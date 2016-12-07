@@ -26,7 +26,7 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 Autogenerara UML-diagram {#autogenerera-uml}
 ------------------------------
 
-Verktyget "[Pyreverse](https://www.logilab.org/blogentry/6883)" är sedan 2008 integrerat med Pylint och tillåter oss att skapa olika diagram utifrån färdig kod. Det är såkallad "[reverse engineering](https://sv.wikipedia.org/wiki/Reverse_engineering)". Man plockar isär något färdigt för att ta reda på hur det är uppbyggt.
+Verktyget "[Pyreverse](https://www.logilab.org/blogentry/6883)" är sedan 2008 integrerat med Pylint och tillåter oss att skapa olika diagram utifrån färdig kod. Det är så kallad "[reverse engineering](https://sv.wikipedia.org/wiki/Reverse_engineering)". Man plockar isär något färdigt för att ta reda på hur det är uppbyggt.
 
 Man kan generera olika typer av diagram och i olika format. För att ta reda på vilka format som finns tillgängliga kan man använda:
 
@@ -93,7 +93,7 @@ Autogenerera dokumentation {#autogenerera-dokumentation}
 ------------------------------
 
 Python(3) kommer med verktyget [Pydoc](https://docs.python.org/3.0/library/pydoc.html). Det hjälper oss att utifrån färdig kod, generera dokumentation alternativt se dokumentationen från exempelvis inbyggda moduler och klasser:
-
+(Använder du Cygwin kan du behöva starta med `pydoc3`)
 ```bash
 # Visa dokumentationen från den inbyggda klassen "str"
 $ pydoc str
