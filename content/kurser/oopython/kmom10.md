@@ -83,17 +83,6 @@ Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet 
 
 
 
-Se till att din kod validerar.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb publish kmom10
-```
-
-Förklara i redovisningstexten hur du tänkt när du strukturerat ditt program, vilka filer du har och vad de fyller för funktion.
-
-
-
 ###Krav 4: SQLAlchemy (optionell) {#k4}
 
 Använd SQLAlchemy för att hantera dina klasser och objekt. Det krävs lite mer för att arbeta med arv i det sammanhanget.  
@@ -115,6 +104,19 @@ Visa beställaren bevis på att din kod är bra:
 2. Generera dokumentation för den färdiga koden. Döp filen till "doc.html".  
 
 3. Skriv unittester för dina klasser. Minst 50% [code coverage](https://en.wikipedia.org/wiki/Code_coverage). Döp testfilerna till "_klassens namn_-test.py".
+
+
+
+###När du är klar {#klar}
+
+Se till att din kod validerar och publiceras.
+
+```bash
+# Ställ dig i kurskatalogen
+dbwebb publish kmom10
+```
+
+Förklara i redovisningstexten hur du tänkt när du strukturerat ditt program, vilka filer du har och vad de fyller för funktion.
 
 
 
