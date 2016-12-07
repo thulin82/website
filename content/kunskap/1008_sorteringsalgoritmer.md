@@ -71,7 +71,7 @@ def bubble_sort(items):
                 items[j], items[j+1] = items[j+1], items[j]     # Byt plats
 
     return items
-```  
+```
 
 Som ni ser så går bubble sort utmärkt att implementera utan rekursiv metod. Här används istället en nästad for-loop.
 
