@@ -71,7 +71,7 @@ def bubble_sort(items):
                 items[j], items[j+1] = items[j+1], items[j]     # Byt plats
 
     return items
-```  
+```
 
 Som ni ser så går bubble sort utmärkt att implementera utan rekursiv metod. Här används istället en nästad for-loop.
 
@@ -157,7 +157,7 @@ Tänk dig nu att du ska dra ett streck längs golvet runt kuberna. Tar det 1 min
 
 Nu är det dags att måla ena väggen på kuberna. Om det tar 1 minut att måla den lilla, tar det ca 100 minuter att måla den mellanstora och 10000 minuter att måla den stora.  
 
-Detta är för att den mellanstora är 10 gånger så stor som den lilla men ena väggen 10*10 gånger större. Det stora husets vägg är 100*100 gånger större. Kvadratisk tidskomplexitet kan beskrivas med **O(n²)**
+Detta är för att den mellanstora är 10 gånger så stor som den lilla men ena väggen 10\*10 gånger större. Det stora husets vägg är 100\*100 gånger större. Kvadratisk tidskomplexitet kan beskrivas med **O(n²)**
 
 
 
@@ -165,7 +165,7 @@ Detta är för att den mellanstora är 10 gånger så stor som den lilla men ena
 
 Om vi ska fylla kuberna med vatten. Tar det 1 minut att fylla den lilla kuben, tar det ca 1000 minuter att fylla den mellanstora kuben och ca 1 miljon minuter att fylla den stora.  
 
-Räknar vi på det är den mellanstora kubens volym 10*10*10 gånger större än den lilla kubens. Den stora kubens volym blir 100*100*100 gånger så stor. Kubisk tidskomplexitet kan beskrivas med **O(n³)**.  
+Räknar vi på det är den mellanstora kubens volym 10\*10\*10 gånger större än den lilla kubens. Den stora kubens volym blir 100\*100\*100 gånger så stor. Kubisk tidskomplexitet kan beskrivas med **O(n³)**.  
 
 
 
@@ -189,11 +189,11 @@ Vi kan titta i tabellen för att se hur tidskomplexiteten snabbt kan påverka ti
 
 |  In-data  |  O(1)  |  O(n)      |  O(n²)    |
 |-----------|:-------|:-----------|:----------|
-|  1        | 17 sek | 1 sekund   | 1 sekund  |
-|  10       | 17 sek | 10 sekund  | 2 minuter |
-|  100      | 17 sek | 2 minuter  | 3 timmar  |
-|  1000     | 17 sek | 17 minuter | 12 dygn   |
-|  1 miljon | 17 sek | 12 dygn    | 30000 år  |
+|  1 n        | 17 sek | 1 sekund   | 1 sekund  |
+|  10 n       | 17 sek | 10 sekund  | 2 minuter |
+|  100 n      | 17 sek | 2 minuter  | 3 timmar  |
+|  1000 n     | 17 sek | 17 minuter | 12 dygn   |
+|  1 miljon n | 17 sek | 12 dygn    | 30000 år  |
 
 Vi går inte in närmare på detta här utan nu har ni en kännedom om att det finns och används ofta i sorteringsalgoritmer för att se hur de kommer fungera med olika mängder element och vad man förvänta sig.
 
