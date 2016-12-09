@@ -82,9 +82,9 @@ class Child(Parent):
 ```
 
 
-Funktionen super(Child, self) används för att komma åt Parents konstruktor. Det är denna kod raden som gör att vi får tillgång till Parents funktioner och variabler i Child.
+Funktionen `super(Child, self)` används för att komma åt Parents konstruktor. Det är denna kod raden som gör att vi får tillgång till Parents funktioner och variabler i Child.
 
-Nu kan vi initiera ett Child objekt och ge de ett namn utan att behöva ha en namn variabel i Child klassen. Vi kan även anropa funktionen printParent för att skriva ut vad den heter.
+Nu kan vi initiera ett Child objekt och ge de ett namn utan att behöva ha en namn variabel i Child klassen. Vi kan även anropa funktionen `printParent` för att skriva ut vad den heter.
 Det går samtidigt att använda Parent som ett eget objekt.  
 
 ```python
@@ -113,7 +113,7 @@ class Child(Parent):
 ```
 
 
-Child har fått en ny variabel, nickName, och en ny funktion som skriver ut vad den heter och vad han kallas. I funktionen printNickName kommer vi åt variabeln vi ärver, name, med enkel dot.notation.
+Child har fått en ny variabel, `nickName`, och en ny funktion som skriver ut vad den heter och vad han kallas. I funktionen `printNickName` kommer vi åt variabeln vi ärver, name, med enkel dot.notation.
 
 ```python
 son.printNickName()
@@ -121,14 +121,14 @@ Childs nickName is  Zeldah and name is Andreas
 ```
 
 
-I Child kommer vi åt allt som finns i Parent, utom privata metoder och variabler med två _ framför, tack vare arv. Det går även att ärva i flera steg. Klassen barnbarn kan ärva från barn som ärver av förälder. I barnbarn kommer vi
+I Child kommer vi åt allt som finns i Parent, utom metoder och variabler med två `_` framför, tack vare arv. Det går även att ärva i flera steg. Klassen barnbarn kan ärva från barn som ärver av förälder. I barnbarn kommer vi
 åt variabler och metoder från både barn och förälder. En klass kan även ärva från flera klasser, Child kan t.ex. ärva från Parent och Deity samtidigt, då kallas det för multipelt arv.
 
 
 
 ###Överskuggning av metoder {#overskuggning}
 
-Vi bestämmer oss för att byta ut metoden printParent() i Parent till printName() istället och den ska skriva ut vad objektet heter. Om printName anropas med Child vill vi även skriva ut dess nickName.
+Vi bestämmer oss för att byta ut metoden `printParent()` i Parent till `printName()` istället och den ska skriva ut vad objektet heter. Om `printName` anropas med Child vill vi även skriva ut dess `nickName`.
 Detta löses lätt med överskuggning. Överskuggning är att ersätta funktionaliteten av en metod från en basklass i en subklass.
 
 ```python
@@ -158,12 +158,12 @@ My name is  Andreas and my nickname is Zeldah
 ```
 
 
-Som vi ser, när dad.printName() anropas körs metoden printName som finns i Parents klassen och när son.printName() anropas körs Child.printName(). Detta är effekten av att överskugga en metod i en subklass.
-Vi har gett Child en egen version av printName().
+Som vi ser, när `dad.printName()` anropas körs metoden `printName()` som finns i Parent klassen och när `son.printName()` anropas körs `Child.printName()`. Detta är effekten av att överskugga en metod i en subklass.
+Vi har gett Child en egen version av `printName()`.
 
 
 
-Med _NotImplementedError_ kan vi tvinga subklasser att överskugga metoder från basklasser.
+Med `_NotImplementedError_` kan vi tvinga subklasser att överskugga metoder från basklasser.
 För att testa detta lägger vi till en metod i Parent klassen men överskuggar inte den i Child:
 
 
@@ -188,8 +188,8 @@ NotImplementedError: Subclasses should implement this!
 ```
 
 
-Precis som vi förväntade oss får vi runtimeException både från dad och son. För att fixa detta behöver vi överskugga mustOverride() i Child.
-Vi kommer dock fortfarande inte kunna använda mustOverride() metoden i Parent. Den kommer alltid slänga NotImplementedError.
+Precis som vi förväntade oss får vi `runtimeException` både från dad och son. För att fixa detta behöver vi överskugga `mustOverride()` i Child.
+Vi kommer dock fortfarande inte kunna använda `mustOverride()` metoden i Parent. Den kommer alltid slänga `NotImplementedError`.
 
 ```python
 class Child(Parent):
@@ -218,11 +218,11 @@ We did it!
 
 ###Privata variabler och metoder {#privatVariablerMetoder}
 
-För att komma åt ett objekts medlemsvariabler och metoder använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska komma åt variablerna och metoderna kan man göra dem _privata_. Det gör man med \_ innan variabeln/metoden.
+För att komma åt ett objekts medlemsvariabler och metoder använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska komma åt variablerna och metoderna kan man göra dem _privata_. Det gör man med `\_` innan variabeln/metoden.
 Det är dock vanligt utvecklare med bakgrund i andra språk, t.ex. Java eller C++, använder `__` före variabeln/metoden istället när de vill göra dem privata.
-\_<namn> är det korrekta sättet att göra. Vi kommer gå igenom båda och varför det lätt blir fel.
+`\_<namn>` är det korrekta sättet att göra. Vi kommer gå igenom båda och varför det lätt blir fel.
 
-\_<namn> Används för att markera att en metod/variabel inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
+`\_<namn>` Används för att markera att en metod/variabel inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
 Vi testar skapa en privat variabel:
 
 ```python
@@ -254,9 +254,9 @@ I can access privat
 
 Som sagt, det går att accessa den både utanför och innanför instansen men jag som har utvecklat koden markerar att den inte ska användas utanför instansen.
 
-Vi går vidare till \__<namn>. \__ ska inte användas för att göra något privat utan den ska förhindra en metod från att bli överskuggad i en subklass.
-En method med \__ i början är bara accessbar i instansen den skapas i, med 'self.\__<namn>'. Detta är en egenskap privata variabler/metoder har i andra vanliga programmeringsspråk, men inte i python, och därför är det lätt hänt att \__ används istället för \_ för att göra något privat.
-Vi testar skapa en \__<namn> funktion:
+Vi går vidare till `\__<namn>`. `\__` ska inte användas för att göra något privat utan den ska förhindra en metod från att bli överskuggad i en subklass.
+En method med `\__` i början är bara accessbar i instansen den skapas i, med `self.\__<namn>`. Detta är en egenskap privata variabler/metoder har i andra vanliga programmeringsspråk, men inte i python, och därför är det lätt hänt att `\__` används istället för `\_` för att göra något privat.
+Vi testar skapa en `\__<namn>` funktion:
 
 ```python
 class Parent():
@@ -282,8 +282,8 @@ Dont override this function
 ```
 
 
-Det går att komma vår metod \__dontOverride() genom metoden callParentDontOverride() inuti klassen med self.\__dontOverride(), men det går inte utanför klassen med ett Parent objekt.
-Vi testar överskugga \__dontOverride() i Child, vi behåller samma kod i Parent och fortsätter i Child:
+Det går att komma vår metod `\__dontOverride()` genom metoden `callParentDontOverride()` inuti klassen med `self.\__dontOverride()`, men det går inte utanför klassen med ett Parent objekt.
+Vi testar överskugga `\__dontOverride()` i Child, vi behåller samma kod i Parent och fortsätter i Child:
 
 
 ```python
@@ -313,8 +313,8 @@ I did it anyway!
 ```
 
 
-son.callParentDontOverride() anropa Parent.callParentDontOverride() och där i anropas inte Child.\__dontOverride() som man förväntar sig av vanliga överskuggade funktioner. Istället anropas Parent.\__dontOverride().  
-Precis som förväntat anropas Child.\__dontOverride() i son.accessChildDontOverride().
+`son.callParentDontOverride()` anropa `Parent.callParentDontOverride()` och där i anropas inte `Child.\__dontOverride()` som man förväntar sig av vanliga överskuggade funktioner. Istället anropas `Parent.\__dontOverride()`.  
+Precis som förväntat anropas `Child.\__dontOverride()` i `son.accessChildDontOverride()`.
 
 
 
@@ -329,7 +329,7 @@ Om det _ägda_ objektet skapas i _ägarens_ konstruktor är det oftast kompositi
 
 Vi kan skriva om våran Parent och Child klass så att Child använder Parent som en modul istället.
 Vi döper om den till Other, då vi inte har något Parent Child förhållande längre.
-I och med att vi inte har inheritance längre rensar vi bland metoderna, vi bort inheritance specifik funktionalitet som Parent.\__dontOverride() och Parent.callDontOverride().
+I och med att vi inte har inheritance längre rensar vi bland metoderna, vi bort inheritance specifik funktionalitet som `Parent.\__dontOverride()` och `Parent.callDontOverride()`.
 
 ```python
 class Other:
