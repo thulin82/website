@@ -16,7 +16,7 @@ Träna på att skapa mer klasser.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artiklarna "[Kom igång med objekt](kunskap/kom-igang-med-objekt)" och "[Arv med objekt i Python](kunskap/arv)" och lab1, "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser)".
+Du har jobbat igenom artiklarna "[Kom igång med objekt](kunskap/kom-igang-med-objekt)" och "[Klass relationer](kunskap/klass-relationer)" och lab1, "[Python med objekt och klasser](uppgift/python-med-objekt-och-klasser)".
 
 
 

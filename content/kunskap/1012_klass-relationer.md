@@ -5,7 +5,7 @@ revision:
 category:
     - oopython
 ...
-Arv med objekt i Python
+Klass relationer i Python
 ===================================
 
 [FIGURE src=/image/oopython/kmom01/multipleinheritance.jpg class="right"]
@@ -48,10 +48,10 @@ När kan/ska man använda arv? {#nar-kan-man-anvanda-arv}
 
 Arv används när flera klasser har gemensamma grund och är specialiserade i någon grad. T.ex. så har bil och motorcyklar likheter och skillnader, båda är fordon men de har olika egenskaper. Då kan man ha en basklass som heter Fordon och en subklass för Bil och en För motorcykel. Vi lägger funktionalitet fler objekt har gemensamt i en basklass, och sen definierar vi flera subklasser där vi specificerar dem.
 Arv används för att återanvända kod och göra det mer dynamiskt.
-Vissa tycker dock att man ska undvika att använda arv för att det blir svårare att hålla reda på vilka klasser metoder och attribut kommer ifrån, speciellt vid multipla arv, och att man ska använda komposition istället.
-Vi kommer gå igenom skillnaderna längre ner.
 
-Skapa arv mellan objekt {#arv-mellan-objekt}
+
+
+Skapa arv mellan klasser {#arv-mellan-klasser}
 ------------------------------
 
 Vi börjar med att skapa bas/förälder klassen Parent:  
@@ -177,12 +177,6 @@ class Parent():
     def printName(self):
         print("My name is %s" % self.name)
 
-    def __dontOverride(self):
-        print("Dont override this function")
-
-    def callDontOverride(self):
-        self.__dontOverride()
-
     def mustOverride(self):
         raise NotImplementedError("Subclasses should implement this!")
 
@@ -210,12 +204,6 @@ class Child(Parent):
     def accesParentPrivat(self):
         print("I can access " + self._privat)
 
-    def __dontOverride(self):
-        print("I did it anyway!")
-
-    def accessDontOverride(self):
-        self.__dontOverride()
-
     def mustOverride(self):
         print("We did it!")
 
@@ -232,7 +220,7 @@ We did it!
 
 För att komma åt ett objekts medlemsvariabler och metoder använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska komma åt variablerna och metoderna kan man göra dem _privata_. Det gör man med \_ innan variabeln/metoden.
 Det är dock vanligt utvecklare med bakgrund i andra språk, t.ex. Java eller C++, använder `__` före variabeln/metoden istället när de vill göra dem privata.
-\__<namn> är det korrekta sättet att göra. Vi kommer gå igenom båda och varför det lätt blir fel.
+\_<namn> är det korrekta sättet att göra. Vi kommer gå igenom båda och varför det lätt blir fel.
 
 \_<namn> Används för att markera att en metod/variabel inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
 Vi testar skapa en privat variabel:
@@ -283,18 +271,18 @@ class Parent():
     def __dontOverride(self):
         print("Dont override this function")
 
-    def callDontOverride(self):
+    def callParentDontOverride(self):
         self.__dontOverride()
-
-dad.callDontOverride()
-Dont override this function
 
 dad.__dontOverride()
 AttributeError: 'Parent' object has no attribute '__dontOverride'
+
+dad.callParentDontOverride()
+Dont override this function
 ```
 
 
-Det går att komma vår metod \__dontOverride() genom metoden callDontOverride() inuti klassen med self.\__dontOverride(), men det går inte utanför klassen med ett Parent objekt.
+Det går att komma vår metod \__dontOverride() genom metoden callParentDontOverride() inuti klassen med self.\__dontOverride(), men det går inte utanför klassen med ett Parent objekt.
 Vi testar överskugga \__dontOverride() i Child, vi behåller samma kod i Parent och fortsätter i Child:
 
 
@@ -314,19 +302,19 @@ class Child(Parent):
     def __dontOverride(self):
         print("I did it anyway!")
 
-    def accessDontOverride(self):
+    def accessChildDontOverride(self):
         self.__dontOverride()
 
-son.callDontOverride()
+son.callParentDontOverride()
 Dont override this function
 
-son.accessParentDontOverride()
+son.accessChildDontOverride()
 I did it anyway!
 ```
 
 
-son.callDontOverride() anropa Parent.callDontOverride() och där i anropas inte Child.\__dontOverride() som man förväntar sig av vanliga överskuggade funktioner. Istället anropas Parent.\__dontOverride().
-Precis som förväntat anropas Child.\__dontOverride() i son.accessDontOverride().
+son.callParentDontOverride() anropa Parent.callParentDontOverride() och där i anropas inte Child.\__dontOverride() som man förväntar sig av vanliga överskuggade funktioner. Istället anropas Parent.\__dontOverride().  
+Precis som förväntat anropas Child.\__dontOverride() i son.accessChildDontOverride().
 
 
 
