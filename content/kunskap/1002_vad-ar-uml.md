@@ -145,10 +145,10 @@ Vi har lagt till en if-sats som kollar att kunden har tillräckligt med pengar f
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det finns bra verktyg online för att rita uml diagram, kolla in https://www.draw.io och https://www.websequencediagrams.com/.
+Det finns bra verktyg online för att rita uml diagram, kolla in [draw.io](https://www.draw.io) och [websequencediagrams](https://www.websequencediagrams.com/).
 
-För att läsa mer om class diagram kolla här: http://www.uml-diagrams.org/class-diagrams-overview.html.
+För att läsa mer om class diagram kolla här: [class diagrams](http://www.uml-diagrams.org/class-diagrams-overview.html).
 
-För att läsa mer om sequence diagram och vad man mer kan göra med dem kolla här: http://www.uml-diagrams.org/sequence-diagrams.html.
+För att läsa mer om sequence diagram och vad man mer kan göra med dem kolla här: [sequence diagrams](http://www.uml-diagrams.org/sequence-diagrams.html).
 
 
