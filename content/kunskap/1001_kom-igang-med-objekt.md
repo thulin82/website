@@ -321,7 +321,7 @@ AttributeError: 'Test_private' object has no attribute '__privateMember'
 Operatorer inom programmering (`+, -, *, /, <, >` med flera), har ett förutbestämt syfte. Om vi skulle vilja använda dem för något eget syfte istället kan vi använda oss av **operatoröverlagring**. Låt säga att vi vill kunna addera våra bil-objekt och få reda på det sammanlagda priset. Först testar vi rakt av:
 
 ```python
->>> print( bmx + volvo )
+>>> print( bmw + volvo )
 TypeError: unsupported operand type(s) for +: 'Car' and 'Car'
 ```
 
@@ -361,12 +361,59 @@ class Car():
         return self.price + other.price
 ```
 
-Vi använder `__` före och efter metoden och skickar in ett annat objekt kallat _other_ som parameter. Vi testar igen:
+Vi använder `__` före och efter metoden, `__<method>__`, och skickar in ett annat objekt kallat _other_ som parameter. Vi testar igen:
 
 ```python
->>> print( bmx + volvo )
+>>> print( bmw + volvo )
 250000
 ```
+
+Det går även att överlagra `+=`, genom att göra en egen `__iadd__` funktion. Vi kollar på det.
+
+```python
+class Car():
+    wheels = 4
+    carCount = 0
+
+    def __init__(self, model, price):
+        self.model = model
+        self.price = price
+        self.equipment = []
+
+        Car.carCount += 1
+
+    def presentCar(self):
+        print("Model: {m}, Price: {p}".format(m=self.model, p=self.price))
+
+    @staticmethod
+    def calculatePriceReduction(aPrice):
+        return int(aPrice * 0.66)
+
+    def reducePrice(self):
+        self.price = self.calculatePriceReduction(self.price)
+        return "Priset för {c} är nu {p}".format(c=self.model, p=self.price)
+
+    def addEquipment(self, newEquipment):
+        self.equipment.append(newEquipment)
+
+    def printEquipment(self):
+        for eq in self.equipment:
+            print("* " + eq)
+
+    def __add__(self, other):
+        return self.price + other.price
+
+    def __iadd__(self, other):
+        self.price += other.price
+        return self
+
+bmw += volvo
+print(bmw.price)
+250000
+```
+
+I `__iadd__` ändrar vi värder på `price` och returnerar `self` istället för värdet. `bmw += volvo` kan även visualiseras som `bmw = bmw.__iadd__(volvo)`. Med andra ord tilldelar vi `bmw` variabeln samma objekt som den redan hade.
+
 
 Nuså. Samma koncept gäller för övriga operatorer och kan vara behändigt vid hantering av objekt av olika slag.
 
