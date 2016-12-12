@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-12: (C, mos) Kika även undersidor.
     2016-12-06: (B, mos) Berätta om urval och metod.
     2016-11-29: (A, mos) Första utgåvan.
 category:
@@ -51,6 +52,7 @@ Krav {#krav}
     1. Kommentera webbplatsens design och vad som kännetecknar den rent allmänt.
     1. Kommentera om du själv anser att designen gynnar webbplatsens mål och syfte, och/eller vilken känsla som designen ger.
     1. Lyft fram den eller de designprinciper du anser kännetecknar webbplatsens design och exemplifiera.
+    1. Kika om designprinciperna som används är lika/olika för framsidan och undersidorna och kommentera.
 
 1. I slutet av rapporten skriver du ett eget stycke med namnen på dina gruppmedlemmar.
 
