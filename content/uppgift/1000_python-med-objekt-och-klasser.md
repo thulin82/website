@@ -16,7 +16,7 @@ Träna på att skapa klasser och använda klass funktionalitet i Python.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artiklarna "[Kom igång med objekt](kunskap/kom-igang-med-objekt)" och "[Arv med objekt i Python](kunskap/arv)".
+Du har jobbat igenom artiklarna "[Kom igång med objekt](kunskap/kom-igang-med-objekt)" och "[Klass relationer](kunskap/klass-relationer)".
 
 
 

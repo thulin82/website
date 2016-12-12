@@ -100,7 +100,7 @@ Genomför följande övning för att träna dig.
 
 2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
 
-3. Läs igenom artikeln om "[Arv med objekt](kunskap/arv)" i Python.
+3. Läs igenom artikeln om "[Klass relationer](kunskap/klass-relationer)" i Python.
 
 
 

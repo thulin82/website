@@ -16,7 +16,7 @@ Nu ska du testa vingarna och skapa några objekt efter ett färdigt UML-diagram.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har läst artiklarna: "[Vad är UML?](kunskap/vad-ar-uml)" och "[Kom igång med objekt](kunskap/kom-igang-med-objekt)" samt "[Arv med objekt](kunskap/arv)".
+Du har läst artiklarna: "[Vad är UML?](kunskap/vad-ar-uml)" och "[Kom igång med objekt](kunskap/kom-igang-med-objekt)" samt "[Klass relationer](kunskap/klass-relationer)".
 
 
 
