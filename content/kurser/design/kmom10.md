@@ -122,7 +122,7 @@ Varje sida skall ha en flash-region med en bild.
 
 Headern skall ha en egen logo och en favicon.
 
-Footern skall innehålla de standardsidor som följer med Anax Flat, inklusive de tre footer-kolumnerna.
+Footern skall innehålla de standardsidor som följer med Anax Flat (license, cookies, contact), inklusive de tre footer-kolumnerna.
 
 Menyn skall länka till about och bloggen.
 
