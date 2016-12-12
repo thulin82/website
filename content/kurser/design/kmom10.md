@@ -1,14 +1,10 @@
 ---
 author: mos
 revision:
-    2016-04-11: (PA, mos) Arbetskopia.
+    2016-12-12: (A, mos) Första utgåvan.
 ...
 Kmom10: Projekt och examination
 ====================================
-
-[WARNING]
-**Kursmomentet är under utveckling. Kursen ges första gången i läsperiod 2, hösten 2016, till programstudenter på programmet Webbprogrammering.**
-[/WARNING]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -32,184 +28,160 @@ Projektidé och upplägg {#upplagg}
 
 Du har blivit känd som en webbprogrammerare med känsla för design och kunderna står nu i kö. Du har ett antal uppdrag som dina kunder vill ha utförda och du har begränsad tid.
 
-TBD.
+Välj bland de uppdrag du har nedan. De som är märkta optionella kan du välja om du vill göra, de andra är obligatoriska.
+
+Utveckla och leverera enligt specifikation. Om information saknas så kan du själv tolka kravet, dokumentera hur du gör i redovisningstexten.
 
 Fråga i forumet om du känner dig osäker.
 
 
 
-Projektspecifikation {#projspec}
+Uppdrag analys {#analys}
 --------------------------------------------------------------------
 
-Utveckla och leverera enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
+Följande uppdrag rör analyser och de kan göras i grupp.
 
-De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och nå högre betyg.
+Analyserna lägger du tillsammans med dina andra analyser på me-sidan.
 
-Varje krav ger max 10 poäng, totalt 60 poäng.
+För varje analys skriver du en kort introduktion om hur du gjorde urvalet och hur du gick tillväga när du utförde analysen (din metod).
 
-
-
-###Förberedelser {#forbered}
-
-Styla upp din me-sida.
-
-Organisera moduler och LESS-kod.
-
-Snygga till analysen.
-
-Se till att ditt tema är responsivt.
-
-?vgrid & ?hgrid
+Du skriver också ett avslutande stycke där du summerar dina iakttagelser från anaysen.
 
 
 
+###Uppdrag 1: Analys usability (10p) {#k1}
 
-###Krav 1: Tema till konsultföretaget {#k1}
+**Herr Jakob Nilsson** har bett dig att göra en analys för att undersöka hur användarvänliga webbplatser är, baserat på de fem komponenter som anges i [Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability/).
+
+Du gör en sedvanlig analys och väljer ut 4 webbplatser som du känner till och själv ofta använder. Du poängsätter varje webbplats på respektive kritera och summerar totalen och sorterar sedan per totalen och utser en testvinnare.
+
+Lägg resultatet i `analysis/701_usability.md`.
+
+
+
+###Uppdrag 2: Analys skrivsätt (10p) (optionellt) {#k2}
+
+**Språkherren Engan Horas från Dahlen** har kontaktat dig och bett dig göra en språkanalys av webben. Du funderar på kriterier för gott språkbruk och väljer att skapa ditt eget regelverk baserat på "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+
+Du börjar med att definiera ditt eget regelverk, du väljer 4-5 viktiga regler och skriver ned dem.
+
+Du väljer ut fyra webbplatser som kännetecknas av text och artiklar. Du analyserar dessa webbplatser utifrån dina kriterier.
+
+Lägg resultatet i `analysis/702_write.md`.
+
+
+
+Uppdrag webbplats och tema {#webbplats}
+--------------------------------------------------------------------
+
+Följande uppdrag rör utveckling av webbplatser och teman och de skall göras individuellt.
+
+
+
+###Kunder {#kund}
+
+Du har tre potentiella kunder, du väljer att utveckla en webbplats, med tillhörande teman, till **en av dessa kunder**.
+
+
+
+####Kund 1 {#kund1}
 
 **Styrelseordförande Ludviga Af Solstråle** med kompanjoner, vill ha ett propert tema till deras *executive consulting high-end business company*. Det skall vara propert, gediget, andas slipsar, dyra kostymer, höga klackar och dyra klänningar. Du är inte 100% säker på vad de säljer, men dyrt verkar det vara, annars skulle de inte ha råd med sina dyra kostymer och klänningar.
 
 Du kan själv välja om du vill att företagets verksamhet skall vara advokater/jurister, managementkonsulter, eller annat.
 
-Skapa en testsida (`content/consult.md`) som är tänkt som webbplatsens förstasida. Låt sidan innehålla flertalet bilder (>5 bilder).
-
-Gör enligt [de krav som ställs på ett tema](#tema).
 
 
-
-###Krav 2: Tema till artisten {#k2}
+####Kund 2 {#kund2}
 
 **Artisten Art Ist**, som är *new and upcoming* inom sitt gebit, vill ha en webbplats och du löser det. Det skall vara nytt och fräsht, tidsenligt och det skall skapa intresse.
 
 Du kan själv välja om du vill att artisten skall vara ung/gammal, hålla på med trolleri eller musik och om det är fiol, harpa eller techno.
 
-Skapa en testsida (`content/artist.md`) som är tänkt som webbplatsens förstasida. Låt sidan innehålla flertalet bilder (>5 bilder).
 
-Gör enligt [de krav som ställs på ett tema](#tema).
 
+####Kund 3 {#kund3}
 
+**Egenföretagaren Bew Gorp**, har startat upp en egen verksamhet där hen hyr ut sig själv som webbprogrammerare/webbutvecklare/webbdesigner. Bew behöver en webbplats för att marknadsföra sig själv och sina utomordentliga färdigheter inom området.
 
-###Krav 3: Analys usability (grupp) {#k3}
+Du kan själv välja profil och inriktning på webbplatsen, men gör medvetna val som gynnar Bew's profil.
 
-**Herr Jakob Nilsson** har bett dig att göra en analys för att kolla hur användarvänliga webbplatser är, baserat på de fem komponenter som anges i [Usability 101: Introduction to Usability](https://www.nngroup.com/articles/usability-101-introduction-to-usability/).
 
-Du gör en sedvanlig analys och väljer ut 4 webbplatser som du själv använder ofta och känner till. Du poängsätter varje webbplats på respektive kritera och summerar totalen och sorterar sedan per totalen och utser en testvinnare.
 
-Lägg resultatet i (`analysis/703_usability.md`).
+###Uppdrag 3: Webbplats (10p) {#k3}
 
-Du kan lösa detta krav i grupp.
+Skapa en ny webbplats till din kund, spara i en helt ny katalog `me/proj` i kursrepot.
 
+Använd Anax Flat som grund. Du kan använda din egen variant av Anax Flat, eller en helt ny installation av Anax Flat. Välj väg.
 
+Beskriv i redovisningstexten hur du gör och varför du valde det sättet.
 
-###Krav 4: Analys skrivsätt (grupp) (optionellt) {#k4}
+Webbplatsen skall bestå av en förstasida (minst två kolumner), en about-sida och en blogg med minst tre blogginlägg.
 
-**Språkherren Engan Horas från Dahlen** har kontaktat dig och bett dig göra en språkanalys av webben. Du funderar på kriterier för gott språkbruk och väljer att skapa ditt eget regelverk baserat på "[Skriva för webben](https://www.iis.se/lar-dig-mer/guider/hur-man-skriver-for-webben/)".
+Varje sida skall ha en flash-region med en bild.
 
-Du börjar med att definiera ditt eget regelverk, du väljer 4-5 viktiga regler.
+Headern skall ha en egen logo och en favicon.
 
-Du väljer ut fyra webbplatser som har mycket artiklar och analyserar dem utifrån dina kriterier.
+Footern skall innehålla de standardsidor som följer med Anax Flat, inklusive de tre footer-kolumnerna.
 
-Du sammanfattar dina egna generella slutsatser från analysen.
+Menyn skall länka till about och bloggen.
 
-Lägg resultatet i (`analysis/707_write.md`).
+Innehållet skall vara relevant, lagom mycket och bildrikt (använd cimage). Skriv text som gynnar företagets profil, kopiera gärna, men inte Lorem Ipsum.
 
-Du kan lösa detta krav i grupp.
+Webbplatsen skall vara responsiv.
 
+I about-sidan lägger du in information om kunden, så som du tolkat kundens önskemål, kundens verksamhet och hur kunden vill att webbplatsen skall se ut och användas. Det blir din egen formulering och tolkning av kundens krav.
 
 
-###Krav 5: Tema till dbwebb (optionellt) {#k5}
 
-Grundaren till webbplatsen dbwebb.se har konsulterat dig och bett om ett tema som andas webbprogrammering/programmering, utbildning, öppen källkod och community.
+###Uppdrag 4: Tema (10p) {#tema}
 
-Du chockar honom med din syn på saken i form av ett hyffsat väl genomarbetat och användarvänligt tema.
+Använd ditt anax flat theme för att bygga temat.
 
-Gör enligt [de krav som ställs på ett tema](#tema).
+Webbplatsen skall initialt ha ett bastema som är enkelt att anpassa.
 
+Lägg till ett tema som är anpassat till kunden. Gör detta temat till standardtema.
 
+Temaväljaren skall användas och visa båda temana.
 
-###Krav 6: LESS moduler (optionellt) {#k6}
+Temat skall använda gridbaserat layout, vertikalt som horisontellt.
 
-1. Förklara din bakomliggande struktur av LESS-koden. Berätta hur du valt att strukturera koden och förklara varför det är en god uppdelning.
+Testsidor för gridet skall fungera via `?vgrid` och `?hgrid`.
 
-1. Du har också valt att lägga extra kraft på minst två LESS modulerna. Välj två eller tre av dessa moduler och förklara vad du gjort och länka till exempel som tydligt påvisar hur de används. 
+Temat skall fungera responsivt.
 
+Skapa sidor som motsvarar länkarna `theme/base` och `theme/custom` där du beskriver dina två teman enligt följande.
 
+* Beskriv färgprofilen, typografin, designprinciper och designelement som du använt.
+* Bifoga en snapshot på temat.
 
-###Krav på teman {#teman}
+Lös ovan sidor via samma content-struktur som du använder för din redovisningssida och dina analyser.
 
-När du gör ett tema, se till att göra och förklara följande.
+Länk till tema-sidan `theme/` skall finnas i navbaren. Glöm inte länka till tema-väljaren.
 
-* Bygg temat i din temaväljare.
-* Beskriv färgprofilen, typografin, designprinciper och designelement som du använt och förklara hur det gynnar ditt tema.
-* Skapa en testsida som är tänkt som webbplatsens förstasida.
-* Skriv text som gynnar företagets profil, kopiera gärna, men inte Lorem Ipsum.
 
-* Grid layout vertikalt som horisontellt
-* Responsivt
 
+###Uppdrag 5: Tema alternativt (10p) (optionellt) {#tema}
 
+Du gör ytterligare ett tema till kunden, ett alternativt tema.
 
-###Krav 1, 2, 3: Grunden {#k1}
+I detta tema förändrar du färgprofilen, typografin, designprinciper och designelement.
 
-<!--
-utöka/förändra urvalet av webbplatser och jobba igenom undersökningarna igen.
+Du använder också, till viss del, en annan layout än i tidigare tema, se till att de båda teman mixar regioner mellan 100% i bredd och en fast min-width. 
 
-egen favicon
+Beskriv detta alternativa tema i `theme/alternative`.
 
-tre teman.
-företag, artist, webbprogrammerare
-?vgrid
-?hgrid
 
-direktlänk till tema och landningssida
 
-egen logo
+###Uppdrag 6: Förklara strukturen kring temat (10p) (optionellt) {#k6}
 
-extra tema till dbwebb?
-m infodok
+Lägg till en sida för länken `theme/architecture` och förklara strukturen bakom din teman.
 
-thheme selector med cookie
+1. Förklara struktur av LESS-koden. Berätta hur du valt att strukturera koden och förklara varför det är en god uppdelning.
 
-analys skriva för webben
+1. Berätta vilka moduler du har och förklara kort vad de gör.
 
-gå igenom analyserna gjorda.
-
-egna stylade LESS moduler
-
-beskriv strukturen på teman och LESS modulerna
-
-analys användbarhet 101
-analys color contrast
-
-
-paper om programmeringserfarenhet
-paper om att rätta och inte räTitta
--->
-
-<!-- gå tillbaka till analysis color och fixa till bilderna -->
-
-<!--
-Designa webbplats utifrån bild.
-
-(Funktionsanpassad webbplats)
-4. Usablity undersökning ala Wellness.
-
-(logo)
-
--->
-
-
-
-###Krav 4:  (optionell) {#k4}
-
-
-
-
-###Krav 5:  (optionell) {#k5}
-
-
-
-###Krav 6:  (optionell) {#k6}
-
+1. Du har valt att lägga extra kraft på minst två LESS modulerna. Välj två eller tre av dessa moduler och förklara vad du gjort och bifoga/länka till exempel som tydligt påvisar hur de används.
 
 
 
