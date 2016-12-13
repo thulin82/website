@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    2016-12-13: (B, mos) Använd cimage med snygga länkar via htaccess.
     2016-12-12: (A, mos) Första utgåvan.
 ...
 Kmom10: Projekt och examination
@@ -126,7 +127,7 @@ Footern skall innehålla de standardsidor som följer med Anax Flat (license, co
 
 Menyn skall länka till about och bloggen.
 
-Innehållet skall vara relevant, lagom mycket och bildrikt (använd cimage). Skriv text som gynnar företagets profil, kopiera gärna, men inte Lorem Ipsum.
+Innehållet skall vara relevant, lagom mycket och bildrikt (använd cimage med snygga länkar via htaccess). Skriv text som gynnar företagets profil, kopiera gärna, men inte Lorem Ipsum.
 
 Webbplatsen skall vara responsiv.
 
