@@ -1,9 +1,10 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
-    "2016-05-25": (PA, aar) Pre-release.
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-06-01": (PA, lew) Pre-release.
+    "2016-05-25": (PA, aar) Pre-release.
+    "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
 ...
@@ -91,14 +92,14 @@ Dessa uppgifter skall utföras och redovisas.
 
 4. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 
-5. Skapa din me-sida version 2 i kmom02/flask2 genom att kopiera kmom01/flask och därefter göra eventuella uppdateringar som du själv bestämmer.  
+5. Uppdatera din me-sida till version 2 i me/flask. Gör eventuella uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext.  
 
 6. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate flask2
-dbwebb publish flask2
+dbwebb validate flask
+dbwebb publish flask
 ```
 
 
@@ -120,7 +121,7 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Är du bekant med UML sedan tidigare?  
 * Är du bekant med unittester sedan tidigare?
-* Gjorde du nån uppdatering av me-sidan? Om ja - vad gjorde du?
+* Vad gjorde du för uppdatering på me-sidan?
 * Kan du se nyttan med UML och tester ur projektsynpunkt?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Gjorde du extrauppgiften?

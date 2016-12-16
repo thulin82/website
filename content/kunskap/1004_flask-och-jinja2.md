@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-16": (PB, lew) Fixed misspelling.
     "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
@@ -40,8 +41,8 @@ Vi börjar med att kopiera in mappen och skapa en header och en footer:
 
 ```python
 # Ställ dig i roten av kursrepot
-cp -ri me/kmom01/me_app/ me/kmom03/me_app2/
-cd me/kmom03/me_app2
+cp -ri me/kmom01/my_app/ me/kmom03/my_app2/
+cd me/kmom03/my_app2
 touch templates/header.html templates/footer.html
 ```
 

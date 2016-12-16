@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
@@ -73,7 +74,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bokningssystem](uppgift/bokningssystem)"  
 
-2. Skapa din me-sida version 6 i kmom06/flask6 genom att kopiera kmom05/flask5 och därefter göra eventuella uppdateringar som du själv bestämmer.  
+2. Skapa din me-sida version 6-ish. Gör eventuella uppdateringar som du själv bestämmer.  
 
 3. Fyll på redovisning.html med kursmomentets redovisningstext.
 
@@ -95,6 +96,7 @@ Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Gick det bra att hantera många klasser?
+* Vad gjorde du för uppdateringar av me-sidan?
 * Kunde du använda kunskaper från förra Python-kursen?  
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?

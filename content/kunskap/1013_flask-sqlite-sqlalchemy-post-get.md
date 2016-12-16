@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-16": (PB, lew) Updated some instructions.
     "2016-04-19": (PA, lew) Pre-release.
 category:
     - oopython
@@ -22,7 +23,7 @@ Vill vi däremot inte att datan, eller informationen vi skickar, ska synas, så 
 
 [Läs mer om POST och GET](http://www.w3schools.com/tags/ref_httpmethods.asp).
 
-Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans med Python, Flask och SQLAlchemy. Innan vi börjar flyttar vi in cars.sqlite och flask-appen in i en ny mapp.
+Vi ska som sagt gå igenom båda två och se hur de kan användas tillsammans med Python, Flask och SQLAlchemy. Vill du hänga med och koda själv redan nu, kopierar du in cars.sqlite och flask-appen (me/flask) in i en ny mapp på valfritt ställe. Filerna vi använder är:
 
 [FIGURE src=/image/oopython/kmom04/tree_flask2.png]
 

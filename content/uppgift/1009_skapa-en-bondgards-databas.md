@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
@@ -32,16 +33,14 @@ Du ska skapa 3 tabeller i SQLite Manager. Tabellerna ska fyllas med data enligt 
 Krav {#krav}
 -----------------------
 
-Kopiera din me-sida från föregående kursmoment och utgå från den koden.
+Bygg vidare på din me-sida, me/flask.
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -ri kmom03/flask3/* kmom04/flask4/
-cd kmom04/flask4
+cd me/flask
 ```
 
-1. Skapa en databasfil med namnet "farm.sqlite"
+1. Skapa en databasfil med namnet "farm.sqlite". Filen ska ligga i `me/flask/db/`
 
 2. Skapa en tabell med namnet "humans" och kolumnerna:  
     * id (unik, auto-increment)  
@@ -66,12 +65,12 @@ Fyll på _animals_ med minst 10 djur.
 
 Fyll på _vehicles_ med minst 3 olika typer av fordon.  
 
-5. Spara databasfilen i `kmom04/flask4/db`.
+5. Se till så att databasfilen ligger i `kmom04/flask4/db`.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate flask4
-dbwebb publish flask4
+dbwebb validate flask
+dbwebb publish flask
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

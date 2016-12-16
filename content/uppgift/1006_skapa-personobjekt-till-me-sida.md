@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
@@ -30,13 +31,11 @@ För att kunna styra innehållet i me-sidan på ett smidigt sätt, bygger vi ut 
 Krav {#krav}
 -----------------------
 
-Kopiera din me-sida från föregående kursmoment och utgå från den koden.
+Jobba vidare med din me-sida, me/flask. 
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me
-cp -ri kmom02/flask2/* kmom03/flask3/
-cd kmom03/flask3
+cd me/flask
 ```
 
 1. Skapa filen "person.py", vilken ska innehålla din personklass.
@@ -52,16 +51,16 @@ cd kmom03/flask3
 
 4. Bygg om din sida så du använder Jinja2 och återanvänder din header och footer.  
 
-5. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till person.png Bifoga diagrammet i mappen Flask3/  
+5. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till person.png och lägg den i mappen flask/  
 
-6. Använd `pydoc` för att skapa en html-sida. Döp filen till person.html i formatet .png. Bifoga filen i mappen Flask3/
+6. Använd `pydoc` för att skapa en html-sida. Döp filen till person.html i formatet .png. Lägg filen filen i mappen flask/
 
 
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate flask3
-dbwebb publish flask3
+dbwebb validate flask
+dbwebb publish flask
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
