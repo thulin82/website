@@ -99,7 +99,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v2/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
@@ -108,7 +108,3 @@ Se till att följande frågor besvaras i texten:
 * Hur känns det att jobba med `img.php`, ett bra verktyg i din verktygslåda?
 * Detta var sista kursmomentet innan projektet, hur ser du på ditt Anax nu, en summering så här långt? 
 * Finns det något du saknar så här långt, kanske några moduler som du känner som viktiga i ditt Anax?
-
-
-
-

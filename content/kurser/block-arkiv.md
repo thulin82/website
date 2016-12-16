@@ -4,4 +4,5 @@ Följande kurser är [arkiverade](kurser/arkiv), de har utgått och är ersatta 
 
 * [htmlphp v1](htmlphp-v1)
 * [oophp v1](oophp-v1)
+* [phpmvc v1](phpmvc-v1)
 * [webtopic](webtopic)

@@ -1,8 +1,7 @@
 ---
 author: mos
 revision:
-  "2015-10-29": (C, mos) Bort med gamla slides, info om redovisning i egen sida, lade
-    till dbwebb-cli och kursrepo.
+  "2015-10-29": (C, mos) Bort med gamla slides, info om redovisning i egen sida, lade till dbwebb-cli och kursrepo.
   "2013-11-11": (B, mos) Lade till föreläsningsmaterial från campuskursen ht13.
   "2013-08-13": (A, mos) Första utgåvan inför version 2 av kursen oophp inför ht13.
 ...
@@ -71,7 +70,7 @@ Det finns inga extra lästips.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](oophp/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](kurser/oophp-v2/labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `oophp`](dbwebb-cli/clone).
 
@@ -106,7 +105,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. **Gör din egen webbmall likt Anax**. Gör precis som i övningen eller gör efter eget huvud. Du kan hoppa över delen med JavaScript. I resten av kursen kommer du att använda och bygga ut din webbmall så se till att göra en bra grund. Övningarna i kursen kommer att bygga på den struktur som används i Anax så håll dig helst till den. Är du erfaren kan du ta lite extra svängar men annars gör du likt Anax. Kravet är dock att du namnger din webbmall med ett eget namn, *byt ut Anax på alla platser det förekommer*.
 
-2. **Gör en me-sida** som baseras på din webbmall. Gör en förstasida som presenterar dig själv och gör en redovisningssida där du samlar alla dina redovisningstexter i kursen. Skapa en dynamisk huvudmeny (likt övningen) och lägg in länkar till sidorna samt en länk till att visa källkoden med `source.php`. Du kan [tjuvkika hur jag gjort](oophp/me/kmom01/me.php).
+2. **Gör en me-sida** som baseras på din webbmall. Gör en förstasida som presenterar dig själv och gör en redovisningssida där du samlar alla dina redovisningstexter i kursen. Skapa en dynamisk huvudmeny (likt övningen) och lägg in länkar till sidorna samt en länk till att visa källkoden med `source.php`. Du kan [tjuvkika hur jag gjort](kurser/oophp-v2/me/kmom01/me.php).
 
 3. **Lägg till funktionen `dump()` i ditt Anax** (`src/bootstrap.php` är en bra plats). Funktionen är utmärkt för felsökning. Du hittar funktionen i [guiden php20](kunskap/kom-i-gang-med-php-pa-20-steg).
 
@@ -125,7 +124,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v2/redovisa).
 
 Se till att följande frågor besvaras i texten:
 

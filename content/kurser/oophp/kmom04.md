@@ -102,14 +102,10 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v2/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
 * Hur kändes det att jobba med PHP PDO?
 * Gjorde du guiden med filmdatabasen, hur gick det?
 * Du har nu byggt ut ditt Anax med ett par moduler i form av klasser, hur tycker du det konceptet fungerar så här långt, fördelar, nackdelar?
-
-
-
-
