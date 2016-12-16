@@ -1,9 +1,10 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
-    "2016-05-25": (PA, aar) Pre-release.
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-06-01": (PA, lew) Pre-release.
+    "2016-05-25": (PA, aar) Pre-release.
+    "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
 ...
