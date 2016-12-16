@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-04-12": (PA, lew) Pre-release.
 category:
     - python
@@ -30,7 +31,7 @@ Nu är det dags att presentera databasen "farm.sqlite" och dess tabeller på din
 Krav {#krav}
 -----------------------
 
-Utgå ifrån mappen "/kmom04/flask4" och fortsätt arbeta med den.
+Du har databasen i `me/flask/db` så fortsätt arbeta med den och din me-sida.
 
 1. Skapa en ny flik i din navbar där presentationen ska visas, tex "Bondgård".
 
@@ -47,10 +48,10 @@ Utgå ifrån mappen "/kmom04/flask4" och fortsätt arbeta med den.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate flask4
+dbwebb validate flask
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. Glöm inte att göra `dbwebb publish flask4`.
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. Glöm inte att göra `dbwebb publish flask`.
 
 
 
