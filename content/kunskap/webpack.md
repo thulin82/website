@@ -11,7 +11,7 @@ category:
 Installera Webpack
 ===================================
 
-[FIGURE src=https://camo.githubusercontent.com/c6ddd9ff94ce584804e95bb55b3f2416dd553843/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313336353838312f313931383337372f34383062326664362d376462632d313165332d386261302d3733346661663331353962382e706e67 class="right"]
+[FIGURE src=image/snapht16/webpack-logo.png?w=c5 class="right"]
 
 Vi skall installera ett byggverktyg för JavaScript.
 
