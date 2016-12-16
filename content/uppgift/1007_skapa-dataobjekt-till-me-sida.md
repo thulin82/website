@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
@@ -43,7 +44,7 @@ cp -ri kmom02/flask2/ kmom03/flask3/
 cd kmom03/flask3
 ``` -->  
 
-Färdig? Bra. Då kan vi fortsätta i mappen kmom03/flask3:  
+Färdig? Bra. Då kan vi fortsätta i mappen me/flask:  
 
 1. Skapa filen "my_data.py", vilken ska innehålla din dataklass.
 
@@ -55,15 +56,15 @@ Färdig? Bra. Då kan vi fortsätta i mappen kmom03/flask3:
 
 3. Använd ditt objekt i din me-sida  
 
-6. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till data.png. Bifoga diagrammet i mappen flask3/  
+6. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till data.png. Spara diagrammet i mappen flask/  
 
-7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html i formatet .png. Bifoga filen i mappen flask3/
+7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html i formatet .png. Lägg filen i mappen flask/
 
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate flask3
-dbwebb publish flask3
+dbwebb validate flask
+dbwebb publish flask
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
