@@ -1,6 +1,6 @@
 ---
 author: mos
-updated: "2016-05-02 09:00:00"
+updated: "2016-12-19"
 ...
 Automatiserade tester på Travis
 ==================================
@@ -26,6 +26,7 @@ Så här ser nuvarande status ut för de senaste testerna som körts på Travis 
 | [oophp](https://github.com/dbwebb-se/oophp) | [![Build Status](https://travis-ci.org/dbwebb-se/oophp.svg?branch=master)](https://travis-ci.org/dbwebb-se/oophp) | [![CircleCI](https://circleci.com/gh/dbwebb-se/oophp.svg?style=svg)](https://circleci.com/gh/dbwebb-se/oophp) |
 | [phpmvc](https://github.com/dbwebb-se/phpmvc) | [![Build Status](https://travis-ci.org/dbwebb-se/phpmvc.svg?branch=master)](https://travis-ci.org/dbwebb-se/phpmvc) | [![CircleCI](https://circleci.com/gh/dbwebb-se/phpmvc.svg?style=svg)](https://circleci.com/gh/dbwebb-se/phpmvc) |
 | [webgl](https://github.com/dbwebb-se/webgl) | [![Build Status](https://travis-ci.org/dbwebb-se/webgl.svg?branch=master)](https://travis-ci.org/dbwebb-se/webgl) | [![CircleCI](https://circleci.com/gh/dbwebb-se/webgl.svg?style=svg)](https://circleci.com/gh/dbwebb-se/webgl) |
+| [dbjs](https://github.com/dbwebb-se/dbjs) | [![Build Status](https://travis-ci.org/dbwebb-se/dbjs.svg?branch=master)](https://travis-ci.org/dbwebb-se/dbjs) | [![CircleCI](https://circleci.com/gh/dbwebb-se/dbjs.svg?style=svg)](https://circleci.com/gh/dbwebb-se/dbjs) |
 | [javascript](https://github.com/dbwebb-se/javascript) | [![Build Status](https://travis-ci.org/dbwebb-se/javascript.svg?branch=master)](https://travis-ci.org/dbwebb-se/javascript) | [![CircleCI](https://circleci.com/gh/dbwebb-se/javascript.svg?style=svg)](https://circleci.com/gh/dbwebb-se/javascript) |
 
 
