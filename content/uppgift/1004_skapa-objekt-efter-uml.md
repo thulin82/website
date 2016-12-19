@@ -1,9 +1,10 @@
 ---
 author: lew
 revision:
+    "2016-12-19": (PA, lew) New assignment.
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
 Skapa objekt efter UML-diagram
 ===================================
@@ -23,15 +24,12 @@ Du har läst artiklarna: "[Vad är UML?](kunskap/vad-ar-uml)" och "[Kom igång m
 Introduktion {#intro}
 -----------------------
 
-Du ska skapa klass-filer för respektive klass i diagrammet. Spara alla filerna i mappen kmom02/minizoo som ligger i kursrepot. Var noga med att döpa filerna, variablerna och metoderna enligt anvisningarna i diagrammet.
+Du ska skapa klass-filer för respektive klass i diagrammet. Spara alla filerna i mappen kmom02/deck som ligger i kursrepot. Var noga med att döpa filerna, variablerna och metoderna enligt anvisningarna i diagrammet. Det handlar om att skapa en komplett kortlek.
 
 För filerna använder du namnen:  
-1. mini_zoo.py  
-2. animal.py  
-3. house.py  
-4. bird.py  
-5. fish.py  
-6. mammal.py  
+1. deck.py  
+2. suit.py  
+3. card.py    
 
 Använd sedan en fil kallad "main.py" för att skapa objekt och testa koden.  
 
@@ -45,8 +43,8 @@ Starta med att skapa filerna:
 
 ```bash
 # Ställ dig i kurskatalogen
-cd me/kmom02/minizoo
-touch mini_zoo.py animal.py house.py bird.py fish.py mammal.py main.py
+cd me/kmom02/deck
+touch deck.py suit.py card.py main.py
 ```
 
 1. Namngivning ska ske enligt diagrammet
@@ -54,15 +52,15 @@ touch mini_zoo.py animal.py house.py bird.py fish.py mammal.py main.py
 2. Metoderna `get_*` ska returnera en sträng utifrån listan
 
 3. I varje klass ska det finnas en överlagrad `__str__()`-metod som skriver ut allt om objektet på ett godtyckligt sätt. Relationerna ska stämma med diagrammet ovan.  
-    * `animal` ska skriva ut information om sig själv.  
-    * `house` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla djur i listan.  
-    * `mini_zoo` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla hus i listan.  
+    * `card` ska skriva ut information om sig själv samt vilken färg (suit) det tillhör.  
+    * `suit` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i sin lista.  
+    * `deck` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i varje färg, hela kortleken.  
 
-4. I din main.py ska du skapa ett mini-zoo med minst 3 hus med minst 3 djur i varje. Om ditt mini-zoo heter My_zoo avsluta med: `print(My_zoo)`.  
+4. I din main.py ska du skapa en kortlek med 4 färger och 52 kort. Döp din kortlek till `DeckOfCards` och avsluta med: `print(DeckOfCards)`.  
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate minizoo
+dbwebb validate deck
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
