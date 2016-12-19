@@ -31,9 +31,9 @@ Förutsättning {#pre}
 
 Du har arbetat dig igenom följande artiklar, och har en mer än grundläggande förståelse för JavaScript som inkluderar callbacks, objekthantering, objektorientering samt grundläggande kunskap om MVC. Du har en fungerande installation av Webpack.
 
-* [Labbmiljön Webpack](labbmiljo/webpack)
-* [Grunderna i JavaScript](kunskap/javascript-argh-maste-jag)
-* [Mithril och MVC](kunskap/kom-igang-med-ramverket-mithril-for-javascript-spa)
+* [Labbmiljön Webpack](kunskap/installera-webpack)
+* [Programmering med grunderna i JavaScript](kunskap/programmering-med-grunderna-i-javascript)
+* [Kom igång med ramverket Mithril för JavaScript SPA](kunskap/kom-igang-med-ramverket-mithril-for-javascript-spa)
 
 
 
