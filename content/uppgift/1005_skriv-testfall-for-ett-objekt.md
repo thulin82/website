@@ -1,11 +1,12 @@
 ---
 author: lew
 revision:
+    "2016-12-19": (PA, lew) new assignment.
     "2016-04-12": (PA, lew) Pre-release.
 category:
-    - python
+    - oopython
 ...
-Skriv testfall för ditt mini-zoo
+Skriv testfall för din kortlek
 ===================================
 
 Vi ska skapa en fil som går igenom klasserna och unittestar dem.
@@ -35,9 +36,9 @@ Kopiera din kod från föregående uppgift och utgå från den koden.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom02/minizoo/*.py kmom02/test/
+cp -ri kmom02/deck/*.py kmom02/test/
 cd kmom02/test
-touch test_zoo.py
+touch test_deck.py
 ```
 
 1. Kopiera in koden från `main.py` där du skapat objekt.
