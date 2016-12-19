@@ -181,10 +181,19 @@ Redirect /kurser/javascript1/repo   /repo/javascript1
 
 
 
+#
 # Program Webbprogrammering 120/180 studieplan & lektionsplan
+#
+
+# Rekommenderad studieplan
 Redirect /program/webbprogrammering/studieplan/termin1 https://goo.gl/pqvkaj
+Redirect /program/webbprogrammering/studieplan/termin2 https://goo.gl/axc1bk
+
+# Lektionsplaner
 Redirect /program/webbprogrammering/lektionsplan/lasperiod1 https://goo.gl/av2XHO
 Redirect /program/webbprogrammering/lektionsplan/lasperiod2 https://goo.gl/HW07CY
+Redirect /program/webbprogrammering/lektionsplan/lasperiod3 https://goo.gl/rn1XAm
+Redirect /program/webbprogrammering/lektionsplan/lasperiod4 https://goo.gl/cBjslv
 
 
 
