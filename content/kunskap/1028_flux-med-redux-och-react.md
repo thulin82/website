@@ -1,7 +1,7 @@
 ---
 author: ceruza
 revision:
-    2016-12-11: (A, ceruza) Första Versionen
+    2016-12-19: (A, ceruza) Första Versionen
 category:
     - react
     - javascript
@@ -19,6 +19,8 @@ Flux med Redux och React
 I den här artikeln behandlas arkitekturen Flux och dess skillnader gentemot arkitekturen MVC identifieras och diskuteras. Vi tittar på ett case som beskriver varför Flux skapades och använder det som grund för att förklara vilka användningsområden den arkitekturen är mest lämpad för.
 
 Artikeln börjar med en återkoppling till MVC och dess styrkor, därefter fortsätter den med att behandla Flux, en ny arkitektur. Därefter rundas den teoretiska delen av med en genomgång av en implementation av Flux med biblioteken Redux och React.
+
+<!--more-->
 
 Avslutningsvis bygger vi upp en utvecklingsmiljö med Webpack och skriver ett enkelt program som visar på hur arkitekturen fungerar.
 
@@ -476,4 +478,4 @@ Sammanfattning {#sammanfattning}
 
 Flux är en arkitektur som löser en del problem MVC har när det gäller att vidareutveckla din applikation. Genom att implementera ett enkelriktat dataflöde är det lätt att resonera kring din kod. En vanlig implementation av Flux är med hjälp av biblioteken Redux + React. Flux passar bäst när du har en applikation vars data varierar över tid, men även om du behöver lägga till funktionalitet i en kontinuerligt växande applikation. Ett bra sätt att utveckla med React + Redux är Webpack och Babel.
 
-Det finns en forumtråd där du kan [ställa frågor och ge tips och tricks](t/) om denna artikel.
+Det finns en forumtråd där du kan [ställa frågor och ge tips och tricks](t/6049) om denna artikel.

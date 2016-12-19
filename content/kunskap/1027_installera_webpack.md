@@ -1,7 +1,7 @@
 ---
 author: ceruza
 revision:
-    2016-12-13: (A, ceruza) Första utgåvan.
+    2016-12-19: (A, ceruza) Första utgåvan.
 category:
     - labbmiljo
     - javascript
@@ -16,6 +16,8 @@ Installera Webpack
 Vi skall installera ett byggverktyg för JavaScript.
 
 Miljön innebär att du kan transpilera olika dialekter av JavaScript, exempelvis ES2015 som i skrivande stund är den senaste versionen av JavaScript, till ES5 så att det kan köras i din webbläsare. 
+
+<!--more-->
 
 
 
@@ -61,4 +63,4 @@ Om Webpack installerats korrekt kan du se vad du kan göra med Webpack.
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det finns en [forumtråd om Webpack](t/5801). Ställ frågor där och dela med dig av dina tips och trix.
+Det finns en [forumtråd om Webpack](t/6048). Ställ frågor där och dela med dig av dina tips och trix.
