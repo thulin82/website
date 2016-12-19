@@ -105,7 +105,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v2/redovisa).
 
 Se till att följande frågor besvaras i texten:
 

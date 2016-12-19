@@ -1,12 +1,10 @@
 ---
 author: mos
 revision:
-  "2015-11-10": (F, mos) Tog bort äldre slides, flyttade info om redovisning till
-    egen sida.
+  "2015-11-10": (F, mos) Tog bort äldre slides, flyttade info om redovisning till egen sida.
   "2013-11-18": (E, mos) Kompletterade med föreläsningsmaterial från ht13.
   "2013-11-12": (D, mos) Guiden oophp består nu av 20 steg.
-  "2013-09-18": (C, mos) Ändrade från två obligatoriska uppgifter till att välja en
-    av två.
+  "2013-09-18": (C, mos) Ändrade från två obligatoriska uppgifter till att välja en av två.
   "2013-08-16": (B, mos) Mindre justering om uppgifter som tog bort valbara krav.
   "2013-08-14": (A, mos) Första utgåvan.
 ...
@@ -86,7 +84,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v2/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
@@ -94,7 +92,3 @@ Se till att följande frågor besvaras i texten:
 * Jobbade du igenom oophp20-guiden eller skumläste du den?
 * Berätta om hur du löste uppgiften med tärningsspelet 100, hur tänkte du och hur gjorde du, hur organiserade du din kod?
 * Berätta om hur du löste uppgiften med Månadens Babe, hur tänkte du och hur gjorde du, hur organiserade du din kod?
-
-
-
-

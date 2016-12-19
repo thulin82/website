@@ -3,28 +3,37 @@ title: oophp
 
 author: mos
 revision:
-  "2015-03-02": (M, mos) Uppdatering av referenslitteraturen, la till mål och förkunskapskrav.
-  "2015-01-09": (L, mos) Länk till studieplan.
-  "2013-10-22": (K, mos) Uppdaterad i samband med att php version 2 är klar.
-  "2013-10-15": (J, mos) Uppdaterad med kmom06 klart.
-  "2013-09-30": (I, mos) Uppdaterad med kmom05 klart.
-  "2013-08-14": (H, mos) Släppt med kmom02 klart.
-  "2013-08-13": (G, mos) V2. Uppdaterad till version 2 av kursen. Nya kursmoment och
-    större genomarbetning, för-release som innehåller kmom01.
-  "2013-08-12": (F, mos) Ny kurskod DV1485 ersätter DV1127.
-  "2012-08-29": (E, mos) Uppdaterad och genomgången inför kursstart ht12, flyttad
-    från google doc till lydia.
-  "2010-01-11": (D, mos) Lade till 400 tecken, uppdaterad inför våren 2010.
-  "2009-10-12": (C, mos) Justering av kursmoment 06.
-  "2009-09-28": (B, mos) Mindre justering av kursmoment 05.
-  "2009-08-31": (A, mos) Första utgåvan.
+    "2016-12-16": (N, mos) Notis om att kursen upphör och ny version utvecklas.
+    "2015-03-02": (M, mos) Uppdatering av referenslitteraturen, la till mål och förkunskapskrav.
+    "2015-01-09": (L, mos) Länk till studieplan.
+    "2013-10-22": (K, mos) Uppdaterad i samband med att php version 2 är klar.
+    "2013-10-15": (J, mos) Uppdaterad med kmom06 klart.
+    "2013-09-30": (I, mos) Uppdaterad med kmom05 klart.
+    "2013-08-14": (H, mos) Släppt med kmom02 klart.
+    "2013-08-13": (G, mos) V2. Uppdaterad till version 2 av kursen. Nya kursmoment och större genomarbetning, för-release som innehåller kmom01.
+    "2013-08-12": (F, mos) Ny kurskod DV1485 ersätter DV1127.
+    "2012-08-29": (E, mos) Uppdaterad och genomgången inför kursstart ht12, flyttad från google doc till lydia.
+    "2010-01-11": (D, mos) Lade till 400 tecken, uppdaterad inför våren 2010.
+    "2009-10-12": (C, mos) Justering av kursmoment 06.
+    "2009-09-28": (B, mos) Mindre justering av kursmoment 05.
+    "2009-08-31": (A, mos) Första utgåvan.
 ...
-Kursen "oophp"
+Kursen "oophp" version 2
 ==================================
 
 Kursen **Databaser och objektorienterad programmering i PHP**, a.k.a. *oophp*, fokuserar på objektorienterad programmering med PHP tillsammans med databasen MySQL.
 
 <!--more-->
+
+[WARNING]
+**Kursen arkiverad.**
+
+Sista kurstillfället på denna versionen av kursen, oophp-v2, gavs vårterminen 2016.
+
+Kursen är öppen för restexamination fram till och med vårterminen 2018.
+
+Kursen ersätts med en vidarutvecklad version, [oophp-v3](kurser/oophp-v3), från och med vårterminen 2017.
+[/WARNING]
 
 Kursen hanterar objektorienterade programmeringstekniker i PHP med fokus mot webbprogrammering och webbutveckling av webbapplikationer och webbplatser.
 
@@ -113,7 +122,7 @@ Kom igång med PHP som ett programmeringsspråk och skaffa dig en grund att stå
 
 Du får också en genomgång i hur du kan bygga en strukturerad webbplats med en tanke och en plan bakom katalogstrukturen. Detta är något som är bra att ha med sig. Även om vårt huvudfokus är objektorienterad PHP-programmering och databaser så är vi i en webbmiljö och allt som krävs för att den miljön skall fungera måste ha sin plats. Det handlar om HTML-kod, stylesheets och CSS och det som gör en färdig webbplats. En struktur att hålla sig i gör att vi kan fokusera mer på programmeringen.
 
-Läs [instruktionen till kursmoment 01](oophp/kmom01).
+Läs [instruktionen till kursmoment 01](kurser/oophp-v2/kmom01).
 
 
 
@@ -121,7 +130,7 @@ Läs [instruktionen till kursmoment 01](oophp/kmom01).
 
 Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment blir du introducerad till objektorienterad programmering i PHP. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Om du redan kan ett annat objektorienterat programmeringsspråk så kommer du att känna igen samma konstruktioner i PHP. Om du är ny så får du steg för steg gå igenom grunderna i objektorientering och det finns flera övningsprogram som du skall skriva för att komma igång.
 
-Läs [instruktionen till kursmoment 02](oophp/kmom02).
+Läs [instruktionen till kursmoment 02](kurser/oophp-v2/kmom02).
 
 
 
@@ -129,7 +138,7 @@ Läs [instruktionen till kursmoment 02](oophp/kmom02).
 
 Så, nu har vi koll på PHP och grunderna i objektorienterad PHP, då går vi vidare till databasen MySQL och dess olika klienter samt en introduktion i frågespråket SQL. Du får jobba igenom en övning i SQL som tar dig från de enklare konstruktionerna till svårare saker som subqueries och `RIGHT/LEFT OUTER JOIN`. Innan den övningen så har du bekantat dig med MySQL, både i din egna utvecklingsmiljö och i BTH's labbmiljö.
 
-Läs [instruktionen till kursmoment 03](oophp/kmom03).
+Läs [instruktionen till kursmoment 03](kurser/oophp-v2/kmom03).
 
 
 
@@ -137,14 +146,14 @@ Läs [instruktionen till kursmoment 03](oophp/kmom03).
 
 Så här långt har du lärt dig om objektorienterad PHP och databasen MySQL. Nu skall du koppla ihop dessa till en databasdriven webbapplikation genom att använda PHP's gränssnitt för databaser PHP PDO. Du får jobba igenom en guide där du bygger upp en filmdatabas med ett webbgränssnitt där du kan redigera information om filmer och söka ut dem. När du jobbar i guiden så kommer du att stöta på och lösa de vanliga problemen som en sådan applikation innebär. När du är klar så har du ett fungerande exempel som du kan använda som bas för kommande webbapplikationer. Om du tittar noga så kan du se likheten mellan till exempel en webbshop och din filmdatabas, rent tekniskt är det samma grunder i båda.
 
-Läs [instruktionen till kursmoment 04](oophp/kmom04).
+Läs [instruktionen till kursmoment 04](kurser/oophp-v2/kmom04).
 
 
 ###Kmom05: Lagra innehåll i databasen {#kmom05}
 
 Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i de flesta webbplatser. Nu har vi både en mall för webbplatser och koll på databaser och objektorienterad programmering. låt oss då försöka använda allt detta för att lagra undan innehåll i databasen och sedan visa upp det som webbsidor och bloggposter i webbplatsen.
 
-Läs [instruktionen till kursmoment 05](oophp/kmom05).
+Läs [instruktionen till kursmoment 05](kurser/oophp-v2/kmom05).
 
 
 ###Kmom06: Bildbearbetning och galleri {#kmom06}
@@ -153,7 +162,7 @@ Här handlar det om flexibel hantering av bilder och att låta PHP vara behjälp
 
 Därefter tar du hjälp av ditt skript `img.php` och använder det för att skapa ett enkelt galleri som visar bilderna som ligger i en katalogstruktur.
 
-Läs [instruktionen till kursmoment 06](oophp/kmom06).
+Läs [instruktionen till kursmoment 06](kurser/oophp-v2/kmom06).
 
 
 
@@ -161,7 +170,7 @@ Läs [instruktionen till kursmoment 06](oophp/kmom06).
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-Läs [instruktionen till kursmoment 07/10](oophp/kmom10).
+Läs [instruktionen till kursmoment 07/10](kurser/oophp-v2/kmom10).
 
 
 
@@ -216,7 +225,7 @@ Här följer en sammanställning av de läsanvisningar som ges i varje kursmomen
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](oophp/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+För dig som studerar på distans finns det en [rekommenderad studieplan](kurser/oophp/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webprog#studieplan).
 

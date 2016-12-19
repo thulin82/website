@@ -113,7 +113,7 @@ Vi gör en första laboration i PHP för att få en känsla för hur det är att
 
 ###Kmom03: Bygg multisida i PHP. {#kmom03}
 
-I kursmomentet gås igenom de inbyggda arrayerna i PHP. Vi tittar på ``$_GET`, och `$_SERVER` samt hur de kan användas som arrayer. Med hjälp av dessa arrayer, och lite mer PHP-kunskaper, gör vi ett par små testprogram för att klura ut hur saker och ting fungerar.
+I kursmomentet gås igenom de inbyggda arrayerna i PHP. Vi tittar på `$_GET`, och `$_SERVER` samt hur de kan användas som arrayer. Med hjälp av dessa arrayer, och lite mer PHP-kunskaper, gör vi ett par små testprogram för att klura ut hur saker och ting fungerar.
 
 Vi skapar en sida, som har sin egen meny, vi kallar den multisida och löser både den och lite andra småsaker med PHP-kod.
 

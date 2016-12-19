@@ -1,26 +1,20 @@
 ---
 author: mos
 revision:
-  "2014-12-19": (P, mos) Skrev om specen så att det blir enklare att nå godkänt, justerade
-    hur poängen beräknas till fördel för studenterna.
+  "2014-12-19": (P, mos) Skrev om specen så att det blir enklare att nå godkänt, justerade hur poängen beräknas till fördel för studenterna.
   "2013-12-17": (O, mos) Gick igenom och förtydligade, inga stora ändringar.
   "2013-10-22": (N, mos) Projektet för oophp version 2, ht13.
   "2013-08-13": (M, mos) Använd som mall för oophp-kursen inför ht13.
-  "2013-01-11": (L, mos) Förtydligade att redovisningen ska innehålla ett textstycke
-    om varje implementerat krav.
+  "2013-01-11": (L, mos) Förtydligade att redovisningen ska innehålla ett textstycke om varje implementerat krav.
   "2012-12-13": (K, mos) Justerad med projektspec för javascript för hösten 2012.
-  "2012-07-02": (J, mos) Flyttad från Google-doc till lydia och dbwebb.se, formatterad
-    med markdown.
+  "2012-07-02": (J, mos) Flyttad från Google-doc till lydia och dbwebb.se, formatterad med markdown.
   "2011-09-22": (I) Förtydligade krav på inlämning, nytt stycke om betygssättning.
   "2011-03-16": (H) Slog ihop projekt och examination till ett.
   "2010-12-04": (G) Tog bort dubblerad och felaktig mening som syftade på spel.
   "2010-08-26": (F) Tog bort stycke om att betygsättning ej sker på projektet.
-  "2010-04-30": (E) Nu samma dokument för htmlphp, oophp och för dbwebb/dbwebb2. Redaktionella
-    ändringar.
-  "2010-01-07": (D) Uppdaterade med info om redovisning och examination, hur inlämning
-    sker.
-  "2009-12-09": (C) Flyttade text mellan examinationsdokumentet och detta. Förtydligade
-    inlämningen.
+  "2010-04-30": (E) Nu samma dokument för htmlphp, oophp och för dbwebb/dbwebb2. Redaktionella ändringar.
+  "2010-01-07": (D) Uppdaterade med info om redovisning och examination, hur inlämning sker.
+  "2009-12-09": (C) Flyttade text mellan examinationsdokumentet och detta. Förtydligade inlämningen.
   "2009-12-08": (B) Smärre justeringar inför oohph hösten 2009.
   "2009-09-07": (A) Första utgåvan
 ...
@@ -186,7 +180,3 @@ Redovisning {#redovisning}
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
 
 3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oophp) och berätta att du är klar.
-
-
-
-

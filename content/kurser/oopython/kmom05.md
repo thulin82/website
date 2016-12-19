@@ -1,10 +1,11 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
-    "2016-05-25": (PA, aar) Pre-release.
-    "2016-06-01": (PA, lew) Pre-release.
+    "2016-12-16": (PB, lew) Updated flask structure.
     "2016-06-09": (PA, aar) Pre-release.
+    "2016-06-01": (PA, lew) Pre-release.
+    "2016-05-25": (PA, aar) Pre-release.
+    "2016-04-12": (PA, lew) Pre-release.
 category:
     - oopython
 ...
@@ -93,7 +94,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 2. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/terminalprogram-med-sortering-av-lista)"  
 
-3. Skapa din me-sida version 5 i kmom05/flask5 genom att kopiera kmom04/flask4 och därefter göra eventuella uppdateringar som du själv bestämmer.  
+3. Skapa din me-sida version 5-ish. Gör eventuella uppdateringar som du själv bestämmer.  
 
 4. Fyll på redovisning.html med kursmomentets redovisningstext.
 
@@ -114,7 +115,7 @@ Läs [instruktionen om hur du skall redovisa](oopython/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Gjorde du nån uppdatering av mesidan? Om ja - vad gjorde du?
+* Vad gjorde du för uppdatering av me-sidan?
 * Har du fått mer förståelse för datastrukturer?
 * Gick det bra att komma igång med rekursion?  
 * Känner du att du har förståelse för hur sorteringsalgoritmerna fungerar?  

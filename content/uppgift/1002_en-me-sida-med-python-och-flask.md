@@ -30,7 +30,7 @@ Vi ska skapa en me-sida som vi senare kommer bygga vidare på genom kursen. Utg�
 Krav {#krav}
 -----------------------
 
-Startfilen ska heta "app.py" och ska ligga i mappen kmom01/flask.
+Startfilen ska heta "app.py" och ska ligga i mappen me/flask.
 
 1. Applikationen ska använda Bootstrap.
 
@@ -43,7 +43,7 @@ Startfilen ska heta "app.py" och ska ligga i mappen kmom01/flask.
 4. redovisning.html ska innehålla
     * Dina redovisningstexter för kursmomenten
 
-5. Applikationen ska använda port 5000
+<!-- 5. Applikationen ska använda port 5000 -->
 
 ```bash
 # Ställ dig i kurskatalogen
