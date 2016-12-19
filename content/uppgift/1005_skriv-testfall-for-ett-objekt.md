@@ -35,8 +35,8 @@ Kopiera din kod från föregående uppgift och utgå från den koden.
 ```bash
 # Ställ dig i kurskatalogen
 cd me
-cp -ri kmom02/mini-zoo/*.py kmom02/test/
-cd test
+cp -ri kmom02/minizoo/*.py kmom02/test/
+cd kmom02/test
 touch test_zoo.py
 ```
 
