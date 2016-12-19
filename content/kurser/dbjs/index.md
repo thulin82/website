@@ -18,13 +18,6 @@ Kursen är under utveckling som sker kontinuerligt under vårterminen 2017.
 
 [/WARNING]
 
-Kursen har två fokus, dels att lära ut grunder och beståndsdelar i operativsystemet Linux och dels att lära ut programmering med JavaScript och Node.js i en Linux-miljö. Kursen är för de som skall jobba med webbprogrammering.
-
-Kursen börjar med att du installerar en egen version av Linux. Därefter lär du dig de grundläggande koncepten i Linux såsom terminalen, filsystemet, process-begreppet och att installera tjänster och programvaror och servrar. Du skriver skript-program i programspråket BASH och via praktiska övningar lär du dig mer om grunderna i Linux.
-
-Samtidigt bygger du upp en utvecklingsmiljö för JavaScript och Node.js. Du utforskar Node.js API och via praktiska övningar programmerar du JavaScript-servrar och tjänster som sedan körs i din Linux-miljö.
-
-I slutet av kursen får du visa dina färdigheter i ett praktiskt programmeringsprojekt.
 
 
 
