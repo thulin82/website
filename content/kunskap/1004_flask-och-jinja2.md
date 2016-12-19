@@ -9,13 +9,9 @@ category:
 Flask och Jinja2
 ===================================
 
-[FIGURE src=/image/oopython/kmom03/kmom03_top_jinja.png]
+[FIGURE src=/image/oopython/kmom03/kmom03_top_jinja.png?w=c8 class="right"]
 
-[Jinja2](http://jinja.pocoo.org/) är en så kallad "template engine" för Python som renderar template-filer åt oss. Paketet Jinja2 ingår i Flask. Skulle det inte finnas installerat så installerar du det med `pip`:
-
-```python
-pip install Jinja2
-```
+[Jinja2](http://jinja.pocoo.org/) är en så kallad "template engine" för Python som renderar template-filer åt oss. Paketet Jinja2 ingår i Flask. Skulle det inte finnas installerat så installerar du det med Pythons pakethanterare `pip`.
 
 <!--more-->
 
@@ -37,7 +33,13 @@ Vi ska använda Jinja2 för att separera koden så vi använder en header och en
 
 Startläget för den här övningen är appen från kmom01 "my_app".  
 
-Vi börjar med att kopiera in mappen och skapa en header och en footer:
+Börja med att installera Jinja2:  
+
+```python
+pip3 install Jinja2
+```
+
+Vi fortsätter med att kopiera in mappen och skapa en header och en footer:
 
 ```python
 # Ställ dig i roten av kursrepot
