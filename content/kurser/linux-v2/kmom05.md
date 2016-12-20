@@ -43,6 +43,10 @@ Läsanvisningar  {#lasanvisningar}
 
 Det finns ingen läsanvisning i kurslitteraturen.
 
+<!--
+http://exploringjs.com/es6/index.html
+-->
+
 
 
 ###Artiklar {#artiklar}

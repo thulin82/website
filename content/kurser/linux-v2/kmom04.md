@@ -45,6 +45,10 @@ Läs följande:
 
 1. Bekanta dig med npm genom att besöka [dess webbplats](https://www.npmjs.com/) och kika snabbt på dess [dokumentation](https://docs.npmjs.com/).
 
+<!--
+http://exploringjs.com/es6/index.html
+-->
+
 
 
 ###Artiklar {#artiklar}
