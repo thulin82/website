@@ -51,6 +51,10 @@ Läs följande:
 
 ###Video  {#video}
 
+Titta på följande:
+
+1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 3.
+
 1. Kris Occhipinti har en serie om [skriptprogrammering med Bash på YouTube](https://www.youtube.com/playlist?list=PLcUid3OP_4OXOUqYTDGjq-iEwtBf-3l2E). Det är många avsnitt och du kan välja vilka du vill titta på. Videorna ger dig bra bas-kunskaper i Bash.
 
 
@@ -74,7 +78,9 @@ Läs följande:
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+Genomför följande övningar.
+
+1. Jobba igenom hur du med Bash kan skapa ett mer avancerat kommandoradsprogram som tar argument. Artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) ger dig en struktur till hur du kan skapa mer avancerade och större Bash-skript.
 
 
 
@@ -82,15 +88,21 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
+1. Gör uppgiften [Lab 2](uppgifter/XXX) för att....
+
+<!--
 1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
+-->
 
 1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)".
+
+1. Gör uppgiften "[Bash-script med argument options](uppgift/XXX)".
 
 
 
 ###Extra {#extra}
 
-1. Läs igenom hur du med Bash kan skapa ett mer avancerat kommandoradsprogram som tar argument. Artikeln ["Skapa Bash-skript med options, command och arguments"](kunskap/skapa-bash-skript-med-options-command-och-arguments) ger dig en struktur till hur du kan skapa mer avancerade och större Bash-skript.
+Det finns inga extra uppgifter.
 
 
 

@@ -53,6 +53,10 @@ Det finns ingen läsanvisning i kurslitteraturen.
 
 ###Video  {#video}
 
+Titta på följande:
+
+1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 5.
+
 1. Se videon om "[REST API concepts and examples](https://www.youtube.com/watch?v=7YcW25PHnAA)". Den visar exempel på grunderna i REST API och hur det förhåller sig till en webb URL.
 
 
@@ -79,6 +83,8 @@ Det finns inga övningar.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften [Lab 4](uppgifter/XXX) för att....
 
 1. Gör uppgiften "[Lös mazen med din mazerunner i bash](uppgift/los-mazen-med-din-mazerunner-i-bash)".
 

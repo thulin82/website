@@ -55,7 +55,9 @@ Det finns inga artiklar.
 
 ###Video  {#video}
 
-Det finns inga videoförslag.
+Titta på följande:
+
+1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 4.
 
 
 
@@ -80,13 +82,15 @@ Genomför följande övningar.
 
 1. Jobba igenom guiden "[Kom igång med Node.js på Debian](kunskap/kom-igang-med-node-js-pa-debian)".
 
-1. Jobba igenom guiden "[Kom igång och gör övningar i Nodeschool.io](kunskap/kom-igang-och-gor-ovningar-i-nodeschool-io)".
-
 1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
 
 1. Jobba igenom artikeln "[Skicka environment variabler till Bash och Node.js ](kunskap/skicka-environment-variabler-till-bash-och-node-js)".
 
 1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
+
+<!--
+1. Jobba igenom guiden "[Kom igång och gör övningar i Nodeschool.io](kunskap/kom-igang-och-gor-ovningar-i-nodeschool-io)".
+-->
 
 
 
@@ -94,9 +98,14 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Utför Nodeschool workshopen javascripting](uppgift/utfor-nodeschool-workshopen-javascripting)".
+1. Gör uppgiften [Lab 3](uppgifter/XXX) för att....
 
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
+
+<!--
+1. Gör uppgiften "[Utför Nodeschool workshopen javascripting](uppgift/utfor-nodeschool-workshopen-javascripting)".
+-->
+
 
 
 

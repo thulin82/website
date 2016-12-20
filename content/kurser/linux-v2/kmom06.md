@@ -54,7 +54,9 @@ Det finns inga artiklar.
 
 ###Video  {#video}
 
-Det finns inga videoförslag.
+Titta på följande:
+
+1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 6.
 
 
 
@@ -85,6 +87,8 @@ Genomför följande övningar.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften [Lab 5](uppgifter/XXX) för att....
 
 1. Gör uppgiften "[Skapa klienter och servrar som spelar luffarschack i Node.js](uppgift/skapa-klienter-och-servrar-som-spelar-luffarschack-i-node-js)".
 

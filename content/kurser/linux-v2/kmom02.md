@@ -58,7 +58,9 @@ I referenslitteraturen, är följande kapitel relevanta.
 
 ###Video  {#video}
 
-Det finns inga videoförslag.
+Titta på följande:
+
+1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 2.
 
 
 
@@ -91,9 +93,13 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
+1. Gör uppgiften [Lab 1](uppgifter/XXX) för att....
+
 1. Gör uppgiften "[Skapa en webbplats på en Apache Virtual Host](uppgift/skapa-en-webbplats-pa-en-apache-virtual-host)".
 
+<!--
 1. Gör uppgiften "[Strukturera filer, kataloger och rättigheter i en webbplats](uppgift/strukturera-filer-kataloger-och-rattigheter-i-en-webbplats)".
+-->
 
 
 
