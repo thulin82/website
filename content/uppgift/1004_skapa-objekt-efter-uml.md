@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2016-12-20": (PA, aar) Updated assignment.
     "2016-12-19": (PA, lew) New assignment.
     "2016-04-12": (PA, lew) Pre-release.
 category:
@@ -28,12 +29,12 @@ Du ska skapa klass-filer för respektive klass i diagrammet. Spara alla filerna 
 
 För filerna använder du namnen:  
 1. deck.py  
-2. suit.py  
+2. hand.py  
 3. card.py    
 
 Använd sedan en fil kallad "main.py" för att skapa objekt och testa koden.  
 
-[FIGURE src=/image/oopython/kmom02/uml1.png?w=w2 caption="Klicka på bilden för större storlek."]
+[FIGURE src=/image/oopython/kmom02/cardDeckUml.png?w=w2 caption="Klicka på bilden för större storlek."]
 
 
 Krav {#krav}
@@ -44,19 +45,27 @@ Starta med att skapa filerna:
 ```bash
 # Ställ dig i kurskatalogen
 cd me/kmom02/deck
-touch deck.py suit.py card.py main.py
+touch deck.py hand.py card.py main.py
 ```
 
-1. Namngivning ska ske enligt diagrammet
+1. Namngivning ska ske enligt diagrammet.
 
-2. Metoderna `get_*` ska returnera en sträng utifrån listan
+2. I Cards ska `names` vara en statisk lista som innehåller namnen på alla kort, ex. "Ace, 1, 2, 3... Jack, Queen, King". Ett tips är att ha None på index 0, då kan du använda värdet på `value` som index för namnet på kortet.  
+`suits` ska också vara en statisk lista som innehåller alla färger ett kort kan ha, "Spades, Hearts, Diamonds, Clubs".  
+`value` är en integer för värdet på kortet, 1-13. Kan användas som index för `names`.  
+`suit` är index för vilken färg kortet har, 0-3.
 
-3. I varje klass ska det finnas en överlagrad `__str__()`-metod som skriver ut allt om objektet på ett godtyckligt sätt. Relationerna ska stämma med diagrammet ovan.  
-    * `card` ska skriva ut information om sig själv samt vilken färg (suit) det tillhör.  
-    * `suit` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i sin lista.  
-    * `deck` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i varje färg, hela kortleken.  
+3. I Deck ska `cards` initieras med 52 kort.  
+I metoden `takeCard` ska kortet som tagits returneras och inte längre finnas i `cards` listan.
 
-4. I din main.py ska du skapa en kortlek med 4 färger och 52 kort. Döp din kortlek till `DeckOfCards` och avsluta med: `print(DeckOfCards)`.  
+4. I Hand ska `cards` initieras till en tom lista.
+
+5. I varje klass ska det finnas en överlagrad `__str__()`-metod som skriver ut allt om objektet på ett godtyckligt sätt. Relationerna ska stämma med diagrammet ovan.  
+    * `Card` ska skriva ut information om sig själv, vilken färg (suit) den har och namn.  
+    * `Hand` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i handen.  
+    * `Deck` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i kortleken.  
+
+6. I din main.py ska du skapa en kortlek och en hand. Döp din kortlek till `deckOfCards` och din hand till `hand`. Använd din shuffle metod på kortleken och ta sedan 5 kort från `deckOfCards` och lägg i `hand`. Avsluta med: `print(str(DeckOfCards))` och `print(str(hand))`.  
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -70,7 +79,7 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-Det finns ingen extrauppgift.
+Gör om så att `Hand` ärver från `Deck`. `Hand` ska inte längre innehålla några metoder men du kan ändra i metoderna i `Deck`. Du kan lägga till fler så länge de är logiska och passar för båda klasserna.
 
 
 
