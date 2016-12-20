@@ -6,10 +6,10 @@ category:
 revision:
     "2016-12-20": (A, efo) Första utgåvan som extrauppgift i kursen htmlphp.
 ...
-Linux lab 1, introduktion till bash
+Linux lab 2, Sök i en logg-fil
 ==================================
 
-Laboration för att träna grunderna i bash.
+Laboration för att träna på bash kommandon för att söka och hämta information i text-filer.
 
 <!--more-->
 
@@ -22,12 +22,12 @@ Du har installerat labbmiljön för kursen [labbmiljön för kursen linux](kurse
 
 Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-kursen.
 
-
+sql
 
 Videoserie {#video}
 -----------------------
 
-Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ) som hjälper dig med denna labben, titta på videor som börjar på 2.
+Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ) som hjälper dig med denna labben titta på videor som börjar på 3.
 
 
 
@@ -40,7 +40,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab1
+dbwebb create lab2
 ```
 
 Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
@@ -75,8 +75,8 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab1
-dbwebb publish lab1
+dbwebb validate lab2
+dbwebb publish lab2
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
@@ -92,7 +92,5 @@ Det finns ingen extra uppgift.
 
 Tips från coachen {#tips}
 -----------------------
-
-
 
 Lycka till och hojta till i forumet om du behöver hjälp!

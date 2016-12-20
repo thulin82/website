@@ -11,7 +11,7 @@ Kmom03: Skript med Bash
 Kursmomentet är under översyn och blir tillgängligt **senast den 30/1-2017**.
 [/WARNING]
 
-Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med skriptprogrammering i Bash. 
+Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med skriptprogrammering i Bash.
 
 Mycket handlar om att förenkla vardagen, som programmerare, genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel Bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
 
@@ -88,15 +88,15 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 2](uppgifter/XXX) för att....
-
-<!--
-1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
--->
+1. Gör uppgiften [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) för att öva på kommandon som underlättar vi sökning i logg-filar.
 
 1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)".
 
 1. Gör uppgiften "[Bash-script med argument options](uppgift/XXX)".
+
+<!--
+1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".
+-->
 
 
 
@@ -121,4 +121,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur många poäng fick du i uppgiften med irc-loggfilen?
 * Gjorde du extrauppgiften?
 * Var det något som var extra svårt eller utmanande i uppgifterna?
- 

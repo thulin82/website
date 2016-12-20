@@ -93,7 +93,7 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 1](uppgifter/XXX) för att....
+1. Gör uppgiften [Lab 1](uppgift/linux-lab-1-introduktion-till-bash) för att träna upp grundläggande färdigheter i bash och hantering av filsystem.
 
 1. Gör uppgiften "[Skapa en webbplats på en Apache Virtual Host](uppgift/skapa-en-webbplats-pa-en-apache-virtual-host)".
 

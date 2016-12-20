@@ -102,7 +102,7 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 3](uppgifter/XXX) för att....
+1. Gör uppgiften [Lab 3](uppgift/introduktion-till-nodejs) för att öva på grunderna i nodejs och funktionell programmering.
 
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
 
