@@ -60,13 +60,15 @@ En klass i ett class diagram representeras med en ruta som är indelad i tree fa
 * Mitten facket innehåller klassens attribut.
 * Nedersta facket innehåller klassens metoder.
 
-[FIGURE src=/image/oopython/kmom02/diagrams/class_diagram1.png caption="En klass som representerar ett bankkonto."]
+[FIGURE src=/image/oopython/kmom02/diagrams/bankAccount.png caption="En klass som representerar ett bankkonto."]
 
 Attribut måste åtminstone visas med namnet men det kan även stå med vilken datatyp de har, som i bilden ovan. Bilden visar även om de är publika eller privata:
 
 * \+ Betyder publikt attribut.
 
 * \- Betyder privat attribut.
+
+* <u>variabel namn</u> Betyder att attributet är statiskt. Gäller äver för understrukna metodnamn
 
 För metoder måste man skriva med namnet, det är att föredra att även visa parametrar och returtyp som bilden ovan. Det funkar likadant för metoder och attribut med +- för privata/publika.
 
