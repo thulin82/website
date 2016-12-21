@@ -53,7 +53,7 @@ cd me/flask
 
 5. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till person.png och lägg den i mappen flask/  
 
-6. Använd `pydoc` för att skapa en html-sida. Döp filen till person.html i formatet .png. Lägg filen filen i mappen flask/
+6. Använd `pydoc` för att skapa en html-sida. Döp filen till person.html. Lägg filen filen i mappen flask/
 
 
 

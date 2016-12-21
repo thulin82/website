@@ -58,7 +58,7 @@ Färdig? Bra. Då kan vi fortsätta i mappen me/flask:
 
 6. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till data.png. Spara diagrammet i mappen flask/  
 
-7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html i formatet .png. Lägg filen i mappen flask/
+7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html. Lägg filen i mappen flask/
 
 
 ```bash

@@ -65,7 +65,7 @@ Fyll på _animals_ med minst 10 djur.
 
 Fyll på _vehicles_ med minst 3 olika typer av fordon.  
 
-5. Se till så att databasfilen ligger i `kmom04/flask4/db`.
+5. Se till så att databasfilen ligger i `me/flask/db`.
 
 ```bash
 # Ställ dig i kurskatalogen
