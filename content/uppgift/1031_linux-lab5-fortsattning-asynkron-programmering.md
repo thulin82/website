@@ -40,7 +40,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab5
+dbwebb create node3
 ```
 
 Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
@@ -75,8 +75,8 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab5
-dbwebb publish lab5
+dbwebb validate node3
+dbwebb publish node3
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
