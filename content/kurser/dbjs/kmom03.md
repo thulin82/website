@@ -65,7 +65,9 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+Genomför följande övningar.
+
+1. Läs igenom övningen ""[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)".
 
 
 
@@ -73,7 +75,11 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften...
+1. Gör laborationen "[Lab 3 SQL XXX](uppgift/lab-3-sql-XXX)" som låter dig träna på ...
+
+1. nodejs labb (linux lab4 variant)?
+
+1. Gör uppgiften nodejs enkelt program som använder sqlite.
 
 
 

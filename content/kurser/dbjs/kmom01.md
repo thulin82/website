@@ -35,6 +35,9 @@ Läs följande:
 
 1. Läsanvisning Javascript.
 
+    1. http://speakingjs.com/
+    1. http://exploringjs.com/es6.html
+
 
 
 ###Artiklar {#artiklar}
@@ -77,7 +80,24 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+Börja med att kika på följande introduktionsartiklar om HTML, CSS och JavaScript. Beroende på dina förkunskaper så får du välja hur mycket tid du spenderar på dem. De innehåller grunder och ger dig en introduktion i de olika teknikerna.
+
+* HTML - [Gör din första sida med HTML5](coachen/gor-din-forsta-sida-med-html5)
+* CSS - [Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)
+* JavaScript - [Kom igång med JavaScript och skriv din första kod](coachen/kom-igang-med-javascript-och-skriv-din-forsta-kod)
+
+
+
+När du är klar med ovanstående introduktionsartiklar så genomför du följande övning.
+
+1. Kom igång och gör ditt första program i JavaScript tillsammans med artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)".
+
+
+
+Genomför följande övningar.
+
+1. *(FLYTTA TILL LABBMILJÖ?)* Läs igenom artikeln ["En kommandoradsklient för SQLite](kunskap/en-kommandoradsklient-for-sqlite)" och installera kommandoklienten på ditt eget system. Testa den så du känner att du har koll på hur den fungerar. *(SQL/SQLite intro)*.
+
 
 
 
@@ -85,7 +105,11 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften...
+1. Gör laborationen "[Lab 1 SQL introduktion](uppgift/lab-1-sql-introduktion)" som låter dig träna på grunderna i SQL kommandon.
+
+1. jslabb i webbläsaren, lab12-kombo?
+
+1. En me-sida.
 
 
 

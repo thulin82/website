@@ -67,6 +67,10 @@ Det finns inga extra lästips.
 
 Det finns inga övningar.
 
+JSON. Ajax.
+
+1. Kom igång med ramverket Mithril för JavaScript SPA https://dbwebb.se/kunskap/kom-igang-med-ramverket-mithril-for-javascript-spa
+
 
 
 ###Uppgifter {#uppgifter}
@@ -74,6 +78,9 @@ Det finns inga övningar.
 Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften...
+
+1. Gör meapp med mithril Bygg en me-app med Mithril https://dbwebb.se/uppgift/bygg-en-me-app-med-mithril.
+
 
 
 

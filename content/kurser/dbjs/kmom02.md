@@ -65,7 +65,13 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+Genomför följande övningar.
+
+1. Jobba igenom övningen "[Kom igång med databasen SQLite](kunskap/kom-igang-med-databasen-sqlite)". 
+
+1. Jobba igenom guiden "[Kom igång med Node.js (på Debian)](https://dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)".
+
+1. nodejs mot sqlite.
 
 
 
@@ -73,7 +79,13 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften...
+1. Gör laborationen "[Lab 2 SQL XXX](uppgift/lab-2-sql-XXX)" som låter dig träna på...
+
+1. nodejs labb (linux lab3 variant)?
+
+1. Gör uppgiften nodejs enkelt program som använder sqlite.
+
+
 
 
 
