@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-12-21": (PB2, efo) Ändring av länk till ny bash lab och extrauppgiften gjordes om till en del av kursmomentet
     "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
     "2015-08-05": (A, mos) Första utgåvan för kursen.
 ...
@@ -88,11 +89,11 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) för att öva på kommandon som underlättar vi sökning i logg-filar.
+1. Gör uppgiften [Lab 2](uppgift/linux-lab-2-sok-i-en-logg-fil) för att öva på kommandon som underlättar vid sökning i logg-filar.
 
 1. Gör uppgiften "[Mina första Bash-script](uppgift/mina-forsta-bash-script)".
 
-1. Gör uppgiften "[Bash-script med argument options](uppgift/XXX)".
+1. Gör uppgiften "[Bash-script med argument options](uppgift/ett-bash-script-med-options-command-arguments)".
 
 <!--
 1. Gör uppgiften "[Hitta saker i en loggfil med Unix-kommandon](uppgift/hitta-saker-i-en-loggfil-med-unix-kommandon)".

@@ -4,7 +4,7 @@ category:
     - bash
     - lab
 revision:
-    "2016-12-20": (A, efo) Första utgåvan som extrauppgift i kursen htmlphp.
+    "2016-12-20": (A, efo) Första utgåvan av lab1 i linux.
 ...
 Linux lab 1, introduktion till bash
 ==================================

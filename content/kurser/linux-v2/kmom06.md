@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-12-21": (PB2, efo) Länk till ny lab.
     "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
     "2015-09-11": (A, mos) Första utgåvan för kursen.
 ...
@@ -92,7 +93,7 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 5](uppgifter/XXX) för att....
+1. Gör uppgiften [Lab 5](uppgift/linux-lab5-fortsattning-asynkron-programmering) för att träna ytterligare på asynkron programmering.
 
 1. Gör uppgiften "[Skapa klienter och servrar som spelar luffarschack i Node.js](uppgift/skapa-klienter-och-servrar-som-spelar-luffarschack-i-node-js)".
 

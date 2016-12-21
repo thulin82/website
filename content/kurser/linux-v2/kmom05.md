@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-12-21": (PB2, efo) Länk till ny lab.
     "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
     "2015-09-02": (A, mos) Första utgåvan för kursen.
 ...
@@ -88,7 +89,7 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 4](uppgifter/XXX) för att....
+1. Gör uppgiften [Lab 4](uppgift/linux-lab4-asynkron-programmering) för att lära om en asynkron programmeringsmodell.
 
 1. Gör uppgiften "[Lös mazen med din mazerunner i bash](uppgift/los-mazen-med-din-mazerunner-i-bash)".
 

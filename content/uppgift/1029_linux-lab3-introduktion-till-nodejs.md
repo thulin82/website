@@ -4,7 +4,7 @@ category:
     - nodejs
     - lab
 revision:
-    "2016-12-20": (A, efo) Första utgåvan som extrauppgift i kursen htmlphp.
+    "2016-12-20": (A, efo) Första utgåvan av lab3 i linux kursen
 ...
 Linux lab 3, Introduktion till nodejs
 ==================================

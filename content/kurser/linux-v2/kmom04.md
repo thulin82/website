@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-12-21": (PC2, efo) Ändring av länk till ny nodejs lab
     "2016-12-16": (PC1, mos) Förberedelse inför linux-v2.
     "2015-10-16": (B, mos) La till artikel om environemnt variabler i Bash och Node.js samt artikel om process id till fil.
     "2015-08-13": (A, mos) Första utgåvan för kursen.
@@ -41,7 +42,7 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. Bekanta dig med Node.js genom att besöka [dess webbplats](https://nodejs.org/) och kika snabbt på dess [dokumentation](https://nodejs.org/documentation/).
+1. Bekanta dig med Node.js genom att besöka [dess webbplats](https://nodejs.org/) och kika snabbt på dess [dokumentation](https://nodejs.org/documentation/).Förberedelse inför linux-v2.
 
 1. Bekanta dig med npm genom att besöka [dess webbplats](https://www.npmjs.com/) och kika snabbt på dess [dokumentation](https://docs.npmjs.com/).
 
@@ -102,7 +103,7 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 3](uppgift/introduktion-till-nodejs) för att öva på grunderna i nodejs och funktionell programmering.
+1. Gör uppgiften [Lab 3](uppgift/linux-lab3-introduktion-till-nodejs) för att öva på grunderna i nodejs och funktionell programmering.
 
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
 

@@ -1,15 +1,15 @@
 ---
 author: efo
 category:
-    - bash
+    - nodejs
     - lab
 revision:
-    "2016-12-20": (A, efo) Första utgåvan av lab2 i linux.
+    "2016-12-21": (A, efo) Första utgåvan av lab5 i kursen linux.
 ...
-Linux lab 2, Sök i en logg-fil
+Linux lab 3, Fortsättning asynkron programmering
 ==================================
 
-Laboration för att träna på bash kommandon för att söka och hämta information i text-filer.
+Laboration i asynkron programmering, där vi lär oss nya konstruktioner och hur man använder flera callback funktioner.
 
 <!--more-->
 
@@ -18,16 +18,16 @@ Laboration för att träna på bash kommandon för att söka och hämta informat
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat labbmiljön för kursen [labbmiljön för kursen linux](kurser/linux-v2/labbmiljo).
+Du har installerat `nodejs` på din dator, [guide för installation av nodejs](http://local.dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)
 
 Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-kursen.
 
-sql
+
 
 Videoserie {#video}
 -----------------------
 
-Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ) som hjälper dig med denna labben titta på videor som börjar på 3.
+Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ) som hjälper dig med denna labben titta på videor som börjar på 5.
 
 
 
@@ -40,7 +40,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab2
+dbwebb create lab5
 ```
 
 Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
@@ -48,16 +48,16 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 | Fil                | Innehåll                                                              |
 |--------------------|-----------------------------------------------------------------------|
 | `instruction.html` | Beskrivning av labben och de uppgifter som skall göras.               |
-| `answer.bash`      | Här skall du skriva din kod för att lösa respektive uppgift i labben. |
+| `answer.js`      | Här skall du skriva din kod för att lösa respektive uppgift i labben. |
 
 Öppna filen `instruction.html` i en webbläsare och läs igenom de uppgifter som labben omfattar.
 
-Öppna filen `answer.bash` i din texteditor och koda ihop svaren på uppgifterna.
+Öppna filen `answer.js` i din texteditor och koda ihop svaren på uppgifterna.
 
-Du kan testa dina lösningar genom att köra programmet `answer.bash` i din terminal.
+Du kan testa dina lösningar genom att köra programmet `answer.js` i din terminal.
 
 ```bash
-$ ./answer.bash
+$ babel-node answer.js
 ```
 
 
@@ -67,16 +67,16 @@ Krav {#krav}
 
 1. Gör de uppgifter som finns i labben `instruction.html`.
 
-2. Skriv dina lösningar, på rätt plats, i filen `answer.bash`.
+2. Skriv dina lösningar, på rätt plats, i filen `answer.js`.
 
-3. Testkör din labb genom att köra filen `answer.bash`.
+3. Testkör din labb genom att köra kommandot `babel-node answer.js`.
 
 4. Ladda upp, validera och publicera labben genom att göra följande kommando i kurskatalogen i terminalen.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab2
-dbwebb publish lab2
+dbwebb validate lab5
+dbwebb publish lab5
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
