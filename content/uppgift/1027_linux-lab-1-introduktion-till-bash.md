@@ -9,7 +9,7 @@ revision:
 Linux lab 1, introduktion till bash
 ==================================
 
-Laboration för att träna grunderna i bash.
+Laboration för att träna grunderna i bash. Du kommer jobba med apache konfigurations mappen från en linux server.
 
 <!--more-->
 
@@ -40,7 +40,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab1
+dbwebb create bash1
 ```
 
 Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
@@ -75,8 +75,8 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab1
-dbwebb publish lab1
+dbwebb validate bash1
+dbwebb publish bash1
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.

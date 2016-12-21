@@ -22,7 +22,6 @@ Du har installerat labbmiljön för kursen [labbmiljön för kursen linux](kurse
 
 Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-kursen.
 
-sql
 
 Videoserie {#video}
 -----------------------
@@ -40,7 +39,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create lab2
+dbwebb create bash2
 ```
 
 Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
@@ -75,8 +74,8 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate lab2
-dbwebb publish lab2
+dbwebb validate bash2
+dbwebb publish bash2
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
