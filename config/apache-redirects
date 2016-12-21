@@ -408,7 +408,10 @@ Redirect /kanon				https://goo.gl/1tsO7b
 #wip
 Redirect /wip/courses                           https://spreadsheets.google.com/ccc?key=0AiJ-Zb8R9RVmdFlEQktPM055Y2JiV0k3Tk9RRllQNUE&hl=en&authkey=CIyL-h8
 Redirect /wip/kurser                            https://spreadsheets.google.com/ccc?key=0AiJ-Zb8R9RVmdFlEQktPM055Y2JiV0k3Tk9RRllQNUE&hl=en&authkey=CIyL-h8
-Redirect /wip                                   http://www.bth.se/com/wip
+#Redirect /wip                                   http://www.bth.se/com/wip
+Redirect /wip   /program/webbprogrammering
+
+
 
 # htmlphp
 Redirect /htmlphp/install  			https://docs.google.com/Doc?docid=0ASJ-Zb8R9RVmZGhoN2pjaHBfNDM2bnRtZDVmdw&hl=en&authkey=CJjGiosL

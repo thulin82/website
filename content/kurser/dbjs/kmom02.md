@@ -62,12 +62,22 @@ Det finns inga extra lästips.
 *(ca: 6-10 studietimmar)*
 
 
+###Labbmiljö {#labbmiljo}
+
+Installera mer labbmiljö för kursen.
+
+1. Installera labbmiljön för [Node och npm](labbmiljo/node-och-npm).
+
+1. Installera [lokal utvecklingsmiljö](labbmiljo/lokal-utvecklingsmiljo) i kursrepot.
+
+
 
 ###Övningar {#ovningar}
 
 Genomför följande övningar.
 
 1. Jobba igenom övningen "[Kom igång med databasen SQLite](kunskap/kom-igang-med-databasen-sqlite)". 
+
 
 1. Jobba igenom guiden "[Kom igång med Node.js (på Debian)](https://dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)".
 
