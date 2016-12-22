@@ -67,7 +67,7 @@ Allt kursmaterial är tillgängligt via ITs.
 Skaffa konto på dbwebb.se {#konto}
 -----------------------------------------------------------
 
-Allt kursmaterial finns även tillgängligt direkt via webbplatsen [dbwebb.se][/]. Här finns även kursens diskussionsforum. För att komma åt forumet behöver du ett konto som du måste skaffa manuellt.
+Allt kursmaterial finns även tillgängligt direkt via webbplatsen [dbwebb.se](/). Här finns även kursens diskussionsforum. För att komma åt forumet behöver du ett konto som du måste skaffa manuellt.
 
 Klicka uppe i högra hörnet av denna sidan för att skapa ett konto. Detta konto kommer du att ha kvar även efter dina studier. Det är en av fördelarna med att använda dbwebb.se för kursmaterialet, du kan använda det även efter studierna, kanske som ett nätverk av webbprogrammerare. Ett bättre forum, än vad ITs kan erbjuda, är en annan fördel med dbwebb.se.
 
