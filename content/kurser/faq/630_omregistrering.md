@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2016-12-22": (H, mos) Restinlämningar för VT17.
     "2016-11-10": (G, mos) La till ktillfälle webgl.
     "2016-08-29": (F, mos) Tog bort onödiga, icke fungerande länkar.
     "2016-07-05": (E, mos) Omregistrering för HT16 kurstillfällen.
@@ -8,8 +9,6 @@ revision:
     "2015-08-26": (C, mos) Fler kurstillfällen för omregistrering inför ht15 samt förklaring av läsperioder.
     "2015-08-14": (B, mos) Uppdaterad med ny hantering inför ht15.
     "2015-01-09": (A, mos) Första versionen, för att svara på vanliga frågor om omregistrering.
-updated: "2015-12-18 15:17:32"
-created: "2015-01-09 13:33:53"
 ...
 Omregistrering på kurs och kurstillfälle
 ==================================
@@ -53,7 +52,39 @@ Följande kurstillfällen finns tillgängliga för dig som omregistrerar dig. No
 
 
 
+###Omregistrering vårterminen 2017 {#vt17omreg}
+
+Om du var aktiv student under ht16, så kan du också lämna in restinlämningar på det kurstillfälle du redan ligger i.
+
+Om du inte var aktiv i ett kurstillfälle under ht16, och har restinlämningar på gamla kurser, så gäller att du kan lämna in på följande kurstillfällen på ITs.
+
+| Kurs        |  Kurstillfälle på ITs |
+|-------------|-----------------------|
+| htmlphp     | PA1439 H16 Lp1 Webbteknologier-program |
+| oophp       | DV1485 H16 Lp12 Databaser och OO programmering i PHP-omreg |
+| phpmvc      | DV1486 H16 Lp1 Databasdrivna webbappl med PHP och MVC-kp50 |
+| javascript  | DV1483 H16 Lp12 JavaScript, jQuery och AJAX med HTML5 o PHP-kp50 |
+| python      | DV1531 H16 Lp1 Programmering och problemlös i Python-kp50 |
+| javascript1 | DV1532 H16 Lp2 Programmering med JavaScript, HTML och CSS-kp50  |
+| linux       | DV1547 H16 Lp1 Programmera webbtjänster på Linux-kp50 |
+| webapp      | DV1546 H16 Lp2 Webbapplikationer för mobila enheter-kp50 |
+| webgl       | DV1506 H16 Lp2 Spelteknik för webben (campus) |
+
+Observera att htmlphp-kursen har bytt kurskod till PA1439.
+
+
+
+###Rättning av restinlämningar vårterminen 2017 {#vt17rest}
+
+Du kan lämna in restinlämningar för samtliga kurstillfällen som gick ht16.
+
+Sista inlämningsdag är den 2:a april 2017. Rättningsfönstret pågår från den 3:e april fram till och med den sista april.
+
+
+
 ###Omregistrering höstterminen 2016 {#ht16}
+
+Denna information gällde inför höstterminen 2016.
 
 | Kurs        | Läsperiod | Kurstakt | Kurstillfälle på ITs |
 |-------------|:---------:|:--------:|----------------------|
