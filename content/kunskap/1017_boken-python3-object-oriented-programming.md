@@ -1,7 +1,8 @@
 ---
 author: lew
 revision:
-  "2016-06-02": (PA, lew) Första revisionen inför första utgåvan av kursen oopython.
+    "2016-12-22": (B, mos) Ändrade länk till e-bok version.
+    "2016-06-02": (A, lew) Första revisionen inför första utgåvan av kursen oopython.
 category:
   - bok
 ...
@@ -21,7 +22,7 @@ Boken används som referenslitteratur i kursen oopython.
 Om Boken {#om-boken}
 --------------------
 
-[FIGURE src=/image/oopython/bok/python3-object-oriented-programming.png caption="Bokens omslag."]
+[FIGURE src=/image/oopython/bok/python3-object-oriented-programming.png?w=w2 caption="Bokens omslag."]
 
 <table>
 <tr><th>Titel:</th><td>Python 3 Object-oriented Programming<td></tr>
@@ -33,9 +34,7 @@ Om Boken {#om-boken}
 
 [BOOK isbn=9781784398781]  
 
-Boken finns som e-bok på Github i formaten pdf, epub och mobi. För att ladda ner den, klicka på länken för boken du vill ha och sedan klicka på "raw":  
-
-[Boken på Github](https://github.com/gasgas4/eBook/tree/master/Python%203%20Object-oriented%20Programming%20(Second%20Edition)%202015).  
+Boken finns som [ebook via PacktPub](https://www.packtpub.com/application-development/python-3-object-oriented-programming-second-edition).
 
 
 
