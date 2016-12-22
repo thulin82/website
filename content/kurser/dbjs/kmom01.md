@@ -32,6 +32,7 @@ Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * TBD
+    * (webboken)
 
 1. Läsanvisning Javascript.
 
@@ -42,7 +43,18 @@ Läs följande:
 
 ###Artiklar {#artiklar}
 
-Det finns inga artiklar.
+Läs följande:
+
+1. Bekanta dig grunderna i HTML och CSS via artiklar Mozilla Developers Network. Det blir vår referenslitteratur till JavaScript. Kika översiktligt på följande.
+
+    1. [MDN: Översikt av teknologier](https://developer.mozilla.org/en-US/docs/Web)
+    1. [MDN: Introduction to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction)
+    1. [MDN: Getting started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started) (kika översiktligt på de tre första artiklarna i serien)
+
+5. Bekanta dig med guiden [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) och läs följande kapitel.
+
+    * [Ch 1: Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction) en kort introduktion till JavaScript.
+    * [Ch 2: Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
 
 
 
