@@ -56,8 +56,10 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 
 Du kan testa dina lösningar genom att köra programmet `answer.js` i din terminal.
 
-```bash
-$ babel-node answer.js
+Du kan testa dina lösningar genom att köra programmet `answer.js` från kurskatalogen i din terminal enligt nedan
+
+```javascript
+$ babel-node me/kmom06/node3/answer.js
 ```
 
 

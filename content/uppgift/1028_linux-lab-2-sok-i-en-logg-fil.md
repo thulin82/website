@@ -48,10 +48,14 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 |--------------------|-----------------------------------------------------------------------|
 | `instruction.html` | Beskrivning av labben och de uppgifter som skall göras.               |
 | `answer.bash`      | Här skall du skriva din kod för att lösa respektive uppgift i labben. |
+| `ircLog.txt`       | Filen som du ska söka i för att lösa uppgifterna.                     |
+
 
 Öppna filen `instruction.html` i en webbläsare och läs igenom de uppgifter som labben omfattar.
 
 Öppna filen `answer.bash` i din texteditor och koda ihop svaren på uppgifterna.
+
+Skriv din bash kod inom \`\` taggar för att den ska kunna exekveras, ex. \``find . -name 'filename'`\`
 
 Du kan testa dina lösningar genom att köra programmet `answer.bash` i din terminal.
 

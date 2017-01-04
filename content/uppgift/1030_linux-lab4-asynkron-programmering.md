@@ -54,10 +54,10 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 
 Öppna filen `answer.js` i din texteditor och koda ihop svaren på uppgifterna.
 
-Du kan testa dina lösningar genom att köra programmet `answer.js` i din terminal.
+Du kan testa dina lösningar genom att köra programmet `answer.js` från kurskatalogen i din terminal enligt nedan
 
-```bash
-$ babel-node answer.js
+```javascript
+$ babel-node me/kmom05/node2/answer.js
 ```
 
 
