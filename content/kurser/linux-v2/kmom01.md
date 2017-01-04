@@ -64,9 +64,13 @@ Det finns inga artiklar.
 
 ###Video  {#video}
 
+Det finns inga videor.
+
+<!--
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 0 och 1.
+-->
 
 
 
