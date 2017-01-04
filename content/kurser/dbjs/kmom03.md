@@ -67,7 +67,12 @@ Det finns inga extra lästips.
 
 Genomför följande övningar.
 
+1. Jobba igenom guiden "[Kom igång med Node.js (på Debian)](https://dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)".
+
+1. nodejs mot sqlite.
+
 1. Läs igenom övningen ""[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)".
+
 
 
 

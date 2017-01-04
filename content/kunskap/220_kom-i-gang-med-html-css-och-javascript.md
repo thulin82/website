@@ -101,6 +101,10 @@ Nåväl, jag kanske ska ändra tillbaka den gula färgen...
 Validera HTML och CSS {#validera}
 -------------------------------
 
+
+
+###Validera HTML {#html}
+
 W3C är organisationen som standardiserar webben och flera av de tekniker som vi kommer använda. De har [validatorer](http://validator.w3.org/) som hjälper oss skriva bra kod.
 
 Låt oss testa om den koden vi har sett hittills kommer igenom validatorerna för HTML och CSS.
@@ -113,6 +117,10 @@ Här är videon.
 
 Ta nu din html-fil i ditt sandbox-exempel och validera den. Rätta till felen om det finns några.
 
+
+
+###Validera CSS {#css}
+
 I artikeln om "[Styla din sida med CSS och en extern stylesheet](coachen/styla-din-sida-med-css-och-en-extern-stylesheet)" så visar jag i en video hur jag använder [W3C validator för CSS](http://jigsaw.w3.org/css-validator/).
 
 Här är videon.
@@ -122,6 +130,39 @@ Här är videon.
 Ta nu din stylesheet i ditt sandbox-exempel och validera den. Rätta till felen om det finns några.
 
 Kom alltid ihåg att validera dina sidor. Det kommer att spara dig en del tid i felsökning. En sida som inte validerar kan ge upphov till många konstiga felaktiga beteenden.
+
+
+
+###Länka till validatorerna {#link}
+
+Du kan länka till validatorerna för HTML och CSS, direkt från din egen sida. Lägg till följande HTML-kod i din `index.html`, så att din HTML-kod avslutas med följande.
+
+```html
+    <footer>
+        <a href="http://validator.w3.org/check/referer">HTML5</a> |
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+    </footer>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+```
+
+Om du kör din sida via en publik webbserver kan du nu klicka på länkarna för att direkt validera din kod med HTML- och CSS-validatorerna. Det är smidigt när man utvecklar.
+
+Jag ska snart visa hur du kan köra din webbplats på en publik webbserver.
+
+
+
+###Unicorn, ett valideringsverktyg för flera tekniker {#unicorn}
+
+Det finns ett valideringsverktyg Unicorn som kör både HTML och CSS testerna i en körning. Dessutom kan det köra ytterligare kompletterande tester. Länka även till detta verktyget från din footer.
+
+```html
+    <a href="http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance">Unicorn</a>
+```
+
+Kom nu ihåg att alltid dubbelkolla att din sida validerar. Hamnar du i trubbel så kollar du alltid först om sidan validerar.
 
 
 
@@ -155,18 +196,26 @@ dbwebb publish sandbox
 
 Rätta de eventuella fel som dyker upp.
 
+När du publiserar så hamnar en kopia av din kod på studentservern. I slutet av utskriften från kommandot visas en länk, klicka på den, eller kopiera den till din webbläsare, så kan du testköra din kod på studentservern.
+
+Du kan nu klicka på länkarna i footern, de som leder till validatorerna för HTML och CSS. Se till att din sida validerar enligt HTML och CSS, för att undvika bekymmer.
+
 
 
 Hjälp mig online {#hjalp}
 -------------------------------
 
-Som ny programmerare i JavaScript kommer du att behöva hjälp. Du kommer behöva hjälp av andra för att felsöka i ditt program. Ett av de online-verktyg som kan hjälpa dig är [JSFiddle](http://jsfiddle.net/).
+Som ny programmerare i JavaScript kommer du att behöva hjälp. Du kommer behöva hjälp av andra för att felsöka i ditt program. Det finns flera online-verktyg som kan underlätta detta.
 
 Det handlar om att göra det enkelt för den som skall hjälpa dig. Genom att lägga upp ett minimalt exempel på det som är ditt problem så har du enklast att få hjälp. Ett stort exempelprogram är alltid svårt att sätta sig in i och det är svårare att få hjälp med felsökningen. Försök därför alltid avgränsa dina testprogram. Du får snabbare och bättre svar och fler som är villiga att hjälpa dig.
 
 Ta det som dagens tips. Det är så det funkar.
 
-Med det sagt, hur använder du då JSFiddle för att till exempel lägga upp exemplet med sandboxen?
+
+
+###JSFiddle {#jsfiddle}
+
+Ett av de online-verktyg som kan hjälpa dig är [JSFiddle](http://jsfiddle.net/).
 
 Låt se hur det ser ut när jag lägger upp ett exempel i JSFiddle. Så kan du själv testa att lägga upp din sandbox därefter.
 
@@ -174,11 +223,33 @@ Låt se hur det ser ut när jag lägger upp ett exempel i JSFiddle. Så kan du s
 
 Här är mitt färdiga exempel som du kan öppna i JSFiddle och testa att ändra.
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/mikael_roos/pK8cc/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="https://jsfiddle.net/mikael_roos/pK8cc/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Länken till exemplet är [http://jsfiddle.net/mikael_roos/pK8cc/](http://jsfiddle.net/mikael_roos/pK8cc/).
+Länken till exemplet är [https://jsfiddle.net/mikael_roos/pK8cc/](https://jsfiddle.net/mikael_roos/pK8cc/).
 
-Glöm inte att korta och små fiddlar är enklare att hantera för den som hjälper dit. Göra bara fiddlarna så att de visar på problemet. Ta bort all annan kod. Det exemplet som jag visar är alltså i största laget. Om jag till exempel hade problem med en confirm-popup så skulle jag bara visat den delen av koden.
+Glöm inte att korta och små fiddlar är enklare att hantera för den som hjälper dig. Göra bara fiddlarna så att de visar på problemet. Ta bort all annan kod. Det exemplet som jag visar är alltså i största laget. Om jag till exempel hade problem med en confirm-popup så skulle jag bara visat den delen av koden.
+
+
+
+###CodePen {#codepen}
+
+[CodePen](http://codepen.io/) är ett liknande verktyg där du kan göra samma sak som i JSFiddle. Här ser du samma exempelkod i en CodePen.
+
+<p data-height="292" data-theme-id="0" data-slug-hash="qOPKyq" data-default-tab="result" data-user="mosbth" class='codepen'>See the Pen <a href='http://codepen.io/mosbth/pen/qOPKyq/'>Hello World</a> by Mikael Roos (<a href='http://codepen.io/mosbth'>@mosbth</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+Du kan se [ovan codepen direkt på Codepens webbplats](http://codepen.io/mosbth/pen/qOPKyq).
+
+Att jobba i JSFiddle eller CodePen kan vara en smaksak. För min del så väljer jag att jobba i båda verktygen.
+
+
+
+###CodeShare {#codeshare}
+
+En annan resurs som kan udnerlätta felsökning via kollegor, är att dela med sig av koden via en codeshare via webbtjänsten [Codeshare](http://codeshare.io/). När du väl laddat upp din kod så kan du ta hjälp av kollegor som kan se koden i sitt sammanhang och de kan dessutom redigera koden och förslå förändringar.
+
+Tipset är att skaffa sig ett konto på Codeshare.
+ 
 
 
 
@@ -187,6 +258,7 @@ Resurser och manualer {#resurser}
 -------------------------------
 
 Här är ett allmänt stycke om de online-resurser med dokumentation, som du främst kommer att använda när du utvecklar JavaScript (i denna kursen).
+
 
 
 ###Mozilla Developers Network, MDN {#mdn}

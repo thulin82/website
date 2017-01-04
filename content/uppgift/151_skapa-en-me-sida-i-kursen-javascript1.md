@@ -1,11 +1,12 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - webbprogrammering
+    - kursen javascript1
 revision:
-  "2015-08-27": (B, mos) Uppgraderad till dbwebb-cli version 2.
-  "2014-08-11": (A, mos) Första utgåvan i samband med javascript1.
-updated: "2015-08-27 07:43:08"
-created: "2014-08-11 10:43:44"
+    "2017-01-04": (C, mos) Ny länk i förkunskaper.
+    "2015-08-27": (B, mos) Uppgraderad till dbwebb-cli version 2.
+    "2014-08-11": (A, mos) Första utgåvan i samband med javascript1.
 ...
 Skapa en me-sida i kursen javascript1
 ==================================
@@ -18,7 +19,7 @@ Skapa en me-sida för för kursen javascript1.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Labbmiljö för JavaScript i webbläsaren](kunskap/labbmiljo-for-javascript-i-webblasaren)" och du har initierat ditt kursrepo för kursen javascript1.
+Du har utfört uppgiften "[Skapa din egen Sandbox för JavaScript testprogram](uppgift/skapa-din-egen-sandbox-for-javascript-testprogram)" och du har initierat ditt kursrepo för kursen.
 
 
 
@@ -71,7 +72,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
