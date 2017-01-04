@@ -1,15 +1,18 @@
 ---
 author: mos
 revision:
-    "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
+    "2017-01-04": (B, mos) Förberedelse inför linux-v2.
     "2015-06-23": (A, mos) Första utgåvan för kursen.
 ...
 Kmom01: Linux som server
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och blir tillgängligt **senast den 16/1-2017**.
-[/WARNING]
+[INFO]
+<s>Kursmomentet är under översyn och blir tillgängligt **senast den 16/1-2017**.</s>
+
+Kursmomentet är tillgängligt per den 2017-01-04.
+
+[/INFO]
 
 Det första vi behöver är en Linux-server. På något sätt.
 
