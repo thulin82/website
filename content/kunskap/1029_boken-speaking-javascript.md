@@ -7,6 +7,8 @@ revision:
 Boken: Speaking JavaScript
 ==================================
 
+[FIGURE src=/image/bok/cover-speakingjs.jpg?w=c5&a=10,0,20,0 class="right"]
+
 En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar för nya programmerare såväl som för de som redan kan ett eller ett par programmeringsspråk.
 
 
