@@ -8,6 +8,10 @@ category:
 Kmom03: Autogenerering av UML och dokumentation
 ====================================
 
+[WARNING]
+Kursmomentet är under utveckling och blir tillgängligt **senast den 30/1-2017**.
+[/WARNING]
+
 Det finns färdiga verktyg för att generera UML diagram och dokumentation från färdig kod. Vi ska titta närmare på några verktyg och se hur de fungerar.  
 
 Vi ska även jobba vidare med Flask-appen och se hur grunderna i template-motorn Jinja2 kan fungera.

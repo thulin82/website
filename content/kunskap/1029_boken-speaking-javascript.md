@@ -14,7 +14,7 @@ En bok om att komma igång med JavaScript som programmeringsspråk. Fungerar fö
 
 <!--more-->
 
-Boken har tre olika delar där den första delen är relativt kort och ger en snabb översikt in till JavaScript. Del 2 hanterar bakgrunden om och varför JavaScript medan del 3 går in i detalj och fördjupar kring språkets uppbyggnad.
+Boken är indelad i tre olika delar där den första delen är relativt kort och ger en snabb översikt in till JavaScript. Del 2 hanterar bakgrunden om och varför JavaScript medan del 3 går in i detalj och fördjupar kring språkets uppbyggnad.
 
 Boken är skriven för ES5 och det finns en fortsättningsbok för ES6, skriven av samma författare.
 

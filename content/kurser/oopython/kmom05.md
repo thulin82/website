@@ -12,6 +12,10 @@ category:
 Kmom05: Sorteringsalgoritmer och datastrukturer
 ====================================
 
+[WARNING]
+Kursmomentet är under utveckling och blir tillgängligt **senast den 13/2-2017**.
+[/WARNING]
+
 Vi ska titta på hur några av de vanligaste sorteringsalgoritmerna ser ut och fungerar. Inbyggda sorteringsfunktioner baseras på en eller flera av de klassiska algoritmerna.  
 
 Vi ska även titta på några datastrukturer och implementera en egen som vi använder i ett terminalprogram.  

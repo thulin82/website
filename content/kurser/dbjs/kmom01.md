@@ -3,13 +3,20 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom01: TBD
+Kmom01: Grunderna
 ==================================
 
 [WARNING]
 Kursmomentet är under utveckling och blir tillgängligt **senast den 16/1-2017**.
 [/WARNING]
 
+Vi skall studera databasteknik tillsammans med webbteknologier och vi börjar med de båda, var för sig, för att senare knyta samman dem i applikationer.
+
+Det blir inledningsvis en del labbmiljö för att komma igång med kursen, så vi börjar med att få saker på plats, samtdigit som vi bekantar oss med de olika teknologier som kursen hanterar.
+
+Det blir en inledande introduktion till programmeringsspråket JavaScript och hur det används i webbläsaren tillsammans med HTML och CSS. Det blir fokus på JavaScript och minimalt med HTML och CSS.
+
+Samtidigt blir det en introduktion till databasteknik tillsammans med en inledande laboration i SQL. Vi börjar med att bekanta oss med den filbaserade databasen SQLite.
 
 <!--more-->
 <!--
@@ -31,13 +38,14 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * TBD
-    * (webboken)
+    * Kap 1: Databaser och databashanterare
+    * Kap 7: Introduktion till frågespråket SQL
 
-1. Läsanvisning Javascript.
+Båda kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1.
 
-    1. http://speakingjs.com/
-    1. http://exploringjs.com/es6.html
+1. [Speaking JavaScript](kunskap/boken-speaking-javascript).
+
+    1. [Part I. JavaScript Quick Start](http://speakingjs.com/es5/pt01.html) läs översiktligt för att få en introduktion till språket.
 
 
 
@@ -51,7 +59,7 @@ Läs följande:
     1. [MDN: Introduction to HTML](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction)
     1. [MDN: Getting started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started) (kika översiktligt på de tre första artiklarna i serien)
 
-5. Bekanta dig med guiden [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) och läs följande kapitel.
+1. Bekanta dig med guiden [MDN JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) och läs följande kapitel.
 
     * [Ch 1: Introduction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction) en kort introduktion till JavaScript.
     * [Ch 2: Grammar and types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)

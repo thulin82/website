@@ -8,6 +8,10 @@ category:
 Kmom10: Projekt och examination
 ====================================
 
+[WARNING]
+Kursmomentet är under utveckling och blir tillgängligt **senast den 27/2-2017**.
+[/WARNING]
+
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:

@@ -11,6 +11,10 @@ category:
 Kmom02: UML och unittest
 ====================================
 
+[WARNING]
+Kursmomentet är under utveckling och blir tillgängligt **senast den 23/1-2017**.
+[/WARNING]
+
 Kom igång med _UML_ och _unittest_. Det är kraftfulla verktyg som används i "riktig" produktionsmiljö. UML kan användas för att beskriva klassernas relation och unittester (enhetstester) används för att testa delar av koden såsom funktioner och metoder.  
 
 Du kommer även skapa klasser utifrån ett färdigt UML-diagram och skriva unittester på dem.

@@ -7,7 +7,7 @@ Kmom05: TBD
 ==================================
 
 [WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 13/2-2017**.
+Kursmomentet är under utveckling och blir tillgängligt **senast den 13/3-2017**.
 [/WARNING]
 
 

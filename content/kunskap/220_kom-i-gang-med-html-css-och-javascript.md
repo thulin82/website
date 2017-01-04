@@ -1,10 +1,12 @@
 ---
 author: mos
-category: javascript
+category:
+    - kursen javascript1
+    - kursen dbjs
+    - javascript
 revision:
-  "2015-08-26": (A, mos) Första utgåvan inför hösten 15.
-updated: "2015-08-26 15:07:43"
-created: "2015-08-26 14:40:40"
+    "2016-01-04": (B, mos) Omfatta även kursen dbjs.
+    "2015-08-26": (A, mos) Första utgåvan inför hösten 15.
 ...
 Kom i gång med HTML, CSS och JavaScript
 ==================================
@@ -22,31 +24,36 @@ Du får en bas att stå på, ett första program i JavaScript, att bygga vidare 
 Förutsättning {#pre}
 -------------------------------
 
-Artikeln är en del av kursen javascript1 och förutsätter att du har en labbmiljö som motsvarar "[Introduktion till labbmiljö i javascript1](javascript1/labbmiljo)".
+Artikeln är en del av kurserna [javascript1](kurser/javascript1)/[dbjs](kurser/dbjs) och förutsätter att du har en labbmiljö som beskrivs i respektive kurs.
 
-
-
-Kursmaterial från GitHub {#material}
--------------------------------
-
-I denna kursen jobbar du med exempelprogram och övningar som finns samlade i ett kursrepo, en kurskatalog. Du bör alltså ha ditt kursrepo framför dig nu.
-
-Du kan se allt [innehåll i det så kallade *repositoryt*](https://github.com/mosbth/javascript1) via webbplatens GitHub, det innehåller alla övningar, exempelprogram och tips och trix som finns i det som du nu laddat ned. Där finns även en struktur som du skall följa när du gör dina inlämningar, det är det som kallas din me-sida, eller me-katalog. Men, vi tar mer om det när du väl gör uppgifterna.
+Du behöver också ha respektive kursrepo på plats.
 
 
 
 En sandbox för exempelprogram {#sandbox}
 -------------------------------
 
-En [sandbox](http://en.wikipedia.org/wiki/Sandbox_(software_development)) är en avskild testmiljö. Låt oss, som en övning, skapa en sandbox som du kan använda för dina testprogram i kursen.
+En sandbox är en avskild testmiljö. Låt oss, som en övning, skapa en sandbox som du kan använda för dina testprogram i kursen.
 
-Kika i kursmaterialet under `example/sandbox`. Där hittar du en bra struktur på en webbsida där sidans delar är separerade i olika filer.
+Kika i kursmaterialet under `example/sandbox`. Där hittar du en struktur på en webbsida där sidans delar är separerade i olika filer.
+
+```bash
+$ tree sandbox/
+sandbox/                                  
+├── index.html                            
+├── main.js                               
+└── style.css                             
+                                          
+0 directories, 3 files                    
+```
+
+Här är en förklaring av de olika filerna.
 
 | Fil                       | Innehåll         |
 |---------------------------|------------------|
 | `sandbox/index.html`      | Sidans huvusakliga innehåll och HTML-koden |
-| `sandbox/style/style.css` | Sidans style och CSS-kod |
-| `sandbox/js/main.js`      | Sidans JavaScript |
+| `sandbox/style.css`       | Sidans style och CSS-kod |
+| `sandbox/main.js`         | Sidans JavaScript |
 
 Studera filerna och se hur de länkas samman i `index.html` via följande två rader.
 
@@ -57,7 +64,7 @@ Studera filerna och se hur de länkas samman i `index.html` via följande två r
 
 Var sak på sin plats är viktigt, det blir lättare att underhålla koden i längden på det viset.
 
-Koden för sandbox-exemplet finns även att studera, och provköra, [i en kopia av repot på dbwebb.se](javascript1/repo/example/sandbox).
+Koden för sandbox-exemplet finns även att studera, och provköra, via dbwebb.se i [javascript1](repo/javascript1/example/sandbox) eller [dbjs](repo/dbjs/example/sandbox).
 
 
 

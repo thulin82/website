@@ -11,6 +11,10 @@ category:
 Kmom04: Regex och databaser
 ====================================
 
+[WARNING]
+Kursmomentet är under utveckling och blir tillgängligt **senast den 6/2-2017**.
+[/WARNING]
+
 I det här kursmomentet övar vi oss på regex, hantering av SQLite-databas och HTTP-metoderna GET och POST i Flask.  
 
 Regex matchar textmönster och används framförallt för att extrahera specifik information ur större mängder text och text-filer.  
