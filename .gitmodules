@@ -40,3 +40,6 @@
 [submodule "htdocs/repo/htmlphp-me"]
 	path = htdocs/repo/htmlphp-me
 	url = git@bitbucket.org:mosbth/htmlphp-me.git
+[submodule "htdocs/repo/dbjs"]
+	path = htdocs/repo/dbjs
+	url = https://github.com/dbwebb-se/dbjs.git
