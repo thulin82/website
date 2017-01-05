@@ -1,11 +1,13 @@
 ---
 author: mos
-category: javascript
+category:
+    - javascript
+    - kursen javascript1
+    - kursen javascript
+    - kursen webgl
 revision:
     "2016-11-07": (B, mos) Genomgången inför ht16.
     "2015-11-11": (A, mos) Uppdaterad och omskriven i samband med webgl-kursen.
-updated: "2015-11-11 14:53:54"
-created: "2015-10-11 16:30:43"
 ...
 Programmering med grunderna i JavaScript
 ==================================
