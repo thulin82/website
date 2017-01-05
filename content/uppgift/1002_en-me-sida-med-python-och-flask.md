@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-05": (A, lew) Pre-release.
 category:
     - oopython
 ...
@@ -34,7 +34,7 @@ Startfilen ska heta "app.py" och ska ligga i mappen me/flask.
 
 1. Applikationen ska använda Bootstrap.
 
-2. Applikationen ska ha minst två sidor, index.html och redovisning.html.
+2. Applikationen ska ha minst tre sidor, index.html, about.html och redovisning.html.
 
 3. index.html ska innehålla minst
     * en bild
