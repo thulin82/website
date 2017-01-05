@@ -1,12 +1,11 @@
 ---
 author: mos
-category: unix
+category:
+    - unix
 revision:
-  "2016-01-20": (B, mos) Notis om att logg-filen är skyddad och inte kan öppnas via
-    webbläsaren.
-  "2015-06-24": (A, mos) Första utgåvan i samband med kursen linux.
-updated: "2016-01-20 09:33:59"
-created: "2015-06-24 06:34:30"
+    "2017-01-05": (C, mos) Notis om små bokstäver på filerna.
+    "2016-01-20": (B, mos) Notis om att logg-filen är skyddad och inte kan öppnas via webbläsaren.
+    "2015-06-24": (A, mos) Första utgåvan i samband med kursen linux.
 ...
 Installera Debian som server
 ==================================
@@ -46,7 +45,7 @@ Krav {#krav}
 
 3. På servern, kör kommandot `uname -a`, notera svaret i loggen.
 
-4. Öppna en terminal på din arbetsstation. Använd SSH för att logga in på servern. När du är inloggad så kör du kommandot `cowsay` med en trevlig hälsningsfras. Ta en skärmdump av terminalfönstret som visar resultatet. Spara bilden i formatet PNG och lägg filen i samma katalog som loggfilen, döp den till `ssh.png`.
+4. Öppna en terminal på din arbetsstation. Använd SSH för att logga in på servern. När du är inloggad så kör du kommandot `cowsay` med en trevlig hälsningsfras. Ta en skärmdump av terminalfönstret som visar resultatet. Spara bilden i formatet PNG och lägg filen i samma katalog som loggfilen, döp den till `ssh.png` (använd små bokstäver i filnamnet, inte STORA).
 
 5. Publicera dina svar enligt följande.
 
@@ -62,7 +61,7 @@ Dubbelkolla att du kan öppna länken som visas av kommandot publish i en webbl�
 Extrauppgift {#extra}
 -----------------------
 
-* Spela in en [asciinema](https://asciinema.org/) när du gör kravet 4) ovan. Länka till din asciiart från din loggfil.
+* Spela in en [asciinema](https://asciinema.org/) när du gör kravet 4) ovan. Länka till din asciinema från din loggfil.
 
 
 
@@ -72,7 +71,3 @@ Tips från coachen {#tips}
 Stressa inte. Kör det ihop sig så är det en bra taktik att börja om från början och göra om. Det går snabbare andra gången, och ännu snabbare tredje gången.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
