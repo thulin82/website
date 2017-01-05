@@ -167,7 +167,7 @@ För Bootstrap's och JQuery's filer använder vi oss av [CDN](https://en.wikiped
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Hem</a></li>
+            <li class="active"><a href="{{ url_for('main') }}">Hem</a></li>
           </ul>
         </div>
       </div>
@@ -254,9 +254,9 @@ Vi kommer behöva lägga till en route i `app.py` och skapa en ny sida i /templa
 
 Börja med att skapa filen på följande sätt:  
 Den har samma struktur som `index.html` så vi kopierar bara den. Öppna index.html i editorn och lägg till ett `<li>` element för den nya sidan, under  
-`<li class="active"><a href="/">Hem</a></li>`:
+`<li class="active"><a href="{{ url_for('main') }}">Hem</a></li>`:
 ```html
-<li><a href="/about">Om</a></li>
+<li><a href="{{ url_for('about') }}">Om</a></li>
 ```
 
 Nu kan vi kopiera innehållet i index.html till filen vi döper till about.html.
@@ -277,7 +277,7 @@ När man klickat på "Om" i navbaren ska det menyvalet vara aktivt. Vi skiftar s
 
 ```html
 <li><a href="/">Hem</a></li>
-<li class="active"><a href="/about">Om</a></li>
+<li class="active"><a href="{{ url_for('about') }}">Om</a></li>
 ```
 
 Du kan såklart ändra innehållet för /about men det hittar du nog.
@@ -292,7 +292,7 @@ Vi öppnar filen `app.py` igen och tittar på routen. Lägg till följande kod u
 
 ```python
 @app.route("/about")
-def show_about():
+def about():
     """ About route """
     return render_template("about.html")
 ```
