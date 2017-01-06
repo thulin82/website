@@ -29,7 +29,7 @@ Det finns en mall för redovisningssidan som du kan utgå ifrån. Börja med att
 
 ```text
 # Gå till kurskatalogen
-cp -ri example/redovisa me/redovisa
+cp -ri example/redovisa me
 ```
 
 Jobba nu vidare i katalogen `me/redovisa`.
