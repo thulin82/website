@@ -69,6 +69,8 @@ CGIHandler().run(app)
 
 Skapa skriptet och lägg båda filerna i en katalog som ät tillgänglig via en webbserver som har konfigurerat att CGI fungerar och Flask finns installerat.
 
+Om du inte vill köra dem lokalt, så kan du lägga filerna i ditt kursrepo och göra `dbwebb publish` för att publisera på studentservern.
+
 Du kan testköra skriptet på följande platser.
 
 * [dbwebb.se](repo/oopython/example/flask/cgi-minimal/app.cgi/)
