@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2017-01-06": (C, mos) Lade till CGI på studentservern.
     "2016-12-16": (PB, lew) Pre-release.
     "2016-06-01": (PA, lew) Pre-release.
     "2016-05-25": (PA, aar) Pre-release.
@@ -102,6 +103,8 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 Genomför följande övning för att träna dig.
 
 1. Kom igång och gör din första webbapplikation i Python tillsammans med övningen "[Kom igång med Flask](kunskap/kom-igang-med-flask)".
+
+1. Gör din [Flask applikation som ett CGI-skript](coachen/flask-som-cgi-script) och publicera på studentservern med `dbwebb publish`.
 
 2. Läs igenom artikeln som handlar om objekt i Python "[Kom igång med objekt](kunskap/kom-igang-med-objekt)".  
 
