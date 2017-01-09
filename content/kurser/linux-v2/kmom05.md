@@ -64,13 +64,13 @@ Titta på följande:
 
 1. Se videon om "[REST API concepts and examples](https://www.youtube.com/watch?v=7YcW25PHnAA)". Den visar exempel på grunderna i REST API och hur det förhåller sig till en webb URL.
 
-
+1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify.
 
 ###Lästips {#lastips}
 
 1. Det finns en webbplats som föreslår en [JSON API specifikation](http://jsonapi.org/). Du kan titta översiktligt på den, börja med stycket om "Fetching Data". Specifikationen ger oss en guide, eller ledtrådar och tips, till hur man kan skriva ett JSON API för en server.
 
-
+1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet.
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
