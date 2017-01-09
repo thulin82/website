@@ -81,8 +81,8 @@ Nu delar vi upp koden vi har i index.html. Om man funderar en stund på vad som 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Hem</a></li>
-            <li><a href="/about">Om</a></li>
+            <li class="active"><a href="{{ url_for('main') }}">Hem</a></li>
+            <li><a href="{{ url_for('about') }}">Om</a></li>
           </ul>
         </div>
       </div>
