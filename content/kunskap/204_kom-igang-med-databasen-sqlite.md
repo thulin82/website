@@ -1,21 +1,29 @@
 ---
 author: mos
-category: sql
+category:
+    - databas
+    - sql
 revision:
-  "2015-06-05": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
-updated: "2015-06-05 08:56:32"
-created: "2015-06-05 08:56:00"
+    "2017-01-09": (B, mos) Stödjer både htmlphp och dbjs.
+    "2015-06-05": (A, mos) Första utgåvan för htmlphp version 2 av kursen.
 ...
 Kom igång med databasen SQLite
 ==================================
 
-[FIGURE src=/image/sqlite20/sqlite-logo.gif class="right" caption="Logo för SQLite"]
+[FIGURE src=/image/sqlite20/sqlite-logo.gif class="right"]
 
 En guide för att stegvis komma igång med databasen SQLite och SQL. Guiden hanterar grunderna i SQLite och SQL. Vi skapar en enkel databas i SQLite och använder ett par verktyg för att jobba mot databasen.
 
 <!--more-->
 
 Bästa sättet att gå igenom guiden är att genomföra varje övning på egen hand. Gör precis som jag gjort, fast på egen hand. Kopiera eller skriv om kodexemplen, det viktiga är att du återskapar koden i din egna miljö. Läsa är bra men man måste göra själv, "kan själv", för att lära sig.
+
+
+
+Förutsättning {#pre}
+--------------------------------------
+
+I artikeln refereras till kodexempel som finns med som en del i kursrepot htmlphp eller dbjs. Det förutsätts att du har tillgång till en kursmiljö som motsvarar de kurserna.
 
 
 
@@ -28,9 +36,7 @@ SQLite är filbaserad vilket innebär att hela databasen finns lagrad i en enda 
 
 SQLite stödjer de vanliga SQL-konstruktionerna. Ta en titt på vilka [SQL-konstruktioner som stöds i SQLite](http://www.sqlite.org/lang.html). Om du redan är bekant med SQL-språket så kommer du att känna igen dig, om inte så kommer vi till detta lite längre ned i guiden.
 
-SQL står för "Standard Query Language" och är ett standardiserad sätt att ställa frågor till en relationsdatabas. Läs kort om SQL på Wikipedia.
-
-[Läs om SQL på svenska Wikipedia](http://sv.wikipedia.org/wiki/SQL).
+SQL står för "Standard Query Language" och är ett standardiserad sätt att ställa frågor till en relationsdatabas. Läs kort om [SQL på Wikipedia](http://sv.wikipedia.org/wiki/SQL).
 
 
 
@@ -39,7 +45,7 @@ SQLite Manager {#sqliteman}
 
 SQLite Manager är ett grafiskt användargränssnitt för databaser i SQlite. Med verktyget kan du skapa nya databaser, skapa tabeller, editera data i tabellerna, söka i dem och skriva vanliga SQL-satser. SQLite Manager är en Firefox AddOn.
 
-[Ladda ned och installera SQLite Manager som Firefox AddOn](https://addons.mozilla.org/sv-SE/firefox/addon/5817/).
+Se till att du har en uppdaterad version av webbläsaren Firefox. Sedan kan du [ladda ned och installera SQLite Manager som Firefox AddOn](https://addons.mozilla.org/sv-SE/firefox/addon/5817/).
 
 Så här gjorde jag.
 
@@ -90,13 +96,15 @@ Låt se hur denna tabellen skulle se ut i en databas.
 Tabell för kurser {#kurs}
 --------------------------------------
 
-I kursrepot för [htmlphp-kursen finns en exempeldatabas](https://github.com/mosbth/htmlphp/tree/master/example/sqlite) som innehåller tabellen "Kurs" och innehållet enligt stycket ovan. Databasfilen heter `kurs.sqlite`. Det är alltså en databas med en tabell. En databas kan innehålla många tabeller. De tabeller som hänger ihop, sparar man i en och samma databas.
+I kursrepot [en exempeldatabas](https://github.com/mosbth/htmlphp/tree/master/example/sqlite) som innehåller tabellen "Kurs" och innehållet enligt stycket ovan. Databasfilen heter `kurs.sqlite`. Det är alltså en databas med en tabell. En databas kan innehålla många tabeller. De tabeller som hänger ihop, sparar man i en och samma databas.
 
 Du kan [ladda hem databas-filen](https://github.com/mosbth/htmlphp/blob/master/example/sqlite/kurs.sqlite?raw=true) och spara på din egen desktop. Sedan kan du öppna den i SQLite Manager och se vad den innehåller.
 
 Så här ser det ut när jag gör det.
 
 [YOUTUBE src=aOy4ycFd4HM width=630 caption="Mikael testar Kurs-databasen i SQLite Manager."]
+
+Se till att du kan ladda ned databasen `kurs.sqlite` och öppna den i SQLite Manager. Kika runt i verktyget och databasen för kurser, bekanta dig med både verktyg och den lilla databasen.
 
 Nu ska vi göra ett liknande exempel, fast stegvis och lite lugnare.
 
@@ -369,6 +377,17 @@ Glöm bara inte bort att SQLite är en filbaserad databas och det räcker att ko
 
 
 
+Ta en backup av din databas {#backup}
+--------------------------------------
+
+Innan du avslutar övningen så ser du till att spara undan en kopia av din databasfile `boats.sqlite`. Lägg den i ditt kursrepo.
+
+Ta dessutom en backup av din databas, genom att exportera databasen, och spara backupen som `boats.sql`.
+
+Se till att du förstår skillnaden på dessa två filer. Öppna dem i din texteditor för att se på dess innehåll. Filen `boats.sqlite` är en binärfil och innehåller själva databasen. Filen `boats.sql` är en textfil med SQL-kommandon som är en snapshot av innehållet och strukturen i din databas, med hjälp av den kan du återskapa databasen och dess innehåll.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
@@ -377,7 +396,3 @@ Det var en genomgång av SQLite och SQL. Via verktyget SQLite Manager kan du all
 Det finns också en [kommandoradsklient för SQLite](kunskap/en-kommandoradsklient-for-sqlite) som du kan titta på.
 
 Ställ gärna frågor om [SQLite och dess klienter i forumet](t/4308).
-
-
-
-
