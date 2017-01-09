@@ -64,7 +64,7 @@ Titta på följande:
 
 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 4.
 
-
+1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify.
 
 ###Lästips {#lastips}
 
@@ -72,7 +72,7 @@ Titta på följande:
 
 1. Titta översiktligt på [Babel](https://babeljs.io/) som är en JavaScript till JavaScript kompilator som stödjer ECMA6.
 
-
+1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet.
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
@@ -131,5 +131,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Är detta din första bekantskap med javaScript på servern eller har du testat det tidigare?
 * Vad tänker du om ECMA6, dess nya funktioner och sättet att få tillgång till dem via `babel-node`?
-* Vad tyckte du om Nodescools variant på övningar och workshops?
+* Vilka fördelar finns med funktionell programmering om man jämför med proceduell programmering?
 * Hur gick det att förstå koncepten kring klient och server?
