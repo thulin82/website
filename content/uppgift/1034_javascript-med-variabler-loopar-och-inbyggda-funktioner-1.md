@@ -2,12 +2,9 @@
 author: mos
 category: 
     - javascript
-    - kursen javascript1
+    - kursen dbjs
 revision:
-    "2017-01-04": (D, mos) Nya förkunskaper, uppdaterad länk.
-    "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
-    "2014-08-11": (B, mos) Genomgången och mindre justering av texten.
-    "2014-06-26": (A, mos) Första utgåvan i samband med javascript1.
+    "2017-01-04": (A, mos) Kopia från samma dokument javascript1 och uppdaterad för dbjs.
 ...
 JavaScript med variabler, loopar och inbyggda funktioner
 ==================================
@@ -33,10 +30,10 @@ Gå till din kurskatalog i terminalen.
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb create lab1
+dbwebb create javascript1
 ```
 
-Materialet till labben ligger nu i din kurskatalog i `me/kmom02/lab1` enligt följande.
+Materialet till labben ligger nu i din kurskatalog i `me/kmom01/javascript1` enligt följande.
 
 | Fil                | Innehåll |
 |--------------------|----------|
@@ -61,8 +58,9 @@ Krav {#krav}
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb publish lab1
+dbwebb publish javascript1
 ```
+
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
 
 

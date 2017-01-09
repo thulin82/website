@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-01-04": (A, mos) Förberedd för dbjs.
 ...
 Resultat och redovisning
 ==================================
@@ -21,9 +21,9 @@ Besvara de specifika frågor som finns för varje kursmoment.
 
 Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc.
 
-Skriv ett stycke om 15-30 meningar under respektive kursmoment i filen `me/redovisa/report.html`.
+Skriv ett stycke om 15-30 meningar under respektive kursmoment i filen `me/redovisa/redovisning.html`.
 
-När du är klar innehåller filen `me/redovisa/report.html` redovisningstexter från samtliga kursmoment.
+När du är klar innehåller filen `me/redovisa/redovisning.html` redovisningstexter från samtliga kursmoment.
 
 
 

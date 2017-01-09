@@ -3,12 +3,16 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom02: TBD
+Kmom02: Databas och SQL
 ==================================
 
 [WARNING]
 Kursmomentet är under utveckling och blir tillgängligt **senast den 30/1-2017**.
 [/WARNING]
+
+Då dyker vi in i databaser tillsammans med SQL.
+
+Det blir en introduktion till databasteknik tillsammans med en inledande laboration i SQL. Vi börjar med att bekanta oss med den filbaserade databasen SQLite.
 
 
 <!--more-->
@@ -16,7 +20,7 @@ Kursmomentet är under utveckling och blir tillgängligt **senast den 30/1-2017*
 [FIGURE src=/image/snapht15/linux-what-now.png?w=w2 caption="Okey, terminalen, och nu då?"]
 -->
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 40 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
 
 
@@ -31,7 +35,11 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * TBD
+    * Kap 1: Databaser och databashanterare
+    * Kap 7: Introduktion till frågespråket SQL
+
+Båda kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1.
+
 
 1. Läsanvisning Javascript.
 
@@ -79,9 +87,9 @@ Genomför följande övningar.
 1. Jobba igenom övningen "[Kom igång med databasen SQLite](kunskap/kom-igang-med-databasen-sqlite)". 
 
 
-1. Jobba igenom guiden "[Kom igång med Node.js (på Debian)](https://dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)".
+Genomför följande övningar.
 
-1. nodejs mot sqlite.
+1. *(FLYTTA TILL LABBMILJÖ?)* Läs igenom artikeln ["En kommandoradsklient för SQLite](kunskap/en-kommandoradsklient-for-sqlite)" och installera kommandoklienten på ditt eget system. Testa den så du känner att du har koll på hur den fungerar. *(SQL/SQLite intro)*.
 
 
 
@@ -89,12 +97,13 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
+1. Gör laborationen "[Lab 1 SQL introduktion](uppgift/lab-1-sql-introduktion)" som låter dig träna på grunderna i SQL kommandon.
+
 1. Gör laborationen "[Lab 2 SQL XXX](uppgift/lab-2-sql-XXX)" som låter dig träna på...
 
 1. nodejs labb (linux lab3 variant)?
 
 1. Gör uppgiften nodejs enkelt program som använder sqlite.
-
 
 
 

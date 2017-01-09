@@ -346,7 +346,15 @@ ServerAdmin $(SERVER_ADMIN)
 		Require all granted
 		Order allow,deny
 		Allow from all
+
+		Options +ExecCGI
+		AddHandler cgi-script .cgi
 	</Directory>
+
+	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
+		ExpiresActive On
+		ExpiresDefault "access plus 1 week"
+	</FilesMatch>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">
 		ExpiresActive On
@@ -381,7 +389,7 @@ virtual-host:
 	echo "$$VIRTUAL_HOST_80" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
 	echo "$$VIRTUAL_HOST_80_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
 	sudo a2ensite $(WWW_SITE) www.$(WWW_SITE)
-	sudo a2enmod rewrite expires
+	sudo a2enmod rewrite expires cgi
 	sudo apachectl configtest
 	sudo service apache2 reload
 
@@ -419,6 +427,9 @@ ServerAdmin $(SERVER_ADMIN)
 		Require all granted
 		Order allow,deny
 		Allow from all
+
+		Options +ExecCGI
+		AddHandler cgi-script .cgi
 	</Directory>
 
 	<FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|otf|eot|woff|woff2|ico)$">

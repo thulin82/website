@@ -16,7 +16,7 @@ Kursmomentet är under utveckling och blir tillgängligt **senast den 13/2-2017*
 [FIGURE src=/image/snapht15/linux-what-now.png?w=w2 caption="Okey, terminalen, och nu då?"]
 -->
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 40 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
 
 
@@ -67,13 +67,22 @@ Det finns inga extra lästips.
 
 Genomför följande övningar.
 
+1. Jobba igenom guiden "[Kom igång med Node.js (på Debian)](https://dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)".
+
+1. nodejs mot sqlite.
+
 1. Läs igenom övningen ""[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)".
+
 
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften “JavaScript med funktioner”.
+
+1. Gör uppgiften “Rita flaggor med JavaScript och funktioner”.
 
 1. Gör laborationen "[Lab 3 SQL XXX](uppgift/lab-3-sql-XXX)" som låter dig träna på ...
 
