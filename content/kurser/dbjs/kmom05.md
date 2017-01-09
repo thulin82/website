@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom05: TBD
+Kmom05: Procedur, trigger, funktion
 ==================================
 
 [WARNING]
@@ -31,9 +31,12 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * TBD
+    * Kap 12. Integritetsvillkor
+    * Kap 14: Lagrade procedurer
+    * Kap 15: Aktiva databaser och triggers
 
-1. Läsanvisning Javascript.
+Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
+
 
 
 

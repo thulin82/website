@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom06: TBD
+Kmom06: Index och prestanda
 ==================================
 
 [WARNING]
@@ -31,9 +31,12 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * TBD
+    * Kap 9: Sammanfattning av SQL-kommandon
+    * Kap 13: Säkerhet i databaser
+    * Kap 21: Index och prestanda
 
-1. Läsanvisning Javascript.
+Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
+
 
 
 
@@ -51,7 +54,11 @@ Det finns inga videoförslag.
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Kika på följande lästips om du finner dem intressanta.
+
+1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 22: Fysiska lagringsstrukturer i databaser
+
 
 
 

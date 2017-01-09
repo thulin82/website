@@ -3,7 +3,7 @@ author: mos
 revision:
     "2017-01-04": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom01: JavaScript
+Kmom01: JavaScript klient
 ==================================
 
 [WARNING]

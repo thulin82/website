@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom04: TBD
+Kmom04: Transaktioner
 ==================================
 
 [WARNING]
@@ -31,9 +31,14 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * TBD
+    * Kap 23: Transaktioner
 
-1. Läsanvisning Javascript.
+    * Kap 3: Mer om datamodellering
+    * Kap 11: Normalformer och normalisering
+
+    * Kap 8: Mer om SQL: Aggregatfunktioner, null-värden, yttre join
+
+Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 
 
@@ -51,7 +56,10 @@ Det finns inga videoförslag.
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Kika på följande lästips om du finner dem intressanta.
+
+1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 24: Hur transaktioner hanteras inuti databashanteraren
 
 
 
