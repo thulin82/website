@@ -1,11 +1,12 @@
 ---
 author: mos
-category: sql
+category:
+    - databas
+    - sql
 revision:
-  "2015-08-26": (B, mos) phpliteadmin flyttade från Googlecode till Bitbucket.
-  "2015-06-10": (A, mos) Första utgåvan inför htmlphp version 2 av kursen.
-updated: "2015-08-26 11:36:50"
-created: "2015-06-10 12:24:48"
+    "2017-01-09": (C, mos) Mer i stycket förutsättningar.
+    "2015-08-26": (B, mos) phpliteadmin flyttade från Googlecode till Bitbucket.
+    "2015-06-10": (A, mos) Första utgåvan inför htmlphp version 2 av kursen.
 ...
 En webbaserad klient för SQLite, phpliteadmin
 ==================================
@@ -24,10 +25,14 @@ Det kan vara mycket behändigt att ha tillgång till en sådan möjlighet. Iblan
 Förutsättningar {#pre}
 --------------------------------------
 
-Du har koll på SQLite och PHP. Det räcker. Men har du även koll på terminalen som verktyg så kan saker bli enklare (om du frågar mig).
+Du har koll på SQLite och PHP. Det räcker. Men har du även koll på terminalen som verktyg så kan saker bli enklare.
+
+Du har installerat [XAMPP](labbmiljo/webbserver) eller motsvarande.
 
 Kanske har du också kikat på [desktopklienten som går att köra i Firefox](kunskap/kom-igang-med-databasen-sqlite#sqliteman) och [kommandoradsklienten `sqlite3`](kunskap/en-kommandoradsklient-for-sqlite), det vore bra men det är inte nödvändigt.
 
+Om du använder dbwebb-cli för att publicera ditt kursrepo och phpliteadmin, se då till att lägga allt i en underkatalog som du döper till `db` så löser dbwebb-cli så att rättighterna blir 777 på katalogen `db` och 644 på filer som slutar på `.sqlite`.
+ 
 
 
 Läs om `phpliteadmin` {#om}
@@ -93,7 +98,3 @@ Avslutningsvis {#avslutning}
 Det var alltså en webbaserad klient för SQLite. Det kan vara bra att ha tillhanda. Ibland vill man ha en desktopklient, ibland en kommandoradsklient och ibland vill man ha en webbaserad klient. När det gäller databaser är det bra att ha lite koll på olika klienter, annars kan man hamna i ett läge där man saknar en smidigt möjlighet att prata med databasen.
 
 Ställ gärna frågor om [SQLite och webbaserade klienter i forumet](t/4313).
-
-
-
-
