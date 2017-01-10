@@ -6,7 +6,7 @@ author:
     - mos
 revision:
     "2016-11-28": (B, mos) Text till kursplanen.
-    "2016-04-12": (A, lew) Pre-release.
+    "2016-04-12": (A, lew) Första versionen.
 category:
     - oopython
 ...

@@ -1,11 +1,11 @@
 ---
 author: lew
 revision:
-    "2017-01-06": (C, mos) Lade till CGI på studentservern.
-    "2016-12-16": (PB, lew) Pre-release.
-    "2016-06-01": (PA, lew) Pre-release.
-    "2016-05-25": (PA, aar) Pre-release.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-06": (E, mos) Lade till CGI på studentservern.
+    "2016-12-16": (D, lew) Ändrade ännu mer saker.
+    "2016-06-01": (C, lew) Ändrade mer saker.
+    "2016-05-25": (B, aar) Ändrade saker.
+    "2016-04-12": (A, lew) Skapade dokument.
 category:
     - oopython
 ...

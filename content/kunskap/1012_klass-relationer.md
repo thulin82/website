@@ -1,7 +1,7 @@
 ---
 author: aar
 revision:
-    "2016-04-19": (PA, aar) Pre-release.
+    "2016-04-19": (A, aar) Första versionen.
 category:
     - oopython
 ...
