@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2017-01-11": (C, aar) Skrev om krav 2.
     "2016-12-19": (B, lew) Ny uppgift.
     "2016-04-12": (A, lew) Första versionen.
 category:
@@ -43,7 +44,7 @@ touch test_deck.py
 
 1. Kopiera in koden från `main.py` där du skapat objekt.
 
-2. Skriv ett testfall för varje typ av attribut och för varje metod i klasserna. Du behöver med andra ord inte skriva ett test för varje sträng-attribut utan ta en av dem.  
+2. Skriv minst fem valfria testfall, minst ett på varje klass.
 
 3. Exekvera alla testfall och se till att alla går igenom.
 
