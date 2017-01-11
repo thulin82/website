@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2017-01-11": (D, aar) Tog bort str().
     "2016-12-20": (C, aar) Uppdaterade uppgift.
     "2016-12-19": (B, lew) Ny uppgift.
     "2016-04-12": (A, lew) Första versionen.
@@ -65,7 +66,7 @@ I metoden `takeCard` ska kortet som tagits returneras och inte längre finnas i 
     * `Hand` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i handen.  
     * `Deck` ska skriva ut information om sig själv och använda `__str__()`-metoden på alla kort i kortleken.  
 
-6. I din main.py ska du skapa en kortlek och en hand. Döp din kortlek till `deckOfCards` och din hand till `hand`. Använd din shuffle metod på kortleken och ta sedan 5 kort från `deckOfCards` och lägg i `hand`. Avsluta med: `print(str(DeckOfCards))` och `print(str(hand))`.  
+6. I din main.py ska du skapa en kortlek och en hand. Döp din kortlek till `deckOfCards` och din hand till `hand`. Använd din shuffle metod på kortleken och ta sedan 5 kort från `deckOfCards` och lägg i `hand`. Avsluta med: `print(DeckOfCards)` och `print(hand)`.  
 
 ```bash
 # Ställ dig i kurskatalogen
