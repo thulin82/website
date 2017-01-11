@@ -50,6 +50,7 @@ touch test_deck.py
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb validate test
+dbwebb publish test
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
