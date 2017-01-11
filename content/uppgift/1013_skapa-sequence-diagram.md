@@ -3,7 +3,7 @@ author: aar
 revision:
     "2016-05-03": (A, aar) Första versionen.
 category:
-    - python
+    - oopython
 ...
 Skapa sequence diagram
 ===================================
@@ -42,11 +42,13 @@ cd me/kmom02/uml
 
 1. Skapa ett sequnce diagram av vad som händer efter _controller.main()_ anropas i koden.
 
-2. Skapa en jpeg eller png bild av diagrammet och inkludera i mappen.
+2. Skapa en bild av diagrammet och inkludera i mappen. Döp filen till `sequenceDiagram.png`.
 
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb validate uml
+
+dbwebb publish uml
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

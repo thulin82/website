@@ -71,6 +71,8 @@ I metoden `takeCard` ska kortet som tagits returneras och inte längre finnas i 
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb validate deck
+
+dbwebb publish deck
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.

@@ -63,6 +63,8 @@ Krav {#krav}
 ```bash
 # Flytta till kurskatalogen
 dbwebb validate lab2
+
+dbwebb publish lab2
 ```
 
 Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
