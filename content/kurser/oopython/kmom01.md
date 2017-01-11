@@ -12,9 +12,11 @@ category:
 Kmom01: Kom igång med objekt och Flask
 ====================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 16/1-2017**.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 16/1-2017**.</strike>
+
+Kursmomentet tillgängligt per den 2017-01-10.
+[/INFO]
 
 Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask", där vi skriver redovisningstexten och en kort presentation om oss själva. Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objekt-orienterad programmering.
 

@@ -47,7 +47,7 @@ if __name__ == "__main__":
     app.run()
 ```
 
-Du kan spara ovan kod i en fil `app.py` och sedan köra den via `python2 app.py` för att kontrollera att det fungerar.
+Du kan spara ovan kod i en fil `app.py` och sedan köra den via `python3 app.py` för att kontrollera att det fungerar.
 
 Du kan nu lägga till en fil `app.cgi` som via webbservern Apache kan köra din Flaskapplikation.
 
