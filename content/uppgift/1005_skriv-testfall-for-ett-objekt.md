@@ -1,8 +1,8 @@
 ---
 author: lew
 revision:
-    "2016-12-19": (PA, lew) new assignment.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2016-12-19": (B, lew) Ny uppgift.
+    "2016-04-12": (A, lew) Första versionen.
 category:
     - oopython
 ...

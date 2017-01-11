@@ -1,7 +1,7 @@
 ---
 author: aar
 revision:
-    "2016-05-03": (PA, aar) Pre-release.
+    "2016-05-03": (A, aar) Första versionen.
 category:
     - python
 ...

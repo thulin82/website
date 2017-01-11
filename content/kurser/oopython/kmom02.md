@@ -1,10 +1,10 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Updated flask structure.
-    "2016-06-01": (PA, lew) Pre-release.
-    "2016-05-25": (PA, aar) Pre-release.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2016-12-16": (D, lew) Updated flask structure.
+    "2016-06-01": (C, lew) Fixade något.
+    "2016-05-25": (B, aar) Ändrade något.
+    "2016-04-12": (A, lew) Första versionen.
 category:
     - oopython
 ...
@@ -58,6 +58,12 @@ Läs följande:
 ###Video  {#video}
 
 Titta på följande video:  
+
+1. Video om sequence diagrams: [UML Behavioral Diagrams: Sequence - Georgia Tech - Software Development Process](https://www.youtube.com/watch?v=XIQKt5Bs7II).  
+
+2. Videos 12-22 i spellistan [Software Development Process: Part 2 of 3](https://www.youtube.com/watch?v=pZ9-ujSP_48&index=12&list=PLAwxTw4SYaPm8PAGH7ov2Bj-nG4sXgCtJ)  om class diagrams.
+
+3. Video om unittester: [Python Functions 2: Unit Testing](https://www.youtube.com/watch?v=F7a0iUH6kVA)
 
 
 

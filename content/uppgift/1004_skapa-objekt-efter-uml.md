@@ -1,9 +1,9 @@
 ---
 author: lew
 revision:
-    "2016-12-20": (PA, aar) Updated assignment.
-    "2016-12-19": (PA, lew) New assignment.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2016-12-20": (C, aar) Uppdaterade uppgift.
+    "2016-12-19": (B, lew) Ny uppgift.
+    "2016-04-12": (A, lew) Första versionen.
 category:
     - oopython
 ...
@@ -50,15 +50,15 @@ touch deck.py hand.py card.py main.py
 
 1. Namngivning ska ske enligt diagrammet.
 
-2. I Cards ska `names` vara en statisk lista som innehåller namnen på alla kort, ex. "Ace, 1, 2, 3... Jack, Queen, King". Ett tips är att ha None på index 0, då kan du använda värdet på `value` som index för namnet på kortet.  
+2. I *Card* ska `names` vara en statisk lista som innehåller namnen på alla kort, ex. "Ace, 2, 3... Jack, Queen, King". Ett tips är att ha None på index 0, då kan du använda värdet på `value` som index för namnet på kortet.  
 `suits` ska också vara en statisk lista som innehåller alla färger ett kort kan ha, "Spades, Hearts, Diamonds, Clubs".  
 `value` är en integer för värdet på kortet, 1-13. Kan användas som index för `names`.  
 `suit` är index för vilken färg kortet har, 0-3.
 
-3. I Deck ska `cards` initieras med 52 kort.  
+3. I *Deck* ska `cards` initieras med 52 kort.  
 I metoden `takeCard` ska kortet som tagits returneras och inte längre finnas i `cards` listan.
 
-4. I Hand ska `cards` initieras till en tom lista.
+4. I *Hand* ska `cards` initieras till en tom lista.
 
 5. I varje klass ska det finnas en överlagrad `__str__()`-metod som skriver ut allt om objektet på ett godtyckligt sätt. Relationerna ska stämma med diagrammet ovan.  
     * `Card` ska skriva ut information om sig själv, vilken färg (suit) den har och namn.  
