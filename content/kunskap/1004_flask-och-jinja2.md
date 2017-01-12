@@ -100,7 +100,7 @@ Det är headern och navbaren. Vi siktar på att bara ha relevant innehåll i sid
 
 Kvar i index.html har vi nu enbart så kallat "content". Nu är det dags att använda Jinja2 så vi kan inkludera header.html och footer.html i vår index-fil.  
 
-Enbart html-kod kan inte inkludera en annan fil. Tack och lov finns det olika verktyg att tillgå för att åstadkomma detta. Jinja2 använder sig utav `{% include your file or code here %}` för att peta in "icke-html" kod på websidan. Man kan skapa så kallade "templates" med ren python-kod eller inkludera hela html.sidor. Vi tittar på vår index.html igen och lägger till en `include` på header.html och footer.html:
+Enbart html-kod kan inte inkludera en annan fil. Tack och lov finns det olika verktyg att tillgå för att åstadkomma detta. Jinja2 använder sig utav `{% include your file or code here %}` för att peta in "icke-html" kod på webbsidan. Man kan skapa så kallade "templates" med ren python-kod eller inkludera hela html.sidor. Vi tittar på vår index.html igen och lägger till en `include` på header.html och footer.html:
 
 ```html
 {% include 'header.html' %}
@@ -173,7 +173,7 @@ Nu fattas det bara att använda variablerna i about.html. Vi lägger till placeh
 <p>Jag heter {{ name }} och det här är kursen {{ course }}.</p>
 ```
 
-about.html tar emot de skickade varibalerna och placerar ut dem.
+about.html tar emot de skickade variablerna och placerar ut dem.
 
 Om vi nu drar igång servern och pekar webbläsaren på `localhost:5000/about`:
 

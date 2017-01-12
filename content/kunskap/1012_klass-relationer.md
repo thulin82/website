@@ -28,11 +28,11 @@ Du kan grunderna i Python och objektorienterad programmering.
 Terminologi {#terminologi}
 -------------------------------
 
-* **Klass**: En användar-definierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klass-variabler, instans-variabler och metoder, som nås via "dot-notation".
+* **Klass**: En användardefinierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klassvariabler, instansvariabler och metoder, som nås via "dot-notation".
 
-* **Klass-variabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. En klass-variabel kallas även _statisk variabel_.
+* **Klassvariabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. En klassvariabel kallas även _statisk variabel_.
 
-* **Instans-variabel**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
+* **Instansvariabel**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
 
 * **Instans**: Ett individuellt objekt av en speciell klass.
 
@@ -99,7 +99,7 @@ My name is Andreas
 ```
 
 
-Nu har vi en Bas och en Sub klass men sub-klassen skiljer sig inte från basklassen än, så det fixar vi:
+Nu har vi en Bas och en Subklass men subklassen skiljer sig inte från basklassen än, så det fixar vi:
 
 ```python
 class Child(Parent):
@@ -223,7 +223,7 @@ Det är dock vanligt utvecklare med bakgrund i andra språk, t.ex. Java eller C+
 `\_<namn>` är det korrekta sättet att göra. Vi kommer gå igenom båda och varför det lätt blir fel.
 
 `\_<namn>` Används för att markera att en metod/variabel inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
-Vi testar skapa en privat variabel:
+Vi testar skapa en privat variable:
 
 ```python
 class Parent():
@@ -255,7 +255,7 @@ I can access privat
 Som sagt, det går att accessa den både utanför och innanför instansen men jag som har utvecklat koden markerar att den inte ska användas utanför instansen.
 
 Vi går vidare till `\__<namn>`. `\__` ska inte användas för att göra något privat utan den ska förhindra en metod från att bli överskuggad i en subklass.
-En method med `\__` i början är bara accessbar i instansen den skapas i, med `self.\__<namn>`. Detta är en egenskap privata variabler/metoder har i andra vanliga programmeringsspråk, men inte i python, och därför är det lätt hänt att `\__` används istället för `\_` för att göra något privat.
+En metod med `\__` i början är bara nås i instansen den skapas i, med `self.\__<namn>`. Detta är en egenskap privata variabler/metoder har i andra vanliga programmeringsspråk, men inte i python, och därför är det lätt hänt att `\__` används istället för `\_` för att göra något privat.
 Vi testar skapa en `\__<namn>` funktion:
 
 ```python
@@ -321,10 +321,10 @@ Precis som förväntat anropas `Child.\__dontOverride()` i `son.accessChildDontO
 ###Komposition och aggregation {#komposition_aggregation}
 
 Komposition och aggregation är när relationen mellan klasser är _has-a_, t.ex. klassen Person has-a Dog.
-Relationen kan vara one-to-one, one-to-many eller many-to-many, och de kan vara enriktade och dubbelriktade.
+Relationen kan vara one-to-one, one-to-many eller many-to-many, och de kan vara enkelriktad och dubbelriktade.
 Det är komposition när klasserna är starkt kopplade. Om _ägar_ klassen slutar existerar och då även det _ägda_ objektet slutar existera.
 Det är aggregation när klasserna är svagt kopplade. Om _ägar_ klassen slutar existerar och det _ägda_ fortfarande existerar.
-I vårat exempel, Person has-a Dog, så är det aggregation då Dog fortsätter leva utan Person.
+I vårt exempel, Person has-a Dog, så är det aggregation då Dog fortsätter leva utan Person.
 Om det _ägda_ objektet skapas i _ägarens_ konstruktor är det oftast komposition medans om det _ägda_ objektet skickas som en parameter i konstruktorn är det oftast aggregation.
 
 Vi kan skriva om våran Parent och Child klass så att Child använder Parent som en modul istället.

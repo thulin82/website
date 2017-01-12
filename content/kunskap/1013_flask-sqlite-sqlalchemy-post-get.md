@@ -76,11 +76,11 @@ Tabell i Bootstrap {#tabell-i-bootstrap}
 
 Vi använder ju [Bootstrap](https://getbootstrap.com/examples/theme/) i Flask-appen och följer vi länken ser vi att de har en mall för en tabell, ett "table". Högerklickar vi och visar källkoden kan vi kopiera den för att hålla appen responsiv och enligt temat.  
 
-Vi behöver en ny flik i nav-baren. Den döper vi till "Cars" och sätter den till routen "/cars" och skickar med data-variabeln som innehåller bland annat länkarna till headern och footern.  
+Vi behöver en ny flik i navbaren. Den döper vi till "Cars" och sätter den till routen "/cars" och skickar med data-variabeln som innehåller bland annat länkarna till headern och footern.
 
 I mappen "/templates" skapar vi en fil, "cars.html" som vi servar via routen.  
 
-Tittar vi nu på temats tabell ser vi att det är i `<tbody>` det händer grejjer. Vi kan ta strukturen runtom och klistra in i cars.html så genererar vi innehållet baserat på datan i databasen.  
+Tittar vi nu på temats tabell ser vi att det är i `<tbody>` det händer grejjer. Vi kan ta strukturen runt om och klistra in i cars.html så genererar vi innehållet baserat på datan i databasen.
 
 cars.html:
 

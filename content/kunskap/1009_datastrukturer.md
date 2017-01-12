@@ -37,7 +37,7 @@ Stack {#stack}
 
 [FIGURE src=/image/oopython/kmom05/stack.jpg?w=c5 class="right"]
 
-En **Stack** är en linjär datastruktur som påminner om, precis som det låter, en trave eller stapel. Tänk dig en stapel med tallrikar där en tallrik representerar ett objekt, variabel eller vad det nu är man lagrar. För att hantera "insättning och uttag" arbetar man från toppen. Arbetsättet kallas "LIFO" (Last In First Out). En Stack innehåller samma datatyp.
+En **Stack** är en linjär datastruktur som påminner om, precis som det låter, en trave eller stapel. Tänk dig en stapel med tallrikar där en tallrik representerar ett objekt, variabel eller vad det nu är man lagrar. För att hantera "insättning och uttag" arbetar man från toppen. Arbetssättet kallas "LIFO" (Last In First Out). En Stack innehåller samma datatyp.
 
 Man använder sig oftast av en särskild uppsättning metoder:  
 1. .push() (Lägger till)  
@@ -107,7 +107,7 @@ Queue {#queue}
 
 [FIGURE src=/image/oopython/kmom05/queue.png?w=c5 class="right"]
 
-En **Queue** (kö) är en linjär datastruktur som påminner om en Stack. Skillnaden är att en Kö är öppen i båda ändar. Den ena änden används för att lägga till element och den andra för att ta bort element. Arbetsättet kallas "FIFO" (First In First Out).
+En **Queue** (kö) är en linjär datastruktur som påminner om en Stack. Skillnaden är att en Kö är öppen i båda ändar. Den ena änden används för att lägga till element och den andra för att ta bort element. Arbetssättet kallas "FIFO" (First In First Out).
 
 Metoderna som används är vanligtvis:  
 1. .enqueue() (Lägger till)  
@@ -195,7 +195,7 @@ Samma gäller för nästa förälder. 80 är större än 75, så de ska byta pla
 
 [FIGURE src=/image/oopython/kmom05/heap4.png]  
 
-Såja. Nu ligger det nya värdet på rätt plats. Lägger vi till ett nytt värde nu så hamnar det till vänster under noden "10". Det har skett en såkallad "inplace"-sortering.
+Såja. Nu ligger det nya värdet på rätt plats. Lägger vi till ett nytt värde nu så hamnar det till vänster under noden "10". Det har skett en så kallad "inplace"-sortering.
 
 
 

@@ -28,9 +28,9 @@ The Three Laws of Recursion {#the-three-laws-of-recursion}
 
 Rekursion har tre lagar (The Three Laws of Recursion):  
 
-1. En rekursiv algoritm måste ha ett bas-fall.  
+1. En rekursiv algoritm måste ha ett basfall.
 
-2. En rekursiv algoritm måste ändra sitt tillstånd och arbeta sig mot bas-fallet.  
+2. En rekursiv algoritm måste ändra sitt tillstånd och arbeta sig mot basfallet.
 
 3. En rekursiv algoritm måste kalla på sig själv, rekursivt.
 
@@ -43,18 +43,18 @@ def recursive_sum(n):
 
 ```
 
-Den kommer aldrig sluta snurra, då vi inte har ett bas-fall. Vi behöver en tröskel där det tar stopp och rekursionen avslutas:  
+Den kommer aldrig sluta snurra, då vi inte har ett basfall. Vi behöver en tröskel där det tar stopp och rekursionen avslutas:
 ```python
 def recursive_sum(n):
-    # Här är bas-fallet. När n kommer till 1 så returneras bara värdet.
+    # Här är basfallet. När n kommer till 1 så returneras bara värdet.
     if n <= 1:
         return n
     else:
-        # Vi ändrar tillståndet och jobbar oss mot bas-fallet
+        # Vi ändrar tillståndet och jobbar oss mot basfallet
         return n + recursive_sum(n-1)
 ```
 
-Nu uppfyller vi alla 3 kraven. Ett tips är att alltid börja implementera bas-fallet för att förhinda ett infinite-läge.  
+Nu uppfyller vi alla 3 kraven. Ett tips är att alltid börja implementera basfallet för att förhindra ett infinite-läge.
 
 
 
@@ -101,4 +101,4 @@ Typer av rekursion {#typer-av-rekursion}
 Avslutningsvis {#avslutning}
 ------------------------------  
 
-Rekursion kan vara en ovärdelig struktur, vid rätt tillfälle. Oftast klarar man sig bra med vanliga loopar men med den här vetskapen finns i alla fall alternativet till hands.
+Rekursion kan vara en ovärderlig struktur, vid rätt tillfälle. Oftast klarar man sig bra med vanliga loopar men med den här vetskapen finns i alla fall alternativet till hands.

@@ -10,10 +10,10 @@ Vad är UML?
 
 [FIGURE src=/image/oopython/kmom02/uml_diagrams.png?w=c5 class="right"]
 
-UML står för Unified Modeling Language, det är ett visuellt modellerings språk för att specificera, konstruera och dokumentera artifakter i ett system.  
+UML står för Unified Modeling Language, det är ett visuellt modelleringsspråk för att specificera, konstruera och dokumentera artefakter i ett system.  
 Det brukar användas på tre sätt:
 
-1. Som en sketch: Informel och ofta inte fullständig, hand sketch eller på whiteboard. Används för att utforska problem.
+1. Som en sketch: Informell och ofta inte fullständig, hand sketch eller på whiteboard. Används för att utforska problem.
 2. Som en ritning: Används för 1) reverse engineering, för att förstå existerande kod. 2) För att se hur ny kod ska genereras.
 3. Som ett programmeringsspråk: Det finns färdiga verktyg som genererar kod baserat på UML.
 
@@ -37,14 +37,14 @@ Terminologi {#terminologi}
 
 * **Struktur diagram**: Structure diagram på engelska. Statisk representation av strukturen i ett system.
 
-* **Beteende diagram**: Behaviour diagram på engelska. Dynamisk bild av systemet som visar vad som händer i systemt.
+* **Beteende diagram**: Behaviour diagram på engelska. Dynamisk bild av systemet som visar vad som händer i systemet.
 
-* **Revers engineering**: att ta fram detaljerade ritningar och specificationer på hur en produkt fungerar.
+* **Reverse engineering**: att ta fram detaljerade ritningar och specifikationer på hur en produkt fungerar.
 
 ##Struktur diagram {#struktur_diagram}
 
 
-Struktur diagram representerar strukturen, de statiska aspekterna, i ett system och visar upp artifakter som måste existera i systemet och hur de relaterar till varandra.
+Struktur diagram representerar strukturen, de statiska aspekterna, i ett system och visar upp artefakter som måste existera i systemet och hur de relaterar till varandra.
 De statiska delarna representeras av klasser, gränssnitt, komponenter och noder. Det är ett sätt att dokumentera architekturen.  
 Det vanligaste struktur diagrammet är _class diagram_.
 
@@ -52,12 +52,12 @@ Det vanligaste struktur diagrammet är _class diagram_.
 ###Class diagram {#class}
 
 
-Class diagram representerar den objekt orienterade vyn av ett system. Det visar upp systemets klasser, deras attributer, metoder och relationen mellan klasserna.
+Class diagram representerar den objektorienterade vyn av ett system. Det visar upp systemets klasser, deras attributer, metoder och relationen mellan klasserna.
 
-En klass i ett class diagram representeras med en ruta som är indelad i tree fack:
+En klass i ett class diagram representeras med en ruta som är indelad i tre fack:
 
 * I den översta rutan står klassnamnet, centrerat med stor första bokstav.
-* Mitten facket innehåller klassens attribut.
+* Mittenfacket innehåller klassens attribut.
 * Nedersta facket innehåller klassens metoder.
 
 [FIGURE src=/image/oopython/kmom02/diagrams/bankAccount.png caption="En klass som representerar ett bankkonto."]
@@ -68,14 +68,14 @@ Attribut måste åtminstone visas med namnet men det kan även stå med vilken d
 
 * \- Betyder privat attribut.
 
-* <u>variabel namn</u> Betyder att attributet är statiskt. Gäller äver för understrukna metodnamn
+* <u>variabelnamn</u> Betyder att attributet är statiskt. Gäller även för understrukna metodnamn
 
 För metoder måste man skriva med namnet, det är att föredra att även visa parametrar och returtyp som bilden ovan. Det funkar likadant för metoder och attribut med +- för privata/publika.
 
 **Relationer**
 
 Klasser har relationer, t.ex. arv, komposition och aggregation, detta ska visas i diagrammet. För att visa relationer används olika sorters pilar mellan klasserna. Tillsammans med de pilarna använder man positiva tal och
-asterisks(**\***), betyder oändligt, för att visa antalet instanser av varje klass som kan vara samman kopplade. Antalet visas som en intervall [minimum..maximum].
+asterisks(**\***), betyder oändligt, för att visa antalet instanser av varje klass som kan vara sammankopplade. Antalet visas som en intervall [minimum..maximum].
 
 [FIGURE src=/image/oopython/kmom02/diagrams/book-chapter_diagram.png caption="Komposition mellan Book och Chapter."]
 
@@ -88,9 +88,9 @@ En Pond kan innehålla noll eller oändligt med Ducks. En Duck kan vara i en Pon
 
 [FIGURE src=/image/oopython/kmom02/diagrams/arv_diagram.png caption="Arvs-hierarki med Species, Animal, dog och Human."]
 
-Bilden ovan visar **arvs-relation** med en arvs-hierarki. Arv visas med en pil från subklassen till basklassen. Dog ärver av Animal som i sin tur ärver av Species som även Human äver av.
+Bilden ovan visar **arvs-relation** med en arvshierarki. Arv visas med en pil från subklassen till basklassen. Dog ärver av Animal som i sin tur ärver av Species som även Human äver av.
 
-Ett exemple på arv och komposition:
+Ett exempel på arv och komposition:
 
 [FIGURE src=/image/oopython/kmom02/diagrams/fullExample_class.png caption="Arv och komposition med Customer och Order"]
 
@@ -110,23 +110,23 @@ Beteende diagram visar det dynamiska beteendet ett system har och beskriver syst
 
 [FIGURE src=/image/oopython/kmom02/diagrams/restaurant.png caption="Simpelt sequence diagram av en restaurang"]
 
-Sequence diagam visar hur olika processer kommuniserar med varandra inom en tidssekvens och i vilken ordning. Med process syftar man oftast på objekt som kommuniserar via metoder.
+Sequence diagram visar hur olika processer kommunicerar med varandra inom en tidssekvens och i vilken ordning. Med process syftar man oftast på objekt som kommunicerar via metoder.
 Det är viktigt med ordningen av kommunikationen mellan objekten och när det händer på tidslinjen.
 
-Med sequence diagram kan vi visa vilka klasser som finns/behövs i ett system och vilka metoder de använder för att kommunisera med varandra för att uppfylla ett scenario.  
-Om vi tittar på bilden ovanför, sequence diagramet med restautangen. Den visar vilka människor(klasser/objekt) som behövs och hur de kommuniserar för att en kund ska kunna äta mat hos dem.
+Med sequence diagram kan vi visa vilka klasser som finns/behövs i ett system och vilka metoder de använder för att kommunicera med varandra för att uppfylla ett scenario.  
+Om vi tittar på bilden ovanför, sequence diagrammet med restaurangen. Den visar vilka människor(klasser/objekt) som behövs och hur de kommunicerar för att en kund ska kunna äta mat hos dem.
 
 
 [FIGURE src=/image/oopython/kmom02/diagrams/lifeLines.png caption="Actor lifeline och Objekt lifeline"]
 
-Här ser vi två stycken **lifelines** en som representerar en Actor och en som representerar ett annonymt objekt av klassen Object.
-Objekt lifelines består av en rektangle i toppen som innehåller klassens namn, med ":" framför, och en vertikal linje, linjen representerar objektets livstid.  
-För att specifiera vilken instans av en klass som ska användas lägger man till instansens namn framför ":", t.ex. "Andreas:Person". Det visar att objektet Andreas, som är en instans av klassen Person, ska användas specifikt.
+Här ser vi två stycken **lifelines** en som representerar en Actor och en som representerar ett anonymt objekt av klassen Object.
+Objekt lifelines består av en rektangel i toppen som innehåller klassens namn, med ":" framför, och en vertikal linje, linjen representerar objektets livstid.  
+För att specificera vilken instans av en klass som ska användas lägger man till instansens namn framför ":", t.ex. "Andreas:Person". Det visar att objektet Andreas, som är en instans av klassen Person, ska användas specifikt.
 
-[FIGURE src=/image/oopython/kmom02/diagrams/syncCall.png caption="Ett funktions anrop"]
+[FIGURE src=/image/oopython/kmom02/diagrams/syncCall.png caption="Ett funktionsanrop"]
 
-Så här ser ett funktions anrop ut. Den svarta ifylda pilen motsvarar ett synkront fynktionsanrop, t.ex. en klass X anropar klass Y's funktion doA, som startat exekveringen av funktionen doA hos klass Y.
-Tiden det tar för Y att exekvera doA representeras av den vertikala stången. När doA är klar returnerar den ett resultat tillbaka till X, det representeras med den sträckade pilen.
+Så här ser ett funktionsanrop ut. Den svarta ifyllda pilen motsvarar ett synkront funktionsanrop, t.ex. en klass X anropar klass Y's funktion doA, som startat exekveringen av funktionen doA hos klass Y.
+Tiden det tar för Y att exekvera doA representeras av den vertikala stången. När doA är klar returnerar den ett resultat tillbaka till X, det representeras med den streckade pilen.
 
 [FIGURE src=/image/oopython/kmom02/diagrams/bookRegisterSeq.png]
 
@@ -136,7 +136,7 @@ Ett simpelt sequence diagram för att registrera en bok. Klassen Handler anropar
 
 Bilden ovan visar en kassörska som använder affärens sälj-system för att behandla en ny kund. Hon börjar med att starta en ny transaktion. Hon registrerar alla produkter som kunde ska köpa, detta sker i **loop**.
 För varje produkt kunden vill köpa kommer kassörskan slå in produkten och systemet kommer returnera summan av vad kunden har handlat än så länge. När alla produkter är inslagna i systemet slår kassörskan in betalningen och sista avslutar hon transaktionen.  
-Det som händer inuti **loop** rutan kommer upprepas X antal gågner. Om man vill specifiera att det ska upprepas t.ex. 10 gånger ersätter man "loop" uppe i vänstra hörnet med "loop(10)".
+Det som händer inuti **loop** rutan kommer upprepas X antal gånger. Om man vill specificera att det ska upprepas t.ex. 10 gånger ersätter man "loop" uppe i vänstra hörnet med "loop(10)".
 
 [FIGURE src=/image/oopython/kmom02/diagrams/if_self_img_seq.png caption="Sequence diagram med if-sats"]
 
@@ -152,5 +152,3 @@ Det finns bra verktyg online för att rita uml diagram, kolla in [draw.io](https
 För att läsa mer om class diagram kolla här: [class diagrams](http://www.uml-diagrams.org/class-diagrams-overview.html).
 
 För att läsa mer om sequence diagram och vad man mer kan göra med dem kolla här: [sequence diagrams](http://www.uml-diagrams.org/sequence-diagrams.html).
-
-

@@ -23,7 +23,7 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 
 
 
-Autogenerara UML-diagram {#autogenerera-uml}
+Autogenerera UML-diagram {#autogenerera-uml}
 ------------------------------
 
 Verktyget "[Pyreverse](https://www.logilab.org/blogentry/6883)" är sedan 2008 integrerat med Pylint och tillåter oss att skapa olika diagram utifrån färdig kod. Det är så kallad "[reverse engineering](https://sv.wikipedia.org/wiki/Reverse_engineering)". Man plockar isär något färdigt för att ta reda på hur det är uppbyggt.

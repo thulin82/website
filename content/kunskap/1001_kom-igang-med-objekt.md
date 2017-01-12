@@ -26,11 +26,11 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 Terminologi {#terminologi}
 -------------------------------
 
-* **Klass**: En användar-definierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klass-variabler, instans-variabler och metoder, som nås via "dot-notation".
+* **Klass**: En användardefinierad prototyp för ett objekt som definierar en uppsättning attribut som karaktäriserar alla objekt av klassen. Attributen är klassvariabler, instansvariabler och metoder, som nås via "dot-notation".
 
-* **Klass-variabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. En klass-variabel kallas även _statisk variabel_.
+* **Klassvariabel**: En variabel som delas mellan alla instanser av klassen. Den definieras inuti klassen men utanför klass-metoderna. En klassvariabel kallas även _statisk variabel_.
 
-* **Instans-variabel**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
+* **Instansvariabel**: En variabel som är definierad inuti en metod. Den tillhör enbart den instansen av klassen.
 
 * **Instans**: Ett individuellt objekt av en speciell klass.
 
@@ -57,7 +57,7 @@ Låt oss gå igenom hur man skapar ett bil-objekt, "Car". För enkelhetens skull
 class Car():
 ```
 
-Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser kommer ha. Vi lägger också till en räknare som har koll på hur många bilar vi har, två så kallade _statiska variabler_ eller _klass-variabler_:
+Vi låtsas att en bil alltid har 4 hjul. Det är något som alla instanser kommer ha. Vi lägger också till en räknare som har koll på hur många bilar vi har, två så kallade _statiska variabler_ eller _klassvariabler_:
 
 ```python
 class Car():
@@ -272,7 +272,7 @@ Nu kan vi lägga till utrustning:
 
 <!-- ###Privata medlemsvariabler {#privata-medlemsvariabler}
 
-För att komma åt ett objekts medlemsvariabler använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska kunna komma åt variablerna kan man göra dem _privata_. Det gör man med `_` innan variabeln. Låt oss titta på hur det ser ut och fungerar. Vi skapar en klass med en publik och en privat instans-variabel:
+För att komma åt ett objekts medlemsvariabler använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska kunna komma åt variablerna kan man göra dem _privata_. Det gör man med `_` innan variabeln. Låt oss titta på hur det ser ut och fungerar. Vi skapar en klass med en publik och en privat instansvariabel:
 
 ```python
 class Test_private():

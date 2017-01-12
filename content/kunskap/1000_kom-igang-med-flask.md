@@ -88,7 +88,7 @@ if __name__ == "__main__":
     app.run()
 ```
 
-Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat inehåll, i det här fallet strängen "Välkommen!". Routen / är roten, start eller index om man så vill.
+Med hjälp av `@app.route()` kan vi hantera inkommande routes och serva önskat innehåll, i det här fallet strängen "Välkommen!". Routen / är roten, start eller index om man så vill.
 
 Starta applikationen med:
 

@@ -14,7 +14,7 @@ Unittester, eller "enhetstester", används för att testa så enskilda metoder e
 
 Det var det enklaste fallet av ett unittest, men poängen går nog fram.
 
-Vi ska titta lite närmare på de olika delarna av pythons inbyggda test-ramverk "unittest". Vi hoppar inte i den djupa delen av bassängen, utan vi håller oss vid det grundläggande delarna.  
+Vi ska titta lite närmare på de olika delarna av pythons inbyggda testramverk "unittest". Vi hoppar inte i den djupa delen av bassängen, utan vi håller oss vid det grundläggande delarna.
 Vill du läsa mer kan du kika på [docs.python.org](https://docs.python.org/3/library/unittest.html).
 
 <!--more-->
@@ -35,7 +35,7 @@ Unittester skrivs som sagt av anledningen att minimera risken för "trasig" kod 
 
 
 
-###Pythons testramverk {#pythons-testramverk}
+###Pythons testramverk{#pythons-testramverk}
 
 Python kommer med en inbygg modul, ett ramverk kallat "unittest". Inspirationskällan till det kommer från Javans [JUnit](http://junit.org/junit4/). Vi ska framför allt titta på basklassen "TestCase" som tar hand om enskilda tester på metoder och funktioner.
 
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     unittest.main()
 ```
 
-Vi importerar modulen och skapar en subklass av _unittest.TestCase_. Blocket med _unittest.main()_ kör igång ett interface för testscriptet och producerar en bra utskrift. Notera att vi har med docstrings nu. Docstrings som används i metoderna kommer skrivas ut när testfilen körs.
+Vi importerar modulen och skapar en subklass av _unittest.TestCase_. Blocket med _unittest.main()_ kör igång ett interface för testskriptet och producerar en bra utskrift. Notera att vi har med docstrings nu. Docstrings som används i metoderna kommer skrivas ut när testfilen körs.
 
 Ett enkelt test på den inbyggda funktionen **.upper()** kan se ut så här:
 

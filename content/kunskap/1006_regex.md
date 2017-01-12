@@ -10,8 +10,8 @@ Introduktion till regex
 
 [FIGURE src=/image/oopython/kmom04/regex.png class="right"]
 
-Regex är en förkortning av Regular Expression som är ett välkänt språk för att matcha text mönster. Det används oftast till att extrahera information från kod, log filer och andra texter.  
-I regex defineras ett mönster av karaktärer som regex sedan försöker hitta/matcha i en sträng eller text.  
+Regex är en förkortning av Regular Expression som är ett välkänt språk för att matcha textmönster. Det används oftast till att extrahera information från kod, loggfiler och andra texter.  
+I regex definieras ett mönster av karaktärer som regex sedan försöker hitta/matcha i en sträng eller text.  
 I python används modulen [_re_](https://docs.python.org/2/library/re.html) för att använda regex på strängar.
 
 Om ni har svårt att förstå ett regex mönster eller ni vill testa själva snabbt och lätt rekommenderar jag sidan <https://regex101.com/#python>. Om man skriva in ett mönster och en text där förklarar de alla olika delar i mönstret och visar på ett bra sätt vad som matchas.
@@ -34,7 +34,7 @@ Använda modulen re {#anvanda_modulen_re}
 Vi ska använda oss av re's funktion [_findall_](https://docs.python.org/2/library/re.html#re.findall) för att matcha mönster.  
 Det går även använda re's [_match_](https://docs.python.org/2/library/re.html#re.match) och [_search_](https://docs.python.org/2/library/re.html#re.search).  
 re.match() kommer alltid att försöka matcha strängen från position noll och frammåt och re.search() letar efter mönstret i hela strängen och returnerar första förekomsten den hittar. re.findall() som vi ska använda oss utav hittar alla förekomster av mönstret och returnerar de som en lista.  
-Nedan är ett exemple på skillnaden mellan match, search och findall.
+Nedan är ett exempel på skillnaden mellan match, search och findall.
 
 ```python
 import re
@@ -86,11 +86,11 @@ I denna artikeln kommer bara raw string notation användas när vi behöver refe
 
 * **\{ \}**: Matchar en intervall.
 
-* **[ ]**: Matchar en av karaktärerna som har skrivits inom hakparanteserna.
+* **[ ]**: Matchar en av karaktärerna som har skrivits inom hakparenteserna.
 
-* **[^ ]**: Matchar en karaktär som inte har skrivits inom hakparanteserna.
+* **[^ ]**: Matchar en karaktär som inte har skrivits inom hakparenteserna.
 
-* **\w**(litet w): Matchar en alfanumerisk karaktär, alla bokstäver(stora och små), siffror och \_(understräck). Kan även skrivas som [a-zA-z0-9_]
+* **\w**(litet w): Matchar en alfanumerisk karaktär, alla bokstäver(stora och små), siffror och \_(understreck). Kan även skrivas som [a-zA-z0-9_]
 
 * **\W**(stort W): Matchar en icke alfanumerisk karaktär, alltså en karaktär som inte matchas av **\w**. Kan även skrivas som [^a-zA-Z0-9_].
 
@@ -104,7 +104,7 @@ I denna artikeln kommer bara raw string notation användas när vi behöver refe
 
 * **( )**: Grupperar karaktärer i en matchad sträng. Det går att plocka ut grupperna ur matchade strängar och det går även att refererar tillbaka till grupperna i mönstren
 
-* **\\**: Används för att göra en special karaktär till en vanlig karaktär, t.ex. **\\.** matchar en punkt istället för att fungera som ett wildcard, **\\\*** matchar en asterisk istället för att fungera som en repeterare och **\\(** matchar en parantes istället för att starta en grupp.  
+* **\\**: Används för att göra en specialkaraktär till en vanlig karaktär, t.ex. **\\.** matchar en punkt istället för att fungera som ett wildcard, **\\\*** matchar en asterisk istället för att fungera som en repeterare och **\\(** matchar en parentes istället för att starta en grupp.
 Det används även för att referera till en grupp, **\1** refererar till grupp 1 och **\2** till grupp 2. Grupper börjar på 1 och uppåt.
 
 
@@ -206,13 +206,13 @@ print(match)
 ['kaka', 'bada']
 ```
 
-Vi matchar orden "kaka" eller "bada", nu hade vi med båda så båda blev hittade. Det har större användning när man gör mer avancerade mönster och använder sig av grupering, vi kommer använda oss av det mer längre ner.
+Vi matchar orden "kaka" eller "bada", nu hade vi med båda så båda blev hittade. Det har större användning när man gör mer avancerade mönster och använder sig av gruppering, vi kommer använda oss av det mer längre ner.
 
 
 
 ###En uppsättning karaktärer, [] {#en_uppsettning_karakterer}
 
-Hakparanteser, [ ], används för att skapa en uppsättninga karaktärer som kan användas för att matcha, så **[abc]** matchar "a", "b" eller "c". Vi tittar på några exempel:
+Hakparenteser, [ ], används för att skapa en uppsättninga karaktärer som kan användas för att matcha, så **[abc]** matchar "a", "b" eller "c". Vi tittar på några exempel:
 
 ```python
 line = "apa, kaka, bada, klaga"
@@ -243,13 +243,13 @@ print(match)
 ['a2.', 'b b', 'cb.']
 ```
 
-**[\da-c\s]** Matchar alla siffror, bokstäverna "a" till "c" och alla whitespace karaktärer. **[b.]** Matchar bokstaven "b" och ".", då om man har en punkt i en hakparantes förlorar den sin special innebörd och matchar endast en punkt.
+**[\da-c\s]** Matchar alla siffror, bokstäverna "a" till "c" och alla whitespace karaktärer. **[b.]** Matchar bokstaven "b" och ".", då om man har en punkt i en hakparentes förlorar den sin speciella innebörd och matchar endast en punkt.
 
 
 
 ###Exludera karaktärer {#exuldera_karakterer}
 
-Med **[^]** kan vi skapa ett mönster som matchar karaktärer som inte finns inom hakparantesen.
+Med **[^]** kan vi skapa ett mönster som matchar karaktärer som inte finns inom hakparenteser.
 
 ```python
 line = "apa, kaka, bada, klaga, a2a, a a"
@@ -263,7 +263,7 @@ print(match)
 
 ###Upprepning {#upprepning}
 
-För att underlätta skapandet av mönster kan man använda special karaktärer för att markera att samma karaktär/er ska upprepas. Vi kickar på några exempel:
+För att underlätta skapandet av mönster kan man använda specialkaraktärer för att markera att samma karaktär/er ska upprepas. Vi kikar på några exempel:
 
 ```python
 line = "203 3001 20002 22 212"
@@ -272,7 +272,7 @@ print(match)
 ['203', '3001', '20002']
 ```
 
-**+** Betyder att föregående ska finnas med minst en gång. I vårat mönster ovan ska en "2:a" eller en "3:a" efterföljas av minst en "0:a" som sedan ska ha en valfri siffra efter sig.
+**+** Betyder att föregående ska finnas med minst en gång. I vårt mönster ovan ska en "2:a" eller en "3:a" efterföljas av minst en "0:a" som sedan ska ha en valfri siffra efter sig.
 
 ```python
 line = "I have 1 dog, you have 10 dogs and he has no dogs?"
@@ -281,7 +281,7 @@ print(match)
 ['1 dog', '10 dogs']
 ```
 
-**?** Används för att en karaktär ska vara valfri. I vårat mönster så letar vi efter minst en siffra efter följt av ordet "dog" som _kan_ efterföljas av ett "s".
+**?** Används för att en karaktär ska vara valfri. I vårt mönster så letar vi efter minst en siffra efter följt av ordet "dog" som _kan_ efterföljas av ett "s".
 
 ```python
 line = """
@@ -318,7 +318,7 @@ Ovanför använder vi oss av **{}** för att matcha ett specifikt antal karaktä
 ###Gruppering {#gruppering}
 
 Gruppering, **()**, används för att kapsla in eller plocka ut en grupp karaktärer ur en matchade strängen. Det går att återanvända gruppen i mönstret genom att referera till den fångade gruppen.  
-Om mönstret innehåller minst två stycken grupper när man använde re.findall(), returnernas en lista med tuples istället för en lista med strängar. Varje tuple är en matchning av mönstret och tuple[0] är första gruppen och tuple[1] är grupp nummer två osv.
+Om mönstret innehåller minst två stycken grupper när man använde re.findall(), returneras en lista med tuples istället för en lista med strängar. Varje tuple är en matchning av mönstret och tuple[0] är första gruppen och tuple[1] är grupp nummer två osv.
 
 ```python
 line = """
@@ -330,15 +330,15 @@ print(match)
 
 [('Andreas', 'Zeldah@outlook.com'), ('Kenneth', 'Lew@gmail.com')]
 
-print(match[0][0] + " har e-mailadressen " + match[0][1])
-Andreas har e-mailadressen Zeldah@outlook.com
+print(match[0][0] + " har mailadressen " + match[0][1])
+Andreas har mailadressen Zeldah@outlook.com
 ```
 
-Här har vi ett lite längre mönster där vi använder gruppering för att få ut namn och email adress för två personer.  
+Här har vi ett lite längre mönster där vi använder gruppering för att få ut namn och mailadress för två personer.
 Med **([A-Z][a-z]\*)** skapar vi en grupp av bokstäver som börjar med en stor bokstav för att få ut namnet på personen. **([A-Z]\w\*@\w\*\.[a-z]{3})** Används för att plocka ut e-mailadressen.  
 I vårt fall består en e-mailadress av en stor bokstav(**[A-Z]**) följt av ett antal alfanumeriska karaktärer(**\w\***), ett snabel-a, fler alfanumeriska karaktärer(**\w\***), en punkt(**\.**) och tre små bokstäver(**[a-z]{3}**).
 
-Det går även att skapa grupper i grupper. De läses frå nvänster till höger, det betyder att den inre grupper kommer efter den yttre.
+Det går även att skapa grupper i grupper. De läses från vänster till höger, det betyder att den inre grupper kommer efter den yttre.
 
 ```python
 line = """
@@ -350,7 +350,7 @@ print(match)
 [('Zeldah@outlook.com', 'Zeldah'), ('Lew@gmail.com', 'Lew')]
 ```
 
-Ovanför har vi skapat en till grupp inuti gruppen som hämtar ut e-mailadressen. Den nya gruppen hämtar ut namnet på användaren ur e-mailadressen.
+Ovanför har vi skapat en till grupp inuti gruppen som hämtar ut mailadressen. Den nya gruppen hämtar ut namnet på användaren ur mailadressen.
 
 ```python
 line = """
@@ -371,14 +371,14 @@ Nu ska vi gå igenom hur man refererar till en grupp. Vi kommer att använda oss
 
 ```python
 line = """
-Poler Bears eat Poler Bears
+Polar Bears eat Polar Bears
 Dogs eat stuff
 Rabbits eat Rabbits
 Pigs eat Pigs
 """
 match = re.findall(r'([\w ]+) eat \1\n', line)
 print(match)
-['Poler Bears', 'Rabbits', 'Pigs']
+['Polar Bears', 'Rabbits', 'Pigs']
 ```
 
 Vi använder regex för att plocka ut vilka djur som är kannibaler. Vi börjar med att matcha en djurart, **([\w ]+)**, sen kommer "eat" och om djurarten kommer igen **\1** är den kannibal och då är vårat mönster matchat.
@@ -388,7 +388,7 @@ Vi använder regex för att plocka ut vilka djur som är kannibaler. Vi börjar 
 ###Sök och ersätt {#sok_och_ersett}
 
 [_re.sub()_](https://docs.python.org/2/library/re.html#re.sub) söker igenom en sträng och byter ut alla stycken som matchar mönstret. re.sub tar parametrarna mönster, sträng att ersätta med och strängen.  
-re.sub är jätte bra när man behöver ändra samma sak flera gånger i en text. T.ex. byta från windows-radbrytning till unix-radbrytning eller byta namn på en person som förekommer ofta i en text.
+re.sub är jättebra när man behöver ändra samma sak flera gånger i en text. T.ex. byta från windows-radbrytning till unix-radbrytning eller byta namn på en person som förekommer ofta i en text.
 
 I exemplet nedan kommer vi använda oss av sub för att få varje mening på en egen rad.
 
@@ -404,7 +404,7 @@ Suspendisse hendrerit.
 
 Mönstret matchar alla punkter som efterföljs av ett space och ersätter det med en punkt och en ny rad.
 
-I nästa exemple kommer vi gå igenom hur man kan använda sig av grupper för att ersätta med text från texten. Vi använder raw string notation igen då vi ska referera till grupper.
+I nästa exempel kommer vi gå igenom hur man kan använda sig av grupper för att ersätta med text från texten. Vi använder raw string notation igen då vi ska referera till grupper.
 
 ```python
 line = """someones name is Andreas and is called zeldah and has the email Zeldah@outlook.com.
@@ -416,9 +416,9 @@ someones name is Andreas and is called zeldah and has the email Andreas@outlook.
 another one is named Kenneth and is called lew and has the email Kenneth@gmail.com.
 ```
 
-I exemplet ovan använder vi sub funktionen för att ändra personernas e-mailadresser från att använda sina smeknamn som användarnamn till att använda sina riktiga namn.  
+I exemplet ovan använder vi sub funktionen för att ändra personernas mailadresser från att använda sina smeknamn som användarnamn till att använda sina riktiga namn.
 I texten vill vi bara ändra ett ord men vi behöver hämta ut vad det ska ändras till ur texten också. Vilket gör att vi behöver matcha mer än bara det vi vill byta ut och detta leder till att det andra kommer också bli utbytt. För att inte bli av med den texten har vi gjort en grupp av det, **(.\*)**, som vi kan ersätta med sig själv, det samma gäller för när vi hämtar ut det riktiga namnet.  
-Den första gruppen matchar namnet vi ska byta till ("Andreas"), **([A-Z][a-z]+)**, den andra gruppen fångar upp allt mellan namnet och e-mailadressen (" and is called zeldah and has the email "), **(.\*)** och det sista i mönstret matchar det vi vill byta ut ("Zeldah"), **[A-Z][\w]+**, hela denna texten kommer ersättas men egentligen vill vi bara byta ut "Zeldah". Vi byter texten till grupp 1, grupp 2 och grupp 1 vilket blir "Andreas", " and is called zeldah and has the email " och "Andreas".
+Den första gruppen matchar namnet vi ska byta till ("Andreas"), **([A-Z][a-z]+)**, den andra gruppen fångar upp allt mellan namnet och mailadressen (" and is called zeldah and has the email "), **(.\*)** och det sista i mönstret matchar det vi vill byta ut ("Zeldah"), **[A-Z][\w]+**, hela denna texten kommer ersättas men egentligen vill vi bara byta ut "Zeldah". Vi byter texten till grupp 1, grupp 2 och grupp 1 vilket blir "Andreas", " and is called zeldah and has the email " och "Andreas".
 
 
 

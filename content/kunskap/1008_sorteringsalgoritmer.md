@@ -10,7 +10,7 @@ Sorteringsalgoritmer
 
 [FIGURE src=/image/oopython/kmom05/soert_top.png?w=c5 class="right"]
 
-De flesta programmeringsspråk har inbyggda sorteringsfunktioner. De använder antingen en specifik eller en kombination av flera sorterings algoritmer. Pythons sort()-metod använder till exempel [Timsort](https://en.wikipedia.org/wiki/Timsort) som är en blandning av "merge sort" och "insertion sort". Vi ska titta närmare på de vanligaste sorteringsalgoritmerna och se hur de är impementerade och vad som kan dölja sig bakom exempelvis `array.sort()`.
+De flesta programmeringsspråk har inbyggda sorteringsfunktioner. De använder antingen en specifik eller en kombination av flera sorteringsalgoritmer. Pythons sort()-metod använder till exempel [Timsort](https://en.wikipedia.org/wiki/Timsort) som är en blandning av "merge sort" och "insertion sort". Vi ska titta närmare på de vanligaste sorteringsalgoritmerna och se hur de är implementerade och vad som kan dölja sig bakom exempelvis `array.sort()`.
 
 <!--more-->
 
@@ -26,13 +26,13 @@ Du kan grunderna i Python och du vet vad variabler, typer och funktioner innebä
 De vanligaste sorteringsalgoritmerna {#de-vanligaste-sorteringsalgoritmerna}
 ------------------------------
 
-###Quick sort {#quick-sort}  
+###Quicksort {#quick-sort}
 
 Quick sort använder sig utav ett [pivot-värde](https://en.wikipedia.org/wiki/Quicksort#Choice_of_pivot). Efter valet av pivot är gjort så delar man upp listan i två delar. Den ena delen hanterar värdena som är mindre än pivot och den andra delen hanterar värdena som är större än pivot. Quick sort arbetar med fördel rekursivt där varje anrop till funktionen hanterar ett nytt pivot-värde baserat på den nya listan som skickats in. Bas-fallet är när listans längd har nått 1. Till slut så slår man samman de tre delarna.  
 
 ```python
-def quick_sort(items):
-    """ Quick sort """
+def quicksort(items):
+    """ Quicksort """
     if len(items) > 1:
         pivot_index = len(items) // 2
         smaller_items = []
