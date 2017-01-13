@@ -46,7 +46,7 @@ Materialet till labben ligger nu i din kurskatalog i `me/kmom04/lab3` enligt fö
 
 Öppna filen `answer.py` i din texteditor och koda ihop svaren på uppgifterna.
 
-Du kan testa dina lösningar genom att köra programmet `answer.py` som ett vanligt Python-program.
+Du kan testa dina lösningar genom att köra programmet `answer.py` som ett vanligt Python program.
 
 
 
@@ -87,7 +87,3 @@ Testa att köra labben i debuggern och stega igenom hur den validerar dina svar.
 Validera ofta. Så slipper du en massa valideringsfel i slutet av övningen.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

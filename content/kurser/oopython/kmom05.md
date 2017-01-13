@@ -25,7 +25,7 @@ Vi ska även titta på några datastrukturer och implementera en egen som vi anv
 [FIGURE src=/image/oopython/kmom05/index_top.png?w=w2 caption="Bild på algoritmen Merge-sort."]
 
 
-<!-- Flytta nedan text till eget dokumet/vy/block -->
+<!-- Flytta nedan text till eget dokument/vy/block -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 

@@ -6,7 +6,7 @@ revision:
 category:
     - oopython
 ...
-Skapa ett data-objekt till me-sidan
+Skapa ett dataobjekt till me-sidan
 ===================================
 
 Bygg ut din me-sida med information om applikationen.
@@ -24,7 +24,7 @@ Du kan grunderna i Python och stränghantering och du har gått igenom övningen
 Introduktion {#intro}
 -----------------------
 
-Vi lägger till ett data-objekt till me-sidan som innehåller sid-relaterad information.
+Vi lägger till ett dataobjekt till me-sidan som innehåller sid-relaterad information.
 
 
 
@@ -56,7 +56,7 @@ Färdig? Bra. Då kan vi fortsätta i mappen me/flask:
 
 3. Använd ditt objekt i din me-sida, länkarna, titeln och det som är relevant.  
 
-6. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till data.png. Spara diagrammet i mappen flask/  
+6. Använd `pyreverse` för att skapa ett klassdiagram. Döp filen till data.png. Spara diagrammet i mappen flask/
 
 7. Använd `pydoc` för att skapa en html-sida. Döp filen till data.html. Lägg filen i mappen flask/
 

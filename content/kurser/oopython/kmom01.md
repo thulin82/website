@@ -18,14 +18,14 @@ Kmom01: Kom igång med objekt och Flask
 Kursmomentet tillgängligt per den 2017-01-10.
 [/INFO]
 
-Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask", där vi skriver redovisningstexten och en kort presentation om oss själva. Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objekt-orienterad programmering.
+Vi ska börjar kursen med grunderna om objekt och klasser. Vid sidan av ska vi arbeta med ett mini-ramverk, "Flask", där vi skriver redovisningstexten och en kort presentation om oss själva. Vi kommer jobba mer med Flask-appen genom kursens gång, samt titta på mer tekniker och strukturer angående objektorienterad programmering.
 
 <!--more-->
 
 [FIGURE src=/image/oopython/kmom01/flask1.png?w=w2 caption="En enkel me-sida med Flask."]
 
 
-<!-- Flytta nedan text till eget dokumet/vy/block -->
+<!-- Flytta nedan text till eget dokument/vy/block -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 

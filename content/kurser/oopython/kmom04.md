@@ -19,14 +19,14 @@ I det här kursmomentet övar vi oss på regex, hantering av SQLite-databas och 
 
 Regex matchar textmönster och används framförallt för att extrahera specifik information ur större mängder text och text-filer.  
 
-Till Flask-appen använder vi SQLAlchemy för att mappa klasser mot tabeller i databsen. Vi hanterar sedan informationen med hjälp av GET och POST.
+Till Flask-appen använder vi SQLAlchemy för att mappa klasser mot tabeller i databasen. Vi hanterar sedan informationen med hjälp av GET och POST.
 
 <!--more-->
 
 [FIGURE src=/image/oopython/kmom04/index_top.png?w=w2 caption="Wooho regex!"]
 
 
-<!-- Flytta nedan text till eget dokumet/vy/block -->
+<!-- Flytta nedan text till eget dokument/vy/block -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 

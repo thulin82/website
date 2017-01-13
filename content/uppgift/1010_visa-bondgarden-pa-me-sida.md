@@ -17,7 +17,7 @@ Baka ihop delarna från kursmomentet och presentera tabellen på me-sidan.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har gjort uppgiften "[Skapa en bongårdsdatabas](uppgift/skapa-en-bondgards-databas).  
+Du har gjort uppgiften "[Skapa en bondgårdsdatabas](uppgift/skapa-en-bondgards-databas).
 
 
 
@@ -35,7 +35,7 @@ Du har databasen i `me/flask/db` så fortsätt arbeta med den och din me-sida.
 
 1. Skapa en ny flik i din navbar där presentationen ska visas, tex "Bondgård".
 
-2. Varje databas-tabell ska representas av respektive klass i SQLAlchemy.  
+2. Varje databas-tabell ska representeras av respektive klass i SQLAlchemy.
 
 3. Varje tabell i databasen, "farm.sqlite", ska presenteras med all tillgänglig information, förslagsvis i html-tabeller.  
 

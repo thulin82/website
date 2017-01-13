@@ -82,7 +82,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 ###Kmom01: Kom igång med objekt och Flask {#kmom01}
 
-Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa en websida med routes i ramverket Flask.
+Vi rivstartar med grundstrukturen för objekt, debuggern och hur man kan skapa en webbsida med routes i ramverket Flask.
 
 [Instruktion till kursmoment 01](oopython/kmom01).
 
@@ -159,7 +159,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 ###Referenslitteratur {#referenslitteratur}
 
-Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
+Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha till hands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
 
 * **[A Byte of Python](http://python.swaroopch.com)** -- Swaroop C H  

@@ -20,7 +20,7 @@ Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler
 [FIGURE src=/image/oopython/kmom06/index_top.jpg?w=w2 caption="Ett annat sorts bokningssystem."]
 
 
-<!-- Flytta nedan text till eget dokumet/vy/block -->
+<!-- Flytta nedan text till eget dokument/vy/block -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 

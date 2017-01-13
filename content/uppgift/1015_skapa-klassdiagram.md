@@ -17,8 +17,8 @@ Skapa ett klassdiagram
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har läst artiklen "[Vad är UML?](kunskap/vad-ar-uml)".  
-Du har gjort uppgiften "[Skapa objekt efter UML](uppgift/skapa-bjekt-efter-uml)".
+Du har läst artikeln "[Vad är UML?](kunskap/vad-ar-uml)".
+Du har gjort uppgiften "[Skapa objekt efter UML](uppgift/skapa-objekt-efter-uml)".
 
 
 Uppgiftens struktur {#uppgiftens-struktur}
@@ -30,7 +30,7 @@ Du ska ha med klasserna:
 
 * **Customer** som har variablerna customerId, customerName, address och orders. Den har metoderna editCustomer, placeOrder som har orderId som parameter och placeOrder som tar orderId som parameter.
 
-* **Order** har komposition med Customer. Order kan tillhöra en Customer medans Customer kan ha noll till många Order.  
+* **Order** har komposition med Customer. Order kan tillhöra en Customer medan Customer kan ha noll till många Order.
 Order har variablerna orderId, customerId, productIds och orderDate. Den har metoderna addProduct som tar productId som parameter, removeProduct som tar productId som parameter och calculatePrice.
 
 * **Product** har aggregation med Order, en Product kan finnas i noll till många Order och en Order har en till många Product.  

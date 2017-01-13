@@ -51,7 +51,7 @@ cd me/flask
 
 4. Bygg om din sida så du använder Jinja2 och återanvänder din header och footer.  
 
-5. Använd `pyreverse` för att skapa ett klass diagram. Döp filen till person.png och lägg den i mappen flask/  
+5. Använd `pyreverse` för att skapa ett klassdiagram. Döp filen till person.png och lägg den i mappen flask/
 
 6. Använd `pydoc` för att skapa en html-sida. Döp filen till person.html. Lägg filen filen i mappen flask/
 

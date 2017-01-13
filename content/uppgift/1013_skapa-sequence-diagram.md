@@ -40,7 +40,7 @@ cd me/kmom02/uml
 ./Controller.py
 ```
 
-1. Skapa ett sequnce diagram av vad som händer efter _controller.main()_ anropas i koden.
+1. Skapa ett sequence diagram av vad som händer efter _controller.main()_ anropas i koden.
 
 2. Skapa en bild av diagrammet och inkludera i mappen. Döp filen till `sequenceDiagram.png`.
 

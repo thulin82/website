@@ -21,7 +21,7 @@ Vi ska även jobba vidare med Flask-appen och se hur grunderna i template-motorn
 [FIGURE src=/image/oopython/kmom03/index_top.png?w=w2 caption="Flask, routes och Jinja2."]
 
 
-<!-- Flytta nedan text till eget dokumet/vy/block -->
+<!-- Flytta nedan text till eget dokument/vy/block -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 

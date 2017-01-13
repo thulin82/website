@@ -61,7 +61,7 @@ Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet 
 
 3. Spara informationen i JSON eller SQLite. Man ska kunna visa upp all information i Flask på ett överskådligt sätt.  
 
-4. Personal och material ska hanteras i klasser med arv. Det ska finnas minst 5 personer och minst 5 typer av material inlagda i databasen vid inlämning. Personalen ska delas in i klassificerings-nivåer. Viss personal ska kunna hyra viss typ av material. Har man exempelvis den högsta klassificerings-nivån kan man hyra allt. Minst antal nivåer är 3.
+4. Personal och material ska hanteras i klasser med arv. Det ska finnas minst 5 personer och minst 5 typer av material inlagda i databasen vid inlämning. Personalen ska delas in i klassificeringsnivåer. Viss personal ska kunna hyra viss typ av material. Har man exempelvis den högsta klassificerings-nivån kan man hyra allt. Minst antal nivåer är 3.
 
 
 
@@ -73,7 +73,7 @@ Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet 
 
 3. Admin ska kunna lägga till/ta bort material.  
 
-4. Admin ska kunna ge/ändra personalens klassificerings-nivå.  
+4. Admin ska kunna ge/ändra personalens klassificeringsnivå.
 
 
 
@@ -135,7 +135,7 @@ Skapa din me-sida version 7 i kmom10/flask7 genom att kopiera kmom06/flask6 och 
 
 1.2. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
-1.3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+1.3. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och föreslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
 2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet.
 
