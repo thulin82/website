@@ -17,7 +17,7 @@ Chatta med IRC, Gitter och Hangouts
 
 I kurserna används IRC och Gitter som chatt-kanaler för umgänge och handledning.
 
-[FIGURE src="http://imgs.xkcd.com/comics/team_chat_2x.png" caption="2078: He announces that he's finally making the jump from screen+irssi to tmux+weechat."]
+[FIGURE src="http://imgs.xkcd.com/comics/team_chat.png" caption="2078: He announces that he's finally making the jump from screen+irssi to tmux+weechat."]
 
 
 
