@@ -178,7 +178,7 @@ Det finns läsanvisningar i samband med varje kursmoment.
 
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
-* **. Database Systems - A Practical Approach to Design, Implementation and Management** -- Connolly, Begg  
+* **Database Systems - A Practical Approach to Design, Implementation and Management** -- Connolly, Begg  
   Alternativ bok till kurslitteraturen Databasteknik.
 
 * **[HTML och CSS-boken](kunskap/boken-html-och-css-boken)** -- Rolf Staflin  
@@ -189,6 +189,7 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 
 
 
+<!--
 Läsanvisningar {#lasanvisning}
 ------------------------------
 
@@ -205,6 +206,8 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kmom10     |                        |                                     |
 
 Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+
+-->
 
 
 
