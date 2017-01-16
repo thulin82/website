@@ -43,7 +43,7 @@ Krav {#krav}
 
 1. Öppna en terminal, använd `lynx` för att öppna din nyligen skapade webbplats. Skriv kommandot du använder i loggen. 
 
-1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`.
+1. Ta en skärmdump på terminalen som visar när du använder `lynx` för att komma åt webbplatsen. Spara den som `dump.png`. Spara bilden i formatet PNG och använd små bokstäver i filnamnet.
 
 1. Publicera dina svar enligt följande.
 
@@ -69,7 +69,3 @@ Tips från coachen {#tips}
 Stressa inte. Kör det ihop sig så är det en bra taktik att börja om från början och göra om. Det går snabbare andra gången, och ännu snabbare tredje gången.
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-

@@ -1,16 +1,18 @@
 ---
 author: mos
 revision:
-    "2016-12-21": (PB2, efo) Ändring av länk till ny bash lab
-    "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
+    "2017-01-16": (B, efo/mos) Genomgången och ändring av länk till ny bash lab
     "2015-07-03": (A, mos) Första utgåvan för kursen.
 ...
 Kmom02: Apache Virtual Hosts
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och blir tillgängligt **senast den 23/1-2017**.
-[/WARNING]
+[INFO]
+<s>Kursmomentet är under översyn och blir tillgängligt **senast den 23/1-2017**.</s>
+
+Kursmomentet är tillgängligt per den 2017-01-16.
+
+[/INFO]
 
 Nu har vi en Linux-server. Låt oss installera ett par webbplatser på den. Det låter som en vettig syssla för en webbprogrammerare.
 

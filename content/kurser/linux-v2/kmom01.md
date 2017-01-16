@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-01-16": (C, mos) Länk till videoserie.
     "2017-01-04": (B, mos) Förberedelse inför linux-v2.
     "2015-06-23": (A, mos) Första utgåvan för kursen.
 ...
@@ -64,13 +65,9 @@ Det finns inga artiklar.
 
 ###Video  {#video}
 
-Det finns inga videor.
-
-<!--
 Titta på följande:
 
 1. Till kursen finns en videoserie, "[linux](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ)", kika på de videor som börjar på 0 och 1.
--->
 
 
 
