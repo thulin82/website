@@ -5,7 +5,7 @@ category:
     - lab
     - kursen dbjs
 revision:
-    "2016-09-26": (A, mos) Kopia från htmlphp-kursen.
+    "2017-01-16": (A, mos) Första utgåvan.
 ...
 SQL lab, introduktion till SQL
 ==================================
@@ -23,6 +23,8 @@ Du har installerat en labbmiljö, motsvarande [labbmiljön för kursen dbjs](dbj
 
 Du har tillgång till kommandot `dbwebb` och du har clonat ett kursrepot för dbjs-kursen.
 
+Du har jobbat igenom övningen "[Kom igång med databasen SQLite](kunskap/kom-igang-med-databasen-sqlite)".
+
 Du kan köra [kommandot `sqlite3` vid kommandoraden](kunskap/en-kommandoradsklient-for-sqlite) i din terminal.
 
 
@@ -30,7 +32,7 @@ Du kan köra [kommandot `sqlite3` vid kommandoraden](kunskap/en-kommandoradsklie
 Videoserie {#video}
 -----------------------
 
-Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-I8RIDMfLjsDsp6mALu2kP) som hjälper dig med denna labben.
+Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce-I8RIDMfLjsDsp6mALu2kP) som visar hur man jobbar med denna typen av labbar. Kika kort på den så ser du hur skall göra. Videon visar inte exakt denna labben, men det är samma typ av SQL-labb, så du kommer se hur man gör.
 
 
 
