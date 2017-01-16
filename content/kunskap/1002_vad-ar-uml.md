@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2017-01-16": (B, aar) La till association.
     "2016-04-19": (A, aar) Första versionen.
 category:
     - oopython
@@ -72,19 +73,49 @@ Attribut måste åtminstone visas med namnet men det kan även stå med vilken d
 
 För metoder måste man skriva med namnet, det är att föredra att även visa parametrar och returtyp som bilden ovan. Det funkar likadant för metoder och attribut med +- för privata/publika.
 
-**Relationer**
+
+
+####Relationer {#relationer}
 
 Klasser har relationer, t.ex. arv, komposition och aggregation, detta ska visas i diagrammet. För att visa relationer används olika sorters pilar mellan klasserna. Tillsammans med de pilarna använder man positiva tal och
 asterisks(**\***), betyder oändligt, för att visa antalet instanser av varje klass som kan vara sammankopplade. Antalet visas som en intervall [minimum..maximum].
 
+
+
+#####Association {#association}
+
+[FIGURE src=/image/oopython/kmom02/FlightPlaneAssociation.png caption="Klasserna Flight och Plane."]
+
+Vi har två klasser, `Flight` och `Plane`, som använder varandra. Vi ser att i Flight finns variabeln `assignedPlane` som är av typen Plane och i Plane finns variabeln `assignedFlights` som är av typen Flight. För att tydliggöra kopplingen som finns här kan vi lägga till en **associations** pil.
+
+[FIGURE src=/image/oopython/kmom02/FlightPlaneAssociationModded.png caption="Association mellan Flight och Plane."]
+ 
+Det vi ser nu är en **bi-directional association**, Vi har två klasser som är medvetna om varandra. Flight är associerad med ett specifikt Plane, och Plane klassen är medveten om detta. Vi har plockat ut variabelnamnen och lagt dem på pilen. Flight använder Plane i variabeln `assignedPlane` och den variabel kan innehålla noll eller ett Plane (ett plan har kanske inte blivit tilldelat än). Vi kan se att Plane klassen använder Flight klassen i variabeln `assignedFlights` och den variabeln kan innehålla noll (nytt plan som inte har blivit tilldelad några flygningar än) till oändligt många.
+
+[FIGURE src=/image/oopython/kmom02/uniDirectional.png caption="Association mellan BannableAccounts och Account."]
+
+På bilden ovanför kan vi se en till association, mellan `BannableAccounts` och `Account`. Nu har vi en **Uni-directional association**, alltså en association där bara en av klasserna är medveten om det. I detta fallet är BannableAccounts som använder Account i variabeln `accounts` och den kan innehålla en till oändligt många.
+
+
+
+#####Aggregation {#aggregation}
+
+[FIGURE src=/image/oopython/kmom02/carWheel.png caption="Aggregation mellan Car och Wheel."]
+
+Bilden ovanför innehåller en **aggregations** relation mellan klassen Car och Wheel. En aggregations relation visas som en linje med en genomskinlig diamant i ena änden mellan två klasser. Diamanten sitter vid den _ägande_ klassen. Car _äger_ Wheel.
+En Car kan ha noll till fyra Wheel. Ett Wheel tillhöra en eller ingen Car. Båda kan existera utan varandra men Car förlorar mycket funktionalitet om den inte har Wheel.
+
+
+
+#####Komposition {#komposition}
+
 [FIGURE src=/image/oopython/kmom02/diagrams/book-chapter_diagram.png caption="Komposition mellan Book och Chapter."]
 
-Ovanför kan vi se en **kompositions** relation mellan klassen Book och Chapter. En kompositions relation visas som en linje med en svart ifylld diamant i ena änden mellan två klasser. Diamanten sitter vid den _ägande_ klassen. Book _äger_ Chapter, en Book kan innehålla noll eller oändligt med Chapters. Ett Chapter kan bara vara kopplat till en Book.
+Ovanför kan vi se en **kompositions** relation mellan klassen Book och Chapter. En kompositions relation ser ut som en aggregations relation förutom att det är en svart ifylld diamant istället för en genomskinlig. Book _äger_ Chapter, en Book kan innehålla noll eller oändligt med Chapters. Ett Chapter kan bara vara kopplat till en Book.
 
-[FIGURE src=/image/oopython/kmom02/diagrams/Pond-Duck.png caption="Aggregation mellan Pond och Duck."]
 
-Bilden ovanför innehåller en **aggregations** relation mellan klassen Pond och Duck. En aggregations relation ser ut som en kompositions relation förutom att det är en tom diamant istället för ifylld.
-En Pond kan innehålla noll eller oändligt med Ducks. En Duck kan vara i en Pond eller ingen Pond.
+
+#####Arv {#arv}
 
 [FIGURE src=/image/oopython/kmom02/diagrams/arv_diagram.png caption="Arvs-hierarki med Species, Animal, dog och Human."]
 
@@ -96,6 +127,25 @@ Ett exempel på arv och komposition:
 
 En Customer kan ha noll till oändligt många Orders. En Order kan bara tillhöra en Customer. Order är en basklass för specialOrder och NormalOrder.
 
+
+
+#####Association vs Aggregation vs Komposition {#Association_vs_Aggregation_vs_Komposition}
+
+[FIGURE src=/image/oopython/kmom02/assAggComp.jpg caption="Association vs Aggregation vs Komposition."]
+
+När ska man använda vilket? Denna fråga uppstår lätt när man ska välja mellan association och aggregation.  
+Aggregation är omtalat inom UML då det är väldigt vagt vad aggregation är jämfört med association.  
+Association är den mest generella relation, den visar mängd och riktning mellan klasser.  
+Komposition visar en relation där klasserna måste existera tillsammans, en av klasserna äger den andra och den ägda slutar existera när den ägande gör det. Det får bara finnas ett ägande objekt.  
+Aggregation visar också ägande mellan två klasser men där den ägda klassen har en egen livscykel och är inte beroende av den ägande. Distinktionen mellan association och aggregation görs på _ägande_ och vad innebär ägande? Vi kikar på ett exempel. 
+
+[FIGURE src=/image/oopython/kmom02/assAggCompEx.png caption="Association vs Aggregation vs Komposition exempel."]
+
+Exeplet visar ett Universitet som har Departments som i sin tur har Professors som har Students. University äger Department, om University slutat existera gör även Department det och Department kan bara tillhöra ett University.  
+Department äger Professor, ett Department kan ha flera Professor och Professor kan tillhöra flera Department men där finns fortfarande ett slags ägande en Professor jobbar på ett Department och Department förlorar stor del av sin funktionalitet om det inte finns några Professors. Båda kan dock existera utan varandra.  
+Sist ser vi att Professor har flera Student och Student har flera Professor. Båda är medvetna och använder varandra men där är inget ägande i relationen, de bara använder varanda och därför är det assocation istället för aggregation.
+
+När man ritar klassdiagram är det bra att börja med assocations pilar och sedan specificera dem till aggregation eller komposition när man ser att det behövs. 
 
 
 
