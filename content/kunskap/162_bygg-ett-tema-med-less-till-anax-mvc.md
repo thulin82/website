@@ -534,7 +534,7 @@ Vi kan inkludera FA via en vanlig stylesheet, men, vi vill inkludera allt från 
 Jag väljer att ladda ned senaste versionen så här.
 
 ```bash
-wget http://fortawesome.github.io/Font-Awesome/assets/font-awesome-4.0.3.zip
+wget https://github.com/FortAwesome/Font-Awesome/archive/v4.0.3.zip
 unzip font-awesome-4.0.3.zip
 ```
 
