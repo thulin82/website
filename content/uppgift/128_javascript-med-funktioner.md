@@ -1,12 +1,12 @@
 ---
 author: mos
-category: javascript
+category:
+    - javascript
+    - kursen javascript1
 revision:
-  "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
-  "2014-08-12": (B, mos) Mindre redaktionella ändringar.
-  "2014-06-30": (A, mos) Första utgåvan i samband med javascript1.
-updated: "2015-08-27 07:49:08"
-created: "2014-06-18 10:00:09"
+    "2015-08-27": (C, mos) Uppgraderad till dbwebb-cli version 2.
+    "2014-08-12": (B, mos) Mindre redaktionella ändringar.
+    "2014-06-30": (A, mos) Första utgåvan i samband med javascript1.
 ...
 JavaScript med funktioner
 ==================================
@@ -19,9 +19,7 @@ Jobba igenom grunderna med funktioner i JavaScript.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Labbmiljö för JavaScript i webbläsaren](kunskap/labbmiljo-for-javascript-i-webblasaren)" och har den labbmiljö som krävs.
-
-Du har även utfört [lab1](uppgift/javascript-med-variabler-loopar-och-inbyggda-funktioner).
+Du har jobbat igenom artikeln "[Kom i gång med HTML, CSS och JavaScript](kunskap/kom-i-gang-med-html-css-och-javascript)", du har labbmiljön som krävs och du har ditt kursrepo.
 
 
 
@@ -37,13 +35,15 @@ Gå till din kurskatalog i terminalen.
 dbwebb create lab2
 ```
 
-Materialet till labben ligger nu i din kurskatalog i `me/kmom03/lab2` enligt följande.
+Materialet till labben ligger nu i din kurskatalog, enligt följande.
 
 | Fil                | Innehåll |
 |--------------------|----------|
 | `instruction.html` | Beskrivning av labben och de uppgifter som skall göras. |
 | `answer.js`        | Här skall du skriva din kod för att lösa respektive uppgift i labben. |
 | `answer.html`      | Här kan du testa din labb genom att provköra den i webbläsaren. |
+
+Om du hamnar i trubbel, till exempel om hela labben inte skrivs ut i webbläsaren, så kan du felsöka med hjälp av devtools, det kan komma felutskrifter i consolen.
 
 
 
@@ -52,9 +52,18 @@ Krav {#krav}
 
 1. Gör de uppgifter som finns i labben `instruction.html`.
 
-2. Skriv dina lösningar, på rätt plats, i filen `answer.js`.
+1. Skriv dina lösningar, på rätt plats, i filen `answer.js`.
 
-3. Testkör din labb genom att öppna filen `answer.html` i din webbläsare.
+1. Testkör din labb genom att öppna filen `answer.html` i din webbläsare.
+
+1. Validera och publicera.
+
+```bash
+# Ställ dig i kurskatalogen
+dbwebb publish lab2
+```
+
+Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
 
 
 
@@ -65,28 +74,7 @@ Det finns ingen extra uppgift.
 
 
 
-Publicera din kurskatalog {#publicera}
------------------------
-
-Ladda upp och publicera labben, som en del av din me-sida, genom att göra följande kommandon i kurskatalogen i terminalen.
-
-```bash
-# Ställ dig i kurskatalogen
-dbwebb validate lab2
-dbwebb publish lab2
-```
-
-Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar. 
-
-Dubbelkolla att din me-sida innehåller resultatet från uppgiften.
-
-
-
 Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
