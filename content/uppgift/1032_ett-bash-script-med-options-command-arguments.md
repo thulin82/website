@@ -55,7 +55,7 @@ Krav {#krav}
 
 1. Ditt script skall ta emot argumentet reverse plus en mening som ska reverseras dvs. returnera strängen i omvänd ordning. Scriptet skall kunna anropas `./commands reverse Obi-Wan Kenobi` och scriptet returnerar: iboneK naW-ibO
 
-1. Ditt script ska ta emot argumentet factors plus ett godtyckligt antal siffror, för varje siffra ska scriptet returnera talet, kolon och talets primtals faktorer dvs. de primtal som ursprungs siffran kan delas med på var sin rad. Exempel `./commands factors 5 6 15` returnerar:
+1. Ditt script ska ta emot argumentet factors plus ett godtyckligt antal siffror, för varje siffra ska scriptet returnera talet, kolon och talets primtals faktorer, dvs. de primtal som ursprungs siffran kan delas med, på var sin rad. Exempel `./commands factors 5 6 16` returnerar:
 
 ```bash
 5: 5

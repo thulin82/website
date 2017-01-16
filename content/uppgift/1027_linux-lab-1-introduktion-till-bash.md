@@ -56,7 +56,11 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 
 Öppna filen `answer.bash` i din texteditor och koda ihop svaren på uppgifterna.
 
-Skriv din bash kod inom \`\` taggar för att den ska kunna exekveras, ex. \``find . -name 'filename'`\`
+Skriv din bash kod inom `$( )` för att den ska exekveras och returnera svaret, ex.:
+
+```bash
+ANSWER=$( find . -name 'filename' )
+```
 
 Du kan testa dina lösningar genom att köra programmet `answer.bash` i din terminal.
 
