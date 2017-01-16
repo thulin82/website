@@ -101,41 +101,46 @@ Kursmoment {#kursmoment}
 Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h studerande i form av programmering, undersökning, läsande, övningar, uppgifter, redovisning och eftertanke. Alla kursmoment skall redovisas och du samlar alla redovisningar i din me-sida.
 
 
-###Kmom01: TBD {#kmom01}
+###Kmom01: JavaScript klient {#kmom01}
 
+
+Det blir inledningsvis en del labbmiljö för att komma igång med kursen, så vi börjar med att få saker på plats, samtidigt som vi bekantar oss med de olika teknologier som kursen hanterar.
+
+Det blir en introduktion till programmeringsspråket JavaScript och hur det används i webbläsaren tillsammans med HTML och CSS. Det blir fokus på JavaScript och minimalt med HTML och CSS.
 
 [Instruktion till kursmoment 01](kurser/dbjs/kmom01).
 
 
 
-###Kmom02: TBD {#kmom02}
+###Kmom02: Databas {#kmom02}
 
+Då dyker vi in i databaser tillsammans med SQL och ER-modellering. Jag har valt att introducera databasen SQLite som är en filbaserad databas. En filbaserad databas förenklar hanteringen eftersom databasen ligger i en enda fil och det finns inga användare eller behörigheter att konfigurera.
 
 [Instruktion till kursmoment 02](kurser/dbjs/kmom02).
 
 
 
-###Kmom03: TBD {#kmom03}
+###Kmom03: JavaScript server {#kmom03}
 
 [Instruktion till kursmoment 03](kurser/dbjs/kmom03).
 
 
 
-###Kmom04: TBD {#kmom04}
+###Kmom04: Transaktioner {#kmom04}
 
 
 [Instruktion till kursmoment 04](kurser/dbjs/kmom04).
 
 
 
-###Kmom05: TBD {#kmom05}
+###Kmom05: Procedur, trigger, funktioner {#kmom05}
 
 
 [Instruktion till kursmoment 05](kurser/dbjs/kmom05).
 
 
 
-###Kmom06: TBD {#kmom06}
+###Kmom06: Index och prestanda {#kmom06}
 
 
 [Instruktion till kursmoment 06](kurser/dbjs/kmom06).
