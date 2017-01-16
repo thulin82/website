@@ -33,7 +33,7 @@ Gå till din kurskatalog i terminalen.
 dbwebb create javascript1
 ```
 
-Materialet till labben ligger nu i din kurskatalog i `me/kmom01/javascript1` enligt följande.
+Materialet till labben ligger nu i din kurskatalog, enligt följande.
 
 | Fil                | Innehåll |
 |--------------------|----------|
