@@ -6,9 +6,11 @@ revision:
 Kmom01: JavaScript klient
 ==================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 16/1-2017**.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 16/1-2017**.</strike>
+
+Kursmomentet publicerades 2017-01-16.
+[/INFO]
 
 Vi skall studera databasteknik tillsammans med webbteknologier och vi börjar med de båda, var för sig, för att senare knyta samman dem i applikationer. Men i detta inledande kursmoment håller vi oss till JavaScript. Databaser får komma i nästa kmom.
 
@@ -22,7 +24,7 @@ Det blir en introduktion till programmeringsspråket JavaScript och hur det anv�
 
 [FIGURE src=/image/snap/flag1-demo.png?w=w2 caption="En flagga i HTML, CSS och JavaScript."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 40 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -39,6 +41,7 @@ Läs följande:
 1. [Speaking JavaScript](kunskap/boken-speaking-javascript).
 
     1. [Part I. JavaScript Quick Start](http://speakingjs.com/es5/pt01.html) läs översiktligt för att få en introduktion till språket.
+    1. [Ch 13: Statements](http://speakingjs.com/es5/ch13.html)
 
 
 
