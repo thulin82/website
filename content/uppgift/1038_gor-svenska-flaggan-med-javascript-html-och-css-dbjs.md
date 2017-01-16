@@ -18,7 +18,7 @@ En uppgift för att komma igång med JavaScript, HTML och CSS. Jag visar hur du 
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Denna uppgift ingår i kursen [javascript1](kurser/dbjs).
+Denna uppgift ingår i kursen [dbjs](kurser/dbjs).
 
 Du har gjort uppgiften att bygga en [svensk flagga med HTML och CSS](uppgift/gor-svenska-flaggan-i-html-och-css-dbjs).
 
