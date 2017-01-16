@@ -57,7 +57,7 @@ Krav {#krav}
 {
     "uname": "Utskiften av kommandot uname -a"
 }
-``` 
+```
 
 7\. På routen `/sum` skall servern summera alla argument som kommer i querystring efter enligt `/sum?2&3` skall ge svaret 5 i en JSON struktur `{ "sum": 5 }` enligt `application/json`. Routern skall klara oändligt antal parametrar i querystringen.  
 
@@ -67,7 +67,7 @@ Krav {#krav}
 {
     "filter": [1, 2, 3, 42]
 }
-``` 
+```
 
 9\. På alla andra routes skall svaras med statuskod 404 och "The resource does not exists."
 
