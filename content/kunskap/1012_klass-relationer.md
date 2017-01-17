@@ -218,11 +218,11 @@ We did it!
 
 ###Privata variabler och metoder {#privatVariablerMetoder}
 
-För att komma åt ett objekts medlemsvariabler och metoder använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska komma åt variablerna och metoderna kan man göra dem _privata_. Det gör man med `\_` innan variabeln/metoden.
-Det är dock vanligt utvecklare med bakgrund i andra språk, t.ex. Java eller C++, använder `__` före variabeln/metoden istället när de vill göra dem privata.
-`\_<namn>` är det korrekta sättet att göra. Vi kommer gå igenom båda och varför det lätt blir fel.
+För att komma åt ett objekts medlemsvariabler och metoder använder vi **dot-notation**. Vill man däremot inte att någon annan än den egna instansen ska komma åt variablerna och metoderna kan man göra dem _privata_. Det gör man med `_` innan variabeln/metoden.
+Det är dock vanligt att utvecklare med bakgrund i andra språk, t.ex. Java eller C++, använder `__` före variabeln/metoden istället när de vill göra dem privata.
+`_<namn>` är det korrekta sättet att göra. Vi kommer gå igenom båda och varför det lätt blir fel.
 
-`\_<namn>` Används för att markera att en metod/variabel inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
+`_<namn>` Används för att markera att en metod/variabel inte är en del av api:et och den ska inte ändras eller accessas utanför instansen. Det finns dock inget som stoppar från att göra det.
 Vi testar skapa en privat variable:
 
 ```python
@@ -254,9 +254,9 @@ I can access privat
 
 Som sagt, det går att accessa den både utanför och innanför instansen men jag som har utvecklat koden markerar att den inte ska användas utanför instansen.
 
-Vi går vidare till `\__<namn>`. `\__` ska inte användas för att göra något privat utan den ska förhindra en metod från att bli överskuggad i en subklass.
-En metod med `\__` i början är bara nås i instansen den skapas i, med `self.\__<namn>`. Detta är en egenskap privata variabler/metoder har i andra vanliga programmeringsspråk, men inte i python, och därför är det lätt hänt att `\__` används istället för `\_` för att göra något privat.
-Vi testar skapa en `\__<namn>` funktion:
+Vi går vidare till `__<namn>`. `__` ska inte användas för att göra något privat utan den ska förhindra en metod från att bli överskuggad i en subklass.
+En metod med `__` i början är bara nås i instansen den skapas i, med `self.__<namn>`. Detta är en egenskap privata variabler/metoder har i andra vanliga programmeringsspråk, men inte i python, och därför är det lätt hänt att `__` används istället för `_` för att göra något privat.
+Vi testar skapa en `__<namn>` funktion:
 
 ```python
 class Parent():
@@ -282,8 +282,8 @@ Dont override this function
 ```
 
 
-Det går att komma vår metod `\__dontOverride()` genom metoden `callParentDontOverride()` inuti klassen med `self.\__dontOverride()`, men det går inte utanför klassen med ett Parent objekt.
-Vi testar överskugga `\__dontOverride()` i Child, vi behåller samma kod i Parent och fortsätter i Child:
+Det går att komma vår metod `__dontOverride()` genom metoden `callParentDontOverride()` inuti klassen med `self.__dontOverride()`, men det går inte utanför klassen med ett Parent objekt.
+Vi testar överskugga `__dontOverride()` i Child, vi behåller samma kod i Parent och fortsätter i Child:
 
 
 ```python
@@ -313,8 +313,8 @@ I did it anyway!
 ```
 
 
-`son.callParentDontOverride()` anropa `Parent.callParentDontOverride()` och där i anropas inte `Child.\__dontOverride()` som man förväntar sig av vanliga överskuggade funktioner. Istället anropas `Parent.\__dontOverride()`.  
-Precis som förväntat anropas `Child.\__dontOverride()` i `son.accessChildDontOverride()`.
+`son.callParentDontOverride()` anropa `Parent.callParentDontOverride()` och där i anropas inte `Child.__dontOverride()` som man förväntar sig av vanliga överskuggade funktioner. Istället anropas `Parent.__dontOverride()`.  
+Precis som förväntat anropas `Child.__dontOverride()` i `son.accessChildDontOverride()`.
 
 
 
@@ -329,7 +329,7 @@ Om det _ägda_ objektet skapas i _ägarens_ konstruktor är det oftast kompositi
 
 Vi kan skriva om våran Parent och Child klass så att Child använder Parent som en modul istället.
 Vi döper om den till Other, då vi inte har något Parent Child förhållande längre.
-I och med att vi inte har inheritance längre rensar vi bland metoderna, vi bort inheritance specifik funktionalitet som `Parent.\__dontOverride()` och `Parent.callDontOverride()`.
+I och med att vi inte har inheritance längre rensar vi bland metoderna, vi bort inheritance specifik funktionalitet som `Parent.__dontOverride()` och `Parent.callDontOverride()`.
 
 ```python
 class Other:
