@@ -1,8 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Fixed misspelling.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-18": (A, lew) First version.
 category:
     - oopython
 ...
@@ -77,7 +76,7 @@ Nu delar vi upp koden vi har i index.html. Om man funderar en stund på vad som 
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Min första Flask app</a>
+          <a class="navbar-brand" href="{{ url_for('main') }}">Min första Flask app</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -98,9 +97,9 @@ Det är headern och navbaren. Vi siktar på att bara ha relevant innehåll i sid
 </html>
 ```
 
-Kvar i index.html har vi nu enbart så kallat "content". Nu är det dags att använda Jinja2 så vi kan inkludera header.html och footer.html i vår index-fil.  
+Kvar i index.html har vi nu enbart så kallat "content", det unika innehållet för varje sida. Nu är det dags att använda Jinja2 så vi kan inkludera header.html och footer.html i vår index-fil.  
 
-Enbart html-kod kan inte inkludera en annan fil. Tack och lov finns det olika verktyg att tillgå för att åstadkomma detta. Jinja2 använder sig utav `{% include your file or code here %}` för att peta in "icke-html" kod på webbsidan. Man kan skapa så kallade "templates" med ren python-kod eller inkludera hela html.sidor. Vi tittar på vår index.html igen och lägger till en `include` på header.html och footer.html:
+Enbart html-kod kan inte inkludera en annan fil. Tack och lov finns det olika verktyg att tillgå för att åstadkomma detta. Jinja2 använder sig utav `{% include your file or code here %}` för att peta in "icke-html"-kod på webbsidan. Man kan skapa så kallade "templates" med ren python-kod eller inkludera hela html-sidor. Vi tittar på vår index.html igen och lägger till en `include` på header.html och footer.html:
 
 ```html
 {% include 'header.html' %}
@@ -115,7 +114,7 @@ Enbart html-kod kan inte inkludera en annan fil. Tack och lov finns det olika ve
 {% include 'footer.html' %}
 ```
 
-Vad stiligt det blev! Vi gör likadant för about.html:
+Vad prydligt det blev! Vi gör likadant för about.html:
 
 ```html
 {% include 'header.html' %}
@@ -143,14 +142,14 @@ I header.html:
 </ul>
 ```
 
-Vi använder Jinja2 och modulen "request" som importeras i app.py. En enkel if-sats som kollar pathen och lägger till klassen `active` om den matchar. Studera koden ovan så du är med på vad som händer.
+Vi använder Jinja2 och modulen "request" som importeras i app.py. En if-sats kollar pathen och lägger till klassen `active` om den matchar. Studera koden ovan så du är med på vad som händer.
 
 
 
 Skicka med parametrar {#skicka-med-parametrar}
 ------------------------------
 
-För att göra vår app lite mer användar kan vi skicka med parametrar vid routingen i app.py. Det gör att vi kan använda ren python-kod och sedan presentera det i html-koden.  
+För att göra vår app lite mer användbar kan vi skicka med parametrar vid routingen i app.py. Det gör att vi kan använda ren python-kod och sedan presentera det i html-koden.  
 
 Vi kikar på hur det går till i app.py. Innan `@app.route()` lägger vi till några variabler:  
 
@@ -159,7 +158,9 @@ my_name = "Kenneth Lewenhagen"
 my_course = "OOPython"
 ```
 
-Låt säga att vi vill skicka med variablerna till `about.html`. Om du kommer ihåg [strängformatering](https://www.youtube.com/watch?v=BkMm0lX-Ytc&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd&index=18) från förra pythonkursen kan du nog lista ut hur det fungerar. I app.py:
+Låt säga att vi vill skicka med variablerna till `about.html`. Om du kommer ihåg [strängformatering](https://www.youtube.com/watch?v=BkMm0lX-Ytc&list=PLKtP9l5q3ce93pTlN_dnDpsTwGLCXJEpd&index=18) från förra pythonkursen kan du nog lista ut hur det fungerar.  
+
+I app.py:
 
 ```python
 @app.route("/about")
