@@ -174,8 +174,8 @@ Det finns läsanvisningar i samband med varje kursmoment.
 * **[Databasteknik](kunskap/boken-databasteknik)** -- Thomas Radron-McCarthy, Tore Risch  
   En lättläst och trevlig bok om grunderna i klassisk databasteknik.
 
-* **[Eloquent JavaScript: A Modern Introduction to Programming](kunskap/boken-eloquent-javascript-a-modern-introduction-to-programming)** -- Marijn Haverbeke  
-  En introduktionsbok med öppen licens som gör att boken finns tillgänglig fritt på bokens webbplats. Boken ger en bra introduktion till nybörjaren i JavaScript.
+* **[Speaking JavaScript](kunskap/boken-speaking-javascript)** -- Axel Rauschmayer.  
+  En bra strukturerad fri bok om JavaScript ES5, finns även efterföljare om ES6.
 
 
 
