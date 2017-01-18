@@ -1,8 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Updated flask structure.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-18": (A, lew) First version.
 category:
     - oopython
 ...
@@ -37,19 +36,18 @@ Jobba vidare med din me-sida, me/flask.
 # Ställ dig i kurskatalogen
 cd me/flask
 ```
+1. Bygg om din sida så du använder Jinja2 och återanvänder din header och footer.  
 
-1. Skapa filen "person.py", vilken ska innehålla din personklass.
+2. Skapa filen "person.py", vilken ska innehålla din personklass.
 
-2. Fyll på med lite relevant information så som:  
+3. Fyll på med lite relevant information så som:  
     * Förnamn
     * Efternamn
     * Ålder
-    * m.m.
-    * Godtyckliga metoder för att underlätta utskrift
+    * Adress
+    * Godtyckliga metoder för att underlätta utskrift.
 
-3. Använd ditt objekt i about.html
-
-4. Bygg om din sida så du använder Jinja2 och återanvänder din header och footer.  
+4. Använd ditt objekt i about.html och presentera dig själv
 
 5. Använd `pyreverse` för att skapa ett klassdiagram. Döp filen till person.png och lägg den i mappen flask/
 

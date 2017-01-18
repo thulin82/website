@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-18": (A, lew) First version.
 category:
     - oopython
 ...
