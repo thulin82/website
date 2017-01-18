@@ -71,7 +71,7 @@ Mål {#mal}
 
 Efter genomförd kurs skall studenten:
 
-* vara väl bevandrad i relationsdatabaser och ha enövergripande förståelse för dess användning och dess fördelar och nackdelar
+* vara väl bevandrad i relationsdatabaser och ha en övergripande förståelse för dess användning och dess fördelar och nackdelar
 
 
 
@@ -81,9 +81,9 @@ Efter genomförd kurs skall studenten:
 
 * ha en grundlig, både teoretisk och praktisk,förmåga att använda relationsdatabaser
 * i detalj förstå och applicera processen att utveckla en databas från en problemställning till färdig klientapplikation
-* strukturerat och i detalj modellera ochdokumentera en databas i form av en ER modell
-* utifrån en befintlig modell, praktiskt skapa ochförändra samt använda en databas med SQL
-* designa och implementera en väl fungerandedatabasapplikation med tillhörande (client/server)klientapplikation
+* strukturerat och i detalj modellera och dokumentera en databas i form av en ER modell
+* utifrån en befintlig modell, praktiskt skapa och förändra samt använda en databas med SQL
+* designa och implementera en väl fungerande databasapplikation med tillhörande (client/server) klientapplikation
 
 
 
@@ -91,7 +91,7 @@ Efter genomförd kurs skall studenten:
 
 Efter genomförd kurs skall studenten:
 
-* översiktligt förstå, kunna förklara samtargumentera kring databaser och databashanteringssystem i allmänhet.
+* översiktligt förstå, kunna förklara samt argumentera kring databaser och databashanteringssystem i allmänhet.
 
 
 

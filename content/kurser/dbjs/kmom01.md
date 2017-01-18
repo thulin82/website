@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2017-01-04": (PA1, mos) Utveckling påbörjad.
+    "2017-01-16": (A, mos) Första utgåvan.
 ...
 Kmom01: JavaScript klient
 ==================================
