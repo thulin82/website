@@ -69,7 +69,7 @@ Krav {#krav}
 
 2. Skriv dina lösningar, på rätt plats, i filen `answer.js`.
 
-3. Testkör din labb genom att köra kommandot `babel-node answer.js`.
+3. Testkör din labb genom att köra kommandot `babel-node me/kmom04/node1/answer.js`.
 
 4. Ladda upp, validera och publicera labben genom att göra följande kommando i kurskatalogen i terminalen.
 

@@ -79,7 +79,13 @@ Titta på följande:
 
 *(ca: 12-16 studietimmar)*
 
+###Labbmiljö
 
+Installera labbmiljön för nodejs delen av kursen.
+
+1. [Installera nodejs och npm lokalt](kunskap/installera-node-och-npm)
+
+1. [Installera lokal utvecklingsmiljö](labbmiljo/lokal-utvecklingsmiljo)
 
 ###Övningar {#ovningar}
 
