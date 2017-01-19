@@ -93,9 +93,9 @@ Men, först måste vi kopiera den publika nyckel, det gör vi med kommandot `ssh
 ssh-copy-id -i $HOME/.ssh/id_rsa.pub mos@linux.dbwebb.se -p 2222
 ```
 
-Kommandot tar den filen vi anger och lägger till dess innehåll på *remote server* i filen `.ssh/authorized_hosts`.
+Kommandot tar den filen vi anger och lägger till dess innehåll på *remote server* i filen `.ssh/authorized_keys`.
 
-Det kan se ut så här när kommandot utförs och verifieras genom att logga in på den andra maskinen, nu utan lösenord, och kontrollera innehållet i filen `authorized_hosts`.
+Det kan se ut så här när kommandot utförs och verifieras genom att logga in på den andra maskinen, nu utan lösenord, och kontrollera innehållet i filen `authorized_keys`.
 
 [ASCIINEMA src=22731]
 
