@@ -71,10 +71,13 @@ Ett enkelt test på den inbyggda funktionen **.upper()** kan se ut så här:
 
 ```python
 #!/usr/bin/env python3
+""" Module for unittests """
+
 
 import unittest
 
 class Testcase(unittest.TestCase):
+    """ Submodule for unittests, derives from unittest.TestCase """
 
     def test_upper(self):
         """ Test builtin uppercase """
@@ -135,11 +138,14 @@ Vi öppnar `testfile.py` och fyller på med lite kod. Med hjälp av _doc-strings
 
 ```python
 #!/usr/bin/env python3
+""" Module for unittests """
 
 import unittest
 from car import Car
 
 class Testcase(unittest.TestCase):
+    """ Submodule for unittests, derives from unittest.TestCase """
+
     bmw = Car("BMW", 100000)
     volvo = Car("Volvo", 150000)
 
@@ -193,11 +199,14 @@ Om ett test inte går igenom visas en tydlig utskrift på vad och var felet gäl
 
 ```python
 #!/usr/bin/env python3
+""" Module for unittests """
 
 import unittest
 from car import Car
 
 class Testcase(unittest.TestCase):
+    """ Submodule for unittests, derives from unittest.TestCase """
+
     bmw = Car("BMW", 100000)
 
     def this_yields_an_error(self):
