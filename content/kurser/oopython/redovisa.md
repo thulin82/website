@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-20": (B, aar) Uppdaterade vilken fil som skrivs i och ändrade från python till oopython.
+    "2016-04-12": (A, lew) Första versionen.
 category:
-    - python
+    - oopython
 ...
 Resultat och redovisning
 ====================================
@@ -17,13 +18,11 @@ Som ett sista steg i varje kursmoment skall du redovisa. Gör så här.
 Skriv redovisningstext {#text}
 ---------------------------------------
 
-I filen `me/redovisning.cgi` skall du [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc. Skriv minst 15 meningar.
+I filen `me/flask/templates/redovisning.html` skall du [redovisa dina reflektioner](kunskap/att-skriva-en-bra-redovisningstext) från varje kursmoment. Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, resultatet, etc. Skriv minst 15 meningar.
 
 Besvara även de specifika frågor som finns för varje kursmoment.
 
-Det är **viktigt** att dina filer `me/redovisning.cgi` och `me/me.cgi` är uppdaterade.
-
-Du behöver *inte* uppdatera `me/redovisning.py` eller `me/me.py`.
+När du är klar med kursen innehåller filen `me/flask/templates/redovisning.html` redovisningstexter från samtliga kursmoment.
 
 
 
@@ -46,7 +45,7 @@ Den länken som dyker upp längst ned är länken till din me-sida. Där kan du 
 Kopiera redovisningstexten till forumet {#forum}
 ---------------------------------------
 
-Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/python).
+Ta en kopia av redovisningstexten och gör ett inlägg i [kursforumet](forum/utbildning/oopython).
 
 Visa upp vad du gjort och berätta att du är klar. Bifoga länken till din me-sida.
 
