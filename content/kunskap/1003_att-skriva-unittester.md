@@ -208,8 +208,9 @@ class Testcase(unittest.TestCase):
     """ Submodule for unittests, derives from unittest.TestCase """
 
     bmw = Car("BMW", 100000)
-
-    def this_yields_an_error(self):
+    
+    # this yields an error
+    def test_error(self):
         """ Returns True if model-attribute matches """
         self.assertIs(self.bmw.model, "Honda")
 
@@ -222,15 +223,15 @@ Nu kan vi läsa av felmeddelandet när vi kör filen:
 ```python
 >>> python3 testfile.py -v
 
-test_yield_error (__main__.Testcase)
+test_error (__main__.Testcase)
 Returns True if model-attribute matches ... FAIL
 
 ======================================================================
-FAIL: test_yield_error (__main__.Testcase)
+FAIL: test_error (__main__.Testcase)
 Returns True if model-attribute matches
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "testfile.py", line 35, in test_yield_error
+  File "testfile.py", line 35, in test_error
     self.assertIs(self.bmw.model, "Honda")
 AssertionError: 'BMW' is not 'Honda'
 
