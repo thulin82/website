@@ -137,8 +137,8 @@ I header.html:
 
 ```html
 <ul class="nav navbar-nav">
-    <li {%- if request.path == "/" %} class="active" {% endif %}><a href="/">Hem</a></li>
-    <li {%- if request.path == "/about" %} class="active" {% endif %}><a href="/about">Om</a></li>
+    <li {%- if request.path == "/" %} class="active" {% endif %}><a href="url_for('main')">Hem</a></li>
+    <li {%- if request.path == "/about" %} class="active" {% endif %}><a href="url_for('about')">Om</a></li>
 </ul>
 ```
 
