@@ -1,7 +1,7 @@
 ---
 author: aar
 revision:
-    "2016-06-03": (PA, aar) Pre-release.
+    "2016-06-03": (A, aar) Första versionen.
 category:
     - oopython
 ...
@@ -28,7 +28,7 @@ Du ska skapa ett klassdiagram över ett program som hanterar kunder, produkter, 
 
 Du ska ha med klasserna: 
 
-* **Customer** som har variablerna customerId, customerName, address och orders. Den har metoderna editCustomer, placeOrder som har orderId som parameter och placeOrder som tar orderId som parameter.
+* **Customer** som har variablerna customerId, customerName, address och orders. Den har metoderna editCustomer, placeOrder som har orderId som parameter och editOrder som tar orderId som parameter.
 
 * **Order** har komposition med Customer. Order kan tillhöra en Customer medan Customer kan ha noll till många Order.
 Order har variablerna orderId, customerId, productIds och orderDate. Den har metoderna addProduct som tar productId som parameter, removeProduct som tar productId som parameter och calculatePrice.

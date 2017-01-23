@@ -108,8 +108,8 @@ class Child(Parent):
         self.nickName = nickName
         super(Child, self).__init__(name)
 
-        def printNickName(self):
-            print("Childs nickName is  %s and name is %s" % (self.nickName, self.name))
+    def printNickName(self):
+        print("Childs nickName is  %s and name is %s" % (self.nickName, self.name))
 ```
 
 
@@ -351,7 +351,7 @@ class Child:
         self.other = Other(name)
 
     def printName(self):
-        print("%s and my nickname is %s" % (self.other.name, self.nickName))
+        print("My name is %s and my nickname is %s" % (self.other.name, self.nickName))
 
     def accesParentPrivat(self):
         print("I can access " + self.other._privat)
