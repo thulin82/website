@@ -141,7 +141,7 @@ Aggregation visar också ägande mellan två klasser men där den ägda klassen 
 
 [FIGURE src=/image/oopython/kmom02/assAggCompEx.png caption="Association vs Aggregation vs Komposition exempel."]
 
-Exeplet visar ett Universitet som har Departments som i sin tur har Professors som har Students. University äger Department, om University slutat existera gör även Department det och Department kan bara tillhöra ett University.  
+Exemplet visar ett Universitet som har Departments som i sin tur har Professors som har Students. University äger Department, om University slutat existera gör även Department det och Department kan bara tillhöra ett University.
 Department äger Professor, ett Department kan ha flera Professor och Professor kan tillhöra flera Department men där finns fortfarande ett slags ägande en Professor jobbar på ett Department och Department förlorar stor del av sin funktionalitet om det inte finns några Professors. Båda kan dock existera utan varandra.  
 Sist ser vi att Professor har flera Student och Student har flera Professor. Båda är medvetna och använder varandra men där är inget ägande i relationen, de bara använder varanda och därför är det assocation istället för aggregation.
 
