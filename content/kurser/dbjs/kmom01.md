@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-01-23": (B, mos) Lästips artikel om programmera i JavaScript.
     "2017-01-16": (A, mos) Första utgåvan.
 ...
 Kmom01: JavaScript klient
@@ -70,8 +71,9 @@ Det finns inga videoförslag.
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+Här finns extra lästips som ger dig mer matnyttig info kring kursmomentet.
 
+1. Läs igenom artiklen "[Programmering med grunderna i JavaScript](kunskap/programmering-med-grunderna-i-javascript)". 
 
 
 
