@@ -12,7 +12,17 @@ Den traditionella höstgrillen för nya, befintliga och utgångna studenter på 
 
 Studera på utbildningsprogram och kurspaket i Webbprogrammering på campus & distans vid Blekinge Tekniska Högskola i Karlskrona.
 
-Till hösten 2016 startar vi ett nytt **distansprogram i Webbprogrammering** om 120hp. Sök det, kurspaketet webutv eller campus-programmet om 180hp.
+Till hösten 2017 har vi följande utbud:
+
+* Webbprogrammering 180hp (campus)
+* Webbprogrammering 120hp (distans)
+* Webbutveckling och programmering 30hp (distans)
+* Webbprogrammering och databaser 30hp (distans)
+
+Finn mer information i forumet:
+
+* [Utbud](t/5830)
+* [Frågor och svar](t/6119)
 
 [FIGURE src=/image/bobba_webprog2.jpg?w=c7]
 
