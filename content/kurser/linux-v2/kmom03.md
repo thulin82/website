@@ -1,16 +1,19 @@
 ---
 author: mos
 revision:
-    "2016-12-21": (PB2, efo) Ändring av länk till ny bash lab och extrauppgiften gjordes om till en del av kursmomentet
-    "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
+    "2017-01-24": (D, mos) Publicerat.
+    "2016-12-21": (C, efo) Ändring av länk till ny bash lab och extrauppgiften gjordes om till en del av kursmomentet
+    "2016-12-16": (B, mos) Förberedelse inför linux-v2.
     "2015-08-05": (A, mos) Första utgåvan för kursen.
 ...
 Kmom03: Skript med Bash
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och blir tillgängligt **senast den 30/1-2017**.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under översyn och blir tillgängligt **senast den 30/1-2017**.</strike>
+
+Kursmomentet är blev tillgängligt den 24/1-2017.
+[/INFO]
 
 Nu har vi en Linux-server och en webbserver. Låt oss nu bekanta oss med skriptprogrammering i Bash.
 

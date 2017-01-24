@@ -1,16 +1,19 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-24": (B, mos) Publicerat.
+    "2016-04-12": (A, lew) Första utkastet.
 category:
     - oopython
 ...
 Kmom03: Autogenerering av UML och dokumentation
 ====================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 30/1-2017**.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 30/1-2017**.</strike>
+
+Kursmomentet är blev tillgängligt den 24/1-2017.
+[/INFO]
 
 Det finns färdiga verktyg för att generera UML diagram och dokumentation från färdig kod. Vi ska titta närmare på några verktyg och se hur de fungerar.  
 
