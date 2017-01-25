@@ -45,13 +45,12 @@ cd kmom03/flask3
 
 Färdig? Bra. Då kan vi fortsätta i mappen me/flask:  
 
-1. Skapa filen "my_data.py", vilken ska innehålla din dataklass.
+1. Skapa filen "data.py", vilken ska innehålla din dataklass.
 
-2. Fyll på med lite relevant information så som:  
+2. Fyll på information som du kan använda på din me-sida:  
     * Länkar i navbar
     * Sidans titel
     * Bildlänk(ar)
-    * Överlagra `__str__()`-metoden och se till så den skriver ut alla medlemsvariabler, en variabel per rad.
 
 3. Använd ditt objekt i din me-sida, länkarna, titeln och det som är relevant.  
 

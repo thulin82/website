@@ -30,7 +30,7 @@ För att kunna styra innehållet i me-sidan på ett smidigt sätt, bygger vi ut 
 Krav {#krav}
 -----------------------
 
-Jobba vidare med din me-sida, me/flask. 
+Jobba vidare med din me-sida, me/flask.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -40,7 +40,7 @@ cd me/flask
 
 2. Skapa filen "person.py", vilken ska innehålla din personklass.
 
-3. Fyll på med lite relevant information så som:  
+3. Fyll på med information som du ska använda på din me-sida:  
     * Förnamn
     * Efternamn
     * Ålder
