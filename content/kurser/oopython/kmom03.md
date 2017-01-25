@@ -85,13 +85,17 @@ Dessa uppgifter skall utföras och redovisas.
 
 2. Gör uppgiften "[Skapa data-objekt till me-sidan](uppgift/skapa-dataobjekt-till-me-sida)".  
 
-3. Fyll på redovisning.html med kursmomentets redovisningstext.
+3. Gör uppgiften "[Skapa Black Jack](uppgift/skapa_blackjack)".
+
+4. Fyll på redovisning.html med kursmomentets redovisningstext.
 
 
 
 ###Extra {#extra}
 
-Det finns inga extrauppgifter
+1. Automatgenerera dokumentation för ditt Black Jack spel  
+
+2. Automatgenerera klassdiagram för ditt Black Jack spel
 
 
 
@@ -107,5 +111,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad tyckte du om Jinja2?
 * Vad tyckte du om strukturen på Flask-appen?
 * Gick det bra med autogenereringen?  
+* Gjorde du någon extrauppgift på Black Jacken?
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
 * Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
