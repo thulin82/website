@@ -37,6 +37,25 @@ Format: "x" not recognized. Use one of: canon cmap cmapx cmapx_np dot eps fig gd
 
 Du kan behöva något extra paket för att få till en .png-fil men Pyreverse säger till vad som behövs om du försöker skapa en.  
 
+Antagligen är det `Graphviz` som fattas och det installerar du med din vanliga pakethanterare.  
+
+Windows/Cygwin:  
+```bash
+apt-cyg install graphviz
+```  
+
+Mac:
+```bash
+brew install graphviz
+```
+
+Linux:
+```bash
+apt-get install graphviz
+```
+
+
+
 Vi utgår ifrån filen car.py:
 
 ```python
