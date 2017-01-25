@@ -121,7 +121,7 @@ return [
 
                         "linux" => [
                             "text"  =>"linux",
-                            "url"   => $this->di->get("url")->create("kurser/linux"),
+                            "url"   => $this->di->get("url")->create("kurser/linux-v2"),
                             "title" => "Kursen linux"
                         ],
 
