@@ -1,8 +1,9 @@
 ---
 author: mos
 revision:
-    "2016-12-21": (PC2, efo) Ändring av länk till ny nodejs lab
-    "2016-12-16": (PC1, mos) Förberedelse inför linux-v2.
+    "2017-01-27": (E, efo,mos) Bort installaiton debian node 
+    "2016-12-21": (D, efo) Ändring av länk till ny nodejs lab
+    "2016-12-16": (C, mos) Förberedelse inför linux-v2.
     "2015-10-16": (B, mos) La till artikel om environemnt variabler i Bash och Node.js samt artikel om process id till fil.
     "2015-08-13": (A, mos) Första utgåvan för kursen.
 ...
@@ -85,13 +86,17 @@ Installera labbmiljön för nodejs delen av kursen.
 
 1. [Installera nodejs och npm lokalt](kunskap/installera-node-och-npm)
 
-1. [Installera lokal utvecklingsmiljö](labbmiljo/lokal-utvecklingsmiljo)
+1. [Installera lokal utvecklingsmiljö](labbmiljo/lokal-utvecklingsmiljo) inklusive babel-node.
+
+
 
 ###Övningar {#ovningar}
 
 Genomför följande övningar.
 
+<!--
 1. Jobba igenom guiden "[Kom igång med Node.js på Debian](kunskap/kom-igang-med-node-js-pa-debian)".
+-->
 
 1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
 

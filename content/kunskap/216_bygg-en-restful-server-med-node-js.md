@@ -30,7 +30,7 @@ Artikeln är skriven för de som går linux-kursen där man kör en Debian-serve
 
 I princip kan du, om du har allt installerat på din vanliga desktop, köra igenom artikelns exempel på en och samma maskin. Men grundtanken är att man kör server och klient på två skilda maskiner. Så testa gärna det om du har möjligheten.
 
-Exempelkoden är mestadels skriven enligt ECMA6 så jag använder `babel-node` för att köra den. Du behöver alltså ha både [Node.js och babel installerat](kunskap/kom-igang-med-node-js-pa-debian) för att kunna köra exempelprogrammen.
+Exempelkoden är mestadels skriven enligt ECMA6 så jag använder `babel-node` för att köra den. Du behöver alltså ha både Node.js och babel installerat för att kunna köra exempelprogrammen.
 
 [Exempelprogrammen är samlade i kursrepot för linux](https://github.com/mosbth/linux/tree/master/example), ett urval av dem används i artikeln.
 
@@ -392,7 +392,3 @@ Avslutningsvis {#avsluting}
 Detta var en genomgång av hur du på olika sätt kan programmera en server i Node.js och leverera olika svar över HTTP. Du har sett varianter av kod till en RESTful server, inte komplett eller fullständig kanske, men med grunderna som gör att du nu kan sätta ihop en egen server.
 
 Det finns en [forumtråd kopplad till artikeln](t/4363) där du kan ställa frågor eller kommentera artikeln.
-
-
-
-
