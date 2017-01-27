@@ -18,7 +18,7 @@ Laboration i grunderna i asynkronprogrammering, där vi lär oss nya konstruktio
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat `nodejs` på din dator, [guide för installation av nodejs](http://local.dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)
+Du har installerat `nodejs`, `npm` och en lokal utvecklingsmiljö för kursrepot på din dator.
 
 Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-kursen.
 
