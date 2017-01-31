@@ -119,7 +119,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-1. Gör så att man kan lägga till och ta bort djur via formulär
+Det finns inga extrauppgifter.
 
 
 
