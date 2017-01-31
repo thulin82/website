@@ -67,7 +67,7 @@ Sist i artikeln kommer vi går igenom [_re.sub_](https://docs.python.org/2/libra
 
 I regex är har vissa karaktärer en speciell betydelse, det är detta som gör att vi kan matcha mönster dynamiskt och inte enbart fasta strängar.
 
-[INFO]Ibland behöver man använda raw string notation (r"text") när man jobbar med regex, om man inte har det kan man behöva använda två "\\" istället för ett när man skriver t.ex. **\w, \1 och \S**.  
+[INFO]Ibland behöver man använda raw string notation (r"text") när man jobbar med regex, om man inte har det kan man behöva använda två `\` istället för ett när man skriver t.ex. **\w, \1 och \S**.  
 I denna artikeln kommer bara raw string notation användas när vi behöver referera till grupper, **\1**. Vissa kan behöva använda det även när de skriver **\w eller \\[** m.m.[/INFO]
 
 * **.**(punkt): Matchar vilken karaktär som helst utom newline(\\n). Kallas även wildcard.
