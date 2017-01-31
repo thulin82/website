@@ -39,10 +39,10 @@ Du kan behöva något extra paket för att få till en .png-fil men Pyreverse s�
 
 Antagligen är det `Graphviz` som fattas och det installerar du med din vanliga pakethanterare.  
 
-Windows/Cygwin:  
+Windows/Cygwin:
 ```bash
 apt-cyg install graphviz
-```  
+```
 
 Mac:
 ```bash
