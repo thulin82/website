@@ -71,7 +71,7 @@ Titta på följande:
 
 1. Det finns en webbplats som föreslår en [JSON API specifikation](http://jsonapi.org/). Du kan titta översiktligt på den, börja med stycket om "Fetching Data". Specifikationen ger oss en guide, eller ledtrådar och tips, till hur man kan skriva ett JSON API för en server.
 
-1. nodejs har ett [api](https://nodejs.org/api/) med där de inbyggda funktionerna är dokumenterade, läs igenom översiktligt och använd som referens när du programmerar.
+1. nodejs har ett [api](https://nodejs.org/api/) där de inbyggda funktionerna är dokumenterade, läs igenom översiktligt och använd som referens när du programmerar.
 
 1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet.
 
