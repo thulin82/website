@@ -86,7 +86,7 @@ Nu kan du gå in och ändra informationen i filerna för att anpassa dem och gö
 
 Det är viktigt att du lägger koden på rätt plats. Allt som du lägger under katalogen `me/kmom01` kommer att vara en del av din redovisning av kursmoment 01. Det förväntas att du skall ha en katalog som heter `me/kmom01/sandbox`, annars blir det komplettering på inlämningen.
 
-Så här gjorde jag för att anpassa sandboxen. Du kan använda din vanliga texteditorn istället för den terminalbaserade editorn nano som jag använder i exemplet nedan.
+Så här gjorde jag för att anpassa sandboxen. Du kan använda din vanliga texteditor istället för den terminalbaserade editorn nano som jag använder i exemplet nedan.
 
 [ASCIINEMA src=11693]
 
@@ -246,7 +246,7 @@ Att jobba i JSFiddle eller CodePen kan vara en smaksak. För min del så väljer
 
 ###CodeShare {#codeshare}
 
-En annan resurs som kan udnerlätta felsökning via kollegor, är att dela med sig av koden via en codeshare via webbtjänsten [Codeshare](http://codeshare.io/). När du väl laddat upp din kod så kan du ta hjälp av kollegor som kan se koden i sitt sammanhang och de kan dessutom redigera koden och förslå förändringar.
+En annan resurs som kan underlätta felsökning via kollegor, är att dela med sig av koden via en codeshare via webbtjänsten [Codeshare](http://codeshare.io/). När du väl laddat upp din kod så kan du ta hjälp av kollegor som kan se koden i sitt sammanhang och de kan dessutom redigera koden och förslå förändringar.
 
 Tipset är att skaffa sig ett konto på Codeshare.
  
