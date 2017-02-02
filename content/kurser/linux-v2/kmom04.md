@@ -43,13 +43,13 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. Bekanta dig med Node.js genom att besöka [dess webbplats](https://nodejs.org/) och kika snabbt på dess [dokumentation](https://nodejs.org/documentation/).Förberedelse inför linux-v2.
+1. Bekanta dig med Node.js genom att besöka [dess webbplats](https://nodejs.org/) och kika snabbt på dess [dokumentation](https://nodejs.org/documentation/).
 
 1. Bekanta dig med npm genom att besöka [dess webbplats](https://www.npmjs.com/) och kika snabbt på dess [dokumentation](https://docs.npmjs.com/).
 
-<!--
-http://exploringjs.com/es6/index.html
--->
+1. Kika översiktligt i boken som ger en introduktion till ES6, för dig som redan kan ES5.
+
+    * [Boken: Exploring ES6](kunskap/boken-exploring-es6)
 
 
 
@@ -67,6 +67,8 @@ Titta på följande:
 
 1. I labbarna node1 - node3 skrapar vi ytan på funktionell programmering. Titta gärna på denna [spellista](https://www.youtube.com/playlist?list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84) av MPJ som är programmerare på Spotify.
 
+
+
 ###Lästips {#lastips}
 
 1. Titta översiktligt på de [nya konstruktionerna i JavaScript ECMA6](https://github.com/lukehoban/es6features/blob/master/README.md).
@@ -74,6 +76,8 @@ Titta på följande:
 1. Titta översiktligt på [Babel](https://babeljs.io/) som är en JavaScript till JavaScript kompilator som stödjer ECMA6.
 
 1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet.
+
+
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
@@ -86,7 +90,11 @@ Installera labbmiljön för nodejs delen av kursen.
 
 1. [Installera nodejs och npm lokalt](kunskap/installera-node-och-npm)
 
+1. [Installera babel-node lokalt](labbmiljo/babel-node)
+
+<!--
 1. [Installera lokal utvecklingsmiljö](labbmiljo/lokal-utvecklingsmiljo) inklusive babel-node.
+-->
 
 
 
@@ -94,9 +102,7 @@ Installera labbmiljön för nodejs delen av kursen.
 
 Genomför följande övningar.
 
-<!--
 1. Jobba igenom guiden "[Kom igång med Node.js på Debian](kunskap/kom-igang-med-node-js-pa-debian)".
--->
 
 1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
 
@@ -124,7 +130,6 @@ Dessa uppgifter skall utföras och redovisas.
 
 
 
-
 ###Extra {#extra}
 
 Det finns inga extra uppgifter.
@@ -140,7 +145,11 @@ Läs [instruktionen om hur du skall redovisa](kurser/linux-v2/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Är detta din första bekantskap med javaScript på servern eller har du testat det tidigare?
+* Är detta din första bekantskap med JavaScript på servern eller har du testat det tidigare?
 * Vad tänker du om ECMA6, dess nya funktioner och sättet att få tillgång till dem via `babel-node`?
-* Vilka fördelar finns med funktionell programmering om man jämför med proceduell programmering?
 * Hur gick det att förstå koncepten kring klient och server?
+* Är du bekant med begreppet funktionell programmering och har du några tankar kring det?
+
+<!--
+* Vilka fördelar finns med funktionell programmering om man jämför med proceduell programmering?
+-->

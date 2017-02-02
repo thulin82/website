@@ -1,13 +1,13 @@
 ---
 author: mos
-revision:
-    2016-11-01: (B, mos) Bytte ut nodejs mode node i verifiering.
-    2016-10-14: (A, mos) Första utgåvan.
 category:
     - labbmiljo
     - javascript
     - nodejs
     - npm
+revision:
+    2016-11-01: (B, mos) Bytte ut nodejs mode node i verifiering.
+    2016-10-14: (A, mos) Första utgåvan.
 ...
 Installera Node.js och npm
 ===================================
@@ -50,7 +50,9 @@ Programmen node och npm läggs till i din PATH automatiskt.
 Du kan nu starta programmen från Cygwin (och från `cmd.exe`). Men starta om din terminal så att den får del av den uppdaterade pathen.
 
 ```bash
+$ which node
 $ node --version
+$ which npm
 $ npm --version
 ```
 
@@ -64,7 +66,9 @@ Gå till [nedladdningssidan för Node](https://nodejs.org/en/download/). Ladda n
 Du kan nu starta programmen från din terminal.
 
 ```bash
+$ which node
 $ node --version
+$ which npm
 $ npm --version
 ```
 
@@ -82,18 +86,22 @@ $ sudo apt-get update
 $ sudo apt-get install nodejs npm
 ```
 
+Du kan nu starta programmen från din terminal.
+
+```bash
+$ which node
+$ node --version
+$ which npm
+$ npm --version
+```
+
+<!--
 I debian fanns det tidigare ett kommando som hette node, därför installeras vår "node" som nodejs. Men jag vill använda det som node och lägger därför en symbolisk länk till nodejs som jag döper till node.
 
 ```bash
 $ sudo ln -s $( which nodejs ) /usr/bin/node
 ```
-
-Du kan nu starta programmen från din terminal.
-
-```bash
-$ node --version
-$ npm --version
-```
+-->
 
 
 
@@ -151,4 +159,4 @@ Avslutningsvis {#avslutning}
 
 Det finns en [forumtråd om node och npm](t/5801). Ställ frågor där och dela med dig av dina tips och trix.
 
-Det finns också en något äldre artikel som visar hur man [installerar node, npm och babel på debian](kunskap/kom-igang-med-node-js-pa-debian).
+Det finns också en artikel som visar hur man [installerar node, npm och babel på debian](kunskap/kom-igang-med-node-js-pa-debian).

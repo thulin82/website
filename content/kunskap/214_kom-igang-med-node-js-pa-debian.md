@@ -85,7 +85,7 @@ Så här kan det se ut.
 
 ###Babel och babel-node {#installbabel}
 
-Nu använder vi npm för att installera Babel. Vi ska använda en variant av Babel som heter `babel-node`. Det är en wrapper som dels kompilerar från ECMA6 och dels kör den kompilerade koden i Node.js. Vi behöver alltså bara ett kommando för att köra ett skript i ECMA6.
+Nu använder vi npm för att installera Babel. Vi ska använda en variant av Babel som heter `babel-node`. Det är en wrapper som dels transpilerar från ECMA6 och dels kör den transpilerade koden i Node.js. Vi behöver alltså bara ett kommando för att köra ett skript i ECMA6.
 
 Vi [installerar babel-node via babel-cli](https://babeljs.io/docs/usage/cli/).
 
@@ -164,9 +164,9 @@ Så här kan det se ut.
 Exempelprogram med babel-node {#exempelbabel}
 --------------------------------------
 
-Programmet `babel-node` fungerar på samma sätt som nodejs, med fördelen att det hanterar ECMA6.
+Programmet `babel-node` fungerar på samma sätt som nodejs, med fördelen att det hanterar ES6.
 
-Här är ett skript enligt ECMA6 med *arrow* operatorn.
+Här är ett skript enligt ES6 med *arrow* operatorn.
 
 ```javascript
 var a = [ "mega", "maxi", "multi" ];
@@ -174,7 +174,7 @@ var b = a.map( s => s.length )
 console.log(b)
 ```
 
-Det är samma som att skriva följande.
+Det är samma som att skriva följande i ES5.
 
 ```javascript
 var a = [ "mega", "maxi", "multi" ];
@@ -182,13 +182,7 @@ var b = a.map( function(s) { return s.length } )
 console.log(b)
 ```
 
-Arrow-operatorn är alltså ett sätt att skriva enklare kod för funktioner.
-
-Det första skriptet (ES6) fungerar bra i babel-node men inte i nodejs. Det andra skripet (ES5) fungerar i båda.
-
-Följande exempel visar hur det ser ut när man kör de båda exemplen i nodejs och i babel-node.
-
-[ASCIINEMA src=24693]
+Arrow-operatorn är alltså ett ES6 sätt att skriva enklare kod för funktioner.
 
 Då kan vi grunderna i hur JavaScript kan köras på serversidan och vi har en miljö installerad.
 
