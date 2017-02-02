@@ -77,4 +77,4 @@ Pröva att gå till kursrepot och in till exempelprogrammet `example/nodejs/simp
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Ställ gärna frågor om [Babel, babel-node och preset i forumet](t/4353).
+Ställ gärna frågor om [Babel, babel-node och preset i forumet](t/6182).
