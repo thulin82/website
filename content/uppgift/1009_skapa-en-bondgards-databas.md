@@ -1,8 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Updated flask structure.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-02": (A, lew) First version.
 category:
     - oopython
 ...
@@ -53,10 +52,10 @@ Fyll på _humans_ med en ägare och minst 3 anställda personer.
 3. Skapa en tabell med namnet "animals" och kolumnerna:  
     * id (unik, auto-increment)  
     * species (varchar)  
-    * category (varchar)  
+    * name (varchar)  
     * nr_of_legs (integer)  
 
-Fyll på _animals_ med minst 10 djur.  
+Fyll på _animals_ med minst 5 djur.  
 
 4. Skapa en tabell med namnet "vehicles" och kolumnerna:  
     * id (unik, auto-increment)  

@@ -4,12 +4,13 @@ category:
     - nodejs
     - lab
 revision:
+    "2017-02-01": (B, efo) Gjorde om labben från asynkronprogrammering till nodejs api.
     "2016-12-21": (A, efo) Första utgåvan av lab4 i kursen linux.
 ...
-Linux lab 3, Asynkron programmering
+Linux lab 4, nodejs API
 ==================================
 
-Laboration i grunderna i asynkronprogrammering, där vi lär oss nya konstruktioner och hur man använder en callback funktion.
+En laboration i nodejs där vi bekantar oss med [nodejs api](https://nodejs.org/api/). Vi använder api:t för att lösa uppgifter med `fs`, `querystring` och `crypto`. 
 
 <!--more-->
 
@@ -18,7 +19,7 @@ Laboration i grunderna i asynkronprogrammering, där vi lär oss nya konstruktio
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har installerat `nodejs` på din dator, [guide för installation av nodejs](http://local.dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)
+Du har installerat `nodejs`, `npm` och en lokal utvecklingsmiljö för kursrepot på din dator.
 
 Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot för linux-kursen.
 

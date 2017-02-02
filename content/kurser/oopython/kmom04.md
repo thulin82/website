@@ -1,10 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-06-09": (PA, aar) Pre-release.
-    "2016-05-31": (PA, lew) Pre-release.
-    "2016-05-25": (PA, aar) Pre-release.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-02": (A, lew) First version.
 category:
     - oopython
 ...
@@ -119,7 +116,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-1. Gör så att man kan lägga till och ta bort djur via formulär
+Det finns inga extrauppgifter.
 
 
 

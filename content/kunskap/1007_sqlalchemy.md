@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-01-27": (A, lew) First version.
 category:
     - oopython
 ...
@@ -212,7 +212,7 @@ Gör vi en commit() och kollar på id:t igen så ser vi att den är tillagd i ta
 5
 ```
 
-Så länge queryn ligger i sessionen kan man även göra `session.rollback()` för att återställa sessionen vid eventuella problem.
+Så länge frågan ligger i sessionen kan man även göra `session.rollback()` för att återställa sessionen vid eventuella problem.
 
 
 
@@ -268,7 +268,7 @@ Model: v40, Price: 195000.0, Country: Sweden, Manufacturer: Volvo
 
 ###Filter operatorer {#filter-operatorer}
 
-Det finns en uppsättning operatorer vi kan tillgå för att förenkla våra queries, till exempel:  
+Det finns en uppsättning operatorer vi kan tillgå för att förenkla våra databasfrågor, till exempel:  
 
 * and_()  
 * or_()  
