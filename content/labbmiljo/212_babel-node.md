@@ -21,7 +21,6 @@ Du har [installerat node och npm](labbmiljo/node-och-npm).
 Installera babel-node {#babel}
 -----------------------------------
 
-
 Du installerar  babel-cli som innehåller babel-node, med npm på följande sätt. Vi väljer att göra en global installation för att hålla det enkelt.
 
 ```text
@@ -41,3 +40,41 @@ Så här kan det se ut.
 [ASCIINEMA src=101656]
 
 Nu är babel-node installerat. Du kan använda det på samma sätt som node, men med den transpilerande fördelen.
+
+
+
+Installera babel preset {#preset}
+-----------------------------------
+
+Babel har ett antal [presets där es2015 (ES6)](https://babeljs.io/docs/plugins/preset-es2015/) är en av dem. Dessa presets bestämmer hur koden transpileras och vilka konstruktioner som stöds.
+
+Man behöver installera de presets man använder.
+
+Låt oss ta ett exempel tillsammans med kursen linux. Där använder vi es2015.
+
+Dels finns i kursrepot en konfigfil `.babelrc` som säger vilka presets vi använder.
+
+```json
+{
+    "presets": ["es2015"]
+}
+```
+
+Då behöver vi också installere den babel-modul som stödjer den preseten.
+
+Det gör vi i rooten av kursrepot, i samma katalog där `babelrc` ligger.
+
+```text
+# Gå till roten av kursrepot
+npm install babel-preset-es2015
+```
+
+Bra, nu kan vi köra `babel-node` i alla underkataloger till kursrepot och dra nytta av konfigfilen och dess preset.
+
+Pröva att gå till kursrepot och in till exempelprogrammet `example/nodejs/simpleServer` och starta den med babel-node. Om det går bra så har du en korrekt miljö.
+
+
+Avslutningsvis {#avslutning}
+--------------------------------------
+
+Ställ gärna frågor om [Babel, babel-node och preset i forumet](t/4353).

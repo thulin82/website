@@ -5,7 +5,7 @@ category:
     - linux
     - debian
 revision:
-    "2017-02-02": (D, mos) Version 6 av nodejs och senaste versionen av Babel.
+    "2017-02-02": (D, mos) Version 6 av nodejs och senaste versionen av Babel samt babel presets.
     "2016-01-26": (C, mos) Återgår till version 5 av Babel.
     "2016-01-21": (B, mos) Babel installeras nu som babel-cli.
     "2015-08-07": (A, mos) Första utgåvan för linux-kursen.
@@ -188,9 +188,43 @@ Då kan vi grunderna i hur JavaScript kan köras på serversidan och vi har en m
 
 
 
+Babel presets med babel-node {#presets}
+--------------------------------------
+
+Babel har ett antal [presets där es2015 (ES6)](https://babeljs.io/docs/plugins/preset-es2015/) är en av dem. Dessa presets bestämmer hur koden transpileras och vilka konstruktioner som stöds.
+
+Man behöver installera de presets man använder.
+
+Låt oss ta ett exempel tillsammans med kursen linux. Där använder vi es2015.
+
+Dels finns i kursrepot en konfigfil `.babelrc` som säger vilka presets vi använder.
+
+```json
+{
+    "presets": ["es2015"]
+}
+```
+
+Då behöver vi också installere den babel-modul som stödjer den preseten.
+
+Det gör vi i rooten av kursrepot, i samma katalog där `babelrc` ligger.
+
+```text
+# Gå till roten av kursrepot
+npm install babel-preset-es2015
+```
+
+Bra, nu kan vi köra `babel-node` i alla underkataloger till kursrepot och dra nytta av konfigfilen och dess preset.
+
+Pröva att gå till kursrepot och in till exempelprogrammet `example/nodejs/simpleServer` och starta den med babel-node. Om det går bra så har du en korrekt miljö.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
 Det var en genomgång av hur du kommer igång med JavaScript på serversidan med Node.js.
 
 Ställ gärna frågor om [Node.js, npm och Babel i forumet](t/4353).
+
+Det finns artiklar om hur du installerar [Node och npm](labbmiljo/node-och-npm) samt [Babel](labbmiljo/babel-node) på din egen lokala utvecklingsmiljö.

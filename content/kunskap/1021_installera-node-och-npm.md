@@ -77,7 +77,7 @@ $ npm --version
 Installera på Linux {#linux}
 -------------------------------
 
-Olika linux-varianter har olika sätt att installera node och npm. Följ instruktionerna på nedladdningssidan.
+Olika linux-varianter har olika sätt att installera node och npm. Följ instruktionerna på nedladdningssidan. Det kan finnas vissa förberedelser som behövs för att du skall kunna installera den senaste versionen, det handlar om vilket repo som apt-get använder för att hämta installationsfilern från. Kolla nedladndingssidan för att vara säker.
 
 På min debian gör jag så här.
 
