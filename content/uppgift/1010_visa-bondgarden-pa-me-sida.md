@@ -1,15 +1,14 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Updated flask structure.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-02": (A, lew) First version.
 category:
-    - python
+    - oopython
 ...
 Visa bondgården på me-sidan
 ===================================
 
-Baka ihop delarna från kursmomentet och presentera tabellen på me-sidan.
+Knyt ihop delarna från kursmomentet och presentera tabellen på me-sidan.
 
 <!--more-->
 
@@ -49,9 +48,10 @@ Du har databasen i `me/flask/db` så fortsätt arbeta med den och din me-sida.
 ```bash
 # Ställ dig i kurskatalogen
 dbwebb validate flask
+dbwebb publish flask
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. Glöm inte att göra `dbwebb publish flask`.
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
 
 
 
