@@ -1,8 +1,9 @@
 ---
 author: mos
 revision:
-    "2017-01-27": (E, efo,mos) Bort installaiton debian node 
-    "2016-12-21": (D, efo) Ändring av länk till ny nodejs lab
+    "2017-02-02": (F, mos) In med lokal installation av node, npm och babel, åter in med debian node artikeln.
+    "2017-01-27": (E, efo,mos) Bort installation debian node.
+    "2016-12-21": (D, efo) Ändring av länk till ny nodejs lab.
     "2016-12-16": (C, mos) Förberedelse inför linux-v2.
     "2015-10-16": (B, mos) La till artikel om environemnt variabler i Bash och Node.js samt artikel om process id till fil.
     "2015-08-13": (A, mos) Första utgåvan för kursen.
@@ -36,7 +37,7 @@ Nåja, det är bättre att vi tittar hur det ser ut.
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-4 studietimmar)*
+*(ca: 4-8 studietimmar)*
 
 
 ###Kurslitteratur  {#kurslitteratur}
@@ -82,7 +83,7 @@ Titta på följande:
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 12-16 studietimmar)*
+*(ca: 8-12 studietimmar)*
 
 ###Labbmiljö
 
