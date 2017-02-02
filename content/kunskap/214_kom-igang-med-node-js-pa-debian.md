@@ -1,12 +1,14 @@
 ---
 author: mos
-category: javascript
+category:
+    - javascript
+    - linux
+    - debian
 revision:
-  "2016-01-26": (C, mos) Återgår till version 5 av Babel.
-  "2016-01-21": (B, mos) Babel installeras nu som babel-cli.
-  "2015-08-07": (A, mos) Första utgåvan för linux-kursen.
-updated: "2016-01-26 08:43:38"
-created: "2015-08-07 07:02:11"
+    "2017-02-02": (D, mos) Version 6 av nodejs och senaste versionen av Babel.
+    "2016-01-26": (C, mos) Återgår till version 5 av Babel.
+    "2016-01-21": (B, mos) Babel installeras nu som babel-cli.
+    "2015-08-07": (A, mos) Första utgåvan för linux-kursen.
 ...
 Kom igång med Node.js på Debian
 ==================================
@@ -49,38 +51,51 @@ Installera Node.js, npm och Babel {#install}
 --------------------------------------
 
 
+###Vilken version? {#version}
+
+Node har utvecklats en del under de senaste åren och finns i olika version. När vi installerar paket på Debian så kan det vara en äldre version av Node som man får. För att vara på den säkra sidan så ser vi till att få den senaste staibla versionen av node.
+
+Hur man gör ståre det om på [Nodes installationssida för Debian](https://nodejs.org/en/download/package-manager/). Det vi behöver göra är att köra följande kommando, vilket ger oss en ny plats att hämta hem paketen med den valda releasen av Node.
+
+```text
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+```
+
+Vi har alltså valt version 6 i vårt fall.
+
+
+
 ###Node.js och npm {#installnode}
 
-Vi börjar med att installera npm och Node.js.
+Vi börjar med att installera  Node.js som numer innehåller pakethanteraren npm.
 
 ```bash
-$ sudo apt-get install nodejs npm
+$ sudo apt-get install nodejs
+$ which nodejs
 $ nodejs --version
+$ which npm
 $ npm --version
 ```
 
 Så här kan det se ut.
 
-[ASCIINEMA src=24689]
+[ASCIINEMA src=101655]
 
 
 
 ###Babel och babel-node {#installbabel}
 
-Därefter använder vi npm för att installera Babel. Vi ska använda en variant av Babel som heter `babel-node`. Det är en wrapper som dels kompilerar från ECMA6 och dels kör den kompilerade koden i Node.js. Vi behöver alltså bara ett kommando för att köra ett skript i ECMA6.
+Nu använder vi npm för att installera Babel. Vi ska använda en variant av Babel som heter `babel-node`. Det är en wrapper som dels kompilerar från ECMA6 och dels kör den kompilerade koden i Node.js. Vi behöver alltså bara ett kommando för att köra ett skript i ECMA6.
+
+Vi [installerar babel-node via babel-cli](https://babeljs.io/docs/usage/cli/).
 
 ```bash
-$ sudo npm install -g babel@5.8.35
+$ sudo npm install -g babel-cli
+$ which babel-node
 $ babel-node --version
 ```
-[INFO]
-**Vi använder en äldre version av babel**
 
-Vi använder version 5 av Babel, från och med version 6 har de förändrat installationsprocessen och hur de distribuerar koden. Kursen utvecklades med tanke på hur Babel version 5 fungerade och därför fortsätter vi att använda det tills kursmaterialet uppdateras.
-
-[Läs mer om detta i forumet](t/5012).
-[/INFO]
-
+<!--
 Du kommer högst troligen få ett felmeddelande på Debian som säger följande.
 
 ```bash
@@ -102,9 +117,11 @@ Nu bör det gå bättre.
 $ babel-node --version
 ```
 
+-->
+
 Så här kan det se ut.
 
-[ASCIINEMA src=24690]
+[ASCIINEMA src=101656]
 
 Så, då finns alla program installerade.
 
@@ -121,6 +138,8 @@ $ nodejs
 Hej
 >
 ```
+
+Du kan även pröva att starta node via kommandot `node`, det bör fungera också.
 
 Så här kan det se ut.
 
@@ -181,7 +200,3 @@ Avslutningsvis {#avslutning}
 Det var en genomgång av hur du kommer igång med JavaScript på serversidan med Node.js.
 
 Ställ gärna frågor om [Node.js, npm och Babel i forumet](t/4353).
-
-
-
-
