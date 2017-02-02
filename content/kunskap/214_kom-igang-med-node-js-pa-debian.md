@@ -184,7 +184,7 @@ console.log(b)
 
 Arrow-operatorn är alltså ett sätt att skriva enklare kod för funktioner.
 
-Det första skriptet fungerar bra i babel-node men inte i nodejs. Det andra skripet fungerar i båda.
+Det första skriptet (ES6) fungerar bra i babel-node men inte i nodejs. Det andra skripet (ES5) fungerar i båda.
 
 Följande exempel visar hur det ser ut när man kör de båda exemplen i nodejs och i babel-node.
 
