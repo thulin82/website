@@ -1,8 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Updated some instructions.
-    "2016-04-19": (PA, lew) Pre-release.
+    "2017-02-02": (A, lew) First version.
 category:
     - oopython
 ...
@@ -49,7 +48,8 @@ Vi kommer använda en del egna funktioner så vi skapar en ny fil, "functions.py
 import functions as func
 ```
 
-I functions.py importerar vi det vi behöver från SQLAlchemy, Cars-klassen samt modulen "request" från flask:
+I functions.py importerar vi det vi behöver från SQLAlchemy, Cars-klassen samt modulen "request" från flask.  
+Raden `from sqlalchemy import *` betyder att vi importerar allt från modulen:
 
 ```python
 from flask import request
@@ -116,7 +116,7 @@ cars.html:
 Generera tabell utifrån databasen {#generera-tabell}  
 -------------------------------
 
-Vi skapar en funktion i "functions.py" som hämtar all data från databasen och returnerar en html-sträng som passar in i tabellens "<tbody>" med innehållet:  
+Vi skapar en funktion i "functions.py" som hämtar all data från databasen och returnerar en html-sträng som passar in i tabellens "&lt;tbody&gt;" med innehållet:  
 
 ```python
 def fixCarTable():
@@ -156,7 +156,7 @@ Använder vi `|safe` så talar vi om att det är OK att det är html-kod. Utan d
 GET {#get}
 -------------------------------
 
-Vi testar GET-metoden för att ta bort en rad ur databasen. Först och främst måste vi ordna till en länk vid sidan om varje rad i tabellen. Tanken är att när man klickat på den så skickar man med id:t via GET och kan då ta bort den. För att inte behöva använda fler externa lib eller moduler för att ladda om sidan kan vi använda samma route.  
+Vi testar GET-metoden för att ta bort en rad ur databasen. Först och främst måste vi ordna till en länk vid sidan om varje rad i tabellen. Tanken är att när man klickat på den så skickar man med id:t via GET och kan då ta bort den. För att inte behöva använda fler externa bibliotek eller moduler för att ladda om sidan kan vi använda samma route.  
 
 Vi börjar med länken. I funktionen som genererar tabell-datan lägger vi till en länk som skickar med id:t i urlen:  
 ```python
@@ -185,7 +185,7 @@ Vi kan även lägga till en kolumn i cars.html:
 </tr>
 ```
 
-Nu återstår bara att hantera detta i routen. Vi behöver tala om för routen "/cars" att den ska kunna ta hand om GET-parametrar. Om man klickar på länken för att ta bort data nu så ser vi i URL:en att det skickas med en parameter, till exempel: `localhost:5000?del=2`  
+Nu återstår bara att hantera detta i routen. Vi behöver tala om för routen "/cars" att den ska kunna ta hand om GET-parametrar. Om man klickar på länken för att ta bort data nu så ser vi i URL:en att det skickas med en parameter, till exempel: `localhost:5000/cars?del=2`  
 
 Det gör vi på följande sätt i app.py:
 ```python
@@ -194,7 +194,7 @@ Det gör vi på följande sätt i app.py:
 ...
 ```
 
-Tack vare modulen `request` som vi importerat kan vi göra en koll i routen om det finns någon "del"-parameter:  
+Tack vare modulen `request` som vi importerat kan vi göra en kontroll i routen om det finns någon "del"-parameter:  
 ```python
 @app.route('/cars', methods=["GET"])
 def show_cars():
