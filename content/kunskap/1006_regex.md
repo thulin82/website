@@ -59,7 +59,7 @@ match(), search() och findall() returnerar _None_ om de inte hittar mönstret, d
 Med re.search() kan vi se att den bara hittar första förekomsten av **b** om vi kollar i _span=(1,2)_, den hittar karaktären **b** som har index 1. Alltså hittar den inte det sista **b:et**.  
 re.findall() hittar båda **b**.
 
-Sist i artikeln kommer vi går igenom [_re.sub_](https://docs.python.org/2/library/re.html#re.sub), en funktion för att ersätta text med hjälp av regex.
+Sist i artikeln kommer vi går igenom [_re.sub_](https://docs.python.org/3/library/re.html#re.sub), en funktion för att ersätta text med hjälp av regex.
 
 
 
@@ -387,7 +387,7 @@ Vi använder regex för att plocka ut vilka djur som är kannibaler. Vi börjar 
 
 ###Sök och ersätt {#sok_och_ersett}
 
-[_re.sub()_](https://docs.python.org/2/library/re.html#re.sub) söker igenom en sträng och byter ut alla stycken som matchar mönstret. re.sub tar parametrarna mönster, sträng att ersätta med och strängen.  
+[_re.sub()_](https://docs.python.org/3/library/re.html#re.sub) söker igenom en sträng och byter ut alla stycken som matchar mönstret. re.sub tar parametrarna mönster, sträng att ersätta med och strängen.  
 re.sub är jättebra när man behöver ändra samma sak flera gånger i en text. T.ex. byta från windows-radbrytning till unix-radbrytning eller byta namn på en person som förekommer ofta i en text.
 
 I exemplet nedan kommer vi använda oss av sub för att få varje mening på en egen rad.
@@ -431,6 +431,6 @@ Vill tipsa igen om <https://regex101.com/#python>. Bra om man vill få en förkl
 
 Det finns bra sidor online där man kan öva sig på regex: <http://regexone.com/>, <https://regexcrossword.com/> och <http://regex.alf.nu/>.
 
-Dokumentation för re modulen: <https://docs.python.org/2/library/re.html#>.
+Dokumentation för re modulen: <https://docs.python.org/3/library/re.html#>.
 
-Pythons egna regex guide: <https://docs.python.org/2/howto/regex.html>
+Pythons egna regex guide: <https://docs.python.org/3/howto/regex.html>

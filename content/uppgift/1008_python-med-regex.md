@@ -40,7 +40,7 @@ Materialet till labben ligger nu i din kurskatalog i `me/kmom04/lab3` enligt fö
 | `answer.py`        | Här skall du skriva din kod för att lösa respektive uppgift i labben. |
 | `Dbwebb.py`        | Används av `answer.py` för att testa din labb.                        |
 | `answer.json`      | Används av `Dbwebb.py` för att testa din labb.                        |
-| `regexOnLists.py`  | Används av dig för att använda regex på listor.                       |
+| `ircLog.txt`  | Innhåller en irc log som ska användas för att hitta mönster i.                       |
 
 Öppna filen `instruction.html` i en webbläsare och läs igenom de uppgifter som labben omfattar.
 
