@@ -2,7 +2,7 @@
 author: aar
 category: oopython
 revision:
-    "2016-05-25": (PA, aar) Pre-release.
+    "2016-05-25": (A, aar) Första versionen.
 created: "2016-05-25"
 ...
 Python med regex
