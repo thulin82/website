@@ -8,9 +8,12 @@ category:
 Kmom04: Regex och databaser
 ====================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 6/2-2017**.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under utveckling och blir tillgängligt **senast den 6/2-2017**.</strike>
+
+Kursmomentet publicerades 2017-02-03.
+
+[/INFO]
 
 I det här kursmomentet övar vi oss på regex, hantering av SQLite-databas och HTTP-metoderna GET och POST i Flask.  
 
