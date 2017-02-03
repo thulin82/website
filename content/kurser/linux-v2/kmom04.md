@@ -11,9 +11,12 @@ revision:
 Kmom04: Server med Node.js
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och blir tillgängligt **senast den 6/2-2017**.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under översyn och blir tillgängligt **senast den 6/2-2017**.</strike>
+
+Kursmomentet blev tillgängligt den 2017-02-03.
+
+[/INFO]
 
 Nu har vi en Linux-server, en webbserver och vi kan grunderna i att bygga skript i bash. Låt oss nu kika på en annan sak, hur man bygger egna servrar i Linux med Node.js.
 
