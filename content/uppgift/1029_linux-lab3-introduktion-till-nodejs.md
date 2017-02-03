@@ -54,10 +54,11 @@ Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
 
 Öppna filen `answer.js` i din texteditor och koda ihop svaren på uppgifterna.
 
-Du kan testa dina lösningar genom att köra programmet `answer.js` från kurskatalogen i din terminal enligt nedan
+Du kan testa dina lösningar genom att köra programmet `answer.js` från `me/kmom04/node1/
+me/kmom04/node1/` i din terminal enligt nedan:
 
 ```javascript
-$ babel-node me/kmom04/node1/answer.js
+$ babel-node answer.js
 ```
 
 
@@ -69,7 +70,7 @@ Krav {#krav}
 
 2. Skriv dina lösningar, på rätt plats, i filen `answer.js`.
 
-3. Testkör din labb genom att köra kommandot `babel-node me/kmom04/node1/answer.js`.
+3. Testkör din labb genom att köra kommandot `babel-node answer.js`.
 
 4. Ladda upp, validera och publicera labben genom att göra följande kommando i kurskatalogen i terminalen.
 
