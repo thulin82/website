@@ -154,7 +154,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 ```
 
-Nuså. Beroende på vad man vill göra, behöver man importera olika moduler från "sqlalchemy". Då vi ska gå igenom en del så väljer jag att importera allt (\*).
+Nuså. Beroende på vad man vill göra, behöver man importera olika moduler från "sqlalchemy".
 
 
 
