@@ -115,6 +115,13 @@ class Cars(Base):
     price = Column(Float)
     country = Column(String)
     manufacturer = Column(String)
+    
+    def __init__(self, model, price, country, manufacturer):
+        """ init method """
+        self.model = model
+        self.price = price
+        self.country = country
+        self.manufacturer = manufacturer
 
     def __str__(self):
         return "Model: {m}, Price: {p}, Country: {c}, Manufacturer: {ma}".format(m=self.model, p=self.price, c=self.country, ma=self.manufacturer)
@@ -137,7 +144,7 @@ main.py:
 
 """ Test SQLAlchemy """
 
-from sqlalchemy import *
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from cars import Cars
 
@@ -160,7 +167,7 @@ För att lägga till rader i tabellen, skapar vi ett nytt objekt av klassen "Car
 
 """ Test SQLAlchemy """
 
-from sqlalchemy import *
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from cars import Cars
 
