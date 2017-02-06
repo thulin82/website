@@ -1,11 +1,11 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Updated flask structure.
-    "2016-06-09": (PA, aar) Pre-release.
-    "2016-06-01": (PA, lew) Pre-release.
-    "2016-05-25": (PA, aar) Pre-release.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2016-12-16": (B, lew) Updated flask structure.
+    "2016-06-09": (A, aar) Fler ändringar.
+    "2016-06-01": (A, lew) Ändrade något.
+    "2016-05-25": (A, aar) wow such change.
+    "2016-04-12": (A, lew) Första utgåva.
 category:
     - oopython
 ...
@@ -82,11 +82,11 @@ Om du känner att du har tid och lust.
 
 Genomför följande övning för att träna dig.
 
-1. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".
+1. Läs igenom artikeln "[Rekursion](kunskap/rekursion)".
 
-2. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".  
+2. Läs igenom artikeln "[Klassiska sorteringsalgoritmer](kunskap/sorteringsalgoritmer)".
 
-3. Läs igenom artikeln "[Rekursion](kunskap/rekursion)".
+3. Läs igenom artikeln "[Datastrukturer](kunskap/datastrukturer)".
 
 
 
