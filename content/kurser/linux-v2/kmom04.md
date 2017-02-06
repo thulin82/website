@@ -82,6 +82,8 @@ Titta på följande:
 
 1. Följ gärna med i forumtråden [Functional Programming](https://dbwebb.se/forum/viewtopic.php?f=36&t=5980) där funktionell programmering diskuteras i allmänhet.
 
+1. I boken [Exploring ES6](kunskap/boken-exploring-es6) handlar kapitel 15 om klasser och kapitel 16 om moduler, två goda sätt att strukturera sin kod i ES6.
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
