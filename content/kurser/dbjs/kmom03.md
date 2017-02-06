@@ -10,26 +10,17 @@ Kmom03: JavaScript server
 Kursmomentet är under utveckling och blir tillgängligt **senast den 13/2-2017**.
 [/WARNING]
 
-JavaScript med nodejs.
+Vi vill nu ha kodning på serversidan och där har vi valt Node.js och JavaScript.  JavaScript på serversidan använder en intressant programmeringmodell med asynkron och eventbaserad hantering. På samma sätt som det fungerar i webbläsaren. Node.js erbjuder också ett flertal API när vi vill jobba med operativsystemets delar som filer och processer.
 
-Klienter som kopplar sig till databasen.
+Så, vi behöver starta med att installera Node.js på servern och komma igång med hur Node.js fungerar. Vi kör på med några övningar och sedan ser vi hur man byggger upp en enkel webbserver, eller webbtjänst, med Node.js. Vi närmar oss ett gränsland där webbservern blir till en webbtjänst. Det blir tydligt i hur vi använder Node.js för att skapa kod som både hanterar webbservern som sådan och lägger till tjänster som utförs av JavaScript-funktioner.
 
-Databasen MySQL.
+När vi fått ordning på Node.js och en enkel server så börjar vi koppla upp oss mot databasen. Vi fortsätter med SQLite ett tag till.
 
-Då går vi vidare till databasen MySQL och dess olika klienter samt en introduktion i frågespråket SQL. Du får jobba igenom en övning i SQL som tar dig från de enklare konstruktionerna till svårare saker som subqueries och `RIGHT/LEFT OUTER JOIN`. Innan den övningen så har du bekantat dig med MySQL, både i din egna utvecklingsmiljö och i BTH's labbmiljö.
+[ASCIINEMA src=24691]
 
-Du får pröva att använda tre olika klienter till MySQL, alla tre har sin plats och som webbprogrammerare behöver du kunna använda alla klienterna, vid olika tillfällen.
+[ASCIINEMA src=22554]
 
-[FIGURE src=/image/snapshot/mamp-mysql-clu-test.jpg?w=w1&q=60 caption="SQL i en textbaserad klient."]
 
-[FIGURE src=/image/snapshot/wamp-phpmyadmin.png?w=w1&sa=jpg&q=60 caption="SQL i en webbaserad klient."]
-
-[FIGURE src=/image/snapshot/sql-ovning-alter-table.jpg?w=w1&q=60 caption="SQL som det ser ut i desktop-klienten MySQL WorkBench."]
-
-<!--more-->
-<!--
-[FIGURE src=/image/snapht15/linux-what-now.png?w=w2 caption="Okey, terminalen, och nu då?"]
--->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **40 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -46,11 +37,14 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 28: Introduktion till MySQL
+    * Kap 20: SQL inuti ett program
 
-Viss information finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 3.
+1. Läsanvisning Javascript. (array/objekt)
 
-1. Läsanvisning Javascript.
+1. [Exploring ES6](kunskap/boken-exploring-es6). Läs inledande kapitlet för att få en grov känsla av ES6 kontra ES5.
+    * Ch 1: About ECMAScript 6 (ES6)
+    * Ch 2: FAQ: ECMAScript 6
+
 
 
 
@@ -70,25 +64,28 @@ Det finns inga videoförslag.
 
 Kika på följande lästips om du finner dem intressanta.
 
-1. [Databasteknik](kunskap/boken-databasteknik)
-    * Kap 20: SQL inuti ett program
+1. Titta översiktligt på de [nya konstruktionerna i JavaScript ECMA6](https://github.com/lukehoban/es6features/blob/master/README.md).
+
+1. Titta översiktligt på [Babel](https://babeljs.io/) som är en JavaScript till JavaScript kompilator som stödjer ECMA6.
+
+1. I boken [Exploring ES6](kunskap/boken-exploring-es6) handlar kapitel 15 om klasser och kapitel 16 om moduler, två goda sätt att strukturera sin kod i ES6.
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 6-10 studietimmar)*
+*(ca: 20-30 studietimmar)*
 
 
 
-###Labbmiljö {#labbmiljo}
+###Labbmiljö
 
-Installera mer labbmiljö för kursen.
+Installera labbmiljön för nodejs delen av kursen.
 
-1. Installera labbmiljön för [Node och npm](labbmiljo/node-och-npm).
+1. [Installera nodejs och npm lokalt](kunskap/installera-node-och-npm)
 
-1. Installera [lokal utvecklingsmiljö](labbmiljo/lokal-utvecklingsmiljo) i kursrepot.
+1. [Installera babel-node lokalt](labbmiljo/babel-node)
 
 
 
@@ -96,20 +93,19 @@ Installera mer labbmiljö för kursen.
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden "[Kom igång med Node.js (på Debian)](https://dbwebb.se/kunskap/kom-igang-med-node-js-pa-debian)".
+1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
+
+1. Jobba igenom artikeln "[Skicka environment variabler till Bash och Node.js ](kunskap/skicka-environment-variabler-till-bash-och-node-js)".
+
+1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
+
 
 1. nodejs mot sqlite.
 
-1. Läs igenom övningen ""[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)".
 
 
 <hr>
 
-1. Jobba igenom guiden ["Kom igång med databasen MySQL och dess klienter"](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter). Som webbutvecklare behöver du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar.
-
-1. Bekanta dig med ["BTH's labbmiljö för databasen MySQL"](kunskap/bth-s-labbmiljo-for-databasen-mysql). Se till att du kan använda BTH's databasserver för MySQL, använd de olika klienterna för att koppla upp dig.
-
-1. Jobba igenom övningen ["Kom igång med SQL"](uppgift/kom-igang-med-sql). Lär dig grunderna i SQL, och lite till.
 
 
 
@@ -118,27 +114,31 @@ Genomför följande övningar.
 Dessa uppgifter skall utföras och redovisas.
 
 
-1. nodejs labb (linux lab3 variant)?
-1. nodejs labb (linux lab4 variant)?
-
-<hr>
-
 1. Gör laborationen "[Lab 2 SQL XXX](uppgift/lab-2-sql-XXX)" som låter dig träna på...
 
-1. Gör laborationen "[Lab 3 SQL XXX](uppgift/lab-3-sql-XXX)" som låter dig träna på ...
+1. Gör laborationen [Node 1](uppgift/linux-lab3-introduktion-till-nodejs) för att öva på grunderna i nodejs.
 
-<hr>
+1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
 
-1. nodejs som kommandoradsklient
-1. nodejs som webbklient
-1. Gör uppgiften nodejs enkelt program som använder sqlite.
-1. _(Klient som bygger vidare på lab 1 jetty)_
+1. nodejs som webbklient mot SQLite
 
 
 
 ###Extra {#extra}
 
-Det finns inga extra uppgifter.
+Gör följande extrauppgifter om du har tid och lust.
+
+1. Jobba igenom guiden "[Kom igång med tmux och terminalen](kunskap/kom-igang-med-tmux-och-terminalen)" för att lära dig hur du jobbar mer effektivt i terminalen med tmux.
+
+<!--
+Fortsätt träna på JavaScript i webbläsaren.
+
+1. Gör uppgiften "[JavaScript och arrayer](uppgift/javascript-och-arrayer)".
+
+2. Gör uppgiften "[JavaScript med objekt](uppgift/javascript-och-objekt)".
+
+3. Gör uppgiften "[Rita flaggor med JavaScript och objekt](uppgift/gor-svenska-flaggan-med-javascript-och-objekt)".
+-->
 
 
 
@@ -151,4 +151,6 @@ Läs [instruktionen om hur du skall redovisa](kurser/dbjs/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* ...
+* Är detta den första bekantskap med JavaScript på serversidan och Node.js?
+* Hur känns det att koda JavaScript på serversidan med Node.js?
+* Fanns det något som var extra utmanande elelr någon större svårighet i detta kursmomentet?
