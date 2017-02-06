@@ -1,13 +1,13 @@
 ---
 author: mos
-category: javascript
+category:
+    - javascript
+    - nodejs
 revision:
     "2016-07-04": (D, mos) Default port skall vara 1337 och la till exempel om hur servern dödas med pid.
     "2015-10-16": (C, mos) Lade till krav på servern om LINUX_PORT och klienten om LINUX_PORT + LINUX_SERVER samt krav om att servern skall skriva sitt pid till fil.
     "2015-09-24": (B, mos) Tog bort det andra kommandot date i 1.5.
     "2015-08-13": (A, mos) Första utgåvan i samband med kursen linux.
-updated: "2015-10-16 10:51:52"
-created: "2015-08-12 10:54:21"
 ...
 Skapa en RESTful HTTP-server med Node.js och klient i Bash
 ==================================
@@ -113,7 +113,9 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-Det finns ingen extrauppgift.
+Gör följande extrauppgifter för att träna mer.
+
+1. Se till att du använder moduler för att organisera din kod. Du kan lägga dina route callbacks i en egen modul och du kan flytta utility funktioner till en egen modul (de som hanterar enrironmentvariabler och skriver pid till fil).
 
 
 
