@@ -1,10 +1,12 @@
 ---
 author: mos
-category: webbprogrammering
+category:
+    - linux
+    - javascript
+    - nodejs
 revision:
-  "2015-10-16": (A, mos) Första utgåvan i kursen linux.
-updated: "2015-10-16 14:28:36"
-created: "2015-10-16 14:28:34"
+    "2017-02-06": (B, mos) Uppdaterat exempelprogram och används även i dbjs-kursen, inklusive fånga signaler och Cygwin specifikt.
+    "2015-10-16": (A, mos) Första utgåvan i kursen linux.
 ...
 Spara serverns processid i en fil
 ==================================
@@ -22,7 +24,11 @@ Låt oss se hur vi kan skicka signaler till servern för att stänga ned den och
 Förutsättning {#pre}
 --------------------------------------
 
-Följande artikel förutsätter att du kör på en Unix-maskin, Linux eller Mac OS. Du kan köra vissa delar av artikeln via Cygwin på en Windows-maskin.
+Följande artikel förutsätter att du kör på en Unix-maskin, Linux eller Mac OS. Du kan köra vissa delar av artikeln via Cygwin på en Windows-maskin, det finns noterat när du behöver göra annorlunda.
+
+I slutet av artikeln visas en sammanfattning i hur du gör motsvarande ps och kill på Cygwin och Windows.
+
+Artikeln bygger delvis på ett exempel som du återfinner i ditt kursrepo (linux, dbjs) under `example/nodejs/saveProcessId`.
 
 
 
@@ -51,12 +57,12 @@ PID TTY          TIME CMD
 30546 pts/25   00:00:00 bash
 30547 pts/25   00:00:00 sleep
 30548 pts/25   00:00:00 ps
-$ ps -aux | grep 30547                     
+$ ps aux | grep 30547
 mos      30547  0.0  0.0   7488  1404 pts/25   S    16:40   0:00 sleep 50
 mos      30564  0.0  0.0  14384  1704 pts/25   S+   16:41   0:00 grep --color=auto 30547
 ```
 
-Med kommandot `ps` kunde jag nu se processen i processtabellen.
+Med kommandot `ps` kunde jag nu se processen i processtabellen. Du kan använda olika switchar till kommandot ps. Till exempel `ps -H` för att visa en trädstruktur över familjeförhållanden mellan processer. Men kommandot tar olika switchar beroende på vilket system du är, så kolla man-sidan för att se vad just ditt system, stödjer.
 
 
 
@@ -65,10 +71,10 @@ Skicka signaler till en process {#kill}
 
 När en process körs i bakgrunden så behövs ett sätt att kommunicera med den, och stänga ned den. Ett sådant sätt är kommandot `kill` som kan skicka en signal till en process via processens id.
 
-Det finns många olika signaler och vi skall inte gå in på dem här. 
+Det finns många olika signaler och vi skall inte gå in på dem här. Men låt oss ändå kika på en översikt.
 
 ```bash
-$ kill -l                      
+$ kill -l
  1) SIGHUP       2) SIGINT       3) SIGQUIT      4) SIGILL       5) SIGTRAP    
  6) SIGABRT      7) SIGBUS       8) SIGFPE       9) SIGKILL     10) SIGUSR1    
 11) SIGSEGV     12) SIGUSR2     13) SIGPIPE     14) SIGALRM     15) SIGTERM    
@@ -89,7 +95,7 @@ Ett vanligt sätt för en server att hantera en signal kan vara att läsa om sin
 Men, vi skall hålla det enkelt. Allt vi vill göra är att ha en möjlighet att döda servern. Så här.
 
 ```bash
-$ sleep 50 &
+$ sleep 60 &
 [1] 31060
 $ kill 31060
 [1]+  Terminated              sleep 60 
@@ -102,32 +108,36 @@ $ kill -9 31060
 [1]+  Killed                  sleep 60  
 ```
 
+Att göra `kill -9 PID` är det mest brutala sättet att stänga ned en process på. Vill du vara snällare så börjar du med `kill PID` där PID är processens id.
+
 
 
 Processid för en Node.js server {#pid}
 --------------------------------------
 
-Jag tar och gör ett litet exempelprogram i Node.js som tar reda på det process id som programmet får. Värdet på processens id finns i variabeln [`process.pid`](https://nodejs.org/api/process.html#process_process_pid).
+Jag tar och gör ett litet exempelprogram `saveProcessId` i Node.js som tar reda på det process id som programmet får. Värdet på processens id finns i variabeln [`process.pid`](https://nodejs.org/api/process.html#process_process_pid).
 
 ```bash
 $ babel-node index.js
 Simple server listen on port 1337 with process id 31410
 ```
 
-Låt säga att jag nu vill skicka processen till bakgrunden istället, jag vill också samla alla utskrifter från processen till en loggfil. Så här.
+Låt säga att jag nu vill skicka processen till bakgrunden istället. Så här.
 
 ```bash
-$ babel-node index.js &> log &
-[1] 31576
+$ babel-node index.js &
+[1] 28975
+Simple server listen on port 1337 with process id 28981
+Wrote process id to file 'pid'
 ```
 
-Nu kan jag skicka en signal till processen via `kill`.
+Var uppmärksam på att det är två olika processid som visas, det är det som skrivs till filen `pid` som du vill använda, i detta fallet 28981.
+
+Nu kan jag skicka en signal till processen via `kill` (Cygwin: `/bin/kill -f`).
 
 ```bash
-$ kill 31576
-[1]+  Terminated              babel-node index.js &> log
-$ cat log
-Simple server listen on port 1337 with process id 31581
+$ kill 28981
+Caught SIGTERM. Removing pid-file and will then exit.
 ```
 
 Bra, nu kan jag kommunicera med processen, även om jag lägger den i bakgrunden.
@@ -146,57 +156,110 @@ Då vet man att processen är borta. Men vad händer om jag startar upp servern 
 Min port är upptagen? {#port}
 --------------------------------------
 
-Jag startar servern igen.
+Jag startar servern igen (trots att jag redan har en server startad som jag "glömt bort").
 
 ```bash
 $ babel-node index.js
 Simple server listen on port 1337 with process id 32569
-events.js:141                                          
-      throw er; // Unhandled 'error' event             
-      ^                                                
-                                                       
-Error: listen EADDRINUSE :::1337                       
+events.js:141
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::1337
 ```
 
 Det gick ju inte. Krash. Någon lyssnar på porten? Hmm.
 
-Jag kan köra `ps` för att se.
+Låt mig visa hur det fungerar.
 
-```bash
-$ ps
-  PID TTY          TIME CMD                         
-22338 pts/25   00:00:00 bash                        
-32417 pts/25   00:00:00 nodejs                      
-32634 pts/25   00:00:00 ps                          
-```
-
-Se där, där ligger en process som körs via `nodejs`.
-
-Här är ett annat sätt att hitta vilken process som blockerar en viss port.
-
-```bash
-$ netstat -an --tcp --program | grep 1337    
-(Not all processes could be identified, non-owned process info
- will not be shown, you would have to be root to see it all.)
- tcp6    0      0 :::1337    :::*  LISTEN   32417/nodejs
-```
-
-Om man vet vilken port man vill titta på, och det gör vi, så kan vi se vilken process som lyssnar på den. Där får vi fram samma pid (32417) som vi fick via kommandot ps. Låt oss döda processen och starta om vår server.
+Vi startar från början och låtsas att inget har hänt, porten är ledig.
 
 ```bash
 $ babel-node index.js &
-[1] 315
-Simple server listen on port 1337 with process id 320
+[1] 29367
+Simple server listen on port 1337 with process id 29373
+Wrote process id to file 'pid'
 ```
 
-Vi ser nu tydligt att det är två olika pid. Det som visas när vi kör babel-node och det som visas från själva servern. Vi kan gissa att babel-node körs och i sin tur startar upp nodejs med den transpilerade koden. Det är alltså det andra pid:et som skrivs ut av servern själv som är det pid som allokerat porten.
+Låt nu se vilken process som blockar porten 1337. Vi använder kommandot `netstat` (Cygwin: `netstat -a -o | grep 1337`).
+
+```bash
+$ netstat -an --tcp --program | grep 1337
+tcp6  0   0 :::1337    :::*     LISTEN      29373/nodejs
+```
+
+I slutet av raden ser vi namnet på processen och vilket PID den har, 29373 i detta fallet.
+
+Det är samma PID som ligger i filen `pid` och med det kan vi döda processen.
+
+```bash
+$ cat saveProcessId/pid
+29373
+$ kill 29373
+Caught SIGTERM. Removing pid-file and will then exit.
+[1]+  Done                    babel-node saveProcessId/index.js
+```
+
+Bra, då vet vi att vi kan använda `netstat` för att se vilken process som körs på en viss port.
+
+
+
+Funkar det på Cygwin? {#cygwin}
+--------------------------------------
+
+Jajamensan, det fungerar på Cygwin om du använder de varianter jag visat. Men låt oss ta en snabb repetition för hur det fungerar på Cygwin som är delvis Unix och delvis Windows.
+
+```bash
+$ babel-node index.js &
+[1] 3348
+Simple server listen on port 1337 with process id 6392
+Wrote process id to file 'pid'
+```
+
+Notera att det är två processid som vanligt. Det som är lite udda här är att det första är från Cygwin och det andra är en process i Windows.
+
+Den första processen hittar du som vanligt med `ps`.
+
+```bash
+$ ps | grep 3348
+     3348  4924  3348   5544  cons0   197609 17:34:35 /usr/bin/sh
+     5760  3348  3348   6460  cons0   197609 17:34:35 /cygdrive/c/Program Files/nodejs/node
+```
+
+Den andra processen hittar du som en process i Windows via `ps -W`.
+
+```bash
+$ ps -W | grep 6392
+     6392   0   0  6392  ?  0 17:34:36 C:\Program Files\nodejs\node.exe
+```
+
+Den första processen kan du döda med `kill` som vanligt eftersom den är en process i Cygwin. 
+
+Men, den andra behöver du troligen döda med `/bin/kill -f`. Den varianten av kill kommer att försöka döda processen som en windows process.
+
+```text
+$ /bin/kill --help
+  -f, --force  force, using win32 interface if necessary
+```
+
+För att kontrollera vilken process som kör på en viss port så använder vi `netstat`.
+
+```bash
+$ netstat -a -o | grep 1337
+  TCP    0.0.0.0:1337           DESKTOP-C3SVUSV:0      LISTENING       6392
+  TCP    [::]:1337              DESKTOP-C3SVUSV:0      LISTENING       6392
+```
+
+Eftersom Node.js är (troligen) installerat via Windows och inte Cygwin, så är det en process i Windows som vi behöver döda, alltså använder vi `/bin/kill -f`.
 
 
 
 Spara processid i en fil {#fil}
 --------------------------------------
 
-Jag utökar nu mitt exempelprogram i Node.js med att skriva processens id till en fil. Det är bra om man har ett externt skript eller liknande som skall skicka signaler till servern.
+Låt oss prata lite om exempelprogrammet `saveProcessId` som vi använt för våra tester.
+
+Jag har utökat det med att skriva processens id till en fil. Det är bra om man har ett externt skript eller liknande som skall skicka signaler till servern.
 
 För att ta ett jämförande exempel så sparar webbservern Apache sitt pid i en fil i `/run/apache2/apache2.pid` (på Debian, det skiljer mellan system) för att externa tjänster skall kunna kommunicera med processen via dess pid.
 
@@ -208,47 +271,82 @@ $ cat /run/apache2/apache2.pid
 Jag tar mitt exempelprogram som nu ser ut så här. Att skriva till fil görs med [modulen fs](https://nodejs.org/docs/latest/api/fs.html).
 
 ```javascript
-var fs = require('fs');
-import server from './server.js';
+import server from "./server.js";
+
+const path = require('path');
+const fs = require("fs");
 
 // Start the server to listen on a port
 server.listen(1337);
 
-fs.writeFile("pid", process.pid, function(err) {
-    if(err) {
+// Write pid to file
+var pidFile = path.join(__dirname, "pid");
+fs.writeFile(pidFile, process.pid, function(err) {
+    if (err) {
         return console.log(err);
     }
 
     console.log("Wrote process id to file 'pid'");
-}); 
+});
 
 console.log("Simple server listen on port 1337 with process id " + process.pid);
-```
-
-Så här ser det ut om jag startar det i bakgrunden.
-
-```bash
-$ babel-node index.js &> log &
-[1] 510
-$ cat pid
-515
-$ kill 515
-[1]+  Terminated              babel-node index.js &> log
 ```
 
 Perfekt. Nu sparar vi alltså processens pid till en fil och det gör det enkelt att komma åt den om vi vill skicka en signal till den.
 
 
 
+Fånga en signal och radera pid-filen {#sigterm}
+--------------------------------------
+
+Nu när jag skapar en pid-fil så vore det ju bra om jag städade bort den när processen stängs ned. Ett sätt att göra det är att hantera signalen som skickas till node-processen.
+
+Med node är det enkelt att fånga en signal. Här ser du hur man lägger till en callback som anropas när en viss signal tas emot av processen.
+
+```javascript
+/**
+ * Listen on SIGINT, SIGTERM
+ */
+function controlledShutdown(signal) {
+    console.warn(`Caught ${signal}. Removing pid-file and will then exit.`);
+    fs.unlinkSync(pidFile);
+    process.exit();
+}
+
+// Add event handlers for signals
+process.on("SIGTERM", () => { controlledShutdown("SIGTERM"); });
+process.on("SIGINT", () => { controlledShutdown("SIGINT"); });
+```
+
+Detta fungerar som tänkt på en Unix-plattform. Man kan både avbryta processen med `CTRL-C` och genom att skicka en signal till processen med `kill`. Resultatet blir att processen stängs ned och filen plockas bort. 
+
+Defaultsignalen som skickas med kill är `SIGTERM`.
+
+Men på Windows finns ett annat sätt att hantera vissa signaler så här kan det behövas lite mer handpåläggning. Följande löser så att signalen för `CTRL_C` fungerar.
+
+```javascript
+// Handle WIN32 signals in a specific mode
+if (process.platform === "win32") {
+    var rl = require("readline").createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    rl.on("SIGINT", function () {
+        process.emit("SIGINT");
+    });
+}
+```
+
+Som synes så blir det lite handpåläggning för att få signalhanteringen att fungera med Windows. Men det är ju i grund och botten två helt skilda operativsystem, Windows och Unix, så det är ju inte så konstigt. 
+
+Se det som ett exempel på hur man kan skriva plattformsspecifik kod i Node.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Du hittar mina exempelprogram i kursrepot under [`example/nodejs/saveProcessId`](https://github.com/mosbth/linux/blob/master/example/nodejs/saveProcessId/index.js).
+Nu har du lärt dig hur du hittar och kan använda dig av processens pid. Det är bra att ha allmän koll på detta när man jobbar med servrar.
 
-Nu har du lärt dig hur du hittar och kan använda dig av processens pid. Det är bra att ah koll på detta när man jobbar med servrar.
-
-Har du frågor så vänder du dig till [forumet](forum/).
-
-
-
-
+Artikeln har en [egen tråd i forumet](t/6200) där du kan fråga eller ge tips, relaterat till denna artikel.
