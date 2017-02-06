@@ -7,7 +7,7 @@ Babel är en transpiler som kan transpilera kod från till exempel ES6 till ES5.
 
 Vi ska använda en variant av Babel som heter `babel-node`. Det är en wrapper som dels transpilerar från ECMA6 och dels kör den transpilerade koden i Node.js. Vi behöver alltså bara ett kommando för att köra ett skript i ES6.
 
-Du kan [läsa mer om babel-cli (babel-node)](https://babeljs.io/docs/usage/cli/) på deras documentationssida.
+Du kan [läsa mer om babel-cli (babel-node)](https://babeljs.io/docs/usage/cli/) på deras dokumentationssida.
 
 
 
@@ -91,11 +91,11 @@ Du startar alltså servern med följande kommando.
 babel-node index.js
 ```
 
-För att skicka en request till servern så gör du en vanlig access till den, precis som en webbsida. Antingen med din webbläsare eller via kommandoraden.
+För att skicka en request till servern så gör du en vanlig access till den, precis som en webbsida. Antingen med din webbläsare eller via kommandoraden (i en nytt terminalfönster).
 
 ```text
 curl http://localhost:1337/hej
-``` 
+```
 
 
 
