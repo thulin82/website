@@ -4,6 +4,7 @@ category:
     - javascript
     - nodejs
 revision:
+    "2017-02-06": (E, mos) Extrauppgift om bättre kodstruktur.
     "2016-07-04": (D, mos) Default port skall vara 1337 och la till exempel om hur servern dödas med pid.
     "2015-10-16": (C, mos) Lade till krav på servern om LINUX_PORT och klienten om LINUX_PORT + LINUX_SERVER samt krav om att servern skall skriva sitt pid till fil.
     "2015-09-24": (B, mos) Tog bort det andra kommandot date i 1.5.
