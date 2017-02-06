@@ -116,7 +116,7 @@ Extrauppgift {#extra}
 
 Gör följande extrauppgifter för att träna mer.
 
-1. Se till att du använder moduler för att organisera din kod. Du kan lägga dina route callbacks i en egen modul och du kan flytta utility funktioner till en egen modul (de som hanterar enrironmentvariabler och skriver pid till fil).
+1. Se till att du använder moduler för att organisera din JavaScript-kod. Du kan lägga dina route callbacks i en egen modul och du kan flytta utility funktioner till en egen modul (de som hanterar environmentvariabler och skriver pid till fil).
 
 
 
