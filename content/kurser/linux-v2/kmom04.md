@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-02-06": (G, mos) Tydligare läsanvisning om ES6.
     "2017-02-02": (F, mos) In med lokal installation av node, npm och babel, åter in med debian node artikeln.
     "2017-01-27": (E, efo,mos) Bort installation debian node.
     "2016-12-21": (D, efo) Ändring av länk till ny nodejs lab.
@@ -51,9 +52,9 @@ Läs följande:
 
 1. Bekanta dig med npm genom att besöka [dess webbplats](https://www.npmjs.com/) och kika snabbt på dess [dokumentation](https://docs.npmjs.com/).
 
-1. Kika översiktligt i boken som ger en introduktion till ES6, för dig som redan kan ES5.
-
-    * [Boken: Exploring ES6](kunskap/boken-exploring-es6)
+1. [Exploring ES6](kunskap/boken-exploring-es6). Läs inledande kapitlet för att få en grov känsla av ES6 kontra ES5. Använd därefter boken som referens för nya ES6-konstruktioner.
+    * Ch 1: About ECMAScript 6 (ES6)
+    * Ch 2: FAQ: ECMAScript 6
 
 
 
