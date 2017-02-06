@@ -48,11 +48,15 @@ Installera babel preset {#preset}
 
 Babel har ett antal [presets där es2015 (ES6)](https://babeljs.io/docs/plugins/preset-es2015/) är en av dem. Dessa presets bestämmer hur koden transpileras och vilka konstruktioner som stöds.
 
+
+
+###Installera preset es2015 {#es2015}
+
 Man behöver installera de presets man använder.
 
-Låt oss ta ett exempel tillsammans med kursen linux. Där använder vi es2015.
+Låt oss ta ett exempel tillsammans med kursen linux (eller dbjs). Där använder vi es2015.
 
-Dels finns i kursrepot en konfigfil `.babelrc` som säger vilka presets vi använder.
+Dels finns i kursrepot en konfigurationsfil `.babelrc` som säger vilka presets vi använder.
 
 ```json
 {
@@ -60,9 +64,9 @@ Dels finns i kursrepot en konfigfil `.babelrc` som säger vilka presets vi anvä
 }
 ```
 
-Då behöver vi också installere den babel-modul som stödjer den preseten.
+Vi behöver installera en babel-modul som stödjer den preseten vi vill använda.
 
-Det gör vi i rooten av kursrepot, i samma katalog där `babelrc` ligger.
+Det gör vi i rooten av kursrepot, i samma katalog där `.babelrc` ligger.
 
 ```text
 # Gå till roten av kursrepot
@@ -71,7 +75,28 @@ npm install babel-preset-es2015
 
 Bra, nu kan vi köra `babel-node` i alla underkataloger till kursrepot och dra nytta av konfigfilen och dess preset.
 
+
+
+###Testa preset 2015 {#testes2015}
+
 Pröva att gå till kursrepot och in till exempelprogrammet `example/nodejs/simpleServer` och starta den med babel-node. Om det går bra så har du en korrekt miljö.
+
+Så här kan det se ut när du kör exempelprogrammet.
+
+[ASCIINEMA src=102101]
+
+Du startar alltså servern med följande kommando.
+
+```text
+babel-node index.js
+```
+
+För att skicka en request till servern så gör du en vanlig access till den, precis som en webbsida. Antingen med din webbläsare eller via kommandoraden.
+
+```text
+curl http://localhost:1337/hej
+``` 
+
 
 
 Avslutningsvis {#avslutning}
