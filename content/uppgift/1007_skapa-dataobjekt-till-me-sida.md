@@ -34,15 +34,6 @@ Krav {#krav}
 
 
 
-<!-- Kopiera din me-sida från föregående kursmoment och utgå från den koden.
-
-```bash
-# Ställ dig i kurskatalogen
-cd me
-cp -ri kmom02/flask2/ kmom03/flask3/
-cd kmom03/flask3
-``` -->  
-
 Färdig? Bra. Då kan vi fortsätta i mappen me/flask:  
 
 1. Skapa filen "data.py", vilken ska innehålla din dataklass.
