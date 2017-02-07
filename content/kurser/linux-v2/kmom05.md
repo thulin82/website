@@ -113,6 +113,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/linux-v2/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
+* Hur kändes det att bekanta sig med inbyggda nodejs moduler?
 * Är du bekant med JSON API sedan tidigare?
 * Hur kändes det att skriva ett litet större bash-skript? Var det något som var mer eller mindre utmanande och tidskrävande?
 * Kikade du på källkoden till maze-servern? Har du några reflektioner kring den?
