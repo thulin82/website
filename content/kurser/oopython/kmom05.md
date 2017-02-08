@@ -58,7 +58,18 @@ Det finns inga extra artiklar.
 
 Titta på följande:
 
-Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
+1. Videoserien [Lär dig objektorienterad Python](https://www.youtube.com/playlist?list=PLKtP9l5q3ce8cmKXE9Gw1Ra0GaYufGbN7) är tätt kopplat till kursmaterialet. Kika på de videor som börjar med 5.
+
+2. [What on Earth is Recursion?](https://www.youtube.com/watch?v=Mv9NEXX1VHc) förklarar rekursion.
+
+3. [Getting sorted](https://www.youtube.com/watch?v=kgBjXUE_Nwc) visualiserar olika sorteringsalgoritmer och går igenom komplexitet.
+
+4. [Quick Sort](https://www.youtube.com/watch?kgBjXUE_Nwc&v=XE4VP_8Y0BU) visualiserar quick sort.
+
+5. [Data Structures: Queue](https://www.youtube.com/watch?v=PjQdvpWfCmE) visualiserar en Queue.
+
+6. [Data Structures: Stack](https://www.youtube.com/watch?v=XSdXSmwb550) visualiserar en Stack.
+
 
 
 ###Lästips {#lastips}
@@ -67,7 +78,9 @@ Om du känner att du har tid och lust.
 
 1. [Datastructures - geeksforgeeks](http://www.geeksforgeeks.org/data-structures/)  
 
-2. [Sorting algoritms - geeksforgeeks](http://www.geeksforgeeks.org/fundamentals-of-algorithms/#SearchingandSorting)  
+2. [Sorting algoritms - geeksforgeeks](http://www.geeksforgeeks.org/fundamentals-of-algorithms/#SearchingandSorting)
+
+3. Kolla på [Abstract Data Type (ADT)](https://www.youtube.com/watch?v=HcxqzYsiJ3k)
 
 
 
