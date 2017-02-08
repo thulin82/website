@@ -47,8 +47,8 @@ Skapa SQLite-filen {#skapa-sqlite-filen}
 
 I artikeln används:  
 1. cars.sqlite (databasen)  
-2. main.py (användingen av SQLAlchemy och klassen Cars)  
-3. cars.py (klassen Cars som mappas mot databas-tabellen)  
+2. main.py (användingen av SQLAlchemy och klassen Car)  
+3. car.py (klassen Car som mappas mot databas-tabellen)  
 
 [FIGURE src=/image/oopython/kmom04/tree_sqlalchemy.png]
 
@@ -87,7 +87,7 @@ Mappa en tabell till en klass {#mappa-tabell-till-en-klass}
 
 Tack vare att vi mappar tabellen till en klass kan vi arbeta mer objektorienterat och vi slipper de långa SQL-satserna. Tanken är att skapa en klass utifrån en bas-klass i SQLAlchemy som innehåller färdig information om hur den ska mappas. Vi behöver importera ett par moduler för att få det att fungera.  
 
-cars.py:
+car.py:
 
 ```python
 #!/usr/bin/env python3
@@ -107,7 +107,7 @@ Sedan skapar vi vår klass utifrån declarative_base:
 
 Base = declarative_base()
 
-class Cars(Base):
+class Car(Base):
     __tablename__ = "cars"
 
     id = Column(Integer, primary_key=True)
@@ -146,7 +146,7 @@ main.py:
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from cars import Cars
+from car import Car
 
 engine = create_engine("sqlite:///db/cars.sqlite")
 
@@ -160,7 +160,7 @@ Nuså. Beroende på vad man vill göra, behöver man importera olika moduler fr�
 
 ###Lägga till i tabellen {#lagga-till-i-tabellen}
 
-För att lägga till rader i tabellen, skapar vi ett nytt objekt av klassen "Cars":
+För att lägga till rader i tabellen, skapar vi ett nytt objekt av klassen "Car":
 
 ```python
 #!/usr/bin/env python3
@@ -169,15 +169,15 @@ För att lägga till rader i tabellen, skapar vi ett nytt objekt av klassen "Car
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from cars import Cars
+from car import Car
 
 engine = create_engine("sqlite:///db/cars.sqlite")
 
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Skapa ett objekt att lägga till utifrån klassen Cars
-aCar = Cars(model="v40", price=150000, country="Sweden", manufacturer="Volvo")
+# Skapa ett objekt att lägga till utifrån klassen Car
+aCar = Car(model="v40", price=150000, country="Sweden", manufacturer="Volvo")
 
 # Lägg till i sessionen
 session.add(aCar)
@@ -195,7 +195,7 @@ session.add_all([ obj1, obj2, obj3, ... ])
 Det är inte förrän en `commit()` görs som datan faktiskt läggs in. Med `session.new` kan man se vilka operationer som är avvaktande, "pending":
 
 ```bash
->>> bCar = Cars(model="Corsa", price=56000, country="Germany", manufacturer="Opel")
+>>> bCar = Car(model="Corsa", price=56000, country="Germany", manufacturer="Opel")
 
 >>> session.add(bCar)
 
@@ -230,7 +230,7 @@ Nu har vi några bilar i tabellen och vi har lärt oss hur man lägger till. Fö
 Vill vi hämta allt ställer vi en fråga till "session":
 
 ```python
->>>for row in session.query(Cars):
+>>>for row in session.query(Car):
 ...    print(row)
 
 Model: Mustang, Price: 400000.0, Country: USA, Manufacturer: Ford
@@ -244,7 +244,7 @@ Model: Corsa, Price: 56000.0, Country: Germany, Manufacturer: Opel
 Varje rad i tabellen hämtas och `__str__()`-funktionen används på dem. Vill man däremot välja vilka kolumner man vill ha anger man det i frågan:
 
 ```python
->>> for model, price in session.query(Cars.model, Cars.price):
+>>> for model, price in session.query(Car.model, Car.price):
 ...    print("Model: {mo}, Price: {p}\n".format(mo=model, p=price))
 
 Model: Mustang, Price: 400000.0
@@ -257,7 +257,7 @@ Model: Corsa, Price: 56000.0
 Det finns en funktion, `filter()`, som hjälper oss att filtrera resultatet. Låt säga att vi glömt hur ordet "Volvo" stavas och vill hämta allt, vars kolumn "manufacturer", har med "vo" att göra:
 
 ```python
->>> for row in session.query(Cars).filter(Cars.manufacturer.like("%vo%")):
+>>> for row in session.query(Car).filter(Car.manufacturer.like("%vo%")):
 ...     print(row)
 
 Model: XC60, Price: 595000.0, Country: Sweden, Manufacturer: Volvo
@@ -267,7 +267,7 @@ Model: v40, Price: 195000.0, Country: Sweden, Manufacturer: Volvo
 För att använda fler filter lägger vi bara på en `filter()` på filtret. Vi lägger på ett filter som kollar om priset är under 200.000kr:
 
 ```python
->>> for row in session.query(Cars).filter(Cars.manufacturer.like("%vo%")).filter(Cars.price < 200000):
+>>> for row in session.query(Car).filter(Car.manufacturer.like("%vo%")).filter(Car.price < 200000):
 ...    print(row)
 
 Model: v40, Price: 195000.0, Country: Sweden, Manufacturer: Volvo
@@ -284,7 +284,7 @@ Det finns en uppsättning operatorer vi kan tillgå för att förenkla våra dat
 
 and_():
 ```python
->>> for row in session.query(Cars).filter(and_(Cars.country == "Germany", Cars.manufacturer == "Mercedes")):
+>>> for row in session.query(Car).filter(and_(Car.country == "Germany", Car.manufacturer == "Mercedes")):
 ...    print(row)
 
 Model: E-Class, Price: 795000.0, Country: Germany, Manufacturer: Mercedes
@@ -292,7 +292,7 @@ Model: E-Class, Price: 795000.0, Country: Germany, Manufacturer: Mercedes
 
 or_():
 ```python
->>> for row in session.query(Cars).filter(or_(Cars.country == "Germany", Cars.country == "USA")):
+>>> for row in session.query(Car).filter(or_(Car.country == "Germany", Car.country == "USA")):
 ...    print(row)
 
 Model: Mustang, Price: 400000.0, Country: USA, Manufacturer: Ford
@@ -302,7 +302,7 @@ Model: Corsa, Price: 56000.0, Country: Germany, Manufacturer: Opel
 
 in_():
 ```python
->>> for row in session.query(Cars).filter(Cars.model.in_(["v40", "Amazon", "s60", "s40"])):
+>>> for row in session.query(Car).filter(Car.model.in_(["v40", "Amazon", "s60", "s40"])):
 ...    print(row)
 
 Model: v40, Price: 195000.0, Country: Sweden, Manufacturer: Volvo
@@ -317,7 +317,7 @@ För fler exempel, kika i [SQLAlchemys tutorial](http://docs.sqlalchemy.org/en/l
 För att ta bort rader ur tabellen använder vi oss utav `.delete()`. Vi tar bort bilen med id 2:
 
 ```python
->>> session.query(Cars).filter(Cars.id == 2).delete()
+>>> session.query(Car).filter(Car.id == 2).delete()
 >>> session.commit()
 ```
 
@@ -328,7 +328,7 @@ För att ta bort rader ur tabellen använder vi oss utav `.delete()`. Vi tar bor
 Vi kan även få tillbaka resultatet som olika datatyper. För att få det som en lista använder vi oss utav `.all()`:
 
 ```python
->>> print(session.query(Cars).filter(Cars.price > 250000).all())
+>>> print(session.query(Car).filter(Car.price > 250000).all())
 [Model: Mustang, Price: 400000.0, Country: USA, Manufacturer: Ford, Model: XC60, Price: 595000.0, Country: Sweden, Manufacturer: Volvo, Model: E-Class, Price: 795000.0, Country: Germany, Manufacturer: Mercedes]
 ```
 
