@@ -170,6 +170,8 @@ False
 Heap {#heap}
 ------------------------------
 
+Heap ingår inte direkt i kursmaterialet och återkommer inte i någon uppgift eller övning. Det är dock nyttigt att bekanta sig övergripligt med hur den fungerar. Python har en egen modul för bland annat [heap](https://docs.python.org/3.0/library/heapq.html) och [max-heap](https://pypi.python.org/pypi/heapq_max/0.21).
+
 Heap tillhör struktur-kategorin "Träd". Tänk dig en trädliknande struktur:  
 
 [FIGURE src=/image/oopython/kmom05/heap1.png caption="Max heap."]
