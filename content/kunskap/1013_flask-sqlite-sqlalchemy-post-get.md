@@ -48,14 +48,13 @@ Vi kommer använda en del egna funktioner så vi skapar en ny fil, "functions.py
 import functions as func
 ```
 
-I functions.py importerar vi det vi behöver från SQLAlchemy, Cars-klassen samt modulen "request" från flask.  
-Raden `from sqlalchemy import *` betyder att vi importerar allt från modulen:
+I functions.py importerar vi det vi behöver från SQLAlchemy, Car-klassen samt modulen "request" från flask:  
 
 ```python
 from flask import request
-from sqlalchemy import *
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from cars import Cars
+from car import Car
 ```
 
 Vi skapar också sessionen till SQLAlchemy i functions.py:
@@ -119,15 +118,15 @@ Generera tabell utifrån databasen {#generera-tabell}
 Vi skapar en funktion i "functions.py" som hämtar all data från databasen och returnerar en html-sträng som passar in i tabellens "&lt;tbody&gt;" med innehållet:  
 
 ```python
-def fixCarTable():
-    carsTable = ""
-    all_cars = session.query(Cars).all()
+def fix_car_table():
+    car_table = ""
+    all_cars = session.query(Car).all()
     for car in all_cars:
-        carsTable += """<tr><td>{id}</td><td>{model}</td>
+        car_table += """<tr><td>{id}</td><td>{model}</td>
                     <td>{price}</td><td>{country}</td>
                     <td>{manu}</td>
                     </tr>""".format(id=car.id, model=car.model, price=car.price, country=car.country, manu=car.manufacturer)
-    return carsTable
+    return car_table
 ```
 
 Funktionen har ju ett returvärde så vi skickar med den i routen till "/cars" och använder den i "cars.html":  
@@ -137,7 +136,7 @@ app.py
 ...
 
 @app.route('/cars'):
-    return render_template('cars.html', data=data, car_table=func.fixCarTable())
+    return render_template('cars.html', data=data, car_table=func.fix_car_table())
 ```
 
 cars.html  
@@ -160,16 +159,16 @@ Vi testar GET-metoden för att ta bort en rad ur databasen. Först och främst m
 
 Vi börjar med länken. I funktionen som genererar tabell-datan lägger vi till en länk som skickar med id:t i urlen:  
 ```python
-def fixCarTable():
-    carsTable = ""
-    all_cars = session.query(Cars).all()
+def fix_car_table():
+    car_table = ""
+    all_cars = session.query(Car).all()
     for car in all_cars:
-        carsTable += """<tr><td>{id}</td><td>{model}</td>
+        car_table += """<tr><td>{id}</td><td>{model}</td>
                     <td>{price}</td><td>{country}</td>
                     <td>{manu}</td>
                     <td><a href='?del={id}'>Ta bort</a></td>
                     </tr>""".format(id=car.id, model=car.model, price=car.price, country=car.country, manu=car.manufacturer)
-    return carsTable
+    return car_table
 ```
 
 Vi kan även lägga till en kolumn i cars.html:
@@ -199,23 +198,23 @@ Tack vare modulen `request` som vi importerat kan vi göra en kontroll i routen 
 @app.route('/cars', methods=["GET"])
 def show_cars():
     if request.method == "GET":
-        delThisCar = request.args.get("del")    # Här tar vi hand om parametern 'del'
-        if delThisCar != None:                  # Om den är satt...
-            func.removeCar(delThisCar)          # ...så kallar vi på en funktion som tar bort raden
+        del_this_car = request.args.get("del")    # Här tar vi hand om parametern 'del'
+        if del_this_car != None:                  # Om den är satt...
+            func.remove_car(del_this_car)         # ...så kallar vi på en funktion som tar bort raden
 
-    return render_template('cars.html', data=data, car_table=func.fixCarTable())
+    return render_template('cars.html', data=data, car_table=func.fix_car_table())
 ```
 
-Nu skickar vi id:t till funktionen "removeCar(...)". Funktionen behöver få tag på raden med korrekt id och sedan ta bort den:  
+Nu skickar vi id:t till funktionen "remove_car(...)". Funktionen behöver få tag på raden med korrekt id och sedan ta bort den:  
 
 functions.py:
 ```python
-def removeCar(delCar):
-    session.query(Cars).filter(Cars.id == delCar).delete()
+def remove_car(del_this_car):
+    session.query(Car).filter(Car.id == del_this_car).delete()
     session.commit()
 ```
 
-Routen returnerar oss tillbaka till cars.html och på vägen kallar vi på "func.fixCarTable()" som hämtar det som finns i databastabellen. Det gör att sidan laddas om med rätt innehåll.  
+Routen returnerar oss tillbaka till cars.html och på vägen kallar vi på "func.fix_car_table()" som hämtar det som finns i databastabellen. Det gör att sidan laddas om med rätt innehåll.  
 
 [FIGURE src=/image/oopython/kmom04/cars_table2.png caption="Resultatet kan se ut så här."]
 
@@ -261,23 +260,23 @@ Nu måste vi ta hand om POST-variablerna i routen. Vi måste definiera metoden i
 @app.route('/cars', methods=["POST", "GET"])
 def show_cars():
     if request.method == "POST":
-        func.showCars()
+        func.add_car()
 
     if request.method == "GET":
         # Koden för hantering av GET
 ```
 
-Vi kallar på en funktion, i detta fallet "func.showCars()". Vi hoppar till functions.py och tittar på hur den kan se ut:  
+Vi kallar på en funktion, i detta fallet "func.add_car()". Vi hoppar till functions.py och tittar på hur den kan se ut:  
 
 ```python
-def showCars():
-    newCar = Cars(
+def add_car():
+    new_car = Car(
     model=request.form["model"],
     price=request.form["price"],
     country=request.form["country"],
     manufacturer=request.form["manufacturer"])
 
-    session.add(newCar)
+    session.add(new_car)
     session.commit()
 ```
 
