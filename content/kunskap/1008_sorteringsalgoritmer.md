@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-08": (A, lew) First version.
 category:
     - oopython
 ...
@@ -52,7 +52,7 @@ def quicksort(items):
     return items
 ```
 
-Här används `//` för att returnera en integer. (Enkel division `/` kan returnera en float). Även "enumerate()" för att loopa igenom listan med hjälp av tuples (i, val).  
+Här används `//` för att returnera en integer. (Enkel division `/` kan returnera en float). Vi ser även "enumerate()" som skapar tupler av elementen i listan och möjliggör indexering till exempel (i, val).  
 
 [Quick sort dance](https://www.youtube.com/watch?v=3San3uKKHgg)
 
@@ -138,7 +138,7 @@ def merge_sort(items):
 Tidskomplexitet {#tidskomplexitet}
 ------------------------------  
 
-En sak som skiljer de olika algoritmerna åt är deras [tidskomplexitet](https://en.wikipedia.org/wiki/Time_complexity). Tidskomplexitet skriver man ut med Det kan ta ett eget kursmoment att förklara ingående vad det är och hur man räknar på det så det kommer en förklaring av grunderna.  
+En sak som skiljer de olika algoritmerna åt är deras [tidskomplexitet](https://en.wikipedia.org/wiki/Time_complexity). Tidskomplexitet kan ta ett eget kursmoment att förklara ingående vad det är och hur man räknar på det så artikeln förklarar enbart grunden.  
 
 Tänk dig tre kuber som står på golvet:  
 1. Liten: 1x1x1 meter  
