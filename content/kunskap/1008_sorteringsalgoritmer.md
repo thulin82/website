@@ -45,8 +45,8 @@ def quicksort(items):
                 else:
                     larger_items.append(val)
 
-        quick_sort(smaller_items)
-        quick_sort(larger_items)
+        quicksort(smaller_items)
+        quicksort(larger_items)
         items[:] = smaller_items + [items[pivot_index]] + larger_items
 
     return items
