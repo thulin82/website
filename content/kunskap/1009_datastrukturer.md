@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-08": (A, lew) First version.
 category:
     - oopython
 ...
@@ -14,7 +14,7 @@ Inom programmering är en 'datastruktur' en struktur för att organisera data. V
 
 <!--more-->
 
-Det finns många olika datastrukturer i olika kategorier. Vi har "Linjära datastrukturer" (Lista, Stack, Kö, etc.). En annan struktur-kategori som har en stor plats inom programmering är "Träd". De är lite mer komplexa än till exempel en Stack. Vi ska gå igenom en typ av träd, kallas "Max Heap".  
+Det finns många olika datastrukturer i olika kategorier. Vi har "Linjära datastrukturer" (Lista, Stack, Kö, etc.). En annan struktur-kategori som har en stor plats inom programmering är "Träd". De är lite mer komplexa än till exempel en Stack. Vi ska gå igenom en typ av träd, en så kallad "Max Heap".  
 
 Många datastrukturer finns redan inbyggda i programmeringsspråken (tex lista i Python) och det finns färdiga moduler och bibliotek som har strukturen implementerad och klar. Det är dock viktigt att ha en insikt i hur de fungerar "på insidan".
 
@@ -43,7 +43,7 @@ Man använder sig oftast av en särskild uppsättning metoder:
 1. .push() (Lägger till)  
 2. .pop() (Tar bort)  
 3. .peek() (Visar vad som ligger överst utan att ändra i stacken)  
-4. .isEmpty() (Returnerar True/False beroende på om stacken är tom)  
+4. .is_empty() (Returnerar True/False beroende på om stacken är tom)  
 5. .size() (Returnerar antal element i stacken)
 
 [FIGURE src=/image/oopython/kmom05/stack_explained.png caption="En Stack med specifierat antal platser."]
@@ -54,7 +54,7 @@ class Stack:
     def __init__(self):
         self.items = []
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.items == []
 
     def push(self, item):
@@ -88,7 +88,7 @@ Att arbeta med stacken kan gå till så här:
 19
 >>> myList.size()
 2
->>> myList.isEmpty()
+>>> myList.is_empty()
 False
 >>> myList.pop()
 19
@@ -113,7 +113,7 @@ Metoderna som används är vanligtvis:
 1. .enqueue() (Lägger till)  
 2. .dequeue() (Tar bort)  
 3. .peek() (Visar vad som ligger överst utan att ändra i kön)  
-4. .isEmpty() (Returnerar True/False beroende på om kön är tom)  
+4. .is_empty() (Returnerar True/False beroende på om kön är tom)  
 5. .size() (Returnerar antalet element i kön)
 
 [FIGURE src=/image/oopython/kmom05/queue_explained.png caption="En kö utan specifierat antal platser."]
@@ -124,7 +124,7 @@ class Queue:
     def __init__(self):
         self.items = []
 
-    def isEmpty(self):
+    def is_empty(self):
         return self.items == []
 
     def enqueue(self, item):
@@ -149,12 +149,12 @@ Att arbeta med en Queue:
 ```python
 >>> from queue import Queue
 >>> myList = Queue()
->>> myList.isEmpty()
+>>> myList.is_empty()
 True
 >>> myList.enqueue("Tiger")
 >>> myList.enqueue("Lion")
 >>> myList.enqueue("Moose")
->>> myList.isEmpty()
+>>> myList.is_empty()
 False
 >>> myList.dequeue()
 'Tiger'
