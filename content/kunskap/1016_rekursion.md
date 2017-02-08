@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-08": (A, lew) First version.
 category:
     - oopython
 ...
@@ -28,9 +28,9 @@ The Three Laws of Recursion {#the-three-laws-of-recursion}
 
 Rekursion har tre lagar (The Three Laws of Recursion):  
 
-1. En rekursiv algoritm måste ha ett basfall.
+1. En rekursiv algoritm måste ha ett basfall
 
-2. En rekursiv algoritm måste ändra sitt tillstånd och arbeta sig mot basfallet.
+2. En rekursiv algoritm måste ändra sitt tillstånd och arbeta sig mot basfallet
 
 3. En rekursiv algoritm måste kalla på sig själv, rekursivt.
 
@@ -65,18 +65,18 @@ Om man ska använda rekursion eller inte beror på olika faktorer. Som med allt 
 
 ###Fördelar {#fordelar}  
 
-1. Rekursiva funktioner gör att koden blir renare  
-2. En komplex uppgift kan brytas ner till små problem  
-3. Beroende på problem kan det vara enklare med en rekursiv funktion  
+1. Rekursiva funktioner gör att koden blir renare.  
+2. En komplex uppgift kan brytas ner till små problem.  
+3. Beroende på problem kan det vara enklare med en rekursiv funktion.  
 
 
 
 ###Nackdelar {#nackdelar}  
 
-1. Rekursiva funktioner tar upp mer minne  
-2. Rekursiva funktioner är ofta långsammare
-3. Rekursiva funktioner är svårare att debugga
-4. Rekursiva funktioner kan vara svåra att förstå  
+1. Rekursiva funktioner tar upp mer minne.  
+2. Rekursiva funktioner är ofta långsammare.
+3. Rekursiva funktioner är svårare att debugga.
+4. Rekursiva funktioner kan vara svåra att förstå.  
 
 
 
