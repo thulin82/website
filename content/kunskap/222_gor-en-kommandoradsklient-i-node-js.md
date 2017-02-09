@@ -52,7 +52,7 @@ var rl = readline.createInterface({
 });
 ```
 
-Därefter använder vi metoden `rl.question()` för att ställa en fråga och bifoga en callback som tolkar svaret. Vi lägger den kodbiten i funktionen `askQuestion()` så kan vi anropa den funktionen rekursivt varje gång man gissar fel. Ett rekursivt anrop är alltså en funktion som anropar sig själv. 
+Därefter använder vi metoden `rl.question()` för att ställa en fråga och bifoga en callback som tolkar svaret. Vi lägger den kodbiten i funktionen `askQuestion()` så kan vi anropa den funktionen rekursivt varje gång man gissar fel. Ett rekursivt anrop är alltså en funktion som anropar sig själv.
 
 ```javascript
 /**
@@ -85,7 +85,7 @@ Som sagt, om man är van vid synkron och blockande programmering där allt händ
 
 
 
-Skicka parameterar till skripet {#para}
+Skicka parametrar till skripet {#para}
 --------------------------------------
 
 Låt oss utvidga skriptet och skicka med parametrar om vilket spann som gäller för siffran som gissas. Det vore också bra om skriptet kunde ge en hjälptext om man ber om det.
@@ -95,7 +95,7 @@ Så här skulle hjälptexten kunna se ut, om skriptet som anropas heter `index-s
 ```text
 $ index-step2.js -h
 Usage: index-step2.js [options] <min> [<max>]
-                                            
+
 Options:                                    
  -h        Display help text.               
  -v        Display the version.             
@@ -298,7 +298,3 @@ Avslutningsvis {#avslutning}
 Det var grunderna i hur man kan sätta ihop ett kommandoradsprogram i Node.js, tillsammans med olika vägar att läsa in från terminalen.
 
 Har du [tips, förslag eller frågor](t/4503) så finns det en specifik forumtråd för denna artikel.
- 
-
-
-

@@ -11,7 +11,7 @@ Spela luffarschack med klient och server i Node.js
 
 [FIGURE src=/image/snapht15/gomoku-web.png?a=0,60,60,0 class="right"]
 
-Låt oss skapa ett program där man man spela luffarschack över nätet. Det skall finnas en klient och en server. I längden vore det trevligt om man kan spela mot en annan spelare, två klienter mot en server. 
+Låt oss skapa ett program där man man spela luffarschack över nätet. Det skall finnas en klient och en server. I längden vore det trevligt om man kan spela mot en annan spelare, två klienter mot en server.
 
 Eller varför inte spela en server mot en annan för att se vilken som är bästa spelare? Med lite artificiell intelligens i servern? Nja, det får vara överkurs.
 
@@ -47,7 +47,7 @@ Vi börjar med en klass för logiken, en klass som innehåller själva spelet lu
 
 Eftersom detta är en övning i klient och server så får du en så gott som färdig klass att börja leka med. Du kan kika på [GomokuBoard.js](https://github.com/mosbth/linux/blob/master/example/nodejs/gomoku/GomokuBoard.js) som innehåller klassen för själva spelet.
 
-För att visa hur man kan använda klassen så gjorde jag en enkel klient, [index-random.js](https://github.com/mosbth/linux/blob/master/example/nodejs/gomoku/index-random.js), som slumpar ut dragen. Det är mest öfr att man skall få en känsla av hur spelet fungerar. Som du kommer se så finns det ingen logik för att kontroller om någon spelare har vunnit.
+För att visa hur man kan använda klassen så gjorde jag en enkel klient, [index-random.js](https://github.com/mosbth/linux/blob/master/example/nodejs/gomoku/index-random.js), som slumpar ut dragen. Det är mest för att man skall få en känsla av hur spelet fungerar. Som du kommer se så finns det ingen logik för att kontroller om någon spelare har vunnit.
 
 Så här ser det ut när man kör testprogrammet.
 
@@ -133,7 +133,7 @@ Nu behöver vi ett main-program för att starta servern. Som ni kanske minns så
 
 Det kan vi. Koden för detta ser du i [`index-server.js`](https://github.com/mosbth/linux/blob/master/example/nodejs/gomoku/index-server.js).
 
-Om man studerar koden så ser man att det blir en del CLI-kod, bara för att hantera själva CLI-delen med `-h`, `-v` och `--port`. Men denna typen av kod är liknande oavsett vilket CLI-skritp vi skapar. Så, har vi gjort det för ett skript så blir det enklare i nästa, och nästa. 
+Om man studerar koden så ser man att det blir en del CLI-kod, bara för att hantera själva CLI-delen med `-h`, `-v` och `--port`. Men denna typen av kod är liknande oavsett vilket CLI-skript vi skapar. Så, har vi gjort det för ett skript så blir det enklare i nästa, och nästa.
 
 Vinsten är att få sina program anpassningsbara och självförklarande med hjälptexter. Att wrappa in dem i CLI-kod är ett bra sätt att göra detta.
 
@@ -147,11 +147,11 @@ Att wrappa saker i ett CLI ökar användarvänligheten och gör saker enklare at
 
 ###En och samma kodbas för både lokal klient och server {#kodbas}
 
-Om vi tänker efter en stund, och tittar på vad vi har så jär långt, så är det alltså en kärna som implementerar spelet Gomoku. Vi har implementerat en kommandoradsklient som automatspelar och vi har implementerat en server med ett REST API. Men i grund och botten har vi kärnan av klassen `GomokuBoard.js` som implementerar själva spelet.
+Om vi tänker efter en stund, och tittar på vad vi har så här långt, så är det alltså en kärna som implementerar spelet Gomoku. Vi har implementerat en kommandoradsklient som automatspelar och vi har implementerat en server med ett REST API. Men i grund och botten har vi kärnan av klassen `GomokuBoard.js` som implementerar själva spelet.
 
 Tänker vi kodstruktur så kan det vara bra att tänka tanken att min kod skall kunna köras från flera olika typer av klienter. Det kan ge tydliga gränssnitt.
 
-Nu ska jag inte säga att jag lyckades implementera klassen `GomokuBoard.js` exakt som den är från början. Först tog jag och gjorde den mot kommandoradsklienten och därefter byggde jag delvis ut den, om delvis kodade om den, för att även kunna stödja en "server-klient". Men för varje ny klient så såg jag till att den var *bakåtkompatibel* och behöll sitt publika gränssnitt.
+Nu ska jag inte säga att jag lyckades implementera klassen `GomokuBoard.js` exakt som den är från början. Först tog jag och gjorde den mot kommandoradsklienten och därefter byggde jag delvis ut den, och delvis kodade om den, för att även kunna stödja en "server-klient". Men för varje ny klient så såg jag till att den var *bakåtkompatibel* och behöll sitt publika gränssnitt.
 
 Rent strukturmässigt, hur man organiserar sin kod, hur man tänker kring olika klienter, servrar och koden som gör jobbet, kan vara en bra övning. Så låt oss fortsätta och bygga ytterligare en klient och se hur det blir.
 
@@ -250,7 +250,7 @@ start(size = 20) {
 
 När mitt promise är klart så anropar jag `resolve(value)` med ett argument som innehåller resultatet. Om något går fel så anropar jag istället `reject(value)`. Det är något av dessa två anrop som berättar att mitt promise är klart och på något sätt uppfyllt.
 
-Min mainloop är *konsument av promises*. Den tänker inte skriva ut promten, innan requesten är klar med sitt svar.
+Min mainloop är *konsument av promises*. Den tänker inte skriva ut prompten, innan requesten är klar med sitt svar.
 
 Så här konsumerar mainloopen i `index-client.js` promiset.
 
@@ -272,7 +272,7 @@ case "start":
 
 Metoden `gomoku.start(size)` anropas och när den är klar så hanterar `.then()` vad som skall hända. Förutsatt att promiset avslutas med `resolve()`. Om promiset avslutas med `reject()` så hamnar vi istället i sekvensen om `.catch(err)` och hanterar det som ett felfall.
 
-I båda fallen kan vi skriva ut prompten när hela sekvensen är avklarad. Vi har gjort en asynkron händelse lite mer synkron, så att saker kan ske i en sekvens, förutsatt att vissa villkor är uppfyllda. 
+I båda fallen kan vi skriva ut prompten när hela sekvensen är avklarad. Vi har gjort en asynkron händelse lite mer synkron, så att saker kan ske i en sekvens, förutsatt att vissa villkor är uppfyllda.
 
 Du kan läsa lite mer om Promises i artikeln "[ECMAScript 6 promises (2/2): the API](http://www.2ality.com/2014/10/es6-promises-api.html)".
 
@@ -296,9 +296,9 @@ Gomoku$ view
  7|_|_|_|_|_|_|_|_|_|_|                             
  8|_|_|_|_|_|_|_|_|_|_|                             
  9|_|_|_|_|_|_|_|_|_|_|                             
-                                                    
+
 Player in turn is 'Player 1' playing the marker X.  
-                                                    
+
 Gomoku$ url                                         
 Click this url to view the game in a browser.       
 http://localhost:1337/view/ascii                    
@@ -317,14 +317,14 @@ Eller om vi istället skulle byggt en klient helt i JavaScript i webbläsaren, e
 
 Två rimliga klienter mot vår fina Gomoku-server. Båda är rimliga och kräver sin egen kod. Det som jag vill visa är att oavsett vilken typ av klienter vi bygger så är det viktigt att strukturera sin kod på ett vettigt sett. Bra struktur ger enklare implementationer oavsett hur många och få klienter man tänker göra.
 
-Att bygga HTML-klienter och SPA-klienter får vi göra i en annan kurs. låt oss nu gå vidare och avsluta dagens övning i klient och server.
+Att bygga HTML-klienter och SPA-klienter får vi göra i en annan kurs. Låt oss nu gå vidare och avsluta dagens övning i klient och server.
 
 
 
 Redo att gå med i Gomocup? {#gomocup}
 --------------------------------------
 
-Är de reda att bygga ut din kod för att delta i Gomocup? Det är kanske en större programmeringsövning men som du ser så har vi baskoden som går att bygga vidare på. Det som behövs är en ny klient som stödjer det [protokollet](http://petr.lastovicka.sweb.cz/protocl2en.htm) som gäller i Gomocup.
+Är du reda att bygga ut din kod för att delta i Gomocup? Det är kanske en större programmeringsövning, men som du ser så har vi baskoden som går att bygga vidare på. Det som behövs är en ny klient som stödjer det [protokollet](http://petr.lastovicka.sweb.cz/protocl2en.htm) som gäller i Gomocup.
 
 Ja, så behövs det lite AI också, så att spelet kan tänka ut bästa draget själv. Eller iallafall nästa drag. Man kan ju hålla det enkelt.
 
@@ -335,12 +335,8 @@ Vill du se hur man kan bygga en hjärna till ett sådan Gomoku-spel så finns de
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-En fördel med att göra som vi gjort i denna artikeln, är att vi i varje steg har vi haft kod som går att testa och köra. Så även om målet var att bygga en klient och en server, så gjorde vi det stegvis och vi hade hela tiden kod som gick att testa. Annars är det lätt att hamna i ett läge där klienten och servern måste vara klara samtidigt för att testa dem. Men om vi bygger koden på en struktur med alternativa klienter så kan vi hela tiden testa vår kod.
+En fördel med att göra som vi gjort i denna artikeln, är att vi i varje steg har haft kod som går att testa och köra. Så även om målet var att bygga en klient och en server, så gjorde vi det stegvis och vi hade hela tiden kod som gick att testa. Annars är det lätt att hamna i ett läge där klienten och servern måste vara klara samtidigt för att testa dem. Men om vi bygger koden på en struktur med alternativa klienter så kan vi hela tiden testa vår kod.
 
 Vi såg också att det är bra att separera vår kod för domänen vi löser (Gomoku) och koden som är generell för klienter och för att starta servrar. Om vi separerar koden så blir den enklare att återanvända.
 
 Har du tips, [förslag eller frågor om artikeln](t/4514) så finns det en specifik forumtråd för det.
- 
-
-
-
