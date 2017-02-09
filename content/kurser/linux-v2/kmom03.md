@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-02-09": (E, mos) Ändrade frågor för redovisningen.
     "2017-01-24": (D, mos) Publicerat.
     "2016-12-21": (C, efo) Ändring av länk till ny bash lab och extrauppgiften gjordes om till en del av kursmomentet
     "2016-12-16": (B, mos) Förberedelse inför linux-v2.
@@ -119,9 +120,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/linux-v2/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Tittade du på videoserien? Vad tyckte du om den?
-* Är detta din första bekantskap med skriptprogrammering och Bash?
+* Är detta din första bekantskap med skriptprogrammering i Bash?
 * Vilka möjligheter/utmaningar ser du med denna typen av skriptprogrammering?
-* Hur många poäng fick du i uppgiften med irc-loggfilen?
-* Gjorde du extrauppgiften?
 * Var det något som var extra svårt eller utmanande i uppgifterna?
+* Tittade du på videoserien? Vad tyckte du om den?
