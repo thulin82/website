@@ -31,7 +31,7 @@ De vanligaste sorteringsalgoritmerna {#de-vanligaste-sorteringsalgoritmerna}
 Quick sort använder sig utav ett [pivot-värde](https://en.wikipedia.org/wiki/Quicksort#Choice_of_pivot). Efter valet av pivot är gjort så delar man upp listan i två delar. Den ena delen hanterar värdena som är mindre än pivot och den andra delen hanterar värdena som är större än pivot. Quick sort arbetar med fördel rekursivt där varje anrop till funktionen hanterar ett nytt pivot-värde baserat på den nya listan som skickats in. Bas-fallet är när listans längd har nått 1. Till slut så slår man samman de tre delarna.  
 
 ```python
-def quicksort(items):
+def quick_sort(items):
     """ Quicksort """
     if len(items) > 1:
         pivot_index = len(items) // 2
@@ -45,8 +45,8 @@ def quicksort(items):
                 else:
                     larger_items.append(val)
 
-        quicksort(smaller_items)
-        quicksort(larger_items)
+        quick_sort(smaller_items)
+        quick_sort(larger_items)
         items[:] = smaller_items + [items[pivot_index]] + larger_items
 
     return items
