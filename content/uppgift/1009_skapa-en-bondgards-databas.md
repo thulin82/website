@@ -59,7 +59,7 @@ Fyll på _animals_ med minst 5 djur.
 
 4. Skapa en tabell med namnet "vehicles" och kolumnerna:  
     * id (unik, auto-increment)  
-    * type (varchar)  
+    * vehicle_type (varchar)  
     * price (float)  
 
 Fyll på _vehicles_ med minst 3 olika typer av fordon.  
