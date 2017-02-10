@@ -234,6 +234,7 @@ Redirect /nu-e-de-fredag /forum/viewtopic.php?f=17&t=2629
 Redirect /fredag         /forum/viewtopic.php?f=17&t=2629
 
 # Olika versioner av kurser
+Redirect /kurser/oophp-v2/me   https://arkiv.dbwebb.se/oophp/me
 Redirect /oophp-v2  /oophp
 Redirect /phpmvc-v2 /phpmvc
 
