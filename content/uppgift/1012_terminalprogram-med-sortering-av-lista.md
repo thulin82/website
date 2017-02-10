@@ -49,7 +49,7 @@ För att kika på koden till uppgiften, kan du [klicka här](https://github.com/
 Krav {#krav}
 -----------------------
 
-Kopiera mappen med node-klassen och grunden till unordered list från exempelmappen.
+Kopiera mappen med node-klassen och grunden till unordered list från exempelmappen. Här finns även en test-fil som kopieras över.
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -70,7 +70,9 @@ cd kmom05/unorderedlist
 
 6. Testa din lista och sortering i main.py. Listan ska kunna stödja sortering av heltal.  
 
-7. Tänk på att inte byta namn på befintliga metoder och filer!
+7. Kör `python3 test_list.py`. Se till så alla tester går igenom. Du ska inte ändra i test-filen.
+
+8. Tänk på att inte byta namn på befintliga metoder och filer!
 
 ```bash
 # Ställ dig i kurskatalogen
