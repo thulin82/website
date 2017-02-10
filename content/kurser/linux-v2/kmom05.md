@@ -92,7 +92,7 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften [Lab 4](uppgift/linux-lab4-asynkron-programmering) för att träna på nodejs api funktioner.
+1. Gör uppgiften [node2](uppgift/linux-lab4-asynkron-programmering) för att träna på nodejs api funktioner.
 
 1. Gör uppgiften "[Lös mazen med din mazerunner i bash](uppgift/los-mazen-med-din-mazerunner-i-bash)".
 

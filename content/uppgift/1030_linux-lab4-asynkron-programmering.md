@@ -41,7 +41,7 @@ Gå till din kurskatalog i terminalen och kör följande kommando.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb create node4
+dbwebb create node2
 ```
 
 Materialet till labben skapas nu och sparas i din kurskatalog enligt följande.
