@@ -309,4 +309,4 @@ Avslutningsvis {#avslutning}
 
 Du har nu fått en genomgång i hur SQLite kan fungera tillsammans med Node.js. Du är redo att börja skriva ditt egna program.
 
-Denna artikel har en [egen forumtråd](t/6220) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/6222) som du kan ställa frågor i, eller ge tips.
