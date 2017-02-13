@@ -101,12 +101,7 @@ Genomför följande övningar.
 
 1. Jobba igenom artikeln "[Skicka environment variabler till Node.js](kunskap/skicka-environment-variabler-till-nodejs)".
 
-1. nodejs mot sqlite.
-
-
-
-<hr>
-
+1. Jobba igenom artikeln [SQLite och Node.js](kunskap/sqlite-och-nodejs). Spara dina exempelprogram i `me/kmom03/sqlite`.
 
 
 
