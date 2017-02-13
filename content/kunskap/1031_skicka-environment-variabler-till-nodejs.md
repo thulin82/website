@@ -14,7 +14,7 @@ Skicka environment variabler till Node.js
 
 När man startar en server med Node.js så vill man kunna styra på vilken port servern snurrar. Normalt sätter man portens värde i själva programmet, hårdkodat. Men, säg att man vill att den som startar programmet skall kunna styra vilken port som används, hur löser vi det?
 
-Environmentvariabler, eller miljövariabler, är en variant. Låt oss se hur det kan se ut.
+environment variabler, eller miljövariabler, är en variant. Låt oss se hur det kan se ut.
 
 <!--more-->
 
@@ -164,7 +164,7 @@ $ node -i
 # men enbart för de variabler som är exporterade.
 ```
 
-Nu vet vi att vi kan läsa av environmentvariabler direkt från JavaScript och Node.js.
+Nu vet vi att vi kan läsa av environment variabler direkt från JavaScript och Node.js.
 
 
 
@@ -198,6 +198,6 @@ Avslutningsvis {#avslutning}
 
 Du hittar mina exempelprogram i kursrepot under `example/nodejs/readEnvironmentVariable`.
 
-Nu har du lärt dig hur du kan använda environmentvariabler och hur de kan läsas av externa program. Det blir som ett sätt att skicka parametrar till ett program, eller som att delvis konfigurera ett program.
+Nu har du lärt dig hur du kan använda environment variabler och hur de kan läsas av externa program. Det blir som ett sätt att skicka parametrar till ett program, eller som att delvis konfigurera ett program.
 
 Denna artikel har en [egen forumtråd](t/6220) som du kan ställa frågor i, eller ge tips.
