@@ -9,9 +9,9 @@ revision:
 Kmom06: Klient och server
 ==================================
 
-[INFo]
+[INFO]
 Kursmomentet är under översyn och <strike>blir tillgängligt **senast den 20/2-2017**</strike> släpptes 2017-02-10.
-[/INFo]
+[/INFO]
 
 Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i bash, vi kan bygga servrar med Node.js och kan bygga klienter som kommunicerar med webbtjänster via RESTful API:er. Visst låter det som en hel del?
 
