@@ -39,7 +39,9 @@ Läs följande:
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 20: SQL inuti ett program
 
+<!--
 1. Läsanvisning Javascript. (array/objekt)
+-->
 
 1. [Exploring ES6](kunskap/boken-exploring-es6). Läs inledande kapitlet för att få en grov känsla av ES6 kontra ES5.
     * Ch 1: About ECMAScript 6 (ES6)
@@ -95,10 +97,9 @@ Genomför följande övningar.
 
 1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
 
-1. Jobba igenom artikeln "[Skicka environment variabler till Bash och Node.js ](kunskap/skicka-environment-variabler-till-bash-och-node-js)".
-
 1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
 
+1. Jobba igenom artikeln "[Skicka environment variabler till Node.js](kunskap/skicka-environment-variabler-till-nodejs)".
 
 1. nodejs mot sqlite.
 
