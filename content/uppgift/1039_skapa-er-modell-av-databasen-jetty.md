@@ -53,7 +53,7 @@ Krav {#krav}
 
 1. Dra ett streck under varje entitet (i texten) och skapa en lista över alla entiteter. Se konceptuell modellering steg 2.
 
-1. Skriv ned alla relationer i en lista (du behöver inte skapa en matris). Se kondeptuell modellering steg 3.
+1. Skriv ned alla relationer i en lista (du behöver inte skapa en matris). Se konceptuell modellering steg 3.
 
 1. Förbättra din lista med relationer och lägg till en kardinalitet i listan. Se konceptuell modellering steg 5.
 
