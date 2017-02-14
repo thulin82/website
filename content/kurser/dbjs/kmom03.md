@@ -68,9 +68,12 @@ Kika på följande lästips om du finner dem intressanta.
 
 1. Titta översiktligt på de [nya konstruktionerna i JavaScript ECMA6](https://github.com/lukehoban/es6features/blob/master/README.md).
 
+<!--
 1. Titta översiktligt på [Babel](https://babeljs.io/) som är en JavaScript till JavaScript kompilator som stödjer ECMA6.
 
 1. I boken [Exploring ES6](kunskap/boken-exploring-es6) handlar kapitel 15 om klasser och kapitel 16 om moduler, två goda sätt att strukturera sin kod i ES6.
+
+-->
 
 
 
@@ -97,13 +100,13 @@ Installera labbmiljön för nodejs delen av kursen.
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
+1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)". Du kan spara dina testprogram i `me/kmom03/nodetest`.
 
 1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
 
 1. Jobba igenom artikeln "[Skicka environment variabler till Node.js](kunskap/skicka-environment-variabler-till-nodejs)".
 
-1. Jobba igenom artikeln [SQLite och Node.js](kunskap/sqlite-och-nodejs). Spara dina exempelprogram i `me/kmom03/sqlite`.
+1. Jobba igenom artikeln "[SQLite och Node.js](kunskap/sqlite-och-nodejs)". Spara dina exempelprogram i `me/kmom03/sqlite`.
 
 
 
@@ -111,9 +114,9 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen [Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs) för att öva på grunderna i nodejs.
+1. Gör laborationen [Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs) för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
 
-1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
+1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js (server)](uppgift/skapa-en-restful-http-server-med-node-js)". Spara koden i `me/kmom03/server`.
 
 1. nodejs som webbklient mot SQLite
 
@@ -150,4 +153,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Är detta den första bekantskap med JavaScript på serversidan och Node.js?
 * Hur känns det att koda JavaScript på serversidan med Node.js?
+* Gick det bra att koppla ihop Node med SQLite?
 * Fanns det något som var extra utmanande elelr någon större svårighet i detta kursmomentet?
