@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-02-14": (E, mos) Kommenterade bort sql1 temporärt.
     "2016-09-26": (D, mos) La till extrauppgift sql1.
     "2016-08-31": (C, mos) Lade till rätt videoserie från youtube.
     "2016-02-22": (B, mos) Bort med not om kursutveckling och länk till version 1.
@@ -106,9 +107,13 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
+Det finns inga extrauppgifter.
+
+<!--
 Genomför följande extrauppgifter om du har tid och lust.
 
 1. Gör laborationen "[SQL lab 1, introduktion till SQL](uppgift/sql-lab-1-introduktion-till-sql)" som låter dig träna på SQL kommandon.
+-->
 
 
 
