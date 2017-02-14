@@ -4,6 +4,7 @@ category:
     - javascript
     - nodejs
 revision:
+    "2017-02-14": (E, mos) Bort med behov av Babel.
     "2017-02-06": (D, mos) Uppdaterad för att stödja både kurserna linux och dbjs, la till stycke om egen modul med routes.
     "2016-01-02": (C, mos) Tog bort ip-adressen från listen().
     "2015-10-13": (B, mos) Nytt stycke om hantera querystring.
@@ -29,7 +30,7 @@ Förutsättning {#pre}
 
 När du jobbar med artikeln så kan du köra server och klient på en och samma maskin. Men det går också bra att köra klient/server på två skilda maskiner. Grundtanken är att man skall kunna köra servern på en maskin och koppla sig till den via flera klienter som kör på olika maskiner.
 
-Exempelkoden är mestadels skriven enligt ES6 så jag använder `babel-node` för att köra den. Du behöver alltså ha både Node.js och babel installerat för att kunna köra exempelprogrammen.
+Du behöver ha node installerat.
 
 Om du läser artikeln som en del av en kurs (linux, dbjs) så finner du att exempelprogrammen är samlade i ditt kursrepo under `example/nodejs`.
 
@@ -159,7 +160,7 @@ server.listen(1337);
 console.log("Simple server listen on port 1337.");
 ```
 
-Det kan se ut så här när man kör exempelprogrammet. Nu använder jag `babel-node` eftersom koden är ES6 kompatibel.
+Det kan se ut så här när man kör exempelprogrammet.
 
 [ASCIINEMA src=24837]
 
