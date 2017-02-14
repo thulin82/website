@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-14": (A, lew) First version.
 category:
     - oopython
 ...
@@ -35,7 +35,7 @@ Filen "main.py" ska innehålla menyn. Main-filen använder "handler.py" som skö
 
 ###Klasserna {#klasserna}
 
-Nedan är ett UML-diagram av klasserna. Det är ett exempel på hur de kan se ut.
+Följande klasser ska finnas med:
 
 [FIGURE src=/image/oopython/kmom06/classes.png]  
 
@@ -59,7 +59,7 @@ Skapa dina filer i mappen kmom06/booking.
 cd me/kmom06/booking
 ```
 
-1. Dina klasser och filer ska ha samma namn som i exemplena ovan.
+1. Du ska använda minst de klasser som visas ovan. Variabler och metoder får du ändra om du vill.
 
 2. "main"-filen ska enbart innehålla menyn och importera "Handler".  
 
@@ -69,7 +69,15 @@ cd me/kmom06/booking
 
 5. "Month" ska innehålla rätt antal "Day"-objekt. (Bortse från ev. skottår)  
 
-6. "Calender" ska innehålla ett år, (12 månader, 365 dagar).  
+6. "Calendar" ska innehålla ett år, (12 månader, 365 dagar).  
+
+7. Programmet ska stödja samma funktionalitet som i asciineman ovan:  
+    * Lista kalendern
+    * Skapa ett lag  
+    * Lista alla lag  
+    * Skapa en match  
+    * Lista bokade matcher  
+    * Avsluta
 
 ```bash
 # Ställ dig i kurskatalogen
@@ -84,7 +92,10 @@ Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut s�
 Extrauppgift {#extra}
 -----------------------
 
-1. Använd listan du skapade i kursmoment 5 i klasserna. Skriv ett stycke om det i redovisningstexten.
+1. Använd listan du skapade i kursmoment 5 i klasserna. Skriv ett stycke om det i redovisningstexten.  
+2. Skapa ett UML-diagram över programmet  
+3. Skapa ett sekvensdiagram över en funktionalitet som programmet ska stödja.  
+4. Skapa enhetstester för programmet.
 
 
 

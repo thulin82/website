@@ -111,7 +111,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 2. Gör uppgiften "[Terminalprogram med sortering av lista](uppgift/terminalprogram-med-sortering-av-lista)"  
 
-3. Skapa din me-sida version 5. Gör eventuella uppdateringar som du själv bestämmer.
+3. Skapa din me-sida version 5. Fördjupa dig i Bootstrap och Flask. Gör uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext.
 
 4. Fyll på redovisning.html med kursmomentets redovisningstext.
 
