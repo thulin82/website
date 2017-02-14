@@ -100,13 +100,13 @@ Installera labbmiljön för nodejs delen av kursen.
 
 Genomför följande övningar.
 
-1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)".
+1. Jobba igenom guiden "[Bygg en RESTful server med Node.js](kunskap/bygg-en-restful-server-med-node-js)". Du kan spara dina testprogram i `me/kmom03/nodetest`.
 
 1. Jobba igenom artikeln "[Spara serverns processid i en fil](kunskap/spara-serverns-processid-i-en-fil)".
 
 1. Jobba igenom artikeln "[Skicka environment variabler till Node.js](kunskap/skicka-environment-variabler-till-nodejs)".
 
-1. Jobba igenom artikeln [SQLite och Node.js](kunskap/sqlite-och-nodejs). Spara dina exempelprogram i `me/kmom03/sqlite`.
+1. Jobba igenom artikeln "[SQLite och Node.js](kunskap/sqlite-och-nodejs)". Spara dina exempelprogram i `me/kmom03/sqlite`.
 
 
 
