@@ -76,7 +76,7 @@ Krav {#krav}
 dbwebb publish redovisa
 ```
 
-Rätta de felen som dyker upp. Sen är du klar. Dubbelkolla att dina flaggor fungerar på studentservern.
+Rätta de felen som dyker upp. Sen är du klar.
 
 
 
