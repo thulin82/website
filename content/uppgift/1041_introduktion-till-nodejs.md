@@ -10,7 +10,7 @@ revision:
     "2017-02-14": (B, mos) Kopierad till dbjs och generaliserad.
     "2016-12-20": (A, efo) Första utgåvan av lab3 i linux kursen
 ...
-Introduktion till nodejs
+Introduktion till nodejs (node1)
 ==================================
 
 Laboration i grunderna i nodejs, där vi lär oss nya konstruktioner och en liten introduktion till funktionell programmering.
