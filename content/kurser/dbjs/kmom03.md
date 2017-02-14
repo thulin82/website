@@ -80,7 +80,7 @@ Kika på följande lästips om du finner dem intressanta.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 20-30 studietimmar)*
+*(ca: 24-30 studietimmar)*
 
 
 
@@ -118,9 +118,9 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js (server)](uppgift/skapa-en-restful-http-server-med-node-js)". Spara koden i `me/kmom03/server`.
 
-1. nodejs som webbklient mot SQLite
+1. Gör uppgiften "[Bygg en faktureringsmotor för båtklubben (invoice)](uppgift/bygg-en-faktureringsmotor-for-batklubben)". Spara koden i `me/kmom03/invoice`.
 
-1. Gör laborationen "[Lab 2 SQL XXX](uppgift/lab-2-sql-XXX)" som låter dig träna på...
+1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
 
 
 
