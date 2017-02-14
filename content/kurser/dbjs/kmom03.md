@@ -85,9 +85,11 @@ Kika på följande lästips om du finner dem intressanta.
 
 Installera labbmiljön för nodejs delen av kursen.
 
-1. [Installera nodejs och npm lokalt](kunskap/installera-node-och-npm)
+1. [Installera nodejs och npm](kunskap/installera-node-och-npm)
 
+<!--
 1. [Installera babel-node lokalt](labbmiljo/babel-node)
+-->
 
 
 
@@ -109,14 +111,13 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-
-1. Gör laborationen "[Lab 2 SQL XXX](uppgift/lab-2-sql-XXX)" som låter dig träna på...
-
-1. Gör laborationen [Node 1](uppgift/linux-lab3-introduktion-till-nodejs) för att öva på grunderna i nodejs.
+1. Gör laborationen [Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs) för att öva på grunderna i nodejs.
 
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js och klient i Bash](uppgift/skapa-en-restful-http-server-med-node-js-och-klient-i-bash)".
 
 1. nodejs som webbklient mot SQLite
+
+1. Gör laborationen "[Lab 2 SQL XXX](uppgift/lab-2-sql-XXX)" som låter dig träna på...
 
 
 
