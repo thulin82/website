@@ -1,8 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-12-16": (PB, lew) Updated flask structure.
-    "2016-04-12": (PA, lew) Pre-release.
+    "2017-02-14": (A, lew) First version.
 category:
     - oopython
 ...
@@ -78,7 +77,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Bokningssystem](uppgift/bokningssystem)"  
 
-2. Skapa din me-sida version 6-ish. Gör eventuella uppdateringar som du själv bestämmer.  
+2. Skapa din me-sida version 6. Fördjupa dig i Bootstrap och Flask. Gör uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext. 
 
 3. Fyll på redovisning.html med kursmomentets redovisningstext.
 
@@ -103,4 +102,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vad gjorde du för uppdateringar av me-sidan?
 * Kunde du använda kunskaper från förra Python-kursen?  
 * Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för stort?
-* Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
