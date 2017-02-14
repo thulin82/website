@@ -5,6 +5,7 @@ category:
     - javascript
     - nodejs
 revision:
+    "2017-02-14": (C, mos) Bort med babel.
     "2017-02-06": (B, mos) Uppdaterat exempelprogram och används även i dbjs-kursen, inklusive fånga signaler och Cygwin specifikt.
     "2015-10-16": (A, mos) Första utgåvan i kursen linux.
 ...
@@ -118,14 +119,14 @@ Processid för en Node.js server {#pid}
 Jag tar och gör ett litet exempelprogram `saveProcessId` i Node.js som tar reda på det process id som programmet får. Värdet på processens id finns i variabeln [`process.pid`](https://nodejs.org/api/process.html#process_process_pid).
 
 ```bash
-$ babel-node index.js
+$ node index.js
 Simple server listen on port 1337 with process id 31410
 ```
 
 Låt säga att jag nu vill skicka processen till bakgrunden istället. Så här.
 
 ```bash
-$ babel-node index.js &
+$ node index.js &
 [1] 28975
 Simple server listen on port 1337 with process id 28981
 Wrote process id to file 'pid'
@@ -159,7 +160,7 @@ Min port är upptagen? {#port}
 Jag startar servern igen (trots att jag redan har en server startad som jag "glömt bort").
 
 ```bash
-$ babel-node index.js
+$ node index.js
 Simple server listen on port 1337 with process id 32569
 events.js:141
       throw er; // Unhandled 'error' event
@@ -175,7 +176,7 @@ Låt mig visa hur det fungerar.
 Vi startar från början och låtsas att inget har hänt, porten är ledig.
 
 ```bash
-$ babel-node index.js &
+$ node index.js &
 [1] 29367
 Simple server listen on port 1337 with process id 29373
 Wrote process id to file 'pid'
@@ -197,7 +198,7 @@ $ cat saveProcessId/pid
 29373
 $ kill 29373
 Caught SIGTERM. Removing pid-file and will then exit.
-[1]+  Done                    babel-node saveProcessId/index.js
+[1]+  Done                    node saveProcessId/index.js
 ```
 
 Bra, då vet vi att vi kan använda `netstat` för att se vilken process som körs på en viss port.
@@ -210,7 +211,7 @@ Funkar det på Cygwin? {#cygwin}
 Jajamensan, det fungerar på Cygwin om du använder de varianter jag visat. Men låt oss ta en snabb repetition för hur det fungerar på Cygwin som är delvis Unix och delvis Windows.
 
 ```bash
-$ babel-node index.js &
+$ node index.js &
 [1] 3348
 Simple server listen on port 1337 with process id 6392
 Wrote process id to file 'pid'
