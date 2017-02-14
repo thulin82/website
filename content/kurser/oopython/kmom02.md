@@ -104,7 +104,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 4. Gör uppgiften "[Skapa sequence diagram](uppgift/skapa-sequence-diagram)"  
 
-5. Uppdatera din me-sida till version 2 i me/flask. Gör eventuella uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext.  
+5. Uppdatera din me-sida till version 2 i me/flask. Fördjupa dig i Bootstrap och Flask. Gör uppdateringar som du själv bestämmer. Du måste även dokumentera vad du gjort i din redovisningstext.  
 
 6. Fyll på redovisning.html med kursmomentets redovisningstext.
 
