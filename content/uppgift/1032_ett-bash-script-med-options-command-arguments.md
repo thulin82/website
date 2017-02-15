@@ -47,7 +47,7 @@ Krav {#krav}
 
 1. Ändra rättigheter för scriptet genom kommandot `chmod 755 commands`
 
-1. Dit script skall avslutas med korrekt exit värde.
+1. Ditt script skall avslutas med korrekt exit värde.
 
 1. Ditt script skall ta emot option `--help, -h` och skriva ut alla kommandon som du implementerar.
 
