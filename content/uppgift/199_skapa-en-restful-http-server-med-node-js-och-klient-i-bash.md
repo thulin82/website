@@ -56,7 +56,7 @@ Krav {#krav}
 
 ```javascript
 {
-    "uname": "Utskiften av kommandot uname -a"
+    "uname": "Utskriften av kommandot uname -a"
 }
 ```
 
