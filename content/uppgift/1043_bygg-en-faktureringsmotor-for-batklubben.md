@@ -7,6 +7,7 @@ category:
     - javascript
     - kursen dbjs
 revision:
+    "2017-02-16": (B, mos) Utskrift av faktura.
     "2017-02-14": (A, mos) Första utgåvan.
 ...
 Bygg en faktureringsmotor för båtklubben (invoice)
@@ -67,7 +68,25 @@ De fakturor du nu skall skapa är ASCII-fakturor, det är ditt sätt att visa b�
 En faktura kan till exempel se ut så här.
 
 ```text
+*================================================*
+ FAKTURA                        Faktura nr: 1001
+                                Datum: 2017-02-16
 
+ Kund:                          Företaget:
+ ----------                     ----------
+ Adam                           Båtklubben
+ Hajvägen 2                     Hamnen
+ 45753 Fiskebyn
+ Kundnr: 34
+
+
+ -------------------------------------------------
+ Buster XXL, A1                              800:-
+ Seadoo Spark, A2                            800:-
+                                ------------------
+                                Summa:      1600:-
+                                Moms:        400:-
+                                Totalt:     2000:-
 ```
 
 
