@@ -5,6 +5,7 @@ category:
     - ER-modellering
     - kursen dbjs
 revision:
+    "2017-02-17": (B, mos) Förtydligade om logisk modell och beskriv hur fakturor skapas.
     "2017-01-16": (A, mos) Första utgåvan.
 ...
 Skapa ER-modell av databasen Jetty
@@ -61,11 +62,13 @@ Krav {#krav}
 
 1. Gör en ny rubrik "Logisk modellering" och inled med en lista som visar tabellerna, kolumnerna samt primära och främmande nycklar. Se logisk modellering steg 7 och 8.
 
-1. Rita en bild (på papper eller med ritprogram) som visar din ER-modell med tabeller, relationer med kardinalitet samt kolumner, primära och främmande nycklar. Se logisk modellering steg 7 och 8.
+1. Rita en bild (på papper eller med ritprogram) som visar din logiska ER-modell med tabeller, relationer med kardinalitet samt kolumner, primära och främmande nycklar. Se logisk modellering steg 7 och 8.
 
 1. Infoga bilden i din webbsida.
 
 1. Se till att din sida ser snygg och strukturerad ut.
+
+1. Skriv ett stycke som förklarar vilka tabeller som är inblandade när du skapar fakturan. Hur har du tänkt att lösa fakturagenereringen? Skriv taxt och eventuellt SQL-psuedokod.
 
 1. Avsluta med att skriva namnet på alla som jobbade i din grupp, eller notera om du jobbade ensam.
 
