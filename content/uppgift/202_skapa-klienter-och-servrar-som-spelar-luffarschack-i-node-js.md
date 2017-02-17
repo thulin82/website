@@ -6,10 +6,9 @@ category:
     - nodejs
     - javascript
 revision:
+    "2016-02-17": (C, mos) La till så att klienten läser av LINUX_PORT och LINUX_SERVER.
     "2016-07-04": (B, mos) Lade till om default PORT och SERVER.
     "2015-09-11": (A, mos) Första utgåvan i samband med kursen linux.
-updated: "2015-09-11 16:00:00"
-created: "2015-09-09 08:09:24"
 ...
 Skapa klienter och servrar som spelar luffarschack i Node.js
 ==================================
@@ -78,13 +77,11 @@ import Router from "./router";
 ```
 Nu har du en körbar server via `index-server.js`. Testa den.
 
-2\. Uppdatera skriptet så att det läser av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
+2\. Uppdatera skriptet så att det läser av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använder dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
 
-3\. Skriptet skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost.
+3\. Utöka servern `GomokuServer.js` med en metod `placeRandom()` som placerar ut brickan för nästa spelare på en slumpmässig plats på spelplanen.
 
-4\. Utöka servern `GomokuServer.js` med en metod `placeRandom()` som placerar ut brickan för nästa spelare på en slumpmässig plats på spelplanen.
-
-5\. Utöka API:et och lägg till följande. Verifiera att det fungerar med curl.
+4\. Utöka API:et och lägg till följande. Verifiera att det fungerar med curl.
 
 | Länk                      | Vad skall hända       |
 |---------------------------|-----------------------|
@@ -96,13 +93,17 @@ Nu har du en körbar server via `index-server.js`. Testa den.
 
 1\. Kopiera in koden för servern `example/nodejs/gomoku/GomokuClient.js` och `example/nodejs/gomoku/index-client.js`. Du har nu en klient `index-client.js` som går att köra och som kan koppla upp sig mot servern. Testa det.
 
-2\. Utöka klienten med stöd för kommandot `place random`.
+2\. Uppdatera klienten så att det läser av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använder dess innehåll som portnummer att koppla upp sig mot. Standardvärde skall vara 1337.
+
+3\. Klienten skall läsa av environment-variabeln `LINUX_SERVER` och, om variabeln är definierad, använda dess innehåll som adress till servern. Standardvärde skall vara localhost.
+
+4\. Utöka klienten med stöd för kommandot `place random`.
 
 ```text
 Gomoku$ place random
 ```
 
-3\. Validera och publicera din kod enligt följande.
+5\. Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen

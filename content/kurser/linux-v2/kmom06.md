@@ -2,8 +2,6 @@
 author: mos
 revision:
     "2017-02-09": (B, efo) Tog bort labben.
-    "2016-12-21": (PB2, efo) Länk till ny lab.
-    "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
     "2015-09-11": (A, mos) Första utgåvan för kursen.
 ...
 Kmom06: Klient och server
