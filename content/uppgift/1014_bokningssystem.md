@@ -71,7 +71,7 @@ cd me/kmom06/booking
 
 6. "Calendar" ska innehålla ett år, (12 månader, 365 dagar).  
 
-7. Programmet ska stödja samma funktionalitet som i asciineman ovan:  
+7. Programmet ska stödja samma funktionalitet som visas ovan:  
     * Lista kalendern
     * Skapa ett lag  
     * Lista alla lag  
