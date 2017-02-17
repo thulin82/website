@@ -50,7 +50,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: block/social
+                                route: block/youtube
 
     columns3:
         region: columns-above
@@ -75,7 +75,7 @@ views:
                         data:
                             meta:
                                 type: content
-                                route: block/empty
+                                route: block/social
 
 
 ...
