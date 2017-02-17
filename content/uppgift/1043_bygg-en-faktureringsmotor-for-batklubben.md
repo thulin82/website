@@ -7,7 +7,7 @@ category:
     - javascript
     - kursen dbjs
 revision:
-    "2017-02-16": (B, mos) Utskrift av faktura.
+    "2017-02-16": (B, mos, efo) Utskrift av faktura.
     "2017-02-14": (A, mos) Första utgåvan.
 ...
 Bygg en faktureringsmotor för båtklubben (invoice)
