@@ -68,7 +68,7 @@ Krav {#krav}
 
 1. Se till att din sida ser snygg och strukturerad ut.
 
-1. Skriv ett stycke som förklarar vilka tabeller som är inblandade när du skapar fakturan. Hur har du tänkt att lösa fakturagenereringen? Skriv taxt och eventuellt SQL-psuedokod.
+1. Skriv ett stycke som förklarar vilka tabeller som är inblandade när du skapar fakturan. Hur har du tänkt att lösa fakturagenereringen? Skriv text och eventuell SQL-psuedokod.
 
 1. Avsluta med att skriva namnet på alla som jobbade i din grupp, eller notera om du jobbade ensam.
 
