@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-02-17": "(B, mos) Med gransakre och kommentarer från Ingrid, bort länk till forum."
     "2016-11-14": "(A, mos) Första utgåvan i format av ett utkast."
 category:
     - case
@@ -105,9 +106,9 @@ Det andra svaret {#mail4}
 > När en rättare använder de extra poängen så fann den något tilltalande som den tyckte var värt extra poäng.
 
 
-Mitt första mail innehåll en länk som ledde till länken om Solo taxenomin. Men kanske var jag inte tillräckligt tydlig. Så jag tar direktlänken denna gången och förklarar hur man kan läsa dokumentet som ger exempel på mer och mindre goda texter.
+Mitt första mail innehåll en länk som ledde till länken om Solo taxonomin. Men kanske var jag inte tillräckligt tydlig. Så jag tar direktlänken denna gången och förklarar hur man kan läsa dokumentet som ger exempel på mer och mindre goda texter.
 
-Till detta föreslår jag en självvärdering, att studera sin egen text och jämföra med de exempel som baserades på Solo taxenomin.
+Till detta föreslår jag en självvärdering, att studera sin egen text och jämföra med de exempel som baserades på Solo taxonomin.
 
 Min förhoppning är att visa på olika generella funderingar kring bedömningen samt tydligt visa vilka förväntningar som finns på redovisningstexterna.
 
@@ -131,10 +132,23 @@ Ibland är det inte lätt att definiera en frågeställning, eller besvara en ti
 
 
 
-Diskussion om artikeln {#diskussion}
+Feedback från student {#feed}
 -----------------------
 
-I [artikelns forumtråd](t/XXX) kan du ge din feedback till författaren och vidare diskutera ämnet som artikeln hanterar.
+När artikeln var klar så lät jag studenten läsa hur jag tänkte och fårck då följande kommentar.
+
+> Ojdå, det var en oväntad vändning. Men intressant att läsa hur du tänkte när du svarade på mina frågor.
+> När jag fick dina svar kändes de till viss del undanglidande och jag tyckte inte jag fick svar på det jag frågade, men till slut fick jag ändå upp ögonen för vad som kunde förbättras. Så, med reservation för att studenten kanske tröttnar/ger upp för att den inte får ett direkt svar, så är det en bra metod att använda.
+
+Jag fick också följande kommentar.
+
+> Jag längtar efter bättre feedback, någon slags respons på min kod.
+
+Det är en viss del av studenterna som känner så. Hur vi kan ge den typen av riktad feedback, på rätt sätt, är en utmaning i sig. Men visst finns det ett visst behov, från en delmängd av studenterna.
+
+Som lärare är det enklast att få raka frågor och svara på dem, det är ett bra sätt att ge feedback på exakt det studenten vill se.
+
+Så, någonstans här står vi.
 
 
 
@@ -145,6 +159,6 @@ Följande har läst denn artikel, givit sin feedback och samtalat om artikelns i
 
 | Granskare |
 |-----------|
-|TBD |
+| Ingrid Bergman, 2016-11-15 |
 |TBD |
 |TBD |
