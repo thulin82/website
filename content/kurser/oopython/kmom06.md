@@ -8,9 +8,9 @@ category:
 Kmom06: Bokningssystem
 ====================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 20/2-2017**.
-[/WARNING]
+[INFO]
+Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 20/2-2017**</strike> släpptes 2017-02-17.
+[/INFO]
 
 Vi ska skapa ett bokningssystem med hjälp av klasser. Det kommer innebära fler antal klasser än tidigare och tanken är att öva på att interagera mellan klasser och hantera flera klasser samtidigt i ett terminalprogram.
 
