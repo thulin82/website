@@ -125,6 +125,8 @@ Hej
 >
 ```
 
+För att få upp prompten i cygwin skall node köras i _interactive mode_. Detta gör du genom att använda kommandot `node -i`.
+
 Så här kan det se ut.
 
 [ASCIINEMA src=91267]
