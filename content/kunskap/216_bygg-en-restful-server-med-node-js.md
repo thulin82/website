@@ -181,7 +181,7 @@ Ett JSON-objekt kan se ut så här.
 }
 ```
 
-Låt oss nu kika på ett annat exempelprogram som levererar ovan nämnda svar. Du hittar koden till exemplet i kursrepot i `simpleJsonServer`.
+Låt oss nu kika på ett annat exempelprogram som levererar ovannämnda svar. Du hittar koden till exemplet i kursrepot i `simpleJsonServer`.
 
 Strukturen i exempelprogrammet är i stort sett likadan som förra exempelprogrammet `simpleServer`. Skillnaden är svaret som levereras.
 
@@ -311,7 +311,7 @@ fs.readFile(filename, "utf8", (err, data) => {
 });
 ```
 
-Skillnaden är att vi skickar med en callback-metod som anropas när hela filen har lästs in. Anropet är hller inte blockerande utan exekveringen fortsätter och kan ta emot fler anrop till servern.
+Skillnaden är att vi skickar med en callback-metod som anropas när hela filen har lästs in. Anropet är heller inte blockerande utan exekveringen fortsätter och kan ta emot fler anrop till servern.
 
 Du är troligen van vid JavaScript och deras programmeringsmodell med events och callbacks. Att programmera asynkroniskt innebär att jobba med callbacks istället för blockande funktioner. Det är ett litet annorlunda tankesätt, men kan du JavaScript på klientsidan så bör det inte vara ett helt nytt tankesätt.
 
