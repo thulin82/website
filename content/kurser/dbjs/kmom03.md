@@ -154,4 +154,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Är detta den första bekantskap med JavaScript på serversidan och Node.js?
 * Hur känns det att koda JavaScript på serversidan med Node.js?
 * Gick det bra att koppla ihop Node med SQLite?
-* Fanns det något som var extra utmanande elelr någon större svårighet i detta kursmomentet?
+* Fanns det något som var extra utmanande eller någon större svårighet i detta kursmomentet?
