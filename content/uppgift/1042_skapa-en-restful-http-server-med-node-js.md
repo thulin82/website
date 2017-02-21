@@ -54,7 +54,7 @@ Krav {#krav}
 
 1\. Skriv ett *main-program* som startar din server, döp det till `index.js`. 
 
-2\. Skriv en server och spara den i filen `server.js`.
+2\. Skriv en server och spara den i filen `server.js`. Du får gärna dela upp servern i fler moduler och filer.
 
 3\. Ditt program skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll för att starta servern på just den porten. Standardport är annars 1337.
 

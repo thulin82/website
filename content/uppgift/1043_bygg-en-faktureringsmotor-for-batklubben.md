@@ -89,6 +89,10 @@ En faktura kan till exempel se ut så här.
                                 Totalt:     2000:-
 ```
 
+Fakturorna skall skrivas ut av programmet.
+
+Du behöver inte lagra undan fakturainformation, om de genererade fakturorna, i databasen, det räcker att du kan skriva ut fakturorna.
+
 
 
 Krav {#krav}
@@ -100,7 +104,7 @@ Krav {#krav}
 
 1. Du kan nu skapa (om) din databas `db.sqlite` utifrån filen med SQL-kommandon, genom att använda kommandot `sqlite3` i terminalen.
 
-1. Skapa ett Nodejs/JavaScript-program som läser från din databas och skriver ut ASCII-fakturor för alla klubbens medlemmar.
+1. Skapa ett Nodejs/JavaScript-program som läser från din databas och skriver ut ASCII-fakturor för alla klubbens medlemmar. Döp programmet till `index.js`.
 
 1. Avslutningsvis, validera och publicera.
 
