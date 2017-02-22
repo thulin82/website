@@ -66,7 +66,7 @@ Databasfilen ska heta `blackops.sqlite`.
 
 1. Skapa ett klassdiagram över alla klasser. Ska inte automatgenereras utan göras för hand. Döp filen till "uml.png".
 
-2. Skapa unittester för karaktärsklasserna och uppdragsklassen. Döp testfilerna till "_klassens namn_-test.py"
+2. Skriv ett godtyckligt antal enhetstester för karaktärsklassen och uppdragsklassen. Döp testfilerna till "_klassens namn_-test.py".
 
 3. Automatgenerera dokumentation för din kod. Döp filen till "doc.html".
 

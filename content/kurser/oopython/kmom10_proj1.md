@@ -1,7 +1,7 @@
 ---
 author: lew
 revision:
-    "2016-04-12": (A, lew) Första versionen.
+    "2017-02-22": (A, lew) First version.
 category:
     - oopython
 ...
@@ -36,9 +36,9 @@ De tre första kraven är obligatoriska och måste lösas för att få godkänt 
 
 Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
-Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet skall heta `blackops.py`.
+Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet skall heta `app.py`. Du behöver även ha `app.cgi` så det funkar på studentservern. 
 
-###Krav 1 Presentation och hantering {#k1}
+###Krav 1: Presentation och struktur {#k1}
 
 1. Använd Bootstrap men kör på ett annat tema än tidigare. Utgå ifrån det och ändra utseendet efter egen förmåga.  
 
@@ -46,52 +46,53 @@ Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet 
 
 3. Spara informationen i JSON eller SQLite. Man ska kunna visa upp all information i Flask på ett överskådligt sätt.  
 
-4. Personal och material ska hanteras i klasser med arv. Det ska finnas minst 5 personer och minst 5 typer av material inlagda i databasen vid inlämning. Personalen ska delas in i klassificeringsnivåer. Viss personal ska kunna hyra viss typ av material. Har man exempelvis den högsta klassificerings-nivån kan man hyra allt. Minst antal nivåer är 3.
+4. Personal och material ska hanteras i klasser med arv. Det ska finnas minst 5 personer och minst 10 typer av material inlagda i databasen vid inlämning. Personalen ska delas in i klassificeringsnivåer. Viss personal ska kunna hämta viss typ av material. Har man exempelvis den högsta klassificerings-nivån kan man hämta allt. Minst antal nivåer är 3.
 
 
 
-###Krav 2 Admin {#k2}  
+###Krav 2: Hantering och distrubition {#k2}  
 
-1. Admin ska kunna hyra ut materialet till behörig personal.   
+Sidan används enbart av en administratör, en admin, som kopplar ihop material med behörig personal.  
+
+1. Admin ska bara kunna dela ut material till behörig personal. En person kan hämta flera olika saker.  
 
 2. Admin ska kunna lägga till/ta bort personal.  
 
-3. Admin ska kunna lägga till/ta bort material.  
+3. Admin ska kunna lägga till/ta bort material. Admin bestämmer hur mycket av materialet som finns i lagret.  
 
-4. Admin ska kunna ge/ändra personalens klassificeringsnivå.
-
-
-
-###Krav 3 Övrig funktionalitet {#k3}  
-
-1. Materialet finns i ett lager. Tar det slut kan man inte hyra ut det innan något av samma typ återlämnats.  
-
-2. Hanteringen ska enbart ske med hjälp av klasser. En fil = en klass. Inga lösa funktioner ska användas.  
-
-3. När programmet laddas ska en klass användas som läser in data från databasen/JSON-filen och skapar objekten som används.  
+4. Admin ska kunna ge/ändra personalens klassificeringsnivå.  
 
 
 
-###Krav 4: SQLAlchemy (optionell) {#k4}
+###Krav 3: Övrig funktionalitet {#k3}  
 
-Använd SQLAlchemy för att hantera dina klasser och objekt. Det krävs lite mer för att arbeta med arv i det sammanhanget.  
-[Info om arv](http://docs.sqlalchemy.org/en/latest/orm/inheritance.html)
+1. Materialet finns i ett lager. Tar det slut kan man inte hämta ut det innan något av samma typ återlämnats. Lagret ska vara en egen klass.  
+
+2. När programmet startar ska en Controllerklass användas från app.py som läser in data från databasen/JSON-filen och skapar objekten som används.  
+
+3. Hanteringen ska enbart ske med hjälp av klasser. En fil = en klass. Inga lösa funktioner ska användas utan styr allt från Controllerklassen.  
+
+
+
+###Krav 4: Login (optionell) {#k4}
+
+Admin måste logga in för att kunna lägga till eller ta bort personal/material.  
+Skriv användarnamn och lösenord i din redovisningstext.
+
 
 
 ###Krav 5: Lista (optionell) {#k5}
 
-Använd din egna lista från kmom05 för att hantera objekten i projektet.
+Använd din egna lista från kmom05 för att hantera objekten i projektet. Använd listan för att sortera materialet respektive personerna.
 
 
 
-###Krav 6: Produktifiera (optionell) {#k6}
-
-Visa beställaren bevis på att din kod är bra:  
+###Krav 6: Produktifiera (optionell) {#k6}  
 
 1. Skapa ett eget UML-diagram över strukturen (ej genererat). Döp filen till "uml.png".  
 
 2. Generera dokumentation för den färdiga koden. Döp filen till "doc.html".  
 
-3. Skriv unittester för dina klasser. Minst 50% [code coverage](https://en.wikipedia.org/wiki/Code_coverage). Döp testfilerna till "_klassens namn_-test.py".
+3. Skriv ett godtyckligt antal enhetstester för dina klasser. Döp testfilerna till "_klassens namn_-test.py".
 
 
