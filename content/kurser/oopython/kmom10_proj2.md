@@ -86,8 +86,7 @@ Uppdragen har också attribut som påverkar karaktärerna som används. Ex. Stå
 
 
 
-###Krav 6: Produktifiera (optionell) {#k6}
+###Krav 6: Risky business (optionell) {#k6}
 
-WHAAAAAAAT!?!?!?!
-
+Fick Nury kan använda Martel's besparingar för att satsa på om hjältarna kommer vinna uppdragen. Om pengarna tar slut går Martel i konkurs.
 
