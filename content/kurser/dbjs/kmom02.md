@@ -52,7 +52,7 @@ Läs följande:
     * Kap 6: Översättning från ER-modellen till relationsmodellen
     * Kap 7: Introduktion till frågespråket SQL
 
-En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1.
+    En översikt av kapitel ovan  finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 1.
 
 
 1. [Speaking JavaScript](kunskap/boken-speaking-javascript).
