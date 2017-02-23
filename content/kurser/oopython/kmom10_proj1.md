@@ -8,10 +8,6 @@ category:
 Kmom10: Projekt och examination
 ====================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 27/2-2017**.
-[/WARNING]
-
 
 
 Projektidé och upplägg {#upplagg}
@@ -94,5 +90,3 @@ Använd din egna lista från kmom05 för att hantera objekten i projektet. Anvä
 2. Generera dokumentation för den färdiga koden. Döp filen till "doc.html".  
 
 3. Skriv ett godtyckligt antal enhetstester för dina klasser. Döp testfilerna till "_klassens namn_-test.py".
-
-

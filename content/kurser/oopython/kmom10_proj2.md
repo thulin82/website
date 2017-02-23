@@ -8,10 +8,6 @@ category:
 Kmom10: Projekt och examination
 ====================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 27/2-2017**.
-[/WARNING]
-
 
 
 Projektidé och upplägg {#upplagg}
@@ -89,4 +85,3 @@ Uppdragen har också attribut som påverkar karaktärerna som används. Ex. Stå
 ###Krav 6: Risky business (optionell) {#k6}
 
 Fick Nury kan använda Martel's besparingar för att satsa på om hjältarna kommer vinna uppdragen. Om pengarna tar slut går Martel i konkurs.
-
