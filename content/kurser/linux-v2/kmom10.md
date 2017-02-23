@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
+    "2017-02-23": (B, mos) Förberedelse inför linux-v2.
     "2015-10-13": (A, mos) Första versionen till linux.
 ...
 Kmom10: Projekt och examination
@@ -209,9 +209,9 @@ Ett exempel är alltså `/room/search/karlskrona?max=5` som ger ett svar med max
 
 Bygg ut ditt system med bättre möjligheter för tester.
 
-I servern, lägg till en option av `--debug` som innebär utskrift av svaret som skickas till klienten. På det viset kan man på serversidan se exakt vilket svar som skickas på en viss request.
+I servern, lägg till en option av `--develop` som innebär utskrift av svaret som skickas till klienten. På det viset kan man på serversidan se exakt vilket svar som skickas på en viss request.
 
-I klienten, lägg till en option av `--debug` som innebär utskrift av urlen som skickas till klienten.
+I klienten, lägg till en option av `--develop` som innebär utskrift av urlen som skickas till klienten.
 
 Skapa ett bash-skript `bthappen/test.bash` som använder curl för att testa samtliga router (minst 15 testfall). Bash-skriptet skall skriva ut urlen som testas följt av den response kod som kommer från servern.
 
