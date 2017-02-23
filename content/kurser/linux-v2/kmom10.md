@@ -1,15 +1,15 @@
 ---
 author: mos
 revision:
-    "2017-02-23": (B, mos) Förberedelse inför linux-v2.
+    "2017-02-23": (B, mos) Ändrade `--debug` till `--develop`.
     "2015-10-13": (A, mos) Första versionen till linux.
 ...
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och blir tillgängligt **senast den 27/2-2017**.
-[/WARNING]
+[INFO]
+Kursmomentet är under översyn och <strike>blir tillgängligt **senast den 27/2-2017**</strike> blev tillgängligt 2017-02-23.
+[/INFO]
 
 Detta kursmoment avslutar och examinerar kursen.
 
