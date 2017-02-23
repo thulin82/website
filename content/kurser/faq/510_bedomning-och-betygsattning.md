@@ -8,6 +8,8 @@ Bedömning och betygsättning
 
 Här är de riktlinjer som används vid betygsättning. Detta dokument är också en mall som blir ett underlag till varje student så att de kan se grunderna för sitt betyg.
 
+
+
 Grunder för betygsättning {#grunder}
 -------------------------
 
@@ -30,6 +32,7 @@ Kursmomenten är utförda och redovisade enligt instruktionerna. Inget är under
 Redovisningstexterna är välskrivna, kompletta och ger en god bild av att studenten har förstått de olika övningarna. Studenten har god förmåga att reflektera över innehållet i övningarna och sin egen insats i kursmomentet.
 
 
+
 Poängbedömning {#poangbedomning}
 --------------------------------
 
@@ -42,6 +45,7 @@ Följande tabell används vid bedömning av genomförda kursmoment och redovisni
 | Kursmomenten är utförda enligt instruktion och redovisningstexterna är kompletta. | 30 | |	
 | Kursmomenten är mycket väl utförda och har det lilla extra. Redovisningstexterna är mycket välskrivna, insiktsfulla och visar på en mycket god förmåga att reflektera över kursmomenten, dess innehåll och studentens eget lärande. | 10 | |	
 | TOTALT | 40 | |	
+
 
 
 ###Projektarbete {#bedomning-projekt}
@@ -78,6 +82,7 @@ Ditt slutbetyg redovisas i tabellen nedan.
 **Övergripande kommentar**
 
 *Här skrivs en avslutande kommentar om betyget.*
+
 
 
 ###Revisionshistoria {#revisions-historia}
