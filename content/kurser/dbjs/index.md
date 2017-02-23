@@ -122,6 +122,10 @@ Då dyker vi in i databaser tillsammans med SQL och ER-modellering. Jag har valt
 
 ###Kmom03: JavaScript server {#kmom03}
 
+De blir kodning på serversidan och där har vi valt Node.js och JavaScript. Vi behöver starta med att installera Node.js på servern och komma igång med hur Node.js fungerar. Vi ser hur man byggger upp en enkel webbserver, eller webbtjänst, med Node.js.
+
+När vi fått ordning på Node.js och en enkel server så börjar vi koppla upp oss mot databasen. Vi fortsätter med SQLite ett tag till.
+
 [Instruktion till kursmoment 03](kurser/dbjs/kmom03).
 
 
