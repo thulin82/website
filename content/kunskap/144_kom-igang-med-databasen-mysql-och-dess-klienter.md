@@ -5,9 +5,10 @@ category:
     - databas
     - mysql
 revision:
-    "2015-03-05": (C, mos) Info om CLI på XAMPP och MAC.  
-    "2014-11-10": (B, mos) La till info om XAMPP MySQL cli och phpmyadmin.  
-    "2013-08-16": (A, mos) Första utgåvan som en del av kursen [oophp](oophp).  
+    "2017-02-23": (D, mos) Bort med MAMP och WAMP, bara kvar med XAMPP samt genomgång.
+    "2015-03-05": (C, mos) Info om CLI på XAMPP och MAC.
+    "2014-11-10": (B, mos) La till info om XAMPP MySQL cli och phpmyadmin.
+    "2013-08-16": (A, mos) Första utgåvan som en del av kursen [oophp](oophp).
 ...
 Kom igång med databasen MySQL och dess klienter
 ==================================
@@ -19,16 +20,6 @@ Databasen MySQL är populär i webbsammanhang och det finns ett par olika klient
 Låt oss därför kika lite på databasen MySQL och dess olika klienter.
 
 <!--more-->
-
-
-
-Revisionshistoria {#revision}
-------------------------------
-
-<span class='revision-history' markdown='1'>
-</span>
-
-
 
 
 
