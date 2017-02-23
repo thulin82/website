@@ -2,11 +2,10 @@
 author: mos
 category: unix
 revision:
+    "2017-02-21": (D, mos) Exempelprogram till node, LINUX_PORT på server och PID till fil samt måste flytta maze till egen katalog, förbered för vt18.
     "2016-06-04": (C, mos) Lade till krav på servern om LINUX_PORT + LINUX_SERVER
     "2015-10-16": (B, mos) Stycke om att kopiera routern, bytte namn på mazerunner.sh till mazerunner.bash.
     "2015-09-02": (A, mos) Första utgåvan i samband med kursen linux.
-updated: "2015-10-16 08:08:13"
-created: "2015-09-02 07:05:28"
 ...
 Lös mazen med din mazerunner i bash
 ==================================
@@ -52,7 +51,7 @@ Så här kan du starta servern.
 ```bash
 # Gå till kursrepot
 cd example/nodejs/maze
-babel-node index.js
+node index.js
 ```
 
 Du kan testa maze-servern med curl. Så här.
@@ -63,24 +62,30 @@ Studera gärna källkoden till maze-servern. Hade du kunnat skriva den själv?
 
 
 
-###Maze använder router {#router}
+###Ta en kopia av Maze {#copy}
 
-Maze-servern använder sig av en router som ligger i `../router/router.js`. Titta gärna kort i den filen. 
+Börja med att ta en kopia av koden i `example/nodejs/maze`. Spara alla dina filer i katalogen `me/kmom05/maze`. 
 
-Om du kopierar maze-servern så behöver du också kopiera router-filen. Det finns inget som hindrar att du väljer att kopiera in `router.js` till samma katalog som maze-filerna ligger i. Det kan vara behändigt.
-
-Isåfall behöver du ändra raden för import.
-
-```javascript
-import Router from "./router";
-//import Router from "../router/router";
+```bash
+# Gå till kursrepot
+cp -ri example/nodejs/maze/{api.md,index.js,maze.js,maps} me/kmom05/maze
 ```
 
+Kopiera sedan den router som maze-servern använder sig av.
 
+```bash
+# Gå till kursrepot
+cp -i example/nodejs/router/router.js me/kmom05/maze
+```
 
-###Var startar jag servern? {#var}
+Ändra sedan sökvägen för var router-modulen hittas, gör ändringen i `maze.js`.
 
-Tanken är att du kör din server på din debian-installation, så att du inte kör klienten och servern på samma maskin. Det finns inget som hindrar att du jobbar på en och samma maskin när du utvecklar. Men se till att testköra servern och klienten på olika maskiner, annars tappar du lite poängen med server och klient.
+```javascript
+//const Router = require("../router/router");
+const Router = require("./router");
+```
+
+Nu är du redo att starta din egen variant av maze-servern.
 
 
 
@@ -95,24 +100,25 @@ curl localhost:1337/map
 curl localhost:1337/map?type=csv
 ```
 
-Det är alltså `?type=csv` som kan underlätta för din bash-klient.
-
-
-
-###En katalog för din mazerunner {#katalog}
-
-Nu kan du börja, spara alla dina filer i katalogen `me/kmom05/maze`. 
-
-Använd funktioner i bash, för att strukturera din kod. Det lönar sig i längden.
+Det är alltså `?type=csv` som kan underlätta för din bash-klient som kommer att behöva parsa innehållet.
 
 
 
 Krav {#krav}
 -----------------------
 
+<!--
+###Uppdatera maze servern {#userv}
+
+1. Uppdatera din maze-server så att den kan starta upp och lyssna på porten `LINUX_PORT`, om variabeln är definierad. Defaultport kan annars vara 1337.
+
+1. Din maze-server skall skriva sitt PID till filen `pid` så att man kan avsluta processen med kommandot `kill $( cat pid )` (eller motsvarande på Cygwin).
+
+1. Lägg till en route `/:gameid/info` som skriver ut innehållet för just ditt game. Som en route bra för debug och testning. Det som skall skrivas ut är innehållet i `game[gameid]`.
+-->
 
 
-###Del 1 {#del1}
+###Bashscript för att lösa maze {#del1}
 
 1. Skapa ett skript `mazerunner.bash`. Sätt rättigheter på skriptet till 755. Skapa en symbolisk länk `mazerunner` som pekar på filen `mazerunner.bash`.
 
@@ -128,6 +134,7 @@ Krav {#krav}
 | `./mazerunner maps`     | Visa vilka maps som finns att välja bland. |
 | `./mazerunner select <map>` | Välj en viss karta. |
 | `./mazerunner enter`    | Gå in i första rummet. |
+| `./mazerunner info`     | Visa information om rummet. |
 | `./mazerunner go north` | Gå till ett nytt rum, om riktningen stödjs. |
 | `./mazerunner go south` | Gå till ett nytt rum, om riktningen stödjs. |
 | `./mazerunner go east`  | Gå till ett nytt rum, om riktningen stödjs. |
@@ -139,7 +146,7 @@ Så här kan det se ut när du är klar.
 
 
 
-###Del 2 {#del2}
+###Bashscript i loop {#del2}
 
 1. Utöka funktionaliteten i `mazerunner.bash` så att allt sker i en loop när man startar programmet med `./mazerunner loop`. Skriptet skall börja med att initiera ett nytt spel och visa vilka kartor som finns. Spelaren kan då välja en karta varpå spelaren träder in i första rummet. Därefter fortsätter loopen och väntar på att spelaren skriver in riktningen north, south, east, west, eller help för en hjälptext eller quit för att avsluta.
 
@@ -148,7 +155,24 @@ Så här kan det se ut, ungefär.
 [ASCIINEMA src=23368]
 
 
-2\. Validera och publicera din kod enligt följande.
+<!--
+###Lös mazen {#solution}
+
+1. Utöka funktionaliteten i `mazerunner.bash` så att den automatiskt går igenom mazen på ett effektivt sätt som leder till sista rummet. Du startar detta genom att ange `./mazerunner solve`.
+
+
+
+###Buggfix {#bugg}
+
+1. Det finns en felrapport på maze-servern, [issue 8](https://github.com/dbwebb-se/linux/issues/8), som behöver lagas. Gör först ett testfall `issue.bash` som återskapar och påvisar felet. Laga sedan felet i din maze server.
+
+-->
+
+
+
+###Validera och publicera {#publish}
+
+Validera och publicera din kod enligt följande.
 
 ```bash
 # Ställ dig i kurskatalogen
