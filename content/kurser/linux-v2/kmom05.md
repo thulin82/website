@@ -3,7 +3,6 @@ author: mos
 revision:
     "2016-12-21": (C, efo) Från asynkronprogrammering till nodejs api.
     "2016-12-21": (B, efo) Länk till ny lab.
-    "2016-12-16": (PB1, mos) Förberedelse inför linux-v2.
     "2015-09-02": (A, mos) Första utgåvan för kursen.
 ...
 Kmom05: Webbtjänst med RESTful API
