@@ -24,9 +24,7 @@ Förutsättning {#pre}
 
 Du har redan koll på databasen SQLite och du kan grunderna i Node.js och JavaScript på serversidan.
 
-Exempelprogram finns i ditt kursrepo (dbjs) under `example/nodejs/sqlite`.
-
-De testprogram du skriver kan du lägga i din me-katalog under nuvarande kursmoment och spara i katalogen `sqlite`.
+Exempelprogram finns i ditt kursrepo (dbjs) under `example/nodejs/sqlite3`.
 
 
 

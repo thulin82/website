@@ -2,20 +2,28 @@
 author: mos
 category: javascript
 revision:
-  "2015-09-08": (A, mos) Första utgåvan.
-updated: "2015-09-08 11:57:50"
-created: "2015-09-08 11:57:47"
+    "2017-02-24": (B, mos) Enbart node.
+    "2015-09-08": (A, mos) Första utgåvan.
 ...
 Gör en kommandoradsklient i Node.js
 ==================================
 
-[FIGURE src=/image/snapht15/thinking-of-number.png?w=w2&a=0,0,75,0]
+[FIGURE src=/image/snapht15/thinking-of-number.png?w=c5&a=0,70,75,0 class="right"]
 
 Att skriva program för kommandoraden kan vara en trevlig programmeringsövning. Det brukar finnas en del inbyggda funktioner och bibliotek som underlättar för oss att skapa kraftulla kommandoradsprogram, commandline interface (CLI), om vi bara lär oss grunderna.
 
 Så, hur ser då detta ut i Node.js? Hur skapar vi kommandoradsklienter i den asynkrona programmeringsmodell som Node.js förespråkar?
 
 <!--more-->
+
+
+
+Förutsättning {#forutsattning}
+--------------------------------------
+
+Du har Node.js installerat och kan grunderna i hur man programmerar JavaScript.
+
+Om ditt kursrepo innehåller exempelprogrammet (linux, dbjs) så ligger det under `example/nodejs/guess-my-number-cli`.
 
 
 
@@ -35,9 +43,9 @@ console.log("I am thinking of a number between " + min + " and " + max);
 askQuestion("Take a guess");
 ```
 
-Tanken är att funktionen `askQuestion()` skall läsa in från terminalen och testa om det gissade talet är rätt.
+Tanken är att funktionen `askQuestion()` skall läsa in från terminalen och testa om det gissade talet är rätt eller ej.
 
-Det är här vår synkrona tankebana kan spela oss ett spratt i en värld av asynkron programmering som är beroende av event. Hur läser man in något från tangentbordet i en loop?
+Det är här vår synkrona tankebana kan spela oss ett spratt i en värld av asynkron programmering som är beroende av event. Hur läser man in något från tangentbordet i en loop i Node.js som är asynkron i grunden?
 
 Jo, låt oss titta på hur Node.js löser det med sin inbyggda modul [readline](https://nodejs.org/api/readline.html).
 
@@ -79,9 +87,13 @@ Du kan se hela programmet i ett sammanhang på GitHub, det heter [`index-step1.j
 
 Så här ser det ut när jag provkör det.
 
+```bash
+$ node index-step1.js
+```
+
 [ASCIINEMA src=26098]
 
-Som sagt, om man är van vid synkron och blockande programmering där allt händer efter varandra, så kan den asynkrona programmeringsmodellen se lite udda ut vid första ögonkastet. Men man vänjer sig snabbt. Jag lovar.
+Som sagt, om man är van vid synkron och blockande programmering där allt händer efter varandra, så kan den asynkrona programmeringsmodellen se lite udda ut vid första ögonkastet. Men man vänjer sig. Jag lovar.
 
 
 
@@ -116,7 +128,7 @@ Skriptet kan du se i sin helhet i filen [`index-step2.js`](https://github.com/mo
 Det första jag gjorde var att lägga till en shebang i början av skriptet.
 
 ```javascript
-#!/usr/bin/env babel-node
+#!/usr/bin/env node
 ```
 
 Sedan satte jag rättigheterna så skriptet blir körbart.
@@ -225,14 +237,14 @@ Nu kan vi spela som vanligt igen.
 
 [ASCIINEMA src=26102]
 
-Är det så här man gör ett CLI-skript med Node.js? Ja, det är en variant. Men det finns också paket i npm som man kan använda. Men de tar jag inte upp just nu. Det får vara en annan historia. Det jag visat är grundtekniken som gäller för CLI-skript och den tar dig en lång bit fram.
+Är det så här man gör ett CLI-skript med Node.js och parsar inkommande argument och options? Ja, det är en variant. Men det finns också paket i npm som man kan använda. Men de tar jag inte upp just nu. Det får vara en annan historia. Det jag visat är grundtekniken som gäller för CLI-skript och den tar dig en lång bit fram.
 
 
 
 En mainloop {#mainloop}
 --------------------------------------
 
-Låt oss nu titta på en annan variant som är bra att ha i samband med CLI-skript. Vi ska göra en mainloop med en kommandotolk. Här använder vi den inbyggda modulen som vi redan använder i `rl.question(string, callback)`.
+Låt oss nu titta på en annan variant som är bra att ha i samband med CLI-skript. Vi ska göra en mainloop med en kommandotolk. Här använder vi den inbyggda modulen readline som vi redan använder i `rl.question(string, callback)`.
 
 Tanken är att göra en kommandotolk. Man kan skriva in ett kommando som tolkas av skriptet. Låt mig visa hur man kan göra.
 
