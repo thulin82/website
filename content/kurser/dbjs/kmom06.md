@@ -37,6 +37,12 @@ Läs följande:
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
+<!--
+Saker vi inte hanterat:
+
+* Kap 3: Mer om datamodellering
+* Kap 11: Normalformer och normalisering
+-->
 
 
 

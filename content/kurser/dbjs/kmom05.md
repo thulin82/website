@@ -34,9 +34,9 @@ Läs följande:
     * Kap 12. Integritetsvillkor
     * Kap 14: Lagrade procedurer
     * Kap 15: Aktiva databaser och triggers
+    * Kap 23: Transaktioner
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
-
 
 
 
@@ -69,6 +69,12 @@ Det finns inga extra lästips.
 ###Övningar {#ovningar}
 
 Det finns inga övningar.
+
+(
+    1. Gör uppgiften lab med transaktioner.
+    1. Nodejs klient/server mot transaktioner
+)
+
 
 
 
