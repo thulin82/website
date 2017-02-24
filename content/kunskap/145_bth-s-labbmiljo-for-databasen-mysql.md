@@ -31,7 +31,7 @@ Du behöver ett studentkonto på studentservern ssh.student.bth.se.
 
 Du kan själv skaffa dig ett konto på databasservern. Du gör det via Studentportalen -> Mina E-tjänster -> Ändra lösenord.
 
-KOm nu ihåg att du har två olika användare/lösenord. Ett till studentservern och ett till databassservern. De har samma användare men två olika lösenord.
+Kom nu ihåg att du har två olika användare/lösenord. Ett till studentservern och ett till databassservern. De har samma användare men två olika lösenord.
 
 Du är bekant med databasen MySQL och dess olika klienter, annars läser du först guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)".
 
