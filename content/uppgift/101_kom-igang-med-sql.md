@@ -1,8 +1,24 @@
 ---
 author: mos
-category: sql
-updated: "2013-11-19 11:20:57"
-created: "2013-07-05 08:24:52"
+category:
+    - sql
+    - databas
+revision:
+    "2017-02-24": (O, mos) Genomgång inför dbjs.
+    "2013-11-18": (N, mos) Bytte ut bild om 3-tabellers join, stycke om teckenkodning, stycke om ER-diagram.
+    "2013-10-17": (M, mos) Förtydligade att man inte kan skapa en ny databas på BTH's server.
+    "2013-08-16": (L, mos) Flyttad till dbwebb.se, genomgången och uppdaterad samt testad. Nu som en del av kursen [oophp](oophp).
+    "2011-01-20": (K) Uppdaterat betygsättning till G/U.  
+    "2010-09-04": (J) Genomgången HT2010, ändrade lite i redovisningstexten, lade till stycke om storage engines.  
+    "2010-03-01": (I) Förtydligade texten i 11.1-11.3.  
+    "2010-01-20": (H) Uppdaterade 12.5-6 och lade till 12.7 med INNER JOIN stycke 14 OUTER JOIN som extrauppgift.  
+    "2010-01-14": (G) Genomgånget inför våren 2010. Numrerade om kapitlen. Småjusteringar i övningarna. Förtydligade.  
+    "2009-09-23": (F) Förtydligade stycke under INSERT om att ange vilka kolumner som INSERT avser.  
+    "2009-09-09": (E) Integrerade smärre ändringar från vårens kursomgång, missade det i förra uppdateringen. Smärre justeringar samt lade till MIN, MAX och HAVING under stycket om aggregerande funktioner. Bytte plats på kapitel 7 och 8. Lade till en Tankenöt på sista uppgiften.  
+    "2009-09-04": (D) Genomgång inför hösten 2009.  
+    "2008-10-08": (C) Förtydligade att SQL kommandona skall sparas i fil.  
+    "2008-09-15": (B) Smärre justeringar i text och formuleringar.  
+    "2008-08-28": (A) Första utgåvan.  
 ...
 Kom igång med SQL
 ==================================
@@ -13,7 +29,7 @@ Om du redan kan SQL så är den här övningen någorlunda enkel. Men då får d
 
 <!--more-->
 
-Övningen är utvecklad för MySQL men använder standard SQL så den bör gå bra att köra även i andra databaser. När det finns hänvisningar till referensmanualen så avses [referensmanualen för MySQL](http://dev.mysql.com/doc/refman/5.6/en/). Välj senaste GA versionen av manualen, men även äldre versioner fungerar för övningens omfattning.
+Övningen är utvecklad för MySQL men använder standard SQL så den bör gå bra att köra även i andra databaser. När det finns hänvisningar till referensmanualen så avses [referensmanualen för MySQL](http://dev.mysql.com/doc/refman/5.7/en/). Välj senaste GA versionen av manualen, men även äldre versioner fungerar för övningens omfattning.
 
 Du kan välja att göra övningen i valfri klient. Jag har gjort övningen i MySQL Workbench.
 
@@ -23,6 +39,8 @@ Förkunskaper {#forkunskaper}
 ---------------------------------------------------------------------
 
 Du behöver ha tillgång till en databasserver för MySQL och en klient som WorkBench, PHPMyAdmin eller kommandoradsklient. Behöver du hjälp så finns guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)".
+
+Om du vill kan du utföra labben genom att jobba mot [BTH's labbmiljö för MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql).
 
 
 
@@ -67,19 +85,20 @@ Pröva att finna informationen om dessa SQL-kommandon i refmanualen. Ju bättre 
 
 ###1.2 Spara din SQL kod i fil {#spara}
 
-Spara din SQL-kod från alla övningar i en text-fil. En sådan fil är perfekt att ha som minne och bra att använda när du framöver vill gå tillbaka och se hur du löste en viss uppgift eller problemställning. Ett eget litet facit för framtida SQL-konstruktioner.
+Spara din SQL-kod från alla övningar i en textfil. En sådan fil är perfekt att ha som minne och bra att använda när du framöver vill gå tillbaka och se hur du löste en viss uppgift eller problemställning. Ett eget litet facit för framtida SQL-konstruktioner.
 
 Använd SQL-kommentarer (2 minustecken följt av ett mellanslag eller ny rad) för att skriva vilken övning det gäller.
 
 ```sql
 --
 -- Övning 01: Skapa en databas
+-- Av: mosstud, Mikael Roos
 --
 -- Detta är en kommentar i SQL
 --
 ```
 
-De första övningarna är enkla för att sedan bli svårare och svårare. Ju längre du kommer desto bättre kompis måste du bli med referensmanualen. Se hur långt du kommer, klarar du alla uppgifterna?
+De första övningarna är enkla för att sedan bli svårare och svårare. Ju längre du kommer desto bättre kompis måste du bli med referensmanualen.
 
 
 
@@ -582,7 +601,9 @@ Att modellera och rita ER-diagram är en egen historia i sig. Vi nöjer oss med 
 
 ###12.3 Främmande nycklar {#frammande}
 
-Det är bra att ange främmande nycklar i tabellerna. Läs i refmanualen om 'FOREIGN KEY'. Den SQL-kod som behövs kan se ut ungefär så här:
+Det är bra att ange främmande nycklar i tabellerna. Det förtydligar att det finns en *constraint*, en begränsning eller integritet, i din databas.
+
+Den SQL-kod som behövs kan se ut ungefär så här:
 
 ```sql
 --
@@ -642,7 +663,7 @@ Teckenkodningen påverkar inte enbart lagringen av information, *även kommunika
 SET NAMES 'utf8';
 ```
 
-Ofta glöms ovan bort och då fungerar inte teckenkodningen som tänkt.
+Ofta glöms ovan bort och då fungerar teckenkodningen inte alltid som tänkt.
 
 Titta kort i [manualen om teckenkodning](http://dev.mysql.com/doc/refman/5.6/en/charset.html).
 
@@ -754,7 +775,7 @@ FROM Kurstillfalle AS Kt
 
 Så här ser det ut hos mig. Lek gärna och ändra den så att du har koll på hur den fungerar.
 
-[FIGURE src=/image/snapshot/sql-ovning-korrekt-join.jpg?w=w2&q=70 caption="En "korrekt" INNER JOIN av tre tabeller."]
+[FIGURE src=/image/snapshot/sql-ovning-korrekt-join.jpg?w=w2&q=70 caption="En korrekt INNER JOIN av tre tabeller."]
 
 När man jobbar med många tabeller så blir SQL-satserna ofta långa. Därför kan det vara bra att anamma en struktur att skriva dem på, ungefär som i bilden ovan, använd tab för att strukturera koden.
 
@@ -870,7 +891,7 @@ ORDER BY K.kodKurs;
 Syntes den nya kursen i resultatet där du joinade Kurs och Kurstillfalle? Nej, det gjorde den inte. Det finns inget kurstillfalle att koppla den med och därför utelämnas den ur resultatet från din `INNER JOIN`.
 
 [INFO]
-En `INNER JOIN` visar de rader som kan matchas mellan tabellerna. Finns det ingen match så visas inte raden.
+En `INNER JOIN` visar de rader som kan matchas mellan tabellerna. Finns det ingen matchning så visas inte raden.
 [/INFO]
 
 Byt nu ut `INNER JOIN` till `RIGHT OUTER JOIN` i SQL-satsen och kör den igen. Nu kom den med va?
@@ -878,7 +899,7 @@ Byt nu ut `INNER JOIN` till `RIGHT OUTER JOIN` i SQL-satsen och kör den igen. N
 Däremot är läsperioden `NULL`, men det stämmer, det fanns ju ingen rad i tabellen Kurstillfalle att länka till, då blir det `NULL`.
 
 [INFO]
-`OUTER JOIN` visar resultat för alla rader, även om det inte finns någon rad att länka till.
+`OUTER JOIN` visar resultat för alla rader, även om det inte finns någon rad att matcha mellan tabellerna.
 [/INFO]
 
 `RIGHT OUTER JOIN` utgår från den **högra tabellen** i uttrycket (Kurs i detta fallet). Uttrycket kan utläsas enligt följande:
@@ -898,31 +919,12 @@ Det kan ta lite tid att lära sig `LEFT/RIGHT OUTER JOIN`. Låt det smälta in o
 Avslutningsvis {#avslut}
 ---------------------------------------------------------------------
 
-Bra jobbat. Se till att spara undan din SQL-fil. Den är bra att titta tillbaka i när du framöver ska lösa SQL-relaterade problem och kanske vill din lärare se hur du löste uppgifterna.
+Bra jobbat.
+
+Se till att spara undan din SQL-fil. Den är bra att titta tillbaka i när du framöver ska lösa SQL-relaterade problem och kanske vill din lärare se hur du löste uppgifterna.
 
 Om du vill dokumentera din övning på ett grafiskt sätt så kan du göra det med WorkBench och "Reverse Engineering". Läs gärna om hur du kan [skapa en grafisk modell av en befintlig databas](coachen/reverse-engineering-av-databasen-mysql-med-workbench) och testa det på din databas som du precis gjort.
 
 Är du intresserad av att läsa om databasmodellering så finns det en [Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering) som är en bra startpunkt.
 
-
-
-Revisionshistoria {#revision}
-------------------------------
-
-<span class='revision-history' markdown='1'>
-2013-11-18 (N, mos) Bytte ut bild om 3-tabellers join, stycke om teckenkodning, stycke om ER-diagram.  
-2013-10-17 (M, mos) Förtydligade att man inte kan skapa en ny databas på BTH's server.  
-2013-08-16 (L, mos) Flyttad till dbwebb.se, genomgången och uppdaterad samt testad. Nu som en del av kursen [oophp](oophp).  
-2011-01-20: (K) Uppdaterat betygsättning till G/U.  
-2010-09-04: (J) Genomgången HT2010, ändrade lite i redovisningstexten, lade till stycke om storage engines.  
-2010-03-01: (I) Förtydligade texten i 11.1-11.3.  
-2010-01-20: (H) Uppdaterade 12.5-6 och lade till 12.7 med INNER JOIN stycke 14 OUTER JOIN som extrauppgift.  
-2010-01-14: (G) Genomgånget inför våren 2010. Numrerade om kapitlen. Småjusteringar i övningarna. Förtydligade.  
-2009-09-23: (F) Förtydligade stycke under INSERT om att ange vilka kolumner som INSERT avser.  
-2009-09-09: (E) Integrerade smärre ändringar från vårens kursomgång, missade det i förra uppdateringen. Smärre justeringar samt lade till MIN, MAX och HAVING under stycket om aggregerande funktioner. Bytte plats på kapitel 7 och 8. Lade till en Tankenöt på sista uppgiften.  
-2009-09-04: (D) Genomgång inför hösten 2009.  
-2008-10-08: (C) Förtydligade att SQL kommandona skall sparas i fil.  
-2008-09-15: (B) Smärre justeringar i text och formuleringar.  
-2008-08-28: (A) Första utgåvan.  
-</span>
-
+Det finns en egen forumtråd till denna artikel, sär kan du [ställa frågor eller ge tips](t/6267) om artikeln.
