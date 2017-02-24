@@ -130,11 +130,11 @@ När vi fått ordning på Node.js och en enkel server så börjar vi koppla upp 
 
 
 
-###Kmom04: Transaktioner {#kmom04}
+###Kmom04: MySQL {#kmom04}
 
 Då går vi vidare till databasen MySQL och dess olika klienter samt prövar att använda SQL tillsammans med MySQL. Du får jobba igenom en övning i SQL som tar dig från de enklare konstruktionerna till mer utmanande saker som subqueries och `RIGHT/LEFT OUTER JOIN`. När övningen är slut så har du både kommit in i MySQL och bekantat dig med ytterligare varianter av SQL.
 
-Du kommer även kika på transaktioner samt jobba vidare med JavaScript och Node.js.
+Du kommer även jobba vidare med JavaScript, Node.js och se hur du kan koppla dig till en MySQL databas.
 
 [Instruktion till kursmoment 04](kurser/dbjs/kmom04).
 
