@@ -1,11 +1,20 @@
 ---
 author: mos
-category: labbmiljo
-updated: "2014-11-10 11:46:34"
-created: "2013-08-16 16:00:16"
+category:
+    - labbmiljo
+    - databas
+    - mysql
+revision:
+    "2014-11-10": (E, mos) Länkade till artikel om ssh och klienter.
+    "2014-11-05": (D, mos) Inforuta om SSH KeepAlive med Workbench.
+    "2013-10-22": (C, mos) Inforuta om secure_auth med Workbench.
+    "2013-10-17": (B, mos) Lade till information om att man inte kan skapa nya databaser på studentservern.
+    "2013-08-20": (A, mos) Första utgåvan som en del av kursen [oophp](oophp). Omskriven från en [äldre version](https://docs.google.com/document/d/1kyemM3VIHh2u7df8ALQPmwB2S-LBFRNrgN11VaaCIbQ/preview?pli=1#).  
 ...
 BTH's labbmiljö för databasen MySQL
 ==================================
+
+[FIGURE src=image/snapshot/bth-mysql-login-bluray.jpg?w=c5&a=0,65,80,0&cf class="right"]
 
 BTH's labbmiljö innehåller databasen MySQL och ett par olika klienter som kan användas för att koppla upp sig mot databasen. Här är en översikt av hur du går tillväga, som student vid BTH, för att få tillgång till MySQL.
 
@@ -19,37 +28,47 @@ Förutsättningar {#forutsattning}
 
 Du behöver ett studentkonto på studentservern ssh.student.bth.se.
 
-Du kan själv skaffa dig ett konto på databasservern, här är ett [foruminlägg som visar hur du gör](t/188).
+Du kan själv skaffa dig ett konto på databasservern. Du gör det via Studentportalen -> Mina E-tjänster -> Ändra lösenord.
+
+KOm nu ihåg att du har två olika användare/lösenord. Ett till studentservern och ett till databassservern. De har samma användare men två olika lösenord.
 
 Du är bekant med databasen MySQL och dess olika klienter, annars läser du först guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)".
-
-Du vet hur du loggar in på en extern server med terminalen och ssh. Här är en guide som visar hur du gör, "[Att koppla upp dig mot en server med SSH via terminalen](kunskap/att-koppla-upp-dig-mot-en-server-med-ssh-via-terminalen)".
 
 
 
 Databasservern {#dbserver}
 ------------------------------
 
-Databasservern heter blu-ray.student.bth.se och kör MySQL server. Du kan inte logga in direkt på servern utan kommer åt databasen via olika klienter.
+Databasservern heter `blu-ray.student.bth.se` och kör en MySQL server. Du kan inte logga in direkt på servern, men du kommer åt databasen via olika klienter.
 
-På servern har du *en databas*, du har *inte* rättigheter att skapa fler databaser så du får samla alla dina tabeller i en databas. I sådana sammanhang brukar man lägga till ett prefix framför tabellnamnet för att ha lite bättre koll på tabellerna, till exempel 'labb1_skolan' och 'labb2_student'.
+
+
+###Du har 1 databas {#en}
+
+På servern har du *en (1) databas*, du har *inte* rättigheter att skapa fler databaser så du får samla alla dina tabeller i en databas. 
+
+Databasen heter samma sak som din studentakronym.
+
+I sådana sammanhang brukar man lägga till ett prefix framför tabellnamnet för att ha lite bättre koll på tabellerna, till exempel `labb1_skolan` och `labb2_student` där `labb1_` och `labb2_` skapar en form av *namespace*, en namnrymd, för dina tabeller. På det viset undviker du krockar om tabellerna blir många.
 
 
 
 Klient MySQL CLU  {#clu}
 ------------------------------
 
-Du kan logga in på studentservern ssh.student.bth.se med ditt studentkonto och starta upp kommandoradsklienten MySQL CLU (Command line Utility).
+Du kan logga in på studentservern `ssh.student.bth.se` med ditt studentkonto och starta upp kommandoradsklienten MySQL CLU (Command line Utility).
 
-Använd terminalprogrammen xterm eller putty för att logga in på studentservern. Använd ditt vanliga studentlösenord.
+Använd ett terminalprogrammen (xterm, cygwin, putty) för att logga in på studentservern via ssh. Använd ditt vanliga studentlösenord.
 
-**Logga in på studentservern via xterm/putty.**
+**Logga in på studentservern via xterm.**
 
 ```bash
 ssh mosstud@ssh.student.bth.se
 ```
 
-[FIGURE src=/image/snapshot/bth-mysql-login-ssh.jpg?w=w1&q=60 caption="Logga in på studentservern med terminalprogram xterm eller putty."]
+Om du använder dbwebb-cli så kan du köra `dbwebb login`, vilket är samma sak som att logga in med ssh till studentservern.
+
+[FIGURE src=/image/snapshot/bth-mysql-login-ssh.jpg?w=w1&q=60 caption="Logga in på studentservern med terminalprogram xterm."]
 
 Nu kan du starta klienten och logga in mot databasen. Använd ditt lösenord för databasen.
 
@@ -61,14 +80,18 @@ mysql -hblu-ray.student.bth.se -p
 
 [FIGURE src=/image/snapshot/bth-mysql-login-bluray.jpg?w=w1&q=60 caption="Logga in på databasservern med kommandoradsklienten."]
 
-Mitt konto på databasservern (mos) skiljer sig från mitt konto på studentservern (mosstud), det är därför jag anger kommandoraden lite annorlunda i bilden. Skriv `mysql --help` för att se vad de olika parametrarna innebär.
+Så här kan det se ut när jag loggar in på min databas.
+
+[ASCIINEMA src=104465]
+
+Mitt konto på databasservern (mos) skiljer sig från mitt konto på studentservern (mosstud), det är därför jag anger kommandoraden lite annorlunda i bilden (`-umos`). Skriv `mysql --help | more` eller `man mysql` för att se vad de olika parametrarna innebär.
 
 
 
 Klient PHPMyAdmin  {#phpmyadmin}
 ------------------------------
 
-På webbservern www.student.bth.se finns den webbaserade klienten phpmyadmin installerad. Du når den via följande länk:
+På webbservern `www.student.bth.se` finns den webbaserade klienten phpmyadmin installerad. Du når den via följande länk:
 
 * [http://www.student.bth.se/phpmyadmin](http://www.student.bth.se/phpmyadmin)
 
@@ -82,6 +105,44 @@ Klient MySQL Workbench {#workbench}
 ------------------------------
 
 Du kan ladda ned och installera klienten [MySQL Workbench](http://www.mysql.com/products/workbench/).
+
+Om du finns **inom skolans nät** kan du skapa en vanlig koppling mot databasservern.
+
+| Vad               | Ange                   |
+|-------------------|------------------------|
+| Connection method | Standard (TCP/IP)      |
+| Hostname          | blu-ray.student.bth.se |
+| Port              | 3306                   |
+| Username          | Ditt konto på databasservern |
+| Password          | Ditt lösenord till databasservern |
+
+
+Om du sitter **utanför skolans nät** kan du skapa en SSH-tunnel via studentservern ssh.student.bth.se och på det sättet komma åt databasservern. Du behöver göra så eftersom porten 3306 är spärrad i skolans brandvägg.
+
+| Vad               | Ange                     |
+|-------------------|--------------------------|
+| Connection method | Standard TCP/IP over SSH |
+| SSH Hostname      | ssh.student.bth.se:22    |
+| SSH Username      | Ditt konto på ssh.student |
+| SSH Password      | Ditt lösenord            |
+| MySQL Hostname    | blu-ray.student.bth.se   |
+| MySQL Server Port | 3306                     |
+| Username          | Ditt konto på databasservern |
+| Password          | Ditt lösenord till databasservern |
+
+
+Så här kan det se ut när du skapar en ny ssh-tunnel mot databasservern via studentservern.
+
+[FIGURE src=/image/snapshot/bth-workbench-new-connection.jpg?w=w1&q=60 caption="Skapa koppling mot databasservern via en ssh-tunnel."]
+
+Kikar du på bilden så ser du att jag har olika användarid:n på studentservern och på databasservern. Du har högst troligen samma id på båda servrarna.
+
+
+
+Problem och lösningar med Workbench {#common}
+------------------------------
+
+Här följer ett par vanliga problem/lösningar som kan dyka upp med WorkBench.
 
 [INFO]
 **Felmeddelande: Connection using old (pre 4.1.1) authentication**
@@ -100,37 +161,6 @@ Har du problem med att du hela tiden tappar kopplingen, när du kör via SSH-tun
 
 Gå till "Edit -> Preferences -> Advanced" och fyll i siffran 200 i fältet för SSH KeepAlive.
 [/INFO]
-
-Om du finns inom skolans nät kan du skapa en vanlig koppling mot databasservern.
-
-| Vad               | Ange                   |
-|-------------------|------------------------|
-| Connection method | Standard (TCP/IP)      |
-| Hostname          | blu-ray.student.bth.se |
-| Port              | 3306                   |
-| Username          | Ditt konto på databasservern, samma som ditt studentid |
-| Password          | Ditt lösenord till databasservern |
-
-
-Om du sitter utanför skolans nät kan du skapa en SSH-tunnel via studentservern ssh.student.bth.se och på det sättet komma åt databasservern. Du behöver göra på det sättet eftersom porten 3306 är spärrad i skolans brandväggar.
-
-| Vad               | Ange                     |
-|-------------------|--------------------------|
-| Connection method | Standard TCP/IP over SSH |
-| SSH Hostname      | ssh.student.bth.se:22    |
-| SSH Username      | Ditt konto på studentservern, samma som ditt studentid |
-| SSH Password      | Ditt lösenord till studentservern |
-| MySQL Hostname    | blu-ray.student.bth.se |
-| MySQL Server Port | 3306                   |
-| Username          | Ditt konto på databasservern, samma som ditt studentid |
-| Password          | Ditt lösenord till databasservern |
-
-
-Så här kan det se ut när du skapar en ny ssh-tunnel mot databasservern via studentservern.
-
-[FIGURE src=/image/snapshot/bth-workbench-new-connection.jpg?w=w1&q=60 caption="Skapa koppling mot databasservern via en ssh-tunnel."]
-
-Kikar du på bilden så ser du att jag har olika användarid:n på studentservern och på databasservern. Du har högst troligen samma id på båda servrarna.
 
 
 
@@ -185,21 +215,6 @@ Så här kan det se ut i Workbench.
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Vill du öva mer SQL så finns en övning / uppgift "[Kom igång med SQL](uppgift/kom-igang-med-sql)"
+Då vet du hur du kan jobba med BTH's labbmiljö för MySQL. Vill du öva mer SQL så finns en övning / uppgift "[Kom igång med SQL](uppgift/kom-igang-med-sql)"
 
-Frågor och kommentarer tar vi i forumet.
-
-
-
-Revisionshistoria {#revision}
-------------------------------
-
-<span class='revision-history' markdown='1'>
-2014-11-10 (E, mos) Länkade till artikel om ssh och klienter.  
-2014-11-05 (D, mos) Inforuta om SSH KeepAlive med Workbench.  
-2013-10-22 (C, mos) Inforuta om secure_auth med Workbench.  
-2013-10-17 (B, mos) Lade till information om att man inte kan skapa nya databaser på studentservern.  
-2013-08-20 (A, mos) Första utgåvan som en del av kursen [oophp](oophp). Omskriven från en [äldre version](https://docs.google.com/document/d/1kyemM3VIHh2u7df8ALQPmwB2S-LBFRNrgN11VaaCIbQ/preview?pli=1#).  
-</span>
-
-
+Frågor och kommentarer tar vi i forumet, det finns en [egen tråd för denna artikel](t/6264).
