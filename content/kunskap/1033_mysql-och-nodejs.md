@@ -240,6 +240,7 @@ connection.query(sql, (err, res/*, fields*/) => {
 
 Det går att använda placeholders och parametrar för att exekvera en fråga. Det ger även ett visst skydd mot SQL injection genom att escapa argumentet.
 
+```javascript
 sql = `
 SELECT * FROM Moped
 WHERE
@@ -288,4 +289,4 @@ Avslutningsvis {#avslutning}
 
 Du har nu fått en genomgång i hur MySQL kan fungera tillsammans med Node.js. Du är redo att börja skriva ditt egna program.
 
-Denna artikel har en [egen forumtråd](t/6222) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/6270) som du kan ställa frågor i, eller ge tips.
