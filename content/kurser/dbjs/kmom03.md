@@ -114,7 +114,7 @@ Genomför följande övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör laborationen [Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs) för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
+1. Gör laborationen "[Introduktion till nodejs (node1)](uppgift/introduktion-till-nodejs)" för att öva på grunderna i nodejs. Spara koden i `me/kmom03/node1`.
 
 1. Gör uppgiften "[Skapa en RESTful HTTP-server med Node.js (server)](uppgift/skapa-en-restful-http-server-med-node-js)". Spara koden i `me/kmom03/server`.
 
