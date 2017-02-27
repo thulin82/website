@@ -27,12 +27,11 @@ Du har installerat `nodejs`, `npm` och en lokal utvecklingsmiljö för kursrepot
 Du har tillgång till kommandot `dbwebb` och du har clonat kursrepot (linux, dbjs).
 
 
-<!--
+
 Videoserie {#video}
 -----------------------
 
 Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_AGc9pBgaXFEQGjyFJe7XJ) som hjälper dig med denna labben titta på videor som börjar på 4.
--->
 
 
 
