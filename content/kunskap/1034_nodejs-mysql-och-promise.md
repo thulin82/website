@@ -225,4 +225,4 @@ Avslutningsvis {#avslutning}
 
 Du har nu fått en snabb introduktion i hur konstruktionen Promise kan användas för att skapa sekventiell exekvering av asynkron kod.
 
-Denna artikel har en [egen forumtråd](t/6270) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/6276) som du kan ställa frågor i, eller ge tips.
