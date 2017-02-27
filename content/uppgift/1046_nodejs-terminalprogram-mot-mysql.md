@@ -21,6 +21,8 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)" samt artikeln "[MySQL och Node.js](kunskap/mysql-och-nodejs)".
 
+Du har kikat igenom artikeln "[]()".
+
 Du har även kunskaper i SQL och MySQL motsvarande artikeln ["Kom igång med SQL"](uppgift/kom-igang-med-sql).
 
 
@@ -66,6 +68,8 @@ Krav {#krav}
 1. Skapa ett menyval "all" som visar de produkter som antingen finns i det lokala lagret, eller hos leverantörens centrala lagret. Visa hur många som finns i respektive lager. Visa produkten även om den inte finns i något av lagren. Sortera per bokstavsordning.
 
 1. Skapa ett menyval "only" som fungerar som "all" men visar de produkter som finns både i det lokala lagret och i leverantörens centrala lagret.
+
+1. Använd Promise så att din prompt skrivs ut på rätt ställe.
 
 1. Validera din kod.
 
