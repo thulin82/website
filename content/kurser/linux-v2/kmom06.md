@@ -42,10 +42,14 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Det finns ingen läsanvisning i kurslitteraturen.
-
+Det finns ingen läsanvisning.
 <!--
-http://exploringjs.com/es6/index.html
+INFÖR VT18
+Läs följande.
+
+1. [Exploring ES6](kunskap/boken-exploring-es6) om Promise.
+    * Ch 24: Asynchronous programming (background)
+    * Ch 25: Promises for asynchronous programming
 -->
 
 
