@@ -1,14 +1,14 @@
 ---
 author: mos
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-02-27": (A, mos) Första utgåva.
 ...
 Kmom04: MySQL
 ==================================
 
-[WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 1/3-2017**.
-[/WARNING]
+[INFO]
+Kursmomentet är under utveckling och <strike>blir tillgängligt **senast den 1/3-2017**</strike> blev tillgängligt 2017-02-27.
+[/INFO]
 
 Då går vi vidare till databasen MySQL och dess olika klienter samt prövar att använda SQL tillsammans med MySQL. Du får jobba igenom en övning i SQL som tar dig från de enklare konstruktionerna till mer utmanande saker som subqueries och `RIGHT/LEFT OUTER JOIN`. När övningen är slut så har du både kommit in i MySQL och bekantat dig med ytterligare varianter av SQL.
 
@@ -25,9 +25,6 @@ Du kommer även jobba vidare med JavaScript, Node.js och se hur du kan koppla di
 
 
 <!--more-->
-<!--
-[FIGURE src=/image/snapht15/linux-what-now.png?w=w2 caption="Okey, terminalen, och nu då?"]
--->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
