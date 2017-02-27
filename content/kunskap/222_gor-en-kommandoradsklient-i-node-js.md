@@ -2,6 +2,7 @@
 author: mos
 category: javascript
 revision:
+    "2017-02-27": (C, mos) La till moduler variant av exemplet.
     "2017-02-24": (B, mos) Enbart node.
     "2015-09-08": (A, mos) Första utgåvan.
 ...
@@ -23,7 +24,7 @@ Förutsättning {#forutsattning}
 
 Du har Node.js installerat och kan grunderna i hur man programmerar JavaScript.
 
-Om ditt kursrepo innehåller exempelprogrammet (linux, dbjs) så ligger det under `example/nodejs/guess-my-number-cli`.
+Om ditt kursrepo innehåller exempelprogrammet (linux, dbjs) så ligger det under `example/nodejs/guess-my-number-*`.
 
 
 
@@ -301,6 +302,32 @@ Titta på koden ovan och se nu när jag provkör exemplet, så kan du få en bil
 Vi har alltså en mainloop som går runt runt tills dess vi avbryter den. Denna variant passar bra för CLI-program som har en egen meny.
 
 Koden för detta exemplet ser du i sin helhet under [`index-step3.js`](https://github.com/mosbth/linux/blob/master/example/nodejs/guess-my-number-cli/index-step3.js).
+
+
+
+Dela upp koden i moduler {#moduler}
+--------------------------------------
+
+Exemplet är färdigt och fungerar. Men innan vi slutar skall jag visa dig samma exempel men uppdelat i modulär kod. Du kan se exemplet i ditt kursrepo under `example/nodejs/guess-my-number-modules`.
+
+Sådana här små CLI-program kan snabbt växa och det kan bli rörigt att hålla ordning i koden. Ett sätt att skapa en bättre struktur är att redan från början dela in programmet i små moduler.
+
+I exemplet `guess-my-number-modules` byggde jag vidare på samma exempelprogram men valde att dela in koden i ett par moduler enligt följande.
+
+| Module     | Beskrivning  |
+|------------|--------------|
+| `index.js` | Mainprogrammet som startar upp spelet. Main importerar cli och menu-modulen. |
+| `cli.js`   | Modulen cli läser in options och arguments från kommandoraden och lagrar undan informationen i ett objekt så att programmet kan dra nytta av det. |
+| `menu.js`  | Modulen menu innehåller gameloopen och menyn och styr vad användaren kan göra. Här importeras själva spelmodulen game. |
+| `game.js`  | Modulen game innehåller själva spelet och styrs från menu modulen. |
+
+Tanken är att modularisera för att göra det enklare att underhålla och bygga ut koden, eller att återanvända samma struktur till ett annan program.
+
+Så här ser det ut när man kör det aningen uppdaterade programmet som nu är uppdelat i moduler.
+
+[ASCIINEMA src=104826]
+
+Bygg i moduler så blir programmens delar enklare upp underhålla och återanvända.
 
 
 
