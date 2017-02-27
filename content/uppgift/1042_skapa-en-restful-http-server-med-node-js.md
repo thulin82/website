@@ -82,7 +82,7 @@ Krav {#krav}
 }
 ```
 
-10\. På alla andra routes skall svaras med statuskod 404 och "The resource does not exists."
+10\. Alla andra routes skall svaras med statuskod 404 och "The resource does not exists."
 
 11\. Validera och publicera din kod enligt följande.
 
