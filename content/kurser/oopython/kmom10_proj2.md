@@ -1,6 +1,7 @@
 ---
 author: aar
 revision:
+    "2017-02-27": (B, lew) Removed documentation requirement and edited req 6.
     "2017-02-22": (A, aar) Första versionen.
 category:
     - oopython
@@ -36,7 +37,7 @@ Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet 
 
 1. Det ska finnas två olika typer av karaktärer. Karaktärerna kan skapas och editeras på hemsidan.
 
-2. Karaktärerna kan skickas ut på uppdrag där deras egenskaper används mot varandra för att utse en vinnare.
+2. Karaktärerna kan skickas ut på uppdrag där deras egenskaper används mot varandra för att utse en vinnare. Du väljer själv vad som ska hända. Skapa en egen algoritm som använder egenskaperna för att utse en vinnare.
 
 3. Uppdragen skapas på hemsidan. När ett uppdrag skapas ska det slumpas fram vilka karaktärer som ska besegras på uppdraget.
 
@@ -64,7 +65,7 @@ Databasfilen ska heta `blackops.sqlite`.
 
 2. Skriv ett godtyckligt antal enhetstester för karaktärsklassen och uppdragsklassen. Döp testfilerna till "_klassens namn_-test.py".
 
-3. Automatgenerera dokumentation för din kod. Döp filen till "doc.html".
+3. <strike>Automatgenerera dokumentation för din kod. Döp filen till "doc.html".</strike>
 
 
 
@@ -84,4 +85,4 @@ Uppdragen har också attribut som påverkar karaktärerna som används. Ex. Stå
 
 ###Krav 6: Risky business (optionell) {#k6}
 
-Fick Nury kan använda Martel's besparingar för att satsa på om hjältarna kommer vinna uppdragen. Om pengarna tar slut går Martel i konkurs.
+Fick Nury kan använda sina besparingar för att satsa på om hjältarna kommer vinna uppdragen. Martel betalar ut 100% av satsningen om han klarar uppdraget. Om pengarna tar slut går Fick Nury i konkurs. 
