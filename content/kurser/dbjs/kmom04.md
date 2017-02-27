@@ -77,6 +77,10 @@ Kika på följande lästips om du finner dem intressanta.
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 24: Hur transaktioner hanteras inuti databashanteraren
 
+1. [Exploring ES6](kunskap/boken-exploring-es6) om Promise.
+    * Ch 24: Asynchronous programming (background)
+    * Ch 25: Promises for asynchronous programming
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -94,9 +98,9 @@ Genomför följande övningar.
 
 ####MySQL {ovn-mysql}
 
-1. Jobba igenom guiden ["Kom igång med databasen MySQL och dess klienter"](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter). Som webbutvecklare behöver du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar.
+1. Jobba igenom guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)". Som webbutvecklare behöver du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar.
 
-1. Bekanta dig med ["BTH's labbmiljö för databasen MySQL"](kunskap/bth-s-labbmiljo-for-databasen-mysql). Se till att du kan använda BTH's databasserver för MySQL. Använd de olika klienterna för att koppla upp dig. Spara dina eventuella testfiler i `me/kmom04/mysql`.
+1. Bekanta dig med "[BTH's labbmiljö för databasen MySQL](kunskap/bth-s-labbmiljo-for-databasen-mysql)". Se till att du kan använda BTH's databasserver för MySQL. Använd de olika klienterna för att koppla upp dig. Spara dina eventuella testfiler i `me/kmom04/mysql`.
 
 
 
@@ -106,17 +110,19 @@ Genomför följande övningar.
 
 1. Jobba igenom övningen "[MySQL och Node.js](kunskap/mysql-och-nodejs)". Spara dina eventuella exempelprogram under `me/kmom04/npm-mysql`.
 
+1. I artikeln "[Node.js, MySQL och Promise](kunskap/nodejs-mysql-och-promise)" kan du få hjälp att lösa ett problem med asykron/sekventiell programmering som du troligen kommer att upptäcka senare i uppgiften `terminal`.
+
 
 
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Jobba igenom uppgiften ["Kom igång med SQL"](uppgift/kom-igang-med-sql) genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom04/skolan/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att skriva dina egna SQL-satser. Se till att du förstår begreppen HAVING, subqueries och OUTER JOIN.
+1. Jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom04/skolan/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att skriva dina egna SQL-satser. Se till att du förstår begreppen HAVING, subqueries och OUTER JOIN.
 
-1. Gör uppgiften [node2](uppgift/linux-lab4-asynkron-programmering) för att träna på nodejs api funktioner. (?)
+1. Gör laborationen "[Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler)" för att träna på inbyggda moduler i Node.js. Spara koden i `me/kmom04/node2`.
 
-1. nodejs som (terminal/ 05)webbklient mot MySQL (?) med fokus inner, outer join och subquery och having.
+1. Gör uppgiften "[Node.js terminalprogram mot MySQL](uppgift/nodejs-terminalprogram-mot-mysql)". Spara koden i `me/kmom04/terminal`.
 
 
 
@@ -149,3 +155,4 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Har du jobbat med liknande tidigare?
 * Du har nu repeterat SQL ett par gånger, börjar det sätta sig?
 * Hur känns det med Node.js, har du till exempel känt av den asynkrona programmeringsmodellen?
+* Förstod du hur Promise fungerar?

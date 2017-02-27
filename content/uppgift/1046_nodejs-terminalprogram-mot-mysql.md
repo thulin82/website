@@ -44,6 +44,8 @@ $ mysql -uuser -ppass mydb < allan.sql
 
 De SQL-relaterade uppgifterna är en övning i INNER och OUTER JOIN.
 
+När du får problem med att prompten skrivs ut på "fel" ställe i förhållande till texten från databasfrågan så finner du svaret i form av Promise i artikeln "[Node.js, MySQL och Promise](kunskap/nodejs-mysql-och-promise)".
+
 
 
 Krav {#krav}
