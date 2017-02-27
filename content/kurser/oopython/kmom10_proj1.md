@@ -1,6 +1,7 @@
 ---
 author: lew
 revision:
+    "2017-02-27": (B, lew) Removed documentation requirement.
     "2017-02-22": (A, lew) First version.
 category:
     - oopython
@@ -87,6 +88,6 @@ Använd din egna lista från kmom05 för att hantera objekten i projektet. Anvä
 
 1. Skapa ett eget UML-diagram över strukturen (ej genererat). Döp filen till "uml.png".  
 
-2. Generera dokumentation för den färdiga koden. Döp filen till "doc.html".  
+2. <strike>Generera dokumentation för den färdiga koden. Döp filen till "doc.html".</strike>  
 
 3. Skriv ett godtyckligt antal enhetstester för dina klasser. Döp testfilerna till "_klassens namn_-test.py".
