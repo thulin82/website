@@ -91,8 +91,7 @@ En faktura kan till exempel se ut så här.
 
 Fakturorna skall skrivas ut av programmet.
 
-Du behöver inte lagra undan fakturainformationgs
-, om de genererade fakturorna, i databasen, det räcker att du kan skriva ut fakturorna.
+Du behöver inte lagra undan fakturainformation om de genererade fakturorna i databasen, det räcker att du kan skriva ut fakturorna.
 
 
 
