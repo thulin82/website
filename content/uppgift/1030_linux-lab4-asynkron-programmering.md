@@ -5,9 +5,10 @@ category:
     - lab
 revision:
     "2017-02-01": (B, efo) Gjorde om labben från asynkronprogrammering till nodejs api.
+    "2017-02-01": (B, efo) Gjorde om labben från asynkronprogrammering till nodejs api.
     "2016-12-21": (A, efo) Första utgåvan av lab4 i kursen linux.
 ...
-Linux lab 4, nodejs API
+Node.js och inbyggda moduler (node2)
 ==================================
 
 En laboration i nodejs där vi bekantar oss med [nodejs api](https://nodejs.org/api/). Vi använder api:t för att lösa uppgifter med `fs`, `querystring` och `crypto`.
@@ -76,8 +77,8 @@ Krav {#krav}
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate node4
-dbwebb publish node4
+dbwebb validate node2
+dbwebb publish node2
 ```
 
 Rätta eventuella fel som dyker upp och publisera igen. När det ser grönt ut så är du klar.
