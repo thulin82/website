@@ -95,6 +95,11 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Lös mazen med din mazerunner i bash](uppgift/los-mazen-med-din-mazerunner-i-bash)".
 
+<!--
+VT18 ÄNDRA TILL GENERELL LAB MED NODE
+Gör laborationen [Node.js och inbyggda moduler (node2)](uppgift/nodejs-inbyggda-moduler) för att träna på inbyggda moduler i Node.js. 
+-->
+
 
 
 ###Extra {#extra}
