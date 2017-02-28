@@ -47,7 +47,7 @@ Placera din kod i katalogen `me/kmom10/blackops`. Programmet som startar spelet 
 
 
 
-###Krav 2: Hantering och distrubition {#k2}  
+###Krav 2: Hantering och distribution {#k2}
 
 Sidan används enbart av en administratör, en admin, som kopplar ihop material med behörig personal.  
 
