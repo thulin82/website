@@ -180,7 +180,7 @@ Du väljer själv den algoritm du implementerar. Tänk på följande.
 
 1. Om söksträngen matchar ett helt fält, inte bara en delsträng av fältet, så har det hög prioritet.
 
-1. Om söksträngen matchar början av strängen så har det högre prioritet än en matchning av delsträng inuti. Det är alltså bättre om söksträngen `abc` matchar `acbdef` än `defabc`.
+1. Om söksträngen matchar början av strängen så har det högre prioritet än en matchning av delsträng inuti. Det är alltså bättre om söksträngen `abc` matchar `abcdef` än `defabc`.
 
 Skapa din egen sökalgoritm som väger in prioritering och graderar varje sökträff till en siffra mellan 0 och 1. Sortera svaret som servern skickar baserat på prioritering. Värdet på prioriteringen skall skickas med svaret.
 
