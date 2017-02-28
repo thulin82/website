@@ -4,21 +4,22 @@ category:
     - sql
     - databas
 revision:
-    "2017-02-24": (O, mos) Genomgång inför dbjs.
-    "2013-11-18": (N, mos) Bytte ut bild om 3-tabellers join, stycke om teckenkodning, stycke om ER-diagram.
-    "2013-10-17": (M, mos) Förtydligade att man inte kan skapa en ny databas på BTH's server.
-    "2013-08-16": (L, mos) Flyttad till dbwebb.se, genomgången och uppdaterad samt testad. Nu som en del av kursen [oophp](oophp).
-    "2011-01-20": (K) Uppdaterat betygsättning till G/U.  
-    "2010-09-04": (J) Genomgången HT2010, ändrade lite i redovisningstexten, lade till stycke om storage engines.  
-    "2010-03-01": (I) Förtydligade texten i 11.1-11.3.  
-    "2010-01-20": (H) Uppdaterade 12.5-6 och lade till 12.7 med INNER JOIN stycke 14 OUTER JOIN som extrauppgift.  
-    "2010-01-14": (G) Genomgånget inför våren 2010. Numrerade om kapitlen. Småjusteringar i övningarna. Förtydligade.  
-    "2009-09-23": (F) Förtydligade stycke under INSERT om att ange vilka kolumner som INSERT avser.  
-    "2009-09-09": (E) Integrerade smärre ändringar från vårens kursomgång, missade det i förra uppdateringen. Smärre justeringar samt lade till MIN, MAX och HAVING under stycket om aggregerande funktioner. Bytte plats på kapitel 7 och 8. Lade till en Tankenöt på sista uppgiften.  
-    "2009-09-04": (D) Genomgång inför hösten 2009.  
-    "2008-10-08": (C) Förtydligade att SQL kommandona skall sparas i fil.  
-    "2008-09-15": (B) Smärre justeringar i text och formuleringar.  
-    "2008-08-28": (A) Första utgåvan.  
+    "2017-02-28": "(P, mos) Update on HAVING."
+    "2017-02-24": "(O, mos) Genomgång inför dbjs."
+    "2013-11-18": "(N, mos) Bytte ut bild om 3-tabellers join, stycke om teckenkodning, stycke om ER-diagram."
+    "2013-10-17": "(M, mos) Förtydligade att man inte kan skapa en ny databas på BTH's server."
+    "2013-08-16": "(L, mos) Flyttad till dbwebb.se, genomgången och uppdaterad samt testad. Nu som en del av kursen [oophp](oophp)."
+    "2011-01-20": "(K) Uppdaterat betygsättning till G/U."
+    "2010-09-04": "(J) Genomgången HT2010, ändrade lite i redovisningstexten, lade till stycke om storage engines."
+    "2010-03-01": "(I) Förtydligade texten i 11.1-11.3."
+    "2010-01-20": "(H) Uppdaterade 12.5-6 och lade till 12.7 med INNER JOIN stycke 14 OUTER JOIN som extrauppgift."
+    "2010-01-14": "(G) Genomgånget inför våren 2010. Numrerade om kapitlen. Småjusteringar i övningarna. Förtydligade."
+    "2009-09-23": "(F) Förtydligade stycke under INSERT om att ange vilka kolumner som INSERT avser."
+    "2009-09-09": "(E) Integrerade smärre ändringar från vårens kursomgång, missade det i förra uppdateringen. Smärre justeringar samt lade till MIN, MAX och HAVING under stycket om aggregerande funktioner. Bytte plats på kapitel 7 och 8. Lade till en Tankenöt på sista uppgiften."
+    "2009-09-04": "(D) Genomgång inför hösten 2009."
+    "2008-10-08": "(C) Förtydligade att SQL kommandona skall sparas i fil."
+    "2008-09-15": "(B) Smärre justeringar i text och formuleringar."
+    "2008-08-28": "(A) Första utgåvan."
 ...
 Kom igång med SQL
 ==================================
@@ -441,7 +442,7 @@ Testa följande exempel för att se hur `HAVING` fungerar.
 SELECT avdelningLarare, AVG(lonLarare) AS Medellon
 FROM Larare
 GROUP BY avdelningLarare
-HAVING AVG(lonLarare) > 18000
+HAVING Medellon > 18000
 ```
 
 **Visa de vanligaste lönerna, men ignorera de löner som endast en lärare har.**
@@ -453,7 +454,7 @@ HAVING AVG(lonLarare) > 18000
 SELECT lonLarare, COUNT(lonLarare) AS Antal
 FROM Larare
 GROUP BY lonLarare
-HAVING COUNT(lonLarare) > 1
+HAVING Antal > 1
 ```
 
 Du klarar en hel del med `WHERE`, men ibland måste du ta hjälp av `HAVING`, kom i håg det.
