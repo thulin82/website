@@ -213,7 +213,7 @@ I servern, lägg till en option av `--develop` som innebär utskrift av svaret s
 
 I klienten, lägg till en option av `--develop` som innebär utskrift av urlen som skickas till klienten.
 
-Skapa ett bash-skript `bthappen/test.bash` som använder curl för att testa samtliga router (minst 15 testfall). Bash-skriptet skall skriva ut urlen som testas följt av den response kod som kommer från servern.
+Skapa ett bash-skript `bthappen/test.bash` som använder curl för att testa samtliga router (minst 15 testfall). Bash-skriptet skall skriva ut urlen som testas följt av den response kod som kommer från servern. Skriptet skall stödja LINUX_SERVER och LINUX_PORT.
 
 Bash-skriptet skall ha en option `--verbose` som innebär att den skriver ut innehållet i det svaret som kommer från servern.
 
