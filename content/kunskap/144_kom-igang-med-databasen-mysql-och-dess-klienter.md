@@ -5,6 +5,7 @@ category:
     - databas
     - mysql
 revision:
+    "2017-03-02": (E, mos) Logga in med användare root.
     "2017-02-23": (D, mos) Bort med MAMP och WAMP, bara kvar med XAMPP samt genomgång.
     "2015-03-05": (C, mos) Info om CLI på XAMPP och MAC.
     "2014-11-10": (B, mos) La till info om XAMPP MySQL cli och phpmyadmin.
@@ -73,11 +74,11 @@ Du startar först upp ett shell via menyn, klicka på knappen "Shell".
 
 [FIGURE src=/image/xampp/xampp-shell.png?w=w1 caption="Starta ett shell i XAMPP."]
 
-Skriv sedan kommandot `mysql` och du blir inloggad direkt, utan att behöva ange användare eller lösenord.
+Skriv sedan kommandot `mysql -uroot` och du blir inloggad som användare `root`, utan att behöva ange lösenord.
 
 [FIGURE src=/image/xampp/xampp-mysql-cli.png?w=w1 caption="Kör MySQL CLI i shellet."]
 
-I nyare versioner av XAMPP kommer du att se MariaDB istället för MySQL. Men det gör inget.
+I nyare versioner av XAMPP kommer du att se MariaDB istället för MySQL. De är likvärdiga.
 
 
 
@@ -93,7 +94,7 @@ Alternativet `-uroot` säger vilken användare du vill använda när du kopplar 
 
 [FIGURE src=/image/snapshot/mamp-mysql-clu.jpg?w=w1&q=70 caption="MySQL CLU via terminalen."]
 
-Du blir inloggad direkt, utan att behöva ange användare eller lösenord. 
+Du blir inloggad direkt, utan att behöva ange lösenord. 
 
 
 
@@ -120,7 +121,7 @@ Så här kan det se ut om du kör dem.
 
 [FIGURE src=/image/snapshot/mamp-mysql-clu-test.jpg?w=w1&q=70 caption="Skapar en databas med innehåll för att testa klienten."]
 
-Du kan asvluta din session genom att skriva `quit`.
+Du kan avsluta din session genom att skriva `quit`.
 
 
 
@@ -139,6 +140,8 @@ PHPMyAdmin [^5] [^6] är en webb-baserad klient som låter dig sköta din MySQL 
 ###XAMPP och PHPMyAdmin {#xamppphpmyadmin}
 
 PHPMyAdmin når du via länken http://localhost:8080/phpmyadmin, förutsatt att din webbserver lyssnar på porten 8080. Det är konfigurerat så att du inte behöver ange någon användare eller lösenord.
+
+Du blir normalt inloggad som användaren `root`.
 
 [FIGURE src=/image/xampp/xampp-phpmyadmin.png?w=w1 caption="Så här ser det ut när du kör PHPMyAdmin i XAMPP."]
 
