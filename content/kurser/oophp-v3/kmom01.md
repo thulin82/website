@@ -58,6 +58,18 @@ Om du har köpt boken så kan du läsa igenom det första kapitlet för att beka
 
 
 
+###Verktyg {#verktyg}
+
+Läs översiktligt in dig på följande verktyg som används i kursen.
+
+1. Vi använder pakethanteraren [composer](https://getcomposer.org/) för att installera PHP moduler.
+
+1. De PHP-moduler vi använder är publicerade på [Packagist](https://packagist.org/), ett sökbart repository för PHP-moduler.
+
+1. Kika översiktligt i [PHP The Right Way](http://www.phptherightway.com/) om vilka verktyg som rekommenderas i PHP communityn.
+
+
+
 ###Lästips {#lastips}
 
 Det finns inga extra lästips.
@@ -75,11 +87,9 @@ Det finns inga extra lästips.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](oophp/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](kurser/oophp-v3/labbmiljo) som behövs för kursen.
 
-1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `oophp`](dbwebb-cli/clone).
-
-Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-sidan för kommandot `dbwebb`](dbwebb-cli).
+1. Klona kursrepot för kursen.
 
 
 
