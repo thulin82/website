@@ -6,6 +6,11 @@ revision:
 Kmom06: Hybrid webapp
 ==================================
 
+[WARNING]
+Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-05-01.
+[/WARNING]
+
+
 Du har precis skapat en mobil webapp till kunden. Kunden verkade nöjd när du visade upp den. Men nu ringer kunden och frågar:
 
 > "Hur installera man appen på mobilen?"
@@ -136,7 +141,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Vilken/vilka plattformar använde du och vilket/vilka operativsystem testade du på?
 * Berätta om din pizza-applikation, gjorde du någon vidareutveckling?
 * Var det något som krånglade eller tog extra mycket tid?
-
-
-
-

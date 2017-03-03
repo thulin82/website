@@ -6,6 +6,11 @@ revision:
 Kmom03: JSON och RESTful
 ==================================
 
+[WARNING]
+Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-10.
+[/WARNING]
+
+
 Vi jobbar vidare med meappen och jQueryMobile. Nu handlar det om tekniken att hämta JSON data från RESTful servrar via Ajax och hur man kan hantera den informationen i en klientfokuserad webapp.
 
 Kanske når vi en gräns där vi tycker att ett ramverk likt jQm börjar inkränka på vår kod-arkitektur? Eller så är vi nöjda med hur jQm hanterar detta. Låt se.
@@ -110,7 +115,3 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur är din generella uppfattning om jQueryMobile (och jQuery) nu efter tre kursmoment?
 * Var det något extra du gjorde i uppgiften som du vill berätta om?
 * Var det något som krånglade eller tog extra mycket tid?
-
-
-
-
