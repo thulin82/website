@@ -70,6 +70,14 @@ Läs översiktligt in dig på följande verktyg som används i kursen.
 
 
 
+###Videor {#}
+
+Kika på följande videos.
+
+1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 0 och 1.
+
+
+
 ###Lästips {#lastips}
 
 Det finns inga extra lästips.
@@ -96,6 +104,10 @@ Installera labbmiljön för kursen.
 ###Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna. 
+
+1. Jobba igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till ett eget litet ramverk. Du sparar koden i `me/anax-lite`.
+
+***
 
 1. Jobba igenom guiden [20 steg för att komma igång med PHP (php20)](kunskap/kom-i-gang-med-php-pa-20-steg).
 
@@ -125,6 +137,17 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 3. **Lägg till funktionen `dump()` i ditt Anax** (`src/bootstrap.php` är en bra plats). Funktionen är utmärkt för felsökning. Du hittar funktionen i [guiden php20](kunskap/kom-i-gang-med-php-pa-20-steg).
 
 4. **Ladda upp och publicera** ditt resultat på studentservern. 
+
+
+<!--
+1. Ramverksmoduler att bygga själv.
+* CValidate
+* CFlash
+* CCache
+* CSession
+* navbar
+* filecontent/pagecontent content
+-->
 
 
 
