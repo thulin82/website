@@ -34,7 +34,15 @@ Du kan testa samtliga exemplel i artikeln via  i kursrepot som ligger på dbwebb
 
 
 
-Installera mithril genom npm {#install}
+Förutsättningar {#forutsattningar}
+--------------------------------------
+Du har installerat labbmiljön för kursen webapp.
+
+Du har installerat cordova och skapat Hello World cordova appen enligt [Kom igång med cordova]().
+
+
+
+Installera mithril via npm {#install}
 --------------------------------------
 Vi har i tidigare kurser använd pakethanteraren npm för att installera javascript och nodejs moduler. Vi kommer i denna kurs använda npm för att installera och administrera vår mithril installation och beroende kod. Detta görs med hjälp av en `package.json` fil, som vi initiellt skapar genom att skriva följande i terminalen:
 
@@ -82,7 +90,7 @@ I scripts attributet ändrar vi så det blir följande för att löpande under u
 
 
 
-Vår första app {#forsta}
+Vår första mithril app {#forsta}
 --------------------------------------
 Vi skapar först vår ingångspunkt får vår app `index.html` med följande innehåll:
 
@@ -143,8 +151,12 @@ Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att s
 $ npm start
 ```
 
-Öppna upp din `index.html` fil i webbläsaren och vi ser än så länge vår lilla me-sida med endast ditt egna namn.
+Öppna upp din `index.html` fil i webbläsaren och vi ser än så länge vår lilla me-sida med endast ditt namn.
 
+
+En router för flera sidor {#router}
+--------------------------------------
+Det blir 
 
 
 Styling och layout {#styling}
@@ -161,8 +173,7 @@ Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och a
   ...
 ```
 
-Jag valde att lägga till några extra element i min me-vy enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan.
-
+Jag valde att lägga till några extra element i min me-vy enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det första elementet `div.main-container`, som är en div med klassen `main-container`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
 
 ```javascript
 var m = require("mithril")
@@ -179,38 +190,6 @@ module.exports = {
 ```
 
 [FIGURE src=/image/snapvt17/mithril-me-screen.png]
-
-
-```css
-body {
-    margin: 0;
-    padding: 0;
-}
-
-div.main-container {
-    margin: 0 auto;
-    max-width: 960px;
-    width:96%;
-    padding-bottom: 1em;
-    border-bottom: 2px solid #47A;
-}
-
-h1 {
-    font-size: 2em;
-    font-family: Helvetica, Verdana, sans-serif;
-    font-weight:lighter;
-    margin-top: 4px;
-    border-bottom: 2px solid #47A;
-}
-
-p {
-    font-size: 1.2em;
-    font-family: Garamond, Georgia, Times, serif;
-}
-```
-
-En router för flera sidor {#router}
---------------------------------------
 
 
 
