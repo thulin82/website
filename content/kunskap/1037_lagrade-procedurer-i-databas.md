@@ -300,4 +300,6 @@ Avslutningsvis {#avslutning}
 
 Detta var grunderna i hur du kan jobba med lagrade procedurer som ett sätt att programmera i en databas. Kanske kan detta även vara ett sätt att bygga ett API mot en databas.
 
+Vill du se fler sätt att skapa API:er för databasen, och utföra programmering inuti databasen, så läser du om "[Triggers i databas](kunskap/triggers-i-databas)" som är en fristående fortsättning på denna artikeln.
+
 Har du [tips, förslag eller frågor om artikeln](t/6292) så finns det en specifik forumtråd för det.
