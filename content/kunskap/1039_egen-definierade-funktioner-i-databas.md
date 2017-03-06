@@ -6,7 +6,7 @@ category:
 revision:
     "2017-03-06": (A, mos) Första utgåvan inför kursen dbjs.
 ...
-Egen-definierade funktioner i databas
+Egendefinierade funktioner i databas
 ==================================
 
 [FIGURE src=/image/snapvt17/udf.png?w=c5&a=10,30,60,0 class="right"]
@@ -24,9 +24,9 @@ Förutsättning {#pre}
 
 Artikeln bygger på kunskap som du fått i artikeln "[Triggers i databas](kunskap/lagrade-procedurer-i-databas)" och de artiklar som föregick den.
 
-Artikeln visar grunderna i [egen-definierade funktioner](https://dev.mysql.com/doc/refman/5.7/en/create-procedure.html) som kan skrivas med [compund statements](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax-compound-statements.html).
+Artikeln visar grunderna i [egendefinierade funktioner](https://dev.mysql.com/doc/refman/5.7/en/create-procedure.html) som kan skrivas med [compund statements](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax-compound-statements.html).
 
-SQLite har inte stöd för egen-definierade funktioner som kan skrivas likt MySQL. Däremot erbjuder [SQLite ett API](http://www.sqlite.org/c3ref/create_function.html) där du kan skriva egna C-funktioner som kan användas i dina SQL uttryck. Det ger dig liknande möjligheter.
+SQLite har inte stöd för egendefinierade funktioner som kan skrivas likt MySQL. Däremot erbjuder [SQLite ett API](http://www.sqlite.org/c3ref/create_function.html) där du kan skriva egna C-funktioner som kan användas i dina SQL uttryck. Det ger dig liknande möjligheter.
 
 [SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/function.sql) finner du på GitHub.
 
@@ -75,7 +75,7 @@ Se där. Då behöver vi en betygskala, denna blir bra.
 
 Japp, då var det bara att koppla ihop tabellen med poängen.
 
-Till vår hjälp, egen-definierade funktioner.
+Till vår hjälp, egendefinierade funktioner.
 
 
 
@@ -285,7 +285,7 @@ mysql> SELECT
 6 rows in set, 1 warning (0.00 sec)
 ```
 
-Vi har fått ett exempel på hur egen-definierade funktioner kan användas för att presentera informationen på olika sätt.
+Vi har fått ett exempel på hur egendefinierade funktioner kan användas för att presentera informationen på olika sätt.
 
 
 
