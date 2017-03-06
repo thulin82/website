@@ -76,6 +76,8 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 1. Jobba igenom "[Triggers i databas](kunskap/triggers-i-databas)" för att lära dig om vad du kan göra med triggers och hur de fungerar.
 
+1. Jobba igenom "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas.
+
 
 (
     1. Gör uppgiften lab med transaktioner.
