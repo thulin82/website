@@ -28,6 +28,8 @@ Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/
 
 Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.org/transactional.html).
 
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/transaction.sql) finner du på GitHub.
+
 
 
 ACID {#acid}
@@ -166,5 +168,7 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Detta var grunderna i databastransaktioner. Så fort du gör saker som kan förstöra databasens integritet, om någon del i en sekvens inte kan utföras eller bara utförs delvis, då kan det vara läge att omsluta dem i en transaktion.
+
+Vill du se hur du kan kontroller att det finns pengar på kontot, innan du gör överföringen, så läser du vidare i artikeln "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)"
 
 Har du [tips, förslag eller frågor om artikeln](t/6291) så finns det en specifik forumtråd för det.

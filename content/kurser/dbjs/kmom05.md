@@ -68,7 +68,12 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+Utför följande övningar för att träna inför uppgifter och projektet.
+
+1. Jobba igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)" för att lära dig grunderna i hur du använder transaktioner i databaser.
+
+1. Jobba igenom "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)" för att lära dig om lagrade procedurer och vad du kan göra med dem.
+
 
 (
     1. Gör uppgiften lab med transaktioner.
