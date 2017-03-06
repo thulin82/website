@@ -74,6 +74,8 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 1. Jobba igenom "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)" för att lära dig om lagrade procedurer och vad du kan göra med dem.
 
+1. Jobba igenom "[Triggers i databas](kunskap/triggers-i-databas)" för att lära dig om vad du kan göra med triggers och hur de fungerar.
+
 
 (
     1. Gör uppgiften lab med transaktioner.
