@@ -149,9 +149,65 @@ $ npm start
 
 Styling och layout {#styling}
 --------------------------------------
-Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och användarvänliga, så därför vill vi kunna styla våra sidor. Vi inkluderar därför vårt egna css i index.html head.
+Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och användarvänliga, så därför vill vi kunna styla våra sidor. Vi inkluderar därför vår egna css-fil i `index.html`.
+
+```html
+<html>
+  <head>
+    <title>mithril me-app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  ...
+```
+
+Jag valde att lägga till några extra element i min me-vy enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan.
 
 
+```javascript
+var m = require("mithril")
+
+module.exports = {
+    view: function() {
+        return m("div.main-container", [
+            m("h1", "Emil Folino"),
+            m("p", "My name is Emil, I'm originally from Denmark, but now I live in Sweden."),
+            m("p", "I run orienteering and drive an old Saab.")
+        ]);
+    }
+}
+```
+
+[FIGURE src=/image/snapvt17/mithril-me-screen.png]
+
+
+```css
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.main-container {
+    margin: 0 auto;
+    max-width: 960px;
+    width:96%;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #47A;
+}
+
+h1 {
+    font-size: 2em;
+    font-family: Helvetica, Verdana, sans-serif;
+    font-weight:lighter;
+    margin-top: 4px;
+    border-bottom: 2px solid #47A;
+}
+
+p {
+    font-size: 1.2em;
+    font-family: Garamond, Georgia, Times, serif;
+}
+```
 
 En router för flera sidor {#router}
 --------------------------------------
