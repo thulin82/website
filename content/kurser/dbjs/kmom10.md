@@ -26,7 +26,7 @@ Totalt omfattar kursmomentet (07/10) ca 20*3 studietimmar.
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
-När allt är inlämnats så bedöms det tillsammans med tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
+När allt är inlämnat så bedöms det tillsammans med tidigare redovisade kursmoment och du får ett slutbetyg på kursen. Läs om [grunderna för bedömning och betygsättning](kurser/bedomning-och-betygsattning).
 
 Poängberäkningen skiljer sig i dbjs-kursen och därför finns en [särskild mall som visar hur poängberäkningen går till](kurser/dbjs/bedomning) som leder fram till slutbetyget på kursen.
 
