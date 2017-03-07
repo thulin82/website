@@ -2,8 +2,9 @@
 author: mos
 category: webbprogrammering
 revision:
+  "2017-03-07": (B, aar) Uppdaterat hur man installerar SDK:n och lägga till i PATH.
   "2015-10-26": (A, mos) Första utgåvan inför kursen webapp.
-updated: "2015-10-26 23:52:55"
+updated: "2017-03-07 14:32:45"
 created: "2015-10-26 23:48:59"
 ...
 Installera en emulator för Android
@@ -25,31 +26,41 @@ Installera SDK {#sdk}
 
 Du kan börja med att läsa översiktligt [om Android SDK och Android Studio](https://developer.android.com/sdk/index.html) som är ett mer komplett utvecklarverktyg.
 
-Ladda nu ned [Android SDK Tools Only och installera](https://developer.android.com/sdk/installing/index.html). Det innehåller det vi behöver.
+Du kan behöva [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html), i så fall ladda ner det. Version 7 eller senare.
 
-Installationsprogrammet kan be dig att installera Java JDK. Gör det.
+Scrolla ner till [Get just the command line tools](https://developer.android.com/studio/index.html) och ladda ner ett **SDK tools package**.
+
+Extrahera innehållet till valfri plats.
 
 
 
 Starta och uppdatera ditt SDK {#uppdatera}
 --------------------------------------
 
-På Mac och Linux startar du Android SDK Manager så här.
+Gå till mappen du extraherade innehållet till och kör följande kommandon.  
+På windows behöver du lägga till `.bat` som filändelse på `android`.
 
 ```bash
+# Gå till installationskatalogen
 $ cd tools
 $ ./android
 ```
 
-På Windows använder du filemanagern och dubbelklickar på `SDK Manager.exe`. Jag testade att instalelra på Windows 10 och installationen hamnade under min användares katalog och "AppData/Local/Android".
-
-[FIGURE src=/image/snapht15/android-sdk-install-path.png?w=w2 caption="Installationen av Android SDK på Windows 10."]
+[FIGURE src=/image/kunskap/android-sdk-path-run.png?w=w2 caption="Installationen av Android SDK på Windows 10."]
 
 Det kan se ut så här när du startar SDK Managern.
 
 [FIGURE src=/image/snapht15/android-sdk-manager.png?w=w2 caption="Android SDK manager behöver nu uppdateras."]
 
-Du behöver nu [uppdatera ditt SDK](https://developer.android.com/sdk/installing/adding-packages.html) med nödvändiga komponenter. Det är komponenter som måste laddas ned för att emulatorn skall fungera. Klicka på knappen för att installera paketen, i bilden ovan är det knappen som visar, "Install 17 packages".
+Du behöver nu [uppdatera ditt SDK](https://developer.android.com/sdk/installing/adding-packages.html) med nödvändiga komponenter. Det är komponenter som måste laddas ned för att emulatorn skall fungera. De viktigaste paketen är:
+
+* Android SDK tools
+* Android SDK platform-tools
+* Android SDK Build-tools
+* Ett Android API nyare än version 19
+* Android support Repository
+
+Klicka på knappen för att installera paketen, i bilden ovan är det knappen som visar, "Install 17 packages".
 
 Det tar en stund att ladda ned och installera paketen.
 
@@ -62,13 +73,21 @@ Androids SDK innehåller en [emulator](http://developer.android.com/tools/device
 
 För att använda emulatorn behöver du skapa en [virtuell enhet](http://developer.android.com/tools/devices/index.html) som används för att emulera själva hårdvaran.
 
-Starta fönstret som hjälper dig att skapa en virtuell enhet, använd menyn "Tools -> Manage AWDs...". Du får upp ett fönster med de virtuella enheter du har. Välj att klicka på "Create..." för att skapa en ny virtuell enhet.
+Starta fönstret som hjälper dig att skapa en virtuell enhet, kör följande kommando.
+
+```bash
+# Gå till installationskatalogen
+$ cd tools
+$ ./android avd
+```
+
+ Du får upp ett fönster med de virtuella enheter du har. Välj att klicka på "Create..." för att skapa en ny virtuell enhet.
 
 Så här kan det se ut när du har fyllt i alla värden.
 
 [FIGURE src=/image/snapht15/android-virtual-device.png caption="Här har jag skapat en Nexus 7 som en virtuell enhet."]
 
-Pröva att skapa en liknande enhet som jag gjort i bilden ovan. Pröva gärna även andra varianter. Du har kanske nyare versioner än jag har av Android, då är det bara att använda det senaste. Välj en CPU som matchar din dator. *Glöm inte* att klicka i rutan för "Use Host GPU".
+Prova att skapa en liknande enhet som jag gjort i bilden ovan. Prova gärna även andra varianter. Du har kanske nyare versioner än jag har av Android, då är det bara att använda det senaste. Välj en CPU som matchar din dator. *Glöm inte* att klicka i rutan för "Use Host GPU".
 
 När du är klar kan du starta din emulator.
 
@@ -79,11 +98,9 @@ Starta emulatorn {#start}
 
 [FIGURE src=/image/snapht15/android-emulator-launch-options.png class="right" caption="Jag har minskat skalan på mitt emulatorfönster."]
 
-Du kan via GUI:et starta emulatorn med din nyskapade virtuella enhet. 
-
 Det tar en liten stund att starta emulatorn. Om emulatorns fönster blir för stort så kan du skala om det när du startar det. 
 
-På Mac och Linux kan du även starta emulatorn från kommandoraden.
+Starta emulatorn med kommandot.
 
 ```bash
 # Gå till installationskatalogen
@@ -130,12 +147,26 @@ Det kan vara bra om du behöver felsöka.
 
 
 
+Android i PATH {#path}
+--------------------------------------
+
+Det kan vara bra att ha SDK:n i pathen så du kan köra kommandona `android` och `emulator` i konsollen.
+
+Du behöver lägga till system variabeln `ANDROID_HOME` som går till android-sdk mappen och `ANDROID_HOME/{tools,platform-tools}` i din $PATH. När det är gjort kan du testa i konsollen.
+
+```bash
+$ android -h
+```
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Nu har du förhoppningsvis kommit igång och har en Android emulator som du kan använda för att testköra och pröva dina mobila webbapplikationer.
+Nu har du förhoppningsvis kommit igång och har en Android emulator som du kan använda för att testköra och prova dina mobila webbapplikationer.
 
-Om du har frågor eller tips få finns det en särskild [tråd i forumet](t/4741) för denna artikeln.
+Om du har frågor eller tips så finns det en särskild [tråd i forumet](t/4741) för denna artikeln. 
+Det kan även finnas nyttig information i [den här tråden](t/4901).
 
 
 
