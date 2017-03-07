@@ -86,7 +86,8 @@ $ sudo apt-get update
 $ sudo apt-get install nodejs npm
 ```
 
-Du kan nu starta programmen från din terminal.
+Du kan nu starta programmen från din terminal.  
+På vissa linux system heter kommandot `nodejs` istället för `node`.
 
 ```bash
 $ which node
