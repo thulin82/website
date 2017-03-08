@@ -1,13 +1,14 @@
 ---
 author: mos
-revision:
-    2016-11-09: (E, mos) Förtydligade att byling skall stylas och ha bild.
-    2016-11-01: (D, mos) Bort referens till temat.
-    2016-10-26: (C, mos) Omstrukturerad efter feedback.
-    2016-10-07: (B, mos) Genomgången och testad.
-    2016-06-08: (A, mos) Första utgåvan.
 category:
     - kurs/design
+    - anax-flat
+revision:
+    "2016-11-09": "(E, mos) Förtydligade att byling skall stylas och ha bild."
+    "2016-11-01": "(D, mos) Bort referens till temat."
+    "2016-10-26": "(C, mos) Omstrukturerad efter feedback."
+    "2016-10-07": "(B, mos) Genomgången och testad."
+    "2016-06-08": "(A, mos) Första utgåvan."
 ...
 Bygg en me-sida med Anax Flat
 ===================================
@@ -59,7 +60,7 @@ Krav {#krav}
 
 ###Klar och taggad {#tag}
 
-1. Kör `git status`och se till att alla filer, som skall vara en del av repot `me/anax-flat`, verkligen är en del av repot.
+1. Kör `git status` och se till att alla filer, som skall vara en del av repot `me/anax-flat`, verkligen är en del av repot.
 
 1. Du committar och taggar repot som version 1.1.0.
 
