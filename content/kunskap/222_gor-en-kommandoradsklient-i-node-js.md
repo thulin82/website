@@ -124,7 +124,7 @@ Skriptet kan du se i sin helhet i filen [`index-step2.js`](https://github.com/mo
 
 
 
-###En shebang för babel-node {#shebang}
+###En shebang för node {#shebang}
 
 Det första jag gjorde var att lägga till en shebang i början av skriptet.
 
@@ -138,7 +138,7 @@ Sedan satte jag rättigheterna så skriptet blir körbart.
 $ chmod 755 index-step2.js
 ```
 
-Nu kan jag köra skriptet utan att ange babel-node framför.
+Nu kan jag köra skriptet utan att ange node framför.
 
 ```bash
 $ ./index-step2.js
