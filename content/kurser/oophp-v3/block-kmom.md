@@ -1,6 +1,6 @@
 ####Kursmoment instruktioner
 
-* [01: Programmering i PHP](kurser/oophp-v3/kmom01)
+* [01: OO-programmering i PHP](kurser/oophp-v3/kmom01)
 * [02: OO-programmering i PHP](kurser/oophp-v3/kmom02)
 * [03: SQL och databasen MySQL](kurser/oophp-v3/kmom03)
 * [04: PHP PDO och MySQL](kurser/oophp-v3/kmom04)

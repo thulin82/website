@@ -814,6 +814,11 @@ Så, visst hade det varit skönt att lägga ut det som är vyer till egna filer.
 
 
 
+Generella funktioner i functions.php {#functions}
+--------------------------------------
+
+
+
 Makefile {#makefile}
 --------------------------------------
 

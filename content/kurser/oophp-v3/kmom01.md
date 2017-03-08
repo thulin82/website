@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom01: Kom igång med programmering i PHP
+Kmom01: OO-programmering i PHP
 ==================================
 
 [WARNING]
@@ -19,7 +19,7 @@ Som ett sidoprojekt kommer vi igång med MySQL som databas.
 
 [FIGURE src=/image/snapshot/oophp-kmom01-me.png?w=w2 caption="Så här kan din kommande me-sida se ut, eller inte..."]
 
-*Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.*
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -92,11 +92,25 @@ Installera labbmiljön för kursen.
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna. 
 
-1. Jobba igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till ett eget litet ramverk. Du sparar koden i `me/anax-lite`.
+1. Fräscha upp ditt minne av PHP genom att snabbt skumma igenom guiden [20 steg för att komma igång med PHP (php20)](kunskap/kom-i-gang-med-php-pa-20-steg). Du bör sedan tidigare (htmlphp) ha koll på det som nämns i guiden. Om du bygger exempelprogram så kan du lägga dem i `me/kmom01/php20`.
+
+1. Jobba igenom steg 1-12 i guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg). Det handlar om grunderna med objektorienterad programmering i PHP. Exempelprogram som du bygger för din egna skull kan du spara i `me/kmom01/oophp20`.
+
+1. Jobba igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till ett eget litet ramverk. Delvis känner du igen ramverket från kursen design. Du sparar koden i `me/anax-lite`.
+
 
 ***
 
-1. Jobba igenom guiden [20 steg för att komma igång med PHP (php20)](kunskap/kom-i-gang-med-php-pa-20-steg).
+<!--
+skapa navbar som klasser
+
+sessioner? oophp session
+
+oophp20 -> dice med session?
+
+Kanske göra tärning version 1 standalone och version 2 i kmom02 som integrerar i ramverket?
+
+-->
 
 3. Jobba igenom tutorialen ["Create a dynamic menu / navigation bar with PHP"](http://dbwebb.se/kod-exempel/dynamic_php_menu/)
 
@@ -109,6 +123,10 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 1. Gör uppgiften "[Bygg en me-sida med Anax Lite](uppgift/me-sida-med-anax-lite)". Det handlar om att skapa ditt eget anax-lite och publicera på Github. Använd sedan ditt anax-lite för att göra grunden till en me-sida för kursen. Spara allt under `me/anax-lite`.
 
 1. Jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera/kommentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att alltid skriva dina egna SQL-satser.
+
+<!--
+
+-->
 
 
 ***
