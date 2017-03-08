@@ -38,7 +38,7 @@ Förutsättningar {#forutsattningar}
 --------------------------------------
 Du har installerat labbmiljön för kursen webapp.
 
-Du har installerat cordova och skapat Hello World cordova appen enligt [Kom igång med cordova](). Vi utgår ifrån denna cordova app när vi i denna övning jobbar vidare med cordova och introducerar javascript ramverker mithril.
+Du har installerat cordova och skapat Hello World cordova appen enligt [Kom igång med cordova](). Vi utgår ifrån denna cordova app när vi i denna övning jobbar vidare med cordova och introducerar javascript ramverket mithril.
 
 
 

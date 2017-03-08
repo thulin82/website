@@ -4,10 +4,10 @@ category: webbprogrammering
 revision:
   "2017-03-07": (A, efo) Första utgåvan i samband med kursen webapp v2.
 ...
-Skapa en mithril me-app
+Bygg vidare på din me-app
 ==================================
 
-Du skall bygga en me-app, som en me-sida, men med fokus på mobila enheter. Du använder javascript ramverket mithril.
+Du skall vidareutveckla din me-app, så den innehåller två nya vyer. En vy med information om dina github repos och en vy där vi detekterar storlek och orientering på vår enhet.
 
 <!--more-->
 
@@ -16,39 +16,37 @@ Du skall bygga en me-app, som en me-sida, men med fokus på mobila enheter. Du a
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artiklarna "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)" och [Kom igång med cordova]().
+Du har en mithril me-app från föregående kursmoment, som fungerar i cordova på android.
+
+Du har jobbat igenom artikeln "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
+
+Du har jobbat igenom artikeln "[Att göra en mobilapp av en mobil-anpassad webbplats](kunskap/kunskap/att-gora-en-mobilapp-av-en-mobil-anpassad-webbplats)".
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Om du har gjort enligt övningen i artikeln ovan så har du i stort sett redan klarat av uppgiften.
-
-Börja med att ta en kopia av koden från artikeln.
+Börja med att ta en kopia av koden från föregående kursmoments me-app.
 
 ```bash
 # Ställ dig i rooten av kursrepot
-cd me/kmom01
-cp -ri meapp/* me1/
+cd me
+cp -ri kmom01/me1/* kmom02/me2/
 ```
 
-Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/kmom01/me1`.
+Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/kmom02/me2`.
+
+[Dokumentation](https://developer.github.com/v3/) och exempel  för Githubs API underlättar vid utveckling av vår Github vy.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Bygg en me-app i mithril.
+1. Skapa en vy där du presenterar information om dina Github repos. Som minimum namn och när det senast var uppdaterat.
 
-1. Din me-app skall innehålla tre sidor. Me, Report och About.
-
-1. Fyll sidorna med relevant innehåll. Det skall finnas minst en bild på sidorna Me och About.
-
-1. Det skall finnas en meny så använderen kan navigera mellan sidorna, måste fungera på en mobil enhet.
-
-1. Gör din me-app personlig, så man ser att det är din me-app. Skapa en egen style som fungerar mobile-first responsivt.
+1. Skapa en vy där du detekterar och skriver ut information om användarens enhets orientering och storlek.
 
 1. Din me-app skall kunna köras med cordova både i browsern och i en android emulator.
 
