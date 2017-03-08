@@ -1,4 +1,4 @@
----
+make ---
 author: mos
 category:
     - anax
@@ -378,8 +378,437 @@ Att bygga en router låter som ett större projekt så jag tar och lånar en mod
 $ composer require anax/router
 ```
 
-Bra, då har vi även en router på plats i vendor-katalogen.
+Bra, då har vi även en router på plats i vendor-katalogen. Kika gärna på dess källkod. Du kan se att det finns en klass för routern och en klass för routes.
 
+
+
+###Testa routern {#testrouter}
+
+Vi kan nu testa routern. Först skapar vi en fil där vi samlar alla de routes vi vill ha. Filen får ligga i `config/routes.php`.
+
+```php
+<?php
+/**
+ * Routes.
+ */
+$router->add("", function () {
+    echo <<<EOD
+<!doctype html>
+<meta charset="utf-8">
+<title>Home</title>
+<h1>Home</h1>
+<p>This is the homepage.</p>
+EOD;
+});
+
+$router->add("about", function () {
+    echo <<<EOD
+<!doctype html>
+<meta charset="utf-8">
+<title>About</title>
+<h1>About</h1>
+<p>This is the page about me.</p>
+EOD;
+});
+
+$router->addInternal("404", function () {
+    echo <<<EOD
+<!doctype html>
+<meta charset="utf-8">
+<title>404</title>
+<h1>404 Not Found</h1>
+<p>The route could not be found!</p>
+EOD;
+});
+```
+
+Det är två routes som returnerar varsin HTML-sida. Den sista routen är en intern route som används för felhantering när en route inte kan hittas. Den interna routen kan inte nås från webbläsaren, den är intern för routern.
+
+För att detta nu skall fungera så behöver vi skapa `$router` i vår frontkontroller och därefter inkludera filen med alla routes.
+
+Det sista vi gör är att överlåta till routern att hanterera och matcha inkommande route (request) mot de routes som finns.
+
+```php
+// Create the router
+$router = new \Anax\Route\RouterInjectable();
+
+// Load the routes
+require ANAX_INSTALL_PATH . "/config/route.php";
+
+// Leave to router to match incoming request to routes
+$router->handle($request->getRoute());
+```
+
+Nu kan du pröva olika routes mot din frontkontroller och se olika svar. Du har två routes som fungerar "" och "about", alla andra resulterar i att den interna routen för 404 visas.
+
+Det närmar sig.
+
+
+
+Ett app-objekt {#app}
+--------------------------------------
+
+Det börjar bli en del kod och det är lika bra att städa lite.
+
+Jag tar bort alla utskrifter från frontkontrollern så att den utskrift som kommer blir från routens hanterare.
+
+Sen ser jag ett behov av att samla alla resurser i ramverket inom ett objekt som kan skickas runt. Till exempel så vill jag skapa länkar i routens hanterare som då behöver känna igen `$url`.
+
+Det få bli ett `$app` som samlar alla ramverkets resurser.
+
+
+
+###En egen src-katalog {#src}
+
+Jag tar och skapar en katalog `src/App` och lägger där klassfilen `App.php` med följande innehåll.
+
+```php
+<?php 
+/**
+ * An App class to wrap the resources of the framework.
+ */
+
+namespace Anax\App;
+
+class App
+{
+    
+}
+```
+
+Den innehåller inte så mycket. Men det gör inget, vi skall snart fylla den.
+
+Noter att det står namespace `Anax\App`, jag tänker byta det till `Mos\App` för att visa att jag (Mos) är den vendor som skapat källkoden under src. Du hittar på ditt eget vendor-namn, det får bli ditt eget varumärke.
+
+
+
+###Autoloader för egen kod {#autoegen}
+
+All kod som ligger i vendor-katalogen sköts av composers autolaoder. Mycket smidigt och nu vill vi använda composers autoloader till att även göra autoloading av vår egen källkod som vi nu lägger i katalogen `src`.
+
+För tillfället ser den av composer automatgenererade filen `composer.json` ut ungefär så här.
+
+```json
+{                                
+    "require": {                 
+        "anax/request": "^1.0",  
+        "anax/url": "^1.0",      
+        "anax/router": "^1.0"    
+    }                            
+}                                
+```
+
+Uppdatera nu `composer.json` med information om ditt egen namespace och koppla det till all källkod som ligger under src-katalogen.
+
+Så här.
+
+```json
+{
+    "name": "mos/anax-lite",
+    "description": "A small PHP framework.",
+    "license": "MIT",
+    "authors": [
+            {
+                "name": "Mikael Roos",
+                "email": "mos@dbwebb.se"
+            }
+    ],
+    "require": {
+        "anax/request": "^1.0",
+        "anax/url": "^1.0",
+        "anax/router": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {"Mos\\": "src/"}
+    }
+}
+```
+
+Som sagt så är Mos mitt namespace och du byter ut det mot ditt egna. Byt även ut allt annat som är kopplat till mos, så att det blir din egna kod. 
+
+När det är klart så låter du composer validera konfig-filen och sen dumpar vi ut den uppdaterade autoloadern.
+
+```bash
+$ composer validate
+$ composer update
+```
+
+Nu kan vi använda composers autoloader för vår egen kod.
+
+
+
+###Skapa $app {#createapp}
+
+Källkoden för klassen App ligger nu i `src/App/App.php`, den har ett namespace som är `Mos\App` och du har bytt ut Mos mot din egen valfria vendor-akronym. Via `composer.json` så kopplas composers autoloader mitt namespace till min källkodsfil.
+ 
+I slutet av frontkontrollern kan vi skapa `$app` och fylla den med de resurser som ramverket har tillgång till.
+
+```php
+// Add all resources to $app
+$app = new \Mos\App\App();
+$app->request = $request;
+$app->url     = $url;
+$app->router  = $router;
+```
+
+Bra, lite ordning och reda bland klasserna.
+
+
+
+###Städa frontkontrollern {#stada}
+
+Nu har jag en salig blandning av hur jag använder klasserna i frontkontrollern. Jag tänker nu städa upp och enbart använda klasserna utifrån mitt objekt `$app`. 
+
+Efter städningen ser nu min frontkontroller ut så här.
+
+```php
+<?php
+/**
+ * Bootstrap the framework.
+ */
+// Were are all the files?
+define("ANAX_INSTALL_PATH", realpath(__DIR__ . "/.."));
+define("ANAX_APP_PATH", ANAX_INSTALL_PATH);
+
+// Include essentials
+require ANAX_INSTALL_PATH . "/config/error_reporting.php";
+
+// Get the autoloader by using composers version.
+require ANAX_INSTALL_PATH . "/vendor/autoload.php";
+
+// Add all resources to $app
+$app = new \Mos\App\App();
+$app->request = new \Anax\Request\RequestBasic();
+$app->url     = new \Anax\Url\Url();
+$app->router  = new \Anax\Route\RouterInjectable();
+
+// Init the object of the request class.
+$app->request->init();
+
+// Init the url-object with default values from the request object.
+$app->url->setSiteUrl($app->request->getSiteUrl());
+$app->url->setBaseUrl($app->request->getBaseUrl());
+$app->url->setStaticSiteUrl($app->request->getSiteUrl());
+$app->url->setStaticBaseUrl($app->request->getBaseUrl());
+$app->url->setScriptName($app->request->getScriptName());
+
+// Update url configuration with values from config file.
+$app->url->configure("url.php");
+$app->url->setDefaultsFromConfiguration();
+
+// Load the routes
+require ANAX_INSTALL_PATH . "/config/route.php";
+
+// Leave to router to match incoming request to routes
+$app->router->handle($app->request->getRoute());
+```
+
+Du känner igen all kod sedan tidigare, den är bara omstrukturerad.
+
+Jag behöver även gå in i `config/routes.php` för att ändra `$router` till `$app->router`.
+
+Nu kan jag testa och mina routes bör fungera. 
+
+
+
+Använda Url i Routes {#appurl}
+--------------------------------------
+
+Det vore trevligt om jag kunde länka mellan olika sidor, en enklare navbar kanske. Jag har tillgång till allt jag behöver, jag måste bara placera koden på rätt plats.
+
+
+
+###Skapa navbaren med länkar {#navbar1}
+
+Sedan tidigare vet jag att länkar skall skapas av ramverket via `$app->url->create("")`. En navbar för min webbplats kan alltså se ut så här.
+
+```php
+    $urlHome  = $app->url->create("");
+    $urlAbout = $app->url->create("about");
+    $navbar = <<<EOD
+<navbar>
+    <a href="$urlHome">Home</a> | 
+    <a href="$urlAbout">About</a>
+</navbar>
+EOD;
+```
+
+Koden för navbaren behöver komma in i varje routehandler där den skall visas.
+
+
+
+###Navbar in i route handler {#navbar2}
+
+Om jag modifierar mina routes i `config/route.php`, så kan det se ut så här, för att implementera en navbar.
+
+```php
+$app->router->add("", function () use($app) {
+    $urlHome  = $app->url->create("");
+    $urlAbout = $app->url->create("about");
+    $navbar = <<<EOD
+<navbar>
+    <a href="$urlHome">Home</a> | 
+    <a href="$urlAbout">About</a>
+</navbar>
+EOD;
+
+    $body = <<<EOD
+<!doctype html>
+<meta charset="utf-8">
+<title>Home</title>
+$navbar
+<h1>Home</h1>
+<p>This is the homepage.</p>
+EOD;
+
+    echo $body;
+});
+```
+
+Notera att callbacken för routen nu använder `function () use($app)` vilket gör att callbacken får tillgång till variabeln `$app` som innehåller alla ramverkets resurser.
+
+Om jag gör motsvarande uppdatering i de andra routsen, så får jag en navbar som hjälper mig att hoppa mellan sidorna.
+
+
+
+Extra debugging i 404 {#debugg}
+--------------------------------------
+
+Nu när vi har tillgång till hela ramverket i routens hanterare så kan jag uppdatera min interna route 404 för att skriva ut extra debugging. Det kan vara bra när man sitter och utvecklar i ramverket.
+
+Min uppdaterade 404-route ser ut så här.
+
+```php
+$app->router->addInternal("404", function () use($app) {
+    $currentRoute = $app->request->getRoute();
+    $routes = "<ul>";
+    foreach($app->router->getAll() as $route) {
+        $routes .= "<li>'" . $route->getRule() . "'</li>";
+    }
+    $routes .= "</ul>";
+
+    $intRoutes = "<ul>";
+    foreach($app->router->getInternal() as $route) {
+        $intRoutes .= "<li>'" . $route->getRule() . "'</li>";
+    }
+    $intRoutes .= "</ul>";
+
+    $body = <<<EOD
+<!doctype html>
+<meta charset="utf-8">
+<title>404</title>
+<h1>404 Not Found</h1>
+<p>The route '$currentRoute' could not be found!</p>
+<h2>Routes loaded</h2>
+<p>The following routes are loaded:</p>
+$routes
+<p>The following internal routes are loaded:</p>
+$intRoutes
+EOD;
+
+    echo $body;
+});
+```
+
+Routen skriver ut information om requesten som användes, dess upplevda route, samt de routes som är laddade i ramverket.
+
+Se det som en bra möjlighet att skriva ut diverse information om vad ramverket innehåller, en möjlighet till debugging. Ännu bättre är kanske att göra en helt egen route som bara visar dig den debugginginfo som du vill ha.
+
+
+
+Response {#response}
+--------------------------------------
+
+Om vi kikar extra noga på svaret från den interna routen 404, så ger den statuskoden 200 tillbaka. Du kan se vilken statuskod som sidan ger i devtools network-fliken.
+
+Statuskoden borde varit 404.
+
+Nåväl, låt oss hämta hem en response-modul som kan hjälpa oss att hantera svaret som vi ger i routens callback.
+
+
+
+###Modul för response {#modulresponse}
+
+Som tidigare finns det en modul som är gjord för att leverera HTTP-svaret, ett response som matchar inkommande request. Vi använder composer för att hämta det.
+
+```bash
+$ composer require anax/response
+```
+
+Kika gärna på källkoden för response. Den ligger nu i din vendor-mapp.
+
+
+
+###Använd response {#anvandresp}
+
+Vi kan nu gå över till att använda response-klassen i routens handler. Men först måste vi lägga till den som en del i ramverket och i `$app`.
+
+I frontkontrollern lägger jag till klassen som en del av `$app`.
+
+```php
+// Add all resources to $app
+$app = new \Mos\App\App();
+$app->request  = new \Anax\Request\RequestBasic();
+$app->response = new \Anax\Response\Response();
+```
+
+Nu är även klassen response en del av $app-objeket.
+
+Sedan uppdaterar jag min routes och ändrar sista delen där saker skrivs ut.
+
+```php
+//echo $body;
+$app->response->setBody($body)
+              ->send();
+```
+
+Det är ingen stor ändring, jag överlåter bara till klassen response att sköta utskriften av resultatet, svaret. Klassen response är förberedd för att hantera HTTP headers och det vill jag möjligen använda lite längre fram.
+
+Eller kanske redan nu, i min route för 404 vill jag skicka med statuskoden för 404, istället för som nu då det blir 200.
+
+Det kan jag göra på följande vis.
+
+```php
+$app->response->setBody($body)
+              ->send(404);
+```
+
+Argumentet som skickas med till `send()` är statuskoden som klassen response omvandlar till ett korrekt anrop med `header("HTTP/1.1 404 Not Found")`. Den typen av hantering skall nu response lösa åt mig.
+
+
+
+###Skicka JSON som response {#jsonresp}
+
+En annan sak som request-klassen kan lösa är att förenkla hanteringen av svar som skall levereras som JSON. Låt oss göra en ny route som skickar med detaljer om servern.
+
+```php
+$app->router->add("status", function () use($app) {
+    $data = [
+        "Server" => php_uname(),
+        "PHP version" => phpversion(),
+        "Included files" => count(get_included_files()),
+        "Memory used" => memory_get_peak_usage(true),
+        "Execution time" => microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'],
+    ];
+
+    $app->response->sendJson($data);
+});
+```
+
+Nu ser man lite mer av styrkan. Klassen response löser encoding av JSON-datan samt lägger till den `header("Content-Type: application/json; charset=utf8")` som är nödvändig.
+
+Nu har vi även ett fungerande response-objekt. Vi närmar oss grunden i ett ramverk.
+
+
+
+Vyer {#vyer}
+--------------------------------------
+
+En del mikro-ramverk väljer att inte inkludera vyer i sitt grundpaket. De ser det som en utökning, en addon.
+
+Men vi kommer att behöva skapa innehåll till webbplatsen och utan en struktur av vyer så kladdar vi ned vår övriga kod med en blandning av HTML, PHP och innehåll, sidornas content.
+
+Så, visst hade det varit skönt att lägga ut det som är vyer till egna filer. Routerna ser lite stökiga ut nu.
 
 
 
@@ -388,6 +817,12 @@ Bra, då har vi även en router på plats i vendor-katalogen.
 Makefile {#makefile}
 --------------------------------------
 
+
+
+Git och GitHub {#git}
+--------------------------------------
+
+Git & GitHub
 
 
 
