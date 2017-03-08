@@ -40,12 +40,12 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1. [Databasteknik](kunskap/boken-databasteknik) om MySQL
+1. [Databasteknik](kunskap/boken-databasteknik) om MySQL.
     * Kap 28: Introduktion till MySQL
 
     Viss information finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 3.
 
-1. [Databasteknik](kunskap/boken-databasteknik) om Transaktioner
+1. [Databasteknik](kunskap/boken-databasteknik) om mer SQL.
     * Kap 8: Mer om SQL: Aggregatfunktioner, null-värden, yttre join
 
     Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
