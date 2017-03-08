@@ -52,7 +52,7 @@ m.route(document.body, "/", {
     ...
     "/days": {
         render: function() {
-            return m(Layout, m(Days))
+            return m(Layout, m(Days));
         }
     }
 });
@@ -95,9 +95,9 @@ module.exports = {
         return [
             m("h1", "Namnsdagar"),
             m("ul.days", days.map(function (day) {
-                return m("li", [m("a", {href: "/nameday/" + format_date(day), oncreate: m.route.link}, format_date(day))])
+                return m("li", [m("a", {href: "/nameday/" + format_date(day), oncreate: m.route.link}, format_date(day))]);
             }))
-        ]
+        ];
     }
 }
 ```
@@ -119,12 +119,12 @@ m.route(document.body, "/", {
     ...
     "/days": {
         render: function() {
-            return m(Layout, m(Days))
+            return m(Layout, m(Days));
         }
     },
     "/nameday/:date" : {
         render: function (vnode) {
-            return m(Layout, m(Nameday, vnode.attrs))
+            return m(Layout, m(Nameday, vnode.attrs));
         }
     }
 });
@@ -170,7 +170,7 @@ Vi vill nu hämta data från Svenska Dagar api:t och som beskrivit ovan hämtar 
 Funktionen `load` sätter först `currentDate` attributet till datumet, som vi kommer skicka från vyn till modellen. Efter tilldelningen av datumet anropar vi mithrils inbyggda [request funktion](http://mithril.js.org/request.html). `m.request` returnerar ett promise, där vi kan använda det resulterande datat för att sätta `currentNames` attributet.
 
 ```javascript
-var m = require("mithril")
+var m = require("mithril");
 
 var Nameday = {
     currentDate : "1970-01-01",
@@ -190,7 +190,7 @@ var Nameday = {
     }
 }
 
-module.exports = Nameday
+module.exports = Nameday;
 ```
 
 För att vi kan använda namnsdagsmodellen i vårt vy `js/views/namnsdag.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar.
@@ -208,7 +208,7 @@ module.exports = {
         return [
             m("h1", "Dagens namn " + Nameday.currentDay.datum),
             m("p", Nameday.currentDay.namn)
-        ]
+        ];
     }
 }
 ```

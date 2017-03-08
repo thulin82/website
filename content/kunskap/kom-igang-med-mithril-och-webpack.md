@@ -3,8 +3,6 @@ author: efo
 category: javascript
 revision:
   "2017-03-03": (A, efo) Första utgåvan inför kursen webapp v2.
-updated: "2017-03-06"
-created: "2017-03-03"
 ...
 Kom igång med ramverket Mithril
 ==================================
@@ -127,11 +125,11 @@ Vår första vy {#vy}
 I vår `js/views/me.js` fil vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion med namnet view som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
 
 ```javascript
-var m = require("mithril")
+var m = require("mithril");
 
 module.exports = {
     view: function() {
-        return m("h1", "Emil Folino")
+        return m("h1", "Emil Folino");
     }
 }
 ```
@@ -139,11 +137,11 @@ module.exports = {
 För att appen ska veta om att vi vill visa upp vårt me-vy måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
 
 ```javascript
-var m = require("mithril")
+var m = require("mithril");
 
-var Me = require("./views/me")
+var Me = require("./views/me");
 
-m.mount(document.body, Me)
+m.mount(document.body, Me);
 ```
 
 Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att se me-appen för första gång. Detta gör vi terminalen med följande kommando, som vi definerade tidigare i `package.json`.
@@ -160,14 +158,14 @@ En router för flera sidor {#router}
 Med bara en sida i vår har vi inte kommit långt så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I detta vy ser du att vi returnerar en array av objekt som placeras i ordning efter varann i vyn.
 
 ```javascript
-var m = require("mithril")
+var m = require("mithril");
 
 module.exports = {
     view: function() {
         return [
             m("h1", "My hobby"),
             m("p", "I run orienteering most of the time.")
-        ]
+        ];
     }
 }
 ```
@@ -219,7 +217,7 @@ Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och a
 Jag valde att lägga till några extra element i min me-vy enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det första elementet `div.main-container`, som är en div med klassen `main-container`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
 
 ```javascript
-var m = require("mithril")
+var m = require("mithril");
 
 module.exports = {
     view: function() {
@@ -244,7 +242,7 @@ Layout {#layout}
 Om vi vill ha navigering i alla vyer kan vi lägga till länkar längst upp, men som vanligt vill vi hålla vår kod DRY. I mithril kan vi använda oss av layouts för att återanvända kod i alla vyer. Vi skapar först ett nytt vy `js/views/layout.js`, som blir vår mall för andra vyer.
 
 ```javascript
-var m = require("mithril")
+var m = require("mithril");
 
 module.exports = {
     view: function(vnode) {
@@ -257,7 +255,7 @@ module.exports = {
                 ])
             ]),
             m("section", vnode.children)
-        ])
+        ]);
     }
 }
 ```
@@ -274,12 +272,12 @@ var Hobby = require("./views/hobby");
 m.route(document.body, "/", {
     "/": {
         render: function() {
-            return m(Layout, m(Me))
+            return m(Layout, m(Me));
         }
     },
     "/hobby": {
         render: function() {
-            return m(Layout, m(Hobby))
+            return m(Layout, m(Hobby));
         }
     }
 });
