@@ -237,6 +237,8 @@ Redirect /fredag         /forum/viewtopic.php?f=17&t=2629
 Redirect /kurser/oophp-v2/me   https://arkiv.dbwebb.se/oophp/me
 Redirect /oophp-v2  /oophp
 Redirect /phpmvc-v2 /phpmvc
+Redirect /linux-v2  /kurser/linux-v2
+Redirect /webapp-v2 /kurser/webapp-v2
 
 # Old articles with new names and links
 Redirect 301 /kunskap/anvand-lydias-formularklass-cform-for-formularhantering	/kunskap/cform-en-php-klass-for-att-skapa-presentera-och-validera-html-formular
