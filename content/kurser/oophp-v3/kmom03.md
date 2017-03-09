@@ -13,17 +13,14 @@ Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 10/4 201
 
 [/WARNING]
 
-Så, nu har vi koll på PHP och grunderna i objektorienterad PHP, då går vi vidare till databasen MySQL och dess olika klienter samt en introduktion i frågespråket SQL. Du får jobba igenom en övning i SQL som tar dig från de enklare konstruktionerna till svårare saker som subqueries och `RIGHT/LEFT OUTER JOIN`. Innan den övningen så har du bekantat dig med MySQL, både i din egna utvecklingsmiljö och i BTH's labbmiljö.
+Så här långt har du lärt dig om objektorienterad PHP och databasen MySQL. Nu skall du koppla ihop dessa till en databasdriven webbapplikation genom att använda PHP's gränssnitt för databaser PHP PDO. Du får jobba igenom en guide där du bygger upp en filmdatabas med ett webbgränssnitt där du kan redigera information om filmer och söka ut dem. När du jobbar i guiden så kommer du att stöta på och lösa de vanliga problemen som en sådan applikation innebär. När du är klar så har du ett fungerande exempel som du kan använda som bas för kommande webbapplikationer. Om du tittar noga så kan du se likheten mellan till exempel en webbshop och din filmdatabas, rent tekniskt är det samma grunder i båda.
 
-Du får pröva att använda tre olika klienter till MySQL, alla tre har sin plats och som webbprogrammerare behöver du kunna använda alla klienterna, vid olika tillfällen.
+[FIGURE src=/image/snapshot/Visa_filmer_med_sokalternativ_kombinerade___Min_Filmdatabas.jpg?w=w1&q=60 caption="Din egen sökbara filmdatabas kan bli ett resultat av detta kursmoment."]
 
-[FIGURE src=/image/snapshot/mamp-mysql-clu-test.jpg?w=w1&q=60 caption="SQL i en textbaserad klient."]
+Kursmomentet avslutas med att du kodar ett par moduler till ditt Anax.
 
-[FIGURE src=/image/snapshot/wamp-phpmyadmin.png?w=w1&sa=jpg&q=60 caption="SQL i en webbaserad klient."]
 
-[FIGURE src=/image/snapshot/sql-ovning-alter-table.jpg?w=w1&q=60 caption="SQL som det ser ut i desktop-klienten MySQL WorkBench."]
-
-*(Kursmomentet omfattar cirka 20 studietimmar fördelat på läsanvisningar, uppgifter och övningar samt resultat, redovisning och eftertanke.)*
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -38,40 +35,10 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1\. [Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)
-
-* Chapter 25: Introducing MySQL
-* Chapter 26: Installing and Configuring MySQL (skumläs översiktligt)
-* Chapter 27: The Many MySQL Clients
-
-
-Läs följande referenslitteratur, om du har tillgång till dem.
-
-1\. [Webbutveckling med PHP och MySQL](kunskap/boken-webbutveckling-med-php-och-mysql) (referenslitteratur)
-
-* Kapitel 8: Databaser
-
-
-2\. [Databasteknik](kunskap/boken-databasteknik) (referenslitteratur)
-
-* Kapitel 7: Introduktion till frågespråket SQL
-* Kapitel 8: Mer om SQL
-* Kapitel 9: Sammanfattning av SQL-kommandon
-* Kapitel 28: Introduktion till MySQL
-
-
-
-###Lektionsmaterial  {#lektionsmaterial}
-
-Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distanstudenten.
-
-* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom03-ht13.pdf).
-
 
 
 ###Lästips {#lastips}
 
-1. Läs om databasmodellering i en ["Kokbok för databasemodellering"](kunskap/kokbok-for-databasmodellering). Det är en lagom stor artikel som ger dig insyn i olika faser av databasmodellering och hur man kan tänka när man modellerar en databas.
 
 
 
@@ -85,17 +52,25 @@ Följande föreläsningsmaterial användes i samband med campus-kursen höstterm
 
 Gör följande övningar, de förbereder dig inför kommande kursmoment.
 
-1. Jobba igenom guiden ["Kom igång med databasen MySQL och dess klienter"](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter). Som webbutvecklare behöver du ha koll på olika varianter av klienter, testa allihop och se till att din lokala utvecklingsmiljö fungerar.
-
-1. Bekanta dig med ["BTH's labbmiljö för databasen MySQL"](kunskap/bth-s-labbmiljo-for-databasen-mysql). Se till att du kan använda BTH's databasserver för MySQL, använd de olika klienterna för att koppla upp dig.
-
-1. Jobba igenom övningen ["Kom igång med SQL"](uppgift/kom-igang-med-sql). Lär dig grunderna i SQL, och lite till.
+1. Jobba igenom guiden ["Kom igång med PHP PDO och MySQL"](kunskap/kom-igang-med-php-pdo-och-mysql).
 
 
 
 ###Uppgifter {#uppgifter}
 
-Det finns ingen uppgift. Det är övningarna som är viktiga och de förbereder dig inför kommande kursmoment som kommer att handla om PHP och databaser. När du är klar med övningarna så har du koll på SQL och databasen MySQL, i olika miljöer, samt klienter till MySQL. Det räcker gott för detta kursmomentet.
+Gör följande uppgifter.
+
+1. Börja med att skapa din egna klass `CDatabase` och inkludera den i ditt Anax. Du får tag i koden och lär dig använda klassen genom att göra övningen ["Övningar med CDatabase"](uppgift/ovningar-med-cdatabase).
+
+1. Gör uppgiften ["Generera en HTML-tabell från en databastabell, använd sökning, sortering och paginering"](uppgift/generera-en-html-tabell-fran-en-databastabell-anvand-sokning-sortering-och-paginering). 
+
+1. Gör uppgiften ["Skapa en klass för användarhantering, CUser"](uppgift/skapa-en-klass-for-anvandarhantering-cuser).
+
+1. (Klass Session i ramverket.)
+
+1. Inloggning steg 2, inuti ramverket.
+
+1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
 
 
 
@@ -114,6 +89,6 @@ Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Är du bekant med databaser sedan tidigare? Vilka?
-* Hur känns det att jobba med MySQL och dess olika klienter, utvecklingsmiljö och BTH driftsmiljö?
-* Hur gick SQL-övningen, något som var lite svårare i övningen, kändes den lagom?
+* Hur kändes det att jobba med PHP PDO?
+* Gjorde du guiden med filmdatabasen, hur gick det?
+* Du har nu byggt ut ditt Anax med ett par moduler i form av klasser, hur tycker du det konceptet fungerar så här långt, fördelar, nackdelar?

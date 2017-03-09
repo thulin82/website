@@ -19,7 +19,7 @@ Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan 
 
 [FIGURE src=/image/snapshot/oophp20-session.jpg?w=w1&q=70 caption="Spela 21 med en tärningshand är en av övningarna som finns med i detta kursmoment."]
 
-*Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.*
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -61,21 +61,50 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
 
+1. Artikel om session och inloggning med databas.
+
 
 
 ###Uppgifter {#uppgifter}
 
-Gör **EN** av följande uppgifter, resultatet skall redovisas via me-sidan.
+Gör följande uppgifter.
 
-1. **Tärningsspelet 100**. Gör [uppgiften tärningsspelet 100](uppgift/tarningsspelet-100) som modul till ditt Anax och visa upp spelet i din me-sida.
+1. Gör [uppgiften tärningsspelet 100](uppgift/tarningsspelet-100) som modul till ditt Anax och visa upp spelet i din me-sida.
 
-2. **Gör en kalender med "Månadens Babe"**. Gör [uppgiften](uppgift/manadskalender-for-manadens-babe) och inkludera resultatet som anax-moduler i din me-sida.
+<!--
+
+oophp20 -> dice med session?
+
+Kanske göra tärning version 1 standalone och version 2 i kmom02 som integrerar i ramverket?
+
+-->
+
+2. Gör uppgiften [kalender med Månadens Babe](uppgift/manadskalender-for-manadens-babe) och inkludera resultatet som anax-moduler i din me-sida.
+
+
+<!--
+1. Ramverksmoduler att bygga själv.
+* CValidate
+* CFlash
+* CCache
+* CSession
+* filecontent/pagecontent content
+
+(Olika språk, anpassa med int/loc) 
+
+sessioner? oophp session
+
+-->
+
+1. Inloggning steg 1, utan ramverket.
+
+1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon. Filerna ligger i `me/kmom02/sql1`.
 
 
 
 ###Extra {#extra}
 
-Gör BÅDA uppgifterna.
+Det finns ingen extrauppgift.
 
 <!-- kanske drop-down-menyn -->
 

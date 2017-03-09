@@ -101,16 +101,6 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 ***
 
-<!--
-skapa navbar som klasser
-
-sessioner? oophp session
-
-oophp20 -> dice med session?
-
-Kanske göra tärning version 1 standalone och version 2 i kmom02 som integrerar i ramverket?
-
--->
 
 3. Jobba igenom tutorialen ["Create a dynamic menu / navigation bar with PHP"](http://dbwebb.se/kod-exempel/dynamic_php_menu/)
 
@@ -124,31 +114,14 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera/kommentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att alltid skriva dina egna SQL-satser.
 
-<!--
+1. Gör uppgiften "Skapa en dynamisk navbar". In i ramverket. Funktion/class tillsamman med vy. Kanske göra standalone först.
 
+<!--
+skapa navbar som klasser (eller direkt i vyn? kanske två varianter?)
 -->
 
 
-***
-
-<!--
-2. **Gör en me-sida** som baseras på din webbmall. Gör en förstasida som presenterar dig själv och gör en redovisningssida där du samlar alla dina redovisningstexter i kursen. Skapa en dynamisk huvudmeny (likt övningen) och lägg in länkar till sidorna samt en länk till att visa källkoden med `source.php`. Du kan [tjuvkika hur jag gjort](oophp/me/kmom01/me.php).
--->
-
-
-
-<!--
-1. Ramverksmoduler att bygga själv.
-* CValidate
-* CFlash
-* CCache
-* CSession
-* navbar
-* filecontent/pagecontent content
-
-(Olika språk, anpassa med int/loc) 
-
--->
+1. Gör uppgiften "Gissa vilket nummer jag tänker på". Spara din kod i `me/kmom01/guess`.
 
 
 

@@ -13,13 +13,15 @@ Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 17/4 201
 
 [/WARNING]
 
-Så här långt har du lärt dig om objektorienterad PHP och databasen MySQL. Nu skall du koppla ihop dessa till en databasdriven webbapplikation genom att använda PHP's gränssnitt för databaser PHP PDO. Du får jobba igenom en guide där du bygger upp en filmdatabas med ett webbgränssnitt där du kan redigera information om filmer och söka ut dem. När du jobbar i guiden så kommer du att stöta på och lösa de vanliga problemen som en sådan applikation innebär. När du är klar så har du ett fungerande exempel som du kan använda som bas för kommande webbapplikationer. Om du tittar noga så kan du se likheten mellan till exempel en webbshop och din filmdatabas, rent tekniskt är det samma grunder i båda.
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i de flesta webbplatser. Nu har vi både en mall för webbplatser och koll på databaser och objektorienterad programmering. låt oss då försöka använda allt detta för att lagra undan innehåll i databasen och sedan visa upp det som webbsidor och bloggposter i webbplatsen.
 
-[FIGURE src=/image/snapshot/Visa_filmer_med_sokalternativ_kombinerade___Min_Filmdatabas.jpg?w=w1&q=60 caption="Din egen sökbara filmdatabas kan bli ett resultat av detta kursmoment."]
+Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
+
+[FIGURE src=/image/snapshot/Uppdatera_innehall___Innehall_i_databasen.jpg?w=w2 caption="Formulär för att editera innehåll i databasen."]
 
 Kursmomentet avslutas med att du kodar ett par moduler till ditt Anax.
 
-*(Kursmomentet omfattar cirka 20 studietimmar fördelat på läsanvisningar, uppgifter och övningar samt resultat, redovisning och eftertanke.)*
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -34,32 +36,11 @@ Läsanvisningar  {#lasanvisningar}
 
 Läs följande:
 
-1\. [Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)
-
-* Chapter 30: Using PHP with MySQL
-* Chapter 31: Introducing PDO
-
-
-
-2\. [Databasteknik](kunskap/boken-databasteknik) (referenslitteratur)
-
-* Kapitel 18: Databasbaserade webbplatser
-
-
-
-###Lektionsmaterial  {#lektionsmaterial}
-
-Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distanstudenten.
-
-* [Översikt av kursmomentet](https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom04-ht13.pdf).
 
 
 
 ###Lästips {#lastips}
 
-Ett uppenbart lästips är [manualen om PHP PDO](http://php.net/manual/en/book.pdo.php). Det kan vara lite svårsmält för en nybörjare men där finns en stor del av facit. Dit går vi när vi vill se hur gränssnittet skall fungera.
-
-Glöm ej bort [referensmanualen till MySQL](http://dev.mysql.com/doc/refman/5.6/en/). Du kommer att behöva kika i den, till och från, under detta kursmoment.
 
 
 
@@ -73,7 +54,7 @@ Glöm ej bort [referensmanualen till MySQL](http://dev.mysql.com/doc/refman/5.6/
 
 Gör följande övning, den förbereder dig inför uppgifterna och löser ett par av dem.
 
-1. Jobba igenom guiden ["Kom igång med PHP PDO och MySQL"](kunskap/kom-igang-med-php-pdo-och-mysql).
+1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter).
 
 
 
@@ -81,13 +62,13 @@ Gör följande övning, den förbereder dig inför uppgifterna och löser ett pa
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. <strike>Gör uppgiften ["Skapa en klass för din databashantering, CDatabase"](uppgift/skapa-en-klass-for-din-databashantering-cdatabase).</strike>
+1. Gör uppgiften ["Övningar med CTextFilter"](uppgift/ovningar-med-ctextfilter).
 
-1. Börja med att skapa din egna klass `CDatabase` och inkludera den i ditt Anax. Du får tag i koden och lär dig använda klassen genom att göra övningen ["Övningar med CDatabase"](uppgift/ovningar-med-cdatabase).
+1. Gör uppgiften ["Skapa en klass för innehåll i databasen, CContent"](uppgift/skapa-en-klass-for-innehall-i-databasen-ccontent). 
 
-1. Gör uppgiften ["Generera en HTML-tabell från en databastabell, använd sökning, sortering och paginering"](uppgift/generera-en-html-tabell-fran-en-databastabell-anvand-sokning-sortering-och-paginering). 
+1. Gör uppgiften ["Skapa en klass CPage för att visa upp webbsidor från CContent"](uppgift/skapa-en-klass-cpage-for-att-visa-upp-webbsidor-fran-ccontent).
 
-1. Gör uppgiften ["Skapa en klass för användarhantering, CUser"](uppgift/skapa-en-klass-for-anvandarhantering-cuser).
+1. Gör uppgiften ["Gör en blogg med CBlog baserad på CContent"](uppgift/gor-en-blogg-med-cblog-baserad-pa-ccontent).
 
 
 
@@ -108,6 +89,7 @@ Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur kändes det att jobba med PHP PDO?
-* Gjorde du guiden med filmdatabasen, hur gick det?
-* Du har nu byggt ut ditt Anax med ett par moduler i form av klasser, hur tycker du det konceptet fungerar så här långt, fördelar, nackdelar?
+* Det blir en del moduler till ditt Anax nu, hur känns det?
+* Berätta hur du tänkte när du löste uppgifterna, hur tänkte du när du strukturerade klasserna och sidkontrollerna?
+* Börjar du få en känsla för hur du kan strukturera din kod i klasser och moduler, eller kanske inte?
+* Snart har du grunderna klara i ditt Anax, grunderna som kan skapa många webbplatser, är det något du saknar så här långt, kanske några moduler som du känner som viktiga i ditt Anax?
