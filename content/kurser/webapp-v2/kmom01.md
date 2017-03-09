@@ -1,10 +1,11 @@
 ---
 author: mos
 revision:
+  "2017-03-09": (C, efo) Gjorde om för webapp v2.
   "2015-12-11": (B, mos) La till video om jQuery Foundation.
   "2015-10-26": (A, mos) Första utgåvan för kursen.
 ...
-Kmom01: En mobil webapp i HTML
+Kmom01: En mobil webapp i mithril
 ==================================
 
 [WARNING]
@@ -16,7 +17,7 @@ Tanken är att komma igång med utveckling av mobila applikationer. De mobila ap
 
 Eller ja, den blir skalbar så den fungerar även på större plattformar, men vårt fokus är mindre, mobila enheter.
 
-Vi använder ramverket jQuery Mobile för att snabbt komma igång och du får en introduktion till utvecklingsmiljön som erbjuds i webbläsaren.
+Vi använder javascript ramverket [mithril](http://mithril.js.org/) för att bygga våra webappar enligt MVC och cordova för att skapa hybrid appar för mobila enheter.
 
 <!--more-->
 
@@ -49,23 +50,26 @@ Läs följande:
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
-1. Titta i manualen om jQuery Mobile. Du finner den på deras [webbplats under demo](http://demos.jquerymobile.com/). Börja med att läsa artikeln som heter "Introduction" och läs därefter artikeln "Responsive Web Design". Avsluta med att skumma igenom manualen för att se vad där finns och för att bygga en känsla om vad jQuery Mobile innehåller.
-
-1. Titta på olika [varianter av mobila webappar med jQuery Mobile](http://jquerymobile.com/resources/) och få en känsla för vad man kan bygga med jQuery Mobile.
-
 1. Läs om viewport på MDN i artikeln "[Using the viewport meta tag to control layout on mobile browsers](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)".
 
 1. Läs artikeln om "[Mobile: native Apps, Web Apps, and hybrid Apps](http://www.nngroup.com/articles/mobile-native-apps/)".
 
+1. Bekanta dig med dokumentationen för javascript ramverket [mithril](http://mithril.js.org/api.html).
+
+<!-- 1. Titta i manualen om jQuery Mobile. Du finner den på deras [webbplats under demo](http://demos.jquerymobile.com/). Börja med att läsa artikeln som heter "Introduction" och läs därefter artikeln "Responsive Web Design". Avsluta med att skumma igenom manualen för att se vad där finns och för att bygga en känsla om vad jQuery Mobile innehåller.
+
+1. Titta på olika [varianter av mobila webappar med jQuery Mobile](http://jquerymobile.com/resources/) och få en känsla för vad man kan bygga med jQuery Mobile. -->
 
 
 ###Video  {#video}
 
 Titta på följande video.
 
-1. Video som ger en översikt av jQuery Mobile, "[jQuery Mobile and jQuery UI Keynotes - jQuery Conference Portland 2013](https://www.youtube.com/watch?v=JcHJtBAnGpE)". Video är från 2013 men ger en bra översikt och bakgrund av jQuery Mobile.
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_D-nAKo6PpmWZwNpo5TyWm) kopplat till kursen, titta på videos som börjar på 0 och 1.
 
-1. Video om [Dave Methvin - The State of the jQuery Foundation](https://www.youtube.com/watch?v=vpooxtxaW2U&list=PL-0yjdC10QYpmXI3l-PGK1od4kTWOjm_A). Videon är opening keynote från konferensen jQuery Chicago 2014 och Dave Methvin är president av jQuery Foundation.
+<!-- 1. Video som ger en översikt av jQuery Mobile, "[jQuery Mobile and jQuery UI Keynotes - jQuery Conference Portland 2013](https://www.youtube.com/watch?v=JcHJtBAnGpE)". Video är från 2013 men ger en bra översikt och bakgrund av jQuery Mobile.
+
+1. Video om [Dave Methvin - The State of the jQuery Foundation](https://www.youtube.com/watch?v=vpooxtxaW2U&list=PL-0yjdC10QYpmXI3l-PGK1od4kTWOjm_A). Videon är opening keynote från konferensen jQuery Chicago 2014 och Dave Methvin är president av jQuery Foundation. -->
 
 
 
@@ -99,10 +103,9 @@ Om detta är din första dbwebb-kurs så läser du också igenom hela [manual-si
 
 Gör följande övningar för att träna inför uppgifterna.
 
-
 1. Läs igenom tipset om "[Developer tools i webbläsaren för mobila enheter](coachen/developer-tools-i-webblasaren-for-mobila-enheter)".
 
-1. Gör övningen "[Kom igång och skapa en mobil webapp med jQuery Mobile](kunskap/kom-igang-och-skapa-en-mobil-webapp-med-jquery-mobile)".
+1. Gör övningen "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)".
 
 
 
@@ -110,7 +113,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Skapa en me-app till webapp-kursen](uppgift/skapa-en-me-app-till-webapp-kursen)".
+1. Gör uppgiften "[Skapa en mithril me-app](uppgift/skapa-en-mithril-me-app-till-webapp-kursen)".
 
 
 
@@ -131,6 +134,6 @@ Se till att följande frågor besvaras i redovisningstexten.
 
 * Vilken utvecklingsmiljö sitter du på?
 * Är du sedan tidigare bekant med utveckling av mobila appar?
-* Är du bekant med jQuery och/eller jQuery Mobile?
-* Hur känns det att jobba i jQuery Mobile?
+* Är du bekant med mithril?
+* Hur känns det att jobba i mithril?
 * Var det något som krånglade eller tog extra mycket tid?
