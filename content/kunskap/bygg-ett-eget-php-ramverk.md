@@ -5,7 +5,7 @@ category:
     - php
     - kursen oophp
 revision:
-    "2017-02-27": (A, mos) Första utgåvan.
+    "2017-03-10": (A, mos) Första utgåvan.
 ...
 Bygg ett eget PHP-ramverk
 ==================================
@@ -29,9 +29,9 @@ Du har goda kunskaper i HTML, CSS och PHP. Du har använt ramverk så du har en 
 
 Du har tillgång till dbwebb-cli.
 
-Min kod är sparad i repot `[canax/anax-lite](https://github.com/canax/request)`.
+Min kod från denna artikeln är sparad i repot [canax/anax-lite](https://github.com/canax/request).
 
-Viss extra kod kan finnas tillgänglig i [kursrepo för oophp-kursen]().
+Viss extra kod kan finnas tillgänglig i kursrepo för oophp-kursen.
 
 När jag jobbar igenom artikeln så utgår jag från kursrepots me-katalog. Min anax-lite ligger alltså i `me/anax-lite`.
 
@@ -40,7 +40,7 @@ När jag jobbar igenom artikeln så utgår jag från kursrepots me-katalog. Min 
 Ett repo {#repo}
 --------------------------------------
 
-Jag börjar med att skapa ett lokalt repo i Git och laddar upp det på GitHub där jag skapat ett motsvarande repo på `canax/anax-lite`.
+Jag börjar med att skapa ett lokalt repo i Git och laddar upp det på GitHub där jag skapat ett motsvarande repo.
 
 Jag gjorde på följande sätt, men huvudsaken är att du skapar ditt eget repo.
 
@@ -66,14 +66,14 @@ Det ser ut ungefär så här nu, [första committen](https://github.com/canax/an
 En frontcontroller {#frontcontroller}
 --------------------------------------
 
-Vi behöver en index-sida som vi kan bygga ut till en frontcontroller. Tanken är att denna sidan tar han om samtliga requester som kommer. En sida för att fånga alla requester.
+Vi behöver en index-sida som kan byggas ut till en frontcontroller. Tanken är att denna sida tar han om samtliga requester som kommer in. En sida för att fånga alla requester.
 
 ```bash
 $ mkdir htdocs
 $ echo '<?php echo "I wanna be a frontcontroller!";' > htdocs/index.php
 ```
 
-Du kan göra en `dbwebb publish` och testa din sida. Testa den även lokalt, via din lokala webbserver. Det känns ju bra att veta att det fungerar så här långt.
+Du kan göra en `dbwebb publish` och testa din sida. Testa den även lokalt, via din lokala webbserver. Det känns bra att veta om att det fungerar så här långt.
 
 
 
@@ -806,16 +806,158 @@ Vyer {#vyer}
 
 En del mikro-ramverk väljer att inte inkludera vyer i sitt grundpaket. De ser det som en utökning, en addon.
 
-Men vi kommer att behöva skapa innehåll till webbplatsen och utan en struktur av vyer så kladdar vi ned vår övriga kod med en blandning av HTML, PHP och innehåll, sidornas content.
+Men vi kommer att behöva skapa innehåll till webbplatsen och utan en struktur av vyer så kladdar vi ned vår övriga kod med en blandning av HTML, PHP och innehållet - sidornas content. Det blir stökig kod.
 
-Så, visst hade det varit skönt att lägga ut det som är vyer till egna filer. Routerna ser lite stökiga ut nu.
+Så, visst hade det varit skönt att lägga ut det som är vyer till egna filer. Routerna ser ju faktiskt lite stökiga ut nu.
+
+Nåväl, låt oss integrera vyer.
 
 
 
+###En modul för vyer {#moduleview}
+
+Som tidigare så tar vi en färdig modul i form av [anax/view](https://packagist.org/packages/anax/view).
+
+```bash
+$ composer require anax/view
+```
+
+Kika gärna på de klasserna som ingår i modulen. Det handlar om att spara undan view-filer, eller template-filer som de också kan kallas. I dem lägger vi HTML-kod tillsammans med PHP-skripttaggar som skriver ut den `$data` som är tillgänglig i view-filen.
+
+Det finns med ett par exempel på view-filer i modulen. Du hittar dem i `vendor/anax/view/view` och du kan kopiera den katalogen till ditt anax-lite, så har vi några view-filer att utgå ifrån.
+
+```bash
+# Du står i anax-lite
+$ rsync -av vendor/anax/view/view .
+```
+
+Kika igenom innehållet i katalogen. Det är exempel på view-filer, eller template-filer som de också kan kallas.
+
+Tanken är att man samlar ihop all data som behövs, sedan *skickar* man datan till view-filer som renderar ett svar, oftas i form av en del av en HTML-sida. Men man hade i princip kunnat generera godtyckligt format.
 
 
-Generella funktioner i functions.php {#functions}
---------------------------------------
+
+###Aktivera vyerna i $app {#aktiveraview}
+
+Då aktiverar vi vyerna genom att göra view-kontainern som en del av `$app`.
+
+Följande kod löser det i vår frontkontroller.
+
+```php
+$app->router   = new \Anax\Route\RouterInjectable();
+$app->view     = new \Anax\View\ViewContainer();
+
+// Inject $app into the view container for use in view files.
+$app->view->setApp($app);
+
+// Update view configuration with values from config file.
+$app->view->configure("view.php");
+```
+Du ser var jag lade koden, direkt under där `$app->router` skapades.
+
+Jag har en initieringsfas där jag injectar `$app` in till view kontainern. Det är för att jag via `$app` vill att man skall ha tillgång till hela ramverkets resurser i respektive vy. Det är smidigt och kraftfullt.
+
+Slutligen laddar jag en konfigurationsfil som innehåller vissa inställningar som view kontainern behöver.
+
+Du kan låna den konfigurationsfil som bifogas i modulen.
+
+```bash
+$ cp vendor/anax/view/config/view.php config
+```
+
+Kika i konfigurationsfilen `config/view.php` för att se vad den innehåller. Du behöver inte ändra något.
+
+Fint, då kan vi arrangera om vår kod i routern och börja använda vyerna.
+
+
+
+###Skapa vyer av innehållet i routen {#createview}
+
+Till att börja med så kikar vi på en av de routes vi har för tillfället.
+
+```php
+$app->router->add("", function () use($app) {
+    $urlHome  = $app->url->create("");
+    $urlAbout = $app->url->create("about");
+    $navbar = <<<EOD
+<navbar>
+    <a href="$urlHome">Home</a> | 
+    <a href="$urlAbout">About</a>
+</navbar>
+EOD;
+
+    $body = <<<EOD
+<!doctype html>
+<meta charset="utf-8">
+<title>Home</title>
+$navbar
+<h1>Home</h1>
+<p>This is the homepage.</p>
+EOD;
+
+    $app->response->setBody($body)
+                  ->send();
+});
+```
+
+Här ser jag tre möjliga view-filer, template-filer.
+
+**`view/take1/header.php`**
+
+```php
+<!doctype html>
+<meta charset="utf-8">
+<title><?= $title ?></title>
+```
+
+**`view/take1/navbar.php`**
+
+```php
+<?php
+$urlHome  = $app->url->create("");
+$urlAbout = $app->url->create("about");
+
+?><navbar>
+<a href="<?= $urlHome ?>">Home</a> | 
+<a href="<?= $urlAbout ?>">About</a>
+</navbar>
+```
+
+**`view/take1/home.php`**
+
+```php
+<h1>Home</h1>
+<p>This is the homepage.</p>
+```
+
+Detta skulle kunna vara en första ansats till att dela upp sidans innehåll i view-filer.
+
+
+
+###Ladda vyerna {#loadviews}
+
+När vi nu har view filerna så kan vi ladda dem i routen. Den uppdaterade routen följer.
+
+```php
+$app->router->add("", function () use($app) {
+    $app->view->add("take1/header", ["title" => "Home"]);
+    $app->view->add("take1/navbar");
+    $app->view->add("take1/home");
+
+    $app->response->setBody([$app->view, "render"])
+                  ->send();
+});
+```
+
+Visst blev det snyggare?
+
+Du kan se hur vi lägger till tre vyer till view kontainern.
+
+I header-vyn så bifogar vi en variabel som nås via `$titel` i view filen. De andra får inga variabler inskickade.
+
+Det sista vi gör är att skicka metoden `$app->view->render()` till response objektet som en *[callable](http://php.net/manual/en/language.types.callable.php)*. Det är som att bifoga en funktion som kan anropas vid ett senare tillfälle. Det som sker i responseobjektet är att det känner av om det är en callable som finns i argumentet och isåfall exekveras funktionen och resultatet sätts som responsens body.
+
+Nu kan du själv städa upp den andra routen så att den blir lika snygg med vyer. När du är klar så har du städat upp vyerna och det finns inte någon HTML-kod kvar, den är överflyttad till view filer.
 
 
 

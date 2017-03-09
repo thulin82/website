@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom03: SQL och databasen MySQL
+Kmom03: PHP PDO och MySQL
 ==================================
 
 [WARNING]

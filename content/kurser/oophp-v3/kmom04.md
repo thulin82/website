@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom04: PHP PDO och MySQL
+Kmom04: Lagra innehåll i databasen
 ==================================
 
 [WARNING]

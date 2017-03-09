@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom01: OO-programmering i PHP
+Kmom01: Intro OO-programmering i PHP
 ==================================
 
 [WARNING]

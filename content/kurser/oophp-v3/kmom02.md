@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom02: Objektorienterad programmering i PHP
+Kmom02: OO-programmering i PHP
 ==================================
 
 [WARNING]
