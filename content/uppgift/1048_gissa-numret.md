@@ -2,7 +2,7 @@
 author: lew
 category: oophp
 revision:
-  "2017-03-09": (A, lew) Första utgåvan i samband med kursen oophp v2.
+  "2017-03-09": (A, lew) Första utgåvan i samband med kursen oophp v3.
 ...
 Gissa numret
 ==================================
