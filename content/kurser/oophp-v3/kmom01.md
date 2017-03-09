@@ -121,7 +121,7 @@ skapa navbar som klasser (eller direkt i vyn? kanske två varianter?)
 -->
 
 
-1. Gör uppgiften "Gissa vilket nummer jag tänker på". Spara din kod i `me/kmom01/guess`.
+1. Gör uppgiften "[Gissa vilket nummer jag tänker på](uppgift/gissa-numret)". Spara din kod i `me/kmom01/guess`.
 
 
 
