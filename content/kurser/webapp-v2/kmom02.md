@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-03-09": (C, efo) Gjorde om för webapp-v2.
   "2016-02-08": (B, mos) Lade till extrauppgift om detect-swipe-event.
   "2015-10-26": (A, mos) Första utgåvan för kursen.
 ...
@@ -49,21 +50,22 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 1. Läs om "[Use Cases and Requirements for Installable Web Apps](https://w3c-webmob.github.io/installable-webapps/)".
 
-1. Läs kort och översiktligt om [Firefox OS](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS).
-
-1. Läs översiktligt om introduktionen till [webappar på Firefox OS](https://developer.mozilla.org/en-US/Apps/Quickstart).
-
 1. Läs översiktligt introduktionen om webappar i [Safari Developer library - Getting started with webapps](https://developer.apple.com/library/safari/referencelibrary/GettingStarted/GS_WebApp/_index.html#//apple_ref/doc/uid/TP40008135).
 
 1. Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
 
+<!-- 1. Läs kort och översiktligt om [Firefox OS](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS).
+
+1. Läs översiktligt om introduktionen till [webappar på Firefox OS](https://developer.mozilla.org/en-US/Apps/Quickstart). -->
 
 
 ###Video  {#video}
 
 Titta på följande video.
 
-1. Se videon om jQuery Mobile "[Alex Schmitz - jQuery Mobile - What’s New in 1.5 and the Road to 2.0](https://www.youtube.com/watch?v=2qF7kW9SdJQ)".
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_D-nAKo6PpmWZwNpo5TyWm) kopplat till kursen, titta på videos som börjar på 2.
+
+<!-- 1. Se videon om jQuery Mobile "[Alex Schmitz - jQuery Mobile - What’s New in 1.5 and the Road to 2.0](https://www.youtube.com/watch?v=2qF7kW9SdJQ)". -->
 
 
 
@@ -85,9 +87,9 @@ Det finns inga extra lästips.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln och gör övningarna i "[Att göra en mobilapp av en mobil-anpassad webbplats](kunskap/att-gora-en-mobilapp-av-en-mobil-anpassad-webbplats)".
+1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
 
-1. Installera utvecklingsverktygen för [Installera en emulator för Android](kunskap/installera-en-emulator-for-android).
+<!-- 1. Installera utvecklingsverktygen för [Installera en emulator för Android](kunskap/installera-en-emulator-for-android). -->
 
 
 
@@ -96,7 +98,9 @@ Gör följande övningar för att träna inför uppgifterna.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Bygg ut me-appen med ett potpurri av tester](uppgift/bygg-ut-me-appen-med-ett-potpurri-av-tester)".
+1. Gör uppgiften "[Bygg vidare på din me-app](uppgift/github-sida-i-din-me-app)".
+
+1. Gör uppgiften "[Skapa en Nobel app](uppgift/skapa-en-nobel-app)".
 
 
 
@@ -117,7 +121,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur känns det att jobba i jQuery Mobile, fördelar och nackdelar?
+* Hur känns det att jobba med modeller och hämta data från api'er med `m.request`?
+* Hur känns det att jobba i mithril, fördelar och nackdelar?
 * Så här långt, känner du att du har koll på koden? Är det något särskilt du funderar på?
-* Hur gick det att installera simulatorn för Android?
 * Var det något som krånglade eller tog extra mycket tid?
