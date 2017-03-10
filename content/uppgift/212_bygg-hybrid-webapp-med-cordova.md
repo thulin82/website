@@ -2,6 +2,7 @@
 author: mos
 category: webbprogrammering
 revision:
+  "2017-03-10": (B, aar) Tog bort Firefox OS från krav.
   "2015-12-11": (A, mos) Första utgåvan i samband med kursen webapp.
 updated: "2015-12-11 11:08:40"
 created: "2015-12-11 11:08:38"
@@ -20,7 +21,7 @@ Förkunskaper {#forkunskaper}
 
 Du har förkunskaper som motsvarar de fem första kursmomenten i kursen webapp.
 
-Du har installerat Apache Cordova på din miljö och du har testat så att det fungerar på plattformarna browser, Firefox OS och Android.
+Du har installerat Apache Cordova på din miljö och du har testat så att det fungerar på plattformarna browser och Android.
 
 
 
@@ -36,11 +37,11 @@ När du är klar med uppgiften, avsluta med att skapa en ny version av din meapp
 Krav {#krav}
 -----------------------
 
-1. Skapa en ny Cordova app `kmom06/cordova/me5` och använd koden från din meapp `kmom05/me5`. Testkör appen på plattformarna browser, Firefox OS och Android. Se hur appen fungerar på de olika plattformarna.
+1. Skapa en ny Cordova app `kmom06/cordova/me5` och använd koden från din meapp `kmom05/me5`. Testkör appen på plattformarna browser och Android. Se hur appen fungerar på de olika plattformarna.
 
-1. Skapa en ny Cordova app `kmom06/cordova/mithril` och använd koden från din `kmom04/mithril`. Testkör appen på plattformarna browser, Firefox OS och Android. Se hur appen fungerar på de olika plattformarna.
+1. Skapa en ny Cordova app `kmom06/cordova/mithril` och använd koden från din `kmom04/mithril`. Testkör appen på plattformarna browser och Android. Se hur appen fungerar på de olika plattformarna.
 
-1. Skapa en ny Cordova app `kmom06/cordova/pizza` och använd koden från din `kmom05/pizza`. Testkör appen på plattformarna browser, Firefox OS och Android. Se hur appen fungerar på de olika plattformarna.
+1. Skapa en ny Cordova app `kmom06/cordova/pizza` och använd koden från din `kmom05/pizza`. Testkör appen på plattformarna browser och Android. Se hur appen fungerar på de olika plattformarna.
 
 1. Uppgradera din pizza-app så den använder en egen icon som visas när man kör den via Cordova.
 

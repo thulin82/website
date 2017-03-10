@@ -92,7 +92,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
     * [Installera Cordova på Windows](t/4899)
     * [Installera Cordova på Mac OS](t/4903)
-    * [Kör en Cordova app i Firefox OS](t/4900)
+    <!-- * [Kör en Cordova app i Firefox OS](t/4900) -->
     * [Kör Cordova app i Android SDK](t/4901)
     * [Cordova plugin för kamera](t/4910)
 

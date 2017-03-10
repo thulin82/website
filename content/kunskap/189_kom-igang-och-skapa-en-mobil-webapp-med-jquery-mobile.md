@@ -51,7 +51,7 @@ Det kan se ut så här när vi är klara.
 Ladda ned jQuery och jQuery Mobile {#download}
 --------------------------------------
 
-Jag går till [download-delen av jQuery Mobiles webbplats]() och väljer att ladda ned senaste releasen. När denna artikeln skrivs så är det version 1.4.5. Men du tar den allra senaste versionen.
+Jag går till [download-delen av jQuery Mobiles webbplats](https://jquerymobile.com/download/) och väljer att ladda ned senaste releasen. När denna artikeln skrivs så är det version 1.4.5. Men du tar den allra senaste versionen.
 
 Jag laddar ned via terminalen och lägger in jquery parallellt med mitt [kursrepo](dbwebb-cli/clone).
 
@@ -197,7 +197,7 @@ Nu behöver vi en mall till `index.html`, en mall där allt knyts ihop. Du kan u
 
 Som du ser så är det en vanlig HTML-sida där vi inkluderar stylesheet från jQuery Mobile tillsammans med vår egen stylesheet `style.css`. Sedan inkluderar vi JavaScript för jQuery, jQuery Mobile och vårt eget `main.js`.
 
-Du kan öppna filen i din webbläsare och det kan se ut så här.
+Använd xampp för att kolla på din fil webbläsaren. Din sida kan se ut så här.
 
 [FIGURE src=/image/snapht15/jquery-mobile-index1.png caption="En första sida i jQuery Mobile."]
 

@@ -55,13 +55,18 @@ För OS X med brew.
 $ brew install jq
 ```
 
-För Windows med [chocolatey](https://chocolatey.org/).
+För Windows med apt-cyg.
+
+```bash
+$ apt-cyg install jq
+```
+<!-- För Windows med [chocolatey](https://chocolatey.org/).
 
 ```bash
 $ chocolatey install jq
 ```
 
-Det finns ett inlägg i forumet som visar hur jag [installerar Chocolatey och jq](f/40159). Du kan installera verktyget via Windows egna kommandoradsklient och du kan köra verktyget via Cygwin.
+Det finns ett inlägg i forumet som visar hur jag [installerar Chocolatey och jq](f/40159). Du kan installera verktyget via Windows egna kommandoradsklient och du kan köra verktyget via Cygwin. -->
 
 
 
