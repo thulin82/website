@@ -566,7 +566,7 @@ Nu kan vi använda composers autoloader för vår egen kod.
 
 ###Skapa $app {#createapp}
 
-Källkoden för klassen App ligger nu i `src/App/App.php`, den har ett namespace som är `Mos\App` och du har bytt ut Mos mot din egen valfria vendor-akronym. Via `composer.json` så kopplas composers autoloader mitt namespace till min källkodsfil.
+Källkoden för klassen App ligger nu i `src/App/App.php`, den har ett namespace som är `Mos\App` och du har bytt ut Mos mot din egen valfria vendor-akronym. Via `composer.json` så kopplar composers autoloader mitt namespace till min källkodsfil.
  
 I slutet av frontkontrollern kan vi skapa `$app` och fylla den med de resurser som ramverket har tillgång till.
 
@@ -593,7 +593,7 @@ Efter städningen ser nu min frontkontroller ut så här.
 /**
  * Bootstrap the framework.
  */
-// Were are all the files?
+// Where are all the files? Booth are needed by Anax.
 define("ANAX_INSTALL_PATH", realpath(__DIR__ . "/.."));
 define("ANAX_APP_PATH", ANAX_INSTALL_PATH);
 
@@ -632,7 +632,7 @@ $app->router->handle($app->request->getRoute());
 
 Du känner igen all kod sedan tidigare, den är bara omstrukturerad.
 
-Jag behöver även gå in i `config/routes.php` för att ändra `$router` till `$app->router`.
+Jag behöver även gå in i `config/route.php` för att ändra `$router` till `$app->router`.
 
 Nu kan jag testa och mina routes bör fungera. 
 
