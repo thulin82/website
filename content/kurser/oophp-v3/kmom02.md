@@ -63,6 +63,8 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Artikel om session och inloggning med databas.
 
+1. Artikel om enhetstestning (makefile, travis).
+
 
 
 ###Uppgifter {#uppgifter}

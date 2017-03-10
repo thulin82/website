@@ -1088,6 +1088,6 @@ Vill du jämföra din version av anax-lite med den som jag gjorde i denna artike
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Nu har du ett eget PHP ramverk som du skapat med egna händer, delvis genom att återanvända befintliga moduler.
+Nu har du ett eget PHP ramverk som du skapat med egna händer, delvis genom att återanvända befintliga moduler. Förhoppningsvis har du fått en grov förståelse för grunden i ett ramverk.
 
-Denna artikel har en [egen forumtråd](t/6276) som du kan ställa frågor i, eller bidra med tips och trix.
+Denna artikel har en [egen forumtråd](t/6308) som du kan ställa frågor i, eller bidra med tips och trix.
