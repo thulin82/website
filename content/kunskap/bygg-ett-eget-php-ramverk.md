@@ -206,7 +206,7 @@ Uppdatera din frontkontroller med följande kod.
 /**
  * Bootstrap the framework.
  */
-// Were are all the files?
+// Where are all the files? Booth are needed by Anax.
 define("ANAX_INSTALL_PATH", realpath(__DIR__ . "/.."));
 define("ANAX_APP_PATH", ANAX_INSTALL_PATH);
 
@@ -282,14 +282,14 @@ return [
 ];
 ```
 
-Det finns en exempelfil `example/anax-lite/config/route.php` i kursrepot som du kan utgå ifrån.
+Modulen innehåller ett exempel på konfigurationsfilen i `vendor/anax/config/url.php`. Du kan kopiera den till din egna config-katalog.
 
 ```bash
 # Du står i me/anax-lite
-$ cp ../../example/anax-lite/config/url.php config
+$ cp vendor/anax/url/config/url.php config
 ```
 
-Tanken är att man lyfter ut saker som kan konfigureras till egna filer och samlar dem på en plats. 
+Tanken är att man lyfter ut saker som kan konfigureras till egna filer och samlar dem på en plats. Det är därför vi bygger upp config-katalogen med det som är "konfigurerbart".
 
 
 
@@ -315,13 +315,13 @@ $url->configure("url.php");
 $url->setDefaultsFromConfiguration();
 ```
 
-Koden skapar en instans av url-klassen. Sedan används informationen från request-objektet för att sätta en del nödvändig grundinformation.
+Koden skapar en instans av url-klassen och därefter används informationen från request-objektet för att sätta nödvändig grundinformation i url-objektet.
 
-I slutet läses konfigurationsfilen in, man kan alltså förändra konfigurationen av hur länkar skapas genom att justera konfigfilen.
+I slutet läses konfigurationsfilen in, man kan alltså förändra konfigurationen av hur länkar skapas genom att justera konfigfilen. Ett exempel på när det är bra är när man har en alternativ adress där man levererar statiska delar såsom bilder, javascript- och css-filer. Det är inte ovanligt att man har en speciell http-server för de statiska delarna av en webbplats, det gör att man kan optimera den typen av requester.
 
 
 
-###Testa modulen url{#testurl}
+###Testa modulen url {#testurl}
 
 Nu kan vi testa modulen genom att skapa länkar och se resultatet.
 
@@ -339,32 +339,36 @@ $aUrl = $url->create("some/where/some/route");
 echo "<p><a href='$aUrl'>Another url to some/where/some/route</a> ($aUrl)";
 ```
 
-Koden använder modulen url för att skapa länkar. klicka på länkarna och se att de alla leder in i frontkontrollern.
+Koden använder modulen url för att skapa länkar. Visa sidan i din webbläsare och klicka på länkarna för att se att alla leder in i frontkontrollern.
 
 Pröva nu att gå in i konfigfilen för url, `config/url.php`, och ändra så att snygga länkar skapas via `URL_CLEAN`.
 
 Du bör se skillnaden i länkarna att skriptnamnet försvinner, de blir lite snyggare.
 
-Klicka på de snygga länkarna och se att de alla leder till frontkontrollern.
+Klicka på de snygga länkarna och se att de alla leder till frontkontrollern. Detta kräver att din htaccess fungerar som den ska. Om du får problem med snygga länkar så kan du behöva felsöka din htaccess-fil.
 
-Du kan se hur request-modulen hanterar inkommande route och finner den del som är själva "routen".
+Det verkar som modulerna request och url fungerar ihop.
 
-Det verkar som modulerna fungerar ihop.
+En request- och en url-modul, det är en bra start. Men vad är härnäst, om vi vill bygga en webbapplikation/webbplats med vårt ramverk?
 
-En request- och en url-modul, en bra start. Men vad är härnäst, om vi vill bygga en webbapplikation med vårt ramverk?
+Nästa steg får bli hur vi kan skriva kod för att hantera olika routes.
 
 
 
-En router {#router}
+En router med anax/router {#router}
 --------------------------------------
 
-En router är en vanlig komponent i ramverk. Den behövs för att vi skall kunna utföra olika svar på olika inkommande routes.
+En router är en vanlig komponent i ramverk. Den behövs för att vi skall kunna utföra olika svar på respektive inkommande routes.
 
-Det kan se ut så här, när man strukturerar koden med en router.
+Det kan se ut så här, när man strukturerar koden med en router med callbacks för respektive route.
 
 ```php
-$router->add("home", function() {
-    // Provide a response matching home url
+$router->add("", function() {
+    // Provide a response matching the index url
+});
+
+$router->add("report", function() {
+    // Provide a response matching report url
 });
 
 $router->add("about/me", function() {
@@ -372,7 +376,7 @@ $router->add("about/me", function() {
 });
 ```
 
-En router är beroende av modulen request för att få information om själva routen.
+En router är beroende av modulen request för att få information om den aktuella routen.
 
 Tanken är att man lagrar undan callbacks till alla de routes som skall hanteras. Lite som en container av routes. Sedan när man vill behandla requesten så kollar man vilka routes som finns och om någon matchar så används dess callback för att leverera själva svaret, responset.
 
