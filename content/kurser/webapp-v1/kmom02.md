@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-03-10": (C, aar) Tog bort Firefox OS.
   "2016-02-08": (B, mos) Lade till extrauppgift om detect-swipe-event.
   "2015-10-26": (A, mos) Första utgåvan för kursen.
 ...
@@ -49,11 +50,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 1. Läs om "[Use Cases and Requirements for Installable Web Apps](https://w3c-webmob.github.io/installable-webapps/)".
 
-1. Läs kort och översiktligt om [Firefox OS](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS).
-
-1. Läs översiktligt om introduktionen till [webappar på Firefox OS](https://developer.mozilla.org/en-US/Apps/Quickstart).
-
-1. Läs översiktligt introduktionen om webappar i [Safari Developer library - Getting started with webapps](https://developer.apple.com/library/safari/referencelibrary/GettingStarted/GS_WebApp/_index.html#//apple_ref/doc/uid/TP40008135).
+1. Läs översiktligt introduktionen om webappar i [Safari Developer library - Getting started with webapps](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/Introduction/Introduction.html).
 
 1. Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
 

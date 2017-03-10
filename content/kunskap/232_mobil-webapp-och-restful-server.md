@@ -29,7 +29,7 @@ I två tidigare artiklar har vi bekantat oss med jQuery Mobile. Det var artiklar
 <figure class="wrap">
 [FIGURE src=/image/snapht15/webapp-listview-images.png?w=c7 class="left" caption="En listview med alternativ."]
 
-[FIGURE src=/image/snapht15/webapp-listview-image-page.png?w=c7 class="left" caption="Ett alternativ i listan valdes och visas upp."]
+[FIGURE src=/image/snapht15/webapp-listview-image-page.png?w=c7 class="" caption="Ett alternativ i listan valdes och visas upp."]
 </figure>
 
 Allt innehåll i webbplatsen fanns i sidan `index.html`. Men, hur fungerar det om vi skall hämta information från en server? Säg att det finns en server som har ett RESTful API som jag vill använda i min webapp? Som ett exempel så kan vi ta arbetsförmedlingen som listar alla lediga jobb per län. Hur funkar det om vi vill ha en listvy med klickbart alternativ för att se detaljer per län?

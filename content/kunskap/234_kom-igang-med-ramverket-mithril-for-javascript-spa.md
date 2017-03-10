@@ -2,8 +2,9 @@
 author: mos
 category: javascript
 revision:
+  "2017-03-10": (B, aar) Kopiera Mithril från example istället för ladda ner.
   "2015-11-04": (A, mos) Första utgåvan inför kursen webapp.
-updated: "2015-11-04 12:47:04"
+updated: "2017-03-10 12:47:04"
 created: "2015-10-30 09:21:18"
 ...
 Kom igång med ramverket Mithril för JavaScript SPA
@@ -53,14 +54,20 @@ mithril/
 4 directories, 0 files 
 ```
 
-Nu kan jag ladda hem Mithril.
+Kopiera Mithril från example/lib.
 
+```bash
+# utgå från me/kmom04
+cp ../../example/lib/mithril.min.js mithril/js
+```
+
+<!--Nu kan jag ladda hem Mithril.
 ```bash
 $ cd mithril/js
 $ wget http://lhorie.github.io/mithril/mithril.min.zip
 $ unzip mithril.min.zip
 $ rm mithril.min.zip
-```
+``` -->
 
 Nu skapar jag min `rotatelinks.html`, som jag väljer att kalla detta första exempel.
 
@@ -69,7 +76,7 @@ $ cd ..
 $ touch rotatelinks.html
 ```
 
-Jag lägger in följande kod i index-sidan.
+Jag lägger in följande kod i rotatelinks.html.
 
 ```html
 <!doctype html>
@@ -96,7 +103,7 @@ Lika bra att ladda in det i webbläsaren så man ser att sökvägarna var korrek
 Ett litet exempel {#litet}
 --------------------------------------
 
-På Mithrils sida hittar jag ett exempel som roterar länkar som är sparade i ett JSOn objekt. Samma exempel tänker jag återskapa här.
+På Mithrils sida hittar jag ett exempel som roterar länkar som är sparade i ett JSON objekt. Samma exempel tänker jag återskapa här.
 
 Först sparar jag länkarna i en sida `json/pages.json`.
 
@@ -244,7 +251,7 @@ Som du ser så är det samma information som jag använde i exemplet där jag gj
 <figure class="wrap">
 [FIGURE src=/image/snapht15/webapp-listview-images.png?w=c7 class="left" caption="En listview med alternativ."]
 
-[FIGURE src=/image/snapht15/webapp-listview-image-page.png?w=c7 class="left" caption="Ett alternativ i listan valdes och visas upp."]
+[FIGURE src=/image/snapht15/webapp-listview-image-page.png?w=c7 caption="Ett alternativ i listan valdes och visas upp."]
 </figure>
 
 Jag laddar nu den nya JSON-filen i min modell som ser ut så här.
@@ -261,7 +268,7 @@ var Page = {
 };
 ```
 
-Modellen ovan är alltså ett objekt som innehåller en funktion `list()`. När funktionen anropas så hämtar den JSON-filen via en Ajax GET request. Funktionen [`m.request()`](http://lhorie.github.io/mithril/mithril.request.html) är Mithrils stöd för att hämta information från webbtjänster via Ajax.
+Modellen ovan är alltså ett objekt som innehåller en funktion `list()`. När funktionen anropas så hämtar den JSON-filen via en Ajax GET request. Funktionen [`m.request()`](http://mithril.js.org/request.html) är Mithrils stöd för att hämta information från webbtjänster via Ajax.
 
 Testkör jag så ser det nu ut så här.
 
@@ -338,7 +345,7 @@ view: function(ctrl) {
 }
 ```
 
-Oj, det blev en del konstruktioner för att skapa HTML-koden. Det är funktionen [`m()`](http://lhorie.github.io/mithril/mithril.html) i Mithril som förbereder skapandet av HTML element.
+Oj, det blev en del konstruktioner för att skapa HTML-koden. Det är funktionen [`m()`](http://mithril.js.org/hyperscript.html) i Mithril som förbereder skapandet av HTML element.
 
 Då ska vi se om vi kan få ut all information som ligger i `diary.json` och visa upp i webbsidan.
 
@@ -386,11 +393,11 @@ Det blev en del kod. Men, som det är nu så hämtar jag ett JSON-objekt från e
 En router för flera sidor {#router}
 --------------------------------------
 
-Så långt allt väl, men hur kan man hoppa mellan sidor? Jo, låt oss se hur vi kan använda [Mithrils router](https://lhorie.github.io/mithril/routing.html) för att navigera mellan olika sidor.
+Så långt allt väl, men hur kan man hoppa mellan sidor? Jo, låt oss se hur vi kan använda [Mithrils router](http://mithril.js.org/route.html) för att navigera mellan olika sidor.
 
 För att testa så skapar jag en ny sida [`routes.html`](webapp/repo/example/mithril/routes.html) som har en meny och när man klickar på menyn så visas sidans innehåll. 
 
-Jag använder Mithrils [`m.route()`](http://lhorie.github.io/mithril/mithril.route.html) för att skapa de routes jag vill ha. För varje route skapar jag också en [Mithril komponent](http://lhorie.github.io/mithril/mithril.component.html), som bara innehåller vyn, som ritar ut sidans innehåll.
+För varje route skapar jag också en [Mithril komponent](http://mithril.js.org/components.html), som bara innehåller vyn, som ritar ut sidans innehåll.
 
 Okey, då tar vi lite kod. Grunden i min HTML-sida ser nu ut så här.
 
@@ -516,7 +523,7 @@ var Me = {
 }
 ```
 
-Kontrollern använder modellen `Page.me()` och skickar via `controller.page` resultatet till vyn som kan använda informationen för att rendera den som ren HTML-kod via metoden [`m.trust()`](http://lhorie.github.io/mithril/mithril.trust.html).
+Kontrollern använder modellen `Page.me()` och skickar via `controller.page` resultatet till vyn som kan använda informationen för att rendera den som ren HTML-kod via metoden [`m.trust()`](http://mithril.js.org/trust.html).
 
 Komponenten About får samma uppdatering, så även Report. Men vyn för komponenten Report blir lite mer komplex då dess JSON-fil ser ut så här.
 
@@ -878,7 +885,7 @@ var ListViewPage = {
 };
 ```
 
-Vyn använder templaten `page_tpl` och får sitt context från `controller.item`. Kontrollern börjar med att hämta ut värdet på parametern `id` med funktionen `m.route.param("id")`. Du kan läsa om [`m.route.param() i Mithrils API`](https://lhorie.github.io/mithril/mithril.route.html#param).
+Vyn använder templaten `page_tpl` och får sitt context från `controller.item`. Kontrollern börjar med att hämta ut värdet på parametern `id` med funktionen `m.route.param("id")`.
 
 Sedan använder kontrollern värdet på `id` för att hämta ut endast den delen från modellen som fått en ny metod i `Diary.item(id)`.
 
@@ -911,7 +918,7 @@ Först har jag ändrat så att JSON-objektet endast hämtas en gång. Om det red
 
 Den nya metoden `item: function(id) {` använder JSON-objektet och returnerar bara den delen som efterfrågas. Värdet på `id` är ett index i arrayen för `items`, resultatet blir att endast ett item returneras.
 
-Det som ligger i `this.items` är egentligen inte ett JSON-objekt, det är en function [`m.prop`](https://lhorie.github.io/mithril/mithril.prop.html) som är en lagringsplats, en setter/getter av värden, som också fungerar med den asynkrona programmeringsmodellen som `m.request` innebär. När applikationen utför en `m.request()` så är det en asynkron operation som lagrar sitt svar i en `m.prop`. När svaret är redo kan man använda `m.prop` för att hämta det, innan svaret är klart så innehåller `m.prop` värdet undefined.
+Det som ligger i `this.items` är egentligen inte ett JSON-objekt, det är en function `m.prop` som är en lagringsplats, en setter/getter av värden, som också fungerar med den asynkrona programmeringsmodellen som `m.request` innebär. När applikationen utför en `m.request()` så är det en asynkron operation som lagrar sitt svar i en `m.prop`. När svaret är redo kan man använda `m.prop` för att hämta det, innan svaret är klart så innehåller `m.prop` värdet undefined.
 
 Du kan testa mitt exempel på [`diaryroutes.html`](webapp/repo/example/mithril/diaryroutes.html).
 

@@ -2,7 +2,8 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2015-10-26": (A, mos) Första utgåvan i samband med kursen webapp.
+    "2017-03-10": (B, aar) Tog bort krav om firefox OS.
+    "2015-10-26": (A, mos) Första utgåvan i samband med kursen webapp.
 updated: "2015-10-26 16:23:09"
 created: "2015-01-28 15:22:55"
 ...
@@ -55,8 +56,6 @@ Krav {#krav}
 1. Det skall finnas en gemensam header och footer som visas på varje sida.
 
 1. Gör din me-app personlig, så man ser att det är din me-app.
-
-1. Ta en skärmdump när du visar att du kör din webbapp i simulatorn för Firefox OS. Spara skärmdumpen som `firefox-os.png`.
 
 11. Validera och publicera din kod enligt följande.
 

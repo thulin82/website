@@ -473,7 +473,7 @@ Det som jag är ute efter kan se ut så här.
 <figure class="wrap">
 [FIGURE src=/image/snapht15/webapp-listview-images.png?w=c7 class="left" caption="En listview med alternativ."]
 
-[FIGURE src=/image/snapht15/webapp-listview-image-page.png?w=c7 class="left" caption="Ett alternativ i listan valdes och visas upp."]
+[FIGURE src=/image/snapht15/webapp-listview-image-page.png?w=c7 class="" caption="Ett alternativ i listan valdes och visas upp."]
 </figure>
 
 Jag vill alltså ha en listwidget med en bild. Det finns sådana exempel i jQm demo och jag tar och kopierar ett av dem och utgår från det.
