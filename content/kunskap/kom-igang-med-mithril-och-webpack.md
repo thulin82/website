@@ -2,6 +2,7 @@
 author: efo
 category: javascript
 revision:
+  "2017-03-09": (B, aar) Cordova anpassade artikeln.
   "2017-03-03": (A, efo) Första utgåvan inför kursen webapp v2.
 ...
 Kom igång med ramverket Mithril
@@ -36,7 +37,7 @@ Förutsättningar {#forutsattningar}
 --------------------------------------
 Du har installerat labbmiljön för kursen webapp.
 
-Du har installerat cordova och skapat Hello World cordova appen enligt [Kom igång med cordova](). Vi utgår ifrån denna cordova app när vi i denna övning jobbar vidare med cordova och introducerar javascript ramverket mithril.
+Du har installerat cordova och skapat Hello World cordova appen enligt [Kom igång med cordova](kunskap/kom-igang-med-cordova).
 
 
 
@@ -45,7 +46,12 @@ Installera mithril via npm {#install}
 Vi har i tidigare kurser använd pakethanteraren npm för att installera javascript och nodejs moduler. Vi kommer i denna kurs använda npm för att installera och administrera vår mithril installation och beroende kod. Detta görs med hjälp av en `package.json` fil, som vi initiellt skapar genom att skriva följande i terminalen:
 
 ```bash
-$ cd meapp/www
+# gå till kursmappen
+$ cd me/meapp/
+$ cordova create . se.dbwebb.meapp MeApp
+$ cordova platform add android --save
+$ cordova platform add browser --save
+$ cd www/
 $ npm init --yes
 ```
 
@@ -83,7 +89,7 @@ I scripts attributet ändrar vi så det blir följande för att löpande under u
 
 ```json
   "scripts": {
-      "start": "webpack js/index.js bin/app.js -d --watch"
+      "start": "webpack js/index.js bin/app.js -d"
   }
 ```
 
@@ -91,38 +97,42 @@ I scripts attributet ändrar vi så det blir följande för att löpande under u
 
 Vår första mithril app {#forsta}
 --------------------------------------
-Vi skapar först vår ingångspunkt får vår app `index.html` med följande innehåll:
+Vi börjar med att rensa i `index.html`.
 
 ```html
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>mithril me-app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <script src="bin/app.js"></script>
-  </body>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Mithril me-app</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="bin/app.js"></script>
+    </body>
 </html>
 ```
 
-Här skapar minsta möjliga ramarna för att visa en hemsida i en webbläsare på både datorn och mobilen. Vi inkluderar `bin/app.js` som är vår mithril skapat och ihoppackat av webpack.
+Behåll `Content-Security-Policy` taggen, för att skydda oss mot XSS attacker, `viewport` och ändrar så du inkluderat `bin/apps,js` istället för `index.js`. 
 
-All vår mithril kod placerar vi en egen katalog `js` med hjälp av dessa kommandon:
+Skapa mappen `views`.
 
 ```bash
+# utgår från www/
 $ mkdir js/views
-$ touch js/index.js
 $ touch js/views/me.js
 ```
 
-`js/index.js` filen är vårt utgångspunkt för appen och den pekar ut vad som ska visas när en användare kommer till vår app. Vi skapar desutom en katalog för våra vyer, med vårt första mithril vy `me.js`.
+`js/index.js` filen är vår utgångspunkt för appen och den pekar ut vad som ska visas när en användare kommer till vår app. Vi skapar desutom en katalog för våra vyer, med vårt första mithril vy `me.js`.
 
 
 
 Vår första vy {#vy}
 --------------------------------------
 
-I vår `js/views/me.js` fil vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion med namnet view som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
+I vår `js/views/me.js` fil vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion med namnet `view` som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
 
 ```javascript
 var m = require("mithril");
@@ -133,29 +143,40 @@ module.exports = {
     }
 }
 ```
+Kodsnutten `m("h1", "Emil Folino")` skapar en "[virtual DOM node](http://mithril.js.org/hyperscript.html)", ett JavaScript objekt som representerar ett DOM element. Det blir först ett DOM element när vi använder den i en `render` eller `mount` funktion.
 
 För att appen ska veta om att vi vill visa upp vårt me-vy måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
 
 ```javascript
 var m = require("mithril");
-
 var Me = require("./views/me");
 
-m.mount(document.body, Me);
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+    onDeviceReady: function() {
+        m.mount(document.body, Me);
+    },
+};
+app.initialize();
 ```
 
 Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att se me-appen för första gång. Detta gör vi terminalen med följande kommando, som vi definerade tidigare i `package.json`.
 
 ```bash
 $ npm start
+$ cordova emulate android
 ```
+Du kan även testa appen i webbläsaren med `cordova emulate browser`.
 
-Öppna upp din `index.html` fil i webbläsaren och vi ser än så länge vår lilla me-sida med endast ditt namn.
+Nu borde du se din me-sida med ditt namn.
+
 
 
 En router för flera sidor {#router}
 --------------------------------------
-Med bara en sida i vår har vi inte kommit långt så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I detta vy ser du att vi returnerar en array av objekt som placeras i ordning efter varann i vyn.
+Med bara en sida har vi inte kommit långt så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I den här vyn ser du att vi returnerar en array av objekt som placeras i ordning efter varann i vyn.
 
 ```javascript
 var m = require("mithril");
@@ -182,17 +203,25 @@ Och vår index.js fil ser nu ut så här:
 
 ```javascript
 var m = require("mithril");
-
 var Me = require("./views/me");
 var Hobby = require("./views/hobby");
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+    onDeviceReady: function() {
+        m.route(document.body, "/", {
+            "/": Me,
+            "/hobby" : Hobby
+        });
+    },
 
-m.route(document.body, "/", {
-    "/": Me,
-    "/hobby" : Hobby
-});
+};
+app.initialize();
 ```
 
-Om du manuellt skriver in `/hobby` efter `index.html#!` i din webbläsares adressfält, ser du innehållet från din hobby-vy. Vi vill dock inte skriva in adresser manuellt, så vi ska nu titta på hur vi kan skapa navigering för vår app. Vi kan skapa länkar precis som vi har skapat andra virtuella noder tidigare, så vi lägger till en länk längst upp i vårt me-vy med följande kod. Vi kan nu gå från vårt Me-vy till hobby-vyn.
+Om du manuellt skriver in `/hobby` efter `index.html#!` i din webbläsares adressfält, ser du innehållet från din hobby-vy. `#!` är en _hashbang_, det används vanligen till routing på klient sidan. Det går att ändra vad som ska vara hashbang med [m.route.prefix](http://mithril.js.org/route.html#mrouteprefix).  
+Vi vill inte skriva in adresser manuellt, så vi ska nu titta på hur vi kan skapa navigering för vår app. Vi kan skapa länkar precis som vi har skapat andra virtuella noder tidigare, så vi lägger till en länk längst upp i vårt me-vy med följande kod. Vi kan nu gå från vårt Me-vy till hobby-vyn.
 
 ```javascript
 m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby")
@@ -202,19 +231,9 @@ m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby")
 
 Styling {#styling}
 --------------------------------------
-Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och användarvänliga, så därför vill vi kunna styla våra sidor. Vi inkluderar därför vår egna css-fil i `index.html`.
+Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och användarvänliga, så därför vill vi kunna styla våra sidor. Öppna `css/index.css` och fixa en egen snygg design.
 
-```html
-<html>
-  <head>
-    <title>mithril me-app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-  ...
-```
-
-Jag valde att lägga till några extra element i min me-vy enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det första elementet `div.main-container`, som är en div med klassen `main-container`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
+Jag valde att lägga till några extra element i min `me-vy` enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det första elementet `div.main-container`, som är en div med klassen `main-container`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
 
 ```javascript
 var m = require("mithril");
@@ -264,22 +283,30 @@ I ovanstående kodexempel skapar vi vår navigation som en navbar med en "logga"
 
 ```javascript
 var m = require("mithril");
-
 var Layout = require("./views/layout");
 var Me = require("./views/me");
 var Hobby = require("./views/hobby");
-
-m.route(document.body, "/", {
-    "/": {
-        render: function() {
-            return m(Layout, m(Me));
-        }
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-    "/hobby": {
-        render: function() {
-            return m(Layout, m(Hobby));
-        }
-    }
+    onDeviceReady: function() {
+        m.route(document.body, "/", {
+            "/": {
+                    render: function() {
+                        return m(Layout, m(Me));
+                    }
+            },
+            "/hobby": {
+                render: function() {
+                    return m(Layout, m(Hobby));
+                }
+            }
+        });
+    },
+
+};
+app.initialize();
 });
 ```
 
