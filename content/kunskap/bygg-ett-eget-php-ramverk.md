@@ -485,7 +485,15 @@ Det få bli ett `$app` som samlar alla ramverkets resurser.
 
 ###En egen src-katalog {#src}
 
-Jag tar och skapar en katalog `src/App` och lägger där klassfilen `App.php` med följande innehåll.
+Jag tar och skapar en katalog `src/App` och lägger där klassfilen `App.php`.
+
+```bash
+# Gå till me/anax-lite
+$ install -d src/App
+$ touch src/App/App.php
+```
+
+I filen `App.php` lägger du in följande innehåll.
 
 ```php
 <?php 
@@ -853,16 +861,16 @@ $ composer require anax/view
 
 Kika gärna på de klasserna som ingår i modulen. Det handlar om att spara undan view-filer, eller template-filer som de också kan kallas. I dem lägger vi HTML-kod tillsammans med PHP-skripttaggar som skriver ut den `$data` som är tillgänglig i view-filen.
 
-Det finns med ett par exempel på view-filer i modulen. Du hittar dem i `vendor/anax/view/view` och du kan kopiera den katalogen till ditt anax-lite, så har vi några view-filer att utgå ifrån.
+Det finns med ett par exempel på view-filer i modulen. Du hittar dem i `vendor/anax/view/view` och du kan kopiera den katalogen till ditt anax-lite, så har vi några view-filer att utgå ifrån. Det kan vara bra att se hur view filer kan se ut och fungera.
 
 ```bash
 # Du står i anax-lite
 $ rsync -av vendor/anax/view/view .
 ```
 
-Kika igenom innehållet i katalogen. Det är exempel på view-filer, eller template-filer som de också kan kallas.
+Kika igenom innehållet i katalogen. Det är exempel på view-filer.
 
-Tanken är att man samlar ihop all data som behövs, sedan *skickar* man datan till view-filer som renderar ett svar, oftas i form av en del av en HTML-sida. Men man hade i princip kunnat generera godtyckligt format.
+Principen bakom view-filer, är att man samlar ihop all data som behövs, sedan *skickar* man datan till view-filen som renderar ett svar, ofta i form av en del av en HTML-sida.
 
 
 
@@ -884,9 +892,9 @@ $app->view->configure("view.php");
 ```
 Du ser var jag lade koden, direkt under där `$app->router` skapades.
 
-Jag har en initieringsfas där jag injectar `$app` in till view kontainern. Det är för att jag via `$app` vill att man skall ha tillgång till hela ramverkets resurser i respektive vy. Det är smidigt och kraftfullt.
+Jag har en initieringsfas där jag injectar `$app` in till view-kontainern. Det är för att jag i view-filerna vill ha tillgång till ramverkets resurser via `$app`. Det är smidigt och kraftfullt och tillåter att jag har full kontroll i vyerna.
 
-Slutligen laddar jag en konfigurationsfil som innehåller vissa inställningar som view kontainern behöver.
+Slutligen laddar jag en konfigurationsfil som innehåller vissa inställningar som view-kontainern behöver.
 
 Du kan låna den konfigurationsfil som bifogas i modulen.
 
@@ -929,7 +937,7 @@ EOD;
 });
 ```
 
-Här ser jag tre möjliga view-filer, template-filer.
+Här ser jag tre möjliga view-filer, template-filer. Som du kan se så sparar jag mina view filer under `view/take1` och `take1` är bara ett godtyckligt namn som samlar dessa view filer under en variant av namnrymd.
 
 **`view/take1/header.php`**
 
@@ -959,13 +967,13 @@ $urlAbout = $app->url->create("about");
 <p>This is the homepage.</p>
 ```
 
-Detta skulle kunna vara en första ansats till att dela upp sidans innehåll i view-filer.
+Detta skulle kunna vara en första ansats till att dela upp sidans innehåll i view-filer. Låt oss pröva hur det kan fungera.
 
 
 
 ###Ladda vyerna {#loadviews}
 
-När vi nu har view filerna så kan vi ladda dem i routen. Den uppdaterade routen följer.
+När vi nu har view-filerna klara och vi kan ladda dem i routen. Den uppdaterade routen följer.
 
 ```php
 $app->router->add("", function () use($app) {
@@ -980,13 +988,23 @@ $app->router->add("", function () use($app) {
 
 Visst blev det snyggare?
 
-Du kan se hur vi lägger till tre vyer till view kontainern.
+Du kan se hur vi lägger till tre vyer till `$app->view`.
 
-I header-vyn så bifogar vi en variabel som nås via `$titel` i view filen. De andra får inga variabler inskickade.
+I header-vyn så bifogar vi en variabel som nås via `$titel` i view-filen. De andra får inga variabler inskickade.
 
-Det sista vi gör är att skicka metoden `$app->view->render()` till response objektet som en *[callable](http://php.net/manual/en/language.types.callable.php)*. Det är som att bifoga en funktion som kan anropas vid ett senare tillfälle. Det som sker i responseobjektet är att det känner av om det är en callable som finns i argumentet och isåfall exekveras funktionen och resultatet sätts som responsens body.
+Det sista vi gör är att skicka metoden `$app->view->render()` till response som en *[callable](http://php.net/manual/en/language.types.callable.php)*. Det är ett sätt att bifoga en funktion som kan anropas vid ett senare tillfälle. Det som sker i responseobjektet är att det känner av om det är en callable som finns i argumentet och isåfall exekveras funktionen och resultatet sätts som responsets body.
 
-Nu kan du själv städa upp den andra routen så att den blir lika snygg med vyer. När du är klar så har du städat upp vyerna och det finns inte någon HTML-kod kvar, den är överflyttad till view filer.
+Nu kan du själv städa upp de andra routsen så att de blir lika snygg med vyer. När du är klar så har du städat upp vyerna och det finns inte någon HTML-kod kvar i någon route, den är överflyttad till view filer.
+
+Bra med ordning och reda där var sak har sin plats.
+
+
+
+Grunden i ett ramverk {#grunden}
+--------------------------------------
+
+Summera vad grunden är. Tipsa om andra microramverk.
+Läsanvisningar om microramverk?
 
 
 
@@ -1003,12 +1021,6 @@ Git & GitHub
 
 Tips om cimage.
 
-
-Grunden i ett ramverk {#grunden}
---------------------------------------
-
-Summera vad grunden är. Tipsa om andra microramverk.
-Läsanvisningar om microramverk?
 
 
 
