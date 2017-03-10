@@ -85,12 +85,13 @@ Låt oss nu titta in i `package.json`, för att se vad vi har fått på plats oc
 }
 ```
 
-I scripts attributet ändrar vi så det blir följande för att löpande under utveckling packa ihop koden till en fil `bin/app.js` med hjälp av webpack:
+I scripts attributet ändrar vi så det blir följande för att löpande under utveckling packa ihop koden till en fil `bin/app.js` med hjälp av webpack. Vi använder här möjligheten för att skapa scripts via npm CLI-verktyget. Vi har nedan skapat två scripts `start` för att packa ihop mithril appen till ett script och `test` för att kontinuerligt göra detta under utveckling. Våra två npm scripts anropas på följande sätt `npm start` eller `npm test`.
 
 ```json
-  "scripts": {
-      "start": "webpack js/index.js bin/app.js -d"
-  }
+"scripts": {
+  "start": "webpack js/index.js bin/app.js -d",
+  "test": "webpack js/index.js bin/app.js -d --watch"
+},
 ```
 
 
@@ -115,7 +116,7 @@ Vi börjar med att rensa i `index.html`.
 </html>
 ```
 
-Behåll `Content-Security-Policy` taggen, för att skydda oss mot XSS attacker, `viewport` och ändrar så du inkluderat `bin/apps,js` istället för `index.js`. 
+Behåll `Content-Security-Policy` taggen, för att skydda oss mot XSS attacker, `viewport` och ändrar så du inkluderat `bin/apps,js` istället för `index.js`.
 
 Skapa mappen `views`.
 
@@ -220,7 +221,7 @@ var app = {
 app.initialize();
 ```
 
-Om du manuellt skriver in `/hobby` efter `index.html#!` i din webbläsares adressfält, ser du innehållet från din hobby-vy. `#!` är en _hashbang_, det används vanligen till routing på klient sidan. Det går att ändra vad som ska vara hashbang med [m.route.prefix](http://mithril.js.org/route.html#mrouteprefix).  
+Om du manuellt skriver in `/hobby` efter `index.html#!` i din webbläsares adressfält, ser du innehållet från din hobby-vy. `#!` är en _hashbang_, det används vanligen till routing på klient sidan. Det går att ändra vad som ska vara hashbang med [m.route.prefix](http://mithril.js.org/route.html#mrouteprefix).
 Vi vill inte skriva in adresser manuellt, så vi ska nu titta på hur vi kan skapa navigering för vår app. Vi kan skapa länkar precis som vi har skapat andra virtuella noder tidigare, så vi lägger till en länk längst upp i vårt me-vy med följande kod. Vi kan nu gå från vårt Me-vy till hobby-vyn.
 
 ```javascript
@@ -233,7 +234,7 @@ Styling {#styling}
 --------------------------------------
 Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och användarvänliga, så därför vill vi kunna styla våra sidor. Öppna `css/index.css` och fixa en egen snygg design.
 
-Jag valde att lägga till några extra element i min `me-vy` enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det första elementet `div.main-container`, som är en div med klassen `main-container`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
+Jag valde att lägga till några extra element i min `me-vy` enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det andra elementet `div`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
 
 ```javascript
 var m = require("mithril");
@@ -258,7 +259,7 @@ module.exports = {
 
 Layout {#layout}
 --------------------------------------
-Om vi vill ha navigering i alla vyer kan vi lägga till länkar längst upp, men som vanligt vill vi hålla vår kod DRY. I mithril kan vi använda oss av layouts för att återanvända kod i alla vyer. Vi skapar först ett nytt vy `js/views/layout.js`, som blir vår mall för andra vyer.
+Om vi vill ha navigering i alla vyer kan vi lägga till länkar längst upp, men som vanligt vill vi hålla vår kod DRY. I mithril kan vi använda oss av layouts för att återanvända kod i flera vyer. Vi skapar först ett nytt vy `js/views/layout.js`, som blir vår mall för andra vyer.
 
 ```javascript
 var m = require("mithril");
@@ -306,11 +307,11 @@ var app = {
     },
 
 };
+
 app.initialize();
-});
 ```
 
-Vi använder oss utav en [RouteResolver](http://mithril.js.org/route.html#routeresolver) för att rendera layout och skickar med de virtuella noder, som ska renderas via layouten i vårt vy.
+Vi använder oss utav en [RouteResolver](http://mithril.js.org/route.html#routeresolver) för att rendera layout och skickar med de virtuella noder, i detta fallet vår två vyer, som ska renderas inuti layouten.
 
 Här under kan ni se ett exempel på en mithril me-app med navigation.
 

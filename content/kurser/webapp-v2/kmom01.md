@@ -23,7 +23,7 @@ Vi använder javascript ramverket [mithril](http://mithril.js.org/) för att byg
 
 Det kan se ut så här när vi är klara.
 
-[YOUTUBE src=67biiKAS5BI width=630 caption="Min me-app med fokus på mobilen med hjälp av jQuery Mobile."]
+[YOUTUBE src=x-QTNE1NL4U width=630 caption="Min me-app med fokus på mobilen med hjälp av mithril."]
 
 
 
