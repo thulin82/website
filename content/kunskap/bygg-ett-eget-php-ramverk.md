@@ -147,6 +147,19 @@ $ composer require anax/request
 
 Modulen installeras under katalogen `vendor/anax/request`. Du kan kika kort på källkoden i modulen, den ligger under src-katalogen och enhetstesterna ligger under test-katalogen.
 
+
+
+###Modulen har egna testprogram {#modultest}
+
+Om du vill köra modulens egna tester, så kan du göra det.
+
+```bash
+$ cd vendor/anax/request
+$ make
+$ make install
+$ make test
+```
+
 Låt mig nu visa hur du använder modulen.
 
 
@@ -384,19 +397,19 @@ Tanken är att man lagrar undan callbacks till alla de routes som skall hanteras
 
 ###Modul för router {#modulrouter}
 
-Att bygga en router låter som ett större projekt så jag tar och lånar en modul `anax/router` som redan finns.
+Att bygga en router låter som ett större projekt så jag tar och lånar en modul [anax/router](https://packagist.org/packages/anax/router) som redan finns.
 
 ```bash
 $ composer require anax/router
 ```
 
-Bra, då har vi även en router på plats i vendor-katalogen. Kika gärna på dess källkod. Du kan se att det finns en klass för routern och en klass för routes.
+Bra, då har vi även en router på plats i vendor-katalogen. Kika gärna på dess källkod, både i src- och test-katalogen. Du kan se att det finns en klass för routern och en klass för routes.
 
 
 
 ###Testa routern {#testrouter}
 
-Vi kan nu testa routern. Först skapar vi en fil där vi samlar alla de routes vi vill ha. Filen får ligga i `config/routes.php`.
+Vi kan nu testa routern. Först skapar vi en fil där vi samlar alla de routes vi vill ha. Filen får ligga i `config/route.php`.
 
 ```php
 <?php
@@ -434,11 +447,9 @@ EOD;
 });
 ```
 
-Det är två routes som returnerar varsin HTML-sida. Den sista routen är en intern route som används för felhantering när en route inte kan hittas. Den interna routen kan inte nås från webbläsaren, den är intern för routern.
+Det är två routes som returnerar varsin HTML-sida. Den sista routen är en intern route som används för felhantering när en route inte kan hittas. Den interna routen kan inte nås från webbläsaren, den är intern för ramverket.
 
 För att detta nu skall fungera så behöver vi skapa `$router` i vår frontkontroller och därefter inkludera filen med alla routes.
-
-Det sista vi gör är att överlåta till routern att hanterera och matcha inkommande route (request) mot de routes som finns.
 
 ```php
 // Create the router
@@ -450,6 +461,8 @@ require ANAX_INSTALL_PATH . "/config/route.php";
 // Leave to router to match incoming request to routes
 $router->handle($request->getRoute());
 ```
+
+Det sista vi gör är att överlåta till routern att hantera och matcha inkommande route mot de routes som finns.
 
 Nu kan du pröva olika routes mot din frontkontroller och se olika svar. Du har två routes som fungerar "" och "about", alla andra resulterar i att den interna routen för 404 visas.
 
