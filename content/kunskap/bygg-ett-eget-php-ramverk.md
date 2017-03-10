@@ -650,9 +650,9 @@ Det vore trevligt om jag kunde länka mellan olika sidor, en enklare navbar kans
 Sedan tidigare vet jag att länkar skall skapas av ramverket via `$app->url->create("")`. En navbar för min webbplats kan alltså se ut så här.
 
 ```php
-    $urlHome  = $app->url->create("");
-    $urlAbout = $app->url->create("about");
-    $navbar = <<<EOD
+$urlHome  = $app->url->create("");
+$urlAbout = $app->url->create("about");
+$navbar = <<<EOD
 <navbar>
     <a href="$urlHome">Home</a> | 
     <a href="$urlAbout">About</a>
@@ -739,36 +739,38 @@ EOD;
 
 Routen skriver ut information om requesten som användes, dess upplevda route, samt de routes som är laddade i ramverket.
 
-Se det som en bra möjlighet att skriva ut diverse information om vad ramverket innehåller, en möjlighet till debugging. Ännu bättre är kanske att göra en helt egen route som bara visar dig den debugginginfo som du vill ha.
+Se det som en möjlighet att skriva ut diverse information om vad ramverket innehåller, en möjlighet till debugging. Ännu bättre är kanske att göra en helt egen route som bara visar dig den debugginginfo som du vill ha. Det kan vara ett bra sätt att lära känna ramverket och dess resurser, ett sätt att leka runt.
 
 
 
-Response {#response}
+Skicka svaret med modluen Response {#response}
 --------------------------------------
 
 Om vi kikar extra noga på svaret från den interna routen 404, så ger den statuskoden 200 tillbaka. Du kan se vilken statuskod som sidan ger i devtools network-fliken.
 
 Statuskoden borde varit 404.
 
-Nåväl, låt oss hämta hem en response-modul som kan hjälpa oss att hantera svaret som vi ger i routens callback.
+Nåväl, låt oss hämta hem och använda en response-modul som kan hjälpa oss att bättre hantera svaret som vi ger i routens callback. Det är modulen [anax/response](https://packagist.org/packages/anax/response) som är aktuell.
 
 
 
 ###Modul för response {#modulresponse}
 
-Som tidigare finns det en modul som är gjord för att leverera HTTP-svaret, ett response som matchar inkommande request. Vi använder composer för att hämta det.
+Det finns alltså en modul som är gjord för att leverera HTTP-svaret, ett response som matchar inkommande request. Vi använder composer för att hämta det.
 
 ```bash
 $ composer require anax/response
 ```
 
-Kika gärna på källkoden för response. Den ligger nu i din vendor-mapp.
+Kika gärna på källkoden för response, både i src- och i test-katalogen. Den ligger nu i din vendor-mapp. Kör gärna modulens testprogram.
+
+Tänk på response-modulen som att den skickar HTTP-responset, i form av HTTP headers och HTTP body. När vi tänker på själva HTML-sidan som visas så är den innehållet i HTTP responsets body. 
 
 
 
 ###Använd response {#anvandresp}
 
-Vi kan nu gå över till att använda response-klassen i routens handler. Men först måste vi lägga till den som en del i ramverket och i `$app`.
+Vi kan nu gå över till att använda response-klassen i routens handler. Men först måste vi lägga till response som en del i ramverket och i `$app`.
 
 I frontkontrollern lägger jag till klassen som en del av `$app`.
 
@@ -779,9 +781,9 @@ $app->request  = new \Anax\Request\RequestBasic();
 $app->response = new \Anax\Response\Response();
 ```
 
-Nu är även klassen response en del av $app-objeket.
+Nu är klassen response en del av $app-objeket.
 
-Sedan uppdaterar jag min routes och ändrar sista delen där saker skrivs ut.
+Sedan uppdaterar jag mina routes och ändrar sista delen där saker skrivs ut.
 
 ```php
 //echo $body;
@@ -789,9 +791,9 @@ $app->response->setBody($body)
               ->send();
 ```
 
-Det är ingen stor ändring, jag överlåter bara till klassen response att sköta utskriften av resultatet, svaret. Klassen response är förberedd för att hantera HTTP headers och det vill jag möjligen använda lite längre fram.
+Det är ingen stor ändring, jag överlåter bara till klassen response att sköta utskriften av resultatet, svaret. Klassen response är förberedd för att hantera HTTP headers och det vill jag ha möjligheten att använda.
 
-Eller kanske redan nu, i min route för 404 vill jag skicka med statuskoden för 404, istället för som nu då det blir 200.
+Som ett exempel så ser vi min route för 404 där jag vill skicka med statuskoden 404, istället för som nu då det blir 200.
 
 Det kan jag göra på följande vis.
 
@@ -800,13 +802,13 @@ $app->response->setBody($body)
               ->send(404);
 ```
 
-Argumentet som skickas med till `send()` är statuskoden som klassen response omvandlar till ett korrekt anrop med `header("HTTP/1.1 404 Not Found")`. Den typen av hantering skall nu response lösa åt mig.
+Argumentet som skickas med till `send()` är statuskoden som klassen response omvandlar till ett korrekt anrop med `header("HTTP/1.1 404 Not Found")`. Den typen av hantering kan response lösa åt mig.
 
 
 
 ###Skicka JSON som response {#jsonresp}
 
-En annan sak som request-klassen kan lösa är att förenkla hanteringen av svar som skall levereras som JSON. Låt oss göra en ny route som skickar med detaljer om servern.
+En annan sak som request-klassen kan lösa är att förenkla hanteringen av svar som skall levereras som JSON. Låt oss göra en ny route som skickar med detaljer om servern i ett JSON objekt och inte i en HTML-sida.
 
 ```php
 $app->router->add("status", function () use($app) {
@@ -824,7 +826,7 @@ $app->router->add("status", function () use($app) {
 
 Nu ser man lite mer av styrkan. Klassen response löser encoding av JSON-datan samt lägger till den `header("Content-Type: application/json; charset=utf8")` som är nödvändig.
 
-Nu har vi även ett fungerande response-objekt. Vi närmar oss grunden i ett ramverk.
+Nu har vi ett fungerande response-objekt. Vi närmar oss grunden i ett ramverk, eller iallafall i ett mikroramverk.
 
 
 
