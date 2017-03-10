@@ -5,7 +5,7 @@ category:
     - php
     - kursen oophp
 revision:
-    "2017-03-10": (A, mos) Första utgåvan.
+    "2017-03-10": "(A, mos) Första utgåvan."
 ...
 Bygg ett eget PHP-ramverk
 ==================================
@@ -423,7 +423,7 @@ Att bygga en router låter som ett större projekt så jag tar och lånar en mod
 $ composer require anax/router
 ```
 
-Bra, då har vi även en router på plats i vendor-katalogen. Kika gärna på dess källkod, både i src- och test-katalogen. Du kan se att det finns en klass för routern och en klass för routes.
+Bra, då har vi även en router på plats i vendor-katalogen. Kika gärna på dess källkod, både i src- och test-katalogen. Du kan se att det finns en klass för routern (`RouterInjectable`) och en klass för routes (`Route`). Det är främst klassen för routern som vi använder. Den använder i sin tur de andra klasserna.
 
 
 
@@ -697,7 +697,7 @@ Koden för navbaren behöver komma in i varje routehandler där den skall visas.
 Om jag modifierar mina routes i `config/route.php`, så kan det se ut så här, för att implementera en navbar.
 
 ```php
-$app->router->add("", function () use($app) {
+$app->router->add("", function () use ($app) {
     $urlHome  = $app->url->create("");
     $urlAbout = $app->url->create("about");
     $navbar = <<<EOD
@@ -720,7 +720,7 @@ EOD;
 });
 ```
 
-Notera att callbacken för routen nu använder `function () use($app)` vilket gör att callbacken får tillgång till variabeln `$app` som innehåller alla ramverkets resurser.
+Notera att callbacken för routen nu använder `function () use ($app)` vilket gör att callbacken får tillgång till variabeln `$app` som innehåller alla ramverkets resurser.
 
 Om jag gör motsvarande uppdatering i de andra routsen, så får jag en navbar som hjälper mig att hoppa mellan sidorna.
 
@@ -734,16 +734,16 @@ Nu när vi har tillgång till hela ramverket i routens hanterare så kan jag upp
 Min uppdaterade 404-route ser ut så här.
 
 ```php
-$app->router->addInternal("404", function () use($app) {
+$app->router->addInternal("404", function () use ($app) {
     $currentRoute = $app->request->getRoute();
     $routes = "<ul>";
-    foreach($app->router->getAll() as $route) {
+    foreach ($app->router->getAll() as $route) {
         $routes .= "<li>'" . $route->getRule() . "'</li>";
     }
     $routes .= "</ul>";
 
     $intRoutes = "<ul>";
-    foreach($app->router->getInternal() as $route) {
+    foreach ($app->router->getInternal() as $route) {
         $intRoutes .= "<li>'" . $route->getRule() . "'</li>";
     }
     $intRoutes .= "</ul>";
@@ -771,7 +771,7 @@ Se det som en möjlighet att skriva ut diverse information om vad ramverket inne
 
 
 
-Skicka svaret med modluen Response {#response}
+Skicka svaret med modulen Response {#response}
 --------------------------------------
 
 Om vi kikar extra noga på svaret från den interna routen 404, så ger den statuskoden 200 tillbaka. Du kan se vilken statuskod som sidan ger i devtools network-fliken.
@@ -839,7 +839,7 @@ Argumentet som skickas med till `send()` är statuskoden som klassen response om
 En annan sak som request-klassen kan lösa är att förenkla hanteringen av svar som skall levereras som JSON. Låt oss göra en ny route som skickar med detaljer om servern i ett JSON objekt och inte i en HTML-sida.
 
 ```php
-$app->router->add("status", function () use($app) {
+$app->router->add("status", function () use ($app) {
     $data = [
         "Server" => php_uname(),
         "PHP version" => phpversion(),
@@ -933,7 +933,7 @@ Fint, då kan vi arrangera om vår kod i routern och börja använda vyerna.
 Till att börja med så kikar vi på en av de routes vi har för tillfället.
 
 ```php
-$app->router->add("", function () use($app) {
+$app->router->add("", function () use ($app) {
     $urlHome  = $app->url->create("");
     $urlAbout = $app->url->create("about");
     $navbar = <<<EOD
@@ -957,7 +957,7 @@ EOD;
 });
 ```
 
-Här ser jag tre möjliga view-filer, template-filer. Som du kan se så sparar jag mina view filer under `view/take1` och `take1` är bara ett godtyckligt namn som samlar dessa view filer under en variant av namnrymd.
+Här ser jag tre möjliga view-filer, template-filer. Som du kan se av nedan filnamn, så väljer jag att spara mina view-filer under `view/take1` och `take1` är bara ett godtyckligt namn som samlar dessa view-filer under en variant av namnrymd.
 
 **`view/take1/header.php`**
 
@@ -996,7 +996,7 @@ Detta skulle kunna vara en första ansats till att dela upp sidans innehåll i v
 När vi nu har view-filerna klara och vi kan ladda dem i routen. Den uppdaterade routen följer.
 
 ```php
-$app->router->add("", function () use($app) {
+$app->router->add("", function () use ($app) {
     $app->view->add("take1/header", ["title" => "Home"]);
     $app->view->add("take1/navbar");
     $app->view->add("take1/home");
