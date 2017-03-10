@@ -464,13 +464,13 @@ $router->handle($request->getRoute());
 
 Det sista vi gör är att överlåta till routern att hantera och matcha inkommande route mot de routes som finns.
 
-Nu kan du pröva olika routes mot din frontkontroller och se olika svar. Du har två routes som fungerar "" och "about", alla andra resulterar i att den interna routen för 404 visas.
+Nu kan du pröva olika routes mot din frontkontroller och se olika svar. Du har två routes som fungerar, "" och "about", alla andra resulterar i att den interna routen för 404 visas.
 
 Det närmar sig.
 
 
 
-Ett app-objekt {#app}
+Ett app-objekt för att samla {#app}
 --------------------------------------
 
 Det börjar bli en del kod och det är lika bra att städa lite.
@@ -501,15 +501,15 @@ class App
 }
 ```
 
-Den innehåller inte så mycket. Men det gör inget, vi skall snart fylla den.
+Den innehåller inte så mycket. Men det gör inget, vi skall snart fylla den med ramverkets resurser, på ett sätt som fungerar eftersom PHP har *mutable* klasser, de kan ändra sitt innehåll efter att de är skapade. 
 
-Noter att det står namespace `Anax\App`, jag tänker byta det till `Mos\App` för att visa att jag (Mos) är den vendor som skapat källkoden under src. Du hittar på ditt eget vendor-namn, det får bli ditt eget varumärke.
+Notera att det står namespace `Anax\App`, jag tänker byta det till `Mos\App` för att visa att jag (Mos) är den vendor som skapat källkoden under src. Du hittar på ditt eget vendornamn, det får bli ditt eget varumärke som visar att du skrivit koden.
 
 
 
 ###Autoloader för egen kod {#autoegen}
 
-All kod som ligger i vendor-katalogen sköts av composers autolaoder. Mycket smidigt och nu vill vi använda composers autoloader till att även göra autoloading av vår egen källkod som vi nu lägger i katalogen `src`.
+All kod som ligger i vendor-katalogen sköts av composers autoloader. Det är smidigt och vi vill nu använda composers autoloader till att även göra autoloading av vår egen källkod som vi nu lägger i katalogen `src`.
 
 För tillfället ser den av composer automatgenererade filen `composer.json` ut ungefär så här.
 
@@ -523,7 +523,9 @@ För tillfället ser den av composer automatgenererade filen `composer.json` ut 
 }                                
 ```
 
-Uppdatera nu `composer.json` med information om ditt egen namespace och koppla det till all källkod som ligger under src-katalogen.
+Den innehåller alla de moduler som vi hittills installerat.
+
+Uppdatera nu `composer.json` med allmän information samt koppla ditt egen namespace till all källkod som ligger under src-katalogen. Composers autoloader kommer lösa så att dina klassfiler hittas.
 
 Så här.
 
@@ -549,7 +551,7 @@ Så här.
 }
 ```
 
-Som sagt så är Mos mitt namespace och du byter ut det mot ditt egna. Byt även ut allt annat som är kopplat till mos, så att det blir din egna kod. 
+Som sagt så är Mos mitt vendornamn i mitt namespace och du byter ut det mot ditt eget. Byt även ut allt annat som är kopplat till mos, så att det blir din egna kod. 
 
 När det är klart så låter du composer validera konfig-filen och sen dumpar vi ut den uppdaterade autoloadern.
 
