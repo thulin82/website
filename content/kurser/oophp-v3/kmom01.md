@@ -53,7 +53,7 @@ Kika igenom följande artiklar.
 
 Läs översiktligt in dig på följande verktyg som används i kursen.
 
-1. Vi använder pakethanteraren [composer](https://getcomposer.org/) för att installera PHP moduler.
+1. Vi använder pakethanteraren [Composer](https://getcomposer.org/) för att installera PHP moduler.
 
 1. De PHP-moduler vi använder är publicerade på [Packagist](https://packagist.org/), ett sökbart repository för PHP-moduler.
 
