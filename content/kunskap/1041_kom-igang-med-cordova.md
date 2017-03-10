@@ -108,8 +108,8 @@ Då kan det vara dags att kicka på hur appen ser ut. Vi bärjar med att lägga 
 
 [FIGURE src=/image/kunskap/android-emulator-cordova-app.png?w=200&h=400 class=right]
 ```bash
-$ cordova platform add android
-$ cordova platform add browser
+$ cordova platform add android --save
+$ cordova platform add browser --save
 $ cordova emulate android
 ```
 
