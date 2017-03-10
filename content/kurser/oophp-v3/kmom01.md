@@ -43,6 +43,10 @@ Kika igenom följande artiklar.
 1. Kika igenom manualen för MySQL, bara kort och översiktligt, men se till att du kan hitta till den delen som visar hur SQL skall skrivas i MySQL.
     * [Ch14 SQL Statement Syntax](https://dev.mysql.com/doc/refman/5.7/en/sql-syntax.html)
 
+1. Läs om "[The MicroPHP Manifesto](https://funkatron.com/posts/the-microphp-manifesto.html)" som ger en reaktion på ramverk och termen mikroramverk.
+
+1. Kika översiktligt i [PHP The Right Way](http://www.phptherightway.com/) om vilka verktyg som rekommenderas av PHP communityn.
+
 
 
 ###Verktyg {#verktyg}
@@ -52,8 +56,6 @@ Läs översiktligt in dig på följande verktyg som används i kursen.
 1. Vi använder pakethanteraren [composer](https://getcomposer.org/) för att installera PHP moduler.
 
 1. De PHP-moduler vi använder är publicerade på [Packagist](https://packagist.org/), ett sökbart repository för PHP-moduler.
-
-1. Kika översiktligt i [PHP The Right Way](http://www.phptherightway.com/) om vilka verktyg som rekommenderas av PHP communityn.
 
 
 

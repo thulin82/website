@@ -63,6 +63,26 @@ Det ser ut ungefär så här nu, [första committen](https://github.com/canax/an
 
 
 
+###Skapa en .gitignore {#gitignore}
+
+Du vill ha en fil `.gitignore` som berättar vilka filer som inte skall inkluderas i ditt gitrepo.
+
+```bash
+# Gå till roten av me/anax-lite
+$ touch .gitgnore
+```
+
+Lägg följande rader i filen.
+
+```text
+/vendor
+/cache
+```
+
+Fyll på filen med fler filer vid behov, det du lägger i filen kommer att ignoreras av Git-repot.
+
+
+
 En frontcontroller {#frontcontroller}
 --------------------------------------
 
@@ -1003,30 +1023,71 @@ Bra med ordning och reda där var sak har sin plats.
 Grunden i ett ramverk {#grunden}
 --------------------------------------
 
-Summera vad grunden är. Tipsa om andra microramverk.
-Läsanvisningar om microramverk?
+Du har har nu skapat grunden till ditt eget PHP-ramverk, eller kanske ett mikroramverk, den viktigaste grunden i ett ramverk. Du har sett exempel på de vanligaste modulerna som ingår i grunden i ett ramverk.
+
+Vill du se exempel på andra liknande PHP ramverk så googlar du på "PHP micro frameworks". Om du tittar på ett par av dem, via deras dokumentation, så kommer du att se motsvarande moduler.
+
+För att summera de modulerna vi valt att fylla vårt anax-lite med så listar vi dem i en tabell.
+
+| Modul         | Funktion                       |
+|---------------|--------------------------------|
+| anax/request  | Samla all information om själva HTTP requesten och förbered grunden för att skapa länkar och sortera ut vilken route som efterfrågas. |
+| anax/response | Leverera ett svar i form av ett HTTP resonse med headers och body. |
+| anax/url      | Överlåt skapandet av länkar till ramverket. |
+| anax/router   | Skapa routes med hanterar för att dela upp koden. |
+| anax/view     | Fördela ut HTML-kod (och innehåll) till vy-filer som kan renderas till en HTML-sida. |
+| anax/common   | Grundkod som används och delas av flera Anax moduler. |
+
+Där har vi grunden till vårt ramverk. Till det kommer vår frontkontroller, htaccess-filerna och vår tanke bakom `$app` objektet.
+
+Detta får bli en grund som vi bygger vidare på. 
 
 
 
-Makefile {#makefile}
+Inkludera Cimage {#cimage}
 --------------------------------------
+
+Om du vill använda Cimage för att hantera bilderna så kan du komma igång snabbt på följande sätt. Det handlar om att installera [mos/cimage](https://packagist.org/packages/mos/cimage) med composer, och integrera Cimage i din anax-lite.
+
+```bash
+# Gå till me/anax-lite
+$ composer require mos/cimage
+$ install -d htdocs/{img,cimage} cache/cimage
+$ chmod 777 cache/cimage
+$ rsync -av vendor/mos/cimage/{icc,webroot/imgd.php} htdocs/cimage
+$ rsync -av vendor/mos/cimage/webroot/img/car.png htdocs/img
+$ touch htdocs/cimage/imgd_config.php
+```
+
+I konfigfilen `htdocs/cimage/imgd_config.php` lägger du följande kod.
+
+```php
+<?php
+return [
+    "mode"         => "development",
+    "image_path"   =>  __DIR__ . "/../img/",
+    "cache_path"   =>  __DIR__ . "/../../cache/cimage/",
+];
+```
+
+Nu har du inkluderat ett enkelt sätt att hantera bilder. De htaccess-filer som du använder är förberedda för Cimage. Förutsatt att du använder htaccess-filerna så kan du nu använda Cimage via följande länk-struktur.
+
+> `image/car.png?w=400`
 
 
 
 Git och GitHub {#git}
 --------------------------------------
 
-Git & GitHub
+När du är klar så tar du och committar och pushar upp din kod till GitHub. Gör en tagg också.
 
-
-Tips om cimage.
-
+Vill du jämföra din version av anax-lite med den som jag gjorde i denna artikeln så hittar du min version undex [canax/anax-lite](https://github.com/canax/anax-lite).
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Du har nu fått en snabb introduktion i hur konstruktionen Promise kan användas för att skapa sekventiell exekvering av asynkron kod.
+Nu har du ett eget PHP ramverk som du skapat med egna händer, delvis genom att återanvända befintliga moduler.
 
-Denna artikel har en [egen forumtråd](t/6276) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/6276) som du kan ställa frågor i, eller bidra med tips och trix.
