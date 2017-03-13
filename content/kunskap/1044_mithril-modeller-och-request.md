@@ -16,7 +16,7 @@ För att våra webapplikationer ska kunna hantera dynamisk data introducerar vi 
 Introduktion {#intro}
 --------------------------------------
 
-Vi ska i denna övning titta på hur vi hämtar data med hjälp av mithril modulen request och hur vi hanterar denna data i modeller i mithril. I övningen byggar vi en liten namnsdags app med hjälp av api:t [Svenska Dagar](http://api.dryg.net/).
+Vi ska i denna övning titta på hur vi hämtar data med hjälp av mithril modulen request och hur vi hanterar denna data i modeller i mithril. I övningen byggar vi en liten namnsdags app med hjälp av api:t [Svenska Dagar](https://api.dryg.net/).
 
 
 
@@ -180,7 +180,7 @@ var Nameday = {
         Nameday.currentDate = date;
 
         var dateArray = date.split("-");
-        var apiURL = "http://api.dryg.net/dagar/v2.1/" + dateArray[0] + "/" + dateArray[1] + "/" + dateArray[2];
+        var apiURL = "https://api.dryg.net/dagar/v2.1/" + dateArray[0] + "/" + dateArray[1] + "/" + dateArray[2];
 
         return m.request({
             method: "GET",
@@ -215,10 +215,10 @@ module.exports = {
 ```
 
 
-Du kommer nu få felet att du inte får hämta data från `api.dryg.net`. Detta åtgärder vi genom att ändra i vår `Content-Security-Policy` (CSP) i `index.html`. På detta sättet tillåter vi appen att hämta data från api't. Vi lägger helt enkelt till `api.dryg.net` som tillåten adress i default-src delen av vår CSP meta-tag.
+Du kommer nu få felet att du inte får hämta data från `api.dryg.net`. Detta åtgärder vi genom att ändra i vår `Content-Security-Policy` (CSP) i `index.html`. På detta sättet tillåter vi appen att hämta data från api't. Vi lägger helt enkelt till `https://api.dryg.net` som tillåten adress i default-src delen av vår CSP meta-tag.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' api.dryg.net data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.dryg.net data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 ```
 
 Nedan finns ett exempel på hur namnsdagsvyn kan se ut för den 17:e mars.
