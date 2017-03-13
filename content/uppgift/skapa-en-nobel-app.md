@@ -28,8 +28,11 @@ Börja med att skapa ett cordova projekt i `me/kmom02/nobel/` och efter det ett 
 ```bash
 # Ställ dig i rooten av kursrepot
 cd me/kmom02
-cordova create nobel com.dbwebb.nobel Nobel
-cd nobel/www
+cordova create nobel se.dbwebb.nobel Nobel
+cd nobel
+cordova platform add android --save
+cordova platform add browser --save
+cd www
 npm init --yes
 npm install mithril --save
 npm install webpack --save

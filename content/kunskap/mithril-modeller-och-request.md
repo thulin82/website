@@ -109,7 +109,7 @@ Efter att jag har skapat arrayen med datum skapar och returnerar jag de virtuell
 
 
 ```javascript
-// js/views/days.js
+// js/index.js
 var m = require("mithril");
 
 ...
@@ -202,15 +202,15 @@ var Nameday = require("../models/nameday");
 
 module.exports = {
     oninit: function (vnode) {
-        Nameday.load(vnode.attrs.date)
+        Nameday.load(vnode.attrs.date);
     },
     view: function() {
         return [
-            m("h1", "Dagens namn " + Nameday.currentDay.datum),
-            m("p", Nameday.currentDay.namn)
+            m("h1", "Dagens namn " + Nameday.currentDate),
+            m("p", Nameday.currentNames)
         ];
     }
-}
+};
 ```
 
 [FIGURE src="/image/snapvt17/namnsdag-namn.png" caption="Namnsdags vyn för den 17:e mars."]
