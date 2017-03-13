@@ -54,6 +54,8 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 1. Läs artikeln om "[Mobile: native Apps, Web Apps, and hybrid Apps](http://www.nngroup.com/articles/mobile-native-apps/)".
 
+1. Läs om "[MVC architektur](https://www.tmprod.com/blog/2012/what-is-mvc-architecture-in-a-web-based-application/)".
+
 1. Bekanta dig med dokumentationen för javascript ramverket [mithril](http://mithril.js.org/api.html).
 
 <!-- 1. Titta i manualen om jQuery Mobile. Du finner den på deras [webbplats under demo](http://demos.jquerymobile.com/). Börja med att läsa artikeln som heter "Introduction" och läs därefter artikeln "Responsive Web Design". Avsluta med att skumma igenom manualen för att se vad där finns och för att bygga en känsla om vad jQuery Mobile innehåller.
