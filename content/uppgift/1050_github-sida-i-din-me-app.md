@@ -41,7 +41,7 @@ Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/red
 För att appen kan hämta data från `api.github.com` måste vi lägga till urlen i vår Content-Security-Policy enligt nedan.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' api.github.com data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.github.com data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 ```
 
 

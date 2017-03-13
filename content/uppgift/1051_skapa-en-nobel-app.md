@@ -49,7 +49,7 @@ Lägg även till `npm start` scriptet, som underlätter vid utveckling och testn
 För att appen kan hämta data från `api.nobelprize.org` måste vi lägga till urlen i vår Content-Security-Policy enligt nedan.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' api.nobelprize.org data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' http://api.nobelprize.org data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 ```
 
 
