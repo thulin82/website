@@ -42,8 +42,14 @@ Lägg även till `npm start` scriptet, som underlätter vid utveckling och testn
 
 ```json
   "scripts": {
-      "start": "webpack js/index.js bin/app.js -d --watch"
+      "start": "webpack js/index.js bin/app.js -d"
   }
+```
+
+För att appen kan hämta data från `api.nobelprize.org` måste vi lägga till urlen i vår Content-Security-Policy enligt nedan.
+
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' api.nobelprize.org data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 ```
 
 
@@ -51,7 +57,7 @@ Lägg även till `npm start` scriptet, som underlätter vid utveckling och testn
 Krav {#krav}
 -----------------------
 
-1. Din app skall innehålla en lista på med årtal, minst 10 år i följd.
+1. Din app skall innehålla en lista med årtal, minst 10 år i följd.
 
 1. Varje årtal skall vara en länk till en sida som visar det årets nobelpristagare.
 

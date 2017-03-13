@@ -4,10 +4,10 @@ category: webbprogrammering
 revision:
   "2017-03-07": (A, efo) Första utgåvan i samband med kursen webapp v2.
 ...
-Bygg vidare på din me-app
+Skapa en mithril me-app
 ==================================
 
-Du skall vidareutveckla din me-app, så den innehåller två nya vyer. En vy med information om dina github repos och en vy där vi detekterar storlek och orientering på vår enhet.
+Du skall bygga en me-app, som en me-sida, men med fokus på mobila enheter. Du använder javascript ramverket mithril.
 
 <!--more-->
 
@@ -16,37 +16,39 @@ Du skall vidareutveckla din me-app, så den innehåller två nya vyer. En vy med
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har en mithril me-app från föregående kursmoment, som fungerar i cordova på android.
-
-Du har jobbat igenom artikeln "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
-
-Du har jobbat igenom artikeln "[Att göra en mobilapp av en mobil-anpassad webbplats](kunskap/kunskap/att-gora-en-mobilapp-av-en-mobil-anpassad-webbplats)".
+Du har jobbat igenom artiklarna "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)" och [Kom igång med cordova]().
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Börja med att ta en kopia av koden från föregående kursmoments me-app.
+Om du har gjort enligt övningen i artikeln ovan så har du i stort sett redan klarat av uppgiften.
+
+Börja med att ta en kopia av koden från artikeln.
 
 ```bash
 # Ställ dig i rooten av kursrepot
 cd me
-cp -ri kmom01/me1/* kmom02/me2/
+cp -ri kmom01/meapp/* redovisa/
 ```
 
-Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/kmom02/me2`.
-
-[Dokumentation](https://developer.github.com/v3/) och exempel  för Githubs API underlättar vid utveckling av vår Github vy.
+Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/redovisa`.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Skapa en vy där du presenterar information om dina Github repos. Som minimum namn och när det senast var uppdaterat.
+1. Bygg en me-app i mithril.
 
-1. Skapa en vy där du detekterar och skriver ut information om användarens enhets orientering och storlek.
+1. Din me-app skall innehålla tre sidor. Me, Report och About.
+
+1. Fyll sidorna med relevant innehåll. Det skall finnas minst en bild på sidorna Me och About.
+
+1. Det skall finnas en meny så använderen kan navigera mellan sidorna, måste fungera på en mobil enhet.
+
+1. Gör din me-app personlig, så man ser att det är din me-app. Skapa en egen style som fungerar mobile-first responsivt.
 
 1. Din me-app skall kunna köras med cordova både i browsern och i en android emulator.
 

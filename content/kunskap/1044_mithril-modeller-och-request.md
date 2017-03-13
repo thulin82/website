@@ -169,6 +169,7 @@ Vi vill nu hämta data från Svenska Dagar api:t och som beskrivit ovan hämtar 
 
 Funktionen `load` sätter först `currentDate` attributet till datumet, som vi kommer skicka från vyn till modellen. Efter tilldelningen av datumet anropar vi mithrils inbyggda [request funktion](http://mithril.js.org/request.html). `m.request` returnerar ett promise, där vi kan använda det resulterande datat för att sätta `currentNames` attributet.
 
+
 ```javascript
 var m = require("mithril");
 
@@ -193,7 +194,7 @@ var Nameday = {
 module.exports = Nameday;
 ```
 
-För att vi kan använda namnsdagsmodellen i vårt vy `js/views/namnsdag.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar.
+För att vi kan använda namnsdagsmodellen i vår vy `js/views/namnsdag.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar.
 
 ```javascript
 var m = require("mithril");
@@ -212,6 +213,15 @@ module.exports = {
     }
 };
 ```
+
+
+Du kommer nu få felet att du inte får hämta data från `api.dryg.net`. Detta åtgärder vi genom att ändra i vår `Content-Security-Policy` (CSP) i `index.html`. På detta sättet tillåter vi appen att hämta data från api't. Vi lägger helt enkelt till `api.dryg.net` som tillåten adress i default-src delen av vår CSP meta-tag.
+
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' api.dryg.net data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+```
+
+Nedan finns ett exempel på hur namnsdagsvyn kan se ut för den 17:e mars.
 
 [FIGURE src="/image/snapvt17/namnsdag-namn.png" caption="Namnsdags vyn för den 17:e mars."]
 

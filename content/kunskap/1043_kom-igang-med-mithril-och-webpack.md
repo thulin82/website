@@ -116,9 +116,9 @@ Vi börjar med att rensa i `index.html`.
 </html>
 ```
 
-Behåll `Content-Security-Policy` taggen, för att skydda oss mot XSS attacker, `viewport` och ändrar så du inkluderat `bin/apps,js` istället för `index.js`.
+Vi behåller `Content-Security-Policy` taggen för att skydda oss mot XSS attacker, vi kommer dock i senare kursmoment lägga till så vi kan hämta data från api'er. `viewport` meta-taggen talar om att vi vill visa upp våra appar på enheter i olika storlekar. Längst ner i `index.html` ändrar från att inkludera `index.js` till att istället inkludera vår mithril app som finns i `bin/app.js`.
 
-Skapa mappen `views`.
+Skapa mappen `js/views` och vår första mithril vy `js/views/me.js`.
 
 ```bash
 # utgår från www/
@@ -126,7 +126,7 @@ $ mkdir js/views
 $ touch js/views/me.js
 ```
 
-`js/index.js` filen är vår utgångspunkt för appen och den pekar ut vad som ska visas när en användare kommer till vår app. Vi skapar desutom en katalog för våra vyer, med vårt första mithril vy `me.js`.
+Den befintliga filen `js/index.js` är vår utgångspunkt för appen och den pekar ut vad som ska visas när en användare kommer till vår app. Vi skapar desutom en katalog för våra vyer, med vårt första mithril vy `me.js`.
 
 
 
@@ -144,7 +144,7 @@ module.exports = {
     }
 }
 ```
-Kodsnutten `m("h1", "Emil Folino")` skapar en "[virtual DOM node](http://mithril.js.org/hyperscript.html)", ett JavaScript objekt som representerar ett DOM element. Det blir först ett DOM element när vi använder den i en `render` eller `mount` funktion.
+Kodsnutten `m("h1", "Emil Folino")` skapar en "[virtual DOM node](http://mithril.js.org/hyperscript.html)" en så kallad [vnode](http://mithril.js.org/vnodes.html). En `vnode` är ett JavaScript objekt som representerar ett DOM element. Det blir först ett DOM element när vi använder den i en `render` eller `mount` funktion.
 
 För att appen ska veta om att vi vill visa upp vårt me-vy måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
 
