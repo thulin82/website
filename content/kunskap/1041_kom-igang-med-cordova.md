@@ -11,7 +11,8 @@ Kom igång med Cordova
 
 [FIGURE src=/image/kunskap/cordova_logo.png?w=500&h=300]
 
-Vi ska använda Apache Cordova för att utveckla och testa webbappar. Cordova är ett [cross-plattform tool](https://en.wikipedia.org/wiki/Cross-platform) som utnyttjar 
+Vi ska använda Apache Cordova för att skapa en "hello world" webbapp och testa köra den i en android emulator. Cordova är ett [cross-plattform tool](https://en.wikipedia.org/wiki/Cross-platform) som är gratis och open source. Apparna byggs i HTML, CSS och JavaScript. 
+
 <!--more-->
 
 
@@ -19,16 +20,37 @@ Vi ska använda Apache Cordova för att utveckla och testa webbappar. Cordova ä
 Förutsättning {#pre}
 --------------------------------------
 
-Artikeln är en del av kursen webapp och förutsätter att du har motsvarande "[installera Cordova](kunskap/installera-cordova)"
+Artikeln är en del av kursen webapp och förutsätter att du har gjort motsvarande "[installera Cordova](kunskap/installera-cordova)".
 
 
-Template koden {#template}
+
+Introduktion {#introduktion}
 --------------------------------------
 
+Med hjälp av Cordova ska vi skapa en _hybrid app_, alltså en webbsida som exekveras i mobilen som en nativ app. Detta gör att vi kan utnyttja nativ funktionaliteter i våran app, t.ex. kamera, GPS och kontakter. Vi kommer åt de här funktionaliteterna med hjälp av ett [JavaScript API som Cordova har utvecklat](https://cordova.apache.org/docs/en/latest/#plugin-apis).
+
+I den här artikeln kommer vi inte testa någon nativ funktion utan vi fokuserar på att få ihop en "Hello world" app och testa den i en Android emulator.
+
+
+
+Hello word {#hello_world}
+--------------------------------------
+
+När vi skapar ett nytt Cordova projekt får vi med kod och filstruktur för en fungerande app så vi testar skapa ett nytt projekt i terminalen.
+ 
 ```bash
 $ cordova create hello se.dbwebb.helloWorld HelloWord
 ```
-dir -> identifier (identifier, [reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation)) -> title
+
+`cordova create` kommandot tar tar emot följande argument: 
+
+* **directory**: Vad mappen som vårt prjojekt ska ligga i ska heta som. I detta fallet "hello".
+
+* **identifier**: Identifierare appen, används b.la. för Android appar. Den är skriven i [reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). I detta fallet "se.dbwebb.helloWorld".
+
+* **title**: Projektets title. I vårt fall "HelloWorld"  
+
+Vi tar en titt på vad för mappar och filer som har skapats.
 
 ```bash
 $ tree hello
@@ -48,12 +70,23 @@ hello/
         └── index.js
 ```
 
-källkoden ligger i `www`. där vi kommer jobba.
+* **config.xml**: Configurerar appen. I den kan du ändra beteendet av appen och ändra title, beskrivning och skapare av appen. [Dokumentation](https://cordova.apache.org/docs/en/latest/config_ref/index.html) för de som vill gräva ner sig.
 
-Kolla igenom `index.html` och `index.js`.
+* **hook**: Här kan vi lägga in skript som vi vill ska ingå i Cordovas skripts. T.ex. om vi vill lägga till ett skript till `build` kommandot.
 
-Jag rensade kommentarer i `index.html`.
-Vi får lite fördig kod, speciellt i headern får vi några `meta` taggar.
+* **platforms**: Här kommer källkoden för alla platformar, som vi lägger till i projektet, ligga. Vi kommer har källkod för Android och Browser. Oftast ska/behöver man inte ändra på någon av den koden.
+
+* **plugins**: Plugin vi lägger till i projektet kommer kopieras hit.
+
+* **www**: Här vi kommer jobba och ändra saker. Innehåller vår källkod för webb delen, HTML, CSS och JavaScript.
+  
+
+
+###Inspektera koden {#inspektera}
+
+Öppna `index.html` så kollar vi vad som finns där. Du kan börja med att läsa igenom kommentarerna och granska koden för att få lite förståelse.
+
+Jag har tagit bort kommentarerna.
 
 ```html
 <!DOCTYPE html>
@@ -80,67 +113,118 @@ Vi får lite fördig kod, speciellt i headern får vi några `meta` taggar.
 </html>
 ```
 
+Vi börjar uppifrån och jobbar neråt.
+
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 ```
-Första meta taggen är [_content security policy_](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP). Den skyddar vår app mot cross-site scripting (XSS) attacker. Om du vill använda dig av en ex. en CDN kan du behöva editera taggen och tillåta appen att hämta kod från den sida.
+Första meta taggen är [_content security policy_](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP). Den skyddar vår app mot cross-site scripting (XSS) attacker. Om du vill använda dig av t.ex. en CDN för CSS behöver du editera taggen och tillåta appen att hämta kod från domänen du vill hämta från.
 
 ```html
 <meta name="format-detection" content="telephone=no">
 ```
 `format-detection` taggen konverterar telefonnummer till länkar. Användare kan klicka på länken så startas ett samtal till det numret.
 
-Nästa tag kan vi ta bort då vi inte ska använda vår app på en Windows Phone.
-
 ```html
 <meta name="msapplication-tap-highlight" content="no">  
 ```
- Sen har vi den vanliga `viewport` meta taggen.
+Den här kan vi ta bort då vi inte ska använda vår app på en Windows Phone.
 
-Längst ner i `body` inkluderar vi två JavaScript filer. `index.js` filen kommer vara vår start punkt. `cordova.js` ger oss tillgång till Cordovas API för att komma åt mobil enheternas native funktionaliteter. Som t.ex. kamera och GPS.
+```html
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+```
+Sen har vi `viewport` meta tag som ni borde veta vad den är.
 
-Om du öppnar `index.js` ser du en `eventListener` som lyssnar efter `deviceready`. `deviceready` är ett event från Cordova som meddelar att appen är redo att använda Cordovas plugins. Vi kommer utgå från `deviceready` som startpunkt för vår kod.
-Koden som finns där nu döljer `<p>` taggen med innehållet `Connecting to Device` och ersätter det med `<p>` taggen som inehåller `Device is ready`.
+Längst ner i `body` inkluderar vi två JavaScript filer. `index.js` filen kommer vara vår start punkt. `cordova.js` ger oss tillgång till Cordovas API för att komma åt native funktionaliteter.
+
+Vi går vidare och inspektera `index.js`. Jag har tagit bort kommentarerna.
+
+```js
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+    onDeviceReady: function() {
+        this.receivedEvent('deviceready');
+    },
+    receivedEvent: function(id) {
+        var parentElement = document.getElementById(id);
+        var listeningElement = parentElement.querySelector('.listening');
+        var receivedElement = parentElement.querySelector('.received');
+
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
+
+        console.log('Received Event: ' + id);
+    }
+};
+app.initialize();
+```
+
+Vanlig JavaScript kod, ett objekt med tre funktioner. Det intressanta här är event lyssnaren som lyssnar efter `deviceready`. `deviceready` är ett event från Cordova som meddelar när appen är färdig laddad och det går att använda Cordovas plugins. Vi kommer utgå från funktionen `onDeviceReady` som startpunkt för vår kod.
+Koden som finns där nu döljer `<p>` taggen med innehållet `Connecting to Device` och gör `<p>` taggen som innehåller `Device is ready` synlig.
 
 Cordova har fler events vi kan utnyttja, här kan du läsa om [de olika eventen](https://cordova.apache.org/docs/en/latest/cordova/events/events.html). Det finns bl.a. `pause` som aktiveras när appen läggs i bakgrunden och `resume` som aktiveras när appen plockas fram från bakgrunden.
 
-Då kan det vara dags att kicka på hur appen ser ut. Vi bärjar med att lägga till vilka plattformar appen ska funka på och sen start en emulator.
+Då kan det vara dags att kicka på hur appen ser ut. Vi måste lägga till vilka plattformar appen ska funka på och sen start en emulator.
 
-[FIGURE src=/image/kunskap/android-emulator-cordova-app.png?w=200&h=400 class=right]
 ```bash
 $ cordova platform add android --save
-$ cordova platform add browser --save
 $ cordova emulate android
 ```
 
+[FIGURE src=/image/kunskap/android-emulator-cordova-app.png?w=200&h=400]
+
+`cordova emulate android` startar `cordova build` som bygger en [_apk_-fil](https://sv.wikipedia.org/wiki/APK_(filformat)), som du kan hitta här, `/platforms/android/build/outputs/apk/android-debug.apk`.
+
+För att felsöka appen i webbläsaren behöver vi lägga till `browser` som en platform och starta en emulator för browsern.
+
+```bash
+$ cordova platform add browser --save
+$ cordova emulate browser
+```
+
+Om du öppnar `index.html` filen i webbläsaren istället för att köra `cordova emulate browser` kommer `cordova.js` att saknas. `cordova.js` läggs till när du exekverar `cordova emulate browser` som startat `cordova build`. Då flyttas även din kod till `/platforms/browser/www/`, det är här emulatorn utgår ifrån.
+
+[INFO]
+Att köra emulatorer använder mycket resurser från datorn. Om du inte lyckas stänga ner emulator processerna helt kan det sluta med att du har flera liggandes i bakgrunden vilket får din dator att prestera sämre. Kolla vilka processer du har igång med `ps` kommandot i samma terminal du har startat emulatorerna. Om det finns gamla processerkan du döda dem med `kill -9 <PID>`. 
+[/INFO]
 
 
 Utveckla appen {#utveckla}
 --------------------------------------
 
-När vi utvecklar appar med Cordova är det viktigt att använda [SPA design](https://en.wikipedia.org/wiki/Single-page_application), Single Page Application, då vi behöver vänta på `deviceready` eventet för att kunna använda plugins. Om vi aldrig byter sida behöver vi bara vänta på `deviceready` när applicationen startar.
+När vi utvecklar appar med Cordova är det viktigt att använda [SPA design](https://en.wikipedia.org/wiki/Single-page_application), Single Page Application, då vi behöver vänta på `deviceready` eventet för att kunna använda plugins. Om vi aldrig byter sida behöver vi bara vänta på `deviceready` när applicationen startar annars behöver vi vänta på det eventet varje gång vi laddar om en sida.
 
-Vi sätter igång och ändrar i koden.
+Vi sätter igång och ändrar i koden i `index.html`.
 
 ```html
-<div class="app">
-    <p>App is loading. Hold on!</p>
-</div>
+...
+<body>
+    <div class="app">
+        <p>App is loading. Hold on!</p>
+        </div>
+
+...
 ```
-I `index.html` ersätter vi innehållet i `app` med en placeholder text som endast ska visas innan `deviceready` har aktiverats.
+Vi ersätter innehållet i `app`-diven med en placeholder text som endast ska visas innan `deviceready` har aktiverats.
 
 I `index.js` rensar vi också. Behåll `initialize` och `onDeviceReady` funktionerna, ta bort `receivedEvent` funktionen och ersätt den med en `homePage` funktion.
 
 ```js
+...
+
     onDeviceReady: function() {
         this.homePage();
     },
 
     homePage: function() {
     }
+    
+...
 ```
 
-Då ska vi ändra innehållet i vår app. Med SPA tänket väljer vi att ändra innehållet med hjälp av JavaScript.
+Då ska vi ändra innehållet i vår app. Med SPA tänket väljer vi att ändra innehållet i `<div class="app">` med hjälp av JavaScript för att inte behöva ladda om sidan.
 
 ```js
 homePage: function() {
@@ -151,7 +235,7 @@ homePage: function() {
     content.innerHTML = html;
 }
 ```
-DOM förändringar har stor inverkan på prestanda, därför väljer vi att skapa en sträng med all html koden och tilldelar `content.innerHTML` sist. Därmed gör vi påverkar vi bara DOM en gång.
+Många DOM förändringar har stor inverkan på prestanda, därför väljer vi att skapa en sträng som innehåller all html kod och tilldelar `content.innerHTML` med strängen. Därmed påverkar vi bara DOM en gång istället för två när vi ändrar innehållet.
 
 Testa appen och kolla hur det ser ut.
 
@@ -166,7 +250,7 @@ Jag har så klart ändrat i CSS filen. Testa du också att leka med stylen.
 
 ##Touch event {#touch}
 
-För att ändra innehållet i appen ska vi lägga till en `button` och skapa ett `touchend` event. 
+För att ändra innehållet i appen lägger vi till en `button` och skapa ett `touchend` event. 
 
 ```js
 homePage: function() {
@@ -197,10 +281,10 @@ otherPage: function() {
     });
 }
 ```
-Vi skapar en ny funktion `otherPage` där vi uppdaterar innehållet i appen och lägger till en knapp som skapar ett `alert` när vi klickar på den.
-Det är viktigt att använda `touch` istället för `onclick`. `onclick` har en 300 ms delay innan den reagerar på att du har klickat på knappen.
+Vi skapar en ny funktion `otherPage` där vi uppdaterar innehållet i appen. På den nya sidan lägger vi till en knapp som skapar ett `alert`.
+Det är viktigt att använda något `touch-event` istället för `onclick`. `onclick` har en 300 ms delay innan den reagerar på att du har klickat på knappen.
 
-Testa appen appen igen.
+Testa appen igen.
 
 ```bash
 $ cordova emulate android
@@ -215,9 +299,9 @@ Felsöka appar {#felsoka}
 --------------------------------------
 
 Det finns olika sätt att felsöka en Cordova app.
-Om vi börjar med det lättaste, öppna appen i din webbläsare och felsök den som en vanlig webbsida.
-När det funkar kan du gå vidare och kolla om det funkar på emulatorn. När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `console.log()`.
-För att se `console.log` kan vi antingen starta `adb logcat` i terminalen medans vi kör appen. För att testa lägger jag in en `console.log()` i eventet för alert, startar emulatorn och kör sen kommandot `adb logcat`.
+Vi börjar med det lättaste, felsöka den i webbläsarem och felsök den som en vanlig webbsida.
+När det funkar kan du gå vidare och kolla om det funkar i emulatorn. När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `console.log()`.
+För att se `console.log` kan vi starta `adb logcat` i terminalen medans vi kör appen. Jag in en `console.log()` i eventet för alert, startar emulatorn och kör sen kommandot `adb logcat`.
 ```js
 button.addEventListener("touchend", function() {
     console.log("alert sent");
