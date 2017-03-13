@@ -211,7 +211,7 @@ Nu har vi gjort vår första app i Cordova.
 
 
 
-Felsöka appar {#felsöka}
+Felsöka appar {#felsoka}
 --------------------------------------
 
 Det finns olika sätt att felsöka en Cordova app.
