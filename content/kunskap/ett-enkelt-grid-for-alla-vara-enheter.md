@@ -7,231 +7,126 @@ revision:
 Ett enkelt grid för alla våra enheter
 ==================================
 
-För att våra webapplikationer ska kunna hantera dynamisk data introducerar vi i denna artikel model och request. I kmom01 tittade vi främst på V och C i MVC och nu är det dags för M. M står för modell och i modeller hanterar vi hämtning och behandling av data. I denna övning går vi igenom hur vi hämtar data med request och hur vi sparar undan datat med hjälp av vår modell.
+För att våra webapplikationer ska kunna visas på enheter av olika storlekar, allt från mobiltelefoner över surfplattor till stora datorskärmar, måste vi designa våra applikationer så de är läsbara och användarvänliga på alla enheter. Vi skall i denna övning skapa ett grid för att visa upp widgets på 4 olika stora skärmar. Övningen görs enbart i HTML och CSS och kan därför enkelt återanvändas i mithril, men även i andra sammanhang där vi vill visa upp element i ett gridbaserat layout.
 
 <!--more-->
 
 
 
-Introduktion {#intro}
+Ett skal i HTML {#html}
 --------------------------------------
-
-Vi ska i denna övning titta på hur vi hämtar data med hjälp av mithril modulen request och hur vi hanterar denna data i modeller i mithril. I övningen byggar vi en liten namnsdags app med hjälp av api:t [Svenska Dagar](http://api.dryg.net/).
-
-
-
-Förutsättningar {#forutsattningar}
---------------------------------------
-Du har installerat labbmiljön för kursen webapp.
-
-Du har installerat cordova och gjort övningar och uppgifter i kursmoment 1.
-
-Jag börjar med att kopiera över me-appen från kursmoment, så vi har en bra grund att stå på.
+Vi börjar med att skapa en enkel `index.html` där vi skapar ramarna för att utveckla och testa vårt grid.
 
 ```bash
-# Ställ dig i rooten av kursrepot
-cd me
-mkdir kmom02/namnsdag
-cp -ri kmom01/me1/* kmom02/namnsdag/
+// ställ dig i kursrepot
+$ cd me/kmom03/grid
+$ touch index.html
 ```
 
-
-
-Skapa en vy för namnsdagar {#skapa}
---------------------------------------
-Det första vi gör är att skapa en vy där vi visar upp en lista på de kommande 10 dagarna. Vi lägger till en route i `js/index.js` och en länk i navbaren i `js/views/layout.js` så vi lätt kommer åt vår nya vy.
-
-```javascript
-// js/index.js
-var m = require("mithril");
-
-...
-var Days = require("./views/days");
-
-m.route(document.body, "/", {
-    ...
-    "/days": {
-        render: function() {
-            return m(Layout, m(Days));
-        }
-    }
-});
-```
-
-```javascript
-// js/views/layout.js
-m("li", [m("a", {href: "/days", oncreate: m.route.link}, "Namnsdag")])
-```
-
-Vi skapar sedan vyn `js/views/days.js` där vi först initierar en array `days`, som vi fyller med dagens datum och nio dagar fram. Vi skriver ut dessa datum, som en lista av länkar. Som vanligt använder vi `oncreate : m.route.link` när vi skapar länkar för att länkarna använder sig av vår router i `js/index.js`. Datum i javascript är inte alltid helt enkla att komma överens med, därför har jag skapat två stycken hjälpfunktioner.
-
-
-```javascript
-// js/views/days.js
-var m = require("mithril");
-
-function format_date (date) {
-    return date.getFullYear() + "-" + zero_pad(parseInt(date.getMonth()) + 1) + "-" + zero_pad(parseInt(date.getDate()));
-}
-
-function zero_pad (number) {
-    if (number < 10) {
-        number = "0" + number;
-    }
-    return number;
-}
-
-module.exports = {
-    view: function() {
-        var today = new Date();
-        var days = [];
-        days.push(today);
-        for (var i = 1; i < 10; i++) {
-            var temporary_date = new Date();
-            temporary_date.setDate(today.getDate() + i);
-            days.push(temporary_date);
-        }
-
-        return [
-            m("h1", "Namnsdagar"),
-            m("ul.days", days.map(function (day) {
-                return m("li", [m("a", {href: "/nameday/" + format_date(day), oncreate: m.route.link}, format_date(day))]);
-            }))
-        ];
-    }
-}
-```
-
-Efter att jag har skapat arrayen med datum skapar och returnerar jag de virtuella noder som bygger upp listan. Jag använder mig av den inbyggda högre ordningens funktion `map` för att iterera över alla dagar. Jag skapar länken för den specifika dagen genom att använda en ny route och skicka med datumet som parameter. Vi skapar nu den routen för att kunna visa upp dagens namn.
-
-
-[FIGURE src=/image/snapvt17/namnsdag-lista.png caption="Ett exempel på hur listan över dagar kan se ut."]
-
-
-```javascript
-// js/index.js
-var m = require("mithril");
-
-...
-var Nameday = require("./views/nameday");
-
-m.route(document.body, "/", {
-    ...
-    "/days": {
-        render: function() {
-            return m(Layout, m(Days));
-        }
-    },
-    "/nameday/:date" : {
-        render: function (vnode) {
-            return m(Layout, m(Nameday, vnode.attrs));
-        }
-    }
-});
-```
-
-I routen definerar vi `/nameday/:date` där `:date` som andra parameter kommer fungera som ett wildcard och variabel för de datum vi skickar in. På raderna under skickar vi med hela den virtuella nod som vi har klickat på till det vy vi har tänkt ladda. Låt oss skapa vår nya vy `js/views/nameday.js` och lägga in lite kod så vi kan testa routen. Det enda vi ser nu är alltså en rubrik "Dagens namn".
-
-```javascript
-var m = require("mithril");
-
-module.exports = {
-    view: function() {
-        return m("h1", "Dagens namn ");
-    }
-}
-```
-
-
-
-Lifecycle methods {#lifecycle}
---------------------------------------
-I mithril finns det ett antal [inbyggda livscykel metoder](http://mithril.js.org/lifecycle-methods.html), som anropas vid olika tidpunkter i ett DOM elements livscykel. I denna artikel kommer vi fokusera på `oninit`, men vi har redan sett `oncreate`, som vi använder när vi kopplar ihop länkar med routern. `oninit` anropas innan vyn visas och vi kan använda funktionen för att initiera hämtning av data, sätta variabler osv. I `js/views/nameday.js` lägger vi till `oninit` metoden och låter den få tillgång till `vnode` parametern vi skickade från routern till vyn. Med `oninit` metoden ser vårt vy ut på detta sättet där vi skriver ut datumet vi skickar med från listan i föregående vy.
-
-```javascript
-var m = require("mithril");
-
-module.exports = {
-    oninit: function (vnode) {
-        console.log(vnode.attrs.date);
-    },
-    view: function() {
-        return m("h1", "Dagens namn ");
-    }
-}
-```
-
-
-
-Vår första mithril model {#forsta}
---------------------------------------
-Vi vill nu hämta data från Svenska Dagar api:t och som beskrivit ovan hämtar och behandlar vi data i modeller. Så det första vi gör är att skapa vår första mithril model `js/models/nameday.js`. I modellen skapar vi först två attribut `currentDate` och `currentNames`. Vi fyller de med placeholder data så vi har något att visa innan vi har laddat data via api:t.
-
-Funktionen `load` sätter först `currentDate` attributet till datumet, som vi kommer skicka från vyn till modellen. Efter tilldelningen av datumet anropar vi mithrils inbyggda [request funktion](http://mithril.js.org/request.html). `m.request` returnerar ett promise, där vi kan använda det resulterande datat för att sätta `currentNames` attributet.
-
-
-```javascript
-var m = require("mithril");
-
-var Nameday = {
-    currentDate : "1970-01-01",
-    currentNames : "" ,
-    load: function (date) {
-        Nameday.currentDate = date;
-
-        var dateArray = date.split("-");
-        var apiURL = "http://api.dryg.net/dagar/v2.1/" + dateArray[0] + "/" + dateArray[1] + "/" + dateArray[2];
-
-        return m.request({
-            method: "GET",
-            url: apiURL
-        }).then(function (result) {
-            Nameday.currentNames = result.dagar[0].namnsdag.join(" - ");
-        });
-    }
-}
-
-module.exports = Nameday;
-```
-
-För att vi kan använda namnsdagsmodellen i vår vy `js/views/namnsdag.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar.
-
-```javascript
-var m = require("mithril");
-
-var Nameday = require("../models/nameday");
-
-module.exports = {
-    oninit: function (vnode) {
-        Nameday.load(vnode.attrs.date);
-    },
-    view: function() {
-        return [
-            m("h1", "Dagens namn " + Nameday.currentDate),
-            m("p", Nameday.currentNames)
-        ];
-    }
-};
-```
-
-
-Du kommer nu få felet att du inte får hämta data från `api.dryg.net`. Detta åtgärder vi genom att ändra i vår `Content-Security-Policy` (CSP) i `index.html`. På detta sättet tillåter vi appen att hämta data från api't. Vi lägger helt enkelt till `api.dryg.net` som tillåten adress i default-src delen av vår CSP meta-tag.
+Vi lägger in minsta möjliga skalet för att visa hemsidan på enheter av olika storlek. Vi lägger även in fem (5) stycken html-element. Det är dessa element vi vill placera ut i en grid-layout och som beroende på enhetens storlek skall lägga sig med olika antal på varje rad.
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' api.dryg.net data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+// index.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>Grid</title>
+    </head>
+    <body>
+        <div class="widget">Numero uno</div>
+        <div class="widget">Numero due</div>
+        <div class="widget">Numero tre</div>
+        <div class="widget">Numero quattro</div>
+        <div class="widget">Numero cinque</div>
+    </body>
+</html>
 ```
 
-Nedan finns ett exempel på hur namnsdagsvyn kan se ut för den 17:e mars.
+Än så länge ser det inte mycket ut för världen, så låt os gå vidare och ge vår widget klass lite styling.
 
-[FIGURE src="/image/snapvt17/namnsdag-namn.png" caption="Namnsdags vyn för den 17:e mars."]
+
+
+Grid {#grid}
+--------------------------------------
+Vi inkluderar ett stylesheet style.css i `head`-elementet av `index.html` och skapar css-filen.
+
+```html
+<head>
+    ...
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+```
+
+När vi jobbar med att designa och testa vårt grid kan det vara en bra ide att nollställa browserns ursprungs `margin` och `padding`, så den inte kommer i vägen.
+
+```css
+html, body {
+    margin:0;
+    padding:0;
+}
+```
+
+Vi kommer att designa vårt grid med tillgången mobile-first, dvs att vi utgår ifrån den minsta enheten och efter det specificerar styling för större enheter. Vi kommer dessutom använda oss av ett flytande grid så vi kommer använda % av skärmens bredd istället för fasta breddar. Vi definerar alltså grundklassen `.widget` för den minsta enheten som vårt innehåll kommer visas och sen med hjälp av [media-queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) definerar vi stylingen för större enheter. På den minsta enheten vill vi att vår `.widget` element skall fylla hela skärmen förutom en marginal på 1% på varje sida och dessutom en marginal på 10 pixlar till nästa element. Jag har dessutom lagt till en border så vi ser hur stora elementen är. Jag ger även elementen en fast höjd och en padding för att det skall bli snyggare. Jag använder [box-sizing](https://developer.mozilla.org/en/docs/Web/CSS/box-sizing) attributet med värder `border-box` för att paddingen ingår i den totala bredden av elementet.
+
+```css
+.widget {
+    border:2px solid #CCC;
+    width: 98.0%;
+    margin: 0 1.0% 10px;
+    height:150px;
+    padding:10px;
+    box-sizing: border-box;
+}
+```
+
+Våra element visas nu efter varann i en lång lista precis som vi har förväntat oss.
+
+[FIGURE src=/image/snapvt17/responsive-grid-small.png caption="Vårt grid för minsta enheten."]
+
+
+Vi fortsätter nu med gridet för större enheter. För enheter större än 500 pixlar vill vi ha element i två kolumner. Detta innebär att vi kommer ha 1% marginal till vänster om elementen, 1% + 1% marginal imellan elementen och 1% längst ut till höger. Vi har alltså 100% - 1% - 1% - 1% - 1% = 96% bredd kvar till våra kolumner och med två stycken kolumner blir varje kolumn 48% bredd. Vi har gjort en bra grund definition av vår `.widget`, men två ytterligare definitioner behövs i grund definitionen av `.widget` för att visa våra kolumner på samma rad.
+
+```css
+.widget {
+    ...
+    display: inline;
+    float: left;
+}
+```
+
+Vi skapar den första media-query för att definera våra två kolumner för enheter större än 500 pixlar.
+
+```css
+@media (min-width: 500px) {
+    .widget {
+        width: 48.0%;
+    }
+}
+```
+
+På samma sätt som ovan definerar vi media-queries för enheter större än 700 pixlar och för enheter större än 980 pixlar.
+
+```css
+@media (min-width: 700px) {
+    .widget {
+        width: 31.3333333333333%;
+    }
+}
+
+@media (min-width: 980px) {
+    .widget {
+        width: 23%;
+    }
+}
+```
+
+[FIGURE src=/image/snapvt17/responsive-grid-big.png caption="Vårt grid för största enheten."]
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Det finns många olika varianter på MVC-liknande ramverk för klientbaserad utveckling av JavaScript. På webbplatsen [TodoMVC](http://todomvc.com/) kan du se en översikt av några av dem och jämföra hur deras kod ser ut när man bygger en Todo applikation.
-
-Att använda designmönstret MVC kan ge dig en god uppdelning av din kod i olika delar som har olika syften. Det ger en god grund för en bra arkitektur i din applikation.
-
-I denna övning har vi tittat på M delen av MVC och hur vi hämtar data med hjälp av mithrils `m.requests`. I detta och kommande kursmoment kommer vi titta på ytterligare api:n och både hur vi hämtar och ändrar med hjälp av `m.requests` och api funktioner.
+Vi har nu skapat ett grid som vi kan använda för att visa upp element i en grid layout. Detta är ett mycket enkelt grid layout, men som uppfyller de krav vi hade på det med 36 rader CSS kod. Du är välkommen att bygga vidare på gridet och kanske ligga till en 5:e nivå för att visa upp på extra stora skärmar.

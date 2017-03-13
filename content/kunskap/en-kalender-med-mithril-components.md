@@ -6,8 +6,8 @@ revision:
 ...
 En kalender med mithril components
 ==================================
-
-För att våra webapplikationer ska kunna hantera dynamisk data introducerar vi i denna artikel model och request. I kmom01 tittade vi främst på V och C i MVC och nu är det dags för M. M står för modell och i modeller hanterar vi hämtning och behandling av data. I denna övning går vi igenom hur vi hämtar data med request och hur vi sparar undan datat med hjälp av vår modell.
+Vi har i kursmoment 1 och 2 tittat på modeller och vyer i mithril. Ofta vill man kunna återanvända komponenter för att förenkla
+utvecklingen av komplexa vyer. Mithril har ett inbyggd sätt att skapa och återanvända komponenter i `m`-funktionen. Dessa återanvändbara komponenter kallas helt enkelt [Components](http://mithril.js.org/components.html) och i denna övningen skall vi titta närmre på dessa.
 
 <!--more-->
 
@@ -16,214 +16,88 @@ För att våra webapplikationer ska kunna hantera dynamisk data introducerar vi 
 Introduktion {#intro}
 --------------------------------------
 
-Vi ska i denna övning titta på hur vi hämtar data med hjälp av mithril modulen request och hur vi hanterar denna data i modeller i mithril. I övningen byggar vi en liten namnsdags app med hjälp av api:t [Svenska Dagar](http://api.dryg.net/).
+Vi kommer i denna övning bygga en kalender med hjälp av mithril components och [Svenska Dagar](http://api.dryg.net/) api't.
 
 
 
-Förutsättningar {#forutsattningar}
+En vy för vår kalendar {#skapa}
 --------------------------------------
-Du har installerat labbmiljön för kursen webapp.
-
-Du har installerat cordova och gjort övningar och uppgifter i kursmoment 1.
-
-Jag börjar med att kopiera över me-appen från kursmoment, så vi har en bra grund att stå på.
-
-```bash
-# Ställ dig i rooten av kursrepot
-cd me
-mkdir kmom02/namnsdag
-cp -ri kmom01/me1/* kmom02/namnsdag/
-```
-
-
-
-Skapa en vy för namnsdagar {#skapa}
---------------------------------------
-Det första vi gör är att skapa en vy där vi visar upp en lista på de kommande 10 dagarna. Vi lägger till en route i `js/index.js` och en länk i navbaren i `js/views/layout.js` så vi lätt kommer åt vår nya vy.
+Det första vi gör är att skapa en vy där vår kalender kommer synas. I och med vi bara ska ha en vy för vår kalender använder vi funktionen `m.mount` för att läsa in vyn från `js/index.js`.
 
 ```javascript
 // js/index.js
 var m = require("mithril");
+var Calendar = require("./views/calendar");
 
-...
-var Days = require("./views/days");
-
-m.route(document.body, "/", {
-    ...
-    "/days": {
-        render: function() {
-            return m(Layout, m(Days));
-        }
+var app = {
+    initialize: function() {
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+    onDeviceReady: function() {
+        m.mount(document.body, Calendar);
     }
-});
+};
+
+app.initialize();
 ```
 
-```javascript
-// js/views/layout.js
-m("li", [m("a", {href: "/days", oncreate: m.route.link}, "Namnsdag")])
-```
-
-Vi skapar sedan vyn `js/views/days.js` där vi först initierar en array `days`, som vi fyller med dagens datum och nio dagar fram. Vi skriver ut dessa datum, som en lista av länkar. Som vanligt använder vi `oncreate : m.route.link` när vi skapar länkar för att länkarna använder sig av vår router i `js/index.js`. Datum i javascript är inte alltid helt enkla att komma överens med, därför har jag skapat två stycken hjälpfunktioner.
+Vi skapar sedan vyn `js/views/calendar.js`, här importerar vi vår model, som kommer sköta kommunikationen med `https://api.dryg.net` och hantering av svaret. Vi använder livscykel metoden `oninit` för att hämta data.
 
 
 ```javascript
-// js/views/days.js
+// js/views/calendar.js
 var m = require("mithril");
 
-function format_date (date) {
-    return date.getFullYear() + "-" + zero_pad(parseInt(date.getMonth()) + 1) + "-" + zero_pad(parseInt(date.getDate()));
-}
+var Calendar_model = require("../models/calendar");
 
-function zero_pad (number) {
-    if (number < 10) {
-        number = "0" + number;
+var Day = {
+    view: function (vnode) {
+        return m("div.day" + vnode.attrs.red_day, [
+            m("p", [m("strong", vnode.attrs.date)]),
+            m("i", vnode.attrs.weekday)
+        ]);
     }
-    return number;
 }
 
 module.exports = {
+    oninit: function () {
+        Calendar_model.load()
+    },
     view: function() {
-        var today = new Date();
-        var days = [];
-        days.push(today);
-        for (var i = 1; i < 10; i++) {
-            var temporary_date = new Date();
-            temporary_date.setDate(today.getDate() + i);
-            days.push(temporary_date);
-        }
-
         return [
-            m("h1", "Namnsdagar"),
-            m("ul.days", days.map(function (day) {
-                return m("li", [m("a", {href: "/nameday/" + format_date(day), oncreate: m.route.link}, format_date(day))]);
+            m("h1", "Calendar"),
+            m("div", Calendar_model.days.map(function (day) {
+                return m(Day, day);
             }))
         ];
     }
 }
 ```
 
-Efter att jag har skapat arrayen med datum skapar och returnerar jag de virtuella noder som bygger upp listan. Jag använder mig av den inbyggda högre ordningens funktion `map` för att iterera över alla dagar. Jag skapar länken för den specifika dagen genom att använda en ny route och skicka med datumet som parameter. Vi skapar nu den routen för att kunna visa upp dagens namn.
-
-
-[FIGURE src=/image/snapvt17/namnsdag-lista.png caption="Ett exempel på hur listan över dagar kan se ut."]
-
-
 ```javascript
-// js/index.js
+// js/models/calendar.js
 var m = require("mithril");
 
-...
-var Nameday = require("./views/nameday");
-
-m.route(document.body, "/", {
-    ...
-    "/days": {
-        render: function() {
-            return m(Layout, m(Days));
-        }
-    },
-    "/nameday/:date" : {
-        render: function (vnode) {
-            return m(Layout, m(Nameday, vnode.attrs));
-        }
-    }
-});
-```
-
-I routen definerar vi `/nameday/:date` där `:date` som andra parameter kommer fungera som ett wildcard och variabel för de datum vi skickar in. På raderna under skickar vi med hela den virtuella nod som vi har klickat på till det vy vi har tänkt ladda. Låt oss skapa vår nya vy `js/views/nameday.js` och lägga in lite kod så vi kan testa routen. Det enda vi ser nu är alltså en rubrik "Dagens namn".
-
-```javascript
-var m = require("mithril");
-
-module.exports = {
-    view: function() {
-        return m("h1", "Dagens namn ");
-    }
-}
-```
-
-
-
-Lifecycle methods {#lifecycle}
---------------------------------------
-I mithril finns det ett antal [inbyggda livscykel metoder](http://mithril.js.org/lifecycle-methods.html), som anropas vid olika tidpunkter i ett DOM elements livscykel. I denna artikel kommer vi fokusera på `oninit`, men vi har redan sett `oncreate`, som vi använder när vi kopplar ihop länkar med routern. `oninit` anropas innan vyn visas och vi kan använda funktionen för att initiera hämtning av data, sätta variabler osv. I `js/views/nameday.js` lägger vi till `oninit` metoden och låter den få tillgång till `vnode` parametern vi skickade från routern till vyn. Med `oninit` metoden ser vårt vy ut på detta sättet där vi skriver ut datumet vi skickar med från listan i föregående vy.
-
-```javascript
-var m = require("mithril");
-
-module.exports = {
-    oninit: function (vnode) {
-        console.log(vnode.attrs.date);
-    },
-    view: function() {
-        return m("h1", "Dagens namn ");
-    }
-}
-```
-
-
-
-Vår första mithril model {#forsta}
---------------------------------------
-Vi vill nu hämta data från Svenska Dagar api:t och som beskrivit ovan hämtar och behandlar vi data i modeller. Så det första vi gör är att skapa vår första mithril model `js/models/nameday.js`. I modellen skapar vi först två attribut `currentDate` och `currentNames`. Vi fyller de med placeholder data så vi har något att visa innan vi har laddat data via api:t.
-
-Funktionen `load` sätter först `currentDate` attributet till datumet, som vi kommer skicka från vyn till modellen. Efter tilldelningen av datumet anropar vi mithrils inbyggda [request funktion](http://mithril.js.org/request.html). `m.request` returnerar ett promise, där vi kan använda det resulterande datat för att sätta `currentNames` attributet.
-
-
-```javascript
-var m = require("mithril");
-
-var Nameday = {
-    currentDate : "1970-01-01",
-    currentNames : "" ,
-    load: function (date) {
-        Nameday.currentDate = date;
-
-        var dateArray = date.split("-");
-        var apiURL = "http://api.dryg.net/dagar/v2.1/" + dateArray[0] + "/" + dateArray[1] + "/" + dateArray[2];
+var Calendar = {
+    days : [],
+    load: function () {
+        var apiURL = "https://api.dryg.net/dagar/v2.1/2017/04";
 
         return m.request({
             method: "GET",
             url: apiURL
         }).then(function (result) {
-            Nameday.currentNames = result.dagar[0].namnsdag.join(" - ");
+            Calendar.days = result.dagar.map(function (dag) {
+                return { date : dag.datum, weekday : dag.veckodag, red_day : dag["röd dag"] === "Ja" ? ".red-day" : "" };
+            });
         });
     }
 }
 
-module.exports = Nameday;
+module.exports = Calendar;
 ```
 
-För att vi kan använda namnsdagsmodellen i vår vy `js/views/namnsdag.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar.
-
-```javascript
-var m = require("mithril");
-
-var Nameday = require("../models/nameday");
-
-module.exports = {
-    oninit: function (vnode) {
-        Nameday.load(vnode.attrs.date);
-    },
-    view: function() {
-        return [
-            m("h1", "Dagens namn " + Nameday.currentDate),
-            m("p", Nameday.currentNames)
-        ];
-    }
-};
-```
-
-
-Du kommer nu få felet att du inte får hämta data från `api.dryg.net`. Detta åtgärder vi genom att ändra i vår `Content-Security-Policy` (CSP) i `index.html`. På detta sättet tillåter vi appen att hämta data från api't. Vi lägger helt enkelt till `api.dryg.net` som tillåten adress i default-src delen av vår CSP meta-tag.
-
-```html
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' api.dryg.net data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-```
-
-Nedan finns ett exempel på hur namnsdagsvyn kan se ut för den 17:e mars.
-
-[FIGURE src="/image/snapvt17/namnsdag-namn.png" caption="Namnsdags vyn för den 17:e mars."]
+[FIGURE src=/image/snapvt17/calendar-android.png caption="Vår kalendar i android emulatorn."]
 
 
 

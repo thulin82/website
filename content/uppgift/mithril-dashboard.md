@@ -21,6 +21,10 @@ Du har jobbat igenom artiklarna "[Ett enkelt grid för alla våra enheter](kunsk
 
 Din me-app har en Github-sida så du har redan bekantat dig med [Githubs api](https://developer.github.com/v3/).
 
+Det kan underlätta att titta i [API-katalogen](http://apikatalogen.se/) när ni ska hitta api'er till dashboarden. 
+
+
+
 Introduktion {#intro}
 -----------------------
 
