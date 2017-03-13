@@ -299,9 +299,9 @@ Felsöka appar {#felsoka}
 --------------------------------------
 
 Det finns olika sätt att felsöka en Cordova app.
-Vi börjar med det lättaste, felsöka den i webbläsarem och felsök den som en vanlig webbsida.
+Vi börjar med det lättaste, felsöka den i webbläsaren och som en vanlig webbsida.
 När det funkar kan du gå vidare och kolla om det funkar i emulatorn. När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `console.log()`.
-För att se `console.log` kan vi starta `adb logcat` i terminalen medans vi kör appen. Jag in en `console.log()` i eventet för alert, startar emulatorn och kör sen kommandot `adb logcat`.
+För att se `console.log` kan vi starta `adb logcat` i terminalen medans vi kör appen. Jag lägger in en `console.log()` i eventet för alert, startar emulatorn och kör sen kommandot `adb logcat`.
 ```js
 button.addEventListener("touchend", function() {
     console.log("alert sent");
