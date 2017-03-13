@@ -73,8 +73,8 @@ Krav {#krav}
 
 ```bash
 # Ställ dig i kurskatalogen
-dbwebb validate me1
-dbwebb publish me1
+dbwebb validate nobel
+dbwebb publish nobel
 ```
 
 Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut så är du klar.

@@ -1,9 +1,10 @@
 ---
 author: mos
 revision:
+  "2017-03-13": (A, efo) Första utgåvan för webapp-v2.
   "2015-11-23": (A, mos) Första utgåvan för kursen.
 ...
-Kmom03: JSON och RESTful
+Kmom03: Dashboard
 ==================================
 
 [WARNING]
@@ -11,9 +12,7 @@ Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som 
 [/WARNING]
 
 
-Vi jobbar vidare med meappen och jQueryMobile. Nu handlar det om tekniken att hämta JSON data från RESTful servrar via Ajax och hur man kan hantera den informationen i en klientfokuserad webapp.
-
-Kanske når vi en gräns där vi tycker att ett ramverk likt jQm börjar inkränka på vår kod-arkitektur? Eller så är vi nöjda med hur jQm hanterar detta. Låt se.
+Vi jobbar vidare med mithril och att hämta data från api'er. Nu handlar det om att skapa mithril komponenter, som underlätter för att återanvända kod. Vi ska även titta på hur vi skapar ett grid system för att skapa en SPA-applikation som kan visas upp på enheter i fyra olika storlekar.
 
 På vägen tar vi och övar att söka och visa information i JSON-filer.
 
@@ -23,9 +22,9 @@ Så här kan det se ut när du jobbar dig igenom kursmomentet.
 
 [FIGURE src=/image/snapht15/jq-play.png?w=w2 caption="Bekanta dig med JSON filer och dess uppbyggnad."]
 
-[FIGURE src=/image/snapht15/ajax-af-lista.png?w=w2 class="left" caption="Sida som visar antalet lediga jobb samt platsannonser."]
+<!-- [FIGURE src=/image/snapht15/ajax-af-lista.png?w=w2 class="left" caption="Sida som visar antalet lediga jobb samt platsannonser."]
 
-[FIGURE src=/image/snapht15/ajax-af-undersida.png?w=w2 class="left" caption="Undersida som visar lediga jobb och antal platsannonser i Blekinge."]
+[FIGURE src=/image/snapht15/ajax-af-undersida.png?w=w2 class="left" caption="Undersida som visar lediga jobb och antal platsannonser i Blekinge."] -->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -55,15 +54,15 @@ Det finns inga artiklar.
 
 ###Video  {#video}
 
-Det finns inga videoförslag.
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_D-nAKo6PpmWZwNpo5TyWm) kopplat till kursen, titta på videos som börjar på 3.
 
 
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
-
 * Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
+
+* Bekanta dig med [mithril Components](http://mithril.js.org/components.html), som hjälper dig att skapa återanvändbar kod.
 
 
 
@@ -82,7 +81,11 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
 
-1. Läs igenom artikeln och gör övningarna i "[Mobil webapp och RESTful server](kunskap/mobil-webapp-och-restful-server)". Spara de övningar du gör i mappen `me/kmom03/ajax`.
+1. Läs igenom artikeln "[Ett enkelt grid för alla våra enheter](kunskap/ett-enkelt-grid-for-alla-vara-enheter)".
+
+1. Läs igenom artikeln "[En kalender med mithril components](kunskap/en-kalender-med-mithril-components)".
+
+<!-- 1. Läs igenom artikeln och gör övningarna i "[Mobil webapp och RESTful server](kunskap/mobil-webapp-och-restful-server)". Spara de övningar du gör i mappen `me/kmom03/ajax`. -->
 
 
 
@@ -92,7 +95,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)".
 
-1. Gör uppgiften "[Meapp med dynamiska sidor via jQueryMobile, Ajax och JSON](uppgift/meapp-med-dynamiska-sidor-via-jquerymobile-ajax-och-json)".
+1. Gör uppgiften "[Dashboard](uppgift/mithril-dashboard)".
 
 
 
@@ -112,6 +115,6 @@ Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Hur kändes det att jobba med applikationen jq för att söka i och visualisera JSON-filer? Är det något du kan se användning för?
-* Hur är din generella uppfattning om jQueryMobile (och jQuery) nu efter tre kursmoment?
-* Var det något extra du gjorde i uppgiften som du vill berätta om?
+* Hur är din generella uppfattning om mithril nu efter tre kursmoment?
+* Hur känns det att utveckla för enheter med olika stora skärmar?
 * Var det något som krånglade eller tog extra mycket tid?

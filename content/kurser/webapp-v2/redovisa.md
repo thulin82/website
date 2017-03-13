@@ -23,7 +23,17 @@ Reflektera över svårigheter, problem, lösningar, erfarenheter, lärdomar, res
 
 Skriv ett stycke om 15-30 meningar under respektive kursmoment i din me-app under länken `#report` enligt följande.
 
-| Kursmoment | Fil för redovisningstext   |
+Lägg din redovisningstext i din me-app, dvs. i katalogen `me/redovisa`. I din me-app ska det finnas en mithril vy Report där du skriver dina redovisningstexter. Du fyller på med redovisningstexter löpande för varje kursmoment.
+
+Se till att publicera dina redovisningstexter efter varje kursmoment, genom att köra följande kommandon.
+
+```bash
+dbwebb validate redovisa
+dbwebb publish redovisa
+```
+
+
+<!-- | Kursmoment | Fil för redovisningstext   |
 |------------|----------------------------|
 | kmom01     | `me/kmom01/me1/#report`    |
 | kmom02     | `me/kmom02/me2/#report`    |
@@ -33,7 +43,7 @@ Skriv ett stycke om 15-30 meningar under respektive kursmoment i din me-app unde
 | kmom06     | `me/kmom06/me6/#report`    |
 | kmom10     | `me/kmom06/me6/#report`    |
 
-Din me-app `meX/#report` skall innehålla samtliga redovisningstexter från samtliga tidigare kursmoment.
+Din me-app `meX/#report` skall innehålla samtliga redovisningstexter från samtliga tidigare kursmoment. -->
 
 
 
@@ -89,8 +99,4 @@ dbwebb inspect kmom01
 
 Byt ut kmom01 mot det kursmoment du vill inspektera.
 
-Du kan själv provköra och se samma resultat som läraren ser. Det är en bra idé att alltid testköra sin inlämning på samma sätt som rättaren gör. 
-
-
-
-
+Du kan själv provköra och se samma resultat som läraren ser. Det är en bra idé att alltid testköra sin inlämning på samma sätt som rättaren gör.

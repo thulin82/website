@@ -61,8 +61,6 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 ###Video  {#video}
 
-Titta på följande video.
-
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_D-nAKo6PpmWZwNpo5TyWm) kopplat till kursen, titta på videos som börjar på 2.
 
 <!-- 1. Se videon om jQuery Mobile "[Alex Schmitz - jQuery Mobile - What’s New in 1.5 and the Road to 2.0](https://www.youtube.com/watch?v=2qF7kW9SdJQ)". -->

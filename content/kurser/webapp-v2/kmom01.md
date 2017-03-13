@@ -65,8 +65,6 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 ###Video  {#video}
 
-Titta på följande video.
-
 1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_D-nAKo6PpmWZwNpo5TyWm) kopplat till kursen, titta på videos som börjar på 0 och 1.
 
 <!-- 1. Video som ger en översikt av jQuery Mobile, "[jQuery Mobile and jQuery UI Keynotes - jQuery Conference Portland 2013](https://www.youtube.com/watch?v=JcHJtBAnGpE)". Video är från 2013 men ger en bra översikt och bakgrund av jQuery Mobile.
