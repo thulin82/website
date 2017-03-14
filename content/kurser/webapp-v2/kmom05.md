@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+  "2017-03-14": (B, aar) Tagit bort JQuery mobile.
   "2015-12-04": (A, mos) Första utgåvan för kursen.
 ...
 Kmom05: Litet kundprojekt
@@ -11,9 +12,8 @@ Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som 
 [/WARNING]
 
 
-Du har så här långt jobbat dels med jQuery Mobile och dels prövat på ramverket Mithril. Båda varianterna är fokuserade på att skriva koden i klienten och de erbjuder två varianter till hur du kan utveckla en webapp som fokuserar på mobilt användande.
 
-Du skall nu utföra ett mindre projekt till en kund. Du får själv välja vilken teknik du jobbar med -- jQuery Mobile eller Mithril. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
+Du skall nu utföra ett mindre projekt till en kund. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
 
 <!--more-->
 
@@ -73,7 +73,7 @@ Det finns inga övningar.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften "[Me-app till din lokala pizzeria](uppgift/me-app-till-din-lokala-pizzeria)".
+1. Gör uppgiften "[Me-app till din lokala pizzeria](uppgift/me-app-till-din-lokala-pizzeria-v2)".
 
 
 
