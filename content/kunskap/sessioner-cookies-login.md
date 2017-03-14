@@ -52,11 +52,12 @@ Session::set("name", "John");
 
 ```
 
-Smaken är som baken så jag väljer att instansiera min klass.
+Smaken är som baken och jag väljer att instansiera min klass.
 
 
 
-Så, vad behöver vi kunna göra i sessionen? Vi måste såklart kunna starta den, avsluta den, sätta och hämta variabler. Vi börjar med en konstruktor:
+Så, vad behöver vi kunna göra i sessionen? Vi måste såklart kunna starta den, avsluta den, sätta och hämta variabler.  
+Vi börjar med en konstruktor:
 
 ```php
 <?php
