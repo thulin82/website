@@ -327,4 +327,4 @@ Avslutningsvis {#avslutning}
 Nu har vi skapat en mobil webbapp i Cordova och lärt oss felsöka den. 
 Tänk på att påverka DOM så lite som möjligt och använd `Touch` event  istället för `onclick`.
 
-Har du [tips, förslag eller frågor om artikeln](t/6293) så finns det en specifik forumtråd för det.
+Har du [tips, förslag eller frågor om artikeln](t/6312) så finns det en specifik forumtråd för det.

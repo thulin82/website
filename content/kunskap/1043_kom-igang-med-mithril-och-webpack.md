@@ -332,4 +332,4 @@ Att använda designmönstret MVC kan ge dig en god uppdelning av din kod i olika
 
 Mithril är en spännande lösning på klientbaserad programmering med JavaScript. Det är inte helt enkelt att komma in i det, men koden är liten och överskådlig.
 
-Har du [tips, förslag eller frågor om artikeln](t/4778) så finns det en specifik forumtråd för det.
+Har du [tips, förslag eller frågor om artikeln](t/6313) så finns det en specifik forumtråd för det.
