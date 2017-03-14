@@ -9,6 +9,8 @@ Ett enkelt grid för alla våra enheter
 
 För att våra webapplikationer ska kunna visas på enheter av olika storlekar, allt från mobiltelefoner över surfplattor till stora datorskärmar, måste vi designa våra applikationer så de är läsbara och användarvänliga på alla enheter. Vi skall i denna övning skapa ett grid för att visa upp widgets på 4 olika stora skärmar. Övningen görs enbart i HTML och CSS och kan därför enkelt återanvändas i mithril, men även i andra sammanhang där vi vill visa upp element i ett gridbaserat layout.
 
+Källkoden för denna övning finns i `example/grid` och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/grid).
+
 <!--more-->
 
 

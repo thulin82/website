@@ -16,7 +16,7 @@ utvecklingen av komplexa vyer. Mithril har ett inbyggd sätt att skapa och åter
 Introduktion {#intro}
 --------------------------------------
 
-Vi kommer i denna övning bygga en kalender med hjälp av mithril components och [Svenska Dagar](http://api.dryg.net/) api't.
+Vi kommer i denna övning bygga en kalender med hjälp av mithril components och [Svenska Dagar](http://api.dryg.net/) api't. Källkoden för detta exempel finns i `example/calendar` och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/calendar/www).
 
 
 
@@ -41,7 +41,7 @@ var app = {
 app.initialize();
 ```
 
-Vi skapar sedan vyn `js/views/calendar.js`, här importerar vi vår model, som kommer sköta kommunikationen med `https://api.dryg.net` och hantering av svaret. Vi använder livscykel metoden `oninit` för att hämta data.
+Vi skapar sedan vyn `js/views/calendar.js`, här importerar vi vår model, som kommer sköta kommunikationen med `https://api.dryg.net` och hantering av svaret. Vi använder livscykel metoden `oninit` för att hämta data från vår model. I vår `view` funktion hämtar vi sedan ut de dagar som har hämtats från api't och med hjälp av `map` itererar vi igenom alla dagarna. Från `map` anropar vi mithrils `m`-funktion, men till skillnad från vad vi har gjort tidigare anropar vi det med ett objekt `Day` istället för med en sträng, som talar om vilken virtuell nod vi vill skapa. Det objekt vi anropar är en mithril komponenet. Objektet `Day` har en enda funktion `view`, som returnerar de virtuella noder som komponenten består av. Vi skickar med varje element från `Calendar_model.days` array. Vi kommer åt attributen i elementen via `vnode.attrs`, precis som vi sett tidigare vid klick-event.
 
 
 ```javascript
@@ -57,7 +57,7 @@ var Day = {
             m("i", vnode.attrs.weekday)
         ]);
     }
-}
+};
 
 module.exports = {
     oninit: function () {
@@ -71,17 +71,27 @@ module.exports = {
             }))
         ];
     }
-}
+};
 ```
+
+Nedan finns koden för vår `Calendar` model, som hämtar och behandlar data från `api.dryg.net`. Modellen hämtar ut dagarna för nuvarande månad. Jag har vald att lägga databehandlingen i modellen för att hålla vyn så enkel och kort som möjlig.
 
 ```javascript
 // js/models/calendar.js
 var m = require("mithril");
 
+function zero_pad (number) {
+    if (number < 10) {
+        number = "0" + number;
+    }
+    return number;
+}
+
 var Calendar = {
     days : [],
     load: function () {
-        var apiURL = "https://api.dryg.net/dagar/v2.1/2017/04";
+        var today = new Date();
+        var apiURL = "https://api.dryg.net/dagar/v2.1/" + today.getFullYear() + "/" + zero_pad(parseInt(today.getMonth()) + 1);
 
         return m.request({
             method: "GET",
@@ -97,15 +107,14 @@ var Calendar = {
 module.exports = Calendar;
 ```
 
+Nedan syns den färdiga kalendern med en enkel styling. Röda dagar är markerade genom att använda `red_day` attributet från våra dags element i arrayen.
+
 [FIGURE src=/image/snapvt17/calendar-android.png caption="Vår kalendar i android emulatorn."]
 
 
 
 Avslutningsvis {#avslutning}
 --------------------------------------
+Detta var ett enkelt exempel på hur man kan återanvända komponenter i mithril för att skapa en bra uppdelat kodstruktur. Genom att dela upp iterationen av dags element och renderingen av dagarna har vi skapat ett enkelt sätt att återanvända och ändra i koden för visningen och iterationen.
 
-Det finns många olika varianter på MVC-liknande ramverk för klientbaserad utveckling av JavaScript. På webbplatsen [TodoMVC](http://todomvc.com/) kan du se en översikt av några av dem och jämföra hur deras kod ser ut när man bygger en Todo applikation.
-
-Att använda designmönstret MVC kan ge dig en god uppdelning av din kod i olika delar som har olika syften. Det ger en god grund för en bra arkitektur i din applikation.
-
-I denna övning har vi tittat på M delen av MVC och hur vi hämtar data med hjälp av mithrils `m.requests`. I detta och kommande kursmoment kommer vi titta på ytterligare api:n och både hur vi hämtar och ändrar med hjälp av `m.requests` och api funktioner.
+Hade du kunnat lägga till namnsdagar i kalendern? Eller lagt till en vy, som visar all information, vid klick på en av dagarna?

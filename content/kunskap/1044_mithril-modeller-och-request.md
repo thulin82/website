@@ -18,6 +18,8 @@ Introduktion {#intro}
 
 Vi ska i denna övning titta på hur vi hämtar data med hjälp av mithril modulen request och hur vi hanterar denna data i modeller i mithril. I övningen byggar vi en liten namnsdags app med hjälp av api:t [Svenska Dagar](https://api.dryg.net/).
 
+Källkoden för denna övning finns i `example/namnsdag` och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/namnsdag/www).
+
 
 
 Förutsättningar {#forutsattningar}
