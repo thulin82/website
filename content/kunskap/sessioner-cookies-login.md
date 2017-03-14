@@ -232,7 +232,7 @@ Nu har vi många pusselbitar på plats för att skapa ett egen variant av login-
 
 ```bash
 # Skapa filerna vi ska använda
-$ touch login.php logout.php validate.php welcome.php 
+$ touch login.php validate.php create_user.php handle_new_user.php logout.php welcome.php 
 ```
 
 Vad ska vi ha filerna till?  
@@ -240,8 +240,11 @@ Vad ska vi ha filerna till?
 | Fil           | Funktion                                  |
 |---------------|-------------------------------------------|
 | login.php     | Sidan som hanterar login-formuläret.      |
+| config.php     | Konfigurationsfil. Inkluderas i alla sidor.|
+| validate.php  | Processing-sida för inloggningsformuläret.|
+| create_user.php  | Formulär för skapande av användare     |
+| handle_new_user.php  | Processing-sida för ny användare.  |
 | logout.php    | Sidan som hanterar utloggningen.          |
-| validate.php  | Processing-sida för formuläret.           |
 | welcome.php   | Sidan man enbart kan nå om man loggar in. |
 
 
@@ -275,15 +278,29 @@ Vi behöver ett formulär som användaren kan använda för inloggning. Formulä
 </html>
 ```
 
-Vi skickar formuläret till `validate.php` för vidare hantering. Överst i `login.php` behöver vi dock lägga till lite funktionalitet i form av php-kod:  
+###config.php {#config}
+
+Nu är det ett bra läge att tänka på DRY kod. Vi kommer behöva ansluta till databsen samt starta sessionen ett flertal gånger. Vi lägger till det i `config.php`, så kan vi bara inkludera den i övriga filer. Smart. 
 
 ```php
 <?php
 // Include Session
 require_once("Session.php");
+require_once("Connect.php");
+
+$fileName = __DIR__ . "/db/oophp.sqlite";
+$db = new Connect("sqlite:$fileName");
 
 // Start the session
 $session = new Session("MYSESSION");
+```
+
+Nu har vi tillgång till `$session` och `$db` om vi vill. Vi går tillbaka till `login.php` och lägger till lite funktionalitet:  
+
+```php
+<?php
+// Include config
+require_once("config.php");
 
 $user_loggedin = "";
 
@@ -296,12 +313,11 @@ if ($session->has("name")) {
 
 ?>
 ```
-
 Vi inkluderar sessionen och startar den. Vi gör sedan en kontroll om någon redan är inloggad och stänger då möjligheten att logga in igen. Lägg till `$user_loggedin` som attribut på input-elementen samt knappen:  
 
 ```html
 ...
-<!-- $user_loggedin innehåller 'disabled' om någon är inloggad -->
+<!-- $user_loggedin holds 'disabled' if someone is logged in -->
 <td>Enter name:</td><td><input type="text" name="name" <?=$user_loggedin?>></td>
 ...
 <td>Enter pass:</td><td><input type="password" name="pass" <?=$user_loggedin?>></td>
@@ -310,25 +326,308 @@ Vi inkluderar sessionen och startar den. Vi gör sedan en kontroll om någon red
 ...
 ```
 
-###logout.php {#logout}  
-
-
+Vi skickar formuläret till `validate.php` för vidare hantering. 
 
 
 
 ###validate.php {#validate}  
 
+Formuläret skickas hit, till `validate.php` för hantering av de inkomna variablerna. Här behöver vi vår databasklass och sessionsklassen.
 
+```php
+<?php
+// Include config
+require_once("config.php");
+
+// Handle incoming POST variables
+$user_name = isset($_POST["name"]) ? htmlentities($_POST["name"]) : null;
+$user_pass = isset($_POST["pass"]) ? htmlentities($_POST["pass"]) : null;
+
+
+// Correspond according to input
+// Check if both fields are filled
+if ($user_name != null && $user_pass != null) {
+    // Check if username exists
+    if ($db->exists($user_name)) {
+        $get_hash = $db->get_hash($user_name);
+        // Verify user password
+        if (password_verify($user_pass, $get_hash)) {
+            $session->set("name", $user_name);
+            header("Location: welcome.php");
+        } else {
+            // Redirect to login.php
+            echo "User name or password is incorrect. <a href='login.php'>Try again.</a>";
+        }
+    } else {
+        // Redirect to login.php
+        echo "No such user. <a href='login.php'>Try again.</a>";
+    }
+}
+?>
+```
+
+Kika igenom koden och se hur klasserna underlättar hanteringen.  
+
+Bra. Nu kan vi logga in. Men vi måste ju ha någon användare i databasen. Vi ordnar en möjlighet att skapa en användare. 
+
+
+
+###create_user.php {#create-user}  
+
+Här passar det bra med ett formulär till. Vi skickar det till en egen processing-sida, `handle_new_user.php`. Man kan såklart trycka ihop viss kod och då minska antalet filer. Välj själv vad du tycker passar bäst. 
+
+Om vi återgår till användarskapandet kan filen se ut som följer. Ett enkelt formulär:  
+
+```html
+<!doctype html>
+<head>
+    <meta charet="utf-8">
+    <title>Create user</title>
+</head>
+<body>
+
+    <form action="handle_new_user.php" method="POST">
+        <table>
+            <legend><h3>Create user</h3></legend>
+            <tr>
+                <td>Enter name:</td><td><input type="text" name="new_name"></td>
+            </tr>
+            <tr>
+                <td>Choose pass:</td><td><input type="password" name="new_pass"></td>
+            </tr>
+            <tr>
+                <td>Re-enter pass:</td><td><input type="password" name="re_pass"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submitCreateForm" value="Create"></td>
+            </tr>
+        </table>
+    </form>
+    <p><a href='login.php'>Back to login</a></p>
+    
+</body>
+</html>
+```
+
+Vi ska skicka lösenordet så vi använder återigen metoden POST. Användaren måste även skriva in sitt lösenord två gånger. Sedan skickar vi informationen till `handle_new_user.php`.  
+
+
+
+###handle_new_user.php {#handle-user}  
+
+Precis som i `validate.php` så använder vi här databasklassen och sessionsklassen för att styra upp hanteringen. 
+
+```php
+<?php
+/// Include config
+require_once("config.php");
+
+// Handle incoming POST variables
+$user_name = isset($_POST["new_name"]) ? htmlentities($_POST["new_name"]) : null;
+$user_pass = isset($_POST["new_pass"]) ? htmlentities($_POST["new_pass"]) : null;
+$re_user_pass = isset($_POST["re_pass"]) ? htmlentities($_POST["re_pass"]) : null;
+
+// Check if username exists
+if (!$db->exists($user_name)) {
+    // Check passwords match
+    if ($user_pass != $re_user_pass) {
+        echo "Passwords do not match!";
+        header("Refresh:2; create_user.php");
+    } else {
+        // Make a hash of the password
+        $crypt_pass = password_hash($user_pass, PASSWORD_DEFAULT);
+        
+        // Add user to database
+        $db->add_user($user_name, $crypt_pass);
+        
+        echo "<p>Successfully added " . $user_name . "!</p><p><a href='login.php'>Login</a></p>";
+    }
+} else {
+    echo "User already exists! Choose another username.";
+    header("Refresh:2; create_user.php");
+}
+```
+
+Som du märker har vi en del kod återupprepas och som med fördel kan flyttas till en konfigurationsfil. Man kan även hasha namn och lösenord tillsammans, `$crypt_pass = password_hash($user_name . $user_pass, PASSWORD_DEFAULT);`. Gör som du känner fungerar bäst. Nu kan vi skapa ett par användare.  
+
+Vi kikar på hur tabellen kan se ut:
+
+[FIGURE src=/image/oophp/v3/users.png]
+
+Nu har vi några användare med krypterade lösenord. Vi har även undvikit att hantera lösenordet i klartext. Om du någon gång klickar på "Glömt lösenordet?" och det skickas till dig i klartext, ska du fundera på hur säkerheten ser ut hos dem.  
+
+Tillbaka till ämnet! Vi måste ju kunna logga ut också.  
+
+
+
+###logout.php {#logout}  
+
+Vi använder våra metoder i sessionsklassen. Vi gör några kontroller på om en användare är inloggad och om sessionen verkligen finns.
+
+```php
+<?php
+// Include config
+require_once("config.php");
+
+// Check if someone is logged in
+if ($session->has("name")) {
+    $session->destroy();
+} else {
+    echo "<p>No active user.</p>";
+    echo "<p><a href='login.php'>Login again.</a></p>";
+    die();
+}
+
+// Check if session is active
+$has_session = session_status() == PHP_SESSION_ACTIVE;
+
+if (!$has_session) {
+    echo "<p>The session no longer exists. You have successfully logged out!</p>";
+}
+
+echo "<p>Destroyed session.</p>";
+
+echo "<a href='login.php'>Login again.</a>";
+?>
+```
+
+`session_status()` kan returnera tre saker.  
+
+| Returvärde           | Betydelse                                      |
+|----------------------|------------------------------------------------|
+| PHP_SESSION_DISABLED | Sessioner är avstängda.                        |
+| PHP_SESSION_NONE     | Sessioner är tillgängliga, men det finns ingen.|
+| PHP_SESSION_ACTIVE   | Sessioner är tillgängliga och det finns en.    |
+
+Bra, nu har vi koll på det. Nu återstår bara `welcome.php`. Tanken är att man inte ska kunna nå den om man inte är inloggad. Vi tar en titt på hur det kan se ut.
 
 
 
 ###welcome.php {#welcome}  
 
+Det är egentligen en kontroll som behövs. "Finns det en användare aktiv? Om inte - gör en redirect.":  
 
+```
+if (!$session->has("name")) {
+    header("Location: login.php");
+}
+
+// Resten av sidan
+```
+
+Ett försök till en testsida kan se ut så här:  
+
+```php
+<?php
+// Include config
+require_once("config.php");
+
+if (!$session->has("name")) {
+    header("Location: login.php");
+}
+
+$last_visit = isset($_COOKIE[$session->get('name') . '_timestamp']) ? $_COOKIE[$session->get('name') . '_timestamp'] : "First visit!";
+
+echo "<h1>Welcome!</h1>";
+
+echo "<p>You are logged in as " . $session->get('name') . "</p>";
+
+echo "<p>Last visit: " . $last_visit . "</p>";
+
+echo "<p><a href='info.php'>View session</a></p>";
+
+echo "<p><a href='logout.php'>Logout</a></p>";
+
+echo "<p><a href='change_password.php'>Change password</a></p>";
+
+?>
+```
+
+Som du kan se har vi `$last_visit`. Det är en [cookie](kunskap/kom-i-gang-med-php-pa-20-steg#cookie) som jag valt att spara undan. När användaren loggar ut, sparas en cookie med namn och klockslag. Filen lagras lokalt på datorn i 30 dagar och kan då användas när man loggar in igen. Vill man lägga till sparandet av cookies, lägger man till följande i metoden destroy() i `Session.php`:  
+
+```php
+// Set cookie, exists 30 days
+setcookie($this->get("name") . "_timestamp", date("d-m-Y h:i:s"), time()+86400*30);
+```
+
+Filen `info.php` skriver ut variablerna $\_SESSION och $\_COOKIE. Inga konstigheter. 
+
+Det finns även en möjlighet att byta lösenord om man är inloggad. Det rör den sista delen av artikeln.
+
+
+
+###change_password.php {#change-password}  
+
+Vi har redan metoden klar i klassen Connect. Vi skapar filen `change_password.php` och tittar på hur det kan se ut i den:  
+
+```php
+<?php 
+// Include config
+require_once("config.php");
+
+$user = $session->get("name");
+$status = "Change password";
+
+// Handle incoming POST variables
+$old_pass = isset($_POST["old_pass"]) ? htmlentities($_POST["old_pass"]) : null;
+$new_pass = isset($_POST["new_pass"]) ? htmlentities($_POST["new_pass"]) : null;
+$re_pass = isset($_POST["re_pass"]) ? htmlentities($_POST["re_pass"]) : null;
+
+// Check if all fields are filled
+if ($old_pass != null && $new_pass != null && $re_pass != null) {
+    // Check if old password is correct
+    if (password_verify($old_pass, $db->get_hash($user))) {
+        // Check if new password matches
+        if ($new_pass == $re_pass) {
+                $crypt_pass = password_hash($new_pass, PASSWORD_DEFAULT);
+                $db->change_password($user, $crypt_pass);
+                $status = "Password changed.";
+        } else {
+            $status = "The passwords do not match.";
+        }
+    } else {
+        $status = "Old password is incorrect.";
+    }
+} else {
+    $status = "All fields must be filled.";
+}
+
+?>
+
+<!doctype html>
+<head>
+    <meta charet="utf-8">
+    <title>Change password</title>
+</head>
+<body>
+    <form action="change_password.php" method="POST">
+        <table>
+            <legend><h3><?=$status?></h3></legend>
+            <tr>
+                <td>Old pass:</td><td><input type="password" name="old_pass"></td>
+            </tr>
+            <tr>
+                <td>New pass:</td><td><input type="password" name="new_pass"></td>
+            </tr>
+            <tr>
+                <td>Re-enter pass:</td><td><input type="password" name="re_pass"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submitForm" value="Change password"></td>
+            </tr>
+        </table>
+    </form>
+    <p><a href='login.php'>Back to login</a></p>
+    
+</body>
+</html>
+```
+
+Här valde jag att ha allt i samma fil, men återigen - strukturera på ett sätt som fungerar för dig. 
 
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det här var lite om grunderna av sessioner, cookies och hantering av lösenord. Läs gärna på mer om tillfälle ges.
+Tillslut har vi ett litet fungerande inloggningssystem. Om du följer artikeln - sikta på att göra koden DRY och återanvänd koden om möjligt.
