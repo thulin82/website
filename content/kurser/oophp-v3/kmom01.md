@@ -3,7 +3,7 @@ author: mos
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom01: Intro OO-programmering i PHP
+Kmom01: Objektorientering i PHP
 ==================================
 
 [WARNING]
@@ -13,11 +13,13 @@ Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 27/3 201
 
 [/WARNING]
 
-Kom igång med klasser i PHP och lär dig samtidigt hur strukturen i ett PHP-ramverk ser ut. Du bygger en me-sida i ditt egenskapade ramverk och du bygger klasser till ditt ramverk och till applikationer.
+Kom igång med klasser i PHP och lär dig samtidigt hur strukturen i ett PHP-ramverk ser ut. Du bygger en me-sida i ditt egenskapade ramverk och du tränar på att bygga klasser utanför strukturen av ramverket.
 
 Som ett sidoprojekt kommer vi igång med MySQL som databas.
 
+<!--
 [FIGURE src=/image/snapshot/oophp-kmom01-me.png?w=w2 caption="Så här kan din kommande me-sida se ut, eller inte..."]
+-->
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
