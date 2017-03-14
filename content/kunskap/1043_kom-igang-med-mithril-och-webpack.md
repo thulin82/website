@@ -29,7 +29,7 @@ Låter det magiskt? Lika bra vi ser hur det fungerar i kod, så faller saker nog
 
 Det är bra om du är bekant med [MVC-liknande tekniker](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller). Men det är inte nödvändigt, det här kommer att gå bra ändå. Det handlar bara om att strukturera sin kod.
 
-Du kan testa samtliga exemplel i artikeln via  i kursrepot som ligger på dbwebb i katalogen [`example/mithril`](webapp/repo/example/mithril/). Källkoden för exemplet hittar i i ditt kursrepo eller på [GitHub](https://github.com/mosbth/webapp/tree/master/example/mithril).
+Du kan testa samtliga exemplel i artikeln via  i kursrepot som ligger på dbwebb i katalogen [`example/meapp-mithril`](webapp/repo/example/meapp-mithril/). Källkoden för exemplet hittar i i ditt kursrepo eller på [GitHub](https://github.com/mosbth/webapp/tree/master/example/meapp-mithril/www).
 
 [INFO]
 Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För att testa dem behöver du ett Cordova projekt du kan kopiera in www-mappen i och sen initiera mappen med npm och installera mithril och webpack med npm.
