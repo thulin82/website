@@ -43,6 +43,8 @@ Spara dina filer i mappen `me/kmom01/login`.
 
 1. Användaren ska kunna logga ut ordentligt.
 
+1. Länka till uppgiften från din me-sida. 
+
 <!-- 5. Skapa dina klasser som [moduler till Anax](kunskap/anax-en-hallbar-struktur-for-dina-webbapplikationer#modul). -->
 
 
