@@ -233,7 +233,7 @@ Nu har vi många pusselbitar på plats för att skapa ett egen variant av login-
 
 ```bash
 # Skapa filerna vi ska använda
-$ touch login.php validate.php create_user.php handle_new_user.php logout.php welcome.php 
+$ touch login.php config.php validate.php create_user.php handle_new_user.php logout.php welcome.php 
 ```
 
 Vad ska vi ha filerna till?  
