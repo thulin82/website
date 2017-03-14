@@ -16,7 +16,7 @@ Förkunskaper {#forkunskaper}
 -----------------------
 
 Du bör ha gjort, eller ha förkunskaper som motsvarar, guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).  
-Du har gått igenom artikeln som handlar om "[sessioner och inloggning](kunskap/sessioner-cookies-login)".
+Du har gått igenom artikeln "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)".
 
 
 
