@@ -5,6 +5,7 @@ category:
     - php
     - kursen oophp
 revision:
+    "2017-03-13": "(B, mos) Förbättrad routing."
     "2017-03-10": "(A, mos) Första utgåvan."
 ...
 Bygg ett eget PHP-ramverk
@@ -250,7 +251,7 @@ require ANAX_INSTALL_PATH . "/config/error_reporting.php";
 require ANAX_INSTALL_PATH . "/vendor/autoload.php";
 
 // Create and use an object of the request class.
-$request = new \Anax\Request\RequestBasic();
+$request = new \Anax\Request\Request();
 $request->init();
 var_dump($request);
 
@@ -388,7 +389,7 @@ Nästa steg får bli hur vi kan skriva kod för att hantera olika routes.
 
 
 
-En router med anax/router {#router}
+En router {#router}
 --------------------------------------
 
 En router är en vanlig komponent i ramverk. Den behövs för att vi skall kunna utföra olika svar på respektive inkommande routes.
@@ -400,8 +401,8 @@ $router->add("", function() {
     // Provide a response matching the index url
 });
 
-$router->add("report", function() {
-    // Provide a response matching report url
+$router->add("about", function() {
+    // Provide a response matching about url
 });
 
 $router->add("about/me", function() {
@@ -479,14 +480,84 @@ $router = new \Anax\Route\RouterInjectable();
 require ANAX_INSTALL_PATH . "/config/route.php";
 
 // Leave to router to match incoming request to routes
-$router->handle($request->getRoute());
+$router->handle($request->getRoute(), $request->getMethod());
 ```
 
-Det sista vi gör är att överlåta till routern att hantera och matcha inkommande route mot de routes som finns.
+Det sista vi gör är att överlåta till routern att hantera och matcha inkommande route mot de routes som finns. Routern tar även hänsyn vilken request method som använts.
 
 Nu kan du pröva olika routes mot din frontkontroller och se olika svar. Du har två routes som fungerar, "" och "about", alla andra resulterar i att den interna routen för 404 visas.
 
 Det närmar sig.
+
+
+
+###Organisera dina routes {#orgroutes}
+
+Ta mitt tips att redan nu börja organisera dina routes i filer. Dela upp dina nuvarande routes i två filer och lägg dem i `config/route/internal.php` respektive `config/route/base.php`.
+
+Skapa katalogen `config/route` om den inte finns.
+
+I längden kan det samlas en hel del kod i dessa routes och det är en god tanke att dela upp koden i filer.
+
+När du är klar så inkluderar du de routes som du vill använda via `config/route.php`.
+
+```php
+/**
+ * Routes.
+ */
+require __DIR__ . "/route/internal.php";
+require __DIR__ . "/route/base.php";
+```
+
+Det är små saker som gör att man får ordning och struktur.
+
+
+
+###Route med parameter {#routepara}
+
+Du kan skapa routes som är dynamiska och skickar med en parameter till routens callback.
+
+En sådan route kan se ut så här.
+
+```php
+$app->router->add("search/{string}", function ($string) use($app) {
+    $data = [
+        "Searchstring was" => $string
+    ];
+
+    $app->response->sendJson($data);
+});
+```
+
+Du omsluter den delen av routen som skall bli en parameter med måsvingarna `{}`. Det spelar ingen roll vilken text du skriver innanför måsvingarna, eller vilken namngivning du har av parametern i callbacken, det är godtyckligt.
+
+
+
+###route med parameter av viss typ {#routeype}
+
+När man använder parametrar kan man också testa så att parametern är av en viss typ. Kika på följande exempel på fyra routes som har olika hanterare beroende på vilken typ som matchas.
+
+```php
+/**
+ * Check arguments that matches a specific type.
+ */
+$callback = function ($value) use($app) {
+    $data = [
+        "route"     => $app->request->getRoute(),
+        "matched"   => $app->router->getLastRoute(),
+        "value"     => $value,
+    ];
+
+    $app->response->sendJson($data);
+};
+
+$app->router->add("validate/{value:digit}", $callback);
+$app->router->add("validate/{value:hex}", $callback);
+$app->router->add("validate/{value:alpha}", $callback);
+$app->router->add("validate/{value:alphanum}", $callback);
+```
+
+Med typer så kan man mer noggrant matcha de routes som stöds.
 
 
 
@@ -633,7 +704,7 @@ require ANAX_INSTALL_PATH . "/vendor/autoload.php";
 
 // Add all resources to $app
 $app = new \Mos\App\App();
-$app->request = new \Anax\Request\RequestBasic();
+$app->request = new \Anax\Request\Request();
 $app->url     = new \Anax\Url\Url();
 $app->router  = new \Anax\Route\RouterInjectable();
 
@@ -805,7 +876,7 @@ I frontkontrollern lägger jag till klassen som en del av `$app`.
 ```php
 // Add all resources to $app
 $app = new \Mos\App\App();
-$app->request  = new \Anax\Request\RequestBasic();
+$app->request  = new \Anax\Request\Request();
 $app->response = new \Anax\Response\Response();
 ```
 
