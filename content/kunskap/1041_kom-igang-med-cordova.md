@@ -23,14 +23,17 @@ Förutsättning {#pre}
 Artikeln är en del av kursen webapp och förutsätter att du har gjort motsvarande "[installera Cordova](kunskap/installera-cordova)".
 
 
-
 Introduktion {#introduktion}
 --------------------------------------
 
-Med hjälp av Cordova ska vi skapa en _hybrid app_, alltså en webbsida som exekveras i mobilen som en nativ app. Detta gör att vi kan utnyttja nativ funktionaliteter i våran app, t.ex. kamera, GPS och kontakter. Vi kommer åt de här funktionaliteterna med hjälp av ett [JavaScript API som Cordova har utvecklat](https://cordova.apache.org/docs/en/latest/#plugin-apis).
+Med hjälp av Cordova ska vi skapa en _hybrid app_, alltså en webbsida som exekveras i mobilen som en native app. Detta gör att vi kan utnyttja native funktionaliteter i våran app, t.ex. kamera, GPS och kontakter. Vi kommer åt de här funktionaliteterna med hjälp av ett [JavaScript API som Cordova har utvecklat](https://cordova.apache.org/docs/en/latest/#plugin-apis).
 
-I den här artikeln kommer vi inte testa någon nativ funktion utan vi fokuserar på att få ihop en "Hello world" app och testa den i en Android emulator.
+I den här artikeln kommer vi inte testa någon native funktion utan vi fokuserar på att få ihop en "Hello world" app och testa den i en Android emulator.
 
+Källkoden för detta exempel finns i `exemple/helloworld` och på "[Github](https://github.com/dbwebb-se/webapp/tree/master/example/helloworld/www)".
+[INFO]
+Exemplen för Cordova i kursen innehåller bara `www`-mappen. För att testa koden behöver du ha/skapa ett Cordova projekt du kan kopiera in www-mappen i. Du behöver även lägga till plattformarna Android och Browser för att testa koden.
+[/INFO]
 
 
 Hello word {#hello_world}

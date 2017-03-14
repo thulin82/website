@@ -31,6 +31,10 @@ Det är bra om du är bekant med [MVC-liknande tekniker](https://en.wikipedia.or
 
 Du kan testa samtliga exemplel i artikeln via  i kursrepot som ligger på dbwebb i katalogen [`example/mithril`](webapp/repo/example/mithril/). Källkoden för exemplet hittar i i ditt kursrepo eller på [GitHub](https://github.com/mosbth/webapp/tree/master/example/mithril).
 
+[INFO]
+Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För att testa dem behöver du ett Cordova projekt du kan kopiera in www-mappen i och sen initiera mappen med npm och installera mithril och webpack med npm.
+[/INFO]
+
 
 
 Förutsättningar {#forutsattningar}
