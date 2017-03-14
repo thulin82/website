@@ -1,8 +1,16 @@
 ---
 author: mos
-category: php
-updated: "2015-04-01 15:25:38"
-created: "2013-06-12 09:02:55"
+category:
+    - php
+    - kursen oophp
+revision:
+    "2015-04-01": "(G, mos) Länk till exempelprogram rättat i sektion 8."
+    "2015-02-01": "(F, mos) Tog bort bildlänk till Dilbert."
+    "2014-11-26": "(E, mos) Uppdaterade länkar till php.net."
+    "2014-09-13": "(D, mos) Ändrade $name till $method."
+    "2014-09-08": "(C, mos) Ändrade __construct till _destruct."
+    "2013-11-12": "(B, mos) Uppdatering inför campus-kursen ht13."
+    "2013-08-14": "(A, mos) Första utgåvan som en del av kursen oophp, endast del 1-11, del 12-20 kvarstår."
 ...
 Kom igång med objektorienterad PHP-programmering på 20 steg
 ==================================
@@ -18,14 +26,14 @@ Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva
 
 
 Förkunskaper {#forkunskaper}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Guiden förutsätter att du har kunskaper i PHP och webbutveckling. Känner du dig osäker på PHP så bör du först läsa igenom guiden ["Kom i gång med PHP på 20 steg"](kunskap/kom-i-gang-med-php-pa-20-steg).
 
 
 
 1. Objektorienterad programmering {#om}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Objektorienterad programmering är *en* programmeringsparadigm [^1] bland flera. Ett programmeringsspråk sorteras vanligen in i en programmeringsparadigm för att beskriva hur man kan koda i det. Fler och fler språk stödjer flera programmeringsparadigmer, man kan alltså välja hur man skriver sin kod. Ett vanligt sätt att lära sig programmera är "procedural programmering" [^2]. Det är på det sättet du programmerar i guiden ["Kom i gång med PHP på 20 steg"](kunskap/kom-i-gang-med-php-pa-20-steg). Men nu handlar det alltså om den objektorienterade programmeringsparadigmen [^3]. 
 
@@ -47,119 +55,161 @@ Låt oss skriva en klass.
 
 
 2. Klasser och objekt i PHP {#klasser}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+Låt oss kika på grunden i PHP och klasser.
+
+
+
+###Visa felutskrifter {#fel}
+
+Innan vi börjar så sätter vi på visning av felutskrifter, vi vill kunna se de fel som händer.
+
+Jag väljer att göra en fil `config.php` där jag lägger sådan generell konfiguration.
+
+```php
+<?php
+/**
+ * Set the error reporting.
+ */
+error_reporting(-1);              // Report all type of errors
+ini_set("display_errors", 1);     // Display all errors
+```
+
+Bra, det blir enklare om vi kan se felen. Då börjar vi.
 
 
 
 ###En klass i PHP {#en-klass}
 
-Så här ser en klass ut i PHP.
-
-**En enkel klass SimpleClass i PHP, sparad i filen `simple_class.php`.**
+Så här ser en klass enkel klass `Simple` i PHP. Ta koden och spara i filen `Simple.php`.
 
 ```php
-class SimpleClass {
-
-    // property declaration
-    public $var = 'a default value ';
+<?php
+class Simple
+{
+    /**
+     * Property declaration
+     */
+    public $var = "A default value ";
     public $val = 0;
 
-    // method declaration
-    public function DisplayVar() {
+    /**
+     * A method declaration.
+     */
+    public function displayVar() {
         $this->val++;
         echo $this->var . $this->val;
     }
 }
 ```
 
-Exemplet är taget från stycket ["The Basics"](http://php.net/manual/en/language.oop5.basic.php) i manualen (och lite modifierat). Om du redan kan ett annat objektorienterat språk så är det vara en god idé att läsa igenom manualen. Det ger dig snabbt en känsla av hur PHP fungerar.
-
-
-###Vad är `$this`? {#this}
-
-Variabeln $this är en referens till nuvarande objekt och används i klassens metoder för att referera det objekt som anropar metoden.
-
-En metod anropas med ett objekt, så här:
-
-```php
-$obj->DisplayVar();
-```
-
-När anropet befinner sig i metoden så används `$this` för att referera till `$obj` och dess medlemsvariabler.
-
-```php
-    public function DisplayVar() {
-        $this->val++;
-        echo $this->var . $this->val;
-    }
-```
-
-Så, i detta fallet så är alltså `$this` samma sak som `$obj`. Klassens metoder innehåller generell kod som fungerar för alla objekt av klassen och `$this` är alltså sättet att referera till den anropande klassen.
-
-För att komma åt medlemsvariabeln `$var` så skriver du alltså `$this->var` i din metod.
+Exemplet är taget från stycket ["The Basics"](http://php.net/manual/en/language.oop5.basic.php) i manualen (och lite modifierat). Om du redan kan ett annat objektorienterat språk så är det vara en god idé att läsa igenom manualen. Det ger dig snabbt en känsla av hur PHP fungerar med objektorienterade konstruktioner.
 
 
 
 ###Använda klassen i ett testprogram {#test-klass}
 
-Skapa en ny fil och lägg dit klassen, jag döper min fil till `simple_class.php`.
-
-Nu är det dags att skapa ett testprogram som använder klassen. Jag behöver inkludera klassfilen, skapa ett objekt av klassen och sedan kan jag använda objektets metoder (och medlemsvariabler).
+Nu är det dags att skapa ett testprogram som använder klassen. Jag behöver en testfil där jag kan inkludera klassfilen, skapa ett objekt av klassen och sedan använda objektets metoder och medlemsvariabler.
 
 Så här kan ett enkelt testprogram se ut.
 
-**Testprogram `test.php` för att använda klassen SimpleClass.**
+Skapa en ny fil `test_Simple.php` och lägg dit följande kod.
 
 ```php
 <?php
-// Start by including the class definition
-include('simple_class.php');
+// Get general settings
+require "config.php";
 
-// Create a object of the class
-$obj = new SimpleClass();
+// Get the class file for Simple
+require "Simple.php";
+
+// Create an object of the class
+$obj = new Simple();
 
 // Use the class
-echo '<p>';
-$obj->DisplayVar();
-echo '</p>';
+echo "<p>";
+$obj->displayVar();
+echo "</p>";
 
 // Change the state of the object and use it again
-$obj->var = 'Hello World (should now be 2) = ';
-echo '<p>';
-$obj->DisplayVar();
-echo '</p>';
+$obj->var = "Hello World (should now be 2) = ";
+echo "<p>";
+$obj->displayVar();
+echo "</p>";
 ```
 
 Om du kör testprogrammet så kan det se ut som följer.
 
-[FIGURE src=/image/snapshot/oophp20-simpleclass-test-php.jpg?w=w2 caption="Utskrift från testprogrammet tillsammans med en header och en footer."]
+[FIGURE src=/image/snapvt17/oophp20-1.png?w=w2 caption="Utskrift från testprogrammet."]
 
 Så, där är grunderna. Nu ser du hur du skapar en klass tillsammans med dess medlemsvariabler och metoder. Du ser hur du skapar ett objekt av klassen och hur du använder det genom att anropa metoden och genom att ändra värdet på dess medlemsvariabel.
 
-Du kan [testköra mitt testprogram](kod-exempel/oophp20/simple_class/test.php).
+
+
+###Felmeddelanden {#fel}
+
+Innan vi går vidare så dubbelkollar vi att felmeddelanden verkligen visas. Du kan simulera ett fel genom att gå in i klassmetoden `Simple::DisplayVar()` och ta bort ett semikolon.
+
+Din PHP-installation kan visa felen på olika sätt, i min installation ser det ut så här.
+
+[FIGURE src=/image/snapvt17/oophp20-2.png?w=w2 caption="Felmeddelanden visas."]
+
+Bra, då vet vi att felmeddelanden visas.
+
+
+
+###Vad är $this? {#this}
+
+Variabeln `$this` är en referens till nuvarande objekt och används i klassens metoder för att referera det objekt som anropar metoden.
+
+En metod anropas med ett objekt, så här:
+
+```php
+$obj->displayVar();
+```
+
+När anropet befinner sig i metoden så används `$this` för att referera till det objekt som anropade metoden, i detta fallet `$obj`.
+
+```php
+    public function displayVar() {
+        $this->val++;
+        echo $this->var . $this->val;
+    }
+```
+
+Så, i detta fallet så är alltså `$this` samma sak som `$obj`. Klassens metoder innehåller generell kod som fungerar för alla objekt av klassen och `$this` är alltså sättet att referera till den anropande klassen och dess specifika medlemsvariabler.
+
+För att komma åt medlemsvariabeln `$var` så skriver du `$this->var` i din metod.
 
 
 
 3. En klass för en tärning {#oophp}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
-Man måste koda själv. Jag behöver ett exempelprogram och känner för att göra en tärning. Det blir ett bra exempel på hur en klass kan byggas upp. Jag tänkte bygga upp den steg för steg så att den fungerar som ett exempel på olika objektorienterade konstruktioner i PHP.
+Man måste koda själv, annars lär man sig föga.
+
+Jag behöver ett exempelprogram och känner för att göra en tärning. Det blir ett bra exempel på hur en klass kan byggas upp. Jag tänkte bygga upp den steg för steg så att den fungerar som ett exempel på olika objektorienterade konstruktioner i PHP.
+
+
+###En tärningssida med PHP och HTML {#dicepage}
 
 För att simulera en tärning så räcker det gott med följande traditionella kod som rullar en tärning sex gånger och visar upp resultatet.
 
-**En tärningssida med PHP och HTML.**
+Jag lägger fölande kod i filen `test_dice1.php`.
 
 ```php
-<!doctype html>
-<html lang='sv'>
-<meta charset='utf-8'>
-<title>Guiden 20 steg för att komma i gång med objektorienterad PHP-programmering</title>
+<?php
+require "config.php";
+?><!doctype html>
+<meta charset="utf-8">
+<title>Tärning</title>
 <h1>En tärning</h1>
 <p>Tärningen kastas 6 gånger, här är resultatet.</p>
 
 <?php
 // To save the outcome of each dice roll
-$rolls = array();
+$rolls = [];
 
 // Roll the dice
 $times = 6;
@@ -174,61 +224,70 @@ foreach($rolls as $val) {
 }
 $html .= "</ul>";
 ?>
-<?=$html?>
+<?= $html ?>
 ```
 
-[Här kan du se tärningen i funktion](kod-exempel/oophp20/dice/dice1.php).
+Koden skapar en HTML-sida steg för steg och blandar med PHP-kod som simulerar en tärning.
 
-*Låt oss nu göra om den till en klass*, steg för steg. Vi ser i koden att vi har en array där vi lagrar alla tärningskast och en loop där vi kastar tärningen och slutligen skrivs resultatet ut. Nu är det fritt fram hur du kan organisera din kod för att göra den objektorienterad med klasser och objekt.
+Om man kör exemplet kan man få följande resultat.
 
-Jag gör så här, först en klass som jag döper till `CDice` där `C`:et står för klass. Det är min namngivning helt enkelt, [min kodstandard](kunskap/kodstandarder-for-webbprogrammeraren), du kan döpa klassen till vad du vill, välj nåt representativt. Vill du följa en alternativ kodstandard så gör du det.
+[FIGURE src=image/snapvt17/oophp20-3.png?w=w2 caption="Tärningen slås sex gånger, ladda om sidan för en ny runda."]
 
-**Grunden till CDice.**
+Så, det var grunden för en tärning.
+
+
+
+###Skapa en tärningsklass {#diceclass}
+
+Låt oss nu göra om delar av koden, till en klass, steg för steg. Vi ser i koden att vi har en array där vi lagrar alla tärningskast och en loop där vi kastar tärningen och slutligen skrivs resultatet ut. Nu är det fritt fram hur du kan organisera din kod för att göra den objektorienterad med klasser och objekt.
+
+Jag gör så här, först en klass som jag döper till `Dice` och sparar i filen `Dice.php`.
 
 ```php
 <?php
 /**
- * A CDice class to play around with a dice.
- *
+ * A Dice class to play around with a dice.
  */
-class CDice {
+class Dice
+{
 
   // Here comes properties & methods
 
 }
 ```
 
-Det är grunden till klassen. Nu kan jag stoppa in arrayen som en medlemsvariabel och koden som kastar tärningen blir en metod. 
+Detta är grunden till klassen.
 
-**Medlemsvariabler och metoder till CDice.**
+
+###Klass med properties och metoder {#diceprop}
+
+Nu kan jag stoppa in arrayen som en medlemsvariabel och koden som kastar tärningen blir en metod. 
+
+Jag uppdaterar min kod.
 
 ```php
-<?php
-/**
- * A CDice class to play around with a dice.
- *
- */
-class CDice {
-
-  /**
-   * Properties
-   *
-   */
-  public $rolls = array();
+class Dice
+{
+    /**
+     * Properties
+     */
+    public $rolls = [];
 
 
-  /**
-   * Roll the dice
-   *
-   */
-  public function Roll($times) {
-    $this->rolls = array();
+    /**
+     * Roll the dice
+     *
+     * @param integer $times number of times to roll the dice.
+     *
+     * @return void
+     */
+    public function roll($times) {
+        $this->rolls = [];
 
-    for($i = 0; $i < $times; $i++) {
-      $this->rolls[] = rand(1, 6);
+        for ($i = 0; $i < $times; $i++) {
+            $this->rolls[] = rand(1, 6);
+        }
     }
-  }
-
 }
 ```
 
@@ -236,100 +295,164 @@ När du är i en metod och vill peka ut en medlemsvariabel så använder du `$th
 
 Du kan läsa om medlemsvariabler, eller [properties](http://php.net/manual/en/language.oop5.properties.php), i manualen.
 
-Så, det får räcka, jag skriver om mitt [exempelprogram](kod-exempel/oophp20/dice/dice2.php) för att testa om det fungerar. Hela poängen är att skapa ett objekt av klassen och använda det. Så här ser delar av min uppdatering ut, du kan kika själv i [källkoden för mitt exempelprogram](kod-exempel/source.php?dir=oophp20/dice&file=dice2.php#file).
 
-**Skapa objektet och använd det.**
+
+###Exempelprogram som använder Dice {#usedice}
+
+Så, det får räcka, jag tar en kopia av mitt gamla exempelprogram och skriver om det så att det använder klassen istället. Jag sparar det som `test_Dice2.php`.
+
+Poängen är att skapa ett objekt av klassen och använda det. Så här ser min uppdatering ut.
 
 ```php
 <?php
+require "config.php";
+require "Dice.php";
+?><!doctype html>
+<meta charset="utf-8">
+<title>Tärning</title>
+<h1>En tärning</h1>
+<p>Tärningen kastas 6 gånger, här är resultatet.</p>
+
+<?php
 // Create an instance of the class
-$dice = new CDice();
+$dice = new Dice();
 
 // Roll the dice
 $times = 6;
-$dice->Roll($times);
+$dice->roll($times);
+$rolls = $dice->rolls;
+
+// Print out the results
+$html = "<ul>";
+foreach($rolls as $val) {
+  $html .= "<li>{$val}</li>";
+}
+$html .= "</ul>";
+?>
+<?= $html ?>
+```
+
+Kärnan i uppdateringen är att skapa ett objekt av klassen och använda det.
+
+```php
+// Create an instance of the class
+$dice = new Dice();
+
+// Roll the dice
+$times = 6;
+$dice->roll($times);
 $rolls = $dice->rolls;
 ```
 
-Hmmm, visst vore det trevligt om tärningen själv kunde räkna ut summan av alla slagen? Det innebär att vi bygger ut klassen med en metod som gör beräkningen. Metoden kan se ut så här.
+Utskriften av resultatet kunde jag återanvända. Det var bra.
 
-**Räkna ut summan av tärningsslagen.**
+
+
+###Summan av tärningsslagen {#dicetotal}
+
+Visst vore det trevligt om tärningen själv kunde räkna ut summan av alla slagen? Det innebär att vi bygger ut klassen med en metod som gör beräkningen. 
+
+Metoden `Dice::getTotal()` kan se ut så här.
 
 ```php
-  /**
-   * Get the total from the last roll(s).
-   *
-   */
-  public function GetTotal() {
-    return array_sum($this->rolls);
-  }
+    /**
+     * Get the total from the last roll(s).
+     *
+     * @return integer as sum of rolled dices.
+     */
+    public function getTotal() {
+        return array_sum($this->rolls);
+    }
 ```
 
-Smidigt. Visst kan jag lägga koden utanför klassen, men nu är tanken att tänka objektorienterat och kapsla in all kod som har med tärningen att göra. Jag får all kod som är relaterad till en tärning i en klass. Koden blir enkel att återanvända. Klasser är en bra struktur som underlättar återanvändning av kod.
+Smidigt med inbyggda funktioner.
+
+Visst kan jag lägga koden utanför klassen, men nu är tanken att tänka objektorienterat och kapsla in all kod som har med tärningen att göra. Jag får all kod som är relaterad till en tärning i en klass. Koden blir enkel att återanvända. Klasser är en bra struktur som underlättar återanvändning av kod.
+
+Du kan nu uppdatera ditt testprogram för att skriva ut summan av alla tärningsskasten.
+
+```php
+<p>Summan av alla tärningar är: <?= $dice->getTotal() ?></p>
+```
+
+Resultatet kan se ut så här.
+
+[FIGURE src=image/snapvt17/oophp20-4.png?w=w2 caption="Nu summeras alla tärningsslagen."]
+
+Nu kan du grunderna med klasser och objekt och hur de används. Nu är du redo för en övning.
 
 
 
-###Övning CDice {#ovning-1}
+###Övning Dice {#ovning-1}
 
 Fortsätt nu själv att bygga ut din klass. Här är ett par förslag på funktioner som gör exempelprogrammet lite mer avancerat.
 
-1. Skicka in en parameter till sidan som säger hur många slag du skall slå (?roll=6 och sedan `$_GET['roll']`).
-2. Skriv ut summan och medelvärdet (ny metod) av alla tärningsslagen.
+1. Skicka in en parameter till sidan, via querystringen `?roll=6`, som säger hur många slag du skall slå.
+1. Lägg in en metod i klassen som returnerar antalet slag som slagits.
+1. Skriv ut hur många slags som gjordes.
+1. Skriv ut summan och medelvärdet (ny metod) av alla tärningsslagen.
 
 Så här kan det se ut.
 
-[FIGURE src=/image/snapshot/oophp20-kasta-tarning.jpg?w=w1&q=70 caption="En utbyggd tärningsklass och ett testprogram."]
+[FIGURE src=image/snapvt17/oophp20-5.png?w=w2 caption="Tärningar med valfritt antal snittvärdet."]
 
-Du kan testa [mitt tärningsprogram här](kod-exempel/oophp20/dice/dice3.php?roll=6), men testa först att bygga ditt egna. Kom i håg, det är bara genom att skriva koden själv som du lär dig.
-
-
+Bra, nu kan du både skapa en klass, använda den och bygga ut den med nya metoder.
 
 
-4. Lägg klasser i egna filer {#klassfil}
------------------------------------------------------------------------------------------------
+
+4. Bygg en klass {#klassfil}
+-------------------------------------------------------------------------------
 
 Så där ja, då har vi kommit igång. Vi fortsätter och bygger till ett histogram [^4] till tärningen, ett stapeldiagram som visar hur många kast som blir etta, tvåa och så vidare.
 
-Nu när vi bygger ut och gör fler klasser så är det bra att lägga respektive klass i en egen fil. Det är god programmeringssed och hjälper oss att strukturera vår kod.
-
-Till att börja med så lägger jag koden för CDice i en egen fil `CDice.php`, sedan inkluderar jag den filen i min webbsida. Så här kan det se ut.
-
-**Lägg CDice i en egen fil och inkludera i testprogrammet.**
-
-```php
-<?php
-// Create an instance of the class
-include('CDice.php');
-$dice = new CDice();
-```
-
-Bra. Gör nu ett histogram för att visa upp tärningsslagen.
+Klassen `Histogram` och klassen `Dice` skall inte vara beroende av varandra, de känner inte till varandra, det som knyter ihop dem är användandet i test-filen.
 
 
 
-###Övning CHistogram {#ovning-2}
+###Övning Histogram {#ovning-2}
 
-Skapa en klass CHistogram som har en metod `GetHistogram()` som tar en array som argument, med alla tärningskasten, och sedan skriver ut ett histogram över arrayens värden.
+Gör följande.
 
-1. Du kan låta metoden `GetHistogram()` skriva ut eller så returnerar du en variabel som du kan skriva ut i webbsidan, välj vilket du tycker är bäst.
-2. I min lösning så mellanlagrar jag värden i en array som jag sorterar med [`ksort()`](http://php.net/manual/en/function.ksort.php) innan jag skriver ut den. Men klura du ut din egen lösning.
+1. Skapa en klass `Histogram` som kan skriva ut statistik om tärningsserien.
 
-Så här kan det se ut.
+1. Skapa metoden `setSerie()` som tar en array med värden som argument.
 
-[FIGURE src=/image/snapshot/oophp20-histogram.jpg?w=w1&q=70 caption="Ett histogram över tärningskast."]
+1. Skapa metoden `getSerie()` som returnerar en strängrepresentation av alla värden i kastserien.
 
-Du kan [testa mitt histogram](kod-exempel/oophp20/histogram/dice.php?roll=24), men försök själv först, du kan mer än du tror.
+1. Skapa en metod `getHistogram()` som returnerar en strängrepresentation av ett histogram. Sortera utskriften på tärningarna i stigande ordning.
+
+1. (EXTRA) Gör en variant av metoden `getHistogram()`, som sorterar histogrammet i stigande eller sjunkande ordning baserat på antalet tärningar. Mest tärningar börjar, eller omvänt.
+
+Så här kan det se ut, utan extrauppgiften.
+
+[FIGURE src=/image/snapvt17/oophp20-6.png?w=w2 caption="Ett histogram över tärningskast."]
+
+Det var ytterligare en klass. Bra, bra. Det flyter på.
 
 
 
 5. Autoload för klassfiler {#autoload}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
-När antalet klasser växer blir det till slut krångligt att inkludera alla klassfilerna, i rätt ordning, där de behövs. Med hjälp av PHP's [automatiska laddning av klassfiler](http://php.net/manual/en/language.oop5.autoload.php) så blir det mycket lättare, och snyggare kod. Autoload är en funktion som vi själva skriver och som anropas första gången som ett objekt skapas av en klass. Tanken är då att funktionen laddar in klassfilen, så att vi slipper hantera inkluderingen av klassfilerna. Autoload har alltså koll på var klassfilerna finns någonstans och inkluderar dem vid behov.
+När antalet klasser växer blir det till slut krångligt att inkludera alla klassfilerna, i rätt ordning, där de behövs. Med hjälp av PHP's [automatiska laddning av klassfiler](http://php.net/manual/en/language.oop5.autoload.php) så blir det mycket lättare, och dessutom snyggare kod.
 
-I PHP finns det en variant där man skapar funktionen [`__autoload()`](http://php.net/manual/en/function.autoload.php), men ett bättre sätt är att använda [`spl_autoload_register()`](http://php.net/manual/en/function.spl-autoload-register.php). Fördelen med spl_autoload_register är att man kan ha flera funktioner för autoloading, det är bra när man använder någon annans kod som kan ha en annan struktur på att lagra och namnge klassfilerna. Låt oss skapa en autoladdare för våra klassfiler, implementationen förutsätter att klassfilerna ligger i samma katalog som det anropande skriptet.
 
-**Automatisk laddning av klassfiler med `spl_autoload_register()`.**
+
+###Om autoload {#omautoload}
+
+Autoload är en funktion som vi själva skriver och som anropas första gången som ett objekt skapas av en klass. Tanken är då att funktionen laddar in klassfilen, så att vi slipper hantera inkluderingen av klassfilerna. Autoload har alltså koll på var klassfilerna finns någonstans och inkluderar dem vid behov.
+
+I PHP finns det en variant där man skapar funktionen [`__autoload()`](http://php.net/manual/en/function.autoload.php), men ett bättre sätt är att använda [`spl_autoload_register()`](http://php.net/manual/en/function.spl-autoload-register.php).
+
+Fördelen med spl_autoload_register är att man kan ha flera funktioner för autoloading, det är bra när man använder någon annans kod som kan ha en annorlunda struktur för att lagra och namnge klassfilerna.
+
+
+
+###En autoloader {#enautoloader}
+
+Låt oss skapa en autoladdare för våra klassfiler, implementationen förutsätter att klassfilerna ligger i samma katalog som det anropande skriptet.
+
+Lägg följande kod i filen `autoload.php`.
 
 ```php
 <?php
@@ -338,37 +461,50 @@ I PHP finns det en variant där man skapar funktionen [`__autoload()`](http://ph
  *
  * @param string $class the name of the class.
  */
-function myAutoloader($class) {
-  $path = "{$class}.php";
-  if(is_file($path)) {
-    include($path);
-  }
-}
-spl_autoload_register('myAutoloader');
+spl_autoload_register(function ($class) {
+    $path = "{$class}.php";
+    if (is_file($path)) {
+        include($path);
+    }
+});
 ```
 
-Jag skriver alltså min egen funktion `myAutoloader()` och registrerar den som en autoloader-funktion via anropet:
+Konstruktionen är att jag bifogar en funktion som kan hitta den klassfil som efterfrågas, och inkludera den.
 
-```php
-spl_autoload_register('myAutoloader');
-```
 
-Nu kommer min funktion att anropas första gången som ett objekt skapas av en klass, förutsatt att klassen är odefinierad. En fördel med `spl_autoload_register()` är att man kan ha flera funktioner som sköter autoladdningen. Det kan vara bra när man har lite större system, eller när man är beroende av flera olika programvarusystem i en lösning. Men för vår del räcker detta bra så länge.
 
-Men, var lägger vi funktionen? Den måste finnas på en plats, en central plats som alltid inkluderas i våra skript. Funktionen är ju något som alltid behövs. Om du har läst [artikeln om Anax](kunskap/anax-en-hallbar-struktur-for-dina-webbapplikationer) så kommer du kanske ihåg att där skapades en sådan här funktion och den lades i en fil som kallades [`bootstrap.php`](kunskap/anax-en-hallbar-struktur-for-dina-webbapplikationer#bootstrapphp). Jag väljer att göra likadant i mina exempelprogram, nu måste mina exempelprogram inkludera filen `bootstrap.php`, men det är ett nödvändigt ont. En liknande struktur måste man ha, på ett eller annat sätt, så det är bara att gilla läget.
+###Var inkludera autoloadern? {#includeauto}
+
+I dina skript kan du nu ta bort alla require av klasserna och ersätta den med din autoloader.
+
+Om du vill så kan du anropa autoloadern i din config.php.
+
+Eller så inkluderar du den i varje testskript. Båda varianterna fungerar.
 
 
 
 ###Övning autoloader {#ovning-3}
 
-Skriv om ditt exempelprogram så att det använder en autoloader för att ladda klassfilerna.
+Ta en kopia av ditt exempelprogram med histogrammet och skriv om det så att autoloadern används.
 
-Du kan [testa min variant](kod-exempel/oophp20/autoload/dice.php?roll=24) och studera källkoden, men försök själv först.
+1. För att förstå hur autoloadern anropas så kan du lägga till en utskrift i den. Gör en `echo "$class<br>";` för att skriva ut klassens namna, varje gång autoloadern anropas.
+
+Så här kan det se ut.
+
+[FIGURE src=/image/snapvt17/oophp20-7.png?w=w2 caption="Autoloadern skriver ut klassernas namn."]
+
+En autoloader är en väldigt viktig komponent i PHPs infrastruktur. Det finns en standard som heter [PSR-4](http://www.php-fig.org/psr/psr-4/) som anger hur autoloading skall fungera. Men vår hemmasnickrade autoloader gör ju också sitt jobb, i all enkelhet.
 
 
 
 6. Konstruktor och destruktor {#construct}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+<!--
+namespace
+exceptions
+chainable
+-->
 
 Konstruktorn är en metod `__construct()` som anropas när ett objekt skapas. Destruktorn är en metod `__destruct()` som anropas när ett objekt förstörs. En objekt förstörs när programmet avslutas, eller i förtid genom att något gör "delete" på variabeln som innehåller objektet med hjälp funktionen [`unset()`](http://php.net/manual/en/function.unset.php).
 
@@ -1380,22 +1516,6 @@ Men någonstans skall man börja sin objektorienterade resa och med denna artike
 -----------------------------------------------------------------------------------------------
 
 -->
-
-
-
-
-Revisionshistoria {#revision}
-------------------------------
-
-<span class='revision-history' markdown='1'>
-2015-04-01 (G, mos) Länk till exempelprogram rättat i sektion 8.  
-2015-02-01 (F, mos) Tog bort bildlänk till Dilbert.  
-2014-11-26 (E, mos) Uppdaterade länkar till php.net.  
-2014-09-13 (D, mos) Ändrade $name till $method.  
-2014-09-08 (C, mos) Ändrade __construct till _destruct.  
-2013-11-12 (B, mos) Uppdatering inför campus-kursen ht13.  
-2013-08-14 (A, mos) Första utgåvan som en del av kursen [oophp](oophp), endast del 1-11, del 12-20 kvarstår.  
-</span>
 
 
 

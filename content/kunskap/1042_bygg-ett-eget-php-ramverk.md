@@ -520,7 +520,7 @@ Du kan skapa routes som är dynamiska och skickar med en parameter till routens 
 En sådan route kan se ut så här.
 
 ```php
-$app->router->add("search/{string}", function ($string) use($app) {
+$app->router->add("search/{string}", function ($string) use ($app) {
     $data = [
         "Searchstring was" => $string
     ];
@@ -533,7 +533,7 @@ Du omsluter den delen av routen som skall bli en parameter med måsvingarna `{}`
 
 
 
-###route med parameter av viss typ {#routeype}
+###Route med parameter av viss typ {#routeype}
 
 När man använder parametrar kan man också testa så att parametern är av en viss typ. Kika på följande exempel på fyra routes som har olika hanterare beroende på vilken typ som matchas.
 
@@ -541,7 +541,7 @@ När man använder parametrar kan man också testa så att parametern är av en 
 /**
  * Check arguments that matches a specific type.
  */
-$callback = function ($value) use($app) {
+$callback = function ($value) use ($app) {
     $data = [
         "route"     => $app->request->getRoute(),
         "matched"   => $app->router->getLastRoute(),
