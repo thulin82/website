@@ -26,9 +26,9 @@ Installera SDK {#sdk}
 
 Du kan börja med att läsa översiktligt [om Android SDK och Android Studio](https://developer.android.com/sdk/index.html) som är ett mer komplett utvecklarverktyg.
 
-Du kan behöva [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html), i så fall ladda ner det. Version 7 eller senare.
+Du kan behöva [Java JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html), i så fall ladda ner det. Version 7 eller senare. Se till att den finns i din PATH. Du kan testa med `java -h` i terminalen.
 
-Scrolla ner till [Get just the command line tools](https://developer.android.com/studio/index.html) och ladda ner ett **SDK tools package**.
+För att installera Android SDK:n scrolla ner till [Get just the command line tools](https://developer.android.com/studio/index.html) och ladda ner ett **SDK tools package**. Det är inte meningen att ni ska ladda hem Android studio utan enbart Android SDK.
 
 Extrahera innehållet till valfri plats.
 
@@ -38,7 +38,7 @@ Starta och uppdatera ditt SDK {#uppdatera}
 --------------------------------------
 
 Gå till mappen du extraherade innehållet till och kör följande kommandon.  
-På windows behöver du lägga till `.bat` som filändelse på `android`.
+På windows behöver du lägga till `.bat` som filändelse på `android`. Det kan vara så att du behöver köra filen  som admin. 
 
 ```bash
 # Gå till installationskatalogen
@@ -150,9 +150,9 @@ Det kan vara bra om du behöver felsöka.
 Android i PATH {#path}
 --------------------------------------
 
-Det kan vara bra att ha SDK:n i pathen så du kan köra kommandona `android` och `emulator` i konsollen.
+I kursen webapp behöver du ha SDK:n i pathen så du kan köra kommandona `android` och `emulator` i konsollen.
 
-Du behöver lägga till system variabeln `ANDROID_HOME` som går till android-sdk mappen och `ANDROID_HOME/{tools,platform-tools}` i din $PATH. När det är gjort kan du testa i konsollen.
+Du behöver lägga till system variabeln `ANDROID_HOME` som går till android-sdk mappen och `ANDROID_HOME/{tools,platform-tools}` i din $PATH. När det är gjort kan du testa i konsollen. En artikel som visar hur man lägger till [i PATH för windows](http://www.computerhope.com/issues/ch000549.htm).
 
 ```bash
 $ android -h
