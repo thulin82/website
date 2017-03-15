@@ -62,6 +62,35 @@ Vid ifyllning av telefonnummer kan det vara fördelaktigt att använda input av 
 Ett formulär i mithril {#mithril}
 --------------------------------------
 
+När vi skapar formulär i mithril användar vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett form element och inuti våra formulärfält. Vi användar oss av en livscykel metod för formen `onsubmit` för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. För att de ändringar vi gör i formulärfältet ska sparas användar vi oss av livscykel metoden `oninput` och funktionen `m.withAttr` ([Dokumentation](http://mithril.js.org/withAttr.html)). `oninput` och `m.withAttr` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi ändrar i fältet. Livscykel metoden `onclick` används för spara knappen och vi när vi anropar modellens `save` funktion har vi redan satt värdet på den nuvarande dator och kan helt enkelt bara spara den med hjälp av `m.request` och api't som ligger i bakgrunden för appen.
+
+```javascript
+var m = require("mithril")
+var Computer = require("../models/computer")
+
+module.exports = {
+    oninit: function(vnode) { Computer.load(vnode.attrs.id) },
+    view: function() {
+        return m("form", {
+                onsubmit: function(event) {
+                    event.preventDefault();
+                } }, [
+            m("label.label", "Name"),
+            m("input.input[type=text][placeholder=Name]", {
+                oninput: m.withAttr("value", function(value) { Computer.current.name = value }),
+                value: Computer.current.name
+            }),
+            m("label.label", "Year"),
+            m("input.input[type=number][placeholder=Year]", {
+                oninput: m.withAttr("value", function(value) { Computer.current.year = value }),
+                value: Computer.current.year
+            }),
+            m("button.button", { onclick: Computer.save }, "Save")
+        ])
+    }
+}
+```
+
 
 
 Avslutningsvis {#avslutning}
