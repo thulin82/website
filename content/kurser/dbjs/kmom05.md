@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-03-15": (PA2, mos) Delvis publicerad.
 ...
 Kmom05: Procedur, trigger, funktion
 ==================================
