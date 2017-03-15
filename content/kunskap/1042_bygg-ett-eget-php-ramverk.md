@@ -5,6 +5,7 @@ category:
     - php
     - kursen oophp
 revision:
+    "2017-03-15": "(C, mos) Stycke om Makefile."
     "2017-03-13": "(B, mos) Förbättrad routing."
     "2017-03-10": "(A, mos) Första utgåvan."
 ...
@@ -76,8 +77,10 @@ $ touch .gitgnore
 Lägg följande rader i filen.
 
 ```text
-/vendor
+/.bin
+/build
 /cache
+/vendor
 ```
 
 Fyll på filen med fler filer vid behov, det du lägger i filen kommer att ignoreras av Git-repot.
@@ -1144,6 +1147,58 @@ return [
 Nu har du inkluderat ett enkelt sätt att hantera bilder. De htaccess-filer som du använder är förberedda för Cimage. Förutsatt att du använder htaccess-filerna så kan du nu använda Cimage via följande länk-struktur.
 
 > `image/car.png?w=400`
+
+
+
+Makefile {#makefile}
+--------------------------------------
+
+Du är på gång att skapa ett större projekt och du kan ha nytta av en Makefile där du kan lägga in targets för saker du gör om och om igen.
+
+
+
+###Hämta Makefilen {#cpmake}
+
+För att komma igång kan du låna en Makefile som används av de moduler du installerat.
+
+```bash
+# Gå till me/anax-lite
+$ cp vendor/anax/view/Makefile . 
+```
+
+Du kan nu köra `make` för att se vilka targets som finns.
+
+```bash
+$ make
+```
+
+
+
+###Lokal testmiljö {#lokal}
+
+Makefilen är förberedd för att installera en lokal utvecklings och testmiljö. Du kan testa att installera och köra de testprogram som finns med.
+
+```bash
+$ make install
+$ make test
+```
+
+En del av testverktygen använder sig av konfigurationsfiler. Du kan kopiera även dem från modulen.
+
+```bash
+# Gå till me/anax-lite
+$ cp vendor/anax/view/.php{cs,md}.xml . 
+```
+
+Testa att köra `make test` igen för att exekvera testverktygen phpcs och phpmd.
+
+Du kan titta på en rapport från statistikverktyget phploc som ligger under `build/phploc`. Där kan du se statistik över din kod som ligger under `src`. Men än så länge är det inte så mycket att visa statistik över. Vill du se lite mer statistik så kan du köra `.bin/phploc config` så ser du statistik öven den koden som ligger under `config`.
+
+
+
+###Make theme {#theme}
+
+Makefilen innehåller ett target `make theme` som går in i katalogen `theme`, om den finns, och där exekverar en Makefile via `make build install`. Det kan vara en möjlighet om du själv vill bygga ett LESS/SASS-tema till ditt ramverk (ungefär som vi gjorde i design-kursen).
 
 
 
