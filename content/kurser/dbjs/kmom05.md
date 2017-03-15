@@ -96,7 +96,7 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Uppgift om att skapa databaskod i Express mot MySQL som använder sig av transaktioner, procedurer, triggers och funktioner. Inklusive HTML formulär POST.
+1. Uppgift om att skapa databaskod i Express mot MySQL som använder sig av transaktioner, procedurer, triggers och funktioner. Inklusive HTML formulär POST. Kommer den 2017-03-22.
 
 
 
