@@ -33,8 +33,8 @@ Jag väljer att skapa en klass `Session` som ska hantera sessionen. I många lä
 ```php
 <?php
 
-class Session {
-    
+class Session
+{
     public static function start()
     {
         session_start();
@@ -62,7 +62,8 @@ Vi börjar med en konstruktor:
 ```php
 <?php
 
-class Session {
+class Session
+{
     private $name;
         
     public function __construct($name="MYSESSION")
@@ -85,7 +86,7 @@ class Session {
 
 ```
 
-Konstruktorn tar emot ett argument, $name, som sätts till "MYSESSION" om inget annat anges. Det är enbart namnet på sessionen. Tanken är att start() ska sparka igång maskineriet. Det är möjligt att man vill hantera fler variabler än sessionens namn i konstruktorn i framtiden.  
+Konstruktorn tar emot ett argument, `$name`, som sätts till "MYSESSION" om inget annat anges. Det är enbart namnet på sessionen. Tanken är att start() ska sparka igång maskineriet. Det är möjligt att man vill hantera fler variabler än sessionens namn i konstruktorn i framtiden.  
 
 Vi fyller på med resten av metoderna: 
 
@@ -173,7 +174,8 @@ Vi kikar på en klass som hanterar databaskopplingen. Vi kör vidare med PDO som
 ```php
 <?php 
 
-class Connect {
+class Connect
+{
     private $db;
     
     public function __construct($dsn)
@@ -187,13 +189,13 @@ class Connect {
         }
     }
     
-    public function add_user($user, $pass)
+    public function addUser($user, $pass)
     {
         $stmt = $this->db->prepare("INSERT into users (name, pass) VALUES ('$user', '$pass')");
         $stmt->execute();
     }
     
-    public function get_hash($user)
+    public function getHash($user)
     {
         $stmt = $this->db->prepare("SELECT pass FROM users WHERE name='$user'");
         $stmt->execute();
@@ -203,7 +205,7 @@ class Connect {
         return $res["pass"];
     }
     
-    public function change_password($user, $pass)
+    public function changePassword($user, $pass)
     {
         $stmt = $this->db->prepare("UPDATE users SET pass='$pass' WHERE name='$user'");
         $stmt->execute();
@@ -350,7 +352,7 @@ $user_pass = isset($_POST["pass"]) ? htmlentities($_POST["pass"]) : null;
 if ($user_name != null && $user_pass != null) {
     // Check if username exists
     if ($db->exists($user_name)) {
-        $get_hash = $db->get_hash($user_name);
+        $get_hash = $db->getHash($user_name);
         // Verify user password
         if (password_verify($user_pass, $get_hash)) {
             $session->set("name", $user_name);
@@ -439,7 +441,7 @@ if (!$db->exists($user_name)) {
         $crypt_pass = password_hash($user_pass, PASSWORD_DEFAULT);
         
         // Add user to database
-        $db->add_user($user_name, $crypt_pass);
+        $db->addUser($user_name, $crypt_pass);
         
         echo "<p>Successfully added " . $user_name . "!</p><p><a href='login.php'>Login</a></p>";
     }
@@ -577,11 +579,11 @@ $re_pass = isset($_POST["re_pass"]) ? htmlentities($_POST["re_pass"]) : null;
 // Check if all fields are filled
 if ($old_pass != null && $new_pass != null && $re_pass != null) {
     // Check if old password is correct
-    if (password_verify($old_pass, $db->get_hash($user))) {
+    if (password_verify($old_pass, $db->getHash($user))) {
         // Check if new password matches
         if ($new_pass == $re_pass) {
                 $crypt_pass = password_hash($new_pass, PASSWORD_DEFAULT);
-                $db->change_password($user, $crypt_pass);
+                $db->changePassword($user, $crypt_pass);
                 $status = "Password changed.";
         } else {
             $status = "The passwords do not match.";
