@@ -7,14 +7,20 @@ Kmom05: Procedur, trigger, funktion
 ==================================
 
 [WARNING]
-Kursmomentet är under utveckling och blir tillgängligt **senast den 13/3-2017**.
+Kursmomentet är under utveckling och blir tillgängligt <strike>**senast den 13/3-2017**</strike> **delvis den 2017-03-15** och resterande delar släpps 2017-03-22.
 [/WARNING]
 
+Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
+
+I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp en webb/RESTFul server och hur du kan skriva din applikationskod för att till exempel komma åt en databas och visa och uppdatera dess innehåll.
 
 <!--more-->
-<!--
-[FIGURE src=/image/snapht15/linux-what-now.png?w=w2 caption="Okey, terminalen, och nu då?"]
--->
+
+[FIGURE src=image/snapvt17/sqlite-transaction.png?w=w2 caption="Transaktioner för att utföra många saker i en sekvens utan avbrott och störmoment."]
+
+[FIGURE src=image/snapvt17/express-loaded-resources.png?w=w2 caption="Node.js och webb- och applikationsservern Express."]
+
+[FIGURE src=image/snapvt17/express-rest-client.png?w=w2 caption="Vi bygger en RESTFul server som svarar på olika HTTP metoder."]
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
@@ -43,6 +49,8 @@ Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkurs
 ###Artiklar {#artiklar}
 
 Det finns inga artiklar.
+
+1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kollar runt i dokumentationen och bekanta dig med begrepp och exempelkod.
 
 
 
@@ -78,12 +86,9 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 1. Jobba igenom "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas.
 
+1. Artikel om att komma igång med webb- och applikationsservern Express i Node.js. (Kommer 2017-03-22)
 
-(
-    1. Gör uppgiften lab med transaktioner.
-    1. Nodejs klient/server mot transaktioner
-)
-
+1. Artikel om att använda MySQL tillsammans med Express. (Kommer 2017-03-22)
 
 
 
@@ -91,7 +96,7 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Gör uppgiften...
+1. Uppgift om att skapa databaskod i Express mot MySQL som använder sig av transaktioner, procedurer, triggers och funktioner. Inklusive HTML formulär POST.
 
 
 
@@ -110,4 +115,8 @@ Läs [instruktionen om hur du skall redovisa](kurser/dbjs/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* ...
+* Gick det bra att komma igång med det vi kallar programmering av databas, med transaktioner, lagrade procedurer, triggers, funktioner?
+* Hur är din syn på att programmera på detta viset i databasen?
+* Gick det bra att komma igång med Express?
+* Gick det bra att använda MySQL tillsammans med Express?
+* Nu börjar saker knytas samman, HTML, CSS, JavaScript i klient och JavaScript på servern i både CLI och RESTFul server samt databas. Känns det som du har koll på teknikerna och hur de samverkar?

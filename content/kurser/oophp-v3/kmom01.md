@@ -103,20 +103,12 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 1. Jobba igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)" som ger dig grunden till ett eget litet ramverk. Delvis känner du igen ramverket från kursen design. Du sparar koden i `me/anax-lite`.
 
 
-***
-
-
-3. Jobba igenom tutorialen ["Create a dynamic menu / navigation bar with PHP"](http://dbwebb.se/kod-exempel/dynamic_php_menu/)
-
-
 
 ###Uppgifter {#uppgifter}
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Bygg en me-sida med Anax Lite](uppgift/me-sida-med-anax-lite)". Det handlar om att skapa ditt eget anax-lite och publicera på Github. Använd sedan ditt anax-lite för att göra grunden till en me-sida för kursen. Spara allt under `me/anax-lite`.
-
-1. Jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera/kommentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att alltid skriva dina egna SQL-satser.
+1. Gör uppgiften "[Gissa vilket nummer jag tänker på](uppgift/gissa-numret)". Spara din kod i `me/kmom01/guess`.
 
 1. Gör uppgiften "Skapa en dynamisk navbar". In i ramverket. Funktion/class tillsamman med vy. Kanske göra standalone först.
 
@@ -124,8 +116,11 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 skapa navbar som klasser (eller direkt i vyn? kanske två varianter?)
 -->
 
+1. Gör uppgiften "[Bygg en me-sida med Anax Lite](uppgift/me-sida-med-anax-lite)". Det handlar om att skapa ditt eget anax-lite och publicera på Github. Använd sedan ditt anax-lite för att göra grunden till en me-sida för kursen. Spara allt under `me/anax-lite`.
 
-1. Gör uppgiften "[Gissa vilket nummer jag tänker på](uppgift/gissa-numret)". Spara din kod i `me/kmom01/guess`.
+1. Jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera/kommentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att alltid skriva dina egna SQL-satser.
+
+
 
 
 

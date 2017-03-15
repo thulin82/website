@@ -495,6 +495,8 @@ Så här kan det se ut.
 
 En autoloader är en väldigt viktig komponent i PHPs infrastruktur. Det finns en standard som heter [PSR-4](http://www.php-fig.org/psr/psr-4/) som anger hur autoloading skall fungera. Men vår hemmasnickrade autoloader gör ju också sitt jobb, i all enkelhet.
 
+På FIGs hemsida finner du även standarder för hur vi skriver kod, i form av [PSR-1](http://www.php-fig.org/psr/psr-1/) och [PSR-2](http://www.php-fig.org/psr/psr-2/).
+
 
 
 6. Konstruktor och destruktor {#construct}
