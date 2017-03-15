@@ -98,7 +98,7 @@ sessioner? oophp session
 
 -->
 
-1. Inloggning steg 1, utan ramverket.
+1. Gör uppgiften "[skapa inloggning](uppgift/inloggning-steg-1)".
 
 1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon. Filerna ligger i `me/kmom02/sql1`.
 
