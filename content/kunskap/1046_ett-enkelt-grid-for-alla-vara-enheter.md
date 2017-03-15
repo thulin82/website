@@ -119,7 +119,7 @@ På samma sätt som ovan definerar vi media-queries för enheter större än 700
 
 @media (min-width: 980px) {
     .widget {
-        width: 23%;
+        width: 23.0%;
     }
 }
 ```

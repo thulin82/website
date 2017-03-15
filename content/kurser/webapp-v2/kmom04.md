@@ -45,6 +45,7 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
+    * Ch 4: HTML5 Web Forms
     * Ch 13: Targeting mobile Devices and Touch
     * Ch 14: Mobile Performance
 
@@ -85,7 +86,7 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom artikeln och gör övningarna i "[Mithril och CRUD](kunskap/mithril-och-crud)".
 
-
+1. Läs igenom artikeln och gör övningarna i "[Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular)".
 
 ###Uppgifter {#uppgifter}
 

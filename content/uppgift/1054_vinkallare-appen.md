@@ -18,7 +18,7 @@ Du skall med hjälp av [REM](http://rem-rest-api.herokuapp.com/) api't skapa din
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artiklarna "[Mithril och CRUD](kunskap/mithril-och-crud)".
+Du har jobbat igenom artiklarna "[Mithril och CRUD](kunskap/mithril-och-crud)" och [Ett mobilanpassad formulär](kunskap/ett-mobilanpassad-formular).
 
 Du har bekantat dig med [REM](http://rem-rest-api.herokuapp.com/).
 
@@ -54,6 +54,10 @@ Lägg även till `npm start` scriptet, som underlätter vid utveckling och testn
 
 För att appen kan hämta från och skicka data till `rem-rest-api.herokuapp.com` måste du lägga till urlen i Content-Security-Policy.
 
+[INFO]
+När du gör dina anrop mot REM api't måste du ha med attributet `withCredentials: true` i din `m.request` funktion. Detta för att REM api't använder cookies för att hålla koll på dig som användare. Detta gör att det bara är du som kommer åt datat du sparar via api't.
+[/INFO]
+
 
 
 Krav {#krav}
@@ -65,7 +69,11 @@ Krav {#krav}
 
 1. Varje objekt skall ha minst tre (3) attribut. Ex. Vinets namn, druva och årgång.
 
-1. Man skall kunna skapa och redigera objekt, använd samma vy för båda funktionerna.
+1. Man skall kunna skapa och redigera objekt, använd samma formulär för både skapa och redigera.
+
+1. Ditt formulär skall vara anpassat för mobilen.
+
+1. Man skall som användare få visuell feedback när man sparar sina objekt.
 
 1. Man skall kunna ta bort objekt.
 
@@ -88,7 +96,7 @@ Rätta eventuella fel som dyker upp och publicera igen. När det ser grönt ut s
 Extrauppgift {#extra}
 -----------------------
 
-Det finns inga extrauppgifter i denna uppgift.
+Lägg till så man kan ha flera av samma objekt, bara om antalet blir 0 tas objektet bort helt och hållet.
 
 
 
