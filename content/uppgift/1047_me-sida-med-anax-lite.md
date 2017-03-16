@@ -1,7 +1,7 @@
 ---
 author: mos
 category:
-    - kurs/oophp
+    - kurs oophp
     - anax-lite
 revision:
     "2017-03-08": "(A, mos) Första utgåvan."
@@ -22,6 +22,8 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)".
 
+Du har löst uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)".
+
 
 
 Introduktion {#intro}
@@ -40,7 +42,7 @@ Krav {#krav}
 
 1. Skapa en about-sida där du skriver en rad om denna kursen samt länkar till ditt repo på GitHub som innehåller din version av Anax Lite. Lägg även till en godtycklig bild som du anser kompletterar sidans innehåll.
 
-1. Skapa en report-sida som du förbereder för att innehålla alla dina redovisningstexter för kursen. 
+1. Skapa en report-sida som du förbereder för att innehålla alla dina redovisningstexter för kursen.
 
 1. Skapa en navbar så att man kan navigera mellan dina sidor.
 
@@ -48,7 +50,7 @@ Krav {#krav}
 
 1. Skapa en route som levererar ett JSON-svar med diverse detaljer om ditt system. Länka till denna route från din about-sida.
 
-1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS eller något ramverk liknande Bootstrap, välj själv. Se till att sidan är rimligt responsiv.
+1. Styla sidan så som du finner bäst. Använd LESS/SASS/CSS, återanvänd kunskaper från design-kursen eller använd något ramverk liknande Bootstrap, välj själv.
 
 
 
@@ -77,13 +79,11 @@ Lös följande extrauppgifter om du har tid och lust.
 
 1. Lägg till så att du kan använda Cimage för att hantera dina bilder.
 
-1. Lägg till i Makefilen så att du kan kompilera din LESS-kod och uppdatera htdocs/css (om du nu valde denna tekniken för stylen).
-
 1. Skapa en view som är en byline (bild och text om dig) och bifoga till någon av dina sidor.
 
 1. Skapa en view som innehåller en flash-bild som visas på alla/några av dina sidor.
 
-1. Skapa en testsida för att leka runt med olika konstruktioner. Det kan vara bra att ha. Se till att din navbar innehåller en läk till testsidan.
+1. Skapa en testsida för att leka runt med olika konstruktioner. Det kan vara bra att ha. Se till att din navbar innehåller en länk till testsidan.
 
 
 

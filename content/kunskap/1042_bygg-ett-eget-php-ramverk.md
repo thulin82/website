@@ -1180,6 +1180,7 @@ Makefilen är förberedd för att installera en lokal utvecklings och testmiljö
 
 ```bash
 $ make install
+$ make check
 $ make test
 ```
 

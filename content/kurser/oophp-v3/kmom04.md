@@ -71,12 +71,18 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 1. Gör uppgiften ["Gör en blogg med CBlog baserad på CContent"](uppgift/gor-en-blogg-med-cblog-baserad-pa-ccontent).
 
 
+<!--
+
+1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon. Filerna ligger i `me/kmom02/sql1`.
+
+1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
+
+-->
+
+
 
 ###Extra {#extra}
 
-1. Läs igenom hur du kan skapa en ["En navbar med drop-down meny i ren HTML och CSS"](coachen/en-navbar-med-drop-down-meny-i-ren-html-och-css).
-
-2. Läs tipset ["Skapa en dynamisk navbar / meny, med undermeny, via PHP"](coachen/skapa-en-dynamisk-navbar-meny-med-undermeny-via-php) och uppgradera din PHP funktion som genererar navbaren till att hantera drop-down menyer.
 
 
 

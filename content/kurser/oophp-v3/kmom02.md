@@ -32,6 +32,9 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
+Det finns inga specifika läsanvisningar i kurslitteraturen.
+
+<!--
 Läs följande:
 
 1\. [Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)
@@ -40,13 +43,17 @@ Läs följande:
 * Chapter 7: Advanced OOP Features
 * Chapter 8: Error and Exception Handling
 * Chapter 12: Date and Time (Läs så mycket så att du klarar uppgiften längre ned)
+-->
 
 
 
 ###Lästips {#lastips}
 
-När man pratar om objektorienterad programmering så behöver man också ha en viss bas i objektorienterad modellering, det underlättar. Därför kan du läsa lite om UML, "Unified Modelling Language". En bra start plats är [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
+Det finns inga lästips.
 
+<!--
+När man pratar om objektorienterad programmering så behöver man också ha en viss bas i objektorienterad modellering, det underlättar. Därför kan du läsa lite om UML, "Unified Modelling Language". En bra start plats är [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
+-->
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
@@ -59,11 +66,13 @@ När man pratar om objektorienterad programmering så behöver man också ha en 
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna. 
 
-1. Jobba igenom guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
+1. Jobba igenom den avslutande delen av guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
 
-1. Artikel om session och inloggning med databas.
+1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)".
 
-1. Artikel om enhetstestning (makefile, travis).
+1. Artikel som förbereder navbar och visar hur man integrerar en klass/tjänst in i ramverket.
+
+1. View helpers samt view regions. (make less)?
 
 
 
@@ -71,44 +80,30 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Gör följande uppgifter.
 
-1. Gör [uppgiften tärningsspelet 100](uppgift/tarningsspelet-100) som modul till ditt Anax och visa upp spelet i din me-sida.
-
 <!--
+Session till ramverket. (Gör route som dumpar innehåll i sessionen och ++)
 
-oophp20 -> dice med session?
-
-Kanske göra tärning version 1 standalone och version 2 i kmom02 som integrerar i ramverket?
+Uppgift som tvingar view med regioner?
 
 -->
 
-2. Gör uppgiften [kalender med Månadens Babe](uppgift/manadskalender-for-manadens-babe) och inkludera resultatet som anax-moduler i din me-sida.
+1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
 
+1. (Gör uppgiften "[skapa inloggning del 1](uppgift/inloggning-steg-1)". Spara dina filer under `me/kmom02/login`. Ej integrera ramverket?) <!-- SQLite/MySQL -->
 
-<!--
-1. Ramverksmoduler att bygga själv.
-* CValidate
-* CFlash
-* CCache
-* CSession
-* filecontent/pagecontent content
+1. Integrera en klass Session in i ramverket och skriv en route som testar och visar innehållet i sessionen.
 
-(Olika språk, anpassa med int/loc) 
+1. Gör [uppgiften tärningsspelet 100](uppgift/tarningsspelet-100) som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
 
-sessioner? oophp session
+1. Gör uppgiften [kalender med Månadens Babe](uppgift/manadskalender-for-manadens-babe) och inkludera resultatet i ditt Anax. Spara din kod under `me/anax-lite`.
 
--->
-
-1. Gör uppgiften "[skapa inloggning](uppgift/inloggning-steg-1)".
-
-1. Gör laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)" som låter dig träna på grunderna i SQL kommandon. Filerna ligger i `me/kmom02/sql1`.
+1. Fortsätt att jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra ytterligare en tredjedel av uppgiften. Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`. Den sista tredjedelen gör du i nästa kursmoment.
 
 
 
 ###Extra {#extra}
 
 Det finns ingen extrauppgift.
-
-<!-- kanske drop-down-menyn -->
 
 
 
@@ -117,11 +112,11 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur väl känner du till objektorienterade koncept och programmeringssätt?
-* Jobbade du igenom oophp20-guiden eller skumläste du den?
+* Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
 * Berätta om hur du löste uppgiften med tärningsspelet 100, hur tänkte du och hur gjorde du, hur organiserade du din kod?
 * Berätta om hur du löste uppgiften med Månadens Babe, hur tänkte du och hur gjorde du, hur organiserade du din kod?
+* Några tankar kring SQL så här långt?

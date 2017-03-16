@@ -13,13 +13,13 @@ Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 27/3 201
 
 [/WARNING]
 
-Kom igång med klasser i PHP och lär dig samtidigt hur strukturen i ett PHP-ramverk ser ut. Du bygger en me-sida i ditt egenskapade ramverk och du tränar på att bygga klasser utanför strukturen av ramverket.
+Kom igång med klasser i PHP och lär dig samtidigt hur grundstrukturen i ett PHP-ramverk kan se ut. Du bygger en me-sida i ditt egenskapade ramverk och du tränar på att bygga klasser och kod både i och utanför strukturen av ramverket.
 
-Som ett sidoprojekt kommer vi igång med MySQL som databas.
+Som ett sidoprojekt kommer vi igång med MySQL/MariaDB som databas och lär känna dess klienter och grunderna i SQL.
 
-<!--
-[FIGURE src=/image/snapshot/oophp-kmom01-me.png?w=w2 caption="Så här kan din kommande me-sida se ut, eller inte..."]
--->
+[FIGURE src=image/snapvt17/guess-my-number-session-object.png?w=w2 caption="Gissa numret i PHP hjälper dig komma igång och repetera det du redan kan."]
+
+[FIGURE src=image/snapshot/sql-ovning-alter-table.jpg?w=w2 caption="Kom igång med databasen MySQL, här via klienten MySQL Workbench."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -63,9 +63,13 @@ Läs översiktligt in dig på följande verktyg som används i kursen.
 
 ###Videor {#videor}
 
+Det finns inga videos.
+
+<!--
 Kika på följande videos.
 
 1. Det finns en [YouTube spellista kopplad till kursen](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_jh6fAj1iwiJSj70DXA2Vn), kika på de videos som börjar med 0 och 1.
+-->
 
 
 
@@ -108,19 +112,13 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften "[Gissa vilket nummer jag tänker på](uppgift/gissa-numret)". Spara din kod i `me/kmom01/guess`.
+1. Gör uppgiften "[Gissa vilket nummer jag tänker på](uppgift/gissa-numret)". Spara din kod i `me/kmom01/guess`. Uppgiften värmer upp din gamla PHP-kunskaper och inför några nya i form av objekt och lite mer.
 
-1. Gör uppgiften "Skapa en dynamisk navbar". In i ramverket. Funktion/class tillsamman med vy. Kanske göra standalone först.
-
-<!--
-skapa navbar som klasser (eller direkt i vyn? kanske två varianter?)
--->
+1. Gör uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)" som ger dig en struktur för att separera HTML och konfiguration av din navbar. Spara din kod i `me/anax-lite`.
 
 1. Gör uppgiften "[Bygg en me-sida med Anax Lite](uppgift/me-sida-med-anax-lite)". Det handlar om att skapa ditt eget anax-lite och publicera på Github. Använd sedan ditt anax-lite för att göra grunden till en me-sida för kursen. Spara allt under `me/anax-lite`.
 
-1. Jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan/skolan.sql` och utför minst 2/3 av uppgifterna. Dokumentera/kommentera vilka uppgifter du hoppar över. Jobba gärna i grupp och hjälp varandra, men se alltid till att alltid skriva dina egna SQL-satser.
-
-
+1. Jobba igenom första tredjedelen av uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra den i MySQL Workbench. Spara all SQL-kod i `me/kmom01/skolan/skolan.sql`. Du får göra resten av uppgiften i de två kommande kursmomenten. Jobba gärna i grupp och hjälp varandra, men se alltid till att alltid skriva dina egna SQL-satser.
 
 
 
@@ -135,10 +133,10 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](kurser/oophp-v2/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta lite om dina reflektioner kring anax-lite och din me-sida.
-* Hur känns det att hoppa rakt in i klasser med PHP, gick det bra eller kändes det tufft?
-* Gick det bra att komma igång med MySQL, kanske har du jobbat med det tidigare eller var det kämpigt?
+* Hur känns det att hoppa rakt in i klasser med PHP, hur gick det?
+* Berätta om dina reflektioner kring ramverk, anax-lite och din me-sida.
+* Gick det bra att komma igång med MySQL, kanske har du jobbat med det/liknande tidigare eller var det något som strulade?

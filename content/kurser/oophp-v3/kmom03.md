@@ -54,6 +54,19 @@ Gör följande övningar, de förbereder dig inför kommande kursmoment.
 
 1. Jobba igenom guiden ["Kom igång med PHP PDO och MySQL"](kunskap/kom-igang-med-php-pdo-och-mysql).
 
+1. Artikel om enhetstestning (makefile, travis).
+
+
+<!-- 
+
+Unittest (Guess, Dice, Cal) Xdebug install
+
+Use composer require anax/database
+
+(Content som markdown med anax/textfilter)
+
+-->
+
 
 
 ###Uppgifter {#uppgifter}
@@ -70,7 +83,17 @@ Gör följande uppgifter.
 
 1. Inloggning steg 2, inuti ramverket.
 
-1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
+1. Gör sista tredjedelen och avsluta uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)". Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`.
+
+<!--
+1. Ramverksmoduler att bygga själv.
+* CValidate
+* CFlash
+* CCache
+
+(Olika språk, anpassa med int/loc) 
+-->
+
 
 
 
