@@ -69,7 +69,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
+* Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
 
 
 
@@ -85,6 +85,10 @@ Det finns inga extra lästips.
 
 Gör följande övningar för att träna inför uppgifterna.
 
+1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)".
+
+1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
+
 1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
 
 <!-- 1. Installera utvecklingsverktygen för [Installera en emulator för Android](kunskap/installera-en-emulator-for-android). -->
@@ -95,6 +99,8 @@ Gör följande övningar för att träna inför uppgifterna.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
+
+1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)".
 
 1. Gör uppgiften "[Bygg vidare på din me-app](uppgift/github-sida-i-din-me-app)".
 

@@ -21,7 +21,7 @@ Du har jobbat igenom artiklarna "[Ett enkelt grid för alla våra enheter](kunsk
 
 Din me-app har en Github-sida så du har redan bekantat dig med [Githubs api](https://developer.github.com/v3/).
 
-Det kan underlätta att titta i [API-katalogen](http://apikatalogen.se/) när ni ska hitta api'er till dashboarden. 
+Det kan underlätta att titta i [API-katalogen](http://apikatalogen.se/) när ni ska hitta api'er till dashboarden.
 
 
 
@@ -65,6 +65,8 @@ Krav {#krav}
 1. Dina widgets skall hämta data från Github api't, plus ett valfritt api.
 
 1. Ditt dashboard skall vara använda sig av ett gridbaserad layout, som visar upp olika många widgets per rad beroende på enhetens storlek.
+
+1. Dit grid layout skall stödja enheter med skärmar större än 1200px.
 
 1. Skapa ett utseende, som gör det lätt för användaren att snabbt få en överblick över sina widgets.
 

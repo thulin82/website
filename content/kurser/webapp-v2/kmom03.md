@@ -60,8 +60,6 @@ Det finns inga artiklar.
 
 ###Lästips {#lastips}
 
-* Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
-
 * Bekanta dig med [mithril Components](http://mithril.js.org/components.html), som hjälper dig att skapa återanvändbar kod.
 
 
@@ -77,10 +75,6 @@ Det finns inga artiklar.
 
 Gör följande övningar för att träna inför uppgifterna.
 
-1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)".
-
-1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
-
 1. Läs igenom artikeln "[Ett enkelt grid för alla våra enheter](kunskap/ett-enkelt-grid-for-alla-vara-enheter)".
 
 1. Läs igenom artikeln "[En kalender med mithril components](kunskap/en-kalender-med-mithril-components)".
@@ -92,8 +86,6 @@ Gör följande övningar för att träna inför uppgifterna.
 ###Uppgifter {#uppgifter}
 
 Dessa uppgifter skall utföras och redovisas.
-
-1. Gör uppgiften "[Sökverktyg för JSON filer](uppgift/sokverktyg-for-json-filer)".
 
 1. Gör uppgiften "[Dashboard](uppgift/mithril-dashboard)".
 

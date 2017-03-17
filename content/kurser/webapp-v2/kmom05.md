@@ -46,7 +46,7 @@ Det finns inga artiklar.
 
 ###Video  {#video}
 
-Det finns inga videoförslag.
+1. Det finns en [videoserie](https://www.youtube.com/playlist?list=PLKtP9l5q3ce_D-nAKo6PpmWZwNpo5TyWm) kopplat till kursen, titta på videos som börjar på 5.
 
 
 
