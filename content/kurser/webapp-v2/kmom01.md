@@ -21,6 +21,12 @@ Vi använder javascript ramverket [mithril](http://mithril.js.org/) för att byg
 
 <!--more-->
 
+[FIGURE src=/image/snapht15/Strip-dileme-appli-mobile-650-Finalenglish3.jpg caption="Så här kan man ibland känna när man väljer mellan native app och hybrid app." href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/"]
+
+Bilden ovan ger en vy av hur man kan känna när man väljer mellan native app och hybrid webapp. Men om man tänker igenom sitt projekt och målgrupp så kommer nog det ena eller andra alternativet framstå som bästa vägen att gå. För vår del gäller hybrid webapp, vi har redan investerat tid och kraft i HTML, CSS och JavaScript och vår webapp är inte speciellt avancerad eller krävande och dessutom är det väldigt lockande att stödja flera plattformar med en kodbas.
+
+
+
 Det kan se ut så här när vi är klara.
 
 [YOUTUBE src=x-QTNE1NL4U width=630 caption="Min me-app med fokus på mobilen med hjälp av mithril."]
