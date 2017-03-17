@@ -93,9 +93,9 @@ Uppgift som tvingar view med regioner?
 
 
 
-1. Integrera en klass Session in i ramverket och skriv en route som testar och visar innehållet i sessionen.
+1. Gör uppgiften [Integrera klassen Session](uppgift/testa-sessionen) in i ramverket och skriv en route som testar och visar innehållet i sessionen.
 
-1. Gör [uppgiften tärningsspelet 100](uppgift/tarningsspel) som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
+1. Gör uppgiften [tärningsspelet 100](uppgift/tarningsspel) som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
 
 1. Gör uppgiften [Månadskalender](uppgift/manadskalender) och inkludera resultatet i ditt Anax. Spara din kod under `me/anax-lite`.
 
