@@ -68,7 +68,9 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom den avslutande delen av guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
 
-1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)".
+<!-- 1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". -->
+
+1. Artikel om "[klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser)".
 
 1. Artikel som förbereder navbar och visar hur man integrerar en klass/tjänst in i ramverket.
 

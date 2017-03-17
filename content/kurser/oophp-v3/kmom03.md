@@ -56,6 +56,8 @@ Gör följande övningar, de förbereder dig inför kommande kursmoment.
 
 1. Artikel om enhetstestning (makefile, travis).
 
+1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)".
+
 
 <!-- 
 

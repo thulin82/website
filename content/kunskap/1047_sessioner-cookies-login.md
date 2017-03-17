@@ -21,154 +21,17 @@ Förutsättning {#pre}
 
 Du kan grunderna i php och du vet vad variabler, typer och funktioner innebär.  
 Du har kännedom om SQL och databashantering.  
-Du har gått igenom sessioner och cookies i artikeln "[Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg#sessioner)"
+Du har gått igenom sessioner och cookies i artikeln "[Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg#sessioner)".  
+Du har gjort övningen [klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser).
 
 
 
 En klass för sessionen {#klass-session}
 ------------------------------
 
-Jag väljer att skapa en klass `Session` som ska hantera sessionen. I många lägen klarar man sig med att använda $\_SESSION men det blir trevligt med en klass som hanterar funktionaliteten. En variant är att använda `static`-metoder i klassen. Då behöver den inte instansieras, utan kan användas rakt av:
+Vi återanvänder sessions-klassen vi skapade tidigare, i övningen [klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser).
 
-```php
-<?php
-
-class Session
-{
-    public static function start()
-    {
-        session_start();
-    }
-    
-    public static function set($name, $val)
-    {
-        $_SESSION[$name] = $val; 
-    }
-}
-
-// Use the class
-Session::start();
-Session::set("name", "John");
-
-```
-
-Smaken är som baken och jag väljer att instansiera min klass.
-
-
-
-Så, vad behöver vi kunna göra i sessionen? Vi måste såklart kunna starta den, avsluta den, sätta och hämta variabler.  
-Vi börjar med en konstruktor:
-
-```php
-<?php
-
-class Session
-{
-    private $name;
-    
-    /**
-     * Constructor
-     * @param string $name (optional) The name of the session
-     * @return void
-     */
-    public function __construct($name="MYSESSION")
-    {
-        $this->name = $name;
-        
-        $this->start();
-    }
-    
-    /**
-     * Starts the session if not exists
-     * @return void
-     */
-    public function start()
-    {
-        session_name($this->name);
-        
-        if (!empty(session_id())) {
-            session_destroy();
-        }    
-        session_start();
-    }
-}
-
-```
-
-Konstruktorn tar emot ett argument, `$name`, som sätts till "MYSESSION" om inget annat anges. Det är enbart namnet på sessionen. Tanken är att start() ska sparka igång maskineriet. Det är möjligt att man vill hantera fler variabler än sessionens namn i konstruktorn i framtiden.  
-
-Vi fyller på med resten av metoderna: 
-
-```php
-...
-    
-    /**
-     * Check if key exists in session
-     * @param $key string The key to check for in session
-     * @return bool true if $key exists, otherwise false
-     */
-    public function has($key)
-    {
-        return array_key_exists($key, $_SESSION);
-    }
-    
-    /**
-     * Sets a variable in session
-     * @param $key string The key in session
-     * @param $val string The value to set to $key
-     * @return void
-     */
-    public function set($key, $val)
-    {
-        $_SESSION[$key] = $val;
-    }
-
-    /**
-     * Retrieve value if exists in session
-     * @param $key string The key to get from session
-     * @param $default optional The return value if not found
-     * @return string The session variable if present, else $default
-     */
-    public function get($key, $default=false)
-    {
-        return (self::has($key)) ? $_SESSION[$key] : $default;
-    }
-    
-    /**
-     * Destroys the session and sets cookie
-     * @return void
-     */
-    public function destroy() 
-    {    
-        session_destroy();
-    }
-    
-    /**
-     * Dumps the session
-     * Good for debugging
-     * @return void
-     */
-    public function dump() 
-    {
-        var_dump($_SESSION);
-    }
-    
-    /**
-     * Deletes variable from session if exists
-     * @param $key string The key variable to unset from session
-     * @return void
-     */
-    public function delete($key)
-    {
-        if (self::has($key)) {
-            $_SESSION[$key] = array();
-            unset($_SESSION[$key]);
-        }
-    }
-
-```
-
-Stiligt. Vad behöver vi mer? Jo, en databas...
+Snabbt och lätt. Vad behöver vi mer? Jo, en databas...
 
 
 
@@ -609,13 +472,9 @@ if (!$session->has("name")) {
     header("Location: login.php");
 }
 
-$last_visit = isset($_COOKIE[$session->get('name') . '_timestamp']) ? $_COOKIE[$session->get('name') . '_timestamp'] : "First visit!";
-
 echo "<h1>Welcome!</h1>";
 
 echo "<p>You are logged in as " . $session->get('name') . "</p>";
-
-echo "<p>Last visit: " . $last_visit . "</p>";
 
 echo "<p><a href='info.php'>View session</a></p>";
 
@@ -626,14 +485,7 @@ echo "<p><a href='change_password.php'>Change password</a></p>";
 ?>
 ```
 
-Som du kan se har vi `$last_visit`. Det är en [cookie](kunskap/kom-i-gang-med-php-pa-20-steg#cookie) som jag valt att spara undan. När användaren loggar ut, sparas en cookie med namn och klockslag. Filen lagras lokalt på datorn i 30 dagar och kan då användas när man loggar in igen. Vill man lägga till sparandet av cookies, lägger man till följande i metoden destroy() i `Session.php`:  
-
-```php
-// Set cookie, exists 30 days
-setcookie($this->get("name") . "_timestamp", date("d-m-Y h:i:s"), time()+86400*30);
-```
-
-Filen `info.php` skriver ut variablerna $\_SESSION och $\_COOKIE. Inga konstigheter. 
+Filen `info.php` skriver ut variabeln $\_SESSION. Inga konstigheter. 
 
 Det finns även en möjlighet att byta lösenord om man är inloggad. Det rör den sista delen av artikeln.
 
