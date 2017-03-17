@@ -26,6 +26,8 @@ Det första vi gör är att skapa en vy där vår kalender kommer synas. I och m
 
 ```javascript
 // js/index.js
+"use strict";
+
 var m = require("mithril");
 var Calendar = require("./views/calendar");
 
@@ -46,9 +48,10 @@ Vi skapar sedan vyn `js/views/calendar.js`, här importerar vi vår model, som k
 
 ```javascript
 // js/views/calendar.js
+"use strict";
 var m = require("mithril");
 
-var Calendar_model = require("../models/calendar");
+var CalendarModel = require("../models/calendar");
 
 var Day = {
     view: function (vnode) {
@@ -61,12 +64,12 @@ var Day = {
 
 module.exports = {
     oninit: function () {
-        Calendar_model.load()
+        CalendarModel.load();
     },
     view: function() {
         return [
             m("h1", "Calendar"),
-            m("div", Calendar_model.days.map(function (day) {
+            m("div", CalendarModel.days.map(function (day) {
                 return m(Day, day);
             }))
         ];
@@ -78,6 +81,7 @@ Nedan finns koden för vår `Calendar` model, som hämtar och behandlar data fr�
 
 ```javascript
 // js/models/calendar.js
+"use strict";
 var m = require("mithril");
 
 function zero_pad (number) {
@@ -102,7 +106,7 @@ var Calendar = {
             });
         });
     }
-}
+};
 
 module.exports = Calendar;
 ```

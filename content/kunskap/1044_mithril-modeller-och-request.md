@@ -45,6 +45,7 @@ Det första vi gör är att skapa en vy där vi visar upp en lista på de komman
 
 ```javascript
 // js/index.js
+"use strict";
 var m = require("mithril");
 
 ...
@@ -70,17 +71,18 @@ Vi skapar sedan vyn `js/views/days.js` där vi först initierar en array `days`,
 
 ```javascript
 // js/views/days.js
+"use strict";
 var m = require("mithril");
-
-function format_date (date) {
-    return date.getFullYear() + "-" + zero_pad(parseInt(date.getMonth()) + 1) + "-" + zero_pad(parseInt(date.getDate()));
-}
 
 function zero_pad (number) {
     if (number < 10) {
         number = "0" + number;
     }
     return number;
+}
+
+function format_date (date) {
+    return date.getFullYear() + "-" + zero_pad(parseInt(date.getMonth()) + 1) + "-" + zero_pad(parseInt(date.getDate()));
 }
 
 module.exports = {
@@ -101,7 +103,7 @@ module.exports = {
             }))
         ];
     }
-}
+};
 ```
 
 Efter att jag har skapat arrayen med datum skapar och returnerar jag de virtuella noder som bygger upp listan. Jag använder mig av den inbyggda högre ordningens funktion `map` för att iterera över alla dagar. Jag skapar länken för den specifika dagen genom att använda en ny route och skicka med datumet som parameter. Vi skapar nu den routen för att kunna visa upp dagens namn.
@@ -132,25 +134,31 @@ m.route(document.body, "/", {
 });
 ```
 
-I routen definerar vi `/nameday/:date` där `:date` som andra parameter kommer fungera som ett wildcard och variabel för de datum vi skickar in. På raderna under skickar vi med hela den virtuella nod som vi har klickat på till det vy vi har tänkt ladda. Låt oss skapa vår nya vy `js/views/nameday.js` och lägga in lite kod så vi kan testa routen. Det enda vi ser nu är alltså en rubrik "Dagens namn".
+I routen definerar vi `/nameday/:date` där `:date` som andra parameter kommer fungera som ett wildcard och variabel för de datum vi skickar in. Då vi använder oss av parametern `:date` i vår route skickas parameterns värde med till vyn för routen. Parametern skickas med som attribut till vyns virtuella noder och vi kommer åt den i vyn genom att använda `vnode.attrs.date`.
+
+Låt oss skapa vår nya vy `js/views/nameday.js` och lägga in lite kod så vi kan testa routen. Det enda vi ser nu är alltså en rubrik "Dagens namn".
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 module.exports = {
     view: function() {
         return m("h1", "Dagens namn ");
     }
-}
+};
 ```
 
 
 
 Lifecycle methods {#lifecycle}
 --------------------------------------
-I mithril finns det ett antal [inbyggda livscykel metoder](http://mithril.js.org/lifecycle-methods.html), som anropas vid olika tidpunkter i ett DOM elements livscykel. I denna artikel kommer vi fokusera på `oninit`, men vi har redan sett `oncreate`, som vi använder när vi kopplar ihop länkar med routern. `oninit` anropas innan vyn visas och vi kan använda funktionen för att initiera hämtning av data, sätta variabler osv. I `js/views/nameday.js` lägger vi till `oninit` metoden och låter den få tillgång till `vnode` parametern vi skickade från routern till vyn. Med `oninit` metoden ser vårt vy ut på detta sättet där vi skriver ut datumet vi skickar med från listan i föregående vy.
+I mithril finns det ett antal [inbyggda livscykel metoder](http://mithril.js.org/lifecycle-methods.html), som anropas vid olika tidpunkter i ett DOM elements livscykel. I denna artikel kommer vi fokusera på `oninit`, men vi har redan sett `oncreate`, som vi använder när vi kopplar ihop länkar med routern. `oninit` anropas innan vyn visas och vi kan använda funktionen för att initiera hämtning av data, sätta variabler osv.
+
+I `js/views/nameday.js` lägger vi till `oninit` metoden och låter den få tillgång till `vnode` parametern vi skickade från routern till vyn. Vi har alltså nu tillgång till `vnode.attrs.date` som är vår route parameter. Med `oninit` metoden ser vårt vy ut på detta sättet där vi skriver ut datumet vi skickar med från listan i föregående vy.
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 module.exports = {
@@ -160,7 +168,7 @@ module.exports = {
     view: function() {
         return m("h1", "Dagens namn ");
     }
-}
+};
 ```
 
 
@@ -173,11 +181,12 @@ Funktionen `load` sätter först `currentDate` attributet till datumet, som vi k
 
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 var Nameday = {
     currentDate : "1970-01-01",
-    currentNames : "" ,
+    currentNames : "",
     load: function (date) {
         Nameday.currentDate = date;
 
@@ -191,7 +200,7 @@ var Nameday = {
             Nameday.currentNames = result.dagar[0].namnsdag.join(" - ");
         });
     }
-}
+};
 
 module.exports = Nameday;
 ```
@@ -199,6 +208,7 @@ module.exports = Nameday;
 För att vi kan använda namnsdagsmodellen i vår vy `js/views/namnsdag.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar. Detta händer helt automatisk när man använder sig av `m.request`, använder man sig däremot av asynkrona funktioner som inte tillhör mithril, måste man anropa `m.redraw` ([Dokumentation](http://mithril.js.org/redraw.html)).
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 var Nameday = require("../models/nameday");
@@ -214,6 +224,7 @@ module.exports = {
         ];
     }
 };
+
 ```
 
 

@@ -140,19 +140,21 @@ Vår första vy {#vy}
 I vår `js/views/me.js` fil vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion med namnet `view` som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 module.exports = {
     view: function() {
         return m("h1", "Emil Folino");
     }
-}
+};
 ```
 Kodsnutten `m("h1", "Emil Folino")` skapar en "[virtual DOM node](http://mithril.js.org/hyperscript.html)" en så kallad [vnode](http://mithril.js.org/vnodes.html). En `vnode` är ett JavaScript objekt som representerar ett DOM element. Det blir först ett DOM element när vi använder den i en `render` eller `mount` funktion.
 
 För att appen ska veta om att vi vill visa upp vårt me-vy måste vi in i appens utgångspunkt (`js/index.js`) och peka ut vyn. Vi anger först i vilket html-element vår vy skall renderas och skickar sedan med vår vy till funktionen `m.mount`:
 
 ```javascript
+"use strict";
 var m = require("mithril");
 var Me = require("./views/me");
 
@@ -184,16 +186,17 @@ En router för flera sidor {#router}
 Med bara en sida har vi inte kommit långt så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I den här vyn ser du att vi returnerar en array av objekt som placeras i ordning efter varann i vyn.
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 module.exports = {
     view: function() {
         return [
             m("h1", "My hobby"),
-            m("p", "I run orienteering most of the time.")
+            m("p", "I run orienteering most of the time. And was pretty good at it before I blew my knee.")
         ];
     }
-}
+};
 ```
 
 I vår `index.js` ändrar vi så istället för att använda funktion `m.mount()` använder vi funktionen `m.route()`. Route funktionen tar tre argument:
@@ -207,6 +210,7 @@ I vår `index.js` ändrar vi så istället för att använda funktion `m.mount()
 Och vår index.js fil ser nu ut så här:
 
 ```javascript
+"use strict";
 var m = require("mithril");
 var Me = require("./views/me");
 var Hobby = require("./views/hobby");
@@ -241,6 +245,7 @@ Vi vill ju alltid att våra hemsidor, applikationer och program är snygga och a
 Jag valde att lägga till några extra element i min `me-vy` enligt nedan och en enkel responsiv styling, för ett resultat enligt det som syns nedan. Som du ser nedan har jag lagt in html-element i en array efter det andra elementet `div`. Elementen blir barn-element till det yttre och man kan ha så många nivåer man vill i det virtuella dom'et.
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 module.exports = {
@@ -254,7 +259,7 @@ module.exports = {
             ])
         ];
     }
-}
+};
 ```
 
 [FIGURE src="/image/snapvt17/mithril-me-screen.png" caption="Screenshot enkel me-sida i mithril"]
@@ -266,27 +271,31 @@ Layout {#layout}
 Om vi vill ha navigering i alla vyer kan vi lägga till länkar längst upp, men som vanligt vill vi hålla vår kod DRY. I mithril kan vi använda oss av layouts för att återanvända kod i flera vyer. Vi skapar först ett nytt vy `js/views/layout.js`, som blir vår mall för andra vyer.
 
 ```javascript
+"use strict";
 var m = require("mithril");
 
 module.exports = {
     view: function(vnode) {
         return m("main", [
             m("navbar", [
-                m("h2", "Emil Folino"),
-                m("ul", [
-                    m("li", [m("a", {href: "/", oncreate: m.route.link}, "Me")]),
-                    m("li", [m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby")])
+                m("div.container", [
+                    m("h2.brand", "Emil Folino"),
+                    m("ul.nav", [
+                        m("li", [m("a", {href: "/", oncreate: m.route.link}, "Me")]),
+                        m("li", [m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby")])
+                    ])
                 ])
             ]),
-            m("section", vnode.children)
+            m("section.container", vnode.children)
         ]);
     }
-}
+};
 ```
 
 I ovanstående kodexempel skapar vi vår navigation som en navbar med en "logga" och två stycken länkar. Efter navbar skapas ett section-element, som innehåller de virtuella noder från vyn som använder sig av layout. Så lått oss titta på hur vi använder oss av layout från `index.js`.
 
 ```javascript
+"use strict";
 var m = require("mithril");
 var Layout = require("./views/layout");
 var Me = require("./views/me");
@@ -298,9 +307,9 @@ var app = {
     onDeviceReady: function() {
         m.route(document.body, "/", {
             "/": {
-                    render: function() {
-                        return m(Layout, m(Me));
-                    }
+                render: function() {
+                    return m(Layout, m(Me));
+                }
             },
             "/hobby": {
                 render: function() {
@@ -308,8 +317,7 @@ var app = {
                 }
             }
         });
-    },
-
+    }
 };
 
 app.initialize();
