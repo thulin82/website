@@ -89,7 +89,7 @@ Uppgift som tvingar view med regioner?
 
 1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
 
-1. (Gör uppgiften "[skapa inloggning del 1](uppgift/inloggning-steg-1)". Spara dina filer under `me/kmom02/login`. Ej integrera ramverket?) <!-- SQLite/MySQL -->
+
 
 1. Integrera en klass Session in i ramverket och skriv en route som testar och visar innehållet i sessionen.
 

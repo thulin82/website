@@ -79,6 +79,8 @@ Gör följande uppgifter.
 
 1. Gör uppgiften ["Skapa en klass för användarhantering, CUser"](uppgift/skapa-en-klass-for-anvandarhantering-cuser).
 
+1. (Gör uppgiften "[skapa inloggning del 1](uppgift/inloggning-steg-1)". Spara dina filer under `me/kmom03/login`. Ej integrera ramverket?) <!-- SQLite/MySQL -->
+
 1. (Klass Session i ramverket.)
 
 1. Inloggning steg 2, inuti ramverket.
