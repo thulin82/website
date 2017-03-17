@@ -50,8 +50,8 @@ Installera mithril via npm {#install}
 Vi har i tidigare kurser använd pakethanteraren npm för att installera javascript och nodejs moduler. Vi kommer i denna kurs använda npm för att installera och administrera vår mithril installation och beroende kod. Detta görs med hjälp av en `package.json` fil, som vi initiellt skapar genom att skriva följande i terminalen:
 
 ```bash
-# gå till kursmappen
-$ cd me/meapp/
+# gå till me
+$ cd me/redovisa
 $ cordova create . se.dbwebb.meapp MeApp
 $ cordova platform add android --save
 $ cordova platform add browser --save

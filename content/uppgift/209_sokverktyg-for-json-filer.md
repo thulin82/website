@@ -31,6 +31,7 @@ JSON-filen som du jobbar med heter `tag-dbwebb.json` och kommer från Instagram 
 
 ```bash
 # Gå till kursrepot
+# kmom03 för webapp, kmom02 för webapp-v2
 $ cp example/instagram/tag-dbwebb.json me/kmom03/jq
 ```
 

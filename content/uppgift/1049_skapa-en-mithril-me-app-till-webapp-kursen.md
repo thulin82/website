@@ -25,15 +25,7 @@ Introduktion {#intro}
 
 Om du har gjort enligt övningen i artikeln ovan så har du i stort sett redan klarat av uppgiften.
 
-Börja med att ta en kopia av koden från artikeln.
-
-```bash
-# Ställ dig i rooten av kursrepot
-cd me
-cp -ri kmom01/meapp/* redovisa/
-```
-
-Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/redovisa`.
+Utgå från din bas i `me/redovisa`.
 
 
 

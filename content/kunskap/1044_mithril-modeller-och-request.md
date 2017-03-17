@@ -28,14 +28,7 @@ Du har installerat labbmiljön för kursen webapp.
 
 Du har installerat cordova och gjort övningar och uppgifter i kursmoment 1.
 
-Jag börjar med att kopiera över me-appen från kursmoment, så vi har en bra grund att stå på.
-
-```bash
-# Ställ dig i rooten av kursrepot
-cd me
-mkdir kmom02/namnsdag
-cp -ri kmom01/me1/* kmom02/namnsdag/
-```
+Utgå från din app i `me/redovisa`, så har vi en bra grund att stå på.
 
 
 

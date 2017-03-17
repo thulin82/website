@@ -28,9 +28,32 @@ Du har förkunskaper som motsvarar de fyra första kursmomenten i kursen webapp.
 Introduktion {#intro}
 -----------------------
 
-Spara din app i katalogen `me/kmom05/pizza`.
+Du ska skapa en pizza-app, där man kan se bild, namn och pris på pizzor och lägga till dem i en varukorg.
 
-Du kan använda ett annat tema än "pizza", välj vad du vill, sushi kanske?
+Börja med att skapa ett cordova projekt i `me/kmom05/pizza/` och efter det ett mithril projekt i `me/kmom05/pizza/www/`, precis som vi har gjort i tidigare kursmoment.
+
+```bash
+# Ställ dig i rooten av kursrepot
+cd me/kmom05
+cordova create pizza se.dbwebb.pizza Pizza
+cd pizza
+cordova platform add android --save
+cordova platform add browser --save
+cd www
+npm init --yes
+npm install mithril --save
+npm install webpack --save
+```
+
+Lägg även till `npm start` scriptet, som underlätter vid utveckling och testning:
+
+```json
+"scripts": {
+    "start": "webpack js/index.js bin/app.js -d"
+}
+```
+
+Du kan använda ett annat tema än "pizza", välj vad du vill, sushi kanske? Byt inte namn på mappen om du ändrar temat!
 
 Uppgiften är fri, så när du saknar information så tar du själv ett beslut och dokumenterar det i redovisningstexten.
 
