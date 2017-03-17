@@ -17,7 +17,7 @@ Objektorienterad programmering är en av de mer kända programmeringssätten, de
 
 Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan visa vad du kan så här långt.
 
-[FIGURE src=/image/snapshot/oophp20-session.jpg?w=w1&q=70 caption="Spela 21 med en tärningshand är en av övningarna som finns med i detta kursmoment."]
+[FIGURE src=/image/oophp/v3/dice100.png?w=w1&q=70 caption="Tärningsspelet 100 är en av övningarna som finns med i detta kursmoment."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
