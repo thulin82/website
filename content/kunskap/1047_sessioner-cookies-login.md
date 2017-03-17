@@ -65,7 +65,12 @@ Vi börjar med en konstruktor:
 class Session
 {
     private $name;
-        
+    
+    /**
+     * Constructor
+     * @param string $name (optional) The name of the session
+     * @return void
+     */
     public function __construct($name="MYSESSION")
     {
         $this->name = $name;
@@ -73,6 +78,10 @@ class Session
         $this->start();
     }
     
+    /**
+     * Starts the session if not exists
+     * @return void
+     */
     public function start()
     {
         session_name($this->name);
@@ -92,25 +101,69 @@ Vi fyller på med resten av metoderna:
 
 ```php
 ...
-
+    
+    /**
+     * Check if key exists in session
+     * @param $key string The key to check for in session
+     * @return bool true if $key exists, otherwise false
+     */
     public function has($key)
     {
         return array_key_exists($key, $_SESSION);
     }
-
+    
+    /**
+     * Sets a variable in session
+     * @param $key string The key in session
+     * @param $val string The value to set to $key
+     * @return void
+     */
     public function set($key, $val)
     {
         $_SESSION[$key] = $val;
     }
 
+    /**
+     * Retrieve value if exists in session
+     * @param $key string The key to get from session
+     * @param $default optional The return value if not found
+     * @return string The session variable if present, else $default
+     */
     public function get($key, $default=false)
     {
         return (self::has($key)) ? $_SESSION[$key] : $default;
     }
-            
+    
+    /**
+     * Destroys the session and sets cookie
+     * @return void
+     */
     public function destroy() 
     {    
         session_destroy();
+    }
+    
+    /**
+     * Dumps the session
+     * Good for debugging
+     * @return void
+     */
+    public function dump() 
+    {
+        var_dump($_SESSION);
+    }
+    
+    /**
+     * Deletes variable from session if exists
+     * @param $key string The key variable to unset from session
+     * @return void
+     */
+    public function delete($key)
+    {
+        if (self::has($key)) {
+            $_SESSION[$key] = array();
+            unset($_SESSION[$key]);
+        }
     }
 
 ```
@@ -178,6 +231,11 @@ class Connect
 {
     private $db;
     
+    /**
+     * Constructor
+     * @param $dsn string The dsn to the database-file
+     * @return void
+     */
     public function __construct($dsn)
     {
         try {
@@ -189,12 +247,23 @@ class Connect
         }
     }
     
+    /**
+     * Adds user to the database
+     * @param $user string The name of the user
+     * @param $pass string The user's password
+     * @return void
+     */
     public function addUser($user, $pass)
     {
         $stmt = $this->db->prepare("INSERT into users (name, pass) VALUES ('$user', '$pass')");
         $stmt->execute();
     }
     
+    /**
+     * Gets the hashed password from the database
+     * @param $user string The user to get password from/for
+     * @return string The hashed password
+     */
     public function getHash($user)
     {
         $stmt = $this->db->prepare("SELECT pass FROM users WHERE name='$user'");
@@ -205,12 +274,23 @@ class Connect
         return $res["pass"];
     }
     
+    /**
+     * Changes the password for a user
+     * @param $user string The usr to change the password for
+     * @param $pass string The password to change to
+     * @return void
+     */
     public function changePassword($user, $pass)
     {
         $stmt = $this->db->prepare("UPDATE users SET pass='$pass' WHERE name='$user'");
         $stmt->execute();
     }
     
+    /**
+     * Check if user exists in the database
+     * @param $user string The user to search for
+     * @return bool true if user exists, otherwise false
+     */
     public function exists($user)
     {
         $stmt = $this->db->prepare("SELECT * FROM users WHERE name='$user'");
