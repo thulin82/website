@@ -43,14 +43,8 @@ Det finns ingen kurslitteratur.
 
 ###Artiklar {#artiklar}
 
-Läs följande artiklar.
-
-1. Läs artikeln [Mobile: Native Apps, Web Apps, and Hybrid Apps](http://www.nngroup.com/articles/mobile-native-apps/).
-
-1. Läs artikeln [Choosing between a native, hybrid or webapp](https://crew.co/how-to-build-an-online-business/native-hybrid-web-app-differences/).
-
-1. Läs artikeln [Can We Please Stop Fighting The Native vs. Web App Wars?](http://readwrite.com/2015/02/27/native-vs-web-apps-ceasefire).
-
+Det finns inga artiklar.
+<!-- 1. Läs artikeln [Can We Please Stop Fighting The Native vs. Web App Wars?](http://readwrite.com/2015/02/27/native-vs-web-apps-ceasefire). -->
 <!-- 1. Läs i manualen om [introduktionen till Apache Cordova](https://cordova.apache.org/docs/en/latest/guide/overview/). -->
 
 

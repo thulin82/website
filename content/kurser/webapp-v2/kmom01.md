@@ -75,8 +75,7 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 ###Lästips {#lastips}
 
-Det finns inga extra lästips.
-
+1. Läs artikeln [Choosing between a native, hybrid or webapp](https://crew.co/how-to-build-an-online-business/native-hybrid-web-app-differences/).
 
 
 
