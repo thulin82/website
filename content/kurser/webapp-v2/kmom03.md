@@ -109,4 +109,5 @@ Se till att följande frågor besvaras i redovisningstexten.
 * Hur kändes det att jobba med applikationen jq för att söka i och visualisera JSON-filer? Är det något du kan se användning för?
 * Hur är din generella uppfattning om mithril nu efter tre kursmoment?
 * Hur känns det att utveckla för enheter med olika stora skärmar?
+* Vilket API valde du förutom Github? Varför?
 * Var det något som krånglade eller tog extra mycket tid?

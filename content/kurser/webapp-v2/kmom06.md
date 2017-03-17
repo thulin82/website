@@ -133,9 +133,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Har du några förkunskaper om native, hybrid, webappar?
-* Hur känner du inför konceptet med hybrid webappar?
-* Hur gick det att installera och komma igång med Cordova?
-* Vilken/vilka plattformar använde du och vilket/vilka operativsystem testade du på?
-* Berätta om din pizza-applikation, gjorde du någon vidareutveckling?
+* Hur kändes det att jobba mot ett lokalt API?
+* Beskriv kort hur du tekniskt löste renderingen av spelbrädan?
 * Var det något som krånglade eller tog extra mycket tid?
+* Är du nöjd med din Gomoku klient?

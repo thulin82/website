@@ -57,11 +57,13 @@ Vi kan nu i all kod som anropas från vår `onDeviceReady: function() { }` anvä
 var current_platform = device.platform;
 ```
 
-Vi användar oss av Gomoku servern som finns i `example/gomoku` och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/gomoku). Den har skrivits om så den kan köras enbart med node via kommandot. Serverns api kan ses genom att gå till `localhost:1337` i webbläsaren.
+Vi användar oss av Gomoku servern som finns i [`example/gomoku`](webapp/repo/example/gomoku) och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/gomoku). Den har skrivits om så den kan köras enbart med node via kommandot. Serverns api kan ses genom att gå till `localhost:1337` i webbläsaren.
 
 ```bash
 $ node index-server.js
 ```
+
+Du får använda din egna Gomoku server från Linux kursen, men all rättning görs med servern som finns i `example/gomoku`, så testa att din klient fungerar mot den server.
 
 
 
