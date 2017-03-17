@@ -5,7 +5,7 @@ category:
     - php
     - anax-lite
 revision:
-    "2017-03-14": "(A, mos) Första utgåvan i samband med kursen oophp v3."
+    "2017-03-17": "(A, mos) Första utgåvan i samband med kursen oophp v3."
 ...
 En navbar till Anax Lite (steg 2)
 ==================================

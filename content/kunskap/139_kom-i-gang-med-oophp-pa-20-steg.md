@@ -85,7 +85,6 @@ Bra, det blir enklare om vi kan se felen. Då börjar vi.
 Så här ser en klass enkel klass `Simple` i PHP. Ta koden och spara i filen `Simple.php`.
 
 ```php
-<?php
 class Simple
 {
     /**
@@ -97,7 +96,8 @@ class Simple
     /**
      * A method declaration.
      */
-    public function displayVar() {
+    public function displayVar()
+    {
         $this->val++;
         echo $this->var . $this->val;
     }
@@ -213,13 +213,13 @@ $rolls = [];
 
 // Roll the dice
 $times = 6;
-for($i = 0; $i < $times; $i++) {
+for ($i = 0; $i < $times; $i++) {
   $rolls[] = rand(1, 6);
 }
 
 // Print out the results
 $html = "<ul>";
-foreach($rolls as $val) {
+foreach ($rolls as $val) {
   $html .= "<li>{$val}</li>";
 }
 $html .= "</ul>";
@@ -324,7 +324,7 @@ $rolls = $dice->rolls;
 
 // Print out the results
 $html = "<ul>";
-foreach($rolls as $val) {
+foreach ($rolls as $val) {
   $html .= "<li>{$val}</li>";
 }
 $html .= "</ul>";
@@ -716,7 +716,7 @@ Det är vad jag nu tänker göra, ett försök att vara DRY och bryta ut delar a
    */
   private function PrepareHistogram($values) {
     $this->res = array();
-    foreach($values as $key => $value) {
+    foreach ($values as $key => $value) {
       @$this->res[$value] .= '*'; // Use @ to ignore warning for not initiating variabel, not really nice but powerful.
     }
     ksort($this->res);
@@ -889,7 +889,7 @@ Då gör jag en ny metod för att visa upp den grafiska representationen av tär
    */
   public function GetRollsAsImageList() {
     $html = "<ul class='dice'>";
-    foreach($this->rolls as $val) {
+    foreach ($this->rolls as $val) {
       $html .= "<li class='dice-{$val}'></li>";
     }
     $html .= "</ul>";
@@ -1286,7 +1286,7 @@ var_dump($mouse);
 echo "</pre>";
 ```
 
-Varken speed, size eller weight finns med i klassdefinitionen för CMouse (eller CAnimal).
+Varken speed, size eller weight finns med i klassdefinitionen för CMouse(eller CAnimal).
 
 Utskriften från ett sådant testprogram kan se ut så här.
 

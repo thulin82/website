@@ -56,19 +56,13 @@ Krav {#krav}
 
 ###Klar och taggad {#tag}
 
-1. Kör `git status` och se till att alla filer, som skall vara en del av repot i `me/anax-lite`, verkligen är en del av repot.
+1. Kör `make test` för att kolla att du inte har några valideringsfel.
 
-1. Du committar och taggar repot som version 1.0.0.
+1. Gör en `dbwebb publish anax-lite` för att kolla att allt validerar och fungerar.
+
+1. Committa alla filer och lägg till en ny tagg (1.0.\*).
 
 1. Pusha upp repot till GitHub, inklusive taggarna.
-
-1. Om du behöver göra fler taggar så gör du enligt 1.0.1, 1.0.2 och så vidare. Se till att sista taggen innehåller allt som är ändrat i detta kursmoment. Om du får komplettering så skall du alltid tagga en ny version när du är klar med kompletteringen samt pusha upp till GitHub.
-
-1. Gör en `dbwebb publish` för att kolla att allt fungerar.
-
-```bash
-$ dbwebb publish me
-```
 
 
 
