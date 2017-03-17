@@ -212,9 +212,10 @@ Vi sätter igång och ändrar i koden i `index.html`.
 ```
 Vi ersätter innehållet i `app`-diven med en placeholder text som endast ska visas innan `deviceready` har aktiverats.
 
-I `index.js` rensar vi också. Behåll `initialize` och `onDeviceReady` funktionerna, ta bort `receivedEvent` funktionen och ersätt den med en `homePage` funktion.
+I `index.js` rensar vi också. Lägg till `"use strict";` överst i filen så valideringen blir rätt. Behåll `initialize` och `onDeviceReady` funktionerna, ta bort `receivedEvent` funktionen och ersätt den med en `homePage` funktion.
 
 ```js
+"use strict";
 ...
 
     onDeviceReady: function() {
@@ -264,13 +265,13 @@ homePage: function() {
     html += "<button class='otherPage'>Nästa sida</button></div>";
     content.innerHTML = html;
     
-    button = document.getElementsByClassName("otherPage")[0];
-    button.addEventListener("touchend", this.otherPage)
+    var button = document.getElementsByClassName("otherPage")[0];
+    button.addEventListener("touchend", this.otherPage);
 },
 
 otherPage: function() {
-    title = document.getElementsByClassName("title")[0];
-    content = document.getElementsByClassName("main")[0];
+    var title = document.getElementsByClassName("title")[0];
+    var content = document.getElementsByClassName("main")[0];
     
     title.innerHTML = "Other page";
     
@@ -278,9 +279,9 @@ otherPage: function() {
     html += "<button class='alertButton'>Alert</button>";
     content.innerHTML = html;
     
-    button = document.getElementsByClassName("alertButton")[0];
+    var button = document.getElementsByClassName("alertButton")[0];
     button.addEventListener("touchend", function() {
-        alert("Hej");
+        window.alert("Hej");
     });
 }
 ```
@@ -308,7 +309,7 @@ För att se `console.log` kan vi starta `adb logcat` i terminalen medans vi kör
 ```js
 button.addEventListener("touchend", function() {
     console.log("alert sent");
-    alert("Hej");
+    window.alert("Hej");
 });
 ```
 [FIGURE src=/image/kunskap/cordova/cordova-intro-logcat.png]
