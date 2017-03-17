@@ -39,7 +39,6 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
-    * Ch 5: SVG, Canvas, Audio, and Video
     * Ch 6: Other HTML5 APIs
 
 
@@ -53,6 +52,8 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 1. Läs översiktligt introduktionen om webappar i [Safari Developer library - Getting started with webapps](https://developer.apple.com/library/safari/referencelibrary/GettingStarted/GS_WebApp/_index.html#//apple_ref/doc/uid/TP40008135).
 
 1. Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
+
+1. Titta igenom [jsonapi.org](http://jsonapi.org/format/) för att få en uppfattning om vad ett JSON-API är. Speciellt specification, recommendation, examples och FAQ är relevanta.
 
 <!-- 1. Läs kort och översiktligt om [Firefox OS](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS).
 
