@@ -14,7 +14,7 @@ Installera en emulator för Android
 
 Denna guide visar dig hur du installerar de nödvändiga komponenterna av Android SDK för att kunna köra en Android emulator.
 
-Jag kommer att installera endast det nödvändigaste för att få tillgång till emulatorn.
+Jag kommer att installera endast det nödvändigaste för att få tillgång till emulatorn. SDK:n kan ta mycket plats på din hårddisk, om du bara installerar de absolut nödvändiga paketen tar det upp mot 6-7 GiB.
 
 <!--more-->
 
@@ -50,17 +50,23 @@ $ ./android
 
 Det kan se ut så här när du startar SDK Managern.
 
-[FIGURE src=/image/snapht15/android-sdk-manager.png?w=w2 caption="Android SDK manager behöver nu uppdateras."]
+[FIGURE src=/image/kunskap/android-sdk-manager-2.png?w=w2 caption="Android SDK manager behöver nu uppdateras."]
 
-Du behöver nu [uppdatera ditt SDK](https://developer.android.com/sdk/installing/adding-packages.html) med nödvändiga komponenter. Det är komponenter som måste laddas ned för att emulatorn skall fungera. De viktigaste paketen är:
-
-* Android SDK tools
-* Android SDK platform-tools
-* Android SDK Build-tools
+Du behöver nu [uppdatera ditt SDK](https://developer.android.com/sdk/installing/adding-packages.html) med nödvändiga komponenter. Det är komponenter som måste laddas ned för att emulatorn skall fungera. De viktiga paketen är:
+* Tools
+    * Android SDK tools
+    * Android SDK platform-tools
+    * Android SDK Build-tools
 * Ett Android API nyare än version 19
-* Android support Repository
+    - SDK Platform
+    - Google APIs ARM/Intel (välj beroende på vad du har för dator.)
+* Extras
+    * Android support Repository
 
-Klicka på knappen för att installera paketen, i bilden ovan är det knappen som visar, "Install 17 packages".
+För att kolla om du har ARM eller Intel på windows, håll in `window key` + `Pause/Break`. Kolla vad som står under `Processor`.  
+På Linux/Mac kan du använda kommandot `uname -m`. Leta efter `vendor_id`, om det står "GenuineIntel" har du Intel.
+
+Klicka på knappen för att installera paketen.
 
 Det tar en stund att ladda ned och installera paketen.
 
