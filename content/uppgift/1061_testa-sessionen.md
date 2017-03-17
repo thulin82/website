@@ -18,8 +18,8 @@ En variant i Anax kan se ut så här.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du bör ha gjort, eller ha förkunskaper som motsvarar, guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
-Du bör ha gått igenom artikeln [Klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser).
+Du bör ha gjort, eller ha förkunskaper som motsvarar, guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).  
+Du bör ha gått igenom artikeln [Klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser).  
 Du bör ha gått igenom artikeln [TBD - mos artikel om inbyggnad av moduler](tjoho).
 
 
@@ -42,7 +42,10 @@ Extrauppgift {#extra}
 
 1. Koda ihop fler tester för sessionen. Kanske gå igenom klassens alla metoder?
 
+1. Gör ett formulär där man kan lägga till egna värden i sessionen.
 
+
+Testa, lek och öva - det kommer man långt med.
 
 **Lycka till och hojta till i forumet om du behöver hjälp!**
 
