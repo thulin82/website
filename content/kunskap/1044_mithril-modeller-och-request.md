@@ -198,7 +198,7 @@ var Nameday = {
 module.exports = Nameday;
 ```
 
-För att vi kan använda namnsdagsmodellen i vår vy `js/views/namnsdag.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar. Detta händer helt automatisk när man använder sig av `m.request`, använder man sig däremot av asynkrona funktioner som inte tillhör mithril, måste man anropa `m.redraw` ([Dokumentation](http://mithril.js.org/redraw.html)).
+För att vi kan använda namnsdagsmodellen i vår vy `js/views/nameday.js` måste vi importera modellen och sen anropar vi `Nameday.load` i `oninit` livscykel metoden. `view` funktionen anropas i två omgånger, exakt när vyn öppnas och sen igen när `oninit` är klar med att ladda data. Därför kan man ibland se att det blinkar till när gamla datat bytts ut mot de nya namnen när man öppnar upp vyn för namnsdagar. Detta händer helt automatisk när man använder sig av `m.request`, använder man sig däremot av asynkrona funktioner som inte tillhör mithril, måste man anropa `m.redraw` ([Dokumentation](http://mithril.js.org/redraw.html)).
 
 ```javascript
 "use strict";

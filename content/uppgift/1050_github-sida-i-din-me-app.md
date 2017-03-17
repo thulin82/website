@@ -20,7 +20,7 @@ Du har en mithril me-app från föregående kursmoment, som fungerar i cordova p
 
 Du har jobbat igenom artikeln "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
 
-Du har jobbat igenom artikeln "[Att göra en mobilapp av en mobil-anpassad webbplats](kunskap/kunskap/att-gora-en-mobilapp-av-en-mobil-anpassad-webbplats)".
+<!-- Du har jobbat igenom artikeln "[Att göra en mobilapp av en mobil-anpassad webbplats](kunskap/kunskap/att-gora-en-mobilapp-av-en-mobil-anpassad-webbplats)". -->
 
 
 
@@ -36,13 +36,15 @@ cd me/redovisa
 
 Nu har du din bas du kan utgå ifrån, spara alla dina filer i katalogen `me/redovisa`.
 
-[Dokumentation](https://developer.github.com/v3/) och exempel för Githubs API underlättar vid utveckling av vår Github vy.
+[Dokumentation](https://developer.github.com/v3/) och exempel för Githubs API underlättar vid utveckling av vår Github vy. När vi hämtar data från API'er är det alltid bra att ha API dokumentationen nära till hands då detta underlättar för att hitta rätt url.
 
 För att appen kan hämta data från `api.github.com` måste vi lägga till urlen i vår Content-Security-Policy enligt nedan.
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.github.com data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
 ```
+
+Githubs API har en [begränsning](https://developer.github.com/v3/#rate-limiting) på 60 anrop per timme. Det är dock möjligt att [autensiera](https://developer.github.com/v3/#authentication) sig mot API't, detta gör att du får göra 5000 anrop per timme mot API't.
 
 
 
