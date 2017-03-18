@@ -316,7 +316,9 @@ ssl-cert-create:
 ssl-cert-renew:
 	#cd $(HOME)/git/letsencrypt
 	#./letsencrypt-auto renew
+	sudo service apache2 stop
 	sudo certbot renew
+	sudo service apache2 start
 
 
 # target: install-fresh - Do a fresh installation of a new server.
