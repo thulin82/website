@@ -21,7 +21,7 @@ This is the case study on IB.
 
 
 
-###Account and Account holders {#account}
+###Account and account holders {#account}
 
 The IB shall provide bank accounts for persons (account holders). An account holder can have several accounts. Each account can be shared between two or more account holders.
 
@@ -33,7 +33,7 @@ Information related to an account is the balance and the account number.
 
 
 
-###account holder access {#holder}
+###Account holder access {#holder}
 
 The account holder can access their accounts by a web interface. They shall be able to list their accounts with the balance. It shall be visible if the account is shared with another account holder.
 
@@ -71,7 +71,7 @@ You shall develop the following end-user applications:
 * Management reports
 * Administration interface for the cashier
 * A swish application
-* A interface for the account holder
+* An interface for the account holder
 
 
 
@@ -84,7 +84,7 @@ The following reports should be supported:
 * Show the accumulated interest for each account.
 * Show the content of you own special account where all transaction fees goes. (This one is for the nice lodge in Sunny Spain).
 
-The management reports should be implemented as stored procedures and should be executed through a MySQL client (Workbench och CLI).
+The management reports should be implemented as stored procedures and should be executed through a MySQL client (Workbench and CLI).
 
 
 
@@ -110,14 +110,14 @@ Implement the application as a CLI program or a web interface through Node.js.
 
 
 
-###A interface for the account holder {#webint}
+###An interface for the account holder {#webint}
 
 The following tasks/reports shall be supported, use user-id and pin code for verification:
 
 * Show all accounts for an account holder.
 * Make it visible if the account is shared with other account holders (show their names).
 * Create a new account.
-* Move money between own accounts.
+* Move money between their own accounts.
 
 Implement this part as a web interface.
 
@@ -170,7 +170,7 @@ Document your applications.
 
 Make it look nice.
 
-Upload the documentation on Its as one pdf document.
+Upload the documentation on Its as one pdf-document.
 
 
 
