@@ -17,13 +17,6 @@ Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila en
 
 <!--more-->
 
-
-Det kan se ut så här när vi är klara.
-
-[YOUTUBE src=s4QkWOlX5h8 width=630 caption="Min listview fungerar med swipeback event för navigering."]
-
-
-
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
 
@@ -48,8 +41,6 @@ Läs följande:
 Läs följande artiklar för att få bakgrunden till övningarna.
 
 1. Läs om "[Use Cases and Requirements for Installable Web Apps](https://w3c-webmob.github.io/installable-webapps/)".
-
-1. Läs översiktligt introduktionen om webappar i [Safari Developer library - Getting started with webapps](https://developer.apple.com/library/safari/referencelibrary/GettingStarted/GS_WebApp/_index.html#//apple_ref/doc/uid/TP40008135).
 
 1. Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
 
