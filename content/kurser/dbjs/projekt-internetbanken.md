@@ -170,7 +170,7 @@ Document your applications.
 
 Make it look nice.
 
-Upload the documentation on Its as one pdf-document.
+Upload the documentation on [ITs](bth#its) as one pdf-document.
 
 
 
