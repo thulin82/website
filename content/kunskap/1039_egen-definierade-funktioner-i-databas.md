@@ -210,7 +210,7 @@ mysql> SELECT
 6 rows in set, 1 warning (0.00 sec)
 ```
 
-Strålande. Det fungerar.
+Strålande! Det fungerar.
 
 Vi har alltså gjort en funktion som vi kan använda tillsammans med en SELECT-sats. Det här kan vara ett bra verktyg.
 
