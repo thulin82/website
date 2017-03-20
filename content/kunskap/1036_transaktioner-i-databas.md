@@ -169,6 +169,6 @@ Avslutningsvis {#avslutning}
 
 Detta var grunderna i databastransaktioner. Så fort du gör saker som kan förstöra databasens integritet, om någon del i en sekvens inte kan utföras eller bara utförs delvis, då kan det vara läge att omsluta dem i en transaktion.
 
-Vill du se hur du kan kontroller att det finns pengar på kontot, innan du gör överföringen, så läser du vidare i artikeln "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)"
+Vill du se hur du kan kontroller att det finns pengar på kontot, innan du gör överföringen, så läser du vidare i artikeln "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)".
 
 Har du [tips, förslag eller frågor om artikeln](t/6291) så finns det en specifik forumtråd för det.
