@@ -64,7 +64,7 @@ När man pratar om objektorienterad programmering så behöver man också ha en 
 
 ###Övningar {#ovningar}
 
-Gör följande övningar, de behövs normalt för att klara uppgifterna. 
+Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom den avslutande delen av guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
 
@@ -119,6 +119,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
+* Berätta om hur du löste integreringen av klassen Session. Har du koll på routes och dess struktur?
 * Berätta om hur du löste uppgiften med tärningsspelet 100, hur tänkte du och hur gjorde du, hur organiserade du din kod?
-* Berätta om hur du löste uppgiften med Månadens Babe, hur tänkte du och hur gjorde du, hur organiserade du din kod?
+* Berätta om hur du löste uppgiften med Månadskalendern, hur tänkte du och hur gjorde du, hur organiserade du din kod?
 * Några tankar kring SQL så här långt?
