@@ -86,7 +86,7 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 1. Jobba igenom "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas.
 
-1. Artikel om att komma igång med webb- och applikationsservern Express i Node.js. (Kommer 2017-03-22)
+1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom05/express`.
 
 1. Artikel om att använda MySQL tillsammans med Express. (Kommer 2017-03-22)
 

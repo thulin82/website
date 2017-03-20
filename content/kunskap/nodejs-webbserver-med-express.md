@@ -6,7 +6,7 @@ category:
     - express
     - kursen dbjs
 revision:
-    "2017-03-15": (A, mos) Första utgåvan i kursen dbjs.
+    "2017-03-20": (A, mos) Första utgåvan i kursen dbjs.
 ...
 Node.js webbserver med Express 
 ==================================
@@ -493,4 +493,4 @@ Detta var en introduktion i webb- och applikationsservern Express tillsammans me
 
 Du har nu grunderna för att skriva din egen applikationsserver.
 
-Denna artikel har en [egen forumtråd](t/6270) som du kan ställa frågor i, eller ge tips.
+Denna artikel har en [egen forumtråd](t/6329) som du kan ställa frågor i, eller ge tips.
