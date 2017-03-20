@@ -207,7 +207,7 @@ När man är inne i triggern, inuti loopen, så har man tillgång till den nya r
 
 Det visade sig vara enklare att logga nuvarande balans i en trigger, vi hade tillgång både till den befintliga balansen och den uppdaterade balansen. Här gäller det bara att välja den som är mest logisk i sammanhanget. Som du ser så valde jag `NEW.balance`, den uppdaterade balansen.
 
-I triggern kan jag välja att den skall exekveras före (BEFORE) eller (AFTER) själva uppdateringen är gjord. Ibland spelare det ingen roll, som i vårt exempel, men ibland kan det spela roll. Ett exempel på en BEFORE trigger kan vara en valideringstrigger som kontrollerar om en ändring kan utföras.
+I triggern kan jag välja att den skall exekveras före (BEFORE) eller (AFTER) själva uppdateringen är gjord. Ibland spelar det ingen roll, som i vårt exempel, men ibland kan det spela roll. Ett exempel på en BEFORE trigger kan vara en valideringstrigger som kontrollerar om en ändring kan utföras.
 
 Vi gjorde en UPDATE trigger. Man kan även göra trigger som agerar på INSERT och/eller DELETE. I en INSERT trigger har man enbart tillgång till `NEW` och i en DELETE trigger når man endast `OLD`. Men det kanske säger sig självt, om man funderar på det.
 

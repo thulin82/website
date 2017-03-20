@@ -50,7 +50,7 @@ Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkurs
 
 Det finns inga artiklar.
 
-1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kollar runt i dokumentationen och bekanta dig med begrepp och exempelkod.
+1. Läs översiktligt om vad [Express](http://expressjs.com/) klarar av som webb- och applikationsserver. Kolla runt i dokumentationen och bekanta dig med begrepp och exempelkod.
 
 
 
