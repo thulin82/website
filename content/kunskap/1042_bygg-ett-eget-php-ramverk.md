@@ -392,6 +392,12 @@ Nästa steg får bli hur vi kan skriva kod för att hantera olika routes.
 
 
 
+###Att länka filer och bilder {#asset}
+
+Förklara $url->asset() för länkande av bilder, css, js;
+
+
+
 En router {#router}
 --------------------------------------
 
