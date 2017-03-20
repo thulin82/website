@@ -11,11 +11,13 @@ revision:
 Node.js webbserver med Express 
 ==================================
 
-[FIGURE src=/image/snapvt17/npm-mysql.png?w=c5 class="right"]
+[FIGURE src=image/snapvt17/npm-express.png?w=c5&a=0,30,20,0&cf class="right"]
 
-Vi skall bygga en webbserver med hjälp av Node.js och modulen Express.
+Vi skall bygga en applikations- och webbserver med hjälp av Node.js och modulen Express.
 
-Webbservern skall både servera statiska filer som bilder, CSS och JavaScript tillsammans med mer dynamiska routes.
+Servern skall både servera statiska filer som bilder, CSS och JavaScript tillsammans med mer dynamiska routes.
+
+Som template-motor använder vi Pug, den hjälper oss att rendera HTML-sidor med dynamisk information från JavaScript.
 
 <!--more-->
 
@@ -51,7 +53,7 @@ Verifiera att Express fungerar {#verifiera}
 
 Låt oss starta upp en server för att se att installationen gick bra.
 
-Jag börjar med kod som startar upp servern tillsammans med en route och sparar i `index.js`.
+Jag börjar med kod som startar upp servern tillsammans med en route för `/` och sparar i `index.js`.
 
 ```javascript
 #!/usr/bin/env node
@@ -109,9 +111,9 @@ Connection: keep-alive
 </body>                                       
 ```
 
-Pröva nu samma routes via din webbläsare.
+Pröva nu samma routes via din webbläsare. Du bör få motsvarande svar även i din webbläsare.
 
-Det verkar som allt gick bra och servern är uppe och snurrar.
+Det verkar som allt gick bra och Express är uppe och snurrar och svarar på tilltal.
 
 
 
@@ -157,7 +159,7 @@ public/
 3 directories, 4 files
 ```
 
-Filen `public/index.html` innehållser följande kod som i sin tur inkluderar både bild, stylesheet och javascript.
+Filen `public/index.html` innehåller följande kod som i sin tur inkluderar bild, stylesheet och javascript.
 
 ```html
 <!doctype html>
@@ -213,13 +215,13 @@ app.delete("/user", (req, res) => {
 
 Om du testar med din webbläsare så blir det en GET request.
 
-För att testa de andra metoderna så använder jag en plugin till Firefox som heter RESTClient. Med den kan jag välja om jag skall skicka en GET, POST, PUT, DELETE eller någon annan av de metoder som finns. En sådan REST-klient är ett värdefullt utvecklingsverktyg.
+För att testa de andra metoderna så använder jag en plugin till Firefox som heter RESTClient. Med den kan jag välja om jag skall skicka en GET, POST, PUT, DELETE eller någon annan av de HTTP-metoder som finns. En sådan REST-klient är ett värdefullt utvecklingsverktyg.
 
 Så här ser det ut när jag skickar en request med en annan metod än GET.
 
 [FIGURE src=image/snapvt17/express-rest-client.png?w=w2 caption="En DELETE request skickas tll servern som svarar från rätt route."]
 
-Det var routes och stöd för olika metoder det.
+Det var routes och stöd för olika metoder det. Se till att du installerar en klient motsvarande RESTClient och testa din egen server.
 
 
 
@@ -242,13 +244,13 @@ app.use((req, res, next) => {
 });
 ```
 
-Ovan så använder min felhanterare den inbyggda felhanteraren för när saker går fel, det sker via anropet `next(err)`. 
+Ovan så använder min felhanterare den inbyggda felhanteraren, det sker via anropet `next(err)`. 
 
 [FIGURE src=image/snapvt17/express-default-error-handler.png?w=w2 caption="Den inbyggda felhanteraren ger ett fel och en stacktrace."]
 
 Det finns alltså en inbyggd default felhanterare som visar upp information om felet, tillsammans med en stacktrace. Det är användbart när man utvecklar.
 
-När node startar upp express så är det i utvecklingsläge. Du kan testa att starta upp i produktionsläge, det ger mindre information i felmeddelandena.
+När node startar upp Express så är det default i utvecklingsläge. Du kan testa att starta upp i produktionsläge, det ger mindre information i felmeddelandena.
 
 ```bash
 $ NODE_ENV="production" node index.js
@@ -271,20 +273,20 @@ Låt oss kika på hur vi kan rendera svar som är en kombination av HTML och uts
 
 ###Template-motor pug {#pug}
 
-Till det behöver vi en template-motor och det finns många att välja på, men vi håller det enkelt och tar [Pug](https://www.npmjs.com/package/pug) som är den som används i manualen för express.
+Till det behöver vi en template-motor och det finns många att välja på, men vi håller det enkelt och tar [Pug](https://www.npmjs.com/package/pug) som är den som används i manualen för Express.
 
 ```bash
 # Gå till rooten av kursrepot.
 $ npm install pug
 ```
 
-[Manualen till Pug](https://pugjs.org/api/getting-started.html) finner vi på deras hemsida. Den är bra att ha tillhanda nu.
+[Manualen till Pug](https://pugjs.org/api/getting-started.html) finner vi på deras hemsida. Den är bra att ha tillhanda nu när vi skall börja använda template-motorn för att skapa dynamiska HTML-sidor.
 
 
 
 ###Pug med Express {#pgexpr}
 
-Nu behöver vi säga till Express att vi vill använda Pug som template-motor samt skapa ett par vy-filer.
+Vi behöver säga till Express att vi vill använda Pug som template-motor.
 
 ```javascript
 // Use app as template engine
@@ -295,14 +297,18 @@ app.set('view engine', 'pug');
 
 ###En vy-fil {#viewfile}
 
-Express förutsätter att vy-filerna finns i katalogen `views/*.pug`.
+Vi behöver även skapa ett par vy-filer.
+
+Express förutsätter att vy-filerna finns i katalogen `views/` och namnges med filändelsen `.pug`.
+
+Vi skapar `views/page.pug` som en exempel-vy.
 
 ```bash
 $ mkdir views
 $ touch views/page.pug
 ```
 
-Spara följande kod som `views/page.pug`.
+Spara följande kod i `views/page.pug`.
 
 ```text
 doctype html
@@ -319,6 +325,8 @@ body
 ```
 
 Med Pug kan man skriva enligt deras egen variant av förenklad HTML och kombinera den med vanlig HTML, samtidigt kan man skriva ut innehållet från de medskickade JavaScript-variablerna inuti HTML-koden.
+
+En template-motor kopplar samman JavaScript-variabler med statisk HTML-kod och låter oss generera sidor med dynamiskt innehåll, innehåll som vi till exempel kan hämta från en databas eller annan källa.
 
 
 
@@ -339,6 +347,9 @@ När allt fungerar ihop så kan vi testa routen och få fram följande sida.
 
 [FIGURE src=image/snapvt17/express-pug-page.png?w=w2 caption="En HTML-sida genererad via en Pug-vy inklusive dynamisk information från JavaScript."]
 
+Om du kan klicka på bilden så att den flyttar sig så fungerar även det inkluderade JavaScriptet och stylesheeten.
+
+
 
 ###Än mer dynamiskt innehåll {#routepara}
 
@@ -357,6 +368,8 @@ app.get("/test/:title/:message", (req, res) => {
 
 Det är ett sätt att fånga en route som heter `/test/some-title/some-message` eller routen `/test/My Title/No particular message`.
 
+Delen av routen som anges som `:title` hamnar i `req.params.title` och motsvarande sker för `:message`.
+
 Resultatet kan se ut så här.
 
 [FIGURE src=image/snapvt17/express-route-params.png?w=w2 caption="Innehållet i HTML-sidan kommer från routens innehåll."]
@@ -365,16 +378,23 @@ En udda sida måhända, men den får demonstrera hur man kan jobba med dynamisk 
 
 På serversidan ser du innehållet i request objektet som visar både den route (path) som användes och hur delarna av routen översattes till inkommande parametrar.
 
-```bash
+```javascript
+console.log(req.path);
+console.log(req.params);
+```
+
+Ovan del i routern ger oss utskrift i servern.
+
+```text
 $ node index.js
 Express is ready.
 /test/My%20Title/No%20particular%20message
 { title: 'My Title', message: 'No particular message' }
 ```
 
-Webbläsaren converterar, urlencodar, länken där mellanslagen byts ut mot `%20`. När länken tas emot som en route och översätts till parametrar, så gör Express urldecode på innehållet. Det är ett sätt att hantera udda tecken i en webblänk och sker automatiskt av webbläsaren och Express.
+Webbläsaren konverterar, urlencodar, länken där mellanslagen byts ut mot `%20`. När länken tas emot som en route och översätts till parametrar, så gör Express en urldecode på innehållet. Detta är sättet som används för att hantera udda tecken i en webblänk och det sker automatiskt av webbläsaren och Express.
 
-Det fungerar så här.
+Det fungerar så här, om man översätter det till ren JavaScript.
 
 ```bash
 $ node                       
@@ -436,13 +456,13 @@ footer
 script(src="/js/move.js")
 ```
 
-Nu har vi delat upp första vyn i tre delar och två av delarna (header, footer) är nu återanvändbara för andra vyer, bara att inkludera.
+Nu har vi delat upp vyn i tre delar och två av delarna (header, footer) är nu återanvändbara för andra vyer, bara att inkludera.
 
 Resultatet ser ut som man kan förvänta sig.
 
-[FIGURE src=image/snapvt17/express-pug-include.png?w=w2 caption="Vyer med include ger en sida."]
+[FIGURE src=image/snapvt17/express-pug-include.png?w=w2 caption="Vyer med include ger en sammanhållen sida."]
 
-Du kan med include se möjligheten att strukturera dina vyer för återanvändning.
+Du kan med include förhoppningsvis se möjligheten att strukturera dina vyer för återanvändning.
 
 
 
@@ -482,7 +502,7 @@ Om vi nu tar en route som inte finns så kan svaret se ut så här.
 
 [FIGURE src=image/snapvt17/express-custom-error-handler.png?w=w2 caption="Min egen felhanterare renderar ett anpassat fel."]
 
-Det ser ut som vi lyckas knyta ihop Express, router och vy-filer till skapande av HTML-sidor.
+Det ser ut som vi lyckas knyta ihop Express, router och vy-filer till skapande av både dynamiska och statiska HTML-sidor.
 
 
 
