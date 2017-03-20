@@ -161,7 +161,7 @@ The database must contain at least the following data:
 
 The documentation should be proper, nice-looking and complete.
 
-Document the database in line with the intentions of "Kokbok för databasmodellering".
+Document the database in line with the intentions of "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)".
 
 Document your applications.
 
