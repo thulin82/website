@@ -13,13 +13,13 @@ I denna artikel går vi igenom hur man kan visa upp information om enheten med h
 
 <!--more-->
 
-I detta exempel gör vi en HTML-sida som visar om webbsidan för tillfället visas i porträtt eller landskapsläge, samt visar hur stor yta som finns tillgänglig.
+I detta exempel gör vi en HTML-sida som visar om webbsidan för tillfället visas i porträtt eller landskapsläge, samt visar hur stor yta som finns tillgänglig. Källkoden för detta exempel finns i [`example/storlek`](reporepo/webapp/example/storlek) och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/storlek).
 
 Jag använder mig av API:et för  [Screen](https://developer.mozilla.org/en-US/docs/Web/API/Screen) och dess  `screen.height` och `screen.width` för att räkna ut hur stor skärmens yta är och vilken orientering den har.
 
 Jag kopplar en eventhanterare till webbläsarens event för omritning, [`window.onresize`](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onresize). Eventet anropas när man förändrar storleken på webbläsarens fönster, eller som i mitt fall den simulerade skärmen.
 
-Så här kan min kod se ut. Först den nya sidan  som ligger i HTML-sidan.
+Så här kan min HTML-kod se ut.
 
 ```html
 <!DOCTYPE html>
