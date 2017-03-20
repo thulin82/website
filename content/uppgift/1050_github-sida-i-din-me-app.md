@@ -53,7 +53,7 @@ Krav {#krav}
 
 1. Skapa en vy där du presenterar information om dina Github repos. Som minimum namn och när det senast var uppdaterat.
 
-1. Skapa en vy där du detekterar och skriver ut information om användarens enhets orientering och storlek.
+1. Skapa en vy där du detekterar och skriver ut information om användarens enhets orientering och storlek. Tips: använd mithril funktionen `m.redraw()` för att rita vyn på nytt.
 
 1. Din me-app skall kunna köras med cordova både i browsern och i en android emulator.
 

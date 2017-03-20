@@ -19,6 +19,10 @@ Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila en
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
 
+Det kan se ut så här när vi är klara med Nobelappen.
+
+[YOUTUBE src=hbQOZR4R5mo width=630 caption="Nobelappen i kursmoment 2."]
+
 
 
 Läsanvisningar  {#lasanvisningar}
@@ -80,6 +84,8 @@ Gör följande övningar för att träna inför uppgifterna.
 1. Läs igenom artikeln och installera "[Utvecklingsverktyg för REST tjänster](kunskap/utvecklingsverktyg-for-restful-tjanster)".
 
 1.  Installera och testa verktyget jq via artikeln "[Installera verktyget jq för att söka i JSON-filer](kunskap/installera-verktyget-jq-for-att-soka-i-json-filer)".
+
+1. Läs igenom artikeln "[Enhetens storlek och orientering](kunskap/enhetens-storlek-och-orientering)".
 
 1. Läs igenom artikeln och gör övningarna i "[Modeller och request i mithril](kunskap/mithril-modeller-och-request)".
 
