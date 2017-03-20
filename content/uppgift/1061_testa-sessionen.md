@@ -1,6 +1,6 @@
 ---
 author: lew
-category: 
+category:
     - kurs oophp
     - php
 revision:
@@ -22,45 +22,46 @@ Förkunskaper {#forkunskaper}
 
 Du bör ha gjort, eller ha förkunskaper som motsvarar, guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).  
 Du bör ha gått igenom artikeln [Klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser).  
-Du bör ha gått igenom artikeln [TBD - mos artikel om inbyggnad av moduler](tjoho).
+Du bör ha gått igenom artikeln [TBD - mos artikel om inbyggnad av moduler](kunskap/).
 
 
 
 Introduktion {#intro}
 -----------------------
 
-?
+Du ska skapa sex stycken routes för att testa sessionen. Den första routen, `session`, visar länkar eller knappar till dina routes.
 
 
-Tips lägg dina routes i config/route/session.php och iunkludera i config/route.php.
+Tips lägg dina routes i config/route/session.php och inkludera filen i config/route.php.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Integrera klassen Session med Anax. (`src/Session/Session.php`)
+1. Integrera klassen Session med Anax. (`src/Session/Session.php`).
 
-1. Skapa en test-sida (test routes). På sidan (`session/increment` och `session/decrement`) ska du ha två länkar, en som kan öka en siffra i sessionen och en som minskar den.
+1. `session/increment` ska öka en siffra i sessionen med 1. Gör en redirect till `session`.
 
-1. `session/status` http://php.net/manual/en/function.session-id.php json-response
+1. `session/decrement` ska minska siffran i sessionen med 1. Gör en redirect till `session`.
 
-1. `session/dump` Använd klassens `dump()`-metod på sidan.
+1. `session/status` ska returnera ett json-response. Informationen som ska visas är minst 3 av de inbyggda funktionerna som du hittar [här](http://php.net/manual/en/function.session-id.php).
 
-1. `session/destroy` redirect `session/status` .   header(), response->redirect($app-url-create("session/status))
+1. `session/dump` ska använda klassens `dump()`-metod på sidan.
 
-1. `session` visar länkarna toil de testroutes som du har gjort. Intro.
+1. `session/destroy` ska använda klassens `destroy()`-metod och göra en redirect till routen `session/dump`.
 
-1. Skapa en route för test-sidan. Se till så du når den via navbaren.
+1. `session` visar länkarna till de testroutes som du har gjort. Här visar du även värdet på sessionens siffra. Se till så du når den via navbaren.
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-1. Koda ihop fler tester för sessionen. Kanske gå igenom klassens alla metoder?
-
 1. Gör ett formulär där man kan lägga till egna värden i sessionen.
+
+1. Gör ett formulär där man kan redigera värden i sessionen.
+
 
 
 Testa, lek och öva - det kommer man långt med.
