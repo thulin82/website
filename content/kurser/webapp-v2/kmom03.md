@@ -48,8 +48,11 @@ Läs följande:
 
 ###Artiklar {#artiklar}
 
-Det finns inga artiklar.
+1. Läs "[What the heck is shadow DOM](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/)".
 
+1. Läs om vilka "[use case som finns för shadow DOM](https://www.w3.org/2008/webapps/wiki/Component_Model_Use_Cases)".
+
+1. Skumma igenom "[Googles artikel shadow DOM-v1](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom?hl=en)".
 
 
 ###Video  {#video}
