@@ -21,8 +21,6 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js](kunskap/gor-en-kommandoradsklient-i-node-js)" samt artikeln "[MySQL och Node.js](kunskap/mysql-och-nodejs)".
 
-Du har kikat igenom artikeln "[]()".
-
 Du har även kunskaper i SQL och MySQL motsvarande artikeln ["Kom igång med SQL"](uppgift/kom-igang-med-sql).
 
 
