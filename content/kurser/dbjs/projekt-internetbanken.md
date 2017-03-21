@@ -27,7 +27,7 @@ The IB shall provide bank accounts for persons (account holders). An account hol
 
 The bank cashier creates new accounts and new account holders. The cashier manages which account holder(s) that can access an account. It is the cashier that initiates the procedure where several account holders share one account.
 
-Information on an account holder is name, birth date, street and city of residence. A user-id is created for each account holder. This is to be used for access verification. A 4-digit pin code shall also be created for each account holder.
+Information on an account holder is name, birth date, street and city of residence. A user-id is created for each account holder. This is to be used for access verification. A 4-digit pin-code shall also be created for each account holder.
 
 Information related to an account is the balance and the account number.
 
@@ -43,7 +43,7 @@ The account holder can move money between their own accounts. Each time they mov
 
 ###Swishing the money {#swish}
 
-The account holders can use their moneys through a mobile application where they can swish money to another account holder. Swishing is done by, using the swish application, inserting the user-id and a 4-digit pin code followed by the account number, the amount to swish and the receiving account number. The pin-code is private for each account holder.
+The account holders can use their moneys through a mobile application where they can swish money to another account holder. Swishing is done by, using the swish application, inserting the user-id and a 4-digit pin-code followed by the account number, the amount to swish and the receiving account number. The pin-code is private for each account holder.
 
 Each time a swish is done shall additionally 2% of the swished amount be taken from the senders account and stored in your own personal account. See this as your insurance for days to come; perhaps a nice lodge in sunny Spain can come out of this.
 
@@ -112,7 +112,7 @@ Implement the application as a CLI program or a web interface through Node.js.
 
 ###An interface for the account holder {#webint}
 
-The following tasks/reports shall be supported, use user-id and pin code for verification:
+The following tasks/reports shall be supported, use user-id and pin-code for verification:
 
 * Show all accounts for an account holder.
 * Make it visible if the account is shared with other account holders (show their names).
