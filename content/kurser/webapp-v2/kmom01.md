@@ -48,6 +48,7 @@ Läsanvisningar  {#lasanvisningar}
 Läs följande:
 
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
+    * Introduction
     * Ch 1: Setting the stage
 
 

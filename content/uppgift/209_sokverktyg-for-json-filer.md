@@ -25,7 +25,7 @@ Du har jobbat igenom artikeln "[Installera verktyget jq för att söka i JSON-fi
 Introduktion {#intro}
 -----------------------
 
-Du skall spara alla dina filer i katalogen `me/kmom03/jq`.
+Du skall spara alla dina filer i katalogen `me/kmom03/jq` eller `me/kmom02/jq` för webapp-v2.
 
 JSON-filen som du jobbar med heter `tag-dbwebb.json` och kommer från Instagram och du kan kopiera den från exempelmappen.
 

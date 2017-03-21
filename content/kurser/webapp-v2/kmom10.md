@@ -60,7 +60,7 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10/proj`.
 
-Redovisningstexten skriver du i din senaste meapp i `me/kmom06/me6`.
+Redovisningstexten skriver du i `me/redovisa`.
 
 
 

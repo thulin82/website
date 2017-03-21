@@ -33,7 +33,8 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Det finns ingen kurslitteratur.
+1. [Mobile HTML5](kunskap/boken-mobile-html5).
+    * Ch 14: Mobile Performance
 
 
 

@@ -203,10 +203,10 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 | Kursmoment | Mobile HTML5  |
 |------------|-------------------------------------------------------------|
 | Kmom01     | Introduction, 1                                             |
-| Kmom02     | 5, 6                                                        |
+| Kmom02     | 6                                                           |
 | Kmom03     | 11, 12                                                      |
-| Kmom04     | 13, 14, 4                                                   |
-| Kmom05     |                                                             |
+| Kmom04     | 4, 10, 13                                                   |
+| Kmom05     | 14                                                          |
 | Kmom06     |                                                             |
 | Kmom10     |                                                             |
 

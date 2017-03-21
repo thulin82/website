@@ -108,9 +108,7 @@ Dessa uppgifter skall utföras och redovisas.
 
 ###Extra {#extra}
 
-Följande kan du göra om du har tid och ambition.
-
-1. Studera koden bakom JavaScript-funktionen `detectSwipeEvent()` som du finner i GitHub repot [mosbth/detect-swipe-event](https://github.com/mosbth/detect-swipe-event). Du kan dels se hur koden är uppbyggd för att hantera och upptäcka olika swipe-event, och du kan se hur Travis används för automatiserade tester och `Makefile` för att köra testerna och skapa den minifierade varianten.
+Det finns inga extra uppgifter.
 
 
 
