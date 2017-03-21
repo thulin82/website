@@ -70,7 +70,11 @@ När man pratar om objektorienterad programmering så behöver man också ha en 
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
+<!--
 1. Jobba igenom den avslutande delen av guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
+
+Del 2 av artikeln, kanske avvakta lite med den?
+-->
 
 <!-- 1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". -->
 
@@ -87,23 +91,24 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 Gör följande uppgifter.
 
 <!--
-Session till ramverket. (Gör route som dumpar innehåll i sessionen och ++)
-
 Uppgift som tvingar view med regioner?
-
 -->
 
-1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
-
-
-
 1. Gör uppgiften [Integrera klassen Session](uppgift/testa-sessionen) in i ramverket och skriv en route som testar och visar innehållet i sessionen.
+
+1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
 
 1. Gör uppgiften [tärningsspelet 100](uppgift/tarningsspel) som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
 
 1. Gör uppgiften [Månadskalender](uppgift/manadskalender) och inkludera resultatet i ditt Anax. Spara din kod under `me/anax-lite`.
 
 1. Fortsätt att jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra ytterligare en tredjedel av uppgiften. Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`. Den sista tredjedelen gör du i nästa kursmoment.
+
+<!--
+
+Rita klass och sekvensdiagram?
+
+-->
 
 
 

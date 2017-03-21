@@ -4,6 +4,7 @@ category:
     - php
     - kursen oophp
 revision:
+    "2017-03-22": "(H, mos) Delad i två delar inför oophp-v3 och rejält genomarbetad."
     "2015-04-01": "(G, mos) Länk till exempelprogram rättat i sektion 8."
     "2015-02-01": "(F, mos) Tog bort bildlänk till Dilbert."
     "2014-11-26": "(E, mos) Uppdaterade länkar till php.net."
@@ -15,7 +16,7 @@ revision:
 Kom igång med objektorienterad PHP-programmering på 20 steg
 ==================================
 
-Denna guide hjälper dig att komma igång med objektorienterad programmering i PHP. Via 20 steg så leds du in i ett objektorienterat tankesätt och du får möjlighet att på egen hand pröva de vanligaste objektorienterade konstruktionerna i PHP. 
+Denna guide hjälper dig att komma igång med objektorienterad programmering i PHP. Via 20-talet steg så leds du in i ett objektorienterat tankesätt och du får möjlighet att på egen hand pröva de vanligaste objektorienterade konstruktionerna i PHP. 
 
 Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva dem själv. Skapa en egen exempelsida där du testar olika kod-konstruktioner. Du måste testa själv för att lära dig. 
 
@@ -28,11 +29,11 @@ Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva
 Förkunskaper {#forkunskaper}
 -------------------------------------------------------------------------------
 
-Guiden förutsätter att du har kunskaper i PHP och webbutveckling. Känner du dig osäker på PHP så bör du först läsa igenom guiden ["Kom i gång med PHP på 20 steg"](kunskap/kom-i-gang-med-php-pa-20-steg).
+Guiden förutsätter att du har goda kunskaper i PHP, webbutveckling och du kan vissa grunder i objektorientering. Känner du dig osäker på PHP så bör du först läsa igenom guiden ["Kom i gång med PHP på 20 steg"](kunskap/kom-i-gang-med-php-pa-20-steg).
 
 
 
-1. Objektorienterad programmering {#om}
+Objektorienterad programmering {#om}
 -------------------------------------------------------------------------------
 
 Objektorienterad programmering är *en* programmeringsparadigm [^1] bland flera. Ett programmeringsspråk sorteras vanligen in i en programmeringsparadigm för att beskriva hur man kan koda i det. Fler och fler språk stödjer flera programmeringsparadigmer, man kan alltså välja hur man skriver sin kod. Ett vanligt sätt att lära sig programmera är "procedural programmering" [^2]. Det är på det sättet du programmerar i guiden ["Kom i gång med PHP på 20 steg"](kunskap/kom-i-gang-med-php-pa-20-steg). Men nu handlar det alltså om den objektorienterade programmeringsparadigmen [^3]. 
@@ -54,7 +55,7 @@ Låt oss skriva en klass.
 
 
 
-2. Klasser och objekt i PHP {#klasser}
+Klasser och objekt i PHP {#klasser}
 -------------------------------------------------------------------------------
 
 Låt oss kika på grunden i PHP och klasser.
@@ -172,7 +173,8 @@ $obj->displayVar();
 När anropet befinner sig i metoden så används `$this` för att referera till det objekt som anropade metoden, i detta fallet `$obj`.
 
 ```php
-    public function displayVar() {
+    public function displayVar()
+    {
         $this->val++;
         echo $this->var . $this->val;
     }
@@ -184,7 +186,7 @@ För att komma åt medlemsvariabeln `$var` så skriver du `$this->var` i din met
 
 
 
-3. En klass för en tärning {#oophp}
+En klass för en tärning {#oophp}
 -------------------------------------------------------------------------------
 
 Man måste koda själv, annars lär man sig föga.
@@ -281,7 +283,8 @@ class Dice
      *
      * @return void
      */
-    public function roll($times) {
+    public function roll($times)
+    {
         $this->rolls = [];
 
         for ($i = 0; $i < $times; $i++) {
@@ -360,7 +363,8 @@ Metoden `Dice::getTotal()` kan se ut så här.
      *
      * @return integer as sum of rolled dices.
      */
-    public function getTotal() {
+    public function getTotal()
+    {
         return array_sum($this->rolls);
     }
 ```
@@ -400,7 +404,7 @@ Bra, nu kan du både skapa en klass, använda den och bygga ut den med nya metod
 
 
 
-4. Bygg en klass {#klassfil}
+Bygg en klass {#klassfil}
 -------------------------------------------------------------------------------
 
 Så där ja, då har vi kommit igång. Vi fortsätter och bygger till ett histogram [^4] till tärningen, ett stapeldiagram som visar hur många kast som blir etta, tvåa och så vidare.
@@ -431,7 +435,7 @@ Det var ytterligare en klass. Bra, bra. Det flyter på.
 
 
 
-5. Autoload för klassfiler {#autoload}
+Autoload för klassfiler {#autoload}
 -------------------------------------------------------------------------------
 
 När antalet klasser växer blir det till slut krångligt att inkludera alla klassfilerna, i rätt ordning, där de behövs. Med hjälp av PHP's [automatiska laddning av klassfiler](http://php.net/manual/en/language.oop5.autoload.php) så blir det mycket lättare, och dessutom snyggare kod.
@@ -487,7 +491,7 @@ Eller så inkluderar du den i varje testskript. Båda varianterna fungerar.
 
 Ta en kopia av ditt exempelprogram med histogrammet och skriv om det så att autoloadern används.
 
-1. För att förstå hur autoloadern anropas så kan du lägga till en utskrift i den. Gör en `echo "$class<br>";` för att skriva ut klassens namna, varje gång autoloadern anropas.
+1. För att förstå hur autoloadern anropas så kan du lägga till en utskrift i den. Gör en `echo "Autoloading: $class<br>";` för att skriva ut klassens namn, varje gång autoloadern anropas.
 
 Så här kan det se ut.
 
@@ -495,354 +499,366 @@ Så här kan det se ut.
 
 En autoloader är en väldigt viktig komponent i PHPs infrastruktur. Det finns en standard som heter [PSR-4](http://www.php-fig.org/psr/psr-4/) som anger hur autoloading skall fungera. Men vår hemmasnickrade autoloader gör ju också sitt jobb, i all enkelhet.
 
-På FIGs hemsida finner du även standarder för hur vi skriver kod, i form av [PSR-1](http://www.php-fig.org/psr/psr-1/) och [PSR-2](http://www.php-fig.org/psr/psr-2/).
+På PHP-FIGs hemsida finner du även standarder för hur vi skriver kod, i form av [PSR-1](http://www.php-fig.org/psr/psr-1/) och [PSR-2](http://www.php-fig.org/psr/psr-2/). Det är de kodstandarder som vi normalt använder då vi validerar vår kod med validatorer som phpcs och phpmd.
 
 
 
-6. Konstruktor och destruktor {#construct}
+Konstruktor och destruktor {#construct}
 -------------------------------------------------------------------------------
 
-<!--
-namespace
-exceptions
-chainable
--->
+Konstruktorn är en metod `__construct()` som anropas när ett objekt skapas. Destruktorn är en metod `__destruct()` som anropas när ett objekt förstörs. Ett objekt förstörs när programmet avslutas, eller i förtid genom att något gör _delete_ på variabeln som innehåller objektet med hjälp funktionen [`unset()`](http://php.net/manual/en/function.unset.php).
 
-Konstruktorn är en metod `__construct()` som anropas när ett objekt skapas. Destruktorn är en metod `__destruct()` som anropas när ett objekt förstörs. En objekt förstörs när programmet avslutas, eller i förtid genom att något gör "delete" på variabeln som innehåller objektet med hjälp funktionen [`unset()`](http://php.net/manual/en/function.unset.php).
 
-**Konstruktor och destruktor anropas när objekt skapas och förstörs.**
+
+###Använd konstruktor och destruktor {#useconstruct}
+
+Konstruktor anropas när ett objekt skapas. Om metoden finns så anropas den tillsammans med `new`. 
+
+Så här ser en konstruktor ut.
+
+```php
+/**
+ * Constructor.
+ *
+ * @return self
+ */
+public function __construct() 
+{
+    echo __METHOD__ . "<br>";
+}
+```
+
+Konstruktorn anropas automatiskt, om den finns, när objektet skapas med `new`. I konstruktorn kan du initiera klassen, du kan ge den en standardinställning, genom att sätta värden på medlemsvariabler.
+
+Konstruktorn gör en implicit return av den nyskapade klassen `self` som noteras i docblocken.
+
+Konstanten `__METHOD__` är en PHP konstant som motsvarar namnet på den metod den befinner sig i.
 
 ```php
 // Create a object and the constructor is called
-$obj = new CDice();
+$obj = new Dice();
+```
 
+På samma sätt fungerar destruktorn.
+
+```php
+/**
+ * Constructor.
+ *
+ * @return void
+ */
+public function __construct() 
+{
+    echo __METHOD__ . "<br>";
+}
+```
+
+Destructorn anropas antingen när skriptet är färdigt, eller när man explicit raderar ett objekt med `unset()`.
+
+```php
 // Delete the object and the destructor is called
 unset($obj);
 ```
 
-I konstruktorn kan du initiera klassen, du kan ge den en standardinställning, genom att sätta värden på medlemsvariabler. I destruktorn städar du upp, om det behövs. I PHP är det sällan du behöver skriva en destruktor. Ofta sköts uppstädningen i slutet av koden och du behöver inte tänka på minneshantering. Men i vissa fall kan det krävas, till exempel om du har öppnat en fil som du vill stänga eller om du vill logga något i samband med att klassen stängs ned.
+I destruktorn städar du upp, om det behövs. I PHP är det sällan du behöver skriva en destruktor. Ofta sköts uppstädningen i slutet av koden och du behöver inte tänka på minneshantering. Men i vissa fall kan det krävas, till exempel om du har öppnat en fil som du vill stänga eller om du vill logga något i samband med att klassen stängs ned.
 
-Läs snabbt om grunderna för [konstruktorer och destruktorer i manualen](http://php.net/manual/en/language.oop5.decon.php). Sedan kan du själv skapa konstruktor och destruktor i dina klasser. De behöver inte göra något mer än att skriva ut att de anropas. På det viset så ser vi att de verkligen anropas, bakom kulisserna.
+[FIGURE src=image/snapvt17/oophp20-constructor-destructor.png?w=w2 caption="Utskrift för när konstruktor och destruktor anropas i klassen `DiceConstruct`."]
 
-Konstanten `__METHOD__` är en PHP konstant som motsvarar namnet på den metod den befinner sig i.
+Läs gärna snabbt om grunderna för [konstruktorer och destruktorer i manualen](http://php.net/manual/en/language.oop5.decon.php).
 
-**En konstruktor och en destruktor som skriver ut att de anropas.**
 
-```php
-/**
- * Contructor
- */
-public function __construct() {
-  echo __METHOD__;
-}
 
-/**
- * Destructor
- */
-public function __destruct() {
-  echo __METHOD__;
-}
-```
+###Konstruktor i tärningsklassen {#constrdice}
 
-Ett exempel på där en konstruktor är användbar är i tärningsklassen. Säg att vi vill göra det konfigurerbart hur många sidor tärningen har. Då behöver vi en medlemsvariabel som lagrar antalet sidor, `$faces`. Standardvärdet skall vara 6, men genom att skicka in en parameter till konstruktorn så kan detta sättas till en valfri siffra, en tärning med flexibelt antal sidor [^5].
+Ett exempel där en konstruktor är användbar är i tärningsklassen. Säg att vi vill göra det konfigurerbart hur många sidor tärningen har. Då behöver vi en medlemsvariabel som lagrar antalet sidor, `$faces`. Standardvärdet kan vara 6, men genom att skicka in en parameter till konstruktorn så kan detta sättas till en valfri siffra, en tärning med flexibelt antal sidor [^5].
 
-**Del av kod för en CDice med valfritt antal sidor.**
+Så här kan det se ut i klassen.
 
 ```php
 <?php
-  /**
-   * Properties
-   *
-   */
-  public $faces;
+    /** @var integer The number of faces of the dice. */
+    public $faces;
 
 
-  /**
-   * Constructor
-   *
-   * @param int $faces the number of faces to use.
-   */
-  public function __construct($faces=6) {
-    $this->faces = $faces;
-  }
+    /**
+     * Constructor. 
+     *
+     * @param int $faces the number of faces to use.
+     * 
+     * @return self
+     */
+    public function __construct($faces=6)
+    {
+        $this->faces = $faces;
+    }
 ```
 
 Konstruktorn tar nu emot ett argument, om du inte skickar med ett argument så får det standard-värdet 6.
 
 För att skapa ett objekt av klassen gör du nu så här.
 
-**Skicka argument till konstruktorn för att skapa flera sidor på en tärning.**
-
 ```php
 // Create the objects
-$dice1 = new CDice();   // Uses default wich is 6 faces
-$dice2 = new CDice(12); // Sets the number of faces to 12
+$dice1 = new Dice();   // Uses default wich is 6 faces
+$dice2 = new Dice(12); // Sets the number of faces to 12
 ```
 
-Se nu till att din klass CDice kan hantera ett flexibelt antal sidor. Du behöver troligen uppdatera metoden som kastar tärningen `Roll()` så att den tar hänsyn till hur många sidor som tärningen har, annars fortsätter den kasta en tärning med sex sidor.
+Detta var grunden i konstruktor och destruktor.
 
 
 
-###Övning många sidor {#ovning-4}
+###Övning tärning många sidor {#ovning-4}
 
 Utöka dina klasser på följande sätt och testa att de fungerar.
 
-1. Lägg till konstruktor och destruktor i CDice och CHistogram som skriver ut att den anropas.
+1. Lägg till konstruktor och destruktor i Dice och Histogram som skriver ut att den anropas.
 
-2. Gör så att CDice kan ha ett valfritt antal sidor.
+2. Gör så att Dice kan ha ett valfritt antal sidor genom argument i konstruktorn.
 
 3. Utöka testprogrammet så att tärningens sidor skickas som en parameter till sidan (`?roll=6&faces=12`).
 
-4. Gör en ny metod i CHistogram som visar även de staplar som är tomma, döp den till `GetHistogramIncludeEmpty()` och skicka in tärningens antal sidor som ett argument till funktionen.
+4. Gör en ny metod i Histogram som visar även de staplar som är tomma, döp den till `getHistogramIncludeEmpty()` och skicka in tärningens antal sidor som ett argument till funktionen.
+
+5. Lägg till en säkerhetskontroll att man inte kan kasta tärningen fler än 999 gånger, så att servern inte lastas ned av någon obehörig.
 
 Så här blev det för mig.
 
-[FIGURE src=/image/snapshot/oophp20-konstruktor.jpg?w=w1&q=70 caption="Ett histogram över en 12-sidig tärning, nu även med tomma värden."]
-
-Du kan [testa mitt exempel](kod-exempel/oophp20/construct/dice.php?roll=12&faces=12), men försök själv först.
+[FIGURE src=image/snapvt17/oophp20-faces.png?w=w2 caption="Ett histogram över en 12-sidig tärning, nu även med tomma värden."]
 
 
 
-7. Rita diagram över dina klasser {#uml}
------------------------------------------------------------------------------------------------
+Rita diagram över dina klasser {#uml}
+-------------------------------------------------------------------------------
 
 Vårt exempel växer, än så länge är det bara två klasser och ett fåtal metoder, men det växer. I sista övningen så märkte du hur jag valde att hantera histogrammet och hur jag lät det veta hur många sidor tärningen har. Exakt hur man löser en sak kan man fundera på, det finns många alternativ. När man blir mer varm i kläderna så vet man vilka strukturer som är att föredra, men när man är nybörjare så är det viktigare att lösa problemet. När man väl löst problemet så kan man ta ett steg tillbaka och studera lösningen och kritiskt granska den, blev det tillräckligt bra?
+
+
+
+###Klassdiagram med UML {#ritauml}
 
 Ett sätt som kan hjälpa dig att få en översikt över dina klasser, är att rita ett diagram över dem. I objektorienterad modellering används ofta Unified Modelling Language (UML) [^11] som en syntax när man ritar diagram. Det finns många typer av diagram i UML. Ett av de vanligare är klassdiagrammet [^12] som visar klasserna med sina medlemsvariabler och metoder samt hur de olika klasserna hänger ihop.
 
 Så här kan ett klassdiagram se ut för vårt exempelprogram, så här långt.
 
-[FIGURE src=/image/snapshot/oophp20-uml-cdice-chistogram.jpg? caption="Ett klassdiagram i UML för CDice och CHistogram."]
+[FIGURE src=image/snapvt17/oophp20-uml-classdiagram.png caption="Ett klassdiagram i UML för Dice och Histogram."]
 
-Ett klassdiagram kan vara bra att skissa på, om man vill ha en översikt av sina klasser och hur de relaterar till varandra. Våra klasser har inget direkt samband med varandra, de är fristående klasser. Plus-tecknet säger att medlemmen är publik.
+De båda klasserna är fristående så de har inget sepciellt som förbinder dem. Man kan lägga in klassernas medlemmar i diagrammet men jag nöjer mig med att rita lådorna för att få en översikt över klasserna.
 
-Ett klass-diagram är ett statiskt diagram som visar strukturen över koden. Det finns diagram som visar dynamiken i systemet när det arbetar, ett sådant diagram, sekevensdiagrammet, visar hur ett anrop går genom systemet och vilka delar av systemet som berörs.
+Ett klass-diagram är ett statiskt diagram som visar strukturen över koden.
 
-Så här kan ett sekvensdiagram [^13] se ut över testprogrammet från övning 4.
 
-[FIGURE src=/image/snapshot/oophp20-uml-sekvensdiagram.jpg? caption="Ett sekvensdiagram över övning 4, visar ordningen av flödet mellan komponenterna."]
 
-Klassdiagram och sekvensdiagram är två enkla men kraftfulla verktyg för att få en översyn av vad som händer i ens system.
+###Sekvensdiagram {#sekvensdia}
 
-Du skall få ytterligare ett tips på sekvensdiagram, det går att beskriva sekvensen som sker i skrivet text, så här.
+Det finns diagram som visar dynamiken i systemet när det arbetar, ett sådant diagram, sekevensdiagrammet[^13], visar hur ett anrop går genom systemet och vilka delar av systemet som berörs.
 
-```bash
-title Exercise 4
+Så här kan man definiera flödet i programmet, som är grunden till ett sekvensdiagram.
 
-note left of dice.php: ?roll=12&faces=12
-dice.php->bootstrap.php: include
-dice.php->CDice: new CDice($faces)
-dice.php->CHistogram: new CHistogram
-dice.php->CDice: Roll($times)
-dice.php->CHistogram: GetHistogramIncludeEmpty()
-dice.php->CDice: GetTotal()
-dice.php->CDice: GetAverage()
+Följande är flödet i testprogrammet från övning 4.
+
+```text
+title A Dice Sequence Diagram
+
+note left of dice.php:      ?roll=12&faces=12
+dice.php->config.php:       include
+dice.php->autoloader.php:   include
+dice.php->Dice:             new Dice($faces)
+dice.php->Histogram:        new Cistogram()
+dice.php->Dice:             roll($times)
+dice.php->Dice:             $rolls=getRollsAsArray()
+dice.php->Histogram:        setSerie($rolls)
+dice.php->Histogram:        getHistogramIncludeEmpty()
+dice.php->Dice:             getTotal()
+dice.php->Dice:             getAverage()
+note left of dice.php:      now render the page
 ```
 
-Sedan kan vi använda webbtjänsten [Web sequence diagrams](https://www.websequencediagrams.com/) för att rita upp diagrammet. Så här kan den resulterande bilden se ut när sekvensdiagrammer ritas ut enligt "servett"-syntax (napkin).
+Sedan kan vi använda webbtjänsten [Web sequence diagrams](https://www.websequencediagrams.com/) för att rita upp diagrammet. Så här kan den resulterande bilden se ut när sekvensdiagrammer ritas ut.
 
-[FIGURE src=/image/snapshot/oophp20-sekvensdiagram-napkin.jpg? caption="Ett snabbt konstruerat sekvensdiagram med webbtjänsten Web sequence diagram."]
+[FIGURE src=image/snapvt17/oophp20-sequence-diagram.png?w=w2 caption="Ett sekvensdiagram över övning 4, visar ordningen av flödet mellan komponenterna."]
+
+Klassdiagram och sekvensdiagram är två enkla men kraftfulla verktyg för att få en översyn av vad som händer i ens system.
 
 Kom i håg att skissa enkla diagram på ett papper, för din egen skull, så fort du behöver en överblick över vad som händer.
 
 
 
-8. Synlighet med public, protected och private {#synlighet}
------------------------------------------------------------------------------------------------
+Synlighet med public, protected och private {#synlighet}
+-------------------------------------------------------------------------------
 
 När du gör en klass så bestämmer du hur medlemsvariabler och metoder skall vara synliga utanför klassen. Det gör du med nyckelorden `public`, `private` och `protected`. 
 
 * **Publik** synlighet innebär att klassens användare kan läsa och uppdatera medlemsvariabler och anropa metoder.
 * **Privat** synlighet innebär att klassens användare *inte* kan läsa eller uppdatera medlemsvariabler och *inte* kan anropa metoder.
-* **Protected** påverkar synlighet i an arvshierarki, mer om det när vi pratar om arv.
+* **Protected** påverkar synlighet i en arvshierarki och anger om metod/variabel är synlig för subklassen.
 
 Du kan läsa om [synlighet i manualen](http://php.net/manual/en/language.oop5.visibility.php).
 
-I vår tärning så är alla medlemmar och metoder satta till publika. Det innebär att man kan komma åt dem alla via objektet. Normalt vill vi dock skydda vissa delar. Bara det som verkligen behövs skall vara synligt utåt. Det ger oss möjligheten att skriva vår interna kod som vi vill och vi blir inte beroende av hur någon använder klassen. Detta är en klar fördel och inkapslingen hjälper oss att minska beroenden i koden. 
 
-Du kan se det som  att du skapar ett publikt API för den som använder klassen, men den interna representationen av klassen, och hur klassen utför sin logik, behöver ingen utomstående ha koll på.
 
-Låt oss nu studera tärningen och fundera hur den borde se ut. För min del så vill jag nog lägga medlemsvariablerna som skyddade, det vill säga privata. Det innebär att jag måste erbjuda en metod för att hämta ut tärningsslagen och en metod för att ge svaret på hur många sidor tärningen har. Fördelen är att jag då kan själv bestämma hur jag lagrar information i mina medlemsvariabler. Jag kan byta format och namn på dem utan att det stör den som använder klassen. Jag vill inte att någon skall kunna ändra antalet sidor på tärningen så den möjligheten behöver jag inte erbjuda som en metod.
+###Varför skydda implementationen av en klass? {#inkapsling}
 
-**En uppdaterad klass med privata medlemsvariabler.**
+I vår tärning så är alla medlemmar och metoder satta till publika. Det innebär att användaren av objektet kan både läsa och skriva till objektets medlemsvariabler. Normalt vill vi skydda klassens implementation och bara det som verkligen behövs skall vara synligt utåt. Vi vill skapa ett publikt API till klassen. Ett publikt API ger oss möjligheten att skriva vår interna kod inuti klassen som vi vill, utan att påverka användaren av klassen. Detta är en klar fördel och denna så kallade _inkapsling_ hjälper oss att minska beroenden i koden. 
+
+Du kan alltså se det som  att du skapar ett publikt API för den som använder klassen, men den interna representationen av klassen, och hur klassen utför sin logik, behöver ingen utomstående ha koll på, det löser du som du behagar.
+
+Du kan dessutom förändra klassens interna logik över tiden, så länge du inte förändrar klassens publika API så berör det inte användarna av klassen.
+
+Låt oss nu studera tärningen och fundera hur den borde se ut. Det låter rimligt att lägga medlemsvariablerna som skyddade, det vill säga privata. Det innebär att jag måste erbjuda en metod för att hämta ut tärningsslagen och en metod för att ge svaret på hur många sidor tärningen har. Fördelen blir att jag då själv kan bestämma hur jag lagrar information i mina medlemsvariabler. Jag kan byta format och namn på dem utan att det stör den som använder klassen. Jag vill inte att någon skall kunna ändra antalet sidor på tärningen, när den väl är skapad, så den möjligheten behöver jag inte erbjuda som en metod.
+
+
+
+###Klass med privata medlemmar {#priv}
+
+Så här ser klassen ut när den är uppdaterad med privata medlemsvariabler.
 
 ```php
-class CDice {
-
-  /**
-   * Properties
-   *
-   */
-  private $faces;
-  private $rolls = array();
+class Dice
+{
+    /** 
+     * @var []      The number of rolls made.
+     * @var integer The number of faces of the dice.
+     */
+    private $rolls = [];
+    private $faces;
 ```
 
-Nu behöver jag alltså två metoder, en för att säga hur många sidor tärningen har `GetFaces()` och en för att ge slagserien som en array `GetRollsAsArray()`.
-
-**Metoder för att ersätta de publika medlemsvariablerna.**
-
-```php
-  /**
-   * Get the number of faces.
-   *
-   */
-  public function GetFaces() {
-    return $this->faces;
-  }
+Skillnaden är endast `private` kontra `public`.
 
 
-  /**
-   * Get the rolls as an array.
-   *
-   */
-  public function GetRollsAsArray() {
-    return $this->rolls;
-  }
-```
 
-I klassen tärning hittade jag ingen metod som var kandidat till att bli privat. Men om jag kikar i koden för CHistogram så ser jag en möjlighet att skriva om och förbättra min kod. Det är sådant som kallas "code refactoring" [^6] och det innebär att man skriver om sin kod så att den blir bättre, lättare att underhålla och vidareutveckla. Gör om gör bättre, helt enkelt.
+###Metoder ger läsbarhet av privata medlemmar {#readmethod}
 
-I förra uppgiften tog jag en kopia av metoden `GetHistogram()` och modifierade den lite till att bli `GetGistogramIncludeEmpty()`. Min lösning innebar att nu innehåller båda metoderna dubbletter av delvis samma kod. Ibland vill man lösa ett problem snabbt och då är det en enkel väg att gå. [Studera källkoden](kod-exempel/source.php?dir=oophp20/construct&file=CHistogram.php#L32) för min lösning så ser du kanske delar av koden som kan brytas ut från de båda metoderna till i en egen metod. Man vill ju helst inte duplicera kod. Duplicerar man kod så är man inte DRY [^14], och det vill man försöka att vara.
-
-Det är vad jag nu tänker göra, ett försök att vara DRY och bryta ut delar av den duplicerade koden till en egen metod. Jag tar den del av kod som är samma i båda metoderna och lägger i en egen privat metod. Metoden kan bli privat för det är ingen utanför klassen som skall anropa den.
-
-**En privat metod i CHistogram efter uppstädning.**
+Nu vill jag dessutom erbjuda två metoder, en för att säga hur många sidor tärningen har `getFaces()` och en för att ge slagserien som en array `getRollsAsArray()`. De blir en del av mitt tänkta publika API för klassen.
 
 ```php
-  /**
-   * Prepare the histogram by calculate occurences for each key.
-   *
-   * @param array $values the values to prepare out the histogram from.
-   */
-  private function PrepareHistogram($values) {
-    $this->res = array();
-    foreach ($values as $key => $value) {
-      @$this->res[$value] .= '*'; // Use @ to ignore warning for not initiating variabel, not really nice but powerful.
+    /**
+     * Get the number of faces.
+     *
+     * @return integer Number of faces.
+     */
+    public function getFaces()
+    {
+        return $this->faces;
     }
-    ksort($this->res);
-  }
+
+
+    /**
+     * Get the rolls as an array.
+     *
+     * @return [] Array with all rolls made.
+     */
+    public function getRollsAsArray()
+    {
+        return $this->rolls;
+    }
 ```
 
-Vi får helt enkelt hålla ögonen öppna för om metoderna skall vara privata (enbart tillgängliga inom klassen) eller om de skall vara publika (objekts användare kan anropa dem). 
+På detta viset erbjuder jag läsbarhet av klassens interna medlemmar, utan att exponera dem.
+
+Varken i klassen tärning eller histogram hittade jag någon metod som var kandidat till att bli privat. Men, vi håller ögonen öppna, en privat metod kan inte anropas av klassens användare och den används enbart inuti klassen.
+
+
+###Övning privata medlemmar {#ovning-5}
+
+Uppdatera din kod enligt följande.
+
+1. Bygg om din klass Dice och Histogram så att alla medlemsvariabler blir privata.
+
+1. Lägg till metoder så att användaren kan läsa av klassens innehåll utan att ha tillgång till de numer privata medlemsvariablerna.
+
+Det blev ingen större ändring, mest en tanke om inkapsling.
 
 
 
-###Övning {#ovning-5}
-
-Bygg om din klass CDice så att alla medlemsvariabler blir privata.
-
-1. Lägg till metoderna `GetFaces()` och `GetRollsAsArray()`.
-
-2. Städa upp din kod i CHistogram och skapa en metod `PrepareHistogram()` som är privat.
-
-[INFO]
-Du har nu ändrat det publika API:et, gränssnittet, för din CDice, det kan få konsekvenser för användaren, dvs testprogrammet. Lös de konsekvenserna så att ditt testprogram fungerar. För min del fick jag problem med hur jag skrev ut kastserien så jag valde att lösa det med en `public function GetRollsAsSerie()`.
-[/INFO]
-
-Så här blev det för mig, ser likadant ut som tidigare i stort sett, men koden bakom är lite annorlunda - allt enligt tanken att *gör om och gör bättre*.
-
-[FIGURE src=/image/snapshot/oophp20-visibility.jpg?w=w1&q=70 caption="Ett histogram över 48 kast med en 12-sidig tärning."]
-
-Du kan [testa mitt exempel](kod-exempel/oophp20/visibility/dice.php?roll=48&faces=12), men försök själv först.
-
-
-
-9. Arv {#arv}
------------------------------------------------------------------------------------------------
+Arv {#arv}
+-------------------------------------------------------------------------------
 
 Arv [^7] är en vanlig objektorienterad konstruktion. Det handlar om att en klass ärver från en annan klass. Man kan säga att den ärvande klassen utökar, eller specialiserar, basklassen. Basklassen kallas även superklass och den ärvande klassen kallas subklass. Läs om [arv i manualen](http://php.net/manual/en/language.oop5.inheritance.php).
 
 I fallet med tärningen så fick jag precis ett starkt behov av en tärning med en grafisk representation. Låt oss använda det som ett exempel för att visa hur arv fungerar i PHP. Vi skall alltså göra en klass som kan visa en bild på tärningssidan.
 
 
+
 ###En CSS-sprite för att representera tärningens sidor {#arv-sprite}
 
 Först behöver jag en bild. [Denna blir bra](http://commons.wikimedia.org/wiki/File:Dice-faces_32x32.jpg). Det är en CSS-sprite [^8].
 
-[FIGURE src=/img/dice-faces.jpg caption="En CSS-sprite för en tärning."]
+[FIGURE src=img/dice-faces.jpg caption="En CSS-sprite för en sex-sidig tärning."]
 
-Men en stylesheet kan jag visa rätt bild beroende på vilken tärningssida jag vill se. Det handlar om att hantera bilden som en bakgrundsbild och positionering den så att rätt tärningssida visas.
+Med en stylesheet kan jag visa rätt bild beroende på vilken tärningssida jag vill se. Det handlar om att hantera bilden som en bakgrundsbild och variera  positioneringen så att rätt tärningssida visas.
 
-**Stylesheet med css-klasser för att visa rätt tärningssida.**
+Här är en stylesheet som visar olika bakgrundsbilder för tärningen.
 
-```php
+```css
 /**
  * CSS sprite for a dice with six faces.
- *
  */
 ul.dice {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 ul.dice li {
-  display: inline-block;
-  padding: 0;
-  margin: 0 4px 0 0;
-  width: 32px;
-  height: 32px;
-  background: url(/img/dice-faces.jpg) no-repeat;
+    display: inline-block;
+    padding: 0;
+    margin: 0 4px 0 0;
+    width: 32px;
+    height: 32px;
+    background: url(img/dice-faces.jpg) no-repeat;
 }
 
-ul.dice li.dice-1 { background-position: -160px 0px; }
-ul.dice li.dice-2 { background-position: -128px 0px; }
-ul.dice li.dice-3 { background-position:  -96px 0px; }
-ul.dice li.dice-4 { background-position:  -64px 0px; }
-ul.dice li.dice-5 { background-position:  -32px 0px; }
-ul.dice li.dice-6 { background-position:    0px 0px; }
+ul.dice li.dice-1 { background-position: -160px 0; }
+ul.dice li.dice-2 { background-position: -128px 0; }
+ul.dice li.dice-3 { background-position:  -96px 0; }
+ul.dice li.dice-4 { background-position:  -64px 0; }
+ul.dice li.dice-5 { background-position:  -32px 0; }
+ul.dice li.dice-6 { background-position:    0   0; }
 ```
 
-För att rita ut två tärningar i en lista skriver jag följande html-kod.
+För att rita ut två tärningar i en lista skriver jag följande HTML-kod och matchar med rätt CSS-klass.
 
 ```html
 <ul class='dice'>
-<li class='dice-1'></li>
-<li class='dice-4'></li>
+    <li class='dice-1'></li>
+    <li class='dice-4'></li>
 </ul>
 ```
 
-Resultatet blir att en etta och en fyra visas. Så funkar det, en mix av html, css och en bild, en lösning som benämns "css-sprite". Fördelen med css-sprite är att alla delar av bilden finns samlade i en bild, webbläsaren behöver bara göra en förfrågan för att hämta bilden, alternativet vore sex separata bilder och sex frågor från webbläsaren. CSS-sprite är ett sätt att optimera och snabba upp en webbplats som har många små bilder.
+Resultatet blir att en etta och en fyra visas. Så funkar det, en mix av HTML, CSS och en bild, en lösning som benämns "CSS-sprite". Fördelen med en CSS-sprite är att alla delar av bilden finns samlade i en enda bild, webbläsaren behöver bara göra en förfrågan för att hämta bilden, alternativet vore sex separata bilder och sex frågor från webbläsaren. CSS-sprite är ett sätt att optimera och snabba upp en webbplats som har många små bilder.
 
 
 
 ###Ärva klass med `extends` {#extends}
 
-Så, då väljer jag att göra en ny klass `CDiceImage` och jag gör det genom att ärva klassen `CDice` med *extends*.
+Så, då väljer jag att göra en ny klass `DiceImage` och jag gör det genom att ärva klassen `Dice` med *extends*.
 
-**Ny klass genom arv.**
+Så här skapar man en ny klass via arv. Det blir en specialiserad klass DiceImage som utökar funktionaliteten i basklassen/superklassen Dice.
 
 ```php
-<?php
 /**
- * A dice with images as graphical representation.
- *
+ * A Dice class with images.
  */
-class CDiceImage extends CDice {
-
-  // Properties and methods extending or overriding base class
+class DiceImage extends Dice
+{
+    /**
+     * Constructor.
+     *
+     * @return self
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
 }
 ```
 
-I detta läget har klassen CDiceImage exakt samma funktioner som dess basklass. Men vi är inte riktigt klara, vi måste anropa basklassens konstruktor.
+I detta läget har klassen DiceImage exakt samma funktioner som dess basklass, bortsett från att den inte erbjuder stöd att använda godtyckligt antal sidor för tärningen. Det ser du genom att konstruktorn inte tar något argument för `$faces`.
 
-**Anropa basklassens konstruktor.**
+Konstruktionen `parent::` är en referens till basklassen. Det är så man kan anropa basklassens konstruktor, det sker inte automatiskt när klassen definierar en egen konstruktor. 
 
-```php
-  /**
-   * Constructor
-   *
-   */
-  public function __construct() {
-    parent::__construct();
-  }
-```
-
-Så, nu är basklassen initierad. Konstruktionen `parent::` är en referens till basklassen, förälderklassen. Det är så man kan anropa basklassens konstruktor, det sker inte automatiskt. 
-
-Vill du gestalta arv i ett klassdiagram så ritar du en pil mellan klasserna.
-
-[FIGURE src=/image/snapshot/oophp20-uml-extends.jpg caption="I UML representeras arv av en pil mellan klasserna."]
+Om jag hade valt att inte definiera en konstruktor så hade klassen ärvt den från basklassen, precis som en vanlig metod.
 
 Nu kan vi börja använda klassen för att testa. Arv kan vara kraftfullt, låt se.
 
@@ -853,91 +869,110 @@ Nu kan vi börja använda klassen för att testa. Arv kan vara kraftfullt, låt 
 Det går att definiera konstanter i en klass med nyckelordet `const`. I vår nya klass passar det utmärkt med att ange antalet sidor på tärningen med en konstant. Den grafiska representationen har sex sidor så jag väljer att den nya klassen har ett fast antal sidor, vi kan kalla det en specialisering av basklassens beteende. Jag skickar med antalet sidor i basklassens konstruktor. Det är bra i sig, annars är jag beroende av basklassen, om någon ändrar i basklassens konstruktor, som nu har ett default-argument om sex sidor, så hade även min nya klass förändrats. Det är på gott och ont. Ibland vill man ha ett beroende mellan klasserna, men oftast inte. Nu blir det bättre.
 
 ```php
-  /**
-   * Properties
-   *
-   */
-  const FACES = 6;
+/**
+ * A Dice class with images.
+ */
+class DiceImage extends Dice
+{
+    /** @var integer FACES Number of faces of the Dice. */
+    const FACES = 6;
 
-  /**
-   * Constructor
-   *
-   */
-  public function __construct() {
-    parent::__construct(self::FACES);
-  }
+    /**
+     * Constructor.
+     *
+     * @return self
+     */
+    public function __construct()
+    {
+        parent::__construct(self::FACES);
+    }
+}
 ```
 
-Jag använder `self::FACES` för att komma åt konstanten. Konstruktionen `self::` är en referens till statiska medlemmar i klassen, det är medlemmar som är tillgängliga för alla instanser av klassen. En konstant har samma värde för alla objekt av klassen, därför använder man `self::` istället för `$this->`. 
+Jag använder `self::FACES` för att komma åt konstanten. Konstruktionen `self::` är en referens till statiska medlemmar i klassen, det är medlemmar som är tillgängliga för alla instanser av klassen. En konstant har samma värde för alla objekt av klassen, därför använder man `self::` istället för `$this->` som är en referens till ett object, en instans av klassen. 
 
 Läs mer om [konstanter i klasser i manualen](http://php.net/manual/en/language.oop5.constants.php). 
 
-Att skriva konstantens namn med stora bokstäver är ett val jag gör, det går lika bra med små bokstäver, det handlar bara om vilken kodningsstandard du följer.
+Att skriva konstantens namn med stora bokstäver och eventuellt separerad med underscore, är ett val jag gör, för att följa kodningsstandarden PSR-1.
 
 
 
-###Basklassens medlemsvariabler {#arv-medlem}
+###Synlighet basklassens medlemsvariabler {#arv-medlem}
 
-Då gör jag en ny metod för att visa upp den grafiska representationen av tärningen, det är en utökning av basklassens funktionalitet. 
+Då gör jag en ny metod för att visa upp den grafiska representationen av tärningen, det blir en utökning av basklassens funktionalitet. 
 
-**Metod för att skriva ut tärningens sida med grafisk representation.**
+Så här kan metoden se ut.
 
 ```php
-  /**
-   * Get the rolls as a serie of images.
-   *
-   */
-  public function GetRollsAsImageList() {
-    $html = "<ul class='dice'>";
-    foreach ($this->rolls as $val) {
-      $html .= "<li class='dice-{$val}'></li>";
+    /**
+     * Get the rolls as a serie of images.
+     *
+     * @return string A ul/li list of dices.
+     */
+    public function getRollsAsImageList()
+    {
+        $html = "<ul class=\"dice\">";
+        foreach ($this->rolls as $val) {
+            $html .= "<li class=\"dice-{$val}\"></li>";
+        }
+        $html .= "</ul>";
+        return $html;
     }
-    $html .= "</ul>";
-    return $html;
-  }
 ```
 
-Som du ser så når jag basklassens medlemsvariabel `$rolls` via `$this`, som vanligt, den är som en del av min klass. Men, kommer du ihåg synligheten? Om du gjorde som jag och deklarerade medlemsvariablerna som `private` så blir det problem. Du kommer inte åt dem. Det är därför det finns en synlighetsnivå som heter `protected`. Den är som privat, med tillägget att ärvande klasser får tillgång och det är precis vad vi vill nu. Den ärvande klassen vill ha tillgång till variabler i basklassen, då passar `protected`. 
+Som du ser så når jag basklassens medlemsvariabel `$rolls` via `$this`, som vanligt, den är som en del av min klass. Men, kommer du ihåg synligheten? Om du gjorde som jag och deklarerade medlemsvariablerna som `private` så blir det problem. Du kommer inte åt den från subklassen. Det är därför det finns en synlighetsnivå som heter `protected`. Den är som privat, med tillägget att ärvande klasser får tillgång och det är precis vad vi vill nu. Den ärvande klassen vill ha tillgång till variabler i basklassen, då passar `protected`. 
 
-
-
-**Ändra synlighetsnivån till `protected` i basklassen.**
+Så här kan det se ut när du ändrat synlighetsnivån i Dice.
 
 ```php
-class CDice {
-
-  /**
-   * Properties
-   *
-   */
-  private $faces;
-  protected $rolls = array();
+    /** 
+     * @var []      The number of rolls made.
+     * @var integer The number of faces of the dice.
+     */
+    protected $rolls = [];
+    private $faces;
 ```
 
 Jag ändrar endast för `$rolls` eftersom det är den enda variabeln som jag behöver för tillfället. Det är onödigt att öppna upp för mycket, om det inte behövs.
 
+Varför kunde jag inte hämtat `$rolls` via metoden `getRollsAsArray()`? Bra fråga, det kunde jag gjort. Nu ville jag troligen visa ett exempel som krävde protected. Men när jag använde protected och lät subklassen accessa basklassens medlemmar så knöt jag också dessa två klasser närmare varandra i implementation, jag gjorde subklassen känslig för eventuella ändringar i `$this->rolls`. Det är inte alltid önskvärt att göra så, det är klokt att begränsa tillgång till klassers interna data, även när det handlar om arv.
 
 
-###Övning {#ovning-6}
 
-1. Gör en ny klass som ärver från CDice och utökar dess funktionalitet genom att skriva ut en grafisk representation för tärningsslaget.
+###Arv i UML {#arvuml}
+
+Om man vill rita en bild över arv, enligt UML, så kan det se ut så här.
+
+[FIGURE src=image/snapvt17/oophp20-uml-extends.png caption="Arv i UML representeras av en pil mellan klasserna."]
+
+
+
+###Övning tärning med bilder {#ovning-6}
+
+Gör följande övning.
+
+1. Skapa en ny klass DiceImage som ärver från Dice och utökar dess funktionalitet genom att skriva ut en grafisk representation för tärningsslaget.
 
 Så här blev det för mig, visst är det lite roligare när man ser lite bilder?
 
-[FIGURE src=/image/snapshot/oophp20-inheritance.jpg?w=w1&q=70 caption="En sex-sidig tärning med snygga bilder som sidor."]
+[FIGURE src=image/snapvt17/oophp20-css-sprite.png?w=w2 caption="Dubbelkolla att du har rätt bild och kolla vilken länken till bilden är."]
 
-Du kan [testa mitt exempel](kod-exempel/oophp20/inheritance/dice.php?roll=6). Du försöker själv först, innan du kikar på "facit", snart kan du säkert göra bättre än "facit".
+[FIGURE src=image/snapvt17/oophp20-dice-image.png?w=w2 caption="En sex-sidig tärning med snygga bilder som sidor."]
 
 
 
 ###PHP stödjer inte multipelt arv {#arv-mult}
 
-PHP är ett språk som har stöd för ett arv, en klass kan ärva från en annan klass. I vissa objektorienterade programmeringsspråk, till exempel C++, finns stöd för multipelt arv. Där kan en klass ärva från flera andra klasser. Är man van vid programmeringsspråk som stödjer multipelt arv kan man vid första anblicken känna avsaknaden av det. Men, det handlar om strukturering av koden och i programmeringsspråk som PHP, och andra som inte har valt att implementera multipelt arv, får man ta till andra lösningar för att strukturera sin kod. I PHP heter dessa *[interface](#interface)* och *[trait](#traits)*. 
+PHP är ett språk som har stöd för ett arv, en klass kan ärva från en annan klass. I vissa objektorienterade programmeringsspråk, till exempel C++, finns stöd för multipelt arv. Där kan en klass ärva från flera andra klasser. Är man van vid programmeringsspråk som stödjer multipelt arv kan man vid första anblicken känna avsaknaden av det. Men, det handlar om strukturering av koden och i programmeringsspråk som PHP, och andra som inte har valt att implementera multipelt arv, får man ta till andra lösningar för att strukturera sin kod. I PHP heter dessa *[interface](#interface)* och *[trait](#traits)*.
+
+Men, vi pratar mer om trait och interface lite senare.
 
 
 
-10. Är-en och har-en {#is-has}
------------------------------------------------------------------------------------------------
+Komposition och aggregat {#is-has}
+-------------------------------------------------------------------------------
+
+Arv sägs vara en *is-a* relation, medans composition är *has-a* relation, två olika varianter av hur objekt förhåller sig till varandra när man modellerar eller bygger systemen.
 
 
 
@@ -953,135 +988,180 @@ Relationen *is-a* implementeras som arv och relationen *has-a* implementeras som
 
 Vi har tittat på arv så låt oss se hur *has-a* implementeras i PHP. Själva terminologin är alltså vanlig när man modellerar. Relationen *has-a* kallas "[object composition](http://en.wikipedia.org/wiki/Object_composition)" och en variant av den är "object aggregation" där skillnaden mellan de båda är hur stark kopplingen är mellan objekten. 
 
-För att ta ett exempel, ett Hus har ett Rum och när huset förstörs så förstörs även rummet, det är "composition" och ett starkt beroende. Rummet kan inte existera utan Huset. "Aggregation" säger en lösare koppling som att Huset har en Inneboende. När Huset rivs så flyttar den Inneboende till ett annat Hus, den Inneboende har ett liv, även om Huset förstörs.
+För att ta ett exempel, ett Hus har ett Rum och när huset förstörs så förstörs även rummet, det är _composition_ och ett starkt beroende. Rummet kan inte existera utan Huset. _Aggregation_ säger en lösare koppling som att Huset har en Inneboende. När Huset rivs så flyttar den Inneboende till ett annat Hus, den Inneboende har ett liv, även om Huset förstörs.
 
-[FIGURE src=/image/snapshot/oophp20-uml-has-a.jpg caption="Skillnaden mellan aggregation och composition, i ett UML diagram, är om romben är fylld eller ej."]
+[FIGURE src=image/snapvt17/oophp20-uml-composition-aggregate.png caption="Skillnaden mellan aggregation och composition, i ett UML diagram, är om romben är fylld eller ej."]
 
-Siffran anger hur många, antalet. Finns det 10 rum i huset så borde det stå 10. Inneboende kan det finnas i ett hus, men inte säkert, det kan alltså finnas mellan 0 och flera inneboende. Det kan representeras av `0..*` eller bara en `*` i diagrammet. Detta kallas *multiplicity*.
+Siffran anger hur många, antalet. I bilden ovan så verkar det som det finns 5 rum i huset och att huset har 3 inneboende. Det är väldigt specifikt i detta fallet. Man skull eockså kunna modellera mer löst. Säg att Inneboende kan det finnas i ett hus, men inte säkert, det kan alltså finnas mellan 0 och flera inneboende. Det kan representeras av `0..*` eller bara en `*` i diagrammet. Att sätta siffror på antalet i en relation kallas *multiplicity*.
 
 
 
 ###En tärningshand består av fem tärningar {#dicehand}
 
-Nåväl, låt oss göra ett exempel. Säg att vi vill spela ett tärningsspel och jag väljer att modellera en tärningshand `CDiceHand` som består av så många tärningar som spelaren skall kasta varje runda. Spelar vi [Yatsy](http://sv.wikipedia.org/wiki/Yatzy) så innebär det i praktiken att tärningshanden skall bestå av fem tärningar och man skall kunna kasta tärningarna tre gånger och varje gång väljer man vilka tärningar som skall sparas.
+Nåväl, låt oss göra ett exempel. Säg att vi vill spela ett tärningsspel och jag väljer att modellera en tärningshand `DiceHand` som består av så många tärningar som spelaren skall kasta varje runda. Spelar vi [Yatsy](http://sv.wikipedia.org/wiki/Yatzy) så innebär det i praktiken att tärningshanden skall bestå av fem tärningar och man skall kunna kasta tärningarna tre gånger och varje gång väljer man vilka tärningar som skall sparas.
 
-Här har vi ett *has-a* relation där `CDiceHand` består av sex stycken `CDiceImage`. Rent implementationsmässigt kan man välja att kasta en tärning fem gånger, eller att kasta fem tärningar var sin gång. Jag väljer det senare eftersom det känns mer kopplat till hur verkligheten funkar, det blir (troligen) lättare att ha koll på.
+Här har vi ett *has-a* relation där `DiceHand` består av sex stycken `DiceImage`. Rent implementationsmässigt kan man välja att kasta en tärning fem gånger, eller att kasta fem tärningar var sin gång. Jag väljer det senare eftersom det känns mer kopplat till hur verkligheten funkar, det blir (troligen) lättare att ha koll på.
 
-[FIGURE src=/image/snapshot/oophp20-cdicehand-aggregate.jpg caption="En CDiceHand består av (aggregat) fem CDice."]
+[FIGURE src=image/snapvt17/oophp20-uml-dicehand.png caption="En DiceHand består av (aggregat) fem DiceImage."]
+
+Ibland kan det vara trevligt att rita en bild över sin kod. I mitt exempel så använder jag ett fritt ritverktyg som heter [Dia](https://wiki.gnome.org/Apps/Dia/) och finns till alla plattformar. Ett liknande verktyg bör man ha i sin verktygslåda.
+
+
+
+###Att implementera DiceHand {#dicehandimpl}
+
+Vi kan lika gärna sätta ihop koden till DiceHand tillsammans. Vi börjar med en grov mall med medlemsvariabel och några metoder.
+
+Här är lite ledtrådar till hur jag gjorde, du behöver inte göra på samma sätt, bara det fungerar för dig. Dessutom, när man tittar på en klass i designstadiet så är det inte säkert att den ser likadan ut när man äf färdigimplementerad. Kanske finner man bättre lösningar än ens första angreppsätt. Jag gjorde det. Men här var mitt utgångsläge.
+
+```php
+/**
+ * A hand holding some dices.
+ */
+class DiceHand
+{
+    /**
+     * @var integer $numDices Number of dices.
+     * @var []      $ndices   Array holding the dices.
+     * @var integer $sum      Hold the sum of the dices.
+     */
+    private $numDices;
+    private $dices;
+    private $sum;
+
+
+    /**
+     * Constructor.
+     *
+     * @param int $numDices Number of dices in the hand, defaults
+     *                      to five dices.
+     *
+     * @return self
+     */
+    public function __construct($numDices = 5)
+    {
+        // create the dices in the $dices array
+    }
+
+
+    /**
+     * Roll all dices in the hand.
+     *
+     * @return void
+     */
+    public function roll()
+    {
+        // roll the dices and update the sum
+    }
+
+
+    /**
+     * Get the sum of the last roll.
+     *
+     * @return int Sum of the last roll, or 0 if no roll has been made.
+     */
+    public function getTotal()
+    {
+        // just return the sum
+    }
+
+
+    /**
+     * Get the rolls as a serie of images.
+     *
+     * @return string The html representation of the last roll.
+     */
+    public function getRollsAsImageList()
+    {
+        // get and return a image representation of the dices thrown
+    }
+}
+```
+
+Känn dig fri att uppdatera dina andra klasser om det behövs. Om du gör det så tänk på det publika API:et, kanske ändrar du något som gör att en tidigare övning inte går att köra längre?
+
+Vill du vara bakåtkompatibel så kan du alltid skapa nya klasser om det behövs. Nya klasser kan du forma som du vill. Det är ju en variant.
+
+Ett tips är också att överväga hur du implementerar inuti klassen. Skapar du fem objekt av Dice? Eller kastar du Dice fem gånger? Vilket blir mest rätt och spelar det någon roll vilken lösning du gör inuti klassen, så länge som användaren uppfattar att han har en tärningshand med fem tärningar?
 
 
 
 ###Övning, en tärningshand {#ovning-7}
 
-Nu är det dags för dig att pröva om dina vingar bär, kan du själv implementera klassen `CDiceHand` tillsammans med ett exempelprogram som visar att det fungerar med fem tärningar? Det räcker om du kan kasta alla tärningarna en gång, du behöver inte implementera så att man kan spara tärningar och kasta flera gånger.
+1. Gör en DiceHand som representerar en tärningshand med 5 tärningar.
 
-Här är lite ledtrådar till hur jag gjorde, du behöver inte göra på samma sätt, bara det fungerar.
-
-**Först en mall till hur jag löste klassen `CDiceHand`.**
-
-```php
-<?php
-/**
- * A hand of dices, with graphical representation, to roll.
- *
- */
-class CDiceHand {
-
-  /**
-   * Properties
-   *
-   */
-  private $dices;
-  private $numDices;
-  private $sum;
-
-
-  /**
-   * Constructor
-   *
-   * @param int $numDices the number of dices in the hand, defaults to six dices. 
-   */
-  public function __construct($numDices = 5) {
-  }
-
-
-  /**
-   * Roll all dices in the hand.
-   *
-   */
-  public function Roll() {
-  }
-
-
-  /**
-   * Get the sum of the last roll.
-   *
-   * @return int as a sum of the last roll, or 0 if no roll has been made.
-   */
-  public function GetTotal() {
-  }
-
-
-  /**
-   * Get the rolls as a serie of images.
-   *
-   * @return string as the html representation of the last roll.
-   */
-  public function GetRollsAsImageList() {
-  }
-}
-```
-
-Jag fick även ändra lite i klassen `CDice`, numer kastar jag tärningen endast en gång och jag vill ha ut resultatet direkt, utan att gå via en array. Jag lade till en ny metod `CDice::GetLastRoll()` och jag ändrade beteendet på `CDice::Roll()` så att metoden alltid returnerar värdet på senaste kastet. Det var båda ändringar som inte förstörde kompabiliteten eller förändrade klassens API så att det inte blev bakåtkompatibelt. Det är bra, de andra exempelprogrammen kan alltså fortfarande använda min klass `CDice`. Den typen av tankar är överkurs just nu, men i längden är det sådana saker som gör skillnaden mellan en medioker eller duktig programmerare.
-
-Detta blir en lite friare övning och du märker säkert att det finns flera sätt att implemementera lösningen på, inget är mer rätt än det andra, bara olika, så länge resultatet blir rätt.
+1. Lägg till så att du kan skapa godtyckligt antal tärningar via querysträngen `?dices=24`.
 
 Så här blev det för mig.
 
-[FIGURE src=/image/snapshot/oophp20-dicehand.jpg?w=w1&q=70 caption="En tärningshand med fem tärningar."]
-
-Du kan [testa mitt exempel](kod-exempel/oophp20/has-a/dice.php). Utseendemässigt ser det ut som man slagit en tärning fem gånger, men implementationsmässigt är det, som du ser i `CDiceHand`, en helt annan sak.
+[FIGURE src=image/snapvt17/oophp20-dicehand.png?w=w2 caption="En tärningshand med <strike>fem</strike> 24 tärningar."]
 
 
 
-11. Objekt och sessioner {#session}
------------------------------------------------------------------------------------------------
+Objekt och sessioner {#session}
+-------------------------------------------------------------------------------
+
+Ett objekt kan lagras i sessionen via `$_SESSION`, som vilken variabel som helst. Det kan vara en smidig hantering. Du behöver inte göra någon omvandling utan lagringen sköts automatiskt av PHP, om du gör på rätt sätt. 
 
 
 
 ###Lagra objekt i sessionen {#objektsess}
 
-Ett objekt kan lagras i [sessionen](kunskap/kom-i-gang-med-php-pa-20-steg#sessioner), `$_SESSION`, vilket kan vara en smidig hantering. Du behöver inte göra någon omvandling utan lagringen sköts automatiskt av PHP, om du gör på rätt sätt. 
+Principen bakom lagringen är att objektet serialiseras och kodas om som en ström av tecken för att kunna sparas undan på disk eller i en databas.
 
-Principen bakom lagringen är att objektet serialiseras -- kodas om som en ström av byten, innan det läggs i sessionen för att sparas undan på disk eller databas. Datan i sessionen lagras mellan anropen på disk eller i databas. När det  är dags att läsa upp innehållet i sessionen, vid nästa sidanrop, så görs en baklänges serialisering av objektet, *unserialize*, och det blir objekt igen. Detta sköts alltså automatiskt av PHP. Det enda kravet är att klassfilen finns tillgänglig, att den har inkluderats, eller att man använder `auto_load()`som vi gör, innan sessionen startas. Klassens struktur måste vara känd för att det lagrade objektet skall kunna göras `unserialize()` på.
+Datan i sessionen lagras mellan anropen på disk eller i databas. När det  är dags att läsa upp innehållet i sessionen, vid nästa sidanrop, så görs en baklänges serialisering av objektet, *unserialize*, och det blir till ett objekt igen. Detta sköts alltså automatiskt av PHP. Det enda kravet är att klassfilen finns tillgänglig, att den har inkluderats, eller att man använder en autoloader så som vi gör, innan sessionen startas. Klassens struktur måste vara känd för att det lagrade objektet skall kunna göras `unserialize()` på.
 
 Om du missar att inkludera klassens definition, innan du startar sessionen, så får du ett felmeddelande som kan se ut som följer.
 
- > *Fatal error: main() [function.main]: The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;CDiceHand&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition in /usr/home/mos/htdocs/dbwebb.se/kod-exempel/oophp20/session/dice.php on line 58*
+ > *Fatal error: main() [function.main]: The script tried to execute a method or access a property of an incomplete object. Please ensure that the class definition &quot;DiceHand&quot; of the object you are trying to operate on was loaded _before_ unserialize() gets called or provide a __autoload() function to load the class definition in /usr/home/mos/htdocs/dbwebb.se/kod-exempel/oophp20/session/dice.php on line 58*
 
 Det finns två funktioner som används, bakom scenen, för att sköta hanteringen, `serialize()` och `unserialize()`. Du kan läsa mer om [objekt och serialisering](http://php.net/manual/en/language.oop5.serialization.php) i manualen. Du kan manuellt använda dessa funktioner då du vill spara ett objekt i en fil eller i en databas.
 
 
 
-###Övning {#ovning-8}
+###Övning tärning till 21 {#ovning-8}
 
-Vidareutveckla din spelhand så att den kan summera alla tärningslag som du gör i en runda. Säg att du har en tärningshand med två tärningar, du skall slå dem valfritt antal gånger för att komma så nära 21 som möjligt, men inte över, för då blir du "tjock". Du skall alltså kasta din tärningshand valfritt antal gånger i din runda. Spara objektet i sessionen så att den "kommer ihåg" summan mellan kasten. Håll det enkelt, du behöver inte göra någon koll om spelaren är över 21, det får spelaren hålla koll på själv.
+Gör följande övning.
 
-Här är några ledtrådar till hur jag löste uppgiften.
+1. Skapa en klass som har två tärningar och ackumulerar summan av slagen för varje gång tärningshanden slås.
 
-Jag kunde valt att ärva CDiceHand till en ny subklass som kunde hantera en spelomgång, men istället valde jag att utöka klassen CDiceHand med ny funktionalitet. Du kan göra som du tycker är bäst. Jag kunde utöka klassen utan att störa dess tidigare publika API, så det var bra.
-
+På det viset kan du bygga ett tärningsspel som låter dig komma till 21, eller så nära som möjligt.
 
 Så här blev det för mig.
 
-[FIGURE src=/image/snapshot/oophp20-session.jpg?w=w1&q=70 caption="Spela 21 med en tärningshand som hanterar en spelrunda tillsammans med sessionen."]
+[FIGURE src=image/snapvt17/oophp20-dicehand-21.png?w=w2 caption="Jag lyckades nå 21 till slut, med tärningshand i sessionen."]
 
-Du kan [testa mitt exempel](kod-exempel/oophp20/session/dice.php).
+Här är några ledtrådar till hur jag löste uppgiften.
+
+Vidareutveckla din spelhand så att den kan summera alla tärningslag som du gör i en runda. Säg att du har en tärningshand med två tärningar, du skall slå dem valfritt antal gånger för att komma så nära 21 som möjligt, men inte över, för då blir du "tjock". Du skall alltså kasta din tärningshand valfritt antal gånger i din runda. Spara objektet i sessionen så att den "kommer ihåg" summan mellan kasten. Håll det enkelt, du behöver inte göra någon koll om spelaren är över 21, det får spelaren hålla koll på själv.
+
+Jag kan välja att ärva DiceHand till en ny subklass som kunde hantera en spelomgång. Alternativet är att utöka klassen DiceHand med ny funktionalitet. Du kan göra som du tycker är bäst. Går det att utöka klassen utan att påverka dess publika API?
 
 
 
+Avslutningsvis {#avslutning}
+-------------------------------------------------------------------------------
+
+Du har nu fått en introduktion till objektorientering i PHP med klasser, arv, komposition och klasser som använder varandras värden.
+
+Du kan använda klasser i sessionen och du vet hur autoloading fungerar och du kan rita enkla diagram med UML. 
+
+Detta är en god start på grunderna i OOPHP. Nu behöver du koda lite själv för att bli varmare i kläderna.
+
+Glöm inte att PHP-manualen är en god källa till kunskap. Det finns en egen sektion om de objektorienterade teknikerna i PHP.
+
+Det finns en forumtråd där du kan [ställa frågor om artikeln, eller bidra med tips och trix](t/6331).
+
+
+
+<!--
 12. Statiska medlemmar {#static}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+namespace
+exceptions
+chainable
+
 
 
 
@@ -1498,9 +1578,25 @@ Allt fick inte plats och det finns ett par närliggande konstruktioner som du ka
 
 Men någonstans skall man börja sin objektorienterade resa och med denna artikel har du gjort det, trevlig resa!
 
+-->
 
 
 <!--
+
+
+
+
+###Code refactoring av Histogram {#refactor}
+
+I klassen tärning hittade jag ingen metod som var kandidat till att bli privat. Men om jag kikar i koden för Histogram så ser jag en möjlighet att skriva om och förbättra min kod. Det är sådant som kallas _code refactoring_ [^6] och det innebär att man skriver om sin kod så att den blir bättre, lättare att underhålla och vidareutveckla. Gör om och gör bättre, helt enkelt.
+
+Min lösning innebar att nu innehåller båda metoderna dubbletter av delvis samma kod. Ibland vill man lösa ett problem snabbt och då är det en enkel väg att gå. Man vill minimera duplicerandet av kod. Duplicerar man kod så är man inte DRY [^14], och det vill man försöka att vara.
+
+Det är vad jag nu tänker göra, ett försök att vara DRY och bryta ut delar av den duplicerade koden till en egen metod. Jag tar den del av kod som är samma i båda metoderna och lägger i en egen privat metod. Metoden kan bli privat för det är ingen utanför klassen som skall anropa den.
+
+
+
+
 
 14. Object iteration {#alternativ-struktur}
 -----------------------------------------------------------------------------------------------

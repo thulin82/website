@@ -29,7 +29,7 @@ I kursmomentet introduceras också en webbserver för Node.js i form av Express.
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-10 studietimmar)*
+*(ca: 4-6 studietimmar)*
 
 
 ###Kurslitteratur  {#kurslitteratur}
@@ -70,13 +70,17 @@ Det finns inga extra lästips.
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 6-10 studietimmar)*
+*(ca: 12-16 studietimmar)*
 
 
 
 ###Övningar {#ovningar}
 
 Utför följande övningar för att träna inför uppgifter och projektet.
+
+
+
+###Programmera i MySQL {#progmysql}
 
 1. Jobba igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)" för att lära dig grunderna i hur du använder transaktioner i databaser. Spara dina exempelprogram i `me/kmom05/prog-sql`.
 
@@ -85,6 +89,10 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 1. Jobba igenom "[Triggers i databas](kunskap/triggers-i-databas)" för att lära dig om vad du kan göra med triggers och hur de fungerar. Spara dina exempelprogram i `me/kmom05/prog-sql`.
 
 1. Jobba igenom "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/prog-sql`.
+
+
+
+####Node.js, Express och MySQL {#express}
 
 1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom05/express`.
 
