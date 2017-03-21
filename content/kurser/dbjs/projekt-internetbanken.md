@@ -82,7 +82,7 @@ The following reports should be supported:
 * Present all entries in the log table.
 * Show all account holders with their accounts and balance.
 * Show the accumulated interest for each account.
-* Show the content of you own special account where all transaction fees goes. (This one is for the nice lodge in Sunny Spain).
+* Show the content of your own special account where all transaction fees goes. (This one is for the nice lodge in Sunny Spain).
 
 The management reports should be implemented as stored procedures and should be executed through a MySQL client (Workbench and CLI).
 
