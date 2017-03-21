@@ -17,7 +17,11 @@ Objektorienterad programmering är en av de mer kända programmeringssätten, de
 
 Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan visa vad du kan så här långt.
 
+[FIGURE src=/image/oophp/v3/test-session.png?w=w1&q=70 caption="Sessionstest är en av övningarna som finns med i detta kursmoment."]
+
 [FIGURE src=/image/oophp/v3/dice100.png?w=w1&q=70 caption="Tärningsspelet 100 är en av övningarna som finns med i detta kursmoment."]
+
+[FIGURE src=/image/oophp/v3/calendar1.png?w=w1&q=70 caption="En månadskalender är en av övningarna som finns med i detta kursmoment."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -70,7 +74,7 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 <!-- 1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". -->
 
-1. Artikel om "[klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser)".
+1. Artikeln "[sessioner och cookies i php](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass.
 
 1. Artikel som förbereder navbar och visar hur man integrerar en klass/tjänst in i ramverket.
 

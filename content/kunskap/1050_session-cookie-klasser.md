@@ -5,7 +5,7 @@ revision:
 category:
     - oophp
 ...
-Klasser för $\_SESSION och $\_COOKIE
+Klasser för sessionen och cookies
 ===================================
 
 <!-- [FIGURE src=/image/oophp/v3/login-top.png?w=c5 class="right"] -->
