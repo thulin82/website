@@ -82,6 +82,8 @@ Gör följande övningar för att träna inför uppgifterna.
 
 1. Läs igenom artikeln "[En kalender med mithril components](kunskap/en-kalender-med-mithril-components)".
 
+1. Läs igenom artikeln "[Lägg till en Splash screen och ändra ikon](kunskap/splash-screen-och-ikon)".
+
 <!-- 1. Läs igenom artikeln och gör övningarna i "[Mobil webapp och RESTful server](kunskap/mobil-webapp-och-restful-server)". Spara de övningar du gör i mappen `me/kmom03/ajax`. -->
 
 
