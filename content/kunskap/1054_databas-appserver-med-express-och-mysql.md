@@ -149,7 +149,7 @@ Det är grunden, låt se om det fungerar.
 
 
 
-Verifiera att grunden fungerar {#verifiera}
+En databas {#databas}
 ---------------------------------------
 
 Exempelkoden förutsätter att du kan koppla upp dig mot en MySQL databasserver enligt följande.
