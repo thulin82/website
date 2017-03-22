@@ -56,34 +56,33 @@ Vi har sedan tidigare grunden i hur man bygger upp en appserver med Express som 
 Det ser ut ungefär så här, om man skapar en god grundstruktur för själva applikationen, delvis genom att återanvända det vi lärt oss tidigare.
 
 ```bash
-dbjs/example/nodejs/express-mysql$ tree .
+dbjs/example/nodejs/express-mysql$ tree -L 2
 .
 ├── app.js
 ├── database.js
 ├── index.js
 ├── public
 │   ├── css
-│   │   └── style.css
 │   ├── img
-│   │   └── mos.jpg
 │   ├── js
-│   │   └── move.js
 │   └── page.html
 ├── routes
 │   ├── database.js
 │   └── index.js
+├── sql
+│   └── setup.sql
 └── views
     ├── database.pug
+    ├── edit.pug
     ├── error.pug
     ├── incl
-    │   ├── footer.pug
-    │   ├── header-database.pug
-    │   └── header.pug
     ├── index.pug
     ├── page.pug
-    └── search.pug
+    ├── search.pug
+    ├── view-all.pug
+    └── view.pug
 
-7 directories, 17 files
+8 directories, 15 files
 ```
 
 I modulen `app.js` bygger vi upp själva servern och exporterar den.
