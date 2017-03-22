@@ -5,6 +5,7 @@ category:
     - php
     - kursen oophp
 revision:
+    "2017-03-22": "(D, mos) Länka till resurser med asset()."
     "2017-03-15": "(C, mos) Stycke om Makefile."
     "2017-03-13": "(B, mos) Förbättrad routing."
     "2017-03-10": "(A, mos) Första utgåvan."
@@ -392,9 +393,11 @@ Nästa steg får bli hur vi kan skriva kod för att hantera olika routes.
 
 
 
-###Att länka filer och bilder {#asset}
+###Att länka filer och bilder med asset() {#asset}
 
-Förklara $url->asset() för länkande av bilder, css, js;
+När du vill skapa en länk till en resurs, en _asset_, i form av bilder, stylesheets, javascript eller andra filer, så använder du metoden `$url->asset()`. Den metoden ignorerar `SCRITP_NAME` när länken skapas.
+
+Kom alltså ihåg att skapa länkar som leder in i frontkontroller och ramverk via `$this->create()` och länkar till resurser skapar du med `$url->asset()`.
 
 
 
