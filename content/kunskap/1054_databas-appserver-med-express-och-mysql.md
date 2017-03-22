@@ -34,6 +34,20 @@ Exempelprogram finns i ditt kursrepo (dbjs) under `example/nodejs/express-mysql`
 
 
 
+Parsa inkommande POST {#body-parser}
+--------------------------------------
+
+Följande modul krävs för att Express skall kunna parsa inkommande POST-requester så som exemplet använder det.
+
+```bash
+# Gå till roten av kursrepot
+$ npm install body-parser
+```
+
+Då kan vi börja.
+
+
+
 Grunden till appservern {#grunden}
 --------------------------------------
 
@@ -536,16 +550,6 @@ Att uppdatera databasen {#post-form}
 
 Säg att vi vill ha möjligheten att uppdatera information som finns i databasen. Först behöver vi lista vilka rader som finns i tabellen, sedan väljer vi en av raderna och får ut dess innehåll i ett formulär där vi kan editera det och sedan spara. Ungefär så.
 
-
-
-###Parsa inkommande POST {body-parser}
-
-Nu vill vi använda POST-metoden för formuläret, då behöver vi en ny modul som Express vill ha för att parsa det inkommande formuläret.
-
-```bash
-$ npm install body-parser
-```
-
 Låt oss ta det stegvis.
 
 
@@ -609,9 +613,9 @@ else
     p No match.
 ```
 
-ovan är den centrala delen av vyn som kollar om det har fått något objekt bifogat och isåfall presenteras det i en tabell, annars blir det "No match".
+Ovan är den centrala delen av vyn som kollar om det har fått något objekt bifogat och isåfall presenteras det i en tabell, annars blir det "No match".
 
-Nu finns det en länk som leder oss vidare. Du ser länken?
+Nu finns det en "Edit" länk som leder oss vidare. Låt oss ta den.
 
 
 
@@ -640,7 +644,7 @@ else
     p No match.
 ```
 
-Ovan ser vi kärnan i vyn, det är ett formulär som postas till samma route det kom ifrån.
+Ovan ser vi kärnan i vyn, det är ett formulär som postas till routen `/db/edit` med metoden POST.
 
 Nu kan man redigera namnet på objektet, i webbläsaren, och klicka på "Save".
 
