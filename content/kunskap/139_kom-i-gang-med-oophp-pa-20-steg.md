@@ -1617,10 +1617,6 @@ Det är vad jag nu tänker göra, ett försök att vara DRY och bryta ut delar a
 
 
 
-Referenser {#referenser}
-------------------------
-
-Följande är referenser som använts som fotnötter i texten.
 
 [^1]: [Wikipedia om programmeringsparadigm](https://en.wikipedia.org/wiki/Programming_paradigm).
 
