@@ -286,7 +286,7 @@ otherPage: function() {
 }
 ```
 Vi skapar en ny funktion `otherPage` där vi uppdaterar innehållet i appen. På den nya sidan lägger vi till en knapp som skapar ett `alert`.
-Det är viktigt att använda något `touch-event` istället för `onclick`. `onclick` har en 300 ms delay innan den reagerar på att du har klickat på knappen.
+Det är viktigt att använda något `touch-event` istället för `click`. `click` har en 300 ms delay innan den reagerar på att du har klickat på knappen.
 
 Testa appen igen.
 
@@ -295,9 +295,44 @@ $ cordova emulate android
 ```
 [FIGURE src=/image/kunskap/cordova/cordova-intro-alert.png?w=500&h=300]
 
-Nu har vi gjort vår första app i Cordova.
+Nu har vi gjort vår första app i Cordova och testat den i Android. Om vi istället testar appen i webbläsaren som en vanlig webbsida kommer inte knapparna funka. Testa appen med `cordova emulate browser` och aktivera inte responsive mode i developer tools. Webbläsare aktiverar bara 'touch' event om man är i responsive mode. Om vi också vill att knapparna ska funka som en vanlig webbsida behöver vi lägga till ett `click` event som gör samma sak som vårt `touch` event.
 
+Jag gör det smidigast genom att skapa en ny funktion som tar emot ett element och en callback funktion. I funktionen skapar vi både ett 'click' och ett 'touchend' event för elementet.  
 
+```js
+    homePage: function() {
+        ...
+        var button = document.getElementsByClassName("otherPage")[0];
+        app.addEventListeners(button, this.otherPage);
+    },
+
+    otherPage: function() {
+        ...
+        var button = document.getElementsByClassName("alertButton")[0];
+        app.addEventListeners(button, function() {
+            window.alert("Hej");
+        });
+    },
+    
+    addEventListeners: function(element, callback) {
+        element.addEventListener("touchend", callback);
+        element.addEventListener("click", callback);    
+    }
+```
+
+Nu funkar appen både i responsive mode och i en vanlig webbläsare. Om du testade klicka på `alertButton` i responsive mode så märkte du kanske att `alert` visades två gånger, det är för att webbläsaren aktiverar både click och touchend när den är i responsive mode (även emulatorn gör det). När vi använder appen i en mobil/responsive mode i webbläsaren vill vi inte aktivera click utan bara touchend. I och med att touchend aktiveras före click (click har 300ms delay) kan vi lägga till [event.preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault) i touchend, det kommer stoppa click från att aktiveras.
+
+```js
+addEventListeners: function(element, callback) {
+    element.addEventListener("touchend", function(event) {
+        event.preventDefault();
+        callback();
+    });
+    element.addEventListener("click", callback);    
+}
+```
+
+Nu ska appen fungera som det är tänkt. Testa den i webbläsaren, både med och utan responsive mode. Lek med eventen, preventDefault och console.log om du inte hängde med på hur det fungerar.
 
 Felsöka appar {#felsoka}
 --------------------------------------
@@ -326,6 +361,6 @@ Avslutningsvis {#avslutning}
 --------------------------------------
 
 Nu har vi skapat en mobil webbapp i Cordova och lärt oss felsöka den. 
-Tänk på att påverka DOM så lite som möjligt och använd `Touch` event  istället för `onclick`.
+Tänk på att påverka DOM så lite som möjligt och använd `Touch` event  istället för `click`.
 
 Har du [tips, förslag eller frågor om artikeln](t/6312) så finns det en specifik forumtråd för det.
