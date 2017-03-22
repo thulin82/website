@@ -6,6 +6,7 @@ category:
     - express
     - kursen dbjs
 revision:
+    "2017-03-22": (B, mos) Flytta npm pug till toppen.
     "2017-03-20": (A, mos) Första utgåvan i kursen dbjs.
 ...
 Node.js webbserver med Express 
@@ -37,11 +38,11 @@ Installera modulen med npm {#npm}
 
 Modulen [Express finns på npm](https://www.npmjs.com/package/express). Express är också en del av [MEAN](http://mean.io/) som är en samling moduler för att bygga webbapplikationer med Node.js. I denna artikeln kommer vi enbart att använda Express.
 
-Jag går till kursrepot och installerar modulen med npm.
+Jag går till kursrepot och installerar modulen, tillsammans med templatemotorn Pug, med npm.
 
 ```bash
 # Ställ dig i rooten av ditt kursrepo.
-$ npm install express
+$ npm install express pug
 ```
 
 Klart. Då testar vi om installationen gick bra.
@@ -269,18 +270,7 @@ Vyer {#vyer}
 
 Låt oss kika på hur vi kan rendera svar som är en kombination av HTML och utskrift av JavaScript variabler.
 
-
-
-###Template-motor pug {#pug}
-
-Till det behöver vi en template-motor och det finns många att välja på, men vi håller det enkelt och tar [Pug](https://www.npmjs.com/package/pug) som är den som används i manualen för Express.
-
-```bash
-# Gå till rooten av kursrepot.
-$ npm install pug
-```
-
-[Manualen till Pug](https://pugjs.org/api/getting-started.html) finner vi på deras hemsida. Den är bra att ha tillhanda nu när vi skall börja använda template-motorn för att skapa dynamiska HTML-sidor.
+Vi använder [Pug](https://www.npmjs.com/package/pug) som templatemotorn. [Manualen till Pug](https://pugjs.org/api/getting-started.html) finner vi på deras hemsida. Den är bra att ha tillhanda nu när vi skall börja använda template-motorn för att skapa dynamiska HTML-sidor.
 
 
 

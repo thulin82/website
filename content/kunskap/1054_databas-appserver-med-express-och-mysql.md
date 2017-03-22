@@ -7,18 +7,19 @@ category:
     - mysql
     - kursen dbjs
 revision:
-    "2017-03-22": (A, mos) Första utgåvan i kursen dbjs.
+    "2017-03-22": "(B, mos) Uppdaterad, genomgången och mer formulär och post."
+    "2017-03-22": "(A, mos) Första utgåvan i kursen dbjs."
 ...
 Databas appserver med Express och MySQL
 ==================================
 
-[FIGURE src=image/snapvt17/image/snapvt17/express-mysql-search-u.png?w=c5&a=10,50,50,0&cf class="right"]
+[FIGURE src=image/snapvt17/express-mysql-search-u.png?w=c5&a=10,50,50,0&cf class="right"]
 
 Vi har tidigare sett hur vi kan bygga en applikations- och webbserver med hjälp av Node.js och modulen Express. Nu vill vi se hur vi från en sådan appserver kan jobba mot databasen MySQL.
 
 Servern skall både servera statiska filer som bilder, CSS och JavaScript tillsammans med mer dynamiska routes som jobbar mot databasen.
 
-Som template-motor använder vi Pug, den hjälper oss att rendera HTML-sidor med dynamisk information från JavaScript och databasen.
+Som templatemotor använder vi Pug, den hjälper oss att rendera HTML-sidor med dynamisk information från JavaScript och databasen.
 
 <!--more-->
 
@@ -71,7 +72,7 @@ dbjs/example/nodejs/express-mysql$ tree .
 7 directories, 17 files
 ```
 
-Filen `app.js` bygger upp själva servern och exporterar den.
+I modulen `app.js` bygger vi upp själva servern och exporterar den.
 
 ```javascript
 /**
@@ -132,6 +133,62 @@ Det är grunden, låt se om det fungerar.
 Verifiera att grunden fungerar {#verifiera}
 ---------------------------------------
 
+Exempelkoden förutsätter att du kan koppla upp dig mot en MySQL databasserver enligt följande.
+
+```javascript
+const connection = mysql.createConnection({
+    host     : "localhost",
+    user     : "user",
+    password : "pass",
+    database : "nodedb"
+});
+```
+
+Om du inte har en sådan databas så kan du skapa den via skriptet `sql/setup.sql` som ligger bland exempelfilerna.
+
+Titta först i filen `sql/setup.sql`, som innehåller SQL-kod.
+
+```sql
+CREATE DATABASE IF NOT EXISTS nodedb;
+GRANT ALL ON nodedb.* TO user@localhost IDENTIFIED BY 'pass'; 
+
+USE nodedb;
+
+CREATE TABLE IF NOT EXISTS Moped (
+    `id` INTEGER AUTO_INCREMENT PRIMARY KEY,
+    `text` VARCHAR(40)
+);
+
+DELETE FROM Moped;
+
+INSERT INTO Moped (`text`)
+VALUES
+    ("Apollo"), ("Husqvarna"), ("Puch"), ("Zündapp")
+;
+
+SELECT * FROM Moped;
+```
+
+Sen kör du SQL-filen via MySQL för att skapa exempeldatabasen. Det kan se ut så här.
+
+```bash
+$ mysql < sql.setup.sql
+id      text
+5       Apollo
+6       Husqvarna
+7       Puch
+8       Zündapp
+```
+
+Om allt fungerar så har du nu tabellen som behövs för att köra exempelprogrammet.
+
+Det bör gå bra förutsatt att du kör som en användare som har befogenheter att skapa nya databaser och göra GRANT.
+
+
+
+Verifiera att grunden fungerar {#verifiera}
+---------------------------------------
+
 Låt oss starta upp en server för att se att installationen gick bra.
 
 ```bash
@@ -141,13 +198,13 @@ Express is ready.
 
 Sedan öppnar vi en webbläsare mot servern och accessar `page.html` som bör leda till resursen `public/page.html`.
 
-[FIGURE src=image/snapvt17/express-mysql-index.png caption="Index-sidan visas som vi förväntar oss."]
+[FIGURE src=image/snapvt17/express-mysql-index.png?w=w2 caption="Index-sidan visas som vi förväntar oss."]
 
-Vi prövar en felaktig route för att se att felhanteraren och templatemotorn är på plats.
+Vi prövar en felaktig route för att se att felhanteraren fungerar.
 
-[FIGURE src=image/snapvt17/express-mysql-404.png caption="Felmeddelande visas som tänkt."]
+[FIGURE src=image/snapvt17/express-mysql-404.png?w=w2 caption="Felmeddelande visas som tänkt."]
 
-Nu testar vi en korrekt route, defaultrouten från `route/index.js`.
+Nu testar vi en korrekt route, defaultrouten från `route/index.js`, via denna testar vi också att templatemotorn är på plats.
 
 ```javascript
 /* The default route, home page. */
@@ -159,7 +216,7 @@ router.get("/", function(req, res) {
 });
 ```
 
-[FIGURE src=image/snapvt17/express-mysql-index-route.png caption="defaultrouten renderar sidan via vyn `views/index.pug`."]
+[FIGURE src=image/snapvt17/express-mysql-index-route-1337.png?w=w2 caption="defaultrouten renderar sidan via vyn `views/index.pug`."]
 
 Grunden är på plats och det verkar fungera.
 
@@ -190,8 +247,6 @@ const database = {};
 
 connection.connect();
 
-
-
 /**
  * Doing a MySQL query within a Promise.
  *
@@ -211,8 +266,6 @@ database.queryPromise = (sql, param) => {
     });
 };
 
-
-
 module.exports = database;
 ```
 
@@ -230,9 +283,7 @@ Här ser du hur det fungerar tillsammans med en första route `/test1` som stäl
 
 const express = require("express");
 const router = express.Router();
-
 const database = require("../database");
-
 
 
 /**
@@ -259,7 +310,7 @@ Frågan vi ställer mot databasen kräver en koppling men ingen tabell, frågan 
 
 De routes som ligger i filen `routes/database.js` är monterade på grundrouten `/db`, så routen till till test1 blir `db/test1`.
 
-Var en route-fil monteras styrs av `app.js`. Så här ser det ut.
+Var någonstans en route-fil monteras, styrs i `app.js`. Så här ser det ut.
 
 ```javascript
 // Load the routes
@@ -308,14 +359,14 @@ Vyn skriver ut informationen från de variabler den har tillgång till och sedan
 
 Templatemotorn innehåller konstruktioner som låter oss loopa genom arrayer och objekt.
 
-I vyn sker även debugging med konstruktionen `- console.log()` som skriver ut på serversidan, det kan vara ett bra sätt att debugga en vy.
+I vyn sker även debugging med konstruktionen `- console.log()` som skriver ut på serversidan, det kan vara ett bra sätt att debugga en vy. Ibland kan man bli osäker på vad ett resultset innehåller, men nu ser vi hela dess innehåll utskrivet på servern, det är bra vid utveckling och test.
 
 
 
 Att visa upp innehållet i en tabell {#select-table}
 --------------------------------------
 
-Jag gör en ny vy som visar upp innehållet i en tabell. Nu när jag har grunden på plats så är det bara vyn som behövs.
+Jag gör en ny route som visar upp innehållet i en tabell. Nu när jag har grunden på plats så är det bara routen som behövs.
 
 ```javascript
 /**
@@ -347,7 +398,7 @@ Testar vi routen `db/test2` så ser vi resultatet.
 
 [FIGURE src=image/snapvt17/express-mysql-select-all.png?w=w2 caption="Visa upp allt innehåll i en tabell."]
 
-Nu ser vi den delen i vyn som loopade genom resultsetet, hur den presenterar resultatet.
+Nu ser vi bättre resultatet från den delen i vyn som loopar genom resultsetet och skriver ut varje rad för sig och radens innehåll i en lista.
 
 
 
@@ -386,11 +437,11 @@ I routen hämtas `searchstr` från routens del via `req.params`, sedan används 
 
 Söker vi efter mopeder som heter Husqvarna så ser routen ut så här `db/search/Husqvarna`. 
 
-Resultatet ser ut så här.
+Resultatet blir så här.
 
 [FIGURE src=image/snapvt17/express-mysql-search-husqvarna.png?w=w2 caption="Söker efter en specifik moped via namnet."]
 
-Se det som ett exempel som kopplar routens del mot en fråga mot databasen.
+Se det som ett exempel som kopplar routens del mot en fråga i databasen.
 
 
 
@@ -410,9 +461,7 @@ Låt oss kika på routen.
 router.get("/search", function(req, res) {
     var data = {};
 
-    if (req.query.search) {
-        data.search = req.query.search;
-    }
+    data.search = req.query.search;
 
     if (req.query.doSearch) {
         data.doSearch = true;
@@ -437,7 +486,9 @@ WHERE
 });
 ```
 
-Det är lika bra vi kikar på det matchande formuläret samtidigt.
+Routen har två lägen, antingen är formuläret postat och då utförs en SQL-fråga och resultsetet bifogas till vyn, annars är formuläret inte postat och då visas enbart vyn utan resultset.
+
+Det är lika bra vi samtidigt kikar på det matchande formuläret från vyn.
 
 ```html
 include incl/header-database.pug
@@ -466,7 +517,7 @@ if doSearch
 include incl/footer.pug
 ```
 
-Den första delen är själva formuläret. Den andra delen är utskriften av sökresultatet, förutsatt att en sökning gjordes.
+Den första delen är själva formuläret. Den andra delen är utskriften av sökresultatet, förutsatt att en sökning gjordes. Koden använder en if, en villkorsfunktion, från templatemotorn.
 
 Låt oss pröva routen `/db/search` och se hur det ser ut.
 
@@ -480,9 +531,188 @@ Detta visar grunden i hur du kan skapa formulär och skicka till en route som se
 
 
 
+Att uppdatera databasen {#post-form}
+--------------------------------------
+
+Säg att vi vill ha möjligheten att uppdatera information som finns i databasen. Först behöver vi lista vilka rader som finns i tabellen, sedan väljer vi en av raderna och får ut dess innehåll i ett formulär där vi kan editera det och sedan spara. Ungefär så.
+
+
+
+###Parsa inkommande POST {body-parser}
+
+Nu vill vi använda POST-metoden för formuläret, då behöver vi en ny modul som Express vill ha för att parsa det inkommande formuläret.
+
+```bash
+$ npm install body-parser
+```
+
+Låt oss ta det stegvis.
+
+
+
+###Visa info om ett objekt {#visaett}
+
+Vi börjar med en route som visar informationen om ett objekt, en rad. Routen får vara `/db/view/2` där 2 är det id som gäller för objektet.
+
+Så här.
+
+[FIGURE src=image/snapvt17/express-mysql-view-id.png?w=w2 caption="Visa information om ett objekt."]
+
+Vi kikar på routen.
+
+```javascript
+/**
+ * View a specific moped.
+ */
+router.get("/view/:id", (req, res) => {
+    var data = {};
+
+    data.title = "View | Express";
+
+    data.sql = `
+SELECT * FROM Moped
+WHERE
+    id = ?
+;`;
+    data.param = [req.params.id];
+
+    database.queryPromise(data.sql, data.param)
+    .then((result) => {
+        if (result.length) {
+            data.object = {
+                id:     result[0].id,
+                text:   result[0].text,
+            };
+        }
+        res.render("view", data);
+    })
+    .catch((err) => {
+        throw err;
+    });
+});
+```
+
+Routen ställer en SELECT-fråga och lägger in svaret i variabler som bifogas till vyn.
+
+```html
+if object
+    p This matches the following.
+
+    <table>
+    <tr><th>Id</th><th>Text</th></tr>
+    tr
+        td= object.id
+        td= object.text
+        <td><a href="/db/edit/#{object.id}">Edit</a></td>
+    </table>
+else
+    p No match.
+```
+
+ovan är den centrala delen av vyn som kollar om det har fått något objekt bifogat och isåfall presenteras det i en tabell, annars blir det "No match".
+
+Nu finns det en länk som leder oss vidare. Du ser länken?
+
+
+
+###Visa objektet i ett formulär {#obj-form}
+
+Nu vill vi förbereda så att det går att editera innehållet i objektet. Vi tar därför ungefär samma route men presenterar informationen i ett formulär.
+
+Så här.
+
+[FIGURE src=image/snapvt17/express-mysql-edit-form.png?w=w2 caption="Visa information om ett objekt i ett formulär."]
+
+Routen ser ungefär liknande ut som tidigare, det handlar främst om hur informationen presenteras i vyn.
+
+```html
+if object
+    p Edit this entry.
+
+    <form method="post" action="/db/edit">
+        <input type="hidden" name="id" value="#{object.id}">
+        <p><input type="text" name="text" value="#{object.text}"></p>
+        <input type="submit" name="doEdit" value="Save">
+        <input type="reset" value="Reset">
+    </form>
+    <p><a href="/db/view/#{object.id}">View</a></p>
+else
+    p No match.
+```
+
+Ovan ser vi kärnan i vyn, det är ett formulär som postas till samma route det kom ifrån.
+
+Nu kan man redigera namnet på objektet, i webbläsaren, och klicka på "Save".
+
+Den route som då hanterar det postade formuläret är `/db/edit`, den ser ut så här.
+
+```javascript
+/**
+ * Edit a specific moped, from submitted form.
+ */
+router.post("/edit", (req, res) => {
+    var data = {};
+
+    data.sql = `
+UPDATE Moped
+SET
+    text = ?
+WHERE
+    id = ?
+;`;
+    console.log(req.body);
+    data.param = [req.body.text, req.body.id];
+
+    database.queryPromise(data.sql, data.param)
+    .then(() => {
+        res.redirect(`/db/edit/${req.body.id}`);
+    })
+    .catch((err) => {
+        throw err;
+    });
+});
+```
+
+Det är en route som endast svarar på POST-metoden och det gör en update mot databasen och hämtar informationen från det postade formuläret vars information är samlad i `req.body`.
+
+Notera att det görs en redirect till en resultatsida. Denna route visar alltså inte själv svaret uten skickar helt enkelt vidare till en annan route vars ansvar är att visa resultatet. Det gör man för att undvika problem som annars inträffar med reload av ett postat formulär.
+
+
+
+###Visa vilka rader som finns {#post-show}
+
+Till slut kan vi skapa routen `/db/view` som visar samtliga rader och erbjuder en länk för att enbart visa informationen om ett specifikt objekt.
+
+Så här.
+
+[FIGURE src=image/snapvt17/express-mysql-view-all.png?w=w2 caption="Visa alla rader i tabellen."]
+
+Nu har vi nästan tillräckligt så att användaren kan navigera mellan våra routes och uppdatera informationen i databasen.
+
+Själva vyn för att visa alla kan vara intressant att se då den lägger in alla raderna i en HTML-tabell.
+
+```html
+p You have the following.
+
+<table>
+<tr><th>Rad</th><th>Id</th><th>Text</th></tr>
+each row, rownum in resultset
+    tr
+        td= rownum
+        td= row.id
+        <td><a href="/db/view/#{row.id}">#{row.text}</a></td>
+</table>
+```
+
+Det fick bli en blandning av Pug's syntax och ren HTML.
+
+Detta var en uppsättning routes och vyer med formulär som ger dig möjlighet att skapa grunderna i ett användargränssnitt för användaren och erbjuda sätt att modifiera i databasen.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Detta var ytterligare ett exempel på hur Express kan fungera, nu tillsammans med databasen MySQL.
+Detta var ytterligare ett exempel på hur Express kan fungera, nu tillsammans med databasen MySQL och tillsammans med formulär via templatemotorn Pug.
 
 Denna artikel har en [egen forumtråd](t/6333) som du kan ställa frågor i, eller ge tips.
