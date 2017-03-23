@@ -54,7 +54,7 @@ Om du använder en klass så lägger du den i `src/Navbar/Navbar.php` med motsva
 Krav {#krav}
 -----------------------
 
-1. Skapa en klass för din navbar.
+1. Skapa en klass för din navbar. Använd ditt egna namespace.
 
 1. Använd de färdiga konstruktionerna för `interfaces` och `traits`.
 
