@@ -11,7 +11,7 @@ Kom igång med Cordova
 
 [FIGURE src=/image/kunskap/cordova_logo.png?w=500&h=300]
 
-Vi ska använda Apache Cordova för att skapa en "hello world" webbapp och testa köra den i en android emulator. Cordova är ett [cross-plattform tool](https://en.wikipedia.org/wiki/Cross-platform) som är gratis och open source. Apparna byggs i HTML, CSS och JavaScript. 
+Vi ska använda Apache Cordova för att skapa en "hello world" webbapp och testa köra den i en android emulator. Cordova är ett [cross-plattform tool](https://en.wikipedia.org/wiki/Cross-platform) som är gratis och open source. Apparna byggs i HTML, CSS och JavaScript.
 
 <!--more-->
 
@@ -40,18 +40,18 @@ Hello word {#hello_world}
 --------------------------------------
 
 När vi skapar ett nytt Cordova projekt får vi med kod och filstruktur för en fungerande app så vi testar skapa ett nytt projekt i terminalen.
- 
+
 ```bash
 $ cordova create hello se.dbwebb.helloWorld HelloWord
 ```
 
-`cordova create` kommandot tar tar emot följande argument: 
+`cordova create` kommandot tar tar emot följande argument:
 
 * **directory**: Vad mappen som vårt prjojekt ska ligga i ska heta som. I detta fallet "hello".
 
-* **identifier**: Identifierare appen, används b.la. för Android appar. Den är skriven i [reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). I detta fallet "se.dbwebb.helloWorld".
+* **identifier**: Identifierare för appen, används b.la. för Android appar. Den är skriven i [reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation). I detta fallet "se.dbwebb.helloWorld".
 
-* **title**: Projektets title. I vårt fall "HelloWorld"  
+* **title**: Projektets title. I vårt fall "HelloWorld"
 
 Vi tar en titt på vad för mappar och filer som har skapats.
 
@@ -73,16 +73,16 @@ hello/
         └── index.js
 ```
 
-* **config.xml**: Configurerar appen. I den kan du ändra beteendet av appen och ändra title, beskrivning och skapare av appen. [Dokumentation](https://cordova.apache.org/docs/en/latest/config_ref/index.html) för de som vill gräva ner sig.
+* **config.xml**: Configurerar appen. I den kan du ändra beteendet av appen och ändra titel, beskrivning och skapare av appen. [Dokumentation](https://cordova.apache.org/docs/en/latest/config_ref/index.html) för de som vill gräva ner sig.
 
 * **hook**: Här kan vi lägga in skript som vi vill ska ingå i Cordovas skripts. T.ex. om vi vill lägga till ett skript till `build` kommandot.
 
-* **platforms**: Här kommer källkoden för alla platformar, som vi lägger till i projektet, ligga. Vi kommer har källkod för Android och Browser. Oftast ska/behöver man inte ändra på någon av den koden.
+* **platforms**: Här finns källkoden för alla platformar, som vi lägger till i projektet. Vi kommer ha källkod för Android och Browser. Oftast ska/behöver man inte ändra på någon av den koden.
 
 * **plugins**: Plugin vi lägger till i projektet kommer kopieras hit.
 
 * **www**: Här vi kommer jobba och ändra saker. Innehåller vår källkod för webb delen, HTML, CSS och JavaScript.
-  
+
 
 
 ###Inspektera koden {#inspektera}
@@ -129,18 +129,18 @@ Första meta taggen är [_content security policy_](https://developer.mozilla.or
 `format-detection` taggen konverterar telefonnummer till länkar. Användare kan klicka på länken så startas ett samtal till det numret.
 
 ```html
-<meta name="msapplication-tap-highlight" content="no">  
+<meta name="msapplication-tap-highlight" content="no">
 ```
 Den här kan vi ta bort då vi inte ska använda vår app på en Windows Phone.
 
 ```html
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 ```
-Sen har vi `viewport` meta tag som ni borde veta vad den är.
+Sen har vi `viewport` meta tag som ni har introducerats till tidigare. Den ser till så att hela skärmytan på våra mobila enheter används för att visa innehåll.
 
 Längst ner i `body` inkluderar vi två JavaScript filer. `index.js` filen kommer vara vår start punkt. `cordova.js` ger oss tillgång till Cordovas API för att komma åt native funktionaliteter.
 
-Vi går vidare och inspektera `index.js`. Jag har tagit bort kommentarerna.
+Vi går vidare och inspekterar `index.js`. Jag har tagit bort kommentarerna.
 
 ```js
 var app = {
@@ -169,7 +169,7 @@ Koden som finns där nu döljer `<p>` taggen med innehållet `Connecting to Devi
 
 Cordova har fler events vi kan utnyttja, här kan du läsa om [de olika eventen](https://cordova.apache.org/docs/en/latest/cordova/events/events.html). Det finns bl.a. `pause` som aktiveras när appen läggs i bakgrunden och `resume` som aktiveras när appen plockas fram från bakgrunden.
 
-Då kan det vara dags att kicka på hur appen ser ut. Vi måste lägga till vilka plattformar appen ska funka på och sen start en emulator.
+Då kan det vara dags att kicka på hur appen ser ut. Vi måste lägga till vilka plattformar appen ska fungera på och sen starta en emulator.
 
 ```bash
 $ cordova platform add android --save
@@ -190,7 +190,7 @@ $ cordova emulate browser
 Om du öppnar `index.html` filen i webbläsaren istället för att köra `cordova emulate browser` kommer `cordova.js` att saknas. `cordova.js` läggs till när du exekverar `cordova emulate browser` som startat `cordova build`. Då flyttas även din kod till `/platforms/browser/www/`, det är här emulatorn utgår ifrån.
 
 [INFO]
-Att köra emulatorer använder mycket resurser från datorn. Om du inte lyckas stänga ner emulator processerna helt kan det sluta med att du har flera liggandes i bakgrunden vilket får din dator att prestera sämre. Kolla vilka processer du har igång med `ps` kommandot i samma terminal du har startat emulatorerna. Om det finns gamla processerkan du döda dem med `kill -9 <PID>`. 
+Att köra emulatorer använder mycket resurser från datorn. Om du inte lyckas stänga ner emulator processerna helt kan det sluta med att du har flera liggandes i bakgrunden vilket får din dator att prestera sämre. Kolla vilka processer du har igång med `ps` kommandot i samma terminal du har startat emulatorerna. Om det finns gamla processer kan du döda dem med `kill -9 <PID>`.
 [/INFO]
 
 
@@ -224,7 +224,7 @@ I `index.js` rensar vi också. Lägg till `"use strict";` överst i filen så va
 
     homePage: function() {
     }
-    
+
 ...
 ```
 
@@ -233,7 +233,7 @@ Då ska vi ändra innehållet i vår app. Med SPA tänket väljer vi att ändra 
 ```js
 homePage: function() {
     var content = document.getElementsByClassName("app")[0];
-    
+
     var html = "<h1 class='title'>Hello World</h1>";
     html += "<div class='main'>Hej och välkommen till min första Cordova app.</div>";
     content.innerHTML = html;
@@ -254,17 +254,17 @@ Jag har så klart ändrat i CSS filen. Testa du också att leka med stylen.
 
 ##Touch event {#touch}
 
-För att ändra innehållet i appen lägger vi till en `button` och skapa ett `touchend` event. 
+För att ändra innehållet i appen lägger vi till en `button` och skapa ett `touchend` event.
 
 ```js
 homePage: function() {
     var content = document.getElementsByClassName("app")[0];
-    
+
     var html = "<h1 class='title'>Hello World</h1>";
     html += "<div class='main'>Hej och välkommen till min första Cordova app.";
     html += "<button class='otherPage'>Nästa sida</button></div>";
     content.innerHTML = html;
-    
+
     var button = document.getElementsByClassName("otherPage")[0];
     button.addEventListener("touchend", this.otherPage);
 },
@@ -272,13 +272,13 @@ homePage: function() {
 otherPage: function() {
     var title = document.getElementsByClassName("title")[0];
     var content = document.getElementsByClassName("main")[0];
-    
+
     title.innerHTML = "Other page";
-    
+
     var html = "Try an alert!<br>";
     html += "<button class='alertButton'>Alert</button>";
     content.innerHTML = html;
-    
+
     var button = document.getElementsByClassName("alertButton")[0];
     button.addEventListener("touchend", function() {
         window.alert("Hej");
@@ -286,7 +286,7 @@ otherPage: function() {
 }
 ```
 Vi skapar en ny funktion `otherPage` där vi uppdaterar innehållet i appen. På den nya sidan lägger vi till en knapp som skapar ett `alert`.
-Det är viktigt att använda något `touch-event` istället för `click`. `click` har en 300 ms delay innan den reagerar på att du har klickat på knappen.
+Det är viktigt att använda något `touch-event` istället för `click`. `click` har en 300ms fördröjning innan den reagerar på att du har klickat på knappen.
 
 Testa appen igen.
 
@@ -297,7 +297,7 @@ $ cordova emulate android
 
 Nu har vi gjort vår första app i Cordova och testat den i Android. Om vi istället testar appen i webbläsaren som en vanlig webbsida kommer inte knapparna funka. Testa appen med `cordova emulate browser` och aktivera inte responsive mode i developer tools. Webbläsare aktiverar bara 'touch' event om man är i responsive mode. Om vi också vill att knapparna ska funka som en vanlig webbsida behöver vi lägga till ett `click` event som gör samma sak som vårt `touch` event.
 
-Jag gör det smidigast genom att skapa en ny funktion som tar emot ett element och en callback funktion. I funktionen skapar vi både ett 'click' och ett 'touchend' event för elementet.  
+Jag gör det smidigast genom att skapa en ny funktion som tar emot ett element och en callback funktion. I funktionen skapar vi både ett 'click' och ett 'touchend' event för elementet.
 
 ```js
     homePage: function() {
@@ -313,10 +313,10 @@ Jag gör det smidigast genom att skapa en ny funktion som tar emot ett element o
             window.alert("Hej");
         });
     },
-    
+
     addEventListeners: function(element, callback) {
         element.addEventListener("touchend", callback);
-        element.addEventListener("click", callback);    
+        element.addEventListener("click", callback);
     }
 ```
 
@@ -328,7 +328,7 @@ addEventListeners: function(element, callback) {
         event.preventDefault();
         callback();
     });
-    element.addEventListener("click", callback);    
+    element.addEventListener("click", callback);
 }
 ```
 
@@ -339,7 +339,7 @@ Felsöka appar {#felsoka}
 
 Det finns olika sätt att felsöka en Cordova app.
 Vi börjar med det lättaste, felsöka den i webbläsaren och som en vanlig webbsida.
-När det funkar kan du gå vidare och kolla om det funkar i emulatorn. När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `console.log()`.
+När det fungerar kan du gå vidare och kolla om det fungerar i emulatorn. När vi felsöker i emulatorn är det bra om vi kan se utskrifter vi gör med `console.log()`.
 För att se `console.log` kan vi starta `adb logcat` i terminalen medans vi kör appen. Jag lägger in en `console.log()` i eventet för alert, startar emulatorn och kör sen kommandot `adb logcat`.
 ```js
 button.addEventListener("touchend", function() {
@@ -360,7 +360,7 @@ Klicka på inspect och då får du upp ett nytt fönster där du kan styra din e
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Nu har vi skapat en mobil webbapp i Cordova och lärt oss felsöka den. 
-Tänk på att påverka DOM så lite som möjligt och använd `Touch` event  istället för `click`.
+Nu har vi skapat en mobil webbapp i Cordova och lärt oss felsöka den.
+Tänk på att påverka DOM så lite som möjligt och använd `touch` event  istället för `click`.
 
 Har du [tips, förslag eller frågor om artikeln](t/6312) så finns det en specifik forumtråd för det.
