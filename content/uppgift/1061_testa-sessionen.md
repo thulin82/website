@@ -9,7 +9,7 @@ revision:
 Integrera klassen Session i Anax-lite
 ==================================
 
-Nu har du gått igenom olika delar som tillsammans gör det möjligt att integrera egna moduler och klasser in i ditt Anax-lite. I den här uppgiften ska du bygga in klassen Session, från övningen [Klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser). Du ska även skapa en rote för en test-sida där du använder sessionen.
+Nu har du gått igenom olika delar som tillsammans gör det möjligt att integrera egna moduler och klasser in i ditt Anax-lite. I den här uppgiften ska du bygga in klassen Session, från övningen [sessioner och cookies i php](kunskap/session-cookie-klasser). Du ska även skapa en rote för en test-sida där du använder sessionen.
 
 <!--more-->
 

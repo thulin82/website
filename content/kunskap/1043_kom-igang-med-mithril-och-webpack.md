@@ -23,7 +23,7 @@ Introduktion {#intro}
 
 Du kan läsa mer om [begreppet SPA på Wikipedia](https://en.wikipedia.org/wiki/Single-page_application).
 
-Vi kommer installera och använda [Mithril](http://mithril.js.org/) för att bygga en enkel applikation som hämtar JSON-data från en server, använder sig av en router och renderar vyerna via en template.
+Vi kommer installera och använda [Mithril](http://mithril.js.org/) för att bygga en enkel applikation som använder sig av en router och använder virtuella noder för att visa upp våra vyer.
 
 Låter det magiskt? Lika bra vi ser hur det fungerar i kod, så faller saker nog på plats.
 
@@ -32,7 +32,7 @@ Det är bra om du är bekant med [MVC-liknande tekniker](https://en.wikipedia.or
 Du kan testa samtliga exemplel i artikeln via  i kursrepot som ligger på dbwebb i katalogen [`example/meapp-mithril`](webapp/repo/example/meapp-mithril/). Källkoden för exemplet hittar i i ditt kursrepo eller på [GitHub](https://github.com/mosbth/webapp/tree/master/example/meapp-mithril/www).
 
 [INFO]
-Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För att testa dem behöver du ett Cordova projekt du kan kopiera in www-mappen i och sen initiera mappen med npm och installera mithril och webpack med npm.
+Vi har valt att inte inkludera `node-modules`-mappen i Mithril exemplen. För att testa dem behöver du ett Cordova projekt du kan kopiera in www-mappen i och sen köra kommandot `npm install`, som installerar node modulerna via `package.json`.
 [/INFO]
 
 
@@ -59,7 +59,7 @@ $ cd www/
 $ npm init --yes
 ```
 
-Vi har nu skapat vår egna paket fil för just detta projektet som än så länge inte innehåller mycket, men som vi i denna guide kommer bygga på. Vi ska nu installera mithril och webapck via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att vi kan importera och exportera kod i mithril.
+Vi har nu skapat vår egna paket fil för just detta projektet som än så länge inte innehåller mycket, men som vi i denna övning kommer bygga på. Vi ska nu installera mithril och webpack via npm och gör det med följande kommandon. Vi använder `--save` för att det ska sparas som en modul vi är beroende av i `package.json`. Webpack installerar vi för att kunna importera och exportera kod i mithril.
 
 ```bash
 $ npm install mithril --save
@@ -120,7 +120,12 @@ Vi börjar med att rensa i `index.html`.
 </html>
 ```
 
-Vi behåller `Content-Security-Policy` taggen för att skydda oss mot XSS attacker, vi kommer dock i senare kursmoment lägga till så vi kan hämta data från api'er. `viewport` meta-taggen talar om att vi vill visa upp våra appar på enheter i olika storlekar. Längst ner i `index.html` ändrar från att inkludera `index.js` till att istället inkludera vår mithril app som finns i `bin/app.js`.
+Vi behåller `Content-Security-Policy` taggen för att skydda oss mot XSS attacker, vi kommer dock i senare kursmoment lägga till så vi kan hämta data från api'er. `viewport` meta-taggen talar om att vi vill visa upp våra appar på enheter i olika storlekar. Längst ner i `index.html` ändrar vi från att inkludera `index.js` till att istället inkludera vår mithril app som finns i `bin/app.js`.
+
+
+
+Vår första vy {#vy}
+--------------------------------------
 
 Skapa mappen `js/views` och vår första mithril vy `js/views/me.js`.
 
@@ -132,12 +137,7 @@ $ touch js/views/me.js
 
 Den befintliga filen `js/index.js` är vår utgångspunkt för appen och den pekar ut vad som ska visas när en användare kommer till vår app. Vi skapar desutom en katalog för våra vyer, med vårt första mithril vy `me.js`.
 
-
-
-Vår första vy {#vy}
---------------------------------------
-
-I vår `js/views/me.js` fil vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion med namnet `view` som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
+I `js/views/me.js` filen vill vi än så länge bara visa upp vårt egna namn. Vi importerar först mithril och lägger till vårt vy som en modul. Alla vy-moduler har en funktion `view`, som returnerar de element som ska visas upp i vyen. Här vill vi bara visa vårt egna namn i en `<h1>` tag, så bytt gärna ut mitt namn mot ditt.
 
 ```javascript
 "use strict";
@@ -169,7 +169,7 @@ var app = {
 app.initialize();
 ```
 
-Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att se me-appen för första gång. Detta gör vi terminalen med följande kommando, som vi definerade tidigare i `package.json`.
+Nu behöver vi bara packa ihop vår mithril app med hjälp av webpack för att se me-appen för första gången. Detta gör vi i terminalen med följande kommando, som vi definerade tidigare som ett npm script i `package.json`.
 
 ```bash
 $ npm start
@@ -183,7 +183,7 @@ Nu borde du se din me-sida med ditt namn.
 
 En router för flera sidor {#router}
 --------------------------------------
-Med bara en sida har vi inte kommit långt så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I den här vyn ser du att vi returnerar en array av objekt som placeras i ordning efter varann i vyn.
+Med bara en sida har vi inte kommit långt. Så låt oss titta på hur vi lägger till ytterligare en vy och en router så vi kommer åt vyn. Först skapar vi filen `js/views/hobby.js` och precis som `me.js` definerar våra nya `hobby.js` en vy. I den här vyn ser du att vi returnerar en array av virtuella noder, som placeras i ordning efter varann i vyn.
 
 ```javascript
 "use strict";
@@ -199,7 +199,7 @@ module.exports = {
 };
 ```
 
-I vår `index.js` ändrar vi så istället för att använda funktion `m.mount()` använder vi funktionen `m.route()`. Route funktionen tar tre argument:
+I vår `index.js` ändrar vi så vi använder funktionen `m.route()` istället för `m.mount()`. `m.route()` tar tre argument:
 
 1. Vilket element som skall fyllas med de virtuella noder.
 
@@ -230,11 +230,14 @@ app.initialize();
 ```
 
 Om du manuellt skriver in `/hobby` efter `index.html#!` i din webbläsares adressfält, ser du innehållet från din hobby-vy. `#!` är en _hashbang_, det används vanligen till routing på klient sidan. Det går att ändra vad som ska vara hashbang med [m.route.prefix](http://mithril.js.org/route.html#mrouteprefix).
+
 Vi vill inte skriva in adresser manuellt, så vi ska nu titta på hur vi kan skapa navigering för vår app. Vi kan skapa länkar precis som vi har skapat andra virtuella noder tidigare, så vi lägger till en länk längst upp i vårt me-vy med följande kod. Vi kan nu gå från vårt Me-vy till hobby-vyn.
 
 ```javascript
 m("a", {href: "/hobby", oncreate: m.route.link}, "Hobby")
 ```
+
+Mithrils route funktion är användbar för mer än bara vår huvudrouter. Vi kan till exempel göra omdirigeringar, hämta nuvarande route och mycket annat. [Dokumentationen för `m.route()`](http://mithril.js.org/route.html).
 
 
 
@@ -292,7 +295,7 @@ module.exports = {
 };
 ```
 
-I ovanstående kodexempel skapar vi vår navigation som en navbar med en "logga" och två stycken länkar. Efter navbar skapas ett section-element, som innehåller de virtuella noder från vyn som använder sig av layout. Så lått oss titta på hur vi använder oss av layout från `index.js`.
+I ovanstående kodexempel skapar vi vår navigation som en navbar med en "logga" och två stycken länkar. Efter navbar skapas ett section-element (`m("section.container", vnode.children)`), som innehåller de virtuella noder från vyn som använder sig av layout. Så lått oss titta på hur vi använder oss av layout från `index.js`.
 
 ```javascript
 "use strict";

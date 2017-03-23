@@ -40,7 +40,7 @@ Krav {#krav}
 
 1. Det skall finnas en meny så använderen kan navigera mellan sidorna, måste fungera på en mobil enhet.
 
-1. Gör din me-app personlig, så man ser att det är din me-app. Skapa en egen style som fungerar mobile-first responsivt.
+1. Gör din me-app personlig, så man ser att det är din me-app. Skapa en egen style som fungerar på mobila enheter.
 
 1. Din me-app skall kunna köras med cordova både i browsern och i en android emulator.
 

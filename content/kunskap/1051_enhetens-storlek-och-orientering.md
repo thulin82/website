@@ -82,6 +82,6 @@ Jag behöver också anropa funktionen en första gång. Så att sidan får ett i
 window.checkSizeAndOrientation();
 ```
 
-Så här ser sidan ut när jag testar sidan i Google Chrome, Firefox, Firefox OS och Android emulator.
+Så här ser sidan ut när Mikael testar sidan i Google Chrome, Firefox, Firefox OS och Android emulator.
 
 [YOUTUBE src=3QcYLKi74Lo width=630 caption="Storlek och orientering i olika enheter."]

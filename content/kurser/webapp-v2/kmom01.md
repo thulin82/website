@@ -140,7 +140,6 @@ Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Vilken utvecklingsmiljö sitter du på?
 * Är du sedan tidigare bekant med utveckling av mobila appar?
 * Är du bekant med mithril?
 * Hur känns det att jobba i mithril?

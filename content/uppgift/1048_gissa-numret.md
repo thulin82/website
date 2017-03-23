@@ -127,7 +127,7 @@ Din Guess-klass skall inte använda sig av Session-klassen, kopplingen får gör
 
 Det skall finnas både en länk och en knapp för att göra reset av spelet.
 
-Använd redirect med `header()` för att undvika problem vid POSt och reload.
+Använd redirect med `header()` för att undvika problem vid POST och reload.
 
 ```php
 # Redirect to another page
