@@ -78,7 +78,7 @@ Del 2 av artikeln, kanske avvakta lite med den?
 
 <!-- 1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". -->
 
-1. Artikeln "[sessioner och cookies i php](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass.
+1. Artikeln "[sessioner och cookies i php](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass. Fyll gärna på cookie-klassens metoder med kod.
 
 1. Artikel som förbereder navbar och visar hur man integrerar en klass/tjänst in i ramverket.
 
@@ -94,7 +94,7 @@ Gör följande uppgifter.
 Uppgift som tvingar view med regioner?
 -->
 
-1. Gör uppgiften [Integrera klassen Session](uppgift/testa-sessionen) in i ramverket och skriv en route som testar och visar innehållet i sessionen.
+1. Gör uppgiften [Integrera klassen Session](uppgift/testa-sessionen) in i ramverket och skriv en route som testar och visar innehållet i sessionen. Spara din kod i `me/anax-lite`.
 
 1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
 
