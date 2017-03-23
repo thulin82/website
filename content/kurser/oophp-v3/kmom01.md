@@ -47,7 +47,7 @@ Kika igenom följande artiklar.
 
 1. Läs om "[The MicroPHP Manifesto](https://funkatron.com/posts/the-microphp-manifesto.html)" som ger en reaktion på ramverk och termen mikroramverk.
 
-1. Kika översiktligt i [PHP The Right Way](http://www.phptherightway.com/) om vilka verktyg som rekommenderas av PHP communityn.
+1. Kika översiktligt i [PHP The Right Way](http://www.phptherightway.com/). Bekanta dig kort med dokumentet som presenterar allmänt om verktyg och processer som rekommenderas inom PHP communityn.
 
 
 
