@@ -58,6 +58,8 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 
 1. Läs igenom artikeln från Jonatan och Henrik om en [djungel av ramverk för JavaScript](article/Henrik_Jonatan_Article_rev_c.pdf).
 
+1. Läs Wikipedia artikeln om [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
+
 
 
 ###Video  {#video}

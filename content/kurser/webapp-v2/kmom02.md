@@ -15,6 +15,8 @@ Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som 
 
 Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. Men med mobila terminaler finns det en del som är specifikt och skiljer sig från desktop miljöer. Låt oss bygga vidare på me-appen och testa runt för att se vilka möjligheter och begränsningar som kan finnas. Det blir en blandning av olika tekniker men fokus är att lära oss mer om den mobila utvecklingsmiljön.
 
+Vi kommer även titta på hur vi hämtar data från externa API'er och jobba med verktyg som underlättar när vi jobabr med JSON API'er.
+
 <!--more-->
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
@@ -44,10 +46,6 @@ Läs följande:
 
 Läs följande artiklar för att få bakgrunden till övningarna.
 
-1. Läs om "[Use Cases and Requirements for Installable Web Apps](https://w3c-webmob.github.io/installable-webapps/)".
-
-1. Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
-
 1. Titta igenom [jsonapi.org](http://jsonapi.org/format/) för att få en uppfattning om vad ett JSON-API är. Speciellt specification, recommendation, examples och FAQ är relevanta.
 
 <!-- 1. Läs kort och översiktligt om [Firefox OS](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS).
@@ -62,12 +60,15 @@ Läs följande artiklar för att få bakgrunden till övningarna.
 <!-- 1. Se videon om jQuery Mobile "[Alex Schmitz - jQuery Mobile - What’s New in 1.5 and the Road to 2.0](https://www.youtube.com/watch?v=2qF7kW9SdJQ)". -->
 
 
-
+* Vilken utvecklingsmiljö sitter du på?
 ###Lästips {#lastips}
 
 * Kika igenom [webbplatsen om applikationen jq](https://stedolan.github.io/jq/) som hjälper dig söka och visualisera innehållet i en JSON fil.
 
+* Läs om "[Use Cases and Requirements for Installable Web Apps](https://w3c-webmob.github.io/installable-webapps/)".
 
+* Läs översiktligt om introduktionen till [Android Web Apps](http://developer.android.com/guide/webapps/index.html).
+* Vilken utvecklingsmiljö sitter du på?
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
