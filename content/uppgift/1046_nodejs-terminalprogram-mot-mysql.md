@@ -23,16 +23,16 @@ Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js](kunskap/go
 
 Du har även kunskaper i SQL och MySQL motsvarande artikeln ["Kom igång med SQL"](uppgift/kom-igang-med-sql).
 
+Du har även löst uppgiften "[Node.js terminalprogram mot MySQL](uppgift/nodejs-terminalprogram-mot-mysql)".
+
 
 
 Introduktion {#intro}
 -----------------------
 
-Det stora internationella företaget "Allans Mopeder" har hört talas om dig och vill ha ett Node.js baserat terminalprogram som frontend till sin säljdatabas.
+Det stora internationella företaget "Allans Mopeder" uppskattade ditt tidigare arbete och vill nu ha en webbaserad tjänst av dig. Det handlar fortfarande om en frontend till deras sälj- och distributionsdatabas.
 
-Du har fått en kopia av hela deras säljdatabas och du skall nu bygga ett terminalprogram mot säljdatabasen som är byggd i MySQL.
-
-Du hittar grunden till databasen i `example/nodejs/allans-mopeder/allan.sql`. Du kan använda den SQL-koden för att återskapa databasen som består av följande tabeller.
+Jobba vidare på databasen du hittade i `example/nodejs/allans-mopeder/allan.sql`.
 
 Så här kan du läsa in SQL-kommandon till terminalen MySQL.
 
@@ -40,22 +40,29 @@ Så här kan du läsa in SQL-kommandon till terminalen MySQL.
 $ mysql -uuser -ppass mydb < allan.sql
 ```
 
-De SQL-relaterade uppgifterna är en övning i INNER och OUTER JOIN.
-
-När du får problem med att prompten skrivs ut på "fel" ställe i förhållande till texten från databasfrågan så finner du svaret i form av Promise i artikeln "[Node.js, MySQL och Promise](kunskap/nodejs-mysql-och-promise)".
-
 
 
 Krav {#krav}
 -----------------------
 
-1. Kopiera in filen `allan.sql` till katalogen du arbetar i. Använd filen för att skapa de tabeller som behövs med det innehåll som förväntas.
+1. Skriv ett *main-program* som startar din server, döp det till `index.js`. 
 
-1. Skapa ett terminalkommando som heter allan och startas via `./allan`. Programmet skall fungera med option `--version` och `--help`.
+1. Ditt program skall läsa av environment-variabeln `LINUX_PORT` och, om variabeln är definierad, använda dess innehåll för att starta servern på just den porten. Standardport är annars 1337.
 
-1. När du startar `./allan` så skall du kunna skicka med options som säger till vilken databas programmet skall koppla upp sig och med vilken användare och lösenord. Det kan se ut ut så här `./allan --host localhost --user mos --password XXX --database mos`.
+1. Ditt program skall skriva sitt PID till en fil som heter `pid`. När man kör kommandot `kill $( cat pid )` (eller motsvarande på Cygwin) så skall din server stängas ned.
 
-1. I ditt program, skapa ett menyval "products" som visar vilka produkter Allan säljer. Sortera dem i bokstavsordning.
+1. Du skall kunna skicka med options som säger till vilken databas programmet skall koppla upp sig och med vilken användare och lösenord. Det kan se ut ut så här `node index.js --host localhost --user mos --password XXX --database mos`.
+
+1. I routen `/` visar du en index-sida som innehåller länkar till vad man kan göra. Använd en stylesheet för din CSS-kod.
+
+1. På routen `/view` visar du samtliga produkter samt deras lagerstatus lokalt och centralt. Man skall kunna klicka på en produkt för att se detaljer om enbart den produkten.
+
+1. På routen `/view/:id` visar du informationen om en produkt.
+
+1. På routen `/edit/:id` visar du information om produkten i ett formulär. om du postar formuläret så kan du uppdatera informationen i databasen. Du kan uppdatera namn, lokalt lagerstatus och centralt lagerstatus via detta formulär. 
+
+
+
 
 1. Skapa ett menyval "inventory1" som visar namnet på produkten och hur många som finns i det lokala lagret (inventory). Sortera på den produkt som finns flest av. Om produkten inte finns i lager så skall den inte visas.
 
