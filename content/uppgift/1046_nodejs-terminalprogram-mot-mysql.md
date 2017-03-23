@@ -69,6 +69,8 @@ Krav {#krav}
 
 1. Skapa ett menyval "only" som fungerar som "all" men visar de produkter som finns både i det lokala lagret och i leverantörens centrala lagret.
 
+1. Skapa ett menyval "menu" som visar information om samtliga menyval.
+
 1. Använd Promise så att din prompt skrivs ut på rätt ställe.
 
 1. Validera din kod.
