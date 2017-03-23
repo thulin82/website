@@ -32,28 +32,6 @@ Följande är grundläggande information som du underlättar för att lyckas med
 
 
 
-###Principen bakom generera navbar {#principen}
-
-Principen bakom skapandet av navbaren är enkel och handlar om att strukturera och dela upp kod.
-
-Det handlar om att generera en navbar som kan se ut ungefär så här i HTML-kod.
-
-```html
-
-
-```
-
-Vi vill lyfta ut navbarens innehåll till en konfigurationsfil där navbarens innehåll lagras i en array. Det kan se ut så här.
-
-
-```php
-
-
-```
-
-Det som nu behövs är kod som använder arrayen och skapar HTML-koden.
-
-Därefter kan man med CSS få navbaren att se både snygg ut och fungera i olika variationer av menyer.
 
 
 
@@ -67,16 +45,22 @@ View-filer lägger du under `view/navbar2/`.
 
 Konfigurationsarrayen lägger du direkt i vyn (enklast), eller under `config/navbar.php` (mer utmanande).
 
-Om du använder en klass så lägger du den i `src/Navbar/Navbar.php` med motsvarande namespace. Det är troligen enklare att lägga all kod direkt i vyn, men det är inte optimalt utifrån återanvändning. Välj en väg som du känner rimlig. Kanske börja skriv koden i vyn och om du får tid så flyttar du koden till en klass.
+Om du använder en klass så lägger du den i `src/Navbar/Navbar.php` med motsvarande namespace. Det är troligen enklare att lägga all kod direkt i vyn, men det är inte optimalt utifrån återanvändning. Välj en väg som du känner rimlig. Kanske börja med att skriva koden i vyn och om du får tid så flyttar du koden till en klass.
 
-(Kanske navbar version 1 och sedan navbar version 2 med klasser?)
+<!-- (Kanske navbar version 1 och sedan navbar version 2 med klasser?) -->
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Lägg till en navbar som låter dig navigera på webbplatsen.
+1. Skapa en klass för din navbar.
+
+1. Använd de färdiga konstruktionerna för `interfaces` och `traits`.
+
+1. Använd en konfigurationsfil, `navbar.php`, som styr innehållet i menyn.
+
+1. Välj ett sätt att använda navbaren som känns bekvämt.
 
 1. Lägg till style så att din navbar ser ut som en navbar.
 
@@ -88,7 +72,7 @@ Krav {#krav}
 
 1. Gör en `dbwebb publish anax-lite` för att kolla att allt fungerar.
 
-1. Committa alla filer och lägg till en ny tagg (1.0.\*).
+1. Committa alla filer och lägg till en ny tagg (2.\*.\*).
 
 1. Pusha upp repot till GitHub, inklusive taggarna.
 
