@@ -45,16 +45,14 @@ View-filer lägger du under `view/navbar2/`.
 
 Konfigurationsarrayen lägger du direkt i vyn (enklast), eller under `config/navbar.php` (mer utmanande).
 
-Om du använder en klass så lägger du den i `src/Navbar/Navbar.php` med motsvarande namespace. Det är troligen enklare att lägga all kod direkt i vyn, men det är inte optimalt utifrån återanvändning. Välj en väg som du känner rimlig. Kanske börja med att skriva koden i vyn och om du får tid så flyttar du koden till en klass.
-
-<!-- (Kanske navbar version 1 och sedan navbar version 2 med klasser?) -->
+Klassen lägger du i `src/Navbar/Navbar.php` med motsvarande namespace.
 
 
 
 Krav {#krav}
 -----------------------
 
-1. Skapa en klass för din navbar. Använd ditt egna namespace.
+1. Skapa en klass för din navbar. Använd rätt namespace.
 
 1. Använd de färdiga konstruktionerna för `interfaces` och `traits`.
 
