@@ -117,7 +117,7 @@ Använd ett onlineverktyg för att kontrollera att du producerat JSON som valide
 
 ###Krav 2 Server för att visa och söka bland salar {#k2}
 
-Skapa en server i Node.js (ES6) som kan visa och söka bland salar via följande routes. Alla svar skall vara i JSON. Servern skall använda sig av routern.
+Skapa en server i Node.js (ES6) som kan visa och söka bland salar via följande routes. Alla svar skall vara i JSON. Servern skall använda sig av routern (som användes i kmom05/06).
 
 | Route                     | Resultat |
 |---------------------------|----------|
