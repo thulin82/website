@@ -56,6 +56,8 @@ Krav {#krav}
 
 1. Använd de färdiga konstruktionerna för `interfaces` och `traits`.
 
+1. Se till så navbaren är en del av ramverket.
+
 1. Använd en konfigurationsfil, `navbar.php`, som styr innehållet i menyn.
 
 1. Välj ett sätt att använda navbaren som känns bekvämt.
