@@ -78,9 +78,9 @@ Del 2 av artikeln, kanske avvakta lite med den?
 
 <!-- 1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". -->
 
-1. Artikeln "[sessioner och cookies i php](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass. Fyll gärna på cookie-klassens metoder med kod.
+1. Artikeln "[Sessioner och cookies i PHP](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass. Fyll gärna på cookie-klassens metoder med kod.
 
-1. Artikel som förbereder navbar och visar hur man integrerar en klass/tjänst in i ramverket.
+1. Jobba igenom artikeln "[Att integrera en klass i ramverket Anax Lite](kunskap/att-integrera-en-klass-i-ramverket-anax-lite)" som visar hur du kan integrera en klass eller tjänst in i ramverket Anax Lite.
 
 1. View helpers samt view regions. (make less)?
 
