@@ -12,6 +12,8 @@ Node.js terminalprogram mot MySQL
 
 Du skall bygga ett terminalprogram i Node.js som använder sig av MySQL för att utföra databasrelaterade händelser.
 
+Du skall även använda dig av tekniker för att programmera i databasen med transaktioner, lagrade procedurer, triggers och egendefinierade funktioner.
+
 <!--more-->
 
 
@@ -32,12 +34,13 @@ Introduktion {#intro}
 
 Det stora internationella företaget "Allans Mopeder" uppskattade ditt tidigare arbete och vill nu ha en webbaserad tjänst av dig. Det handlar fortfarande om en frontend till deras sälj- och distributionsdatabas.
 
-Jobba vidare på databasen du hittade i `example/nodejs/allans-mopeder/allan.sql`.
+Du har en ny databas att jobba på i `allan1.sql`.
+`example/nodejs/allans-mopeder/allan1.sql`. Kopiera den till din uppgiftskatalog. 
 
 Så här kan du läsa in SQL-kommandon till terminalen MySQL.
 
 ```bash
-$ mysql -uuser -ppass mydb < allan.sql
+$ mysql -uuser -ppass mydb < allan1.sql
 ```
 
 
@@ -57,34 +60,23 @@ Krav {#krav}
 
 1. På routen `/view` visar du samtliga produkter samt deras lagerstatus lokalt och centralt. Man skall kunna klicka på en produkt för att se detaljer om enbart den produkten.
 
-1. På routen `/view/:id` visar du informationen om en produkt.
+1. På routen `/view/:id` visar du informationen om en produkt, inklusive dess lagerstatus.
 
-1. På routen `/edit/:id` visar du information om produkten i ett formulär. om du postar formuläret så kan du uppdatera informationen i databasen. Du kan uppdatera namn, lokalt lagerstatus och centralt lagerstatus via detta formulär. 
+1. När du visar en produkt så skall du också visa en textsträng som säger "hälsosam" när lagerstatus är över 5 produkter, "beställ" när lagerstatus är 1-4 och "slut" när lagerstatus är 0. Textsträngen visas både för lokal och centralt lagerstatus.
 
+1. På routen `/edit/:id` visar du information om produkten i ett formulär. Om du postar formuläret så kan du uppdatera informationen i databasen. Du kan fritt uppdatera namn, lokalt lagerstatus och centralt lagerstatus via detta formulär, utan några restriktioner. 
 
+1. På routen `move/:id1/:id2` (eller liknande route som du själv väljer) skall du kunna flytta från det lokala lagret till det centrala och vise versa. Du kan ange hur många produkter som kan flyttas. Det måste finnas produkter innan de kan flyttas.
 
+1. Skapa en logg-tabell som loggar varje flytt mellan de två lagren. Du kan logga varje förändring i de två lagren, på det viset kan man ha koll på vilka lagerförändringar som gjorts. Skapa en route `log` som visar innehållet i logg-tabellen.
 
-1. Skapa ett menyval "inventory1" som visar namnet på produkten och hur många som finns i det lokala lagret (inventory). Sortera på den produkt som finns flest av. Om produkten inte finns i lager så skall den inte visas.
-
-1. Skapa ett menyval "inventory2" som gör som "inventory1" men visar alla produkter, även om de inte finns i det lokala lagret.
-
-1. Skapa ett menyval "supplier1" som visar namnet på produkten och hur många som finns i det centrala lagret (supplier). Sortera på den produkt som finns flest av. Om produkten inte finns i lager så skall den inte visas.
-
-1. Skapa ett menyval "supplier2" som gör som "supplier1" men visar alla produkter, även om de inte finns i det centrala lagret.
-
-1. Skapa ett menyval "all" som visar de produkter som antingen finns i det lokala lagret, eller hos leverantörens centrala lagret. Visa hur många som finns i respektive lager. Visa produkten även om den inte finns i något av lagren. Sortera per bokstavsordning.
-
-1. Skapa ett menyval "only" som fungerar som "all" men visar de produkter som finns både i det lokala lagret och i leverantörens centrala lagret.
-
-1. Skapa ett menyval "menu" som visar information om samtliga menyval. Det skall även finnas menyval för "help" och "exit".
-
-1. Använd Promise så att din prompt skrivs ut på rätt ställe.
+1. Du skall använda dig av minst en transaktion, en lagrad procedur, en trigger och en funktion. Uppdatera filen `allan1.sql` så att den innehåller koden för att skapa dessa. Man skall kunna köra `allan1.sql` om och om igen, för att skapa om databasens tabeller.
 
 1. Validera din kod.
 
 ```bash
 # Flytta till kurskatalogen
-dbwebb validate terminal
+dbwebb validate express-sql
 #dbwebb publish terminal
 ```
 

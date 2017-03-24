@@ -104,7 +104,7 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 Dessa uppgifter skall utföras och redovisas.
 
-1. Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen.
+1. Utför uppgiften "[Skapa en appserver mot MySQL](uppgift/skapa-en-appserver-mot-mysql)". I uppgiften får du jobba med både Express, MySQL och programmera i databasen. Spara koden i `me/kmom05/express-sql`.
 
 
 
