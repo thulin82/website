@@ -11,7 +11,7 @@ Kmom01: Objektorientering i PHP
 [INFO]
 **Version 3 av oophp.**
 
-Utveckling av nytt kursmoment pågår. Kursmomentet släpps <strike>senaste den 27/3 2017</strike> släpptes 2017-03-24.
+Utveckling av nytt kursmoment. Kursmomentet släpps <strike>senaste den 27/3 2017</strike> släpptes 2017-03-24.
 
 [/INFO]
 

@@ -13,7 +13,7 @@ revision:
 Bygg ett eget PHP-ramverk
 ==================================
 
-[FIGURE src=/image/snapvt17/anax-lite.png?w=c5 class="right"]
+[FIGURE src=image/snapvt17/anax-lite.png?w=c5 class="right"]
 
 Låt oss bygga ett PHP ramverk från grunden. Inte för avancerat. Inte för simpelt. Det skall vara ett ramverk som erbjuder de vanliga tjänsterna som vi förväntar oss från ett ramverk, samtidigt skall det vara enkelt och inte fullt med features som inte används.
 
