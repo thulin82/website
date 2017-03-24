@@ -137,48 +137,92 @@ Redirect /javascript/kmom06/forelasning.pdf     https://dl.dropbox.com/u/2431521
 
 
 #
+# kurser/
 # kurser/arkiv
 #
-Redirect /webtopic      /kurser/arkiv/webtopic
-Redirect /htmlphp-v1    /kurser/arkiv/htmlphp-v1
-Redirect /oophp-v1      /kurser/arkiv/oophp-v1
-Redirect /phpmvc-v1     /kurser/arkiv/phpmvc-v1
 
-Redirect /htmlphp/me    https://arkiv.dbwebb.se/htmlphp/me/
+# python
+Redirect /python            /kurser/python
 
 
-#
-# Moved all courses to kurser/
-#
-Redirect /htmlphp       /kurser/htmlphp
-Redirect /oophp         /kurser/oophp
-Redirect /phpmvc        /kurser/phpmvc
-Redirect /javascript    /kurser/javascript
+# htmlphp
+Redirect /htmlphp/me            https://arkiv.dbwebb.se/htmlphp/me/
+Redirect /htmlphp-v1            /kurser/htmlphp-v1
+Redirect /kurser/htmlphp-v1     /kurser/arkiv/htmlphp-v1
 
-Redirect /python        /kurser/python
-Redirect /javascript1   /kurser/javascript1
-Redirect /linux         /kurser/linux
+Redirect /htmlphp               /kurser/htmlphp
 
+
+# javascript1
+Redirect /kurser/javascript1/repo   /repo/javascript1
+Redirect /javascript1               /kurser/javascript1
+
+
+# design
+Redirect /design            /kurser/design
+
+
+# linux
+Redirect /linux-v1          /kurser/linux-v1
+Redirect /linux-v2          /kurser/linux-v2
+Redirect /linux             /kurser/linux-v2
+
+
+# oopython
+Redirect /oopython      /kurser/oopython
+
+
+# webapp
 Redirect /webapp/repo   /repo/webapp
-Redirect /webapp        /kurser/webapp
+Redirect /webapp-v1     /kurser/webapp-v1
 
+Redirect /webapp-v2     /kurser/webapp-v2
+Redirect /webapp        /kurser/webapp-v2
+
+
+# oophp
+Redirect /oophp-v1              /kurser/oophp-v1
+Redirect /kurser/oophp-v1       /kurser/arkiv/oophp-v1
+
+Redirect /kurser/oophp-v2/me    https://arkiv.dbwebb.se/oophp/me
+Redirect /oophp-v2              /kurser/oophp-v2
+
+Redirect /oophp-v3              /kurser/oophp-v3
+Redirect /oophp                 /kurser/oophp-v3
+
+
+# ramverk1
+Redirect /ramverk1      /kurser/ramverk1
+
+
+#ramverk2
+Redirect /ramverk2      /kurser/ramverk2
+
+
+# webgl
 Redirect /webgl/repo    /repo/webgl
 Redirect /webgl         /kurser/webgl
 
+
+# dbjs
 Redirect /dbjs          /kurser/dbjs
 
-Redirect /oopython      /kurser/oopython
-Redirect /design        /kurser/design
-Redirect /ramverk1      /kurser/ramverk1
-Redirect /ramverk2      /kurser/ramverk2
+
+# phpmvc
+Redirect /phpmvc-v1         /kurser/arkiv/phpmvc-v1
+Redirect /phpmvc-v2         /kurser/phpmvc
+Redirect /phpmvc            /kurser/phpmvc
+
+
+# javascript
+Redirect /javascript        /kurser/javascript
+
+
+# webtopic
+Redirect /webtopic          /kurser/arkiv/webtopic
+
+
 # matte1, telecom, test, indproj, exjobb
-
-
-
-#
-# Where are all the course repos
-# 
-Redirect /kurser/javascript1/repo   /repo/javascript1
 
 
 
@@ -232,13 +276,6 @@ Redirect 301 /kurser/hur-fungerar-kurspaketet /webprog
 Redirect /sok-bth-webbprogrammering-2013	/forum/viewtopic.php?f=32&t=744	
 Redirect /nu-e-de-fredag /forum/viewtopic.php?f=17&t=2629
 Redirect /fredag         /forum/viewtopic.php?f=17&t=2629
-
-# Olika versioner av kurser
-Redirect /kurser/oophp-v2/me   https://arkiv.dbwebb.se/oophp/me
-Redirect /oophp-v2  /oophp
-Redirect /phpmvc-v2 /phpmvc
-Redirect /linux-v2  /kurser/linux-v2
-Redirect /webapp-v2 /kurser/webapp-v2
 
 # Old articles with new names and links
 Redirect 301 /kunskap/anvand-lydias-formularklass-cform-for-formularhantering	/kunskap/cform-en-php-klass-for-att-skapa-presentera-och-validera-html-formular

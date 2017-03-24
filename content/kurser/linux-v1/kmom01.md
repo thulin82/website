@@ -78,7 +78,7 @@ Det finns inga extra lästips.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](linux/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](kurser/linux-v1/labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `linux`](dbwebb-cli/clone).
 
@@ -113,7 +113,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](linux/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/linux-v1/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

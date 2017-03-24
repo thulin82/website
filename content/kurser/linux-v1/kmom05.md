@@ -90,7 +90,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](linux/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/linux-v1/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

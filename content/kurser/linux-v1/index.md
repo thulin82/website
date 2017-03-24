@@ -96,7 +96,7 @@ Det första kursmomentet går ut på att installera Debian/Linux och logga in p�
 
 För att lyckas med det så behöver du bekanta dig med grunderna i terminalen och lära dig ett par av de viktigaste kommandona som utförs i terminalen.
 
-[Instruktion till kursmoment 01](linux/kmom01).
+[Instruktion till kursmoment 01](kurser/linux-v1/kmom01).
 
 
 
@@ -108,7 +108,7 @@ Ett bra sätt att installera många webbplatser på en och samma maskin är Apac
 
 Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hemma i terminalen, SSH och att jobba med Linux som en server.
 
-[Instruktion till kursmoment 02](linux/kmom02).
+[Instruktion till kursmoment 02](kurser/linux-v1/kmom02).
 
 
 
@@ -116,7 +116,7 @@ Samtidigt behöver vi bekanta oss med fler Unix-kommandon så vi känner oss hem
 
 Mycket handlar om att förenkla vardagen som programmerare genom att automatisera de processer och rutiner man utför. En hel del av det vi gör kan automatiseras via skript, till exempel bash-skript med kommandon. Men för att göra det behöver vi ha koll på hur man skapar skript och hur man programmerar i bash.
 
-[Instruktion till kursmoment 03](linux/kmom03).
+[Instruktion till kursmoment 03](kurser/linux-v1/kmom03).
 
 
 
@@ -126,7 +126,7 @@ Nu har vi en Linux-server, en webbserver och vi kan grunderna i att bygga skript
 
 Så, vi behöver starta med att installera Node.js på servern och komma igång med hur Node.js fungerar. Vi kör på med några övningar och sedan ser vi hur man byggger upp en enkel webbserver, eller webbtjänst, med Node.js. Vi närmar oss ett gränsland där webbservern blir till en webbtjänst. Det blir tydligt i hur vi använder Node.js för att skapa kod som både hanterar webbservern som sådan och lägger till tjänster som utförs av javaScript-funktioner.
 
-[Instruktion till kursmoment 04](linux/kmom04).
+[Instruktion till kursmoment 04](kurser/linux-v1/kmom04).
 
 
 
@@ -136,7 +136,7 @@ Nu har vi en Linux-server, en webbserver, vi kan grunderna i att bygga skript i 
 
 Du kommer få en färdig server och ett RESTful API till servern. Din uppgift är att bygga en klient till servern, enligt en kravspecifikation. Så är upplägget. Låt se hur bra vingarna bär.
 
-[Instruktion till kursmoment 05](linux/kmom05).
+[Instruktion till kursmoment 05](kurser/linux-v1/kmom05).
 
 
 
@@ -144,7 +144,7 @@ Du kommer få en färdig server och ett RESTful API till servern. Din uppgift ä
 
 Du bygger vidare på dina kunskaper om webbtjänster och programmerar nu båden en klient och en server och ser hur koden fördelar sig mellan klient och server.
 
-[Instruktion till kursmoment 06](linux/kmom06).
+[Instruktion till kursmoment 06](kurser/linux-v1/kmom06).
 
 
 
@@ -152,7 +152,7 @@ Du bygger vidare på dina kunskaper om webbtjänster och programmerar nu båden 
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](linux/kmom10).
+[Instruktion till kursmoment 10](kurser/linux-v1/kmom10).
 
 
 
@@ -217,7 +217,9 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](linux/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+<!--
+För dig som studerar på distans finns det en [rekommenderad studieplan](kurser/linux/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+-->
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 

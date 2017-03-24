@@ -217,7 +217,7 @@ Bash-skriptet skall ha en option `--verbose` som innebär att den skriver ut inn
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1. På din [redovisningssida](linux/redovisa), skriv följande:
+1. På din [redovisningssida](kurser/linux-v1/redovisa), skriv följande:
 
     1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
