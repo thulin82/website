@@ -60,13 +60,13 @@ Krav {#krav}
 
 1. Din app skall innehålla en vy som innehåller minst nio (9) olika widgets.
 
-1. Dina widgets skall basera sig på minst en egen skriven mithril Component.
+1. Dina widgets skall basera sig på minst en egen mithril Component.
 
 1. Dina widgets skall hämta data från Github api't, plus ett valfritt api.
 
-1. Ditt dashboard skall vara använda sig av ett gridbaserad layout, som visar upp olika många widgets per rad beroende på enhetens storlek.
+1. Ditt dashboard skall använda sig av ett gridbaserad layout, som visar upp olika många widgets per rad beroende på enhetens storlek.
 
-1. Dit grid layout skall stödja enheter med skärmar större än 1200px.
+1. Ditt grid layout skall visa 5 stycken widgets per rad för enheter med skärmar större än 1200px.
 
 1. Skapa ett utseende, som gör det lätt för användaren att snabbt få en överblick över sina widgets.
 

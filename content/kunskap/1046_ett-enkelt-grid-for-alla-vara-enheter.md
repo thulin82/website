@@ -70,7 +70,7 @@ html, body {
 }
 ```
 
-Vi kommer att designa vårt grid med tillgången mobile-first, dvs att vi utgår ifrån den minsta enheten och efter det specificerar styling för större enheter. Vi kommer dessutom använda oss av ett flytande grid så vi kommer använda % av skärmens bredd istället för fasta breddar. Vi definerar alltså grundklassen `.widget` för den minsta enheten som vårt innehåll kommer visas och sen med hjälp av [media-queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) definerar vi stylingen för större enheter. På den minsta enheten vill vi att vår `.widget` element skall fylla hela skärmen förutom en marginal på 1% på varje sida och dessutom en marginal på 10 pixlar till nästa element. Jag har dessutom lagt till en border så vi ser hur stora elementen är. Jag ger även elementen en fast höjd och en padding för att det skall bli snyggare. Jag använder [box-sizing](https://developer.mozilla.org/en/docs/Web/CSS/box-sizing) attributet med värder `border-box` för att paddingen ingår i den totala bredden av elementet.
+Vi kommer att designa vårt grid med tillvägagångssättet mobile-first, dvs att vi utgår ifrån den minsta enheten och efter det specificerar styling för större enheter. Vi kommer dessutom använda oss av ett flytande grid så vi kommer använda % av skärmens bredd istället för fasta breddar. Vi definerar alltså grundklassen `.widget` för den minsta enheten som vårt innehåll kommer visas på och sen med hjälp av [media-queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) definerar vi stylingen för större enheter. På den minsta enheten vill vi att vår `.widget` element skall fylla hela skärmen förutom en marginal på 1% på varje sida och dessutom en marginal på 10 pixlar neråt till nästa element. Jag har dessutom lagt till en border så vi ser hur stora elementen är. Jag ger även elementen en fast höjd och en padding för att det skall bli snyggare. Jag använder [box-sizing](https://developer.mozilla.org/en/docs/Web/CSS/box-sizing) attributet med värdet `border-box` för att paddingen ingår i den totala bredden av elementet. Annars hade den högre delen av elementet hamnat utanför skärmen på grund av en bredd på 100% och padding som läggs till på det.
 
 ```css
 .widget {
@@ -88,7 +88,7 @@ Våra element visas nu efter varann i en lång lista precis som vi har förvänt
 [FIGURE src=/image/snapvt17/responsive-grid-small.png caption="Vårt grid för minsta enheten."]
 
 
-Vi fortsätter nu med gridet för större enheter. För enheter större än 500 pixlar vill vi ha element i två kolumner. Detta innebär att vi kommer ha 1% marginal till vänster om elementen, 1% + 1% marginal imellan elementen och 1% längst ut till höger. Vi har alltså 100% - 1% - 1% - 1% - 1% = 96% bredd kvar till våra kolumner och med två stycken kolumner blir varje kolumn 48% bredd. Vi har gjort en bra grund definition av vår `.widget`och vi behöver bara flyta våra element för att grund definitionen av `.widget` visar våra kolumner på samma rad.
+Vi fortsätter nu med gridet för större enheter. För enheter större än 500 pixlar vill vi ha element i två kolumner. Detta innebär att vi kommer ha 1% marginal till vänster om elementen, 1% + 1% marginal imellan elementen och 1% längst ut till höger. Vi har alltså 100% - 1% - 1% - 1% - 1% = 96% bredd kvar till våra kolumner och med två stycken kolumner blir varje kolumn 96% / 2 = 48% bredd. Vi har gjort en bra grund definition av vår `.widget`och vi behöver bara flyta våra element för att grund definitionen av `.widget` visar våra kolumner på samma rad.
 
 ```css
 .widget {
@@ -130,4 +130,4 @@ På samma sätt som ovan definerar vi media-queries för enheter större än 700
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Vi har nu skapat ett grid som vi kan använda för att visa upp element i en grid layout. Detta är ett mycket enkelt grid layout, men som uppfyller de krav vi hade på det med 34 rader CSS kod. Du är välkommen att bygga vidare på gridet och kanske ligga till en 5:e nivå för att visa upp på extra stora skärmar.
+Vi har nu skapat ett grid som vi kan använda för att visa upp element i en grid layout. Detta är ett mycket enkelt grid layout, men som uppfyller de krav vi hade på det med 34 rader CSS kod. Du är välkommen att bygga vidare på gridet och kanske lägga till en 5:e nivå för att visa upp det på extra stora skärmar.

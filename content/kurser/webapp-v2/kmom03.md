@@ -12,7 +12,7 @@ Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som 
 [/WARNING]
 
 
-Vi jobbar vidare med mithril och att hämta data från api'er. Nu handlar det om att skapa mithril komponenter, som underlätter för att återanvända kod. Vi ska även titta på hur vi skapar ett grid system för att skapa en SPA-applikation som kan visas upp på enheter i fyra olika storlekar.
+Vi jobbar vidare med mithril och att hämta data från api'er. Nu handlar det om att skapa mithril komponenter, som underlätter för att återanvända kod. Vi ska även titta på hur vi skapar ett grid system för att skapa en SPA-applikation som kan visas upp på enheter i fem olika storlekar.
 
 På vägen tar vi och övar att söka och visa information i JSON-filer.
 
