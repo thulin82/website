@@ -23,7 +23,7 @@ Förkunskaper {#forkunskaper}
 
 Du har jobbat igenom artiklarna "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" och "[Databas appserver med Express och MySQL](kunskap/databas-appserver-med-express-och-mysql)".
 
-Du kan även _programmera i databas_ via artiklarna "[Transaktioner i databas](kunskap/transaktioner-i-databas)", "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)", "[Triggers i databas](kunskap/triggers-i-databas)" och "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)".
+Du kan även programmera i databasen via artiklarna "[Transaktioner i databas](kunskap/transaktioner-i-databas)", "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)", "[Triggers i databas](kunskap/triggers-i-databas)" och "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)".
 
 
 
@@ -65,7 +65,7 @@ Krav {#krav}
 
 1. Skapa en eller flera routes där du kan flytta mellan det lokala lagret till det centrala och vise versa. Du kan ange hur många produkter som kan flyttas. Det måste finnas produkter innan de kan flyttas.
 
-1. Skapa en logg-tabell som loggar varje flytt mellan de två lagren. Du kan logga varje förändring i de två lagren, på det viset kan man ha koll på vilka lagerförändringar som gjorts. Skapa en route `log` som visar innehållet i logg-tabellen.
+1. Skapa en logg-tabell som loggar varje flytt mellan de två lagren. Du kan logga varje förändring i de två lagren, på det viset kan man ha koll på vilka lagerförändringar som gjorts. Skapa en route `/log` som visar innehållet i logg-tabellen.
 
 1. Du skall använda dig av minst en transaktion, en lagrad procedur, en trigger och en funktion. Uppdatera filen `allan1.sql` så att den innehåller koden för att skapa dessa. Man skall kunna köra `allan1.sql` om och om igen, för att skapa om databasens tabeller.
 
