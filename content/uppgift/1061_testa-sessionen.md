@@ -44,7 +44,7 @@ Krav {#krav}
 
 1. `session/decrement` ska minska siffran i sessionen med 1. Gör en redirect till `session`.
 
-1. `session/status` ska returnera ett json-response. Informationen som ska visas är minst 3 av de inbyggda funktionerna som du hittar [här](http://php.net/manual/en/function.session-id.php).
+1. `session/status` ska returnera ett json-response. Informationen som ska visas är minst 3 av de inbyggda funktionerna som du hittar [här](http://php.net/manual/en/ref.session.php).
 
 1. `session/dump` ska använda klassens `dump()`-metod på sidan.
 
