@@ -104,10 +104,10 @@ Uppgift som tvingar view med regioner?
 
 1. Fortsätt att jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra ytterligare en tredjedel av uppgiften. Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`. Den sista tredjedelen gör du i nästa kursmoment.
 
+1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (2.0.\*) när du är klar med alla uppgifter i kursmomentet.
+
 <!--
-
 Rita klass och sekvensdiagram?
-
 -->
 
 

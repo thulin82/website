@@ -600,12 +600,12 @@ I filen `App.php` lägger du in följande innehåll.
 
 ```php
 <?php 
-/**
- * An App class to wrap the resources of the framework.
- */
 
 namespace Anax\App;
 
+/**
+ * An App class to wrap the resources of the framework.
+ */
 class App
 {
     
