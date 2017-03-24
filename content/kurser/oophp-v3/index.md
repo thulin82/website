@@ -1,9 +1,10 @@
 ---
 title: oophp
 
-author: mos
+author:
+    - mos
 revision:
-    "2016-12-16": (PA1, mos) Utveckling pågår, [äldre versioner finns](kurser/oophp-v2).
+    "2017-03-24": "(A, mos) Info om kmom01-04, [äldre versioner finns](kurser/oophp-v2)."
 ...
 Kursen "oophp" version 3
 ==================================
@@ -100,11 +101,11 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20 studie
 
 
 
-###Kmom01: Kom igång med programmering i PHP {#kmom01}
+###Kmom01: Objektorientering i PHP {#kmom01}
 
-Kom igång med PHP som ett programmeringsspråk och skaffa dig en grund att stå på i form av utvecklingsmiljö, manualer och testmiljö. Du får en introduktion av de viktigaste icke-objektorienterade konstruktionerna i PHP. Du behöver den basen innan vi kan gå vidare med de objektorienterade konstruktionerna. Om du redan kan den så blir det ett ypperligt tillfälle för repetition. 
+Kom igång med klasser i PHP och lär dig samtidigt hur grundstrukturen i ett PHP-ramverk kan se ut. Du bygger en me-sida i ditt egenskapade ramverk och du tränar på att bygga klasser och kod både i och utanför strukturen av ramverket.
 
-Du får också en genomgång i hur du kan bygga en strukturerad webbplats med en tanke och en plan bakom katalogstrukturen. Detta är något som är bra att ha med sig. Även om vårt huvudfokus är objektorienterad PHP-programmering och databaser så är vi i en webbmiljö och allt som krävs för att den miljön skall fungera måste ha sin plats. Det handlar om HTML-kod, stylesheets och CSS och det som gör en färdig webbplats. En struktur att hålla sig i gör att vi kan fokusera mer på programmeringen.
+Som ett sidoprojekt kommer vi igång med MySQL/MariaDB som databas och lär känna dess klienter och grunderna i SQL.
 
 Läs [instruktionen till kursmoment 01](kurser/oophp-v3/kmom01).
 
@@ -112,39 +113,39 @@ Läs [instruktionen till kursmoment 01](kurser/oophp-v3/kmom01).
 
 ###Kmom02: Objektorienterad programmering i PHP {#kmom02}
 
-Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment blir du introducerad till objektorienterad programmering i PHP. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Om du redan kan ett annat objektorienterat programmeringsspråk så kommer du att känna igen samma konstruktioner i PHP. Om du är ny så får du steg för steg gå igenom grunderna i objektorientering och det finns flera övningsprogram som du skall skriva för att komma igång.
+Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment får du jobba med programmering med klasser och objekt. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Du ser även hur kan kan programmera med objekt in i ett ramverk.
+
+Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan visa vad du kan så här långt.
 
 Läs [instruktionen till kursmoment 02](kurser/oophp-v3/kmom02).
 
 
 
-###Kmom03: SQL och databasen MySQL {#kmom03}
+###Kmom03: PHP PDO och MySQL {#kmom03}
 
-Så, nu har vi koll på PHP och grunderna i objektorienterad PHP, då går vi vidare till databasen MySQL och dess olika klienter samt en introduktion i frågespråket SQL. Du får jobba igenom en övning i SQL som tar dig från de enklare konstruktionerna till svårare saker som subqueries och `RIGHT/LEFT OUTER JOIN`. Innan den övningen så har du bekantat dig med MySQL, både i din egna utvecklingsmiljö och i BTH's labbmiljö.
+Så här långt har du lärt dig om objektorienterad PHP och databasen MySQL. Nu skall du koppla ihop dessa till en databasdriven webbapplikation genom att använda PHP's gränssnitt för databaser PHP PDO. Du får jobba igenom en guide där du bygger upp en filmdatabas med ett webbgränssnitt där du kan redigera information om filmer och söka ut dem. När du jobbar i guiden så kommer du att stöta på och lösa de vanliga problemen som en sådan applikation innebär. När du är klar så har du ett fungerande exempel som du kan använda som bas för kommande webbapplikationer. Om du tittar noga så kan du se likheten mellan till exempel en webbshop och din filmdatabas, rent tekniskt är det samma grunder i båda.
 
 Läs [instruktionen till kursmoment 03](kurser/oophp-v3/kmom03).
 
 
 
-###Kmom04: PHP PDO och MySQL {#kmom04}
+###Kmom04: Lagra innehåll i databasen {#kmom04}
 
-Så här långt har du lärt dig om objektorienterad PHP och databasen MySQL. Nu skall du koppla ihop dessa till en databasdriven webbapplikation genom att använda PHP's gränssnitt för databaser PHP PDO. Du får jobba igenom en guide där du bygger upp en filmdatabas med ett webbgränssnitt där du kan redigera information om filmer och söka ut dem. När du jobbar i guiden så kommer du att stöta på och lösa de vanliga problemen som en sådan applikation innebär. När du är klar så har du ett fungerande exempel som du kan använda som bas för kommande webbapplikationer. Om du tittar noga så kan du se likheten mellan till exempel en webbshop och din filmdatabas, rent tekniskt är det samma grunder i båda.
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i de flesta webbplatser. Nu har vi både en mall för webbplatser och koll på databaser och objektorienterad programmering. låt oss då försöka använda allt detta för att lagra undan innehåll i databasen och sedan visa upp det som webbsidor och bloggposter i webbplatsen.
 
 Läs [instruktionen till kursmoment 04](kurser/oophp-v3/kmom04).
 
 
-###Kmom05: Lagra innehåll i databasen {#kmom05}
+###Kmom05: TBD {#kmom05}
 
-Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i de flesta webbplatser. Nu har vi både en mall för webbplatser och koll på databaser och objektorienterad programmering. låt oss då försöka använda allt detta för att lagra undan innehåll i databasen och sedan visa upp det som webbsidor och bloggposter i webbplatsen.
+TBD.
 
 Läs [instruktionen till kursmoment 05](kurser/oophp-v3/kmom05).
 
 
-###Kmom06: Bildbearbetning och galleri {#kmom06}
+###Kmom06: TBD {#kmom06}
 
-Här handlar det om flexibel hantering av bilder och att låta PHP vara behjälpligt att beskära och processa bilder på serversidan. Du får jobba med det inbyggda grafik-biblioteket PHP GD och med hjälp av det bygger du upp ett skript `img.php` som ger dig en flexibel hantering av bilder.
-
-Därefter tar du hjälp av ditt skript `img.php` och använder det för att skapa ett enkelt galleri som visar bilderna som ligger i en katalogstruktur.
+TBD.
 
 Läs [instruktionen till kursmoment 06](kurser/oophp-v3/kmom06).
 
@@ -169,8 +170,8 @@ Kurslitteratur {#litteratur}
 Som kurslitteratur har jag valt följande böcker. Det är en god idé att läsa igenom dessa  under kursen, det finns läsanvisningar till dessa i samband med varje kursmoment.
 
 * **[Beginning PHP and MySQL: From Novice to Professional](kunskap/boken-beginning-php-and-mysql-from-novice-to-professional)** -- Gilmore, W  
-  En tjockare bok för den som vill ha en mer komplett vy över PHP och MySQL från början. Läsanvisningar finns.
-  
+  En tjockare bok för den som vill ha en mer komplett vy över PHP och MySQL från början.
+
 
 
 ###Referenslitteratur {#referenslitteratur}
