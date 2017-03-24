@@ -226,29 +226,50 @@ Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](webapp/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar.
+Läser du kursen inom ramen för programmet Webbprogrammering (campus/distans) så finns det en [rekommenderad studieplan inom programmet](program/webbprogrammering/studieplan/termin2).
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
-Går du på campus får du en lektionsplan i samband med kursstart.
+<!--
+För dig som studerar kursen som enskild kurs finns det en [rekommenderad studieplan](linux/studieplan) kopplad till de kurstillfällen som erbjuds.
+-->
 
-Det finns ett särskilt dokument som ger lite [utförligare beskrivning av planeringen av kursen och viktiga hållpunkter](kurser/lektionsplan-och-rekommenderad-studieplan).
+Vissa av kurstillfällena har även en lektionsplan som du får i samband med kursstart. Lektionsplanen visar de tillfällena som är schemalagda träffar.
 
+Finns det en lektionsplan så finns ofta bokningar av salar gjorda i bokningsschemat.
 
+Studieplan, eventuell lektionsplan och eventuellt schema finns tillgängligt via kurstillfället på ITs.
 
-Betygsättning {#betyg}
-------------------------
-
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
+Läs mer om den [rekommenderade studieplanen](kurser/faq/rekommenderad-studieplan) och [lektionsplanen](kurser/faq/lektionsplan-och-schema).
 
 
 
 Lärarstöd och handledning {#handledning}
 ----------------------------------------
 
-I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
+Schemalagda labbtillfällen, hangouts samt forum och chatt de viktigaste källorna för handledning. Läs om [handledning och hjälp-till-självhjälp](kurser/faq/lararstod-och-handledning).
 
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).
+
+
+Ladok {#ladok}
+------------------------
+
+Enligt kursplanen finns ett antal ladokmoment och de är kopplade till kursens kursmoment enligt följande.
+
+| Kursens moment  | Ladok moment enligt kursplan  |
+|-----------------|-------------------------------|
+| Kmom01 + kmom02 | Uppgift 1 á 2.5hp             |
+| Kmom03 + kmom04 | Uppgift 2 á 2.5hp             |
+| Kmom05 - kmom10 | Projekt á 2.5hp               |
+
+Läs mer om [rapportering av resultat](kurser/faq/resultatrapportering).
+
+
+
+Betygsättning {#betyg}
+------------------------
+
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
 
 
 
