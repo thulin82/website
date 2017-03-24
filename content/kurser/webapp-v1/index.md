@@ -14,6 +14,16 @@ Kursen "webapp"
 
 Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur du bygger applikationer för mobila enheter och läsplattor med HTML, CSS och JavaScript.
 
+[INFO]
+**Tidigare version av kursen**
+
+Från och med vårterminen 2017 läsperiod 4 finns en ny version av kursen.
+
+Kursmaterialet till [den nya kursen finns här](kurser/webapp-v2).
+[/INFO]
+
+
+
 <!--more-->
 
 Kursen syftar till att lära ut utveckling av webbapplikationer med HTML, CSS och JavaScript och fokuserar på mobila enheter och läsplattor.
@@ -160,12 +170,12 @@ Det finns en [översikt av kurslitteratur per kurs](kunskap/oversikt-av-kurslitt
 
 ###Kurslitteratur {#kurslitteratur}
 
-Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet. 
+Som kurslitteratur har jag valt följande bok, tillsammans med ett antal artiklar som finns tillgängliga på nätet.
 
 Det finns läsanvisningar i samband med varje kursmoment.
 
 
-* **[Mobile HTML5](kunskap/boken-mobile-html5)** -- Estelle Weyl  
+* **[Mobile HTML5](kunskap/boken-mobile-html5)** -- Estelle Weyl
   Boken går igenom de delar av HTMl5, CSS3 och JavaScript som är relevanta när man bygger applikationer för mobila enheter.
 
 
@@ -175,17 +185,17 @@ Det finns läsanvisningar i samband med varje kursmoment.
 Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha tillhands och ger lite extra läsmöjligheter. De behövs inte för att klara kursen men vill du bemästra kursens område så är dessa böcker bra startpunkter.
 
 
-* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin  
+* **[HTML och CSS-boken](boken-html-och-css-boken)** -- Rolf Staflin
   En stabil bok för att komma igång med HTML och CSS.
 
-* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan  
+* **[JavaScript: The definitive Guide](kunskap/boken-javascript-the-definitive-guide)** -- D. Flanagan
   En tegelsten, komplett med allt du vill veta om språket JavaScript med dess Core, DOM och eventhantering, inklusive en referens till olika funktioner. Perfekt för dig som verkligen vill JavaScript.
 
-* **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford  
+* **[JavaScript: The Good Parts](kunskap/boken-javascript-the-good-parts)** -- D. Crockford
   En genomgång av JavaScript Core och hur man ska, och inte ska, skriva sin kod.
 
 
-  
+
 
 
 Läsanvisningar {#lasanvisning}
@@ -197,20 +207,20 @@ Här följer en sammanställning av de läsanvisningar till kurslitteraturen som
 |------------|-------------------------------------------------------------|
 | Kmom01     | 1                                                           |
 | Kmom02     | 5, 6                                                        |
-| Kmom03     | 11, 12                                                      | 
+| Kmom03     | 11, 12                                                      |
 | Kmom04     | 13, 14                                                      |
-| Kmom05     |                                                             | 
-| Kmom06     | Introduction                                                | 
+| Kmom05     |                                                             |
+| Kmom06     | Introduction                                                |
 | Kmom10     |                                                             |
 
-Dessutom har varje kursmoment läsanvisningar i artiklar och videos. 
+Dessutom har varje kursmoment läsanvisningar i artiklar och videos.
 
 
 
 Lektionsplan och rekommenderad studieplan {#schema}
 ---------------------------------------------
 
-För dig som studerar på distans finns det en [rekommenderad studieplan](webapp/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar. 
+För dig som studerar på distans finns det en [rekommenderad studieplan](webapp/studieplan). Du kan behöva anpassa den rekommenderade planen till dina egna datum och förutsättningar.
 
 Läser du kursen som en del i ett kurspaket så finns det en [studieplan som är kopplad till kurspaketet](webutv#studieplan).
 
@@ -223,7 +233,7 @@ Det finns ett särskilt dokument som ger lite [utförligare beskrivning av plane
 Betygsättning {#betyg}
 ------------------------
 
-Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning). 
+Det finns ett särskilt dokument som beskriver [hur bedömning och betygsättning sker](kurser/bedomning-och-betygsattning).
 
 
 
@@ -232,7 +242,7 @@ Lärarstöd och handledning {#handledning}
 
 I distanskurserna är forum och chatt de viktigaste källorna för handledning. Vi har samlat information om handledning och hjälp-till-självhjälp i ett eget dokument.
 
-Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).  
+Läs om hur [handledning och hjälp-till-självhjälp fungerar på dessa kurser](kurser/lararstod-och-handledning).
 
 
 
