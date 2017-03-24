@@ -21,8 +21,7 @@ Förkunskaper {#forkunskaper}
 -----------------------
 
 Du bör ha gjort, eller ha förkunskaper som motsvarar, guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).  
-Du bör ha gått igenom artikeln [Klasser för $_SESSION och $_COOKIE](kunskap/session-cookie-klasser).  
-Du bör ha gått igenom artikeln [TBD - mos artikel om inbyggnad av moduler](kunskap/).
+Du bör ha gått igenom artikeln [Klasser för sessionen och cookies](kunskap/session-cookie-klasser).  
 
 
 

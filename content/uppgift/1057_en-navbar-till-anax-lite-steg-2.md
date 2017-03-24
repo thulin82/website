@@ -21,7 +21,9 @@ Detta är första steget i övningen och här skriver du din kod i vyn och array
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har löst uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)" och du kan jobba med klasser i PHP motsvarande "[Kom igång med objektorienterad PHP-programmering på 20 steg](kunskap/kom-i-gang-med-oophp-pa-20-steg)".
+Du har löst uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)" och du kan jobba med klasser i PHP motsvarande "[Kom igång med objektorienterad PHP-programmering på 20 steg](kunskap/kom-i-gang-med-oophp-pa-20-steg)".  
+
+Du har även gått igenom artikeln "[Att integrera en klass i ramverket Anax Lite](kunskap/att-integrera-en-klass-i-ramverket-anax-lite)"
 
 
 
@@ -29,11 +31,6 @@ Introduktion {#intro}
 -----------------------
 
 Följande är grundläggande information som du underlättar för att lyckas med uppgiften.
-
-
-
-
-
 
 
 
