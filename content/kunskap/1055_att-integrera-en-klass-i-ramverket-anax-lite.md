@@ -11,9 +11,9 @@ revision:
 Att integrera en klass i ramverket Anax Lite
 ===================================
 
-<!-- [FIGURE src=/image/oophp/v3/login-top.png?w=c5 class="right"] -->
+[FIGURE src=/image/snapvt17/navbar.png?w=c5&a=0,50,0,0 class="right"]
 
-Vi ska se hur man kan integrera en klass eller tjänst i ramverket. Vi tittar närmare på en navbar som styrs utifrån en konfigurationsfil och hur den samverkar med det omgivande ramverkets klasser, tjänster och struktur.
+Vi ska se hur man kan integrera en klass, eller tjänst, i ramverket Anax Lite. Som ett exempel tittar vi närmare på hur en navbar, som styrs utifrån en konfigurationsfil, kan integreras i ramverket. Vi tittar på hur koden kan samverka med det omgivande ramverkets klasser, tjänster och struktur.
 
 <!--more-->
 
@@ -31,12 +31,12 @@ Du har löst uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-ti
 Url som exempel {#intro}
 ------------------------------
 
-Vi har sett hur övriga tjänster, till exempel `Url` har integrerats i ramverkets struktur. De är en del av `$app` och kan således användas därigenom.
+Vi har tidigare sett hur tjänster, till exempel `Url`, har integrerats i ramverkets struktur. Dessa tjänster, likt Url, är en del av `$app` och kan användas via `$app->url`.
 
+Om vi kikar på strukturen kring `Url`, så får vi ett exempel på vilka möjligheter som erbjuds för att skapa egna tjänster, som fungerar som en del av ramverket.
 
-Om vi kikar på hur strukturen runtomkring `Url` ser ut, så kan vi se ett exempel på vilka möjligheter som erbjuds för att skapa egna tjänster, som fungerar som en del av ramverket.
+Låt oss ta en titt på koden kring Url.
 
-Låt oss ta en titt på den delen av koden igen.
 
 
 ###Url i frontkontroller {#url-front}
@@ -45,7 +45,7 @@ Så här ser Url ut i frontkontrollern.
 
 ```php
 // Make Url part of $app
-$app->url      = new \Anax\Url\Url();
+$app->url = new \Anax\Url\Url();
 
 // Init the url-object with default values from the request object.
 $app->url->setSiteUrl($app->request->getSiteUrl());
@@ -72,13 +72,16 @@ Url är alltså en klass beroende av annan information i ramverket och den läse
 Integrera Navbar i ramverket {#intnavbar}
 -----------------------------------------
 
-Låt oss nu på ett liknande sätt integrera koden för Navbar in i ramverkets struktur.
+Låt oss nu, på ett liknande sätt, integrera koden för Navbar in i ramverkets struktur.
 
 Vi vill integrera Navbar på följande sätt.
 
 1. En klass i `src/Navbar/Navbar.php` med matchande namespace.
 1. Klassen läser en konfigurationsfil `config/navbar.php` som innehåller arrayen med navbarens innehåll.
 1. Navbaren populeras med de av ramverkets tjänster den använder.
+1. Navbaren används i vyn för att generera HTML.
+
+Då börjar vi.
 
 
 
@@ -109,16 +112,18 @@ class Navbar
 }
 ```
 
-Du använder naturligtvis ditt eget vendor namn. Tanken är att logiken för att generera HTML-koden för navbaren ligger i metoden `getHTML()`. Men det är ju fritt att strukturera och namnge som man vill. Även klassen kan du döpa som du vill.
+Du använder naturligtvis ditt eget vendor namn i ditt namespace.
+
+Tanken är att logiken för att generera HTML-koden för navbaren ligger i metoden `getHTML()`. Men det är ju fritt att strukturera och namnge som man vill. Även klassen kan du döpa som du vill.
 
 
 
 Konfiguration i config/navbar.php {#php}
 -----------------------------------------
 
-Tanken är att navbaren finns representerad i en array, det är grundstrukturen, det som behövs, för att generera navbaren. Vi vill samla all denna typen av konfiguration i katalogen `config`. Det är enklare att göra all konfiguration på en plats.
+Tanken är att navbaren finns representerad i en array, det är grundstrukturen, det som behövs, för att generera navbaren. Vi vill samla all denna typen av konfiguration i katalogen `config/`. Det är enklare att göra all konfiguration på en plats.
 
-Om vi kikar på filen `config/url.php` som exempel så kan vi se dess innehåll.
+Om vi kikar på konfigurationsfilen `config/url.php`, som ett exempel, så ser vi dess innehåll.
 
 ```php
 <?php
@@ -136,6 +141,8 @@ return [
     //"urlType"       => \Anax\Url\Url::URL_APPEND,
 ];
 ```
+
+Den returnerar alltså en array med detaljer.
 
 Om vi återanvänder arrayen från navbar-uppgiften så skulle vår konfigurationsfil `config/navbar.php` få följande utseende.
 
@@ -165,14 +172,14 @@ return [
 ];
 ```
 
-Principen är att en konfigurationsfil returnerar en array som innehåller det nödvändiga.
+Principen är att en konfigurationsfil returnerar en array som innehåller den nödvändiga informationen.
 
 
 
 Att läsa in konfigurationsfilen {#readconfig}
 -----------------------------------------
 
-När Url läser in sin konfigurationsfil så gjordes det med följade kod i frontkontrollern, i själa initieringsfasen av klassen.
+När Url läser in sin konfigurationsfil så görs det med följade kod i frontkontrollern, i initieringsfasen av klassen.
 
 ```php
 // Update url configuration with values from config file.
@@ -180,24 +187,24 @@ $app->url->configure("url.php");
 $app->url->setDefaultsFromConfiguration();
 ```
 
-Det är det första anropet till `configure("url.php")` som vi nu vill uppnå att vår Navbar-klass skall klara av. Det andra anropet är specifikt för att sätta upp klassen Url, så det steget behöver vi (troligen) inte.
+Det är det första anropet till `configure("url.php")` som vi nu vill uppnå att vår Navbar-klass skall klara av. Det andra anropet är specifikt för att sätta upp klassen Url, så det steget behöver vi (troligen) inte utföra.
 
-Men tittar vi på koden för klassen Url så finns det inte en metod `configure()`? Hur fungerar detta?
+Men, tittar vi på koden för klassen Url så finns inte metoden `configure()`? Hur fungerar detta?
 
 
 
 Implementera interface, använd trait {#implements}
 -----------------------------------------
 
-Url-klassen använder sig utav ett _interface_ `Anax\Common\ConfigureInterface` och ett _trait_ `Anax\Common\ConfigureTrait` som återfinns i modulen `anax/common`. Du hittar källkoden för dessa filer i `vendor/anax/common/src/Common`.
+Url-klassen använder sig utav ett [_interface_](http://php.net/manual/en/language.oop5.interfaces.php) `Anax\Common\ConfigureInterface` och ett [_trait_](http://php.net/manual/en/language.oop5.traits.php) `Anax\Common\ConfigureTrait` som återfinns i modulen `anax/common`. Du hittar källkoden för dessa filer i `vendor/anax/common/src/Common`.
 
-I klassfilen för Url ser man detta på hur klassen skapas.
+I klassfilen för Url ser vi ett exempel på en klass som implementerar ett interface och använder ett trait.
 
 ```php
 class Url implements \Anax\Common\ConfigureInterface
 {
     use \Anax\Common\ConfigureTrait;
-``` 
+```
 
 Låt oss börja med att titta på interfacet.
 
@@ -205,15 +212,15 @@ Låt oss börja med att titta på interfacet.
 
 ###Interfacet ConfigureInterface {#configureinterface}
 
-Ett interface definierar en uppsättning metoder som en klass måste implementera. Det är möjligt att implementera flera interfaces. I detta fallet handlar det om metoden `configure()`, det ser vi om vi tittar på källkoden för interfacet.
+Ett interface definierar en uppsättning metoder som en klass måste implementera. Det är möjligt att implementera flera interfaces.
+
+I detta fallet handlar interfacet om metoden `configure()`, det ser vi om vi tittar på källkoden för interfacet.
 
 ```php
 namespace Anax\Common;
 
 /**
- * Interface for classes needing injection of the $app object
- * containingframework resources.
- *
+ * Interface for classes needing access to configuration files.
  */
 interface ConfigureInterface
 {
@@ -233,7 +240,7 @@ interface ConfigureInterface
 }
 ```
 
-Ett interface definierar ett kontrakt, eller ett löfte. När en klass väljer att implementera ett interface så säger klassen att man lovar att stödja detta interfacet och erbjuda de tjänster som interfacet specificerar. I detta fallet handlar det alltså om att implementera metoden `configure()` enligt ovan.
+Ett interface definierar ett kontrakt, ett löfte. När en klass väljer att implementera ett interface så säger klassen att man lovar att stödja detta interfacet och erbjuda de tjänster som interfacet specificerar. I detta fallet handlar det alltså om att implementera metoden `configure()` enligt ovan.
 
 När man tittar på klasser kan man alltså genom att läsa klassens definition, till viss del se vilka tjänster klassen erbjuder.
 
@@ -268,7 +275,6 @@ namespace Anax\Common;
 /**
  * Trait implementing reading from config-file and storing options in
  * $this->config.
- *
  */
 trait ConfigureTrait
 {
@@ -316,11 +322,13 @@ Sedan tittar vi på själva implementationen av den metod som interfacet anger.
 
 Metoden i traitet implementerar det kontraktet som interfacet anger. 
 
+Låt oss då använda traitet i Navbar.
+
 
 
 ###Navbar use ConfigurationTrait {#navbaruses}
 
-Låt då klassen Navbar använda traitet för att implementera interfacet.
+Via `use` använder klassen Navbar traitet. En klass kan använda flera traits.
 
 ```php
 class Navbar implements \Anax\Common\ConfigureInterface
@@ -328,9 +336,9 @@ class Navbar implements \Anax\Common\ConfigureInterface
     use \Anax\Common\ConfigureTrait;
 ```
 
-Nu är det klart. Man kan se det som att use-konstruktionen kopierar in koden från traitet in i denna klassen.
+Nu är det klart. Man kan se det som att use-konstruktionen kopierar in koden från traitet in i klassen.
 
-På det viset återanvänds kod, skrivet i ett trait, och kan låta många klasser dela koden som implementerar interfacet.
+På det viset återanvänds kod, skrivet i ett trait, och flera klasser kan dela koden som implementerar interfacet.
 
 
 
@@ -347,8 +355,207 @@ Det blir ett smidigt sätt att använda klassen och kraftfullt med tanke på att
 
 
 
+Att injecta beroende till en klass {#inject}
+------------------------------
+
+Navbar är beroende av att kunna skapa länkar och att veta om nuvarande länk. Detta är information som ligger i Request (nuvarande länk) och en tjänst som erbjuds av Url (skapa länkar).
+
+Vilka alternativ har vi för att låta Navbar få del av denna information och tjänster? 
+
+Låt oss _injecta_ dessa beroende in i klassen på ett par olika sätt.
+
+
+
+Låt $app finnas i Navbar {#app2navbar}
+------------------------------
+
+En variant är att injecta hela `$app` in i Navbar, på samma sätt som vi gör i `$app->view`.
+
+```php
+$app->view = new \Anax\View\ViewContainer();
+$app->view->setApp($app);
+```
+
+Koden ovan gör så att `ViewContainer` kan dra nytta av alla tjänster som finns i `$app`.
+
+Om vi kikar på koden i `\Anax\View\ViewContainer`, som vi hittar under `vendor/anax/view/src/View`, så ser vi följade struktur för klassen.
+
+```php
+namespace Anax\View;
+
+/**
+ * A view container, store all views per region, render at will.
+ */
+class ViewContainer implements
+    \Anax\Common\ConfigureInterface,
+    \Anax\Common\AppInjectableInterface
+{
+    use \Anax\Common\ConfigureTrait,
+        \Anax\Common\AppInjectableTrait;
+```
+
+Vi ser en klass som både är konfigurerbar och kan injectas med `$app` och uppenbarligen finns det både ett interface och ett trait som löser koden bakom detta. Koden för `AppInjectableInterface` och `AppInjectableTrait` återfinner vi under `vendor/anax/common/src/Common`.
+
+Ett alternativ är alltså att göra som ViewContainer och låta Navbar ta del av $app.
+
+
+
+Injecta delarna in i Navbar {#injectdel}
+------------------------------
+
+Ett annat alternativ är att enbart injecta de delarna som behövs i Navbar. Det kan vi göra med två metoder i Navbar. 
+
+
+
+###Injecta nuvarande route {#nuvroute}
+
+Först en metod som tar emot nuvarande route.
+
+```php
+/**
+ * Sets the current route.
+ *
+ * @param string $route the current route.
+ *
+ * @return void
+ */
+public function setCurrentRoute($route)
+{
+    ;
+}
+```
+
+Tanken är är att vi, likt hur Url sätts upp, skickar in nuvarande route in i klassen så den kan ta del av den. Så här.
+
+```php
+$app->navbar->setCurrentRoute($app->request->getRoute());
+```
+
+Bra, nu vet Navbar om vilken som är den nuvarande routen, den informationen behövs för att skapa HTML till navbaren.
+
+
+
+###Injecta url-skaparen {#injurlcre}
+
+Den andra delen är att navbar skall kunna skapa länkar via `$app->url->create()`. Även detta beroende kan vi injecta in i klassen via en metod. Det vi skickar in är en funktion, en [_callable_](http://php.net/manual/en/language.types.callable.php).
+
+```php
+/**
+ * Sets the callable to use for creating routes.
+ *
+ * @param callable $urlCreate to create framework urls.
+ *
+ * @return void
+ */
+public function setUrlCreator($urlCreate)
+{
+    ;
+}
+```
+
+Nu får Navbar tillgång till metoden som kan skapa nya länkar under kontroll av ramverket.
+
+Eftersom metoden behöver anropas tillsammans med sin klass, eller instans av klassen, så lägger man både instansen av klassen och dess metod i en array som tillsammans är en callable i PHP.
+
+Så här kan det se ut när man anropar metoden för att sätta länkskaparen in i Navbar.
+
+```php
+$app->navbar->setUrlCreator([$app->url, "create"]);
+```
+
+Arrayen `[$app->url, "create"]` är här det som betraktas som en callable.
+
+När man sedan anropar denna callable, så gör man så här.
+
+```php
+// Alt 1
+$htmlNavbar = call_user_func([$app->url, "create"], "my/route");
+
+// Alt 2
+$myCallable = [$app->url, "create"];
+$htmlNavbar = call_user_func($myCallable, "my/route");
+```
+
+På detta sättet kan du få Navbar att skapa länkar med ramverkets tjänst, genom att injecta en callable till instansen/metoden som erbjuder tjänsten.
+
+
+
+Injecta när man genererar menyn? {#injectcreate}
+------------------------------
+
+Kan man inte göra på annat sätt? Oja, det finna många alternativ, en variant, istället för att skapa desa setter-metoder, är att helt enkelt injecta de beroenden som finns, i samband med själva anropet till `createHTML()`.
+
+Det skulle kunna se ut så här.
+
+```php
+/**
+ * Get HTML for the navbar.
+ *
+ * @param string $route the current route.
+ * @param callable $urlCreate to create framework urls.
+ *
+ * @return string as HTML with the navbar.
+ */
+public function getHTML($route, $urlCreate)
+{
+    ;
+}
+```
+
+Det är en variant som minskar antalet setters (och medlemsvariabler).
+
+Vilken variant föredrar du?
+
+
+
+Att sköta allt från vyn {#view}
+------------------------------
+
+En variant är att _inte_ lägga `$navbar` som en del av alla tjänsterna i `$app`. Istället kan vi flytta den delen av koden ned till vyn. Man kan argumentera att Navbar endast används i en enda vy och varför skall man då lägga en tjänst i ramverket som endast används i en vy?
+
+Det kan vara ett rimligt argument för att flytta koden från frontkontrollern till vyn.
+
+Det tål att tänka på och är ett alternativ att överväga.
+
+Rätt sak har sin rätta plats under givna förutsättningar och behöver man inte ett objekt så är det onödigt att skapa det.
+
+
+
+Generera navbar i routen {#iroute}
+------------------------------
+
+En annan aspekt är att generera HTML-koden för navbaren direkt i routens hanterar och bifoga som en variabel till vyn. Det vore också en variant till lösning.
+
+Om man gillar vyer utan kod och logik så är det en bra lösning. en del templatemotorer, som sköter vyerna, gillar inte att man skriver PHP-kod i vyerna. I sådana fall måste anropet till Navbar ske i routen.
+
+Det finns många lösningar på ett problem och delvis styr förutsättningarna och omgivningen vilka möjliga lösningar som finns.
+
+Man får tänka efter vilken struktur man vill ha i sitt ramverk och vilka delar som skall ha vilket ansvar och vilka kopplingar till olika delar av ramverket som du vill exponera och tillåta.
+
+Med nuvarande struktur har vi många olika möjligheter till var vi kan skriva koden. Det gäller att ta rätt beslut och att vara konsekvent.
+
+
+
+Skapa länkarna i konfigurationsarrayen? {#createinconf}
+------------------------------
+
+Men, tänk om jag vill länka till en resurs via `$app->url->asset()` i menyn?
+
+Ja, då faller vår idé om en enda metod för att skapa länkarna i menyn.
+
+Då hade vi fått tänka om och kanske skapat länkarna direkt i konfigurationsarrayen. Men då behöver konfigurationsarrayen ha tillgång till `$app`. Det går att lösa.
+
+Men den varianten tar vi en annan gång. Det får räcka med alternativa lösningar nu.
+
+
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Nu har vi en klass som kan hantera de grundligaste sakerna i sessions-hantering och en stomme för en klass som hanterar cookies. Vackert, om jag får säga det själv.
+Detta var en genomgång om hur man kan tänka och lösa integrationen av en klass, en tjänst, in i ramverkets struktur. Detta är sättet som ramverkets moduler använder sig av för att koppla in sig i ramverket.
+
+En modul är hälsosam om den inte har beroenden till andra, eller i allafall, få beroenden till andra klasser/moduler. Det gör modulen enklare att underhålla, vidarutveckla och återanvända.
+
+Det är sådana anledningar till varför man väljer att skriva sin kod på olika sätt.
+
+Artikeln har en [egen forumtråd](t/) där du kan ställa frågor eller bidra med tips och trix.
