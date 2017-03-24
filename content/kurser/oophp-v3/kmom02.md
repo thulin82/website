@@ -1,5 +1,7 @@
 ---
-author: mos
+author:
+    - mos
+    - lew
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
@@ -13,9 +15,9 @@ Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 3/4 2017
 
 [/WARNING]
 
-Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment får du jobba med programmering med klasser och objekt. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Du ser även hur kan kan programmera med objekt in i ett ramverk.
+Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment får du träna på programmering med klasser och objekt. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Du ser även hur kan kan programmera med objekt in i ett ramverk och du bekantar dig med begrepp som interface och traits.
 
-Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan visa vad du kan så här långt.
+Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner och lite ramverksprogrammering.
 
 [FIGURE src=/image/oophp/v3/test-session.png?w=w1&q=70 caption="Sessionstest är en av övningarna som finns med i detta kursmoment."]
 
@@ -30,7 +32,7 @@ Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan 
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 2-6 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 0-2 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
 
 
 
@@ -63,20 +65,12 @@ När man pratar om objektorienterad programmering så behöver man också ha en 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-14 studietimmar)*
+*(ca: 14-20 studietimmar)*
 
 
 ###Övningar {#ovningar}
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
-
-<!--
-1. Jobba igenom den avslutande delen av guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
-
-Del 2 av artikeln, kanske avvakta lite med den?
--->
-
-<!-- 1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". -->
 
 1. Artikeln "[Sessioner och cookies i PHP](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass. Fyll gärna på cookie-klassens metoder med kod.
 
@@ -89,10 +83,6 @@ Del 2 av artikeln, kanske avvakta lite med den?
 ###Uppgifter {#uppgifter}
 
 Gör följande uppgifter.
-
-<!--
-Uppgift som tvingar view med regioner?
--->
 
 1. Gör uppgiften [Integrera klassen Session](uppgift/testa-sessionen) in i ramverket och skriv en route som testar och visar innehållet i sessionen. Spara din kod i `me/anax-lite`.
 

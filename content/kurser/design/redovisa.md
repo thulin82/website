@@ -1,7 +1,7 @@
 ---
 author: mos
 revision:
-    2016-10-07: (A, mos) Första utgåvan.
+    "2016-10-07": "(A, mos) Första utgåvan."
 ...
 Resultat och redovisning
 ====================================
@@ -81,7 +81,7 @@ Läraren kommer snabbt kolla igenom dem. Betyg är G (godkänd) eller kompletter
 Testa din kurskatalog {#test}
 ---------------------------------------
 
-Du kan göra ett självtest med [`dbwebb inspect`](http://local.v2.dbwebb.se/dbwebb-cli/inspect) som berättar för dig om du har med alla delar i ett kursmoment. Det är samma test som den som rättar ditt kursmoment kommer att köra.
+Du kan göra ett självtest med [`dbwebb inspect`](https://dbwebb.se/dbwebb-cli/inspect) som berättar för dig om du har med alla delar i ett kursmoment. Det är samma test som den som rättar ditt kursmoment kommer att köra.
 
 ```bash
 # Ställ dig i kursrepot och ange kursmomentet du vill inspektera

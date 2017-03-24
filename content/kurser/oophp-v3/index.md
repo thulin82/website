@@ -111,11 +111,11 @@ Läs [instruktionen till kursmoment 01](kurser/oophp-v3/kmom01).
 
 
 
-###Kmom02: Objektorienterad programmering i PHP {#kmom02}
+###Kmom02: OO-programmering i PHP {#kmom02}
 
-Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment får du jobba med programmering med klasser och objekt. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Du ser även hur kan kan programmera med objekt in i ett ramverk.
+Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment får du träna på programmering med klasser och objekt. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Du ser även hur kan kan programmera med objekt in i ett ramverk och du bekantar dig med begrepp som interface och traits.
 
-Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan visa vad du kan så här långt.
+Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner och lite ramverksprogrammering.
 
 Läs [instruktionen till kursmoment 02](kurser/oophp-v3/kmom02).
 

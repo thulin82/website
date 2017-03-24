@@ -1,5 +1,7 @@
 ---
-author: mos
+author:
+    - mos
+    - lew
 revision:
     "2017-03-24": (A, mos, lew) Första versionen släppt.
 ...
