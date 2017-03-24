@@ -1,17 +1,17 @@
 ---
 author: mos
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-03-24": (A, mos, lew) Första versionen släppt.
 ...
 Kmom01: Objektorientering i PHP
 ==================================
 
-[WARNING]
+[INFO]
 **Version 3 av oophp.**
 
-Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 27/3 2017.
+Utveckling av nytt kursmoment pågår. Kursmomentet släpps <strike>senaste den 27/3 2017</strike> släpptes 2017-03-24.
 
-[/WARNING]
+[/INFO]
 
 Kom igång med klasser i PHP och lär dig samtidigt hur grundstrukturen i ett PHP-ramverk kan se ut. Du bygger en me-sida i ditt egenskapade ramverk och du tränar på att bygga klasser och kod både i och utanför strukturen av ramverket.
 
@@ -143,6 +143,6 @@ Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur känns det att hoppa rakt in i klasser med PHP, hur gick det?
+* Hur känns det att hoppa rakt in i klasser med PHP, gick det bra?
 * Berätta om dina reflektioner kring ramverk, anax-lite och din me-sida.
-* Gick det bra att komma igång med MySQL, kanske har du jobbat med det/liknande tidigare eller var det något som strulade?
+* Gick det bra att komma igång med MySQL, har du liknande erfarenheter sedan tidigare?

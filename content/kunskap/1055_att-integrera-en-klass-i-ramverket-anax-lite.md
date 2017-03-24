@@ -558,4 +558,4 @@ En modul är hälsosam om den inte har beroenden till andra, eller i allafall, f
 
 Det är sådana anledningar till varför man väljer att skriva sin kod på olika sätt.
 
-Artikeln har en [egen forumtråd](t/) där du kan ställa frågor eller bidra med tips och trix.
+Artikeln har en [egen forumtråd](t/6341) där du kan ställa frågor eller bidra med tips och trix.

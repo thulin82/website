@@ -1140,7 +1140,7 @@ Jag kan välja att ärva DiceHand till en ny subklass som kunde hantera en spelo
 
 
 Avslutningsvis {#avslutning}
--------------------------------------------------------------------------------
+----------------------------------------------------------------
 
 Du har nu fått en introduktion till objektorientering i PHP med klasser, arv, komposition och klasser som använder varandras värden.
 
@@ -1155,12 +1155,16 @@ Det finns en forumtråd där du kan [ställa frågor om artikeln, eller bidra me
 
 
 <!--
-12. Statiska medlemmar {#static}
--------------------------------------------------------------------------------
 
 namespace
 exceptions
 chainable
+
+
+
+
+12. Statiska medlemmar {#static}
+-------------------------------------------------------------------------------
 
 
 

@@ -13,7 +13,7 @@ Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 3/4 2017
 
 [/WARNING]
 
-Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment blir du introducerad till objektorienterad programmering i PHP. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Om du redan kan ett annat objektorienterat programmeringsspråk så kommer du att känna igen samma konstruktioner i PHP. Om du är ny så får du steg för steg gå igenom grunderna i objektorientering och det finns flera övningsprogram som du skall skriva för att komma igång.
+Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment får du jobba med programmering med klasser och objekt. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Du ser även hur kan kan programmera med objekt in i ett ramverk.
 
 Kursmomentet avslutas med ett par friare programmeringsövningar så att du kan visa vad du kan så här långt.
 
