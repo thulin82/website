@@ -94,6 +94,8 @@ Dessa uppgifter skall utföras och redovisas.
 
 1. Gör uppgiften "[Dashboard](uppgift/mithril-dashboard)".
 
+1. Lägg till en Splash screen och en ikon till din meapp.
+
 
 
 ###Extra {#extra}

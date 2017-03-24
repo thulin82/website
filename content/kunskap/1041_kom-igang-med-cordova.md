@@ -352,7 +352,7 @@ button.addEventListener("touchend", function() {
 
 Det är även möjligt att felsöka emulatorn via chrome. Starta emulatorn, öppna en chrome webbläsare och gå till `chrome://inspect/#devices`.
 [FIGURE src=/image/kunskap/cordova/cordova-intro-chrome-dbg.png?w=500&h=300]
-Klicka på inspect och då får du upp ett nytt fönster där du kan styra din emulator och felsöka appen som om det vore en webbsida.
+Klicka på inspect så får du upp ett nytt fönster där du kan styra din emulator och felsöka appen som om det vore en webbsida.
 [FIGURE src=/image/kunskap/cordova/cordova-intro-inspect.png?w=500&h=300]
 
 

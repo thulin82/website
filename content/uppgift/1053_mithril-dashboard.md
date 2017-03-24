@@ -70,7 +70,9 @@ Krav {#krav}
 
 1. Skapa ett utseende, som gör det lätt för användaren att snabbt få en överblick över sina widgets.
 
-1. Din me-app skall kunna köras med cordova både i browsern och i en android emulator.
+1. Din app skall kunna köras med cordova både i browsern och i en android emulator.
+
+1. Lägg till en Splash screen och en ikon i appen.
 
 1. Validera och publicera din kod enligt följande.
 
