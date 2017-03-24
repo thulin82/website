@@ -166,6 +166,7 @@ Redirect /design            /kurser/design
 Redirect /linux-v1          /kurser/linux-v1
 Redirect /linux-v2          /kurser/linux-v2
 Redirect /linux             /kurser/linux-v2
+Redirect /kurser/linux      /kurser/linux-v2
 
 
 # oopython
@@ -178,6 +179,7 @@ Redirect /webapp-v1     /kurser/webapp-v1
 
 Redirect /webapp-v2     /kurser/webapp-v2
 Redirect /webapp        /kurser/webapp-v2
+Redirect /kurser/webapp /kurser/webapp-v2
 
 
 # oophp
@@ -189,6 +191,7 @@ Redirect /oophp-v2              /kurser/oophp-v2
 
 Redirect /oophp-v3              /kurser/oophp-v3
 Redirect /oophp                 /kurser/oophp-v3
+Redirect /kurser/oophp          /kurser/oophp-v3
 
 
 # ramverk1
