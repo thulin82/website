@@ -113,7 +113,7 @@ Det skall finnas en knapp som möjliggör omstart. Talet ska då slumpas om och 
 
 [FIGURE src=image/snapvt17/guess-my-number-session.png?w=w2 caption="Ett exempel på ett spel med SESSION."]
 
-Gör klassen `Session` som hanterar all kommunikation med `$_SESSION` samt startandet `start()` av sessionen. Använd ett sessionsnamn som gör din session unik och låt användaren sätta det med `setName()`.
+Gör klassen `Session` som hanterar all kommunikation med `$_SESSION` samt startandet `start()` av sessionen. Använd ett sessionsnamn som gör din session unik och sätt det med `setName()`.
 
 Klassen Session är en wrapper framför $\_SESSION och läser egentligen bara av variabeln och returnerar värden.
 
