@@ -28,8 +28,6 @@ Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js](kunskap/go
 
 Du sitter troligen och utvecklar ett kommandoradsprogram som gör någon form av asynkron händelse som du vill serialisera och skriva ut prompten när händelsen är klar. Kanske jobbar du med uppgiften "[Node.js terminalprogram mot MySQL](uppgift/nodejs-terminalprogram-mot-mysql)".
 
-Exempelprogram finns i ditt kursrepo (dbjs) under `example/nodejs/promise`.
-
 
 
 Problemet {#problem}
