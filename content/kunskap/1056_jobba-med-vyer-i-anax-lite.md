@@ -596,4 +596,4 @@ Avslutningsvis {#avslutning}
 
 Du har nu fått en genomgång av hur vy-filerna fungerar och hur view modulen är implementerad. Du har också sett hur hjälpmetoder kan skapas till vyn och du har sett exempel på hur du kan organisera dina vyer. Med detta har du nu god kontroll över hur dina websidor kan formas.
 
-Artikeln har en [egen forumtråd](t/6341) där du kan ställa frågor eller bidra med tips och trix.
+Artikeln har en [egen forumtråd](t/6365) där du kan ställa frågor eller bidra med tips och trix.
