@@ -4,6 +4,7 @@ category:
     - kurs oophp
     - anax-lite
 revision:
+    "2017-03-27": "(B, mos) Bort med förkunskap navbar."
     "2017-03-08": "(A, mos) Första utgåvan."
 ...
 Bygg en me-sida med Anax Lite
@@ -21,8 +22,6 @@ Förkunskaper {#forkunskaper}
 -----------------------
 
 Du har jobbat igenom artikeln "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)".
-
-Du har löst uppgiften "[En navbar till Anax Lite (steg 1)](uppgift/en-navbar-till-anax-lite-steg-1)".
 
 
 
