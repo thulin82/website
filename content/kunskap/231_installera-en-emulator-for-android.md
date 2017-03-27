@@ -53,6 +53,7 @@ Det kan se ut så här när du startar SDK Managern.
 [FIGURE src=/image/kunskap/android-sdk-manager-2.png?w=w2 caption="Android SDK manager behöver nu uppdateras."]
 
 Du behöver nu [uppdatera ditt SDK](https://developer.android.com/sdk/installing/adding-packages.html) med nödvändiga komponenter. Det är komponenter som måste laddas ned för att emulatorn skall fungera. De viktiga paketen är:
+
 * Tools
     * Android SDK tools
     * Android SDK platform-tools
@@ -161,7 +162,8 @@ I kursen webapp behöver du ha SDK:n i pathen så du kan köra kommandona `andro
 Du behöver lägga till system variabeln `ANDROID_HOME` som går till android-sdk mappen och `ANDROID_HOME/{tools,platform-tools}` i din $PATH. När det är gjort kan du testa i konsollen. En artikel som visar hur man lägger till [i PATH för windows](http://www.computerhope.com/issues/ch000549.htm).
 
 ```bash
-$ android -h
+$ emulator
+emulator: ERROR: No AVD specified. Use '@foo' or '-avd foo' to launch a virtual device named 'foo'
 ```
 
 
