@@ -1,13 +1,13 @@
 ---
 author: mos
 revision:
-    "2017-03-15": (PA2, mos) Delvis publicerad.
+    "2017-03-24": (A, mos) Samtliga delar publicerade.
 ...
 Kmom05: Procedur, trigger, funktion
 ==================================
 
 [INFO]
-Kursmomentet är under utveckling och blir tillgängligt <strike>**senast den 13/3-2017** **delvis den 2017-03-15** och resterande delar släpps 2017-03-22</strike> i sin helhet per 2017-03-23.
+Kursmomentet är under utveckling och blir tillgängligt <strike>**senast den 13/3-2017** **delvis den 2017-03-15** och resterande delar släpps 2017-03-22</strike> i sin helhet per 2017-03-24.
 [/INFO]
 
 Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
@@ -22,7 +22,7 @@ I kursmomentet introduceras också en webbserver för Node.js i form av Express.
 
 [FIGURE src=image/snapvt17/express-mysql-view-all.png?w=w2 caption="Via Express använder vi oss av MySQL och HTML formulär för att visa och uppdatera databasens innehåll."]
 
-<small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
