@@ -22,6 +22,10 @@ Så här kan det se ut när du jobbar dig igenom kursmomentet.
 
 [FIGURE src=/image/snapht15/jq-play.png?w=w2 caption="Bekanta dig med JSON filer och dess uppbyggnad."]
 
+Och så här kan det se ut när vi är klara.
+
+[YOUTUBE src=CWI3_dK6PiI width=630 caption="Dashboard i kursmoment 3."]
+
 <!-- [FIGURE src=/image/snapht15/ajax-af-lista.png?w=w2 class="left" caption="Sida som visar antalet lediga jobb samt platsannonser."]
 
 [FIGURE src=/image/snapht15/ajax-af-undersida.png?w=w2 class="left" caption="Undersida som visar lediga jobb och antal platsannonser i Blekinge."] -->

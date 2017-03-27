@@ -20,14 +20,9 @@ Vi har jobbat en del mot olika api'er, men än så länga har vi bara använt `G
 <!--more-->
 
 
+Så här kan det se ut när vi är klara.
 
-Det kan se ut så här när vi är klara.
-
-<figure class="wrap">
-[FIGURE src=/image/snapht15/mithril-listview.png?w=c7 class="left" caption="En listview med alternativ."]
-
-[FIGURE src=/image/snapht15/mithril-listviewpage.png?w=c7 class="left" caption="Ett alternativ i listan valdes och visas upp."]
-</figure>
+[YOUTUBE src=_dgxggNKikI width=630 caption="Winecellar i kursmoment 4."]
 
 
 
