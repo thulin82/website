@@ -76,8 +76,11 @@ Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
 1. Jobba igenom artikeln "[Att integrera en klass i ramverket Anax Lite](kunskap/att-integrera-en-klass-i-ramverket-anax-lite)" som visar hur du kan integrera en klass eller tjänst in i ramverket Anax Lite.
 
-1. View helpers samt view regions. (make less)?
+1. Jobba igenom artikel "[Att jobba med vyer i Anax Lite](kunskap/jobba-med-vyer-i-anax-lite)" för att se hur vilka möjligheter du har till att koda och strukturera dina vyer.
 
+<!--
+(make less)?
+-->
 
 
 ###Uppgifter {#uppgifter}
