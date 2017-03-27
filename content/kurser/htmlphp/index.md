@@ -283,7 +283,7 @@ Kursplan {#kursplan}
 
 Kursplanen är kursens formella dokument som fastställts av högskolan. När kursen utvärderas görs det mot kursplanen. I kursplanen kan du läsa om kursens klassificering, syfte, innehåll, mål, generella förmågor, lärande och undervisning, bedömning och examination, litteratur, mm.
 
-Från och med hösten 2016 hittar du [kursplanen genom att söka på kurskoden PA1439 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1462) och kursen heter "Webbteknologier".
+Från och med hösten 2016 hittar du [kursplanen genom att söka på kurskoden PA1439 via BTH's hemsida](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=PA1439) och kursen heter "Webbteknologier".
 
 Mellan höstterminen 2013 och vårterminen 2016 hade kursen kurskoden [DV1462](http://edu.bth.se/utbildning/utb_kursplaner.asp?KKurskod=DV1462) och hette "Databaser, HTML, CSS och skriptbaserad PHP-programmering".
 
