@@ -52,6 +52,13 @@ Läs följande:
 -->
 
 
+###Artiklar {#artiklar}
+
+Läs följande artiklar.
+
+1. I föregående kursmoment läste du artiklarna ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg) och "[Bygg ett eget PHP-ramverk](kunskap/bygg-ett-eget-php-ramverk)", gå tillbaka till dem om du behöver fräscha upp minnet.
+
+
 
 ###Lästips {#lastips}
 
@@ -60,6 +67,7 @@ Det finns inga lästips.
 <!--
 När man pratar om objektorienterad programmering så behöver man också ha en viss bas i objektorienterad modellering, det underlättar. Därför kan du läsa lite om UML, "Unified Modelling Language". En bra start plats är [Wikipedia om UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language).
 -->
+
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
