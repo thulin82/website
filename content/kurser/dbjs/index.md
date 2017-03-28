@@ -1,9 +1,10 @@
 ---
 title: dbjs
 
-author: mos
+author:
+    - mos
 revision:
-    "2016-12-16": (PA1, mos) Arbete påbörjat.
+    "2017-03-27": (A, mos) Alla kmom publicerade i samband med första rundan.
 ...
 Kursen "dbjs"
 ==================================
@@ -12,12 +13,6 @@ Kursen **Webbprogrammering och databaser**, a.k.a. *dbjs*, lär ut traditionell 
 
 
 <!--more-->
-
-[WARNING]
-Kursen är under utveckling som sker kontinuerligt under vårterminen 2017.
-
-[/WARNING]
-
 
 
 
@@ -142,6 +137,9 @@ Du kommer även jobba vidare med JavaScript, Node.js och se hur du kan koppla di
 
 ###Kmom05: Procedur, trigger, funktioner {#kmom05}
 
+Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
+
+I kursmomentet introduceras också en webbserver för Node.js i form av Express. Du kommer igång med Express och ser hur du kan bygga upp en webb/RESTFul server och hur du kan skriva din applikationskod för att till exempel komma åt en databas och visa och uppdatera dess innehåll.
 
 [Instruktion till kursmoment 05](kurser/dbjs/kmom05).
 
@@ -149,6 +147,7 @@ Du kommer även jobba vidare med JavaScript, Node.js och se hur du kan koppla di
 
 ###Kmom06: Index och prestanda {#kmom06}
 
+Detta kursmoment erbjuder en introduktion till hur databasen internt jobbar för att optimera de SQL-frågor du skriver och hur du bör använda index för att optimera din databas.
 
 [Instruktion till kursmoment 06](kurser/dbjs/kmom06).
 
