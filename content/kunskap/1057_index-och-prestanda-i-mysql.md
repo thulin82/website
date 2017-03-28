@@ -612,7 +612,7 @@ Avslutningsvis {#avslutning}
 
 Du har nu fått en allmän genomgång av aspekter som kan påverka prestandan av din databas och fokus har varit på index. Vill du läsa mer så är manualen för MySQL och den delen som handlar om Optimization, en god punkt att fortsätta.
 
-Artikeln har en [egen forumtråd](t/6365) där du kan ställa frågor eller bidra med tips och trix.
+Artikeln har en [egen forumtråd](t/6375) där du kan ställa frågor eller bidra med tips och trix.
 
 
 
