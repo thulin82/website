@@ -36,13 +36,13 @@ Exemplen för Cordova i kursen innehåller bara `www`-mappen. För att testa kod
 [/INFO]
 
 
-Hello word {#hello_world}
+Hello world {#hello_world}
 --------------------------------------
 
 När vi skapar ett nytt Cordova projekt får vi med kod och filstruktur för en fungerande app så vi testar skapa ett nytt projekt i terminalen.
 
 ```bash
-$ cordova create hello se.dbwebb.helloWorld HelloWord
+$ cordova create hello se.dbwebb.helloWorld HelloWorld
 ```
 
 `cordova create` kommandot tar tar emot följande argument:

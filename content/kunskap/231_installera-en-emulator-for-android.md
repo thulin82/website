@@ -121,6 +121,8 @@ Så här kan det se ut när din emulator har startat.
 
 [FIGURE src=/image/snapht15/android-emulator-mynexus7.png?w=50% caption="Min Nexus 7 körs nu i en emulator."]
 
+Besök [forumet](t/6369) för hjälp med felmeddelande om HAXM eller virtualisering.
+
 
 
 Emulatorn är kopplad till nätverket {#net}
