@@ -25,6 +25,8 @@ Du har jobbat igenom artiklarna "[Node.js webbserver med Express](kunskap/nodejs
 
 Du kan även programmera i databasen via artiklarna "[Transaktioner i databas](kunskap/transaktioner-i-databas)", "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)", "[Triggers i databas](kunskap/triggers-i-databas)" och "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)".
 
+Du har även löst uppgiften "[Node.js terminalprogram mot MySQL](uppgift/nodejs-terminalprogram-mot-mysql)".
+
 
 
 Introduktion {#intro}

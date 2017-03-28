@@ -24,8 +24,6 @@ Du har jobbat igenom artikeln "[Gör en kommandoradsklient i Node.js](kunskap/go
 
 Du har även kunskaper i SQL och MySQL motsvarande artikeln ["Kom igång med SQL"](uppgift/kom-igang-med-sql).
 
-Du har även löst uppgiften "[Node.js terminalprogram mot MySQL](uppgift/nodejs-terminalprogram-mot-mysql)".
-
 
 
 Introduktion {#intro}
