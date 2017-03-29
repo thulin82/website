@@ -1,11 +1,11 @@
 ---
 author: mos
-category: javascript
+category:
+    - javascript
+    - kursen webapp
 revision:
-  "2017-03-10": (B, aar) Kopiera Mithril från example istället för ladda ner.
-  "2015-11-04": (A, mos) Första utgåvan inför kursen webapp.
-updated: "2017-03-10 12:47:04"
-created: "2015-10-30 09:21:18"
+    "2017-03-10": "(B, aar) Kopiera Mithril från example istället för ladda ner."
+    "2015-11-04": "(A, mos) Första utgåvan inför kursen webapp."
 ...
 Kom igång med ramverket Mithril för JavaScript SPA
 ==================================
@@ -17,6 +17,14 @@ En SPA är en *single page application* som är skriven i HTML, CSS och JavaScri
 Mithril är ett sådant ramverk och vi skall nu bekanta oss med hur Mithril kan användas för att skapa SPA-applikationer.
 
 <!--more-->
+
+[INFO]
+**Mithril 0.2 och webapp-v1**
+
+Denna artikel är skriven mot en äldre version av Mithril som ingick i kursen webapp-v1.
+
+Mithril har fått uppdateringar och det finns en nyare artikel som beskriver hur man kommer igång med Mithril 1.\*, "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)" som är en del av kursen webapp-v2.
+[/INFO]
 
 
 
@@ -934,7 +942,3 @@ Att använda designmönstret MVC kan ge dig en god uppdelning av din kod i olika
 Mithril är en spännande lösning på klientbaserad programmering med JavaScript. Det är inte helt enkelt att komma in i det, men koden är liten och överskådlig. Personligen uppskattar jag mer tydlig kod i Mithril än *magin* i jQuery Mobile. Men var sak kan ha sitt användningsområde. Det vi saknar här är de GUI-element som vi får gratis i jQm. Det är alltid fördelar och nackdelar att väga mot varandra.
 
 Har du [tips, förslag eller frågor om artikeln](t/4778) så finns det en specifik forumtråd för det.
-
-
-
-
