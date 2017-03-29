@@ -50,7 +50,7 @@ I grunden handlar det om att generera en navbar som kan se ut ungefär så här 
 </navbar>
 ```
 
-Vi vill lyfta ut navbarens innehåll till en konfigurationsfil där navbarens innehåll lagras i en array. Det kan se ut så här.
+Vi vill lyfta ut navbarens innehåll och lagra det i en array. Det kan se ut så här.
 
 
 ```php
