@@ -161,7 +161,15 @@ Android i PATH {#path}
 
 I kursen webapp behöver du ha SDK:n i pathen så du kan köra kommandona `android` och `emulator` i konsollen.
 
-Du behöver lägga till system variabeln `ANDROID_HOME` som går till android-sdk mappen, för mig är det "C:\Users\aar\AppData\Local\Android\". Sen behöver du lägga till `ANDROID_HOME/{tools,platform-tools}`, alltså "C:\Users\aar\AppData\Local\Android\tools" och "C:\Users\aar\AppData\Local\Android\platform-tools" i din $PATH. När det är gjort kan du testa i konsollen. En artikel som visar hur man lägger till [i PATH för windows](http://www.computerhope.com/issues/ch000549.htm).
+Cordova har som krav att system variabeln `ANDROID_HOME` ska existera, så då lägger vi till den. `ANDROID_HOME` ska gå till android-sdk mappen du precis installerade, för mig är det `C:\Users\aar\AppData\Local\Android\`.  
+Du behöver även lägga till mapparna `ANDROID_HOME/{tools,platform-tools}`, alltså `C:\Users\aar\AppData\Local\Android\tools` och `C:\Users\aar\AppData\Local\Android\platform-tools` i din $PATH. Om du sitter på Windows finns det en [artikel som visar hur du gör](http://www.computerhope.com/issues/ch000549.htm). Nedan kan du även se hur det ser ut för mig.
+
+[FIGURE src=/image/kunskap/add-Android_home.png?w=60% caption="Lägger till ANDROID_HOME"]
+[FIGURE src=/image/kunskap/add-platform-tools.png?w=60% caption="Lägger till platform-tools i path"]
+[FIGURE src=/image/kunskap/add-tools.png?w=60% caption="Lägger till tools i path"]
+
+
+När det är gjort kan du testa så det funkar i konsollen. Glöm inte att starta om öppna terminalfönster efter att du har ändrat i $PATH. 
 
 ```bash
 $ emulator
