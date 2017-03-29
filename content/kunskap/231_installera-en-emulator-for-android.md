@@ -161,7 +161,7 @@ Android i PATH {#path}
 
 I kursen webapp behöver du ha SDK:n i pathen så du kan köra kommandona `android` och `emulator` i konsollen.
 
-Du behöver lägga till system variabeln `ANDROID_HOME` som går till android-sdk mappen, för mig är det "C:\Users\aar\AppData\Local\Android\". Sen behöver di lägga till `ANDROID_HOME/{tools,platform-tools}`, alltså "C:\Users\aar\AppData\Local\Android\tools" och "C:\Users\aar\AppData\Local\Android\platform-tools" i din $PATH. När det är gjort kan du testa i konsollen. En artikel som visar hur man lägger till [i PATH för windows](http://www.computerhope.com/issues/ch000549.htm).
+Du behöver lägga till system variabeln `ANDROID_HOME` som går till android-sdk mappen, för mig är det "C:\Users\aar\AppData\Local\Android\". Sen behöver du lägga till `ANDROID_HOME/{tools,platform-tools}`, alltså "C:\Users\aar\AppData\Local\Android\tools" och "C:\Users\aar\AppData\Local\Android\platform-tools" i din $PATH. När det är gjort kan du testa i konsollen. En artikel som visar hur man lägger till [i PATH för windows](http://www.computerhope.com/issues/ch000549.htm).
 
 ```bash
 $ emulator
