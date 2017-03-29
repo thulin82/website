@@ -251,13 +251,13 @@ Skriv SQL-kod för att utföra följande:
 Det sista kommandot bör ha raderat 5 lärare (5 rader i tabellen).
 
 [INFO]
-**Felmeddelande om safe mode**
+**Felmeddelande om safe update mode**
 
-Får du felmeddelandet om safe mode när du försöker radera Mikael?
+Får du felmeddelandet om safe update mode när du försöker radera Mikael?
 
 > <i>Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column To disable safe mode, toggle the option in Preferences -> SQL Queries and reconnect.</i>
 
-Gör som det står i felmeddelandet, gå in och klicka bort "Safe mode" i preferences. Sedan skall det gå.
+Gör som det står i felmeddelandet, gå in och klicka bort "Safe updates" under "SQL Editor" i Preferences. Reconnecta därefter "Query"->"Reconnect to server". Sedan skall det gå.
 [/INFO]
 
 När du raderar rader så kan det vara bra att lägga till en `LIMIT` klausul som säger hur många rader du raderar. Annars finns risken att en liten felskrivning i satsen gör att du raderar hela innehållet i tabellen. Ta för vana att alltid använda `LIMIT`.
