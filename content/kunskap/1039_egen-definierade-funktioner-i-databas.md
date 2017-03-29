@@ -105,7 +105,7 @@ END
 DELIMITER ;
 ```
 
-Som du ser så använder jag nu delimiter till att avgränsa koden så att semikolon fungerar som avslutare, inne i funktionens body.
+Som du ser så använder jag nu *delimiter* till att avgränsa koden så att semikolon fungerar som avslutare, inne i funktionens body.
 
 Funktionen fungerar och den kan användas så här.
 
