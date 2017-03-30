@@ -141,12 +141,13 @@ Vi ersätter vårt `style.css` med `flex.css`, som vi använder för att designa
 </head>
 <body>
     <div class="flex-container">
+        <div class="widget">Numero uno</div>
         ...
     </div>
 
 ```
 
-I `flex.css` lägger vi in en rensning av browser `margin` och `padding` och sen definerar vi att förb vårt container-element vill vi använda flex. Vi definerar även att elementen inuti ska lägga sig på en lång rad med attributet `flex-direction:row;`.
+I `flex.css` lägger vi in en rensning av browser `margin` och `padding` och sen definerar vi att för `flex-container`-elementet vill vi använda flex. Vi definerar även att elementen inuti ska lägga sig på en lång rad med attributet `flex-direction:row;`.
 
 ```css
 html, body {
@@ -160,7 +161,7 @@ html, body {
 }
 ```
 
-Vi definerar nu vår `.widget` klass och som i float-griddet utgår vi från den minsta enheten. Vi sätter samma `margin` värde som tidigare, men istället för att använda `float:left;` och `width` använder vi `flex`.
+Vi definerar nu vår `.widget` klass och som i float-grid utgår vi från den minsta enheten. Vi sätter samma `margin` värde som tidigare, men istället för att använda `float:left;` och `width` använder vi `flex`.
 
 ```css
 .widget {
@@ -173,7 +174,7 @@ Vi definerar nu vår `.widget` klass och som i float-griddet utgår vi från den
 }
 ```
 
-På samma sätt som för float-griddet anger vi den ändrade bredden på våra widgets när skärmen växer.
+På samma sätt som för float-grid anger vi den ändrade bredden på våra widgets när skärmen växer.
 
 ```css
 /* Media queries for .widget */

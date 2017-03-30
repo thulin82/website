@@ -64,7 +64,7 @@ Krav {#krav}
 
 1. Dina widgets skall hämta data från Github api't, plus ett valfritt api.
 
-1. Ditt dashboard skall använda sig av ett gridbaserad layout, som visar upp olika många widgets per rad beroende på enhetens storlek.
+1. Ditt dashboard skall använda sig av ett gridbaserad layout, som visar upp olika många widgets per rad beroende på enhetens storlek. Välj float eller flex varianten på grid. 
 
 1. Ditt grid layout skall visa 5 stycken widgets per rad för enheter med skärmar större än 1200px.
 

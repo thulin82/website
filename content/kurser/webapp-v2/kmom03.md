@@ -14,15 +14,9 @@ Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som 
 
 Vi jobbar vidare med mithril och att hämta data från api'er. Nu handlar det om att skapa mithril komponenter, som underlätter för att återanvända kod. Vi ska även titta på hur vi skapar ett grid system för att skapa en SPA-applikation som kan visas upp på enheter i fem olika storlekar.
 
-På vägen tar vi och övar att söka och visa information i JSON-filer.
-
 <!--more-->
 
-Så här kan det se ut när du jobbar dig igenom kursmomentet.
-
-[FIGURE src=/image/snapht15/jq-play.png?w=w2 caption="Bekanta dig med JSON filer och dess uppbyggnad."]
-
-Och så här kan det se ut när vi är klara.
+Så här kan det se ut när vi är klara.
 
 [YOUTUBE src=CWI3_dK6PiI width=630 caption="Dashboard i kursmoment 3."]
 
@@ -117,8 +111,8 @@ Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 
-* Hur kändes det att jobba med applikationen jq för att söka i och visualisera JSON-filer? Är det något du kan se användning för?
 * Hur är din generella uppfattning om mithril nu efter tre kursmoment?
 * Hur känns det att utveckla för enheter med olika stora skärmar?
+* Valde du flex eller float grid? Varför?
 * Vilket API valde du förutom Github? Varför?
 * Var det något som krånglade eller tog extra mycket tid?
