@@ -99,9 +99,10 @@ Gör följande uppgifter.
 
 1. Gör uppgiften "[En navbar till Anax Lite (steg 2)](uppgift/en-navbar-till-anax-lite-steg-2)" som låter dig integrera kod in i ramverkets struktur. Spara din kod i `me/anax-lite`.
 
-1. Gör uppgiften [tärningsspelet 100](uppgift/tarningsspel) som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
+1. Välj mellan följande uppgifter och gör en av dem.
+    1. Gör uppgiften "[Tärningsspelet 100](uppgift/tarningsspel)" som modul till ditt Anax och visa upp spelet i din me-sida. Spara din kod under `me/anax-lite`.
 
-1. Gör uppgiften [Månadskalender](uppgift/manadskalender) och inkludera resultatet i ditt Anax. Spara din kod under `me/anax-lite`.
+    1. Gör uppgiften "[Månadskalender](uppgift/manadskalender)" och inkludera resultatet i ditt Anax. Spara din kod under `me/anax-lite`.
 
 1. Fortsätt att jobba igenom uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)" genom att utföra ytterligare en tredjedel av uppgiften. Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`. Den sista tredjedelen gör du i nästa kursmoment.
 
@@ -115,7 +116,9 @@ Rita klass och sekvensdiagram?
 
 ###Extra {#extra}
 
-Det finns ingen extrauppgift.
+Gör extrauppgifterna om du har tid, kraft, eller lust.
+
+1. Gör båda uppgifterna om 100-spelet och Månadskalendern.
 
 
 
@@ -129,7 +132,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 Se till att följande frågor besvaras i texten:
 
 * Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
+* Hur väljer du att organisera dina vyer?
 * Berätta om hur du löste integreringen av klassen Session. Har du koll på routes och dess struktur?
-* Berätta om hur du löste uppgiften med tärningsspelet 100, hur tänkte du och hur gjorde du, hur organiserade du din kod?
-* Berätta om hur du löste uppgiften med Månadskalendern, hur tänkte du och hur gjorde du, hur organiserade du din kod?
+* Berätta om hur du löste uppgiften med Tärningsspelet 100/Månadskalendern, hur tänkte du och hur gjorde du, hur organiserade du din kod?
 * Några tankar kring SQL så här långt?
