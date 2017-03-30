@@ -7,7 +7,7 @@ revision:
 Ett enkelt grid för alla våra enheter
 ==================================
 
-För att våra webapplikationer ska kunna visas på enheter av olika storlekar, allt från mobiltelefoner över surfplattor till stora datorskärmar, måste vi designa våra applikationer så de är läsbara och användarvänliga på alla enheter. Vi skall i denna övning skapa ett grid för att visa upp widgets på 4 olika stora skärmar. Övningen görs enbart i HTML och CSS och kan därför enkelt återanvändas i mithril, men även i andra sammanhang där vi vill visa upp element i ett gridbaserat layout.
+För att våra webapplikationer ska kunna visas på enheter av olika storlekar, allt från mobiltelefoner över surfplattor till stora datorskärmar, måste vi designa våra applikationer så de är läsbara och användarvänliga på alla enheter. Vi skall i denna övning skapa ett grid på två olika sätt för att visa upp widgets på 4 olika stora skärmar. Övningen görs enbart i HTML och CSS och kan därför enkelt återanvändas i mithril, men även i andra sammanhang där vi vill visa upp element i ett gridbaserat layout.
 
 Källkoden för denna övning finns i `example/grid` och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/grid).
 
@@ -48,10 +48,6 @@ Vi lägger in minsta möjliga skalet för att visa hemsidan på enheter av olika
 
 Än så länge ser det inte mycket ut för världen, så låt os gå vidare och ge vår widget klass lite styling.
 
-
-
-Grid {#grid}
---------------------------------------
 Vi inkluderar ett stylesheet style.css i `head`-elementet av `index.html` och skapar css-filen.
 
 ```html
@@ -70,7 +66,11 @@ html, body {
 }
 ```
 
-Vi kommer att designa vårt grid med tillvägagångssättet mobile-first, dvs att vi utgår ifrån den minsta enheten och efter det specificerar styling för större enheter. Vi kommer dessutom använda oss av ett flytande grid så vi kommer använda % av skärmens bredd istället för fasta breddar. Vi definerar alltså grundklassen `.widget` för den minsta enheten som vårt innehåll kommer visas på och sen med hjälp av [media-queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) definerar vi stylingen för större enheter. På den minsta enheten vill vi att vår `.widget` element skall fylla hela skärmen förutom en marginal på 1% på varje sida och dessutom en marginal på 10 pixlar neråt till nästa element. Jag har dessutom lagt till en border så vi ser hur stora elementen är. Jag ger även elementen en fast höjd och en padding för att det skall bli snyggare. Jag använder [box-sizing](https://developer.mozilla.org/en/docs/Web/CSS/box-sizing) attributet med värdet `border-box` för att paddingen ingår i den totala bredden av elementet. Annars hade den högre delen av elementet hamnat utanför skärmen på grund av en bredd på 100% och padding som läggs till på det.
+
+
+Float-grid {#float}
+--------------------------------------
+Det första tillvägagångssätt vi användar för att skapa ett grid är det traditionella sättet där vi flyter (float) element efter varann. Vi kommer att designa vårt grid med tillvägagångssättet mobile-first, dvs att vi utgår ifrån den minsta enheten och efter det specificerar styling för större enheter. Vi kommer dessutom använda oss av ett flytande grid så vi kommer använda % av skärmens bredd istället för fasta breddar. Vi definerar alltså grundklassen `.widget` för den minsta enheten som vårt innehåll kommer visas på och sen med hjälp av [media-queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) definerar vi stylingen för större enheter. På den minsta enheten vill vi att vår `.widget` element skall fylla hela skärmen förutom en marginal på 1% på varje sida och dessutom en marginal på 10 pixlar neråt till nästa element. Jag har dessutom lagt till en border så vi ser hur stora elementen är. Jag ger även elementen en fast höjd och en padding för att det skall bli snyggare. Jag använder [box-sizing](https://developer.mozilla.org/en/docs/Web/CSS/box-sizing) attributet med värdet `border-box` för att paddingen ingår i den totala bredden av elementet. Annars hade den högre delen av elementet hamnat utanför skärmen på grund av en bredd på 100% och padding som läggs till på det.
 
 ```css
 .widget {
@@ -127,7 +127,80 @@ På samma sätt som ovan definerar vi media-queries för enheter större än 700
 
 
 
+Flex-grid {#float}
+--------------------------------------
+
+[Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) introducerades i och med CSS3 och är ett nytt och spännande sätt att göra design för webben.
+
+Vi ersätter vårt `style.css` med `flex.css`, som vi använder för att designa vårt grid med flexbox. Vi lägger även till en container runt våra 5 widget element.
+
+```html
+<head>
+    ...
+    <link rel="stylesheet" type="text/css" href="flex.css">
+</head>
+<body>
+    <div class="flex-container">
+        ...
+    </div>
+
+```
+
+I `flex.css` lägger vi in en rensning av browser `margin` och `padding` och sen definerar vi att förb vårt container-element vill vi använda flex. Vi definerar även att elementen inuti ska lägga sig på en lång rad med attributet `flex-direction:row;`.
+
+```css
+html, body {
+    margin:0;
+    padding:0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+```
+
+Vi definerar nu vår `.widget` klass och som i float-griddet utgår vi från den minsta enheten. Vi sätter samma `margin` värde som tidigare, men istället för att använda `float:left;` och `width` använder vi `flex`.
+
+```css
+.widget {
+    height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    border:2px solid #CCC;
+    flex: 0 0 98%;
+    margin: 0 1% 10px;
+}
+```
+
+På samma sätt som för float-griddet anger vi den ändrade bredden på våra widgets när skärmen växer.
+
+```css
+/* Media queries for .widget */
+@media (min-width: 500px) {
+    .widget {
+        flex: 0 0 48.0%;
+    }
+}
+
+@media (min-width: 700px) {
+    .widget {
+        flex: 0 0 31.3333333333333%;
+    }
+}
+
+@media (min-width: 980px) {
+    .widget {
+        flex: 0 0 23.0%;
+    }
+}
+```
+
+Vi vinner kanske inte mycket på att göra grid med flexbox, men vi har nu en stabil grund att stå på med flexbox, som hanterar responsivitet på ett bättre sätt än med float. För de intresserade är denna [introduktion](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) till flexbox en bra guide.
+
+
+
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Vi har nu skapat ett grid som vi kan använda för att visa upp element i en grid layout. Detta är ett mycket enkelt grid layout, men som uppfyller de krav vi hade på det med 34 rader CSS kod. Du är välkommen att bygga vidare på gridet och kanske lägga till en 5:e nivå för att visa upp det på extra stora skärmar.
+Vi har nu skapat ett grid på två olika sätt, som vi kan använda för att visa upp element i en grid layout. Detta är ett mycket enkelt grid layout, men som uppfyller de krav vi hade på det med 34 eller 37 rader CSS kod. Du är välkommen att bygga vidare på gridet och kanske lägga till en 5:e nivå för att visa upp det på extra stora skärmar.
