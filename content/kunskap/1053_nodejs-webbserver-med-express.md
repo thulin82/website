@@ -341,7 +341,7 @@ Om du kan klicka på bilden så att den flyttar sig så fungerar även det inklu
 
 
 
-###Än mer dynamiskt innehåll {#routepara}
+###Ännu mer dynamiskt innehåll {#routepara}
 
 Vi kan få innehållet i sidan att ändra sig beroende på hur routen ser ut. Om vi parametriserar routens delar så kan vi skriva så här.
 
@@ -364,16 +364,16 @@ Resultatet kan se ut så här.
 
 [FIGURE src=image/snapvt17/express-route-params.png?w=w2 caption="Innehållet i HTML-sidan kommer från routens innehåll."]
 
-En udda sida måhända, men den får demonstrera hur man kan jobba med dynamisk information och paramtriserade routes.
+En udda sida måhända, men den får demonstrera hur man kan jobba med dynamisk information och parametriserade routes.
 
-På serversidan ser du innehållet i request objektet som visar både den route (path) som användes och hur delarna av routen översattes till inkommande parametrar.
+På serversidan ser du innehållet i request-objektet som visar både den route (path) som användes och hur delarna av routen översattes till inkommande parametrar.
 
 ```javascript
 console.log(req.path);
 console.log(req.params);
 ```
 
-Ovan del i routern ger oss utskrift i servern.
+Ovandel i routen ger oss följande utskrift i servern.
 
 ```text
 $ node index.js
@@ -490,7 +490,7 @@ include footer.pug
 
 Om vi nu tar en route som inte finns så kan svaret se ut så här.
 
-[FIGURE src=image/snapvt17/express-custom-error-handler.png?w=w2 caption="Min egen felhanterare renderar ett anpassat fel."]
+[FIGURE src=image/snapvt17/express-custom-error-handler.png?w=w2 caption="Min egen felhanterare som renderar ett anpassat fel."]
 
 Det ser ut som vi lyckas knyta ihop Express, router och vy-filer till skapande av både dynamiska och statiska HTML-sidor.
 
