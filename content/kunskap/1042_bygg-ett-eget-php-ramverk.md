@@ -140,6 +140,8 @@ lrwxrwxrwx 1 mos mos   20 Mar  2 16:33 .htaccess -> .htaccess_wwwstudent
 -rw-r--r-- 1 mos mos 1.2K Mar  2 16:32 .htaccess_wwwstudent
 ```
 
+Om du sitter på Windows och Cygwin så bör du kopiera filen istället för att skapa en symbolisk länk som jag gör ovan. Annars kan det bli problem lokalt. Men på Mac OS och Linux fungerar det utmärkt med länk.
+
 Gör en `dbwebb publish` och kontrollera att oavsett vilken underlänk du skriver in i webbläsaren, så hamnar du i din frontkontroller.
 
 För min del så testade jag följande länkar och alla ledde mig till samma svar från frontkontrollern.
