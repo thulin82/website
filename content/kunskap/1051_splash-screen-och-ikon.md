@@ -136,7 +136,7 @@ Vad vackert det blev. Om jag hade använt mig av bilder med korrect storlek hade
 Testa att köra din app i webbläsaren, det kan hända att du även har en splash screen där. Det är ovanligt att använda splash screen i webbläsaren, du kan få avgöra själv om du vill göra det. Vi går igenom hur du ändrar bilden och hur du kan stänga av den för webbläsaren. I webbläsaren är det alltid samma bild som visas så där behöver vi bara lägga till en bild.
 
 Om du inte har en `<platform name="browser">` tag lägger du till det.
-För att stänge av splash screen för webbläsaren lägger du till `<preference name="ShowSplashScreen" value="false"/>` innanför browser-taggen. Alternativt ändra `value` till `true` för att aktivera den.
+För att stänga av splash screen för webbläsaren lägger du till `<preference name="ShowSplashScreen" value="false"/>` innanför browser-taggen. Alternativt ändra `value` till `true` för att aktivera den.
 För att ändra bilden lägger du till `<preference name="SplashScreen" value="www/res/web_hi_res_512.png"/>` innanför browser-taggen.
 
 Det finns [inställningar för splash screen](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-splashscreen/index.html#preferences) där ni bl.a. kan ställe in hur länge den ska visas och vad den ska ha för bakgrundsfärg.
