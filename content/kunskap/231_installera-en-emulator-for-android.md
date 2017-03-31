@@ -161,21 +161,28 @@ Android i PATH {#path}
 
 I kursen webapp behöver du ha SDK:n i pathen så du kan köra kommandona `android` och `emulator` i konsollen.
 
-Cordova har som krav att system variabeln `ANDROID_HOME` ska existera, så då lägger vi till den. `ANDROID_HOME` ska gå till android-sdk mappen du precis installerade, för mig är det `C:\Users\aar\AppData\Local\Android\`.  
-Du behöver även lägga till mapparna `ANDROID_HOME/{tools,platform-tools}`, alltså `C:\Users\aar\AppData\Local\Android\tools` och `C:\Users\aar\AppData\Local\Android\platform-tools` i din $PATH. Om du sitter på Windows finns det en [artikel som visar hur du gör](http://www.computerhope.com/issues/ch000549.htm). Nedan kan du även se hur det ser ut för mig.
+Cordova har som krav att system variabeln `ANDROID_HOME` ska existera, så då lägger vi till den. `ANDROID_HOME` ska gå till android-sdk mappen du precis installerade, för mig är det `C:\Users\aar\AppData\Local\Android\`. Vi behöver även ha under mapparna `tools` och `platform-tools` i $PATH.
 
-[FIGURE src=/image/kunskap/add-Android_home.png?w=60% caption="Lägger till ANDROID_HOME"]
-[FIGURE src=/image/kunskap/add-platform-tools.png?w=60% caption="Lägger till platform-tools i path"]
-[FIGURE src=/image/kunskap/add-tools.png?w=60% caption="Lägger till tools i path"]
+I cygwin ska vi ändra i på filen `~/.bash_profile`, på Linux/Mac om du också har den filen ändrar du på den annars ska du ändra filen `~/.profile`. Jag utgår från cygwin och kommer använda `~/.bash_profile.` Kör följande kommando i terminalen.
 
+```bash
+echo export ANDROID_HOME="/cygdrive/c/Users/aar/AppData/Local/Android" >> ~/.bash_profile
+echo export PATH=\$PATH:\$ANDROID_HOME/tools:\$ANDROID_HOME/platform-tools >> ~/.bash_profile
+```
 
-När det är gjort kan du testa så det funkar i konsollen. Glöm inte att starta om öppna terminalfönster efter att du har ändrat i $PATH. 
+Nu behöver vi ladda om filen, för att uppdatera $PATH:en som din terminal använder.
+
+Kör följande kommando på filen du ändrade.
+```bash
+source ~/.bash_profile
+```
+För att testa att det fungerar kan du skriva följande i terminalen.
 
 ```bash
 $ emulator
 emulator: ERROR: No AVD specified. Use '@foo' or '-avd foo' to launch a virtual device named 'foo'
 ```
-
+Om det fungerar ska du få ett felmeddelande liknande det ovanför.
 
 
 Avslutningsvis {#avslutning}
