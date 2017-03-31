@@ -157,9 +157,11 @@ Android i PATH {#path}
 
 I kursen webapp behöver du ha SDK:n i pathen så du kan köra kommandona `android` och `emulator` i konsollen.
 
-Cordova har som krav att system variabeln `ANDROID_HOME` ska existera, så då lägger vi till den. `ANDROID_HOME` ska gå till android-sdk mappen du precis installerade, för mig är det `C:\Users\aar\AppData\Local\Android\`. Vi behöver även ha under mapparna `tools` och `platform-tools` i $PATH.
+Cordova har som krav att system variabeln `ANDROID_HOME` ska existera, så då lägger vi till den. ANDROID_HOME ska gå till android-sdk mappen du precis installerade, för mig är det `C:\Users\aar\AppData\Local\Android\`. Vi behöver även ha undermapparna "tools" och "platform-tools" i $PATH.
 
-I cygwin ska vi ändra i på filen `~/.bash_profile`, på Linux/Mac om du också har den filen ändrar du på den annars ska du ändra filen `~/.profile`. Jag utgår från cygwin och kommer använda `~/.bash_profile.` Kör följande kommando i terminalen.
+I cygwin ska vi ändra i på filen `~/.bash_profile`, på Linux/Mac om du har den filen ändrar du också i den annars ska du ändra filen `~/.profile`. Jag utgår från cygwin och kommer använda "~/.bash_profile".
+
+Kör följande kommando i terminalen.
 
 ```bash
 echo export ANDROID_HOME="/cygdrive/c/Users/aar/AppData/Local/Android" >> ~/.bash_profile
