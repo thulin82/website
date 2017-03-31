@@ -103,9 +103,7 @@ När du är klar kan du starta din emulator.
 Starta emulatorn {#start}
 --------------------------------------
 
-[FIGURE src=/image/snapht15/android-emulator-launch-options.png class="right" caption="Jag har minskat skalan på mitt emulatorfönster."]
-
-Det tar en liten stund att starta emulatorn. Om emulatorns fönster blir för stort så kan du skala om det när du startar det. 
+<!-- [FIGURE src=/image/snapht15/android-emulator-launch-options.png class="right" caption="Jag har minskat skalan på mitt emulatorfönster."] -->
 
 Starta emulatorn med kommandot.
 
@@ -115,13 +113,11 @@ $ cd tools
 $ ./emulator -avd Mynexus7   
 ```
 
-Det kan förenkla felsökning och debugging att köra från kommandoraden.
+Det tar en liten stund att starta emulatorn. Om du får ett felmeddelande om HAXM eller virtualisering finns det en [tråd i forumet med hjälp](t/6369).
 
 Så här kan det se ut när din emulator har startat.
 
 [FIGURE src=/image/snapht15/android-emulator-mynexus7.png?w=50% caption="Min Nexus 7 körs nu i en emulator."]
-
-Besök [forumet](t/6369) för hjälp med felmeddelande om HAXM eller virtualisering.
 
 
 
