@@ -3,21 +3,21 @@ author:
     - mos
     - lew
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-03-31": (A, mos, lew) Första versionen.
 ...
 Kmom02: OO-programmering i PHP
 ==================================
 
-[WARNING]
+[INFO]
 **Version 3 av oophp.**
 
-Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 3/4 2017.
+Utveckling av nytt kursmoment pågår. Kursmomentet <strike>släpps senaste den 3/4 2017</strike> släpptes den 31/3 2017.
 
-[/WARNING]
+[/INFO]
 
-Objektorienterad programmering är en av de mer kända programmeringssätten, det är helt enkelt ett sätt att tänka, modellera och strukturera dina program. I detta kursmoment får du träna på programmering med klasser och objekt. Du får se hur man skapar klasser, skyddar synlighet på medlemsvariabler och metoder och hur arv går till. Du ser även hur kan kan programmera med objekt in i ett ramverk och du bekantar dig med begrepp som interface och traits.
+Vi fortsätter träna på programmering med klasser och objekt, i och utanför ramverket. Det blir en närmare bekantskap med ramverkets delar och hur du kan tänka när du integrerar din egen kod i ramverket. Du bekantar dig med begrepp som interface och traits.
 
-Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner och lite ramverksprogrammering.
+Kursmomentet har fokus på ett par friare programmeringsövningar så du kan träna på objektorienterade konstruktioner och ramverksprogrammering.
 
 [FIGURE src=/image/oophp/v3/test-session.png?w=w1&q=70 caption="Sessionstest är en av övningarna som finns med i detta kursmoment."]
 
@@ -80,11 +80,11 @@ När man pratar om objektorienterad programmering så behöver man också ha en 
 
 Gör följande övningar, de behövs normalt för att klara uppgifterna.
 
-1. Artikeln "[Sessioner och cookies i PHP](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass. Fyll gärna på cookie-klassens metoder med kod.
+1. Artikeln "[Sessioner och cookies i PHP](kunskap/session-cookie-klasser)" ger dig en sessions-klass och grunden till en cookie-klass. Fyll gärna på cookie-klassens metoder med kod. Spara eventuell kod i `me/kmom02/session`.
 
-1. Jobba igenom artikeln "[Att integrera en klass i ramverket Anax Lite](kunskap/att-integrera-en-klass-i-ramverket-anax-lite)" som visar hur du kan integrera en klass eller tjänst in i ramverket Anax Lite.
+1. Jobba igenom artikeln "[Att integrera en klass i ramverket Anax Lite](kunskap/att-integrera-en-klass-i-ramverket-anax-lite)" som visar hur du kan integrera en klass eller tjänst in i ramverket Anax Lite. Spara eventuell testkod i `me/anax-lite`.
 
-1. Jobba igenom artikel "[Att jobba med vyer i Anax Lite](kunskap/jobba-med-vyer-i-anax-lite)" för att se hur vilka möjligheter du har till att koda och strukturera dina vyer.
+1. Jobba igenom artikel "[Att jobba med vyer i Anax Lite](kunskap/jobba-med-vyer-i-anax-lite)" för att se hur vilka möjligheter du har till att koda och strukturera dina vyer. Spara eventuell testkod i `me/anax-lite`.
 
 <!--
 (make less)?
@@ -133,6 +133,6 @@ Se till att följande frågor besvaras i texten:
 
 * Hur känns det att skriva kod utanför och inuti ramverket, ser du fördelar och nackdelar med de olika sätten?
 * Hur väljer du att organisera dina vyer?
-* Berätta om hur du löste integreringen av klassen Session. Har du koll på routes och dess struktur?
-* Berätta om hur du löste uppgiften med Tärningsspelet 100/Månadskalendern, hur tänkte du och hur gjorde du, hur organiserade du din kod?
+* Berätta om hur du löste integreringen av klassen Session.
+* Berätta om hur du löste uppgiften med Tärningsspelet 100/Månadskalendern, hur du tänkte, planerade och utförde uppgiften samt hur du organiserade din kod?
 * Några tankar kring SQL så här långt?
