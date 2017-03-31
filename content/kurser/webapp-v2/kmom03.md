@@ -7,10 +7,11 @@ revision:
 Kmom03: Dashboard
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-10.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-10</strike>.
 
+Kursmomentet tillgängligt per den 2017-03-31.
+[/INFO]
 
 Vi jobbar vidare med mithril och att hämta data från api'er. Nu handlar det om att skapa mithril komponenter, som underlätter för att återanvända kod. Vi ska även titta på hur vi skapar ett grid system för att skapa en SPA-applikation som kan visas upp på enheter i fem olika storlekar.
 
