@@ -53,7 +53,7 @@ Krav {#krav}
 
 1. Ditt program skall skriva sitt PID till en fil som heter `pid`. När man kör kommandot `kill $( cat pid )` (eller motsvarande på Cygwin) så skall din server stängas ned.
 
-1. Du skall kunna skicka med options som säger till vilken databas programmet skall koppla upp sig och med vilken användare och lösenord. Det kan se ut ut så här `node index.js --host localhost --user mos --password XXX --database mos`.
+1. Du skall kunna skicka med alternativ som säger till vilken databas programmet skall koppla upp sig till, och vilken användare och lösenord den använder. Det kan se ut så här `node index.js --host localhost --user mos --password XXX --database mos`.
 
 1. I routen `/` visar du en index-sida som innehåller länkar till vad man kan göra. Använd en stylesheet för din CSS-kod.
 
@@ -61,7 +61,7 @@ Krav {#krav}
 
 1. På routen `/view/:id` visar du informationen om en produkt, inklusive dess lagerstatus.
 
-1. När du visar en produkt så skall du också visa en textsträng som säger "hälsosam" när lagerstatus är över 5 produkter, "beställ" när lagerstatus är 1-4 och "slut" när lagerstatus är 0. Textsträngen visas både för lokal och centralt lagerstatus.
+1. När du visar en produkt så skall du också visa en textsträng som säger "hälsosam" när lagerstatus är över 5 produkter, "beställ" när lagerstatus är 1-4 och "slut" när lagerstatus är 0. Textsträngen visas både för lokalt och centralt lagerstatus.
 
 1. På routen `/edit/:id` visar du information om produkten i ett formulär. Om du postar formuläret så kan du uppdatera informationen i databasen. Du kan fritt uppdatera namn, lokalt lagerstatus och centralt lagerstatus via detta formulär, utan några restriktioner. 
 

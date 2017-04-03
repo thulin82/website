@@ -305,7 +305,7 @@ const database = require("../database");
 
 
 /**
- * Doing a SELECT with 2 + 2-
+ * Doing a SELECT with 2 + 2.
  */
 router.get("/test1", function(req, res) {
     var data = {};

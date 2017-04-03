@@ -373,7 +373,7 @@ console.log(req.path);
 console.log(req.params);
 ```
 
-Ovandel i routen ger oss följande utskrift i servern.
+Koden ovan, från routen, ger oss följande utskrift i servern.
 
 ```text
 $ node index.js
