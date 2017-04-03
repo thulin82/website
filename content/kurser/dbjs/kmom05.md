@@ -96,7 +96,7 @@ Utför följande övningar för att träna inför uppgifter och projektet.
 
 1. Jobba igenom artikeln "[Node.js webbserver med Express](kunskap/nodejs-webbserver-med-express)" för att komma igång med webb- och applikationsservern Express i Node.js. Spara dina exempelprogram i `me/kmom05/express`.
 
-1. Jobba igenom artikeln "[Databas appserver med Express och MySQL](kunskap/databas-appserver-med-express-och-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express. Spara din exempelprogram i `me/kmom05/express-mysql`.
+1. Jobba igenom artikeln "[Databas appserver med Express och MySQL](kunskap/databas-appserver-med-express-och-mysql)" som visar hur du kan jobba med MySQL tillsammans med Express. Spara dina exempelprogram i `me/kmom05/express-mysql`.
 
 
 
