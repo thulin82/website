@@ -105,7 +105,7 @@ Krav {#krav}
 
 1. Bygg kod som tar arrayen och genererar HTML-kod för navbaren. Spara koden i vyn.
 
-1. Använd navbaren i din webbplats, för att kontroller att den fungerar.
+1. Använd navbaren i din webbplats, för att kontrollera att den fungerar.
 
 1. Lägg till style så att din navbar ser ut som en navbar.
 
