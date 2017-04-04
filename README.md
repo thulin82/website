@@ -99,5 +99,5 @@ $ make update-all
 
 ```                                                            
  .                                                             
-..:  Copyright (c) 2012 - 2016 Mikael Roos, mos@dbwebb.se   
+..:  Copyright (c) 2012 - 2017 Mikael Roos, mos@dbwebb.se   
 ```                                                            
