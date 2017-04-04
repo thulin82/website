@@ -59,7 +59,7 @@ $app->url->configure("url.php");
 $app->url->setDefaultsFromConfiguration();
 ```
 
-Det första som sker är bara att Url blir en del av $app. 
+Det första som sker är bara att Url blir en del av $app.
 
 Url är beroende av hur requesten ser ut, därför ser vi en hel del initiering i andra stycket, där vi populerar Url med information från Request.
 
@@ -263,7 +263,7 @@ Då skall vi verkligen implementera interfacet också, via ett trait.
 
 ###Traitet ConfigureTrait {#configuretrait}
 
-Ett trait är en återanvändbar del av en klass. I detta fallet låter vi traitet skapa den koddel som behövs för att uppfylla interfacet. Samma koddel är användbar alla klasser som vill använda konfigurationsfiler.
+Ett trait är en återanvändbar del av en klass. I detta fallet låter vi traitet skapa den koddel som behövs för att uppfylla interfacet. Samma koddel är användbar för alla klasser som vill använda konfigurationsfiler.
 
 Låt oss kika på hur traitet `ConfigureTrait` ser ut.
 
@@ -303,7 +303,7 @@ Sedan tittar vi på själva implementationen av den metod som interfacet anger.
     {
         $anaxInstallPath = ANAX_INSTALL_PATH . "/config/$what";
         $anaxAppPath = ANAX_APP_PATH . "/config/$what";
-        
+
         if (is_array($what)) {
             $options = $what;
         } elseif (is_readable($anaxAppPath)) {
@@ -320,7 +320,7 @@ Sedan tittar vi på själva implementationen av den metod som interfacet anger.
 }
 ```
 
-Metoden i traitet implementerar det kontraktet som interfacet anger. 
+Metoden i traitet implementerar det kontraktet som interfacet anger.
 
 Låt oss då använda traitet i Navbar.
 
@@ -360,7 +360,7 @@ Att injecta beroende till en klass {#inject}
 
 Navbar är beroende av att kunna skapa länkar och att veta om nuvarande länk. Detta är information som ligger i Request (nuvarande länk) och en tjänst som erbjuds av Url (skapa länkar).
 
-Vilka alternativ har vi för att låta Navbar få del av denna information och tjänster? 
+Vilka alternativ har vi för att låta Navbar få del av denna information och tjänster?
 
 Låt oss _injecta_ dessa beroende in i klassen på ett par olika sätt.
 
@@ -378,7 +378,7 @@ $app->view->setApp($app);
 
 Koden ovan gör så att `ViewContainer` kan dra nytta av alla tjänster som finns i `$app`.
 
-Om vi kikar på koden i `\Anax\View\ViewContainer`, som vi hittar under `vendor/anax/view/src/View`, så ser vi följade struktur för klassen.
+Om vi kikar på koden i `\Anax\View\ViewContainer`, som vi hittar under `vendor/anax/view/src/View`, så ser vi följande struktur för klassen.
 
 ```php
 namespace Anax\View;
@@ -403,7 +403,7 @@ Ett alternativ är alltså att göra som ViewContainer och låta Navbar ta del a
 Injecta delarna in i Navbar {#injectdel}
 ------------------------------
 
-Ett annat alternativ är att enbart injecta de delarna som behövs i Navbar. Det kan vi göra med två metoder i Navbar. 
+Ett annat alternativ är att enbart injecta de delarna som behövs i Navbar. Det kan vi göra med två metoder i Navbar.
 
 
 
@@ -554,7 +554,7 @@ Avslutningsvis {#avslutning}
 
 Detta var en genomgång om hur man kan tänka och lösa integrationen av en klass, en tjänst, in i ramverkets struktur. Detta är sättet som ramverkets moduler använder sig av för att koppla in sig i ramverket.
 
-En modul är hälsosam om den inte har beroenden till andra, eller i allafall, få beroenden till andra klasser/moduler. Det gör modulen enklare att underhålla, vidarutveckla och återanvända.
+En modul är hälsosam om den inte har beroenden till andra, eller i allafall, få beroenden till andra klasser/moduler. Det gör modulen enklare att underhålla, vidareutveckla och återanvända.
 
 Det är sådana anledningar till varför man väljer att skriva sin kod på olika sätt.
 
