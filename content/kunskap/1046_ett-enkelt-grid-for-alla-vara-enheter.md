@@ -158,6 +158,7 @@ html, body {
 .flex-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 ```
 
