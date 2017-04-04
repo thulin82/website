@@ -59,7 +59,7 @@ $urlHome  = $app->url->create("");
 $urlAbout = $app->url->create("about");
 
 ?><navbar>
-<a href="<?= $urlHome ?>">Home</a> | 
+<a href="<?= $urlHome ?>">Home</a> |
 <a href="<?= $urlAbout ?>">About</a>
 </navbar>
 ```
@@ -75,7 +75,7 @@ När man sedan körde mot routen så ser sidan ut så här.
 
 [FIGURE src=image/snapvt17/view-home-route.png?w=w2]
 
-Titta man på sidans källkod så ser man att HTML-koden från vyerna har slagits ihop, precis som man vill.
+Tittar man på sidans källkod så ser man att HTML-koden från vyerna har slagits ihop, precis som man vill.
 
 [FIGURE src=image/snapvt17/view-view-source.png?w=w2]
 
@@ -121,7 +121,7 @@ $app->response->setBody([$app->view, "render"])
               ->send();
 ```
 
-Det var grunden i flödet. 
+Det var grunden i flödet.
 
 
 
@@ -168,7 +168,7 @@ Du ser att det verkar finnas flera varianter av hur du kan lägga till en ny vy 
 
 ###View {#view}
 
-Varje gång en ny vy läggs till kontainern så är det i form av en instans av klassen `View`. Det är den instansen som sedan håller reda på all information om hur den skall renderas. 
+Varje gång en ny vy läggs till kontainern så är det i form av en instans av klassen `View`. Det är den instansen som sedan håller reda på all information om hur den skall renderas.
 
 Vill du se detaljer om View så kikar du på metoden `set()`.
 

@@ -10,7 +10,7 @@ Klasser för sessionen och cookies
 
 <!-- [FIGURE src=/image/oophp/v3/login-top.png?w=c5 class="right"] -->
 
-Vi ska se hur man kan skapa klasser som omsluter och hanterar $\_SESSION och $\_COOKIE, så kallade "wrapper-klasser". 
+Vi ska se hur man kan skapa klasser som omsluter och hanterar $\_SESSION och $\_COOKIE, så kallade "wrapper-klasser".
 
 <!--more-->
 
@@ -19,7 +19,7 @@ Vi ska se hur man kan skapa klasser som omsluter och hanterar $\_SESSION och $\_
 Förutsättning {#pre}
 -------------------------------
 
-Du kan grunderna i php och du vet vad variabler, typer och funktioner innebär.  
+Du kan grunderna i php och du vet vad variabler, typer och funktioner innebär.
 <!-- Du har kännedom om SQL och databashantering.   -->
 Du har gått igenom sessioner och cookies i artikeln "[Kom i gång med PHP på 20 steg](kunskap/kom-i-gang-med-php-pa-20-steg#sessioner)"
 
@@ -39,10 +39,10 @@ class Session
     {
         session_start();
     }
-    
+
     public static function set($name, $val)
     {
-        $_SESSION[$name] = $val; 
+        $_SESSION[$name] = $val;
     }
 }
 
@@ -56,7 +56,7 @@ Smaken är som baken och jag väljer att instansiera min klass.
 
 ###__construct() {#construct}
 
-Så, vad behöver vi kunna göra i sessionen? Vi måste såklart kunna starta den, avsluta den, sätta och hämta variabler.  
+Så, vad behöver vi kunna göra i sessionen? Vi måste såklart kunna starta den, avsluta den, sätta och hämta variabler.
 Vi börjar att skapa filen och lägga till en konstruktor. Jag väljer att döpa filen till `Session.php`.
 
 ```php
@@ -65,7 +65,7 @@ Vi börjar att skapa filen och lägga till en konstruktor. Jag väljer att döpa
 class Session
 {
     private $name;
-    
+
     /**
      * Constructor
      * @param string $name (optional) The name of the session
@@ -79,7 +79,7 @@ class Session
 
 ```
 
-Konstruktorn tar emot ett argument, `$name`, som sätts till "MYSESSION" om inget annat anges. Det är enbart namnet på sessionen. Tanken är att start() ska sparka igång maskineriet. Det är möjligt att man vill hantera fler variabler än sessionens namn i konstruktorn i framtiden.  
+Konstruktorn tar emot ett argument, `$name`, som sätts till "MYSESSION" om inget annat anges. Det är enbart namnet på sessionen. Tanken är att start() ska sparka igång maskineriet. Det är möjligt att man vill hantera fler variabler än sessionens namn i konstruktorn i framtiden.
 
 Nästa steg är att starta sessionen.
 
@@ -93,21 +93,21 @@ Nästa steg är att starta sessionen.
 public function start()
 {
     session_name($this->name);
-    
+
     if (!empty(session_id())) {
         session_destroy();
-    }    
+    }
     session_start();
 }
 ```
 
-Här sätter vi namnet som vi gav sessionen i konstruktorn. Vi kollar sedan om det finns en session startad. I så fall förstör vi den och startar en ny.  
+Här sätter vi namnet som vi gav sessionen i konstruktorn. Vi kollar sedan om det finns en session startad. I så fall förstör vi den och startar en ny.
 
 
 
 ###has() {#has}
 
-En annan nyttig metod är has. 
+En annan nyttig metod är has.
 
 ```php
 /**
@@ -159,7 +159,7 @@ public function get($key, $default=false)
 }
 ```
 
-Här använder vi först vår egen `has()`-metod för att se om variabeln finns. Gör den inte det returneras `$default`. Vi kan även välja att skicka med ett returvärde. Gör vi inte det sätts den till `false`.  
+Här använder vi först vår egen `has()`-metod för att se om variabeln finns. Gör den inte det returneras `$default`. Vi kan även välja att skicka med ett returvärde. Gör vi inte det sätts den till `false`.
 
 Nästan klart! Vi måste kunna förstöra sessionen med. Låt oss kika på metoden `destroy()`.
 
@@ -172,13 +172,13 @@ Nästan klart! Vi måste kunna förstöra sessionen med. Låt oss kika på metod
  * Destroys the session and sets cookie
  * @return void
  */
-public function destroy() 
-{    
+public function destroy()
+{
     session_destroy();
 }
 ```
 
-Inga konstigheter här inte. Men vi kan använda vår egna metod, vilket känns tryggt.  
+Inga konstigheter här inte. Men vi kan använda vår egna metod, vilket känns tryggt.
 
 
 
@@ -200,7 +200,7 @@ public function delete($key)
 }
 ```
 
-Den inbyggda funktionen `unset()` sköter förstörelsen åt oss. Vi behöver bara kontrollera att den finns i sessionen.  
+Den inbyggda funktionen `unset()` sköter förstörelsen åt oss. Vi behöver bara kontrollera att den finns i sessionen.
 
 
 
@@ -214,20 +214,20 @@ En nyttig metod är att kunna skriva ut hela sessionen. Det kan vi sköta med me
  * Good for debugging
  * @return void
  */
-public function dump() 
+public function dump()
 {
     var_dump($_SESSION);
 }
 
 ```
 
-Stiligt. Nu har vi en strålande sessions-wrapper i steg 1.  
+Stiligt. Nu har vi en strålande sessions-wrapper i steg 1.
 
 
 
 ###Använda klassen {#anvanda-sessionsklassen}
 
-Hur använder vi klassen då? Jo, i detta fallet måste vi instansiera den och starata den.
+Hur använder vi klassen då? Jo, i detta fallet måste vi instansiera den och starta den.
 
 ```php
 // Instansisera sessionen
@@ -242,7 +242,7 @@ $session->set("lastname", "Urkel");
 
 ```
 
-Nu kan vi navigera till någon annan sida och använda variablerna. Glöm inte att sessionen måste startas först.
+Nu kan vi navigera till en annan sida och använda variablerna. Glöm inte att sessionen måste startas först.
 
 ```php
 // Instansisera sessionen
@@ -265,9 +265,9 @@ if ($session->has("lastname")) {
 En klass för cookies {#klass-cookies}
 ------------------------------
 
-En extra förutsättning (eller rekommendation) är att du har kikat på [kom igång med php på 20 steg, del 17](https://dbwebb.se/kunskap/kom-i-gang-med-php-pa-20-steg#sessioner). 
+En extra förutsättning (eller rekommendation) är att du har kikat på [kom igång med php på 20 steg, del 17](https://dbwebb.se/kunskap/kom-i-gang-med-php-pa-20-steg#sessioner).
 
-En [cookie](kunskap/kom-i-gang-med-php-pa-20-steg#cookie) fungerar som $\_SESSION på fil som sparas undan. När användaren tex loggar ut, kan en cookie sparas med namn och klockslag. Filen lagras lokalt på datorn i exempelvis 30 dagar och kan då användas när man loggar in igen. 
+En [cookie](kunskap/kom-i-gang-med-php-pa-20-steg#cookie) fungerar som $\_SESSION på fil som sparas undan. När användaren tex loggar ut, kan en cookie sparas med namn och klockslag. Filen lagras lokalt på datorn i exempelvis 30 dagar och kan då användas när man loggar in igen.
 
 Vi skapar en fil till, `Cookie.php`.
 
@@ -275,7 +275,7 @@ Vi skapar en fil till, `Cookie.php`.
 class Cookie
 {
     private $expire;
-    
+
     /**
      * Constructor
      * Sets $expire to 30 days. 86400 = 1 day * 30 = 30 days
@@ -285,7 +285,7 @@ class Cookie
     {
         $this->expire = time() + $time;
     }
-        
+
     /**
      * Check if key exists in $_COOKIE
      * @param $key string The key to check for in $_COOKIE
@@ -293,9 +293,9 @@ class Cookie
      */
     public function has($key)
     {
-        
+
     }
-    
+
     /**
      * Sets a cookie
      * @param $name string The name of the $_COOKIE
@@ -304,9 +304,9 @@ class Cookie
      */
     public function set($key, $val)
     {
-        
+
     }
-    
+
     /**
      * Retrieve a cookie
      * @param $key string The key to get from $_COOKIE
@@ -315,20 +315,20 @@ class Cookie
      */
     public function get($key, $default = false)
     {
-        
+
     }
-    
-    
+
+
     /**
      * Dumps the $_COOKIE
      * Good for debugging
      * @return void
      */
-    public function dump() 
+    public function dump()
     {
-        
+
     }
-    
+
     /**
      * Deletes variable from $_COOKIE if exists
      * @param $key string The key variable to unset from $_COOKIE
@@ -336,9 +336,9 @@ class Cookie
      */
     public function delete($key)
     {
-        
+
     }
-    
+
     /**
      * Destroys all variables from $_COOKIE if exists
      * @return void

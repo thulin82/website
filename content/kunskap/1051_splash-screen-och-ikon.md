@@ -24,7 +24,7 @@ Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt som har pla
 Vi börjar med att lägga till plugin:et.
 
 ```bash
-cordova plugin add cordova-plugin-splashscreen
+cordova plugin add cordova-plugin-splashscreen --save
 ```
 
 Nu behöver vi bilder, många bilder. Om du tittar i mappen `platforms/android/res/` borde det finnas runt 8 mappar som heter "drawable-..." och fyra som heter "mipmap-...". "l-x"-DPI står för olika [skärmstorlekar](https://phonegappro.com/phonegap-tutorial/phonegap-icon-and-splash-screen-sizes/), tanken är att vi ska ha en bild i varje mapp med passande storlek. Mapparna som börjar på "drawable" är för _splash screens_ och mapparna som börjar på "mipmap" är för _ikoner_.
@@ -93,8 +93,8 @@ Vi lägger till fler.
 <platform name="android">
     ...
     <icon density="hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_screen.png" />
-    <icon density="mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png.png" />
-    <icon density="xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png.png" />
+    <icon density="mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png" />
+    <icon density="xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png" />
 </platfor>
 ```
 
@@ -115,13 +115,13 @@ Som jag skrev ovanför kommer jag återanvända ikon bilderna som splash screen.
 Vi ska göra likadant för splash screen som vi gjorde för ikoner. I `config.xml` inom android-taggen lägger vi till följande.
 
 ```xml
-<splash density="port-hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_icon.png.png" />
-<splash density="port-mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png.png" />
-<splash density="port-xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png.png" />
+<splash density="port-hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_icon.png" />
+<splash density="port-mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png" />
+<splash density="port-xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png" />
 
-<splash density="land-hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_icon.png.png" />
-<splash density="land-mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png.png" />
-<splash density="land-xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png.png" />
+<splash density="land-hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_icon.png" />
+<splash density="land-mdpi" src="www/res/mipmap-mdpi/dbwebb_splash_icon.png" />
+<splash density="land-xhdpi" src="www/res/mipmap-xhdpi/dbwebb_splash_icon.png" />
 ```
 
 Vi döper taggarna till "splash" iställer för "icon", när vi specificerar vilken skärm varje bild ska kopplas till behöver vi lägga till om skärmen ska vara i "portrait" eller "landscape" läge. Vi testar, starta upp din emulator och kör igång appen så borde din splash screeen visas i någon sekund innan du kommer vidare till appens startsida.
