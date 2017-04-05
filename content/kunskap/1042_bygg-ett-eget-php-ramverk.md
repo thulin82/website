@@ -72,7 +72,7 @@ Du vill ha en fil `.gitignore` som berättar vilka filer som inte skall inkluder
 
 ```bash
 # Gå till roten av me/anax-lite
-$ touch .gitgnore
+$ touch .gitignore
 ```
 
 Lägg följande rader i filen.
