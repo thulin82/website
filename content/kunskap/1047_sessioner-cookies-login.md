@@ -394,7 +394,11 @@ if (!$db->exists($user_name)) {
 }
 ```
 
-Som du märker har vi en del kod återupprepas och som med fördel kan flyttas till en konfigurationsfil. Man kan även hasha namn och lösenord tillsammans, `$crypt_pass = password_hash($user_name . $user_pass, PASSWORD_DEFAULT);`. Gör som du känner fungerar bäst. Nu kan vi skapa ett par användare.  
+Som du märker har vi en del kod återupprepas och som med fördel kan flyttas till en konfigurationsfil.  
+
+Man kan även hasha namn och lösenord tillsammans, `$crypt_pass = password_hash($user_name . $user_pass, PASSWORD_DEFAULT);`. Det blir säkrare och mer bundet till användaren. För stunden kan du göra som du vill.  
+
+Nu kan vi skapa ett par användare.  
 
 Vi kikar på hur tabellen kan se ut:
 

@@ -83,8 +83,6 @@ Gör följande uppgifter.
 
 1. (Gör uppgiften "[skapa inloggning del 1](uppgift/inloggning-steg-1)". Spara dina filer under `me/kmom03/login`. Ej integrera ramverket?) <!-- SQLite/MySQL -->
 
-1. Inloggning steg 2, inuti ramverket.
-
 1. Gör sista tredjedelen och avsluta uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)". Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`.
 
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
