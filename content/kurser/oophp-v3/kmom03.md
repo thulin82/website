@@ -81,7 +81,7 @@ Gör följande uppgifter.
 
 1. Gör uppgiften ["Skapa en klass för användarhantering, CUser"](uppgift/skapa-en-klass-for-anvandarhantering-cuser).
 
-1. (Gör uppgiften "[skapa inloggning](uppgift/inloggning)". Spara dina filer under `me/anax-lite`.
+1. Gör uppgiften "[skapa inloggning](uppgift/inloggning)". Spara dina filer under `me/anax-lite`.
 
 1. Gör sista tredjedelen och avsluta uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)". Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`.
 
