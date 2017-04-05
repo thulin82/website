@@ -1,10 +1,12 @@
 ---
-author: lew
-category: javascript
+author:
+    - lew
+category:
+    - javascript
+    - kurs webapp
 revision:
-  "2015-11-23": (A, mos) Första utgåvan i samband med kursen webapp.
-updated: "2015-11-23 15:35:37"
-created: "2015-11-23 15:35:15"
+    "2017-04-05": "(B, mos) Ändrade krav 13 från felaktiga 3 till 7 som facit visar."
+    "2015-11-23": "(A, mos) Första utgåvan i samband med kursen webapp."
 ...
 Sökverktyg för JSON filer
 ==================================
@@ -38,7 +40,7 @@ $ cp example/instagram/tag-dbwebb.json me/kmom03/jq
 Skapa en körbar bash-fil som heter `solution.bash` och skriv alla dina svar i den filen. Så här kan inledningen på filen se ut inklusive lösningen på första kravet.
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 
 # 1. Hitta de 'keys' som finns i filen. Lägg svaret i filen 'a.txt'.
 jq 'keys' tag-dbwebb.json | tee a.txt
@@ -48,7 +50,7 @@ jq 'keys' tag-dbwebb.json | tee a.txt
 Kommandot `tee` skriver dels till en fil och dels till terminalen. Du kan nu testköra alla dina lösningar så här.
 
 ```bash
-$ ./solution.bash 
+$ ./solution.bash
 [                                                            
   "data",                                                    
   "meta",                                                    
@@ -95,7 +97,7 @@ Du skall samla ihop minst 15 poäng. Fråga 1-10 är värd en poäng var. Fråga
 
 12. Lista länkarna (link) till bilderna som användaren 'tobhed' har kommenterat (l.txt).
 
-13. Lista länkarna till de bilder med fler 'likes' än 3 (m.txt).
+13. Lista länkarna till de bilder med fler 'likes' än 7 (m.txt).
 
 14. Lista länkarna till de bilder som har fler än 5 'likes' och minst 1 'comment' (n.txt).
 
@@ -108,7 +110,7 @@ Du skall samla ihop minst 15 poäng. Fråga 1-10 är värd en poäng var. Fråga
 dbwebb validate jq
 ```
 
-Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar. 
+Rätta eventuella fel som dyker upp och validera igen. När det ser grönt ut så är du klar.
 
 
 
@@ -125,7 +127,3 @@ Tips från coachen {#tips}
 -----------------------
 
 Lycka till och hojta till i forumet om du behöver hjälp!
-
-
-
-
