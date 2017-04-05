@@ -4,7 +4,7 @@ category: php
 revision:
   "2017-03-14": (A, lew) First version.
 ...
-Skapa inloggning
+Inloggning
 ==================================
 
 Det finns många inloggningssystem klara att använda. Vi ska skapa en egen variant. Det är bra att se hur saker kan fungera under huven.
@@ -23,7 +23,7 @@ Du har gått igenom artikeln "[Logga in med sessioner och cookies](kunskap/sessi
 Krav {#krav}
 -----------------------
 
-Spara dina filer i mappen `me/kmom01/login`.
+Spara dina filer i mappen `me/anax-lite`.
 
 1. Systemet ska använda en SQLite-databas.
 
