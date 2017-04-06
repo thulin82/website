@@ -11,6 +11,12 @@ Guiden hjälper dig att komma i gång med PHP PDO och MySQL genom att bygga upp 
 
 <!--more-->
 
+[WARNING]
+**Nyare version av artikel rekommenderas**
+
+Det finns en [nyare version av denna artikel](kunskap/kom-igang-med-php-pdo-och-mysql-v2) som rekommenderas istället.
+[/WARNING]
+
 Det bästa sättet att gå igenom guiden är att läsa exemplen och sedan pröva dem själv. Skapa dina egna testprogram där du testar olika kod-konstruktioner. Du måste testa själv för att lära dig. **Du måste själv skriva koden, det finns inga genvägar.**
 
 Lyssna på de felmeddelande du får. De kommer från PHP eller från MySQL och de har **alltid** rätt. Lär dig tyda dem och förstå dem, det är som att föra en dialog med programmeringsspråket.
@@ -1495,5 +1501,3 @@ Att göra:
 2013-10-29 (B, mos) Problem med inloggning löses genom att speca teckenkodningen på tabellen User`.  
 2013-09-03 (A, mos) Första utgåvan som en del av kursen [oophp](oophp).  
 </span>
-
-

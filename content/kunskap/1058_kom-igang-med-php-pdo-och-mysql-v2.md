@@ -1,6 +1,19 @@
 ---
+author:
+    - mos
+category:
+    - php
+    - databas
+    - mysql
+    - kurs oophp
+revision:
+    "2017-04-07": "(E, mos) Större genomarbetning inför oophp-v3, flera stycken borttagna."
+    "2014-03-05": "(D, mos) Gick inte radera, lade till stycke om att radera även Movie2Genre samt återställning på windows."
+    "2013-11-26": "(C, mos) Textstycke om att fånga fel i connection med try-catch, reset.sql och smärre justeringar."
+    "2013-10-29": "(B, mos) Problem med inloggning löses genom att speca teckenkodningen på tabellen User."
+    "2013-09-03": "(A, mos) Första utgåvan som en del av kursen oophp."
 ...
-Kom igång med PHP PDO och MySQL
+Kom igång med PHP PDO och MySQL (v2)
 ==================================
 
 Denna guide hjälper dig att komma i gång med PHP PDO och MySQL genom att bygga upp en enklare webbplats kring en filmdatabas. Stegvis skapar du ett gränssnitt som jobbar mot databasen och ställer de vanliga CRUD-relaterade frågorna för utsökning av objekt, skapa nya objekt, radera objekt och uppdatera informationen om ett objekt. När du är klar kan du applicera koden för din filmdatabas mot en annan databas, förfarandet är detsamma och guiden ger dig grunderna till en databasdriven webbplats, oavsett det är en filmdatabas eller webbshop.
@@ -1166,6 +1179,6 @@ Avslutningsvis {#sum}
 
 Nu har du grunderna i PHP PDO och MySQL och lite till i hur du kan använda det tillsammans med en CRUD-liknande webbplats och koppla det till webbplatsens gränssnitt.
 
-Detta är egentligen grunderna i de flesta databasdrivna webbapplikationer så desto bättre du lär dig -- och organiserar din kod, desto lättare blir det att återanvända och vidareutveckla det du nu gjort.
+Detta är grunderna i de flesta databasdrivna webbapplikationer så desto bättre du lär dig att organisera din kod, desto lättare blir det att återanvända och vidareutveckla det du nu gjort.
 
-Det finns en [forumtråd](t/XXX) där du kan ställa frågor eller komma med tips.
+Det finns en [forumtråd](t/6411) där du kan ställa frågor eller komma med tips.
