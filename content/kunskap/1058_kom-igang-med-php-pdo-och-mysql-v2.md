@@ -16,6 +16,8 @@ revision:
 Kom igång med PHP PDO och MySQL (v2)
 ==================================
 
+[FIGURE src=image/snapvt17/movie-paginate-sort.png?w=c5 class="right"]
+
 Denna guide hjälper dig att komma i gång med PHP PDO och MySQL genom att bygga upp en enklare webbplats kring en filmdatabas. Stegvis skapar du ett gränssnitt som jobbar mot databasen och ställer de vanliga CRUD-relaterade frågorna för utsökning av objekt, skapa nya objekt, radera objekt och uppdatera informationen om ett objekt. När du är klar kan du applicera koden för din filmdatabas mot en annan databas, förfarandet är detsamma och guiden ger dig grunderna till en databasdriven webbplats, oavsett det är en filmdatabas eller webbshop.
 
 <!--more-->
@@ -32,7 +34,7 @@ När du felsöker PHP mot MySQL så kör du alltid SQL-frågorna i en annan klie
 
 Så här kan det se ut när du är klar.
 
-[FIGURE src=image/snapvt17/img.png?w=w2 caption="Olika sätt att söka ut informationen ur filmdatabasen."]
+[FIGURE src=image/snapvt17/movie-paginate-1.png?w=w2 caption="Första sidan visas med två träffar."]
 
 
 

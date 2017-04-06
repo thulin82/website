@@ -1,13 +1,12 @@
 ---
-author: mos
-category: javascript
+author:
+    - mos
+category:
+    - javascript
 revision:
-    2013-01-29: (C, mos) Kommentar om att sätta default width & height i paket 4.  
-    2012-11-22: (B, mos) Mindre justering i exempelprogrammet för lightbox efter Bellas kommentarer.  
-    2012-11-15: (A, mos) Första utgåvan.  
-published: "2013-01-29"
-updated: "2013-11-26 13:27:02"
-created: "2012-09-11 10:36:01"
+    "2013-01-29": "(C, mos) Kommentar om att sätta default width & height i paket 4."
+    "2012-11-22": "(B, mos) Mindre justering i exempelprogrammet för lightbox efter Bellas kommentarer."
+    "2012-11-15": "(A, mos) Första utgåvan."
 ...
 Kom igång med jQuery
 ==================================
