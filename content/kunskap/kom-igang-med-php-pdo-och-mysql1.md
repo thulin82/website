@@ -45,7 +45,7 @@ Det är bra om du är van vid objektorienterad PHP-programmering. Behöver du gr
 
 Du behöver vara bekant med MySQL och dess olika klienter. Guiden "[Kom igång med databasen MySQL och dess klienter](kunskap/kom-igang-med-databasen-mysql-och-dess-klienter)" hjälper dig att komma i gång med det.
 
-Källkoden till artikelns exampel finns i kursrepot (oophp) under `example/php-pdo-mysql`.
+Källkoden till artikelns exampel finns i kursrepot (oophp) under [`example/php-pdo-mysql`](https://github.com/dbwebb-se/oophp/tree/master/example/php-pdo-mysql).
 
 
 
@@ -408,7 +408,9 @@ När man testar och leker runt så är det bra att kunna rensa databasen ibland.
 Sök på delsträng i titel {#sok-titel}
 -------------------------------------------------------------------------------
 
-Jag vill införa möjligheten att söka ut filmer baserat på delsträngar i filmens titel. Till att börja med behöver jag ett formulär.
+Jag vill införa möjligheten att söka ut filmer baserat på delsträngar i filmens titel. Det blir bra för att lära känna databasen och vilken typ av kod jag behöver skriva.
+
+Till att börja med så skapar jag ett formulär.
 
 
 
@@ -417,138 +419,718 @@ Jag vill införa möjligheten att söka ut filmer baserat på delsträngar i fil
 Grunden för ett sökformulär kan se ut så här.
 
 ```html
-<form>
+<form method="get">
     <fieldset>
-    <legend>Sök</legend>
-    <p><label>Titel (delsträng, använd % som *): <input type='search' name='title' value='{$title}'/></label></p>
-    <p><a href='?'>Visa alla</a></p>
+    <legend>Search</legend>
+    <input type="hidden" name="route" value="search-title">
+    <p>
+        <label>Title (use % as wildcard):
+            <input type="search" name="searchTitle" value="<?= esc($searchTitle) ?>"/>
+        </label>
+    </p>
+    <p>
+        <input type="submit" name="doSearch" value="Search">
+    </p>
+    <p><a href="?">Show all</a></p>
     </fieldset>
 </form>
 ```
 
-Första gången man öppnar sidan så visar jag hela resultatet. Men när någon söker så visar jag enbart sökträffarna. Det löser jag med en if-sats.
+Ovan formulär är från mitt exempelprogram så det är anpassat, men grunden finns där, om hur ett sökformulär kan se ut.
 
-**Visa hela resultatet eller bara resultatet från sökningen.**
+[FIGURE src=image/snapvt17/movie-search-title.png?w=w2 caption="Exempel på sökformulär för filmens titel."]
+
+Jag väljer ett GET-formulär, som lägger alla parameterar i querysträngen, det gör att jag kan dela själva länken till en sökning och visa kompisen exakt samma sökresultat. Det hade inte fungerat om jag använt ett POST formulär.
+
+
+
+###Hantering av sökningen {#hanterasok}
+
+Koden som utför själva sökningen handlar om att kontrollera om formuläret är postat och isåfall utföra en databasfråga och visa svaret.
+
+Koden som hanterar min sökning ser ut så här. Notera att koden bygger på strukturen som finns i exempelprogrammet där funktionen `getGet()` läser av inkommande GET-variabler och `$db->executeFetchAll()` utför själva databasfrågan och den koden ligger i en klass.
 
 ```php
-// Get parameters for sorting
-$title = isset($_GET['title']) ? $_GET['title'] : null;
+case "search-title":
+    $title = "SELECT * WHERE title";
+    $view[] = "view/search-title.php";
+    $view[] = "view/show-all.php";
+    $searchTitle = getGet("searchTitle");
+    if ($searchTitle) {
+        $sql = "SELECT * FROM movie WHERE title LIKE ?;";
+        $resultset = $db->executeFetchAll($sql, [$searchTitle]);
+    }
+    break;
+```
+
+Kort kan man säga att om formuläret är postat så kommer det att köras en SELECT mot databasen och svaret kommer att visas i en tabell som finns i en av vyerna.
+
+Du kan se att jag använder ett `?` och lägger parametern som skall kopplas i en array via `[$searchTitle]`. Om du kikar vidare på koden bakom `$db->executeFetchAll()` och `execute()` så ser du att det är _prepared statements_ som används via `PDO::prepare` och `PDO::execute`. Det gör att jag skyddar mig mot SQL injections.
+
+```php
+/**
+ * Do SELECT with optional parameters and return a resultset.
+ *
+ * @param string $sql   statement to execute
+ * @param array  $param to match ? in statement
+ *
+ * @return array with resultset
+ */
+public function executeFetchAll($sql, $param = [])
+{
+    $sth = $this->execute($sql, $param);
+    $res = $sth->fetchAll();
+    if ($res === false) {
+        $this->statementException($sth, $sql, $param);
+    }
+    return $res;
+}
 
 
-// Do SELECT from a table
-if($title) {
-  // prepare SQL for search
-} 
-else {
-  // prepare SQL to show all
+
+/**
+ * Do INSERT/UPDATE/DELETE with optional parameters.
+ *
+ * @param string $sql   statement to execute
+ * @param array  $param to match ? in statement
+ *
+ * @return PDOStatement
+ */
+public function execute($sql, $param = [])
+{
+    $sth = $this->pdo->prepare($sql);
+    if (!$sth) {
+        $this->statementException($sth, $sql, $param);
+    }
+
+    $status = $sth->execute($param);
+    if (!$status) {
+        $this->statementException($sth, $sql, $param);
+    }
+
+    return $sth;
 }
 ```
 
-Vi har nu söksträngen som en variabel `$title` som skall bli en del av where-satsen i SQL-frågan. Detta görs i prepared statement med frågetecken och en parameterlista i form av en array. Så här ser det ut.
+I mitt exempelprogram har jag valt att lägga in databasrelaterad kod i en klass. Det förenklar min hantering av kod som går mot databasen samt felhanteringen. 
 
-**Prepared statements och koppla argument till variabel.**
+De två metoder som visas ovan är `execute()` som förbereder och exekverar databasfrågan. Den varianten som heter `executeFetchAll()` levererar dessutom ett resultset som svar på frågan. Den första metoden lämpar sig för INSERT, UPDATE, DELETE och den andra är tänkt för SELECT.
 
-```php
-$sql = "SELECT * FROM Movie WHERE title LIKE ?;";
-$sth = $pdo->prepare($sql);
+Du kan läsa om prepared statements, och fler sätt att koppla ihop parametrar med variabler, i manualen om [prepared statemements](http://www.php.net/manual/en/pdo.prepared-statements.php) eller där [metoden `execute()`](http://www.php.net/manual/en/pdostatement.execute.php) beskrivs.
 
-$params = array(
-  $title,
-);  
-$sth->execute($params);
+Så här blev mitt resultat när jag gör min sökning.
 
-$res = $sth->fetchAll();
-```
+[FIGURE src=image/snapvt17/movie-search-title-res.png?w=w2 caption="Nu kan jag söka på delsträng a titel."]
 
-Du kan läsa om detta sätt, och fler sätt att koppla ihop parametrar med variabler, i manualen om [prepared statemements](http://www.php.net/manual/en/pdo.prepared-statements.php) eller där [metoden `execute()`](http://www.php.net/manual/en/pdostatement.execute.php) beskrivs.
+Bra start, eller?
 
-Så här blev mitt resultat.
 
-[FIGURE src=/image/snapshot/Sok_titel_i_filmdatabasen___Min_Filmdatabas.jpg?w=w1&q=60 caption="Sök på delsträng i titel."]
+
+XSS och Cross site scripting {#xss}
+-------------------------------------------------------------------------------
+
+Det är alltid skoj att kolla om kompisens webbplats har öppningar för XSS, där någon kan stoppa in och köra JavaScript.
+
+> `?searchTitle=<script>alert("hej")</script>`
+
+Eller genom att skriva in samma sak direkt i sökfältet?
+
+[FIGURE src="image/snapvt17/movie-xss.png?w=w2" caption="Ajdå, jag behöver nog se över så att jag skyddar min sida från XSS."]
 
 Kom ihåg att alltid kontrollera och använda [`htmlentities()`](http://php.net/manual/en/function.htmlentities.php) på information som du inte har full kontroll över och som skrivs ut i din webbsida. Detta gäller till exempel inkommande parametrar och strängar som byggs upp av dem.
 
-Tänk om någon skickar in följande länk.
+Skriv aldrig ut något, i webbsidan, som kommer från en extern part. Det gäller information i såväl GET, POST som SERVER.
 
-> `?title=<script>alert("hej")</script>`
-
-Du vill inte öppna upp för att någon skall kunna exekvera JavaScript eller liknande i din webbsida. Kontrollera att din sida inte har några sådana säkerhetsbrister och åtgärda dem isåfall med anrop till `htmlentities()`.
-
-**Anropa `htmlentities()` på strängar som skrivs ut i webbsidan.**
+I mitt fall löser jag det med följande kod.
 
 ```php
-$title = htmlentities($title);
-$paramsPrint = htmlentities(print_r($params, 1));
+<label>Title (use % as wildcard):
+    <input type="search" name="searchTitle" value="<?= esc($searchTitle) ?>"/>
+</label>
 ```
 
-Kika i min källkod om du är osäker på hur det fungerar.
+Det är delen `esc($searchTitle)` där funktionen `esc()` är min egen wrapper till PHPs `htmlentities()`. Jag gjorde en wrapper för att skriva mindre kod i mina vyer.
 
 
 
 Sök efter året då filmen skapades {#sok-ar}
------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Jag vill kunna använda året då filmen skapades som en grund för min sökning. Ibland vill jag se alla filmer som är äldre än 1990 och ibland vill jag se de filmer som skapats under första årtiondet av tvåtusentalet (2000 - 2010). Jag gör en ny testsida för att visa hur det kan se ut.
 
-**Formulär för att ange året.**
+Tanken är något i denna stilen.
 
-```html
-<form>
-<fieldset>
-<legend>Sök</legend>
-<p><label>Skapad mellan åren: 
-    <input type='text' name='year1' value='{$year1}'/>
-    - 
-    <input type='text' name='year2' value='{$year2}'/>
-  </label>
-</p>
-<p><input type='submit' name='submit' value='Sök'/></p>
-<p><a href='?'>Visa alla</a></p>
-</fieldset>
+[FIGURE src=image/snapvt17/movie-search-year.png?w=w2 caption="Nu kan jag söka på filmer mellan två år."]
+
+Formuläret ger mig två värden som kan användas för att söka ut filmer som är skapade inom en period av år.
+
+Nu löste jag med formuläret så att man alltid skriver in två år. Så egentligen borde jag kunna räkna med att alltid få två år inskickade till mitt skript.
+
+Men, trots det så valde jag en mer flexibel hantering i skriptet som säger att användaren egentligen kunde valt att skicka in bara det ena eller det andra året. Kanske valde jag att inte lite fullt ut på användaren av min sökmotor.
+
+Nåväl, hanteringen av sökningen per år ser ut så här.
+
+```php
+case "search-year":
+    $title = "SELECT * WHERE year";
+    $view[] = "view/search-year.php";
+    $view[] = "view/show-all.php";
+    $year1 = getGet("year1");
+    $year2 = getGet("year2");
+    if ($year1 && $year2) {
+        $sql = "SELECT * FROM movie WHERE year >= ? AND year <= ?;";
+        $resultset = $db->executeFetchAll($sql, [$year1, $year2]);
+    } elseif ($year1) {
+        $sql = "SELECT * FROM movie WHERE year >= ?;";
+        $resultset = $db->executeFetchAll($sql, [$year1]);
+    } elseif ($year2) {
+        $sql = "SELECT * FROM movie WHERE year <= ?;";
+        $resultset = $db->executeFetchAll($sql, [$year2]);
+    }
+    break;
+```
+
+Det är liknande hantering som när man sökte på titeln. Här har jag två inkommande fält att förhålla mig till och jag valde att göra tre varianter av SQL-kod, beroende på vad mitt skript får skickat till sig. Jag hade klarat mig med första SELECT-satsen som söker på båda åren. Men, nu är mitt skript mer motståndskraftigt och kan hantera fler varianter beroende av vad användaren postar till mig.
+
+
+
+Uppdatera en film {#update-movie}
+-------------------------------------------------------------------------------
+
+Säg att jag vill uppdatera informationen om en film, hur skulle det kunna se ut?
+
+Först behöver jag på något sätt välja ut vilken film jag vill uppdatera, därefter behövs ett formulär för att uppdatera själva filmen och slutligen kan ändringarna sparas i databasen.
+
+
+
+###Välj film från en lista {#select-list}
+
+Det finns flera alternativ när man väljer ut filmen som skall redigeras. Det är lite hur man vill koppla ihop olika sidor och hur formulär och länkar skapas.
+
+Jag funderar lite och väljer att göra ett formulär med en SELECT/OPTION som visar samtliga filmer. Jag måste välja en film för att sedan klicka på "Edit" för att komma vidare till ett formulär som visar filmens detaljer.
+
+Här är första formuläret där jag väljer film.
+
+[FIGURE src=image/snapvt17/movie-select.png?w=w2 caption="Välj film för att redigera dess detaljer."]
+
+Koden som hanterar det postade formuläret ser ut så här.
+
+```php
+case "movie-select":
+    $movieId = getPost("movieId");
+    if (getPost("doEdit") && is_numeric($movieId)) {
+        header("Location: ?route=movie-edit&movieId=$movieId");
+        exit;
+    }
+
+    $title = "Select a movie";
+    $view[] = "view/movie-select.php";
+    $sql = "SELECT id, title FROM movie;";
+    $movies = $db->executeFetchAll($sql);
+    break;
+```
+
+Här ser vi att formuläret använder POST och om knappen, som här representeras av `"doEdit"`, är klickad, så skickas användaren vidare till formuläret där filmen kan redigeras. Filmens id skickas med som en GET-variabel.
+
+Om formuläret inte är postat så hämtas samtliga filmer från databasen och visas upp i formuläret, eller vyn om man så vill.
+
+```php
+<form method="post">
+    <fieldset>
+    <legend>Select Movie</legend>
+
+    <p>
+        <label>Movie:<br>
+        <select name="movieId">
+            <option value="">Select movie...</option>
+            <?php foreach ($movies as $movie) : ?>
+            <option value="<?= $movie->id ?>"><?= $movie->title ?></option>
+            <?php endforeach; ?>
+        </select>
+    </label>
+    </p>
+
+    <p>
+        <input type="submit" name="doEdit" value="Edit">
+    </p>
+    <p><a href="?">Show all</a></p>
+    </fieldset>
 </form>
 ```
 
-När jag läser av värdet av året så kollar jag så att det är satt och inte är tomt.
+Notera ovan konstruktion med `foreach()` som skapar en OPTION för varje film.
 
-**Kontrollera att året har ett värde.**
+
+
+###Uppdatera information om filmen {#update-details}
+
+Då tittar vi på formuläret där vi kan uppdatera information om respektive film.
+
+[FIGURE src=image/snapvt17/movie-update.png?w=w2  caption="Ett formulär för att redigera detaljer om en film."]
+
+Nu är det bara att fylla i värden och klicka på "Save" för att spara.
+
+Koden som hanterar det postade formuläret ser ut så här.
 
 ```php
-$year1 = isset($_GET['year1']) && !empty($_GET['year1']) ? $_GET['year1'] : null;
-$year2 = isset($_GET['year2']) && !empty($_GET['year2']) ? $_GET['year2'] : null;
+case "movie-edit":
+    $title = "UPDATE movie";
+    $view[] = "view/movie-edit.php";
+    $movieId = getPost("movieId") ?: getGet("movieId");
+    $movieTitle = getPost("movieTitle");
+    $movieYear = getPost("movieYear");
+    $movieImage = getPost("movieImage");
+
+    if (getPost("doSave")) {
+        $sql = "UPDATE movie SET title = ?, year = ?, image = ? WHERE id = ?;";
+        $db->execute($sql, [$movieTitle, $movieYear, $movieImage, $movieId]);
+        header("Location: ?route=movie-edit&movieId=$movieId");
+        exit;
+    }
+
+    $sql = "SELECT * FROM movie WHERE id = ?;";
+    $movie = $db->executeFetchAll($sql, [$movieId]);
+    $movie = $movie[0];
+    break;
 ```
 
-Min tanke är att man enbart skall kunna ange ett av åren. För att lyckas med det så behöver jag i princip tre olika SQL-satser.
+Första gången man kommer till sidan så hämtas filmens id från `getGet("movieId")` och SELECT-satsen i slutet hämtar information om filmen. 
 
-**Olika SQL-satser beroende på vilka av årtalen som anges.**
+I nästa skede är formuläret postat och all information hämtas från `getPost()` och det görs en UPDATE följt av en `header()` tillbaka till samma sida där informationen om filmen visas igen.
+
+
+
+Skapa en ny film {#new-movie}
+-------------------------------------------------------------------------------
+
+Låt oss nu se om vi kan vara lite kluriga och skapa en ny film genom att återanvända vårt Edit-formulär.
+
+Jag lägger till en knapp för "Add" i vyn där vi kunde välja filmer.
+
+[FIGURE src=image/snapvt17/movie-add.png?w=w2 caption="Nu kan man klicka för att lägga till nya filmer."]
+
+När man klickar "Add" så händer följande kod.
 
 ```php
-if($year1 && $year2) {
-  $sql = "SELECT * FROM Movie WHERE year >= ? AND year <= ?;";
-  $params = array(
-    $year1,
-    $year2,
-  );  
-} 
-elseif($year1) {
-  $sql = "SELECT * FROM Movie WHERE year >= ?;";
-  $params = array(
-    $year1,
-  );  
-} 
-elseif($year2) {
-  $sql = "SELECT * FROM Movie WHERE year <= ?;";
-  $params = array(
-    $year2,
-  );  
-} 
+case "movie-select":
+    if (getPost("doAdd")) {
+        $sql = "INSERT INTO movie (title, year, image) VALUES (?, ?, ?);";
+        $db->execute($sql, ["A title", 2017, "img/noimage.png"]);
+        $movieId = $db->lastInsertId();
+        header("Location: ?route=movie-edit&movieId=$movieId");
+        exit;
+    }
 ```
 
-Om man inte anger något av åren så visar jag samtliga filmer, på samma sätt som jag gjorde när man sökte på delsträng i titeln.
+Det läggs till en ny film med standardvärden. Metoden `$db->lastInsertId()` tar reda på det id som blev resultatet av den senaste INSERT-satsen och med hjälp av den informationen så skickas användaren vidare till formuläret där filmens detaljer kan redigeras.
 
-[FIGURE src=/image/snapshot/Sok_film_per_ar___Min_Filmdatabas.jpg?w=w1&q=60 caption="Ange mellan vilka år som filmen skapades."]
+Vi lyckas alltså återanvända flera delar i detta fallet och sparar lite tid.
+
+Så här ser det ut när man klickar på "Add".
+
+[FIGURE src=image/snapvt17/movie-update-new.png?w=w2 caption="Den nya filmen kan direkt redigeras."]
+
+Om man klickar "Save" och sedan visar alla filmer så kan det se ut så här.
+
+[FIGURE src=image/snapvt17/movie-add-view-all.png?w=w2 caption="Den nya filmen visas i översikten."]
+
+Då är det lika bra vi lär oss radera en film.
 
 
 
+Radera en ny film {#del-movie}
+-------------------------------------------------------------------------------
+
+Det känns som vi kan fotsätta en del med återanvändningen. Jag väljer att lägga en "Delete" knapp på sidan där filmer kan väljas.
+
+[FIGURE src=image/snapvt17/movie-delete.png?w=w2 caption="Ny knapp för att radera en film."]
+
+När man klickar på knappen händer följande kod.
+
+```php
+case "movie-select":
+    $movieId = getPost("movieId");
+    if (getPost("doDelete")) {
+        $sql = "DELETE FROM movie WHERE id = ?;";
+        $db->execute($sql, [$movieId]);
+        header("Location: ?route=movie-select");
+        exit;
+    }
+```
+
+Filmen raderas med en DELETE sats och senad skickas användaren till samma sida igen.
+
+Nu kan vi visa, lägga till, redigera och radera filmer. Det är CRUD det, Create, Read, Update, Delete.
+
+
+
+Sortera filmerna på olika kolumner {#sortera}
+-------------------------------------------------------------------------------
+
+När min filmsamling blir större så behöver jag stöd för att sortera tabellen. Jag tänkte sortera per kolumn genom att klicka på kolumnrubriken.
+
+Jag behöver skapa en länk för att sortera kolumnen i stigande ordning och en länk för att sortera i sjunkande ordning.
+
+
+
+###Funktion för att skriva ut pilarna {#updown}
+
+Eftersom varje kolumn behöver upp- och ner-pilen så väljer jag att lägga den delen av koden i en funktion.
+
+```php
+/**
+ * Function to create links for sorting.
+ *
+ * @param string $column the name of the database column to sort by
+ * @param string $route  prepend this to the anchor href
+ *
+ * @return string with links to order by column.
+ */
+function orderby($column, $route)
+{
+    return <<<EOD
+<span class='orderby'>
+<a href="{$route}orderby={$column}&order=asc">&darr;</a>
+<a href="{$route}orderby={$column}&order=desc">&uarr;</a>
+</span>
+EOD;
+}
+```
+
+Nu kan jag skapa min header till tabellen och använda funktionen för att lägga till länkarna för sortering.
+
+```php
+<?php
+$defaultRoute = "?route=show-all-sort&"
+?>
+<table>
+    <tr class="first">
+        <th>Rad</th>
+        <th>Id <?= orderby("id", $defaultRoute) ?></th>
+        <th>Bild <?= orderby("image", $defaultRoute) ?></th>
+        <th>Titel <?= orderby("title", $defaultRoute) ?></th>
+        <th>År <?= orderby("year", $defaultRoute) ?></th>
+    </tr>
+```
+
+Resultatet kan se ut så här.
+
+[FIGURE src=image/snapvt17/movie-sort.png?w=w2 caption="Nu kan man sortera tabellen genom att klicka på pilarna."]
+
+Visar man upp en tabell i en webbsida så är det inte orimligt att användaren kan vilja sortera resultatet i den. Nu har vi löst det i vår filmdatabas.
+
+
+
+###Extra koll av säkerheten {#secsort}
+
+Om vi tittar på routens hanterare så kommer vi se att vi har ett läge där prepared statements inte kan hjälpa oss, vi riskerar att öppna upp för SQL injections.
+
+```php
+case "show-all-sort":
+    $title = "Show and sort all movies";
+    $view[] = "view/show-all-sort.php";
+
+    // Only these values are valid
+    $columns = ["id", "title", "year", "image"];
+    $orders = ["asc", "desc"];
+
+    // Get settings from GET or use defaults
+    $orderBy = getGet("orderby") ?: "id";
+    $order = getGet("order") ?: "asc";
+
+    // Incoming matches valid value sets
+    if (!(in_array($orderBy, $columns) && in_array($order, $orders))) {
+        die("Not valid input for sorting.");
+    }
+
+    $sql = "SELECT * FROM movie ORDER BY $orderBy $order;";
+    $resultset = $db->executeFetchAll($sql);
+    break;
+```
+
+I SELECT-satsen gör vi stränkonkatenering av de variabler som säger i vilken ordning som sortering skall ske.
+
+```php
+$sql = "SELECT * FROM movie ORDER BY $orderBy $order;";
+```
+
+Det är vanskligt, iallafall om vi inte har full koll på vilka värden som ligger i variablerna `$orderBy` och `$order`. Grunden för de variablerna kommer ju från GET. Men, i detta fallet så har jag lagt in arrayer med de värden som jag tolererar, och jag kollar att inkommande verkligen matchar giltiga värden, så här har jag mitt på det torra och klarar mig.
+
+Har man bara full koll på vad variablerna kan innehålla så kan man göra som man vill.
+
+
+
+Dela upp resultatet på flera sidor {#page}
+-------------------------------------------------------------------------------
+
+När filmsamlingen växer så blir det svårt att se alla filmer på en sida, jag behöver dela upp visningen i olika sidor, paginering. Det är relativt lätt att göra detta i SQL med klausulen `LIMIT` och `OFFSET`. 
+
+Här väljer jag att visa två rader (LIMIT) och börja på den tredje raden genom att hoppa över de två första (OFFSET).
+
+```sql
+SELECT * FROM movie LIMIT 2 OFFSET 2;
+```
+
+Med hjälp av denna enkla SQL-konstruktion kan vi skapa en mer komplex navigering kring filmerna. Dels kan vi bestämma hur många filmer skall visas per sida och dels kan vi navigera mellan sidorna. Så här kan det se ut när det är klart.
+
+[FIGURE src=/image/snapshot/Visa_resultatet_i_flera_sidor___Min_Filmdatabas.jpg?w=w1&q=60 caption="Två filmer visas per sida och sida 2 visas för tillfället."]
+
+Det är en del kluriga saker att lösa för en sådan här webbsida. Dels är det länkningen och dels är det att bestämma vilken information man behöver ha tillgänglig.
+
+
+
+###Variabler som krävs för paginering {#variabler}
+
+För det första, jag måste ha tillgång till ett par variabler.
+
+```php
+$hits // How many rows to display per page.
+$page // Current page to display, use to calculate offset value
+$max  // Max pages in the table: SELECT COUNT(id) AS rows FROM movie
+```
+
+En länk till att visa sida 2 med 2 rader per sida kan alltså se ut så här.
+
+> `?hits=2&page=2`
+
+Länken bör i sin tur resultera i en SELECT-sats enligt följande.
+
+```php
+$sql = "SELECT * FROM movie LIMIT $hits OFFSET " . (($page - 1) * $hits);
+//SELECT * FROM movie LIMIT 2 OFFSET 2
+```
+
+Det var principen det.
+
+Om vi kikar rent kodmässigt så kan routens hanterare se ut så här, lite grovt.
+
+Först gäller det att hantera hur många filmer som skall visas per sida. Här väljer jag ett defaultvärde till 4 filmer per sida, men jag vill inte tillåta värden högre än 8 träffar per sida.
+
+```php
+// Get number of hits per page
+$hits = getGet("hits", 4);
+if (!(is_numeric($hits) && $hits > 0 && $hits <= 8)) {
+    die("Not valid for hits.");
+}
+```
+
+Sedan behöver jag ha koll på hur många filmer som ligger i tabellen. Det ger mig ett max värde på antalet sidor som kan visas, om jag delar det med önskat antal träffar per sida.
+
+```php
+// Get max number of pages
+$sql = "SELECT COUNT(id) AS max FROM movie;";
+$max = $db->executeFetchAll($sql);
+$max = ceil($max[0]->max / $hits);
+```
+
+Värdet på nuvarande sida hämtar jag och standardvärde är 1. Nu har jag tillräckligt med information för att räkna fram ett värde på OFFSET.
+
+```php
+// Get current page
+$page = getGet("page", 1);
+if (!(is_numeric($hits) && $page > 0 && $page <= $max)) {
+    die("Not valid for page.");
+}
+$offset = $hits * ($page - 1);
+```
+
+Summa summarum kan jag nu komponera en SELECT-sats som ser ut så här.
+
+```php
+$sql = "SELECT * FROM movie ORDER BY $orderBy $order LIMIT $hits OFFSET $offset;";
+$resultset = $db->executeFetchAll($sql);
+```
+
+Nu kan jag testa att visa resultatet genom att redigera länken direkt.
+
+> `?page=1&hits=2`
+
+[FIGURE src=image/snapvt17/movie-paginate-1.png?w=w2 caption="Första sidan visas med två träffar."]
+
+> `?page=3&hits=2`
+
+[FIGURE src=image/snapvt17/movie-paginate-2.png?w=w2 caption="Sista sidan visas med och där finns bara en träff."]
+
+Då ska vi se om vi kan lösa själva länkandet, på ett bra sätt.
+
+
+
+Länking genom att modifiera nuvarande querystring {#mod-qs}
+------------------------------------------------------------------------------
+
+Det behövs två "menyer" för att navigera i tabellen. En för att bestämma antalet träffar per sida och en för att bestämma vilken sida som skall visas.
+
+Den ena menyn justerar värdet på `$hits` medans `$page` är oförändrat, den andra gör tvärtom och justerar `$page` medans `$hits` är oförändrat.
+
+För att lyckas med detta så behöver jag lite funktioner.
+
+
+
+###Använd nuvarande querystring som bas {#qsbas}
+
+Det handlar om att utgå från nuvarande querystring och modifiera värdet i en viss parameter. För att göra detta på ett mer generellt sätt skapar jag en funktion `getQueryString()`.
+
+
+```php
+/**
+ * Use the current querystring as base, modify it according to $options and return the modified query string.
+ *
+ * @param array $options to set/change.
+ * @param string $prepend this to the resulting query string
+ * @return string with an updated query string.
+ */
+function getQueryString($options, $prepend='?') {
+  // parse query string into array
+  $query = array();
+  parse_str($_SERVER['QUERY_STRING'], $query);
+
+  // Modify the existing query string with new options
+  $query = array_merge($query, $options);
+
+  // Return the modified querystring
+  return $prepend . http_build_query($query);
+}
+```
+
+I mitt fall är detta en funktion jag behöver för att fortsätta och skapa de båda navigeringsmenyerna.
+
+
+
+###Navigeringsmeny för att välja antalet träffar {#sel-hits}
+
+[FIGURE src=/image/snapshot/hits-Visa_resultatet_i_flera_sidor___Min_Filmdatabas.jpg?w=w1&q=60 caption="Menyn för att bestämma hur många träffar som visas per sida."]
+
+För att hålla ordning i min kod så skapar jag en ny metod för att generera menyn för antalet träffar. Jag skickar in en array med de alternativ jag vill ha och resultatet blir menyn i form av html-kod. För att skapa menyn används funktionen `getQueryString()`.
+
+**Funktion för att skapa meny för antal träffar.**
+
+```php
+/**
+ * Create links for hits per page.
+ *
+ * @param array $hits a list of hits-options to display.
+ * @return string as a link to this page.
+ */
+function getHitsPerPage($hits) {
+  $nav = "Träffar per sida: ";
+  foreach($hits AS $val) {
+    $nav .= "<a href='" . getQueryString(array('hits' => $val)) . "'>$val</a> ";
+  }  
+  return $nav;
+}
+
+echo getHitsPerPage(array(2, 4, 8));
+```
+
+
+###Navigeringemeny för sidor {#sel-page}
+
+[FIGURE src=/image/snapshot/pages-Visa_resultatet_i_flera_sidor___Min_Filmdatabas.jpg?w=w1&q=60 caption="Menyn för att bestämma hur många träffar som visas per sida."]
+
+Jag behöver ytterligare en meny för att bestämma vilken sida som skall visas. Här blir det också snyggare att lägga koden i en funktion och funktionen `getQueryString()` används för att skapa länkarna.
+
+**Funktion för att skapa meny för navigering av sidor.**
+
+```php
+/**
+ * Create navigation among pages.
+ *
+ * @param integer $hits per page.
+ * @param integer $page current page.
+ * @param integer $max number of pages. 
+ * @param integer $min is the first page number, usually 0 or 1. 
+ * @return string as a link to this page.
+ */
+function getPageNavigation($hits, $page, $max, $min=1) {
+  $nav  = "<a href='" . getQueryString(array('page' => $min)) . "'>&lt;&lt;</a> ";
+  $nav .= "<a href='" . getQueryString(array('page' => ($page > $min ? $page - 1 : $min) )) . "'>&lt;</a> ";
+
+  for($i=$min; $i<=$max; $i++) {
+    $nav .= "<a href='" . getQueryString(array('page' => $i)) . "'>$i</a> ";
+  }
+
+  $nav .= "<a href='" . getQueryString(array('page' => ($page < $max ? $page + 1 : $max) )) . "'>&gt;</a> ";
+  $nav .= "<a href='" . getQueryString(array('page' => $max)) . "'>&gt;&gt;</a> ";
+  return $nav;
+}
+
+echo getPageNavigation($hits, $page, $max);
+```
+
+När allt är klart kan det se ut som i mitt [exempel med sidnavigering](kod-exempel/gor-din-egen-filmdatabas/movie_page.php).
+
+
+
+Spara debugginformation i sessionen mellan sidanrop {#session}
+-------------------------------------------------------------------------------
+
+Som du kunde se i exemplet ovan så användes en ny metod, `CDatabase::SaveDebug()`. Vi tittar på det sammanhang där den används.
+
+```php
+$db->ExecuteQuery($sql, array($title));
+$db->SaveDebug();
+header('Location: movie_edit.php?id=' . $db->LastInsertId());
+```
+
+Först exekveras en databasfråga, som vanligt lagras det undan information som sedan kan skrivas ut, men vad händer när man dirigerar sidan till en annan resultatsida med `header()`, då försvinner all information om frågan. Det är synd. 
+
+Lösningen blir att spara undan informationen i sessionen, en mellanlagring, som ett flash-minne. Spara undan genom att anropa `SaveDebug()` och när klassen initieras i nästa sidkontroller så läses informationen in från sessionen. På det viset kan vi ha mer komplexa dirigeringar mellan sidor men ändå behålla debug-information om vad som händer med databasen.
+
+Så här ser koden ut.
+
+**Spara undan i sessionen med `SaveDebug()`.**
+
+```php
+  /**
+   * Save debug information in session, useful as a flashmemory when redirecting to another page.
+   * 
+   * @param string $debug enables to save some extra debug information.
+   */
+  public function SaveDebug($debug=null) {
+    if($debug) {
+      self::$queries[] = $debug;
+      self::$params[] = null;
+    }
+
+    self::$queries[] = 'Saved debuginformation to session.';
+    self::$params[] = null;
+
+    $_SESSION['CDatabase']['numQueries'] = self::$numQueries;
+    $_SESSION['CDatabase']['queries']    = self::$queries;
+    $_SESSION['CDatabase']['params']     = self::$params;
+  }
+```
+
+Med denna metod sparas all information i sessionen. När vi sedan hämtar tillbaka informationen så görs det i konstruktorn.
+
+**Hämta information från sessionen i konstruktorn.**
+
+```php
+    // Get debug information from session if any.
+    if(isset($_SESSION['CDatabase'])) {
+      self::$numQueries = $_SESSION['CDatabase']['numQueries'];
+      self::$queries    = $_SESSION['CDatabase']['queries'];
+      self::$params     = $_SESSION['CDatabase']['params'];
+      unset($_SESSION['CDatabase']);
+    }
+```
+
+Som vanligt när det gäller sessioner så när du får problem så är det bra att skriva ut innehållet i sessionen för att felsöka på det. 
+
+Nu kan vi jobba vidare med databasen och databasklassen oavsett dirigeringar mellan sidor. Perfekt!
+
+
+
+Avslutningsvis {#sum}
+-------------------------------------------------------------------------------
+
+Nu har du grunderna i PHP PDO och MySQL och lite till. Detta är egentligen grunderna i de flesta databasdrivna webbapplikationer så desto bättre du lär dig -- och organiserar din kod, desto lättare blir det att återanvända och vidareutveckla det du nu gjort.
+
+Det finns en [forumtråd](t/XXX) där du kan ställa frågor eller komma med tips.
+
+
+
+<!--
 Kategorisera filmer per genre {#sok-genre}
 -----------------------------------------------------------------------------------------------
 
@@ -678,913 +1260,4 @@ Den är rätt lik vyn `VMovie` där alla tre tabellerna joinas, men det är enba
 
 Bra, nu finns det flera sätt att söka ut filmerna på.
 
-
-
-Sortera filmerna på olika kolumner {#sortera}
------------------------------------------------------------------------------------------------
-
-När min filmsamling blir större så behöver jag stöd för att sortera tabellen. Jag tänkte sortera per kolumn genom att klicka på kolumnrubriken.
-
-Jag behöver skapa en länk för att sortera kolumnen i stigande ordning och en länk för att sortera i sjunkande ordning. Jag väljer att göra en funktion som skapar koden för länkarna.
-
-**Funktion som skapar länkar för sortering.**
-
-```php
-/**
- * Function to create links for sorting
- *
- * @param string $column the name of the database column to sort by
- * @return string with links to order by column.
- */
-function orderby($column) {
-  return "<span class='orderby'><a href='?orderby={$column}&order=asc'>&darr;</i></a><a href='?orderby={$column}&order=desc'>&uarr;</a></span>";
-}
-
-// Put results into a HTML-table
-$tr = "<tr><th>Rad</th><th>Id " . orderby('id') . "</th><th>Bild</th><th>Titel " . orderby('title') . "</th><th>År " . orderby('year') . "</th><th>Genre</th></tr>";
-```
-
-Nu kan jag ta hand om inkommande parametrar och ställa en SQL-fråga som sorterar enligt vald kolumn. Om inget är angivet så sorterar jag på id-kolumnen i stigande ordning.
-
-**Sortera per kolumn enligt inkommande parametrar.**
-
-```php
-// Get parameters for sorting
-$orderby  = isset($_GET['orderby']) ? strtolower($_GET['orderby']) : 'id';
-$order    = isset($_GET['order'])   ? strtolower($_GET['order'])   : 'asc';
-
-
-// Do SELECT from a table
-$sql = "SELECT * FROM VMovie ORDER BY $orderby $order;";
-$sth = $pdo->prepare($sql);
-$sth->execute(array($orderby, $order));
-$res = $sth->fetchAll();
-```
-
-Nu har jag dock öppnat upp lite väl mycket för SQL injections. Om jag inte kontrollerar vad inkommande parametrar har för värde så har jag givit användaren en möjlighet att skriva vad han vill i min SQL-sats. Det är **aldrig** bra och fattig kodning. Tänk vad som händer om följande länk hade angivits av användaren.
-
-> `?orderby=id&order=;DROP%20TABLE%20STUDENTS`
-
-Resultatet kunde blivit en SQL-fråga som raderar en tabell. 
-
-> `SELECT * FROM VMovie ORDER BY id ;DROP TABLE STUDENTS;`
-
-I detta fallet hade det inte fungerat eftersom man inte kan ställa flera SQL-satser i ett och samma prepared statement. Men principen gäller, användaren kan påverka SQL-satsen och så kan vi inte ha det. Användaren skall inte ges möjlighet att justera SQL-frågan via parametrarna. Därför behöver jag lägga till en kontroll så att jag vet hur SQL-frågan kommer att se ut. 
-
-**Kontroll för inkommande parametrar.**
-
-```php
-// Check that incoming is valid
-in_array($orderby, array('id', 'title', 'year')) or die('Check: Not valid column.');
-in_array($order, array('asc', 'desc')) or die('Check: Not valid sort order.');
-```
-
-Sådär, nu fungerar det bättre och säkrare. Glöm inte.
-
-> *Validera alltid inkommande parametrar.*
-
-Så här ser det ut för mig. Nu kan jag sortera valda kolumner. 
-
-[FIGURE src=/image/snapshot/Sortera_tabellens_innehall___Min_Filmdatabas.jpg?w=w1&q=60 caption="Filmer sorterade per titel i stigande bokstavsordning."]
-
-
-
-Dela upp resultatet på flera sidor {#page}
------------------------------------------------------------------------------------------------
-
-
-
-###Principen för paginering {#paginering}
-
-När filmsamlingen växer så blir det svårt att se alla filmer på en sida, jag behöver dela upp visningen i olika sidor, paginering. Det är relativt lätt att göra detta i SQL med klausulen `LIMIT` och `OFFSET`. 
-
-**Visa fem rader och starta på rad 25+1 med `LIMIT`.**
-
-```sql
-SELECT * FROM VMovie LIMIT 5 OFFSET 25;
-```
-
-Med hjälp av denna enkla SQL-konstruktion kan vi skapa en mer komplex navigering kring filmerna. Dels kan vi bestämma hur många filmer skall visas per sida och dels kan vi navigera mellan sidorna. Så här kan det se ut när det är klart.
-
-[FIGURE src=/image/snapshot/Visa_resultatet_i_flera_sidor___Min_Filmdatabas.jpg?w=w1&q=60 caption="Två filmer visas per sida och sida 2 visas för tillfället."]
-
-Det är en del kluriga saker att lösa för en sådan här webbsida. Dels är det länkningen och dels är det att bestämma vilken information man behöver ha tillgänglig.
-
-För det första, jag måste ha tillgång till ett par variabler.
-
-**Variabler som krävs för paginering.**
-
-```php
-$hits // How many rows to display per page.
-$page // Which is the current page to display, use this to calculate the offset value
-$max  // Max pages in the table: SELECT COUNT(id) AS rows FROM VMovie
-$min  // Startpage, usually 0 or 1, what you feel is convienient
-```
-
-En länk till att visa sida 2 med 2 rader per sida kan alltså se ut så här.
-
-> `?hits=2&page=2`
-
-Länken bör i sin tur resultera i en SELECT-sats enligt följande.
-
-```php
-$sql = "SELECT * FROM VMovie LIMIT $hits OFFSET " . (($page - 1) * $hits);
-//SELECT * FROM VMovie LIMIT 2 OFFSET 2
-```
-
-Det var principen det.
-
-
-
-###Länking genom att modifiera nuvarande QUERY_STRING {#mod-qs}
-
-Det behövs två "menyer" för att navigera i tabellen. En för att bestämma antalet träffar per sida och en för att bestämma vilken sida som skall visas. Den ena menyn justerar värdet på `$hits` medans `$page` är oförändrat, den andra gör tvärtom. Det handlar alltså om att utgå från nuvarande QUERY_STRING och modifiera värdet i en viss parameter. För att göra detta på ett mer generellt sätt skapar jag en funktion `getQueryString()`.
-
-**Använd nuvarande QUERY_STRING som bas och förändra den.**
-
-```php
-/**
- * Use the current querystring as base, modify it according to $options and return the modified query string.
- *
- * @param array $options to set/change.
- * @param string $prepend this to the resulting query string
- * @return string with an updated query string.
- */
-function getQueryString($options, $prepend='?') {
-  // parse query string into array
-  $query = array();
-  parse_str($_SERVER['QUERY_STRING'], $query);
-
-  // Modify the existing query string with new options
-  $query = array_merge($query, $options);
-
-  // Return the modified querystring
-  return $prepend . http_build_query($query);
-}
-```
-
-I mitt fall är detta en funktion jag behöver för att fortsätta och skapa de båda navigeringsmenyerna.
-
-
-
-###Navigeringsmeny för att välja antalet träffar {#sel-hits}
-
-[FIGURE src=/image/snapshot/hits-Visa_resultatet_i_flera_sidor___Min_Filmdatabas.jpg?w=w1&q=60 caption="Menyn för att bestämma hur många träffar som visas per sida."]
-
-För att hålla ordning i min kod så skapar jag en ny metod för att generera menyn för antalet träffar. Jag skickar in en array med de alternativ jag vill ha och resultatet blir menyn i form av html-kod. För att skapa menyn används funktionen `getQueryString()`.
-
-**Funktion för att skapa meny för antal träffar.**
-
-```php
-/**
- * Create links for hits per page.
- *
- * @param array $hits a list of hits-options to display.
- * @return string as a link to this page.
- */
-function getHitsPerPage($hits) {
-  $nav = "Träffar per sida: ";
-  foreach($hits AS $val) {
-    $nav .= "<a href='" . getQueryString(array('hits' => $val)) . "'>$val</a> ";
-  }  
-  return $nav;
-}
-
-echo getHitsPerPage(array(2, 4, 8));
-```
-
-
-###Navigeringemeny för sidor {#sel-page}
-
-[FIGURE src=/image/snapshot/pages-Visa_resultatet_i_flera_sidor___Min_Filmdatabas.jpg?w=w1&q=60 caption="Menyn för att bestämma hur många träffar som visas per sida."]
-
-Jag behöver ytterligare en meny för att bestämma vilken sida som skall visas. Här blir det också snyggare att lägga koden i en funktion och funktionen `getQueryString()` används för att skapa länkarna.
-
-**Funktion för att skapa meny för navigering av sidor.**
-
-```php
-/**
- * Create navigation among pages.
- *
- * @param integer $hits per page.
- * @param integer $page current page.
- * @param integer $max number of pages. 
- * @param integer $min is the first page number, usually 0 or 1. 
- * @return string as a link to this page.
- */
-function getPageNavigation($hits, $page, $max, $min=1) {
-  $nav  = "<a href='" . getQueryString(array('page' => $min)) . "'>&lt;&lt;</a> ";
-  $nav .= "<a href='" . getQueryString(array('page' => ($page > $min ? $page - 1 : $min) )) . "'>&lt;</a> ";
-
-  for($i=$min; $i<=$max; $i++) {
-    $nav .= "<a href='" . getQueryString(array('page' => $i)) . "'>$i</a> ";
-  }
-
-  $nav .= "<a href='" . getQueryString(array('page' => ($page < $max ? $page + 1 : $max) )) . "'>&gt;</a> ";
-  $nav .= "<a href='" . getQueryString(array('page' => $max)) . "'>&gt;&gt;</a> ";
-  return $nav;
-}
-
-echo getPageNavigation($hits, $page, $max);
-```
-
-När allt är klart kan det se ut som i mitt [exempel med sidnavigering](kod-exempel/gor-din-egen-filmdatabas/movie_page.php).
-
-
-
-En databasklass som modul i Anax {#cdatabase}
------------------------------------------------------------------------------------------------
-
-Som du märker blir det en hel del upprepning av databaskoden för varje ny sida som vi skapar. Det är onödigt. Ett sätt att komma bort från det är att skapa en klass för databasen, det kan spara ett par rader kod i varje sidkontroller och det är bra.
-
-I detta film-exempel har jag använt webbmallen [Anax](kunskap/anax-en-hallbar-struktur-for-dina-webbapplikationer) som grund och därför jobbar jag vidare med det och bygger min databasklass som en [Anax-modul](kunskap/anax-en-hallbar-struktur-for-dina-webbapplikationer#modul).
-
-Tanken är att flytta inloggningsdetaljerna till `config.php`, skapa en klass för databaskoden - `CDatabase`, lägga själva uppkopplingen i konstruktorn och sedan göra en metod för att ställa Select-frågor. Dessutom tänkte jag lägga till lite debugging-möjligheter som kan vara bra att ha när man felsöker.
-
-Låt oss se hur det kan se ut.
-
-
-
-###Inloggningsdetaljer till `config.php` {#configphp}
-
-
-För det första så flyttar jag inloggningsuppgifterna till filen `config.php`. Det räcker ju att ange dem en gång och inte i varje sidkontroller som jag gjort hittills.
-
-**Inloggningsuppgifter till `config.php`.**
-
-```php
-/**
- * Settings for the database.
- *
- */
-$anax['database']['dsn']            = 'mysql:host=localhost;dbname=Movie;';
-$anax['database']['username']       = 'acronym';
-$anax['database']['password']       = 'password';
-$anax['database']['driver_options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
-```
-
-
-###CDatabase, en wrapper om databasen {#klassen}
-
-Jag skapar mallen till min klass `CDatabase`. Jag behöver ett par interna variabler för att ha koll på vad som händer.
-
-**Klassen `CDatabase` med dess interna variabler.**
-
-```php
-/**
- * Database wrapper, provides a database API for the framework but hides details of implementation.
- *
- */
-class CDatabase {
-
-  /**
-   * Members
-   */
-  private $options;                   // Options used when creating the PDO object
-  private $db   = null;               // The PDO object
-  private $stmt = null;               // The latest statement used to execute a query
-  private static $numQueries = 0;     // Count all queries made
-  private static $queries = array();  // Save all queries for debugging purpose
-  private static $params = array();   // Save all parameters for debugging purpose
-
-}
-```
-
-
-
-###Koppla upp mot databasen via konstruktorn {#konstruktor}
-
-All uppkoppling och initiering sker i konstruktorn.
-
-**Konstruktorn skapar ett PDO-objekt.**
-
-```php
-  /**
-   * Constructor creating a PDO object connecting to a choosen database.
-   *
-   * @param array $options containing details for connecting to the database.
-   *
-   */
-  public function __construct($options) {
-    $default = array(
-      'dsn' => null,
-      'username' => null,
-      'password' => null,
-      'driver_options' => null,
-      'fetch_style' => PDO::FETCH_OBJ,
-    );
-    $this->options = array_merge($default, $options);
-
-    try {
-      $this->db = new PDO($this->options['dsn'], $this->options['username'], $this->options['password'], $this->options['driver_options']);
-    }
-    catch(Exception $e) {
-      //throw $e; // For debug purpose, shows all connection details
-      throw new PDOException('Could not connect to database, hiding connection details.'); // Hide connection details.
-    }
-
-    $this->db->SetAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, $this->options['fetch_style']); 
-  }
-```
-
-I konstruktorn använder jag möjligheten att skicka in en array med all information som behövs för att initiera objektet. Det som inte skickas in får standardvärden. Det är ett vanligt sätt att vara flexibel i att skicka valfritt antal argument till en funktion eller metod och att hantera default-värden. Kanske lite klurigt vid första anblicken men annars är det bra att kunna och mycket smidigt när man lärt sig hantera det.  
-
-Nu med konstruktorn och klassen CDatabase så får jag ändra min kod i sidkontrollern.
-
-**Ändring i sidkontroller för att använda klassen CDatabase.**
-
-```php
-// Connect to a MySQL database using PHP PDO
-/*
-$dsn      = 'mysql:host=localhost;dbname=Movie;';
-$login    = 'acronym';
-$password = 'password';
-$options  = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
-$pdo = new PDO($dsn, $login, $password, $options);
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-*/
-
-$db = new CDatabase($anax['database']);
-```
-
-Där sparade vi ett par rader. En del som hamnade i `config.php` resten hamnade i konstruktorn. Kvar blir en rad för att skapa ett objekt av klassen `CDatabase` och in skickas argumenten som gör det möjligt att koppla upp sig mot databasen.
-
-
-
-###Ställa frågor via metoden `ExecuteSelectAndFetchAll()` {#executesel}
-
-Nu skapar jag en metod för att utföra en Select-sats och returnera en array med svaret. Dessutom lägger jag till lite möjligheter för felsökning.
-
-```php
-  /**
-   * Execute a select-query with arguments and return the resultset.
-   * 
-   * @param string $query the SQL query with ?.
-   * @param array $params array which contains the argument to replace ?.
-   * @param boolean $debug defaults to false, set to true to print out the sql query before executing it.
-   * @return array with resultset.
-   */
-  public function ExecuteSelectQueryAndFetchAll($query, $params=array(), $debug=false) {
-
-    self::$queries[] = $query; 
-    self::$params[]  = $params; 
-    self::$numQueries++;
-
-    if($debug) {
-      echo "<p>Query = <br/><pre>{$query}</pre></p><p>Num query = " . self::$numQueries . "</p><p><pre>".print_r($params, 1)."</pre></p>";
-    }
-
-    $this->stmt = $this->db->prepare($query);
-    $this->stmt->execute($params);
-    return $this->stmt->fetchAll();
-  }
-```
-
-Nu kan jag uppdatera min sidkontroller och den nya koden blir så här.
-
-**Ändra sidkontroller för att anropa `ExecuteSelectAndFetchAll()`.**
-
-```php
-// Get max pages from table, for navigation
-/*
-$sql = "SELECT COUNT(id) AS rows FROM VMovie";
-$sth = $pdo->prepare($sql);
-$sth->execute();
-$res = $sth->fetchAll();
-*/
-$sql = "SELECT COUNT(id) AS rows FROM VMovie";
-$res = $db->ExecuteSelectQueryAndFetchAll($sql);
-```
-
-Fyra rader blev två, det sparade två rader och det tycker jag är bra och en tillräcklig anledning till att skapa en klass som det här. När man har gjort 1000 databasfrågor så innebär det 2000 sparade kodrader. Det är bra det.
-
-
-
-###Skapa möjligheter för felsökning {#dbdebug}
-
-En fördel med att lägga all tillgång till databasen i en egen klass är att det ger möjlighet att spara ned, logga, alla sql-frågor som ställs. Det är något jag gör via de statisk medlemsvariablerna `self::$queries`, `self::$params` och `self::$numQueries`. Det som behövs är en metod som skriver ut variablernas innehåll som html.
-
-**Metod för att skriva ut frågeloggen.**
-
-```php
-  /**
-   * Get a html representation of all queries made, for debugging and analysing purpose.
-   * 
-   * @return string with html.
-   */
-  public function Dump() {
-    $html  = '<p><i>You have made ' . self::$numQueries . ' database queries.</i></p><pre>';
-    foreach(self::$queries as $key => $val) {
-      $params = empty(self::$params[$key]) ? null : htmlentities(print_r(self::$params[$key], 1)) . '<br/></br>';
-      $html .= $val . '<br/></br>' . $params;
-    }
-    return $html . '</pre>';
-  }
-```
-
-**Exempel på utskrift av databasloggen.**
-
-```sql
-You have made 3 database queries.
-
-  SELECT DISTINCT G.name
-  FROM Genre AS G
-    INNER JOIN Movie2Genre AS M2G
-      ON G.id = M2G.idGenre
-
-
-SELECT COUNT(id) AS rows FROM Movie
-
-
-  SELECT 
-    M.*,
-    GROUP_CONCAT(G.name) AS genre
-  FROM Movie AS M
-    LEFT OUTER JOIN Movie2Genre AS M2G
-      ON M.id = M2G.idMovie
-    INNER JOIN Genre AS G
-      ON M2G.idGenre = G.id
- WHERE 1  AND year >= ? AND year <= ? GROUP BY M.id LIMIT 10 OFFSET 0
-
-Array
-(
-    [0] => 1200
-    [1] => 2100
-)
-```
-
-Detta ger en bra möjlighet att analysera vad som händer, särskilt när koden växer och det börjar bli svårt att ha koll på hur många, och vilka, frågor som ställs mot databasen. Mer än en gång har jag själv använt denna möjlighet och sett, till exempel, att jag felaktigt ställer samma databasfråga flera gånger i en och samma sidkontroller. 
-
-
-
-###Kommentar om databasklassen {#kommentar}
-
-Du kan se mitt [modifierade skript](kod-exempel/gor-din-egen-filmdatabas/source.php?path=movie_cdatabase.php#file) hur det numer ser ut när det använder klassen `CDatabase`. 
-
-När ens skript växer så måste man organisera koden. Ibland dyker det upp möjligheter till att skapa en klass för att strukturera och spara kodrader. Då bör man göra det, även om det tar en del tid så är det något man vinner på i längden, både som bra möjlighet för återanvändning till andra projekt och för att skapa bra kod som är översiktlig, lättläst och underhållbar.
-
-Men, det finns aldrig regler utan undantag. Detta är nog ingen regel förresten, det är mer en riktlinje. Nåväl, copy-paste, att kopiera kod, är också en bra återanvändningsteknik och ibland säger omständigheterna att man inte har tid, eller vinner på att skriva väl organiserad kod. Kanske är det ett kundprojekt med knapp budget, en engångsgrej som inte kommer underhållas och storleken på projektet tillåter att man rundar hörnen och tar snabba vägen till resultat. Då kan man göra det. 
-
-Man får ha en känsla för när det är rätt att skriva bra kod och när man måste skriva kod snabbt. Lär dig både och och skaffa en känsla för när det ena eller andra är rätt. Då är du på god väg att bli en bra programmerare.
-
-Nu åter till filmdatabasen.
-
-
-
-Inloggning för att skydda filmdatabasen {#login}
------------------------------------------------------------------------------------------------
-
-I min filmdatabas vill jag ha möjligheten att ändra, ta bort och lägga till filmer via ett webbgränssnitt. Men det är ett gränssnitt som behöver skyddas från spammare och illvilliga förstörare. För att skydda det så lägger jag på ett enkelt lager av inloggning, så att det krävs ett användarid och ett lösenord för att logga in. Endast inloggade användare skall kunna uppdatera filmdatabasen. För att lösa detta så gör jag en tabell i databasen som innehåller användarid och deras lösenord, jag gör en inloggningssida och en sida för att logga ut och information om den inloggade användaren sparar jag undan i sessionen som ett objekt.
-
-
-
-###Databastabell med användare och lösenord {#tabell-user}
-
-Jag skapar en databastabell och lägger in ett par användare så att jag kan testa. Jag tar en enkel lösning och skyddar lösenorden med `md5()` och ett salt via `unix_timestamp()`. Det är enkelt men visar principen för hur man gör det. Vill du använda `sha()` istället för `md5()`, eller [någon annan inbyggd krypteringsalgoritm](http://dev.mysql.com/doc/refman/5.6/en/encryption-functions.html), så gör du det.
-
-```sql
---
--- Table for user
---
-DROP TABLE IF EXISTS User;
-
-CREATE TABLE User
-(
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  acronym CHAR(12) UNIQUE NOT NULL,
-  name VARCHAR(80),
-  password CHAR(32),
-  salt INT NOT NULL
-) ENGINE INNODB CHARACTER SET utf8;
-
-INSERT INTO User (acronym, name, salt) VALUES 
-  ('doe', 'John/Jane Doe', unix_timestamp()),
-  ('admin', 'Administrator', unix_timestamp())
-;
-
-UPDATE User SET password = md5(concat('doe', salt)) WHERE acronym = 'doe';
-UPDATE User SET password = md5(concat('admin', salt)) WHERE acronym = 'admin';
-
-SELECT * FROM User;
-```
-
-Bra, då är tabellen och ett par testanvändare på plats. Nu kan man testa om en användare och lösenord stämmer genom att skriva en enkel SELECT-sats.
-
-```sql
-SELECT acronym, name FROM User WHERE acronym = ? AND password = md5(concat(?, salt))
-```
-
-
-
-###Logga in {#loggain}
-
-En sida för att sköta inloggningen, det blir ett formulär där användaren kan skriva in användare och lösenord. När användaren har loggat in så sparas informationen om den inloggade användaren i sessionen.
-
-**Testa om användaren är inloggad eller ej.**
-
-```php
-// Check if user is authenticated.
-$acronym = isset($_SESSION['user']) ? $_SESSION['user']->acronym : null;
-
-if($acronym) {
-  $output = "Du är inloggad som: $acronym ({$_SESSION['user']->name})";
-}
-else {
-  $output = "Du är INTE inloggad.";
-}
-```
-
-När användaren vill logga in och postar formuläret så görs en test mot databasen om användaren och lösenordet är korrekt angivna. Det kan se ut så här.
-
-**Verifiera att användare och lösenord stämmer.**
-
-```php
-// Check if user and password is okey
-if(isset($_POST['login'])) {
-  $sql = "SELECT acronym, name FROM User WHERE acronym = ? AND password = md5(concat(?, salt))";
-  $sth = $pdo->prepare($sql);
-  $sth->execute(array($_POST['acronym'], $_POST['password']));
-  $res = $sth->fetchAll();
-  if(isset($res[0])) {
-    $_SESSION['user'] = $res[0];
-  }
-  header('Location: movie_login.php');
-}
-```
-
-Om SELECT-satsen returnerar en rad så finns det en användare med det angivna lösenordet och akronymen, annars inte. 
-
-[INFO]
-**Använd CDatabase**
-
-Som du ser så använder exempelkoden ovan inte CDatabase, men det borde den göra, då hade det blivit färre kodrader och lättare att läsa koden. Du använder naturligtvis din variant av CDatabase.
-[/INFO]
-
-Så här kan hela sidan se ut när den är klar.
-
-[FIGURE src=/image/snapshot/Login___Min_Filmdatabas.jpg?w=w1&q=60 caption="Inloggning för att skydda databasen."]
-
-
-
-###Logga ut {#logout}
-
-Om vi har en login så måste vi ha en logout. För att logga ut så behöver vi ta bort objektet i sessionen, det är ju objektet som säger vilken användare som är inloggad. Så här tar vi bort en variabel i sessionen.
-
-**Gör så att användaren loggar ut.**
-
-```php
-// Logout the user
-if(isset($_POST['logout'])) {
-  unset($_SESSION['user']);
-  header('Location: movie_logout.php');
-}
-```
-
-Så här kan en logout-sida se ut.
-
-[FIGURE src=/image/snapshot/Logout___Min_Filmdatabas.jpg?w=w1&q=60 caption="Klicka på knappen för att logga ut."]
-
-Nu är webbplatsen skyddad och jag kan fortsätta med de sidor som skall uppdatera filmdatabasen.
-
-
-
-Uppdatera information om film {#update}
------------------------------------------------------------------------------------------------
-
-Jag behöver ett enkelt sätt att uppdatera information om mina filmer. Det behövs ett formulär som fylls i med information om filmen och en möjlighet att spara den information som jag ändrar. Så här kan det se ut.
-
-**Visa alla filmer med en "edit-knapp".**
-
-[FIGURE src=/image/snapshot/Valj_och_uppdatera_info_om_film___Min_Filmdatabas.jpg?w=w1&q=60 caption="Lista de filmer som finns och en knapp/länk för att uppdatera informationen."]
-
-När man klickar på "uppdatera-knappen" till en film så hamnar man på en sida där man kan uppdatera detaljer om filmen.
-
-**Sida för att uppdatera information om film.**
-
-[FIGURE src=/image/snapshot/Uppdatera_info_om_film___Min_Filmdatabas.jpg?w=w1&q=60 caption="Formulär för att uppdatera detaljer om en film."]
-
-Så, vad kan man säga om det som krävs för att skapa dessa sidor, eller framförallt uppdatera-sidan?
-
-
-
-###Läs från databasen och fyll i formulär {#las}
-
-Först gör jag en SQL-fråga som jag använder för att fylla i formuläret med filmens nuvarande information.
-
-```php
-// Select information on the movie 
-$sql = 'SELECT * FROM Movie WHERE id = ?';
-$params = array($id);
-$res = $db->ExecuteSelectQueryAndFetchAll($sql, $params);
-
-if(isset($res[0])) {
-  $movie = $res[0];
-}
-else {
-  die('Failed: There is no movie with that id');
-}
-```
-
-Jag skapar formuläret och fyller i den information som finns lagrad om filmen.
-
-```php
-<form method=post>
-  <fieldset>
-  <legend>Uppdatera info om film</legend>
-  <input type='hidden' name='id' value='{$id}'/>
-  <p><label>Titel:<br/><input type='text' name='title' value='{$movie->title}'/></label></p>
-  <p><label>År:<br/><input type='text' name='year' value='{$movie->year}'/></label></p>
-  <p><label>Bild:<br/><input type='text' name='image' value='{$movie->image}'/></label></p>
-  <p><input type='submit' name='save' value='Spara'/> <input type='reset' value='Återställ'/></p>
-  <output>{$output}</output>
-  </fieldset>
-</form>
-```
-
-Där har vi grundläget. Nu visas den nuvarande informationen om filmen.
-
-
-
-###Ta hand om postat formulär och spara värden {#submit-save}
-
-Användaren ändrar i formuläret och postar det. Nu behöver jag ta hand om inkommande formulärparametrar och validera dem.
-
-```php
-// Get parameters 
-$id     = isset($_POST['id'])    ? strip_tags($_POST['id']) : (isset($_GET['id']) ? strip_tags($_GET['id']) : null);
-$title  = isset($_POST['title']) ? strip_tags($_POST['title']) : null;
-$year   = isset($_POST['year'])  ? strip_tags($_POST['year'])  : null;
-$image  = isset($_POST['image']) ? strip_tags($_POST['image']) : null;
-$genre  = isset($_POST['genre']) ? $_POST['genre'] : array();
-$save   = isset($_POST['save'])  ? true : false;
-
-
-// Check that incoming parameters are valid
-is_numeric($id) or die('Check: Id must be numeric.');
-is_array($genre) or die('Check: Genre must be array.');
-```
-
-Jag gör de tester jag kan göra och via [`strip_tags()`](http://php.net/manual/en/function.strip-tags.php) rensar jag bort om användaren försöker skicka in HTML-kod. Det finns olika taktiker att hantera formulärvärden som skall sparas i databasen. Man kan spara dem exakt som användaren skriver in dem och sedan hantera med [`htmlentities()`](http://php.net/manual/en/function.htmlentities.php) när de skrivs ut, eller så kan man göra som jag gör nu, att rensa bort eventuell skadlig kod innan man sparar i databasen. Båda två är rätt, det gäller bara att vara konsistent när man valt taktik.
-
-Slutligen så uppdaterar jag databasen med informationen från det postade formuläret.
-
-**UPDATE av en film.**
-
-```php
-// Check if form was submitted
-$output = null;
-if($save) {
-  $sql = '
-    UPDATE Movie SET
-      title = ?,
-      year = ?
-    WHERE 
-      id = ?
-  ';
-  $params = array($title, $year, $id);
-  $db->ExecuteQuery($sql, $params);
-  $output = 'Informationen sparades.';
-}
-```
-
-Som du kan se så har jag utökat klassen CDatabase för att hantera INSERT, UPDATE och DELETE-satser. Det är metoden `ExecuteQuery()` som löser det. Låt oss kika på den.
-
-
-
-###Stöd för INSERT, UPDATE, DELETE i CDatabase {#insert-cdatabase}
-
-När man gör INSERT, UPDATE och DELETE så returneras inte ett resultset som i SELECT-fallet. Här returneras ett värde som bara säger om frågan gick bra eller ej. En sådan fråga ser lite annorlunda ut och därför behövs en ny metod i klassen `CDatabase`.
-
-```php
-  /**
-   * Execute a SQL-query and ignore the resultset.
-   *
-   * @param string $query the SQL query with ?.
-   * @param array $params array which contains the argument to replace ?.
-   * @param boolean $debug defaults to false, set to true to print out the sql query before executing it.
-   * @return boolean returns TRUE on success or FALSE on failure. 
-   */
-  public function ExecuteQuery($query, $params = array(), $debug=false) {
-
-    self::$queries[] = $query; 
-    self::$params[]  = $params; 
-    self::$numQueries++;
-
-    if($debug) {
-      echo "<p>Query = <br/><pre>{$query}</pre></p><p>Num query = " . self::$numQueries . "</p><p><pre>".print_r($params, 1)."</pre></p>";
-    }
-
-    $this->stmt = $this->db->prepare($query);
-    return $this->stmt->execute($params);
-  }
-```
-
-Nu går det att [uppdatera detaljer om en film i mitt exempel](kod-exempel/gor-din-egen-filmdatabas/movie_edit.php?id=2).
-
-
-
-Skapa ny film {#insert}
------------------------------------------------------------------------------------------------
-
-Jag vill ha möjlighet att skapa nya filmer. Till det så behövs ytterligare ett formulär. Så här kan det se ut.
-
-**Formulär för att lägga till film.**
-
-[FIGURE src=/image/snapshot/Skapa_ny_film___Min_Filmdatabas.jpg?w=w1&q=60 caption="Formulär för att skapa ny film."]
-
-Till detta behövs ett enkelt formulär.
-
-**Formulär för att skapa ny film.**
-
-```html
-<form method=post>
-  <fieldset>
-  <legend>Skapa ny film</legend>
-  <p><label>Titel:<br/><input type='text' name='title'/></label></p>
-  <p><input type='submit' name='create' value='Skapa'/></p>
-  </fieldset>
-</form>
-```
-
-Sedan behövs en kontroll för att hantera om formuläret är postat. Om så är fallet så lägger vi till en ny film i filmdatabasen.
-
-**SQL-kod för att lägga till en ny film.**
-
-```php
-// Check if form was submitted
-if($create) {
-  $sql = 'INSERT INTO Movie (title) VALUES (?)';
-  $db->ExecuteQuery($sql, array($title));
-  $db->SaveDebug();
-  header('Location: movie_edit.php?id=' . $db->LastInsertId());
-  exit;
-}
-```
-
-Som du kan se så är det två nya metoder i CDatabase som används, `SaveDebug()` samt `LastInsertId()`. Låt oss ta en titt på dem.
-
-
-
-###Ny metod `CDatabase::LastInsertId()` {#lastinsertid}
-
-När den nya filmen är tillagd så använder jag en ny metod som jag skrivit i klassen `CDatabase`, nämligen `LastInsertId()` som ger det id som filmen fick, det automatgenererade id:et. Detta är en bra och ofta nödvändig metod när man lägger in nya rader i databasen. När jag hämtar ut id:et så kan jag direkt dirigera sidan till uppdatera-sidan så att användaren kan fortsätta att fylla i detaljer om filmen.
-
-Så här ser metoden ut i CDatabase. Den använder metoden [`PDO::lastInsertId()`](http://php.net/manual/en/pdo.lastinsertid.php).
-
-**Ny metod `CDatabase::LastInsertId()`.**
-
-```php
-  /**
-   * Return last insert id.
-   */
-  public function LastInsertId() {
-    return $this->db->lastInsertid();
-  }
-```
-
-
-
-Spara debugginformation i sessionen mellan sidanrop {#session}
------------------------------------------------------------------------------------------------
-
-Som du kunde se i exemplet ovan så användes en ny metod, `CDatabase::SaveDebug()`. Vi tittar på det sammanhang där den används.
-
-```php
-$db->ExecuteQuery($sql, array($title));
-$db->SaveDebug();
-header('Location: movie_edit.php?id=' . $db->LastInsertId());
-```
-
-Först exekveras en databasfråga, som vanligt lagras det undan information som sedan kan skrivas ut, men vad händer när man dirigerar sidan till en annan resultatsida med `header()`, då försvinner all information om frågan. Det är synd. 
-
-Lösningen blir att spara undan informationen i sessionen, en mellanlagring, som ett flash-minne. Spara undan genom att anropa `SaveDebug()` och när klassen initieras i nästa sidkontroller så läses informationen in från sessionen. På det viset kan vi ha mer komplexa dirigeringar mellan sidor men ändå behålla debug-information om vad som händer med databasen.
-
-Så här ser koden ut.
-
-**Spara undan i sessionen med `SaveDebug()`.**
-
-```php
-  /**
-   * Save debug information in session, useful as a flashmemory when redirecting to another page.
-   * 
-   * @param string $debug enables to save some extra debug information.
-   */
-  public function SaveDebug($debug=null) {
-    if($debug) {
-      self::$queries[] = $debug;
-      self::$params[] = null;
-    }
-
-    self::$queries[] = 'Saved debuginformation to session.';
-    self::$params[] = null;
-
-    $_SESSION['CDatabase']['numQueries'] = self::$numQueries;
-    $_SESSION['CDatabase']['queries']    = self::$queries;
-    $_SESSION['CDatabase']['params']     = self::$params;
-  }
-```
-
-Med denna metod sparas all information i sessionen. När vi sedan hämtar tillbaka informationen så görs det i konstruktorn.
-
-**Hämta information från sessionen i konstruktorn.**
-
-```php
-    // Get debug information from session if any.
-    if(isset($_SESSION['CDatabase'])) {
-      self::$numQueries = $_SESSION['CDatabase']['numQueries'];
-      self::$queries    = $_SESSION['CDatabase']['queries'];
-      self::$params     = $_SESSION['CDatabase']['params'];
-      unset($_SESSION['CDatabase']);
-    }
-```
-
-Som vanligt när det gäller sessioner så när du får problem så är det bra att skriva ut innehållet i sessionen för att felsöka på det. 
-
-Nu kan vi jobba vidare med databasen och databasklassen oavsett dirigeringar mellan sidor. Perfekt!
-
-
-
-Radera film {#delete}
------------------------------------------------------------------------------------------------
-
-Det får också finnas med möjligheten att radera en film. Först en översikt av alla filmer med en knapp/länk till en ny sida där filmen kan raderas via ett formulär. Så här kan det se ut.
-
-Först en översikt av alla filmer.
-
-**Visa alla filmer med knapp/länk för att radera dem.**
-
-[FIGURE src=/image/snapshot/Valj_film_att_radera___Min_Filmdatabas.jpg?w=w1&q=60 caption="Välj film att radera."]
-
-Klickar man på en "radera-knapp" så hamnar man på en ny sida där man kan radera filmen.
-
-**Formulär för att verkställa raderingen av film.**
-
-[FIGURE src=/image/snapshot/Radera_film___Min_Filmdatabas.jpg?w=w1&q=60 caption="Klicka för att radera film."]
-
-För att radera filmen i databasen så gör vi ungefär som tidigare.
-
-Märk att vi måste radera filmens rader i tabellen Movie2Genre, innan vi raderar själva filmen. Annars får vi problem med den främmande nyckeln.
-
-**Kod för att radera filmen.**
-
-```php
-// Check if form was submitted
-$output = null;
-if($delete) {
-
-  $sql = 'DELETE FROM Movie2Genre WHERE idMovie = ?';
-  $db->ExecuteQuery($sql, array($id));
-  $db->SaveDebug("Det raderades " . $db->RowCount() . " rader från databasen.");
-
-  $sql = 'DELETE FROM Movie WHERE id = ? LIMIT 1';
-  $db->ExecuteQuery($sql, array($id));
-  $db->SaveDebug("Det raderades " . $db->RowCount() . " rader från databasen.");
-
-  header('Location: movie_view_delete.php');
-}
-```
-
-Det som är värt att notera är användandet av `LIMIT 1` i sammanhanget. Vi vet att det är en film som skall raderas. Att sätta `LIMIT 1` gör det övertydligt men det ger oss också en säkerhet att om vi utvecklar och skriver något litet fel så kommer ändå max en rad att raderas. Utan `LIMIT 1` hade kanske alla rader i tabellen raderats. Så, se det som en liten säkerhetsåtgärd och använd det gärna både till `DELETE` och `UPDATE`. Det kan annars vara en databasprogrammerares mardröm, att oavsiktligt utföra en `DELETE` eller `UPDATE` på en hel tabell i en databas. Det kan ge många timmars extra och onödigt arbete.
-
-Dessutom finns det en ny metod i klassen CDatabase, `RowCount()`. Det är en metod som säger hur många rader som påverkades av föregående `INSERT`, `UPDATE` eller `DELETE`. Metoden använder sig i sin tur av [`PDOStatement::rowCount`](http://www.php.net/manual/en/pdostatement.rowcount.php).
-
-**Databasklassens metod `RowCount()` för att ge antalet påverkade rader.**
-
-```php
-  /**
-   * Return rows affected of last INSERT, UPDATE, DELETE
-   */
-  public function RowCount() {
-    return is_null($this->stmt) ? $this->stmt : $this->stmt->rowCount();
-  }
-```
-
-Bra, det var alltsammans nu finns allt på plats, alla saker jag vill göra med filmdatabasen är klara.
-
-
-
-Kombinera alla sökalternativ på en sida {#kombinera}
------------------------------------------------------------------------------------------------
-
-Nu har jag en hel del möjligheter för att presentera och visa min filmdatabas. Visst vore det trevligt om alla dessa möjligheter kunde samlas på en sida? Går det att slå samman alla de olika varianterna på sökning i en sida? Utan att det blir rörig kod?
-
-Jag försöker att lösa det utan att skapa en klass eller liknande, allt in i ett skript. Det är en bra start. I alla fall är det en bra start när jag inte har någon direkt känsla för hur jag ska strukturera min kod, då brukar jag känna mig fram. Först lösa uppgiften och sedan strukturera koden, det får bli devisen.  
-
-Kanske kan det se ut så här [när det är klart](kod-exempel/gor-din-egen-filmdatabas/movie_view.php?genre=college&hits=2&page=1&title=%25a%25&year1=1990&year2=2010&submit=S%C3%B6k)?
-
-[FIGURE src=/image/snapshot/Visa_filmer_med_sokalternativ_kombinerade___Min_Filmdatabas.jpg?w=w1&q=60 caption="Alla sökalternativ inkluderade i en sida."]
-
-Är det en lätt övning att kombinera alla sökalternativ i en och samma sida? Nej, egentligen inte. Det kräver att du har koll på både PHP, SQL och hur länkar och formulär fungerar. Men det är en bra övning -- att göra ett gott försök och se hur långt ens programmeringskunskaper räcker.
-
-Jag gjorde min lösning i ett och samma skript. Det känns som man kan ha nytta av koden även i andra sammanhang, men då behöver man paketera koden bättre, till exempel i en klass. Fundera gärna på hur du borde paketera koden så att den blir lättare att återanvända.
-
-Försök nu själv att lösa så att alla sökalternativ kombineras på en sida, efter bästa förmåga. Kommer du bara en bit framåt så räcker det. Studera min [källkod för hur jag löste det](kod-exempel/gor-din-egen-filmdatabas/source.php?path=movie_view.php#file) om du vill ha tips och ledtrådar.
-
-
-
-Avslutningsvis {#sum}
------------------------------------------------------------------------------------------------
-
-Där har du grunderna i PHP PDO och MySQL och lite till. Detta är egentligen grunderna i de flesta databasdrivna webbapplikationer så desto bättre du lär dig -- och organiserar din kod, desto lättare blir det att återanvända och vidareutveckla det du nu gjort. Bygg det som moduler i ditt eget Anax så blir det enkelt att hålla ordning på.
-
-Lycka till och fråga i forumet om du har några funderingar, kommentarer eller förbättringsförslag.
+-->
