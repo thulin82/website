@@ -2,17 +2,43 @@
 #
 # Build website with environment
 #
+
+# --------------------------------------------------------------------------
+#
+# General
 #
 
-# Colors
-NO_COLOR		= \033[0m
-TARGET_COLOR	= \033[32;01m
-OK_COLOR		= \033[32;01m
-ERROR_COLOR		= \033[31;01m
-WARN_COLOR		= \033[33;01m
-ACTION			= $(TARGET_COLOR)--> 
-HELPTEXT 		= "$(ACTION)" `egrep "^\# target: $(1) " Makefile | sed "s/\# target: $(1)[ ]\+- / /g"` "$(NO_COLOR)"
+# Detect OS
+OS = $(shell uname -s)
 
+# Defaults
+ECHO = echo
+
+# Make adjustments based on OS
+# http://stackoverflow.com/questions/3466166/how-to-check-if-running-in-cygwin-mac-or-linux/27776822#27776822
+ifneq (, $(findstring CYGWIN, $(OS)))
+	ECHO = /bin/echo -e
+endif
+
+# Colors and helptext
+NO_COLOR	= \033[0m
+ACTION		= \033[32;01m
+OK_COLOR	= \033[32;01m
+ERROR_COLOR	= \033[31;01m
+WARN_COLOR	= \033[33;01m
+
+# Which makefile am I in?
+WHERE-AM-I = $(CURDIR)/$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))
+THIS_MAKEFILE := $(call WHERE-AM-I)
+
+# Echo some nice helptext based on the target comment
+HELPTEXT = $(ECHO) "$(ACTION)--->" `egrep "^\# target: $(1) " $(THIS_MAKEFILE) | sed "s/\# target: $(1)[ ]*-[ ]* / /g"` "$(NO_COLOR)"
+
+
+# --------------------------------------------------------------------------
+#
+# Local
+#
 WWW_SITE	:= dbwebb.se
 WWW_LOCAL	:= local.$(WWW_SITE)
 SERVER_ADMIN := mos@$(WWW_SITE)
@@ -41,43 +67,35 @@ EXCLUDE_ON_PUBLISH = --exclude old --exclude backup --exclude .git --exclude .so
 # Backup
 TODAY = `date +'%y%m%d'`
 
-
-
-# target: help - Displays help.
+# target: help                    - Displays help.
 .PHONY:  help
 help:
-	@echo $(call HELPTEXT,$@)
-	@echo "make [target] ..."
-	@echo "target:"
-	@egrep "^# target:" Makefile | sed 's/# target: / /g'
+	@$(call HELPTEXT,$@)
+	@$(ECHO) "Usage:"
+	@$(ECHO) " make [target] ..."
+	@$(ECHO) "target:"
+	@egrep "^# target:" $(THIS_MAKEFILE) | sed 's/# target: / /g'
 
 
 
-# target: update-all - Update codebase and publish by clearing the cache.
-.PHONY: update-all
-update-all: codebase-update submodule-update site-build local-publish-clear
-	@echo $(call HELPTEXT,$@)
-
-
-
-# target: update - Update codebase (no submodules) and publish by clearing the cache.
+# target: update                  - Update codebase (no submodules) and publish by clearing the cache.
 .PHONY: update
 update: codebase-update site-build local-publish-clear
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 
 
 
-# target: production-publish - Publish latest to the production server.
-production-publish:
-	@echo $(call HELPTEXT,$@)
-	ssh -p 2222 mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
+# target: update-all              - Update codebase and publish by clearing the cache.
+.PHONY: update-all
+update-all: codebase-update submodule-update site-build local-publish-clear
+	@$(call HELPTEXT,$@)
 
 
 
-# target: local-publish     - Publish website to local host.
+# target: local-publish           - Publish website to local host.
 .PHONY: local-publish
 local-publish:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	rsync -av $(EXCLUDE_ON_PUBLISH) config content htdocs vendor $(LOCAL_HTDOCS)
 
 	@# Enable upload of attachement to the forum
@@ -96,10 +114,33 @@ local-publish:
 
 
 
+# target: local-cache-clear       - Clear the cache.
+.PHONY: local-cache-clear
+local-cache-clear:
+	@$(call HELPTEXT,$@)
+	-sudo rm -f $(LOCAL_HTDOCS)/cache/anax/*
+	-sudo rm -f $(LOCAL_HTDOCS)/cache/forum/*
+
+
+
+# target: local-publish-clear     - Publish website to local host and clear the cache.
+.PHONY: local-publish-clear
+local-publish-clear: local-cache-clear local-publish
+	@$(call HELPTEXT,$@)
+
+
+
+# target: production-publish - Publish latest to the production server.
+production-publish:
+	@$(call HELPTEXT,$@)
+	ssh -p 2222 mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
+
+
+
 # target: reinit-databases - Clear and reinit the databases used as example.
 .PHONY: reinit-databases
 reinit-databases:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	wget --quiet -O /dev/null $(BASE_URL)repo/htmlphp/example/pdo-sqlite/init.php
 
 	# oophp filmdatabas
@@ -107,26 +148,10 @@ reinit-databases:
 
 
 
-# target: local-cache-clear - Clear the cache.
-.PHONY: local-cache-clear
-local-cache-clear:
-	@echo $(call HELPTEXT,$@)
-	-sudo rm -f $(LOCAL_HTDOCS)/cache/anax/*
-	-sudo rm -f $(LOCAL_HTDOCS)/cache/forum/*
-
-
-
-# target: local-publish-clear - Publish website to local host and clear the cache.
-.PHONY: local-publish-clear
-local-publish-clear: local-cache-clear local-publish
-	@echo $(call HELPTEXT,$@)
-
-
-
 # target: local-publish-forum - Publish website and clear forum template cache.
 .PHONY: local-publish-forum
 local-publish-forum: local-cache-clear local-publish
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	-sudo rm -f $(LOCAL_HTDOCS)/cache/forum/tpl_dbwebb-v2.0_*
 
 
@@ -134,7 +159,7 @@ local-publish-forum: local-cache-clear local-publish
 # target: codebase-update    - Update codebase.
 .PHONY: codebase-update
 codebase-update:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	git pull
 	composer install
 
@@ -162,7 +187,7 @@ submodule-update:
 # target: server-node-echo    - Start up the echo server.
 .PHONY: server-node-echo
 server-node-echo:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	cd $(LOCAL_HTDOCS)/htdocs/repo/javascript/example/lekplats/broadcast-server-with-node-js-and-html5-websockets && nodejs websocket_broadcastserver.js 
 
 
@@ -170,12 +195,12 @@ server-node-echo:
 # target: backup              - Take a backup of database and other essentials.
 .PHONY: backup
 backup:
-	@echo $(call HELPTEXT,$@)
-	install --directory backup/$(TODAY)
+	@$(call HELPTEXT,$@)
+	install -d backup/$(TODAY)
 	
 	# Forum
 	mysqldump -uroot dbw_forum | gzip > backup/$(TODAY)/dbw_forum.gz
-	install --directory backup/$(TODAY)/forum/files/
+	install -d backup/$(TODAY)/forum/files/
 	rsync -a $(LOCAL_HTDOCS)/htdocs/forum/files/ backup/$(TODAY)/forum/files/
 
 	# Point to latest successful backup
@@ -187,7 +212,7 @@ backup:
 # target: load-backup             - Load latest backup.
 .PHONY: load-backup
 load-backup:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	
 	# Forum
 	zcat backup/latest/dbw_forum.gz | mysql -uroot dbw_forum
@@ -198,7 +223,7 @@ load-backup:
 # target: database-create         - Create needed databases.
 .PHONY: database-create
 database-create:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	
 	# Forum
 	#create database dbw_forum;
@@ -215,9 +240,9 @@ database-create:
 # target: forum-no-activation    - No activation of new users.
 .PHONY: forum-no-activation
 forum-no-activation:
-	@echo $(call HELPTEXT,$@)
+	@$(call HELPTEXT,$@)
 	
-	echo "UPDATE phpbb_config SET config_value = 3 WHERE config_name = 'require_activation';" | mysql -uroot dbw_forum
+	$(ECHO) "UPDATE phpbb_config SET config_value = 3 WHERE config_name = 'require_activation';" | mysql -uroot dbw_forum
 
 
 #
@@ -284,7 +309,7 @@ lint: less
 .PHONY: site-build
 site-build:
 	# Create and sync cache
-	bash -c "install --directory --mode 777 cache/{cimage,anax,forum,forum-files}"
+	bash -c "install -d -m 777 cache/{cimage,anax,forum,forum-files}"
 	rsync -av cache $(LOCAL_HTDOCS)
 
 	# Copy from CImage
@@ -297,7 +322,7 @@ site-build:
 # target: etc-hosts - Create a entry in the /etc/hosts for local access.
 .PHONY: etc-hosts
 etc-hosts:
-	echo "127.0.0.1 $(WWW_LOCAL)" | sudo bash -c 'cat >> /etc/hosts'
+	$(ECHO) "127.0.0.1 $(WWW_LOCAL)" | sudo bash -c 'cat >> /etc/hosts'
 	@tail -1 /etc/hosts
 
 
@@ -387,15 +412,17 @@ endef
 export VIRTUAL_HOST_80_WWW
 
 virtual-host:
-	install --directory $(LOCAL_HTDOCS)/htdocs
-	echo "$$VIRTUAL_HOST_80" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
-	echo "$$VIRTUAL_HOST_80_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
+	install -d $(LOCAL_HTDOCS)/htdocs
+	$(ECHO) "$$VIRTUAL_HOST_80" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
+	$(ECHO) "$$VIRTUAL_HOST_80_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
 	sudo a2ensite $(WWW_SITE) www.$(WWW_SITE)
 	sudo a2enmod rewrite expires cgi
 	sudo apachectl configtest
 	sudo service apache2 reload
 
-
+virtual-host-echo:
+	$(ECHO) "$$VIRTUAL_HOST_80"
+	$(ECHO) "$$VIRTUAL_HOST_80_WWW"
 
 # target: virtual-host-https - Create entries for the virtual host https.
 .PHONY: virtual-host-https
@@ -473,8 +500,8 @@ endef
 export VIRTUAL_HOST_443_WWW
 
 virtual-host-https:
-	echo "$$VIRTUAL_HOST_443" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
-	echo "$$VIRTUAL_HOST_443_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
+	$(ECHO) "$$VIRTUAL_HOST_443" | sudo bash -c 'cat > /etc/apache2/sites-available/$(WWW_SITE).conf'
+	$(ECHO) "$$VIRTUAL_HOST_443_WWW" | sudo bash -c 'cat > /etc/apache2/sites-available/www.$(WWW_SITE).conf'
 	sudo a2enmod ssl
 	sudo apachectl configtest
 	sudo service apache2 reload

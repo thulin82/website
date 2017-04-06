@@ -5,33 +5,16 @@ dbwebb.se website
 
 This is the main website for dbwebb.se, live at [https://dbwebb.se](https://dbwebb.se/).
 
-Work to merge content from older dbwebb, available at [cc1.dbwebb.se](http://cc1.dbwebb.se) is ongoing.
 
 
-
-For developers and maintainers
+Short story
 --------------------------------
 
-This is how I do it on Debian/Linux.
+Works for me on Debian.
 
-Inspect the Makefile to find out whats actually happens.
-
-
-
-###Dependencies
-* Apache2 and PHP5 (with pecl and GD)
 ```
 $ sudo apt-get install apache2 php5 libapache2-mod-php5 php5-dev php-pear php5-gd
 ```
-
-* [Composer](https://getcomposer.org/download/)
-* [Yaml](https://dbwebb.se/t/5244)
-
-
-
-###Fresh install
-
-Start by preparing your local development environment.
 
 ```
 $ git clone <the original or your forked repo>
@@ -48,6 +31,61 @@ If you need to upgrade your existing installation you can just redo it all.
 ```
 $ make etc-hosts virtual-host update
 ```
+
+
+
+For developers and maintainers
+--------------------------------
+
+This is guidelines on how to setup your own local development environment for this website.
+
+
+
+### Apache and PHP
+
+On Windows and Mac OS you may use XAMPP.
+
+On Debian this will make it happen, it is Apache2 and PHP5 (with pecl and GD).
+
+```
+$ sudo apt-get install apache2 php5 libapache2-mod-php5 php5-dev php-pear php5-gd
+```
+
+Install Composer and YAML.
+
+
+
+### Apache virtual host
+
+You need a a Apache virtual host as local.dbwebb.se.
+
+1) Clone the website to `~/git/dbwebb.se`.
+
+```
+$ git clone <the original or your forked repo>
+$ cd <the original or your forked repo>
+```
+
+2) Create an entry in the `/etc/hosts` for local.dbwebb.se.
+
+```
+$ make etc-hosts
+```
+
+3) Create the virtual host, the basis can be found here.
+
+```
+$ make virtual-host-echo
+$ make virtual-host       # On Debian to just do it
+```
+
+4) Make and publish to the local structure at ~/htdocs/dbwebb.se.
+
+```
+$ make update
+```
+
+5) Restart the webserver and open your browser at `local.dbwebb.se` and browse the website.
 
 
 
@@ -88,12 +126,6 @@ To keep updated, including all submodules.
 ```
 $ make update-all
 ```
-
-
-
-###Help me
-
-* [Install YAML on Debian/Linux](http://dbwebb.se/t/5244).
 
 
 

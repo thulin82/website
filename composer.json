@@ -1,8 +1,14 @@
 {
+    "name": "dbwebb-se/website",
+    "description": "website for dbwebb.se",
+    "license": "proprietary",
     "require": {
         "mos/anax": "^2.5",
         "mos/ctextfilter": "^1.2",
         "mos/cimage": "^0.7",
+        "symfony/yaml": "^3.2"
+    },
+    "suggest": {
         "ext-yaml": "*"
     }
 }
