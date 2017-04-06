@@ -17,7 +17,7 @@ Vi ska i denna övning titta på hur vi med hjälp av HTML5 input göra våra mo
 HTML5 input typer {#html5}
 --------------------------------------
 
-I och med introduktionen av HTML5 introducerades även ett antal nya [input typer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). Dessa typer specificerar vilken sorts data som inputfältet kan ta som indata. Detta gör det möjligt att hindra användaren från att fylla i fel sorts data, men även att anpassa användarengränssnittet till indata. Nedan finns en listning av 4 intressanta input typer och hur den mobila enheten anpassas för input typen.
+I och med introduktionen av HTML5 introducerades även ett antal nya [input typer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input). Dessa typer specificerar vilken sorts data som inputfältet kan ta som indata. Detta gör det möjligt att hindra användaren från att fylla i fel sorts data, men även att anpassa användargränssnittet till det data som användaren skall fylla i. Nedan finns en listning av 4 intressanta input typer och hur den mobila enheten anpassas för input typen.
 
 Det helt vanliga text input fältet ger ett vanligt tangentbord och ingen klient validering av vilka värden som fylls i.
 
@@ -62,7 +62,7 @@ Vid ifyllning av telefonnummer kan det vara fördelaktigt att använda input av 
 Ett formulär i mithril {#mithril}
 --------------------------------------
 
-När vi skapar formulär i mithril användar vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett form element och inuti våra formulärfält. Vi användar oss av en livscykel metod för formen `onsubmit` för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. För att de ändringar vi gör i formulärfältet ska sparas användar vi oss av livscykel metoden `oninput` och funktionen `m.withAttr` ([Dokumentation](http://mithril.js.org/withAttr.html)). `oninput` och `m.withAttr` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi ändrar i fältet. Livscykel metoden `onclick` används för spara knappen och vi när vi anropar modellens `save` funktion har vi redan satt värdet på den nuvarande dator och kan helt enkelt bara spara den med hjälp av `m.request` och api't som ligger i bakgrunden för appen.
+När vi skapar formulär i mithril användar vi oss som vanligt av `m` för att skapa våra virtuella noder. Längst ut lägger vi ett formulär element och inuti formulär elementet våra formulärfält. Vi användar oss av en livscykel metod `onsubmit` för formuläret för att förhindra att formuläret laddar om sidan när vi trycker på spara-knappen. För att de ändringar vi gör i formulärfältet ska sparas användar vi oss av livscykel metoden `oninput` och funktionen `m.withAttr` ([Dokumentation](http://mithril.js.org/withAttr.html)). `oninput` och `m.withAttr` sätter värdet på den nuvarande dator (`Computer.current`) varje gång vi ändrar i fältet. Livscykel metoden `onclick` används för spara knappen och när vi anropar modellens `save` funktion har vi redan satt värdet på den nuvarande dator och kan helt enkelt bara spara den med hjälp av `m.request` och api't som ligger i bakgrunden för appen.
 
 ```javascript
 var m = require("mithril")
@@ -96,4 +96,4 @@ module.exports = {
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Detta var en genomgång av ett antal olika input typer i HTML5, som ger bättre använderbarhet speciellt på mobila enheter. Genom att tala om vilken sorts data, som varje formulärfält är gjort för, kan den mobila enhet anpassa tangentbord och användargränssnitt för den specifika användingen.
+Detta var en genomgång av ett antal olika input typer i HTML5, som ger bättre använderbarhet speciellt på mobila enheter. Genom att tala om vilken sorts data, som varje formulärfält är gjort för, kan den mobila enhet anpassa tangentbord och användargränssnitt för den specifika användningen.

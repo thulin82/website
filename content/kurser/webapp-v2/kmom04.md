@@ -13,7 +13,7 @@ Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som 
 [/WARNING]
 
 
-Vi har jobbat en del mot olika api'er, men än så länga har vi bara använt `GET` anrop för att hämta data. I detta kursmoment skall vi kolla på de tre andra CRUD funktioner: `POST`, `PUT` och `DELETE`. CRUD står för Create, Read, Update, Delete och är de fyra HTTP anrop som görs i bakgrunden när vi skapar, läsar, redigerar och ta bort data.
+Vi har jobbat en del mot olika api'er, men än så länga har vi bara använt `GET` anrop för att hämta data. I detta kursmoment skall vi kolla på de tre andra anrop: `POST`, `PUT` och `DELETE`. CRUD står för Create, Read, Update, Delete och är de fyra HTTP anrop som görs i bakgrunden när vi skapar, läsar, redigerar och tar bort data.
 
 
 
@@ -43,7 +43,7 @@ Läs följande:
 1. [Mobile HTML5](kunskap/boken-mobile-html5).
     * Ch 4: HTML5 Web Forms
     * Ch 10: CSS3: Transforms, Transitions, and Animations
-    * Ch 13: Targeting mobile Devices and Touch
+    * Ch 13: Targeting Mobile Devices and Touch
 
 
 
