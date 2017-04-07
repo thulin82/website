@@ -54,6 +54,8 @@ SSL_APACHE_CONF = /etc/letsencrypt/options-ssl-apache.conf
 SSL_PEM_BASE 	= /etc/letsencrypt/live/$(WWW_SITE)
 
 # Theme
+LESSC   := node_modules/.bin/lessc
+CSSLINT := node_modules/.bin/csslint
 LESS 			:= theme/style_dbwebb.less
 LESS_OPTIONS 	:= --strict-imports --include-path=theme/modules:theme/modules/vertical-grid/less:theme/modules/typographic-grid/less:theme/modules/responsive-menu/src/less:theme/modules/figure/less:theme/mos-theme/style
 FONT_AWESOME	:= theme/mos-theme/style/font-awesome/fonts/
@@ -130,10 +132,26 @@ local-publish-clear: local-cache-clear local-publish
 
 
 
-# target: production-publish - Publish latest to the production server.
+# target: production-publish      - Publish latest to the production server.
 production-publish:
 	@$(call HELPTEXT,$@)
 	ssh -p 2222 mos@$(WWW_SITE) -t "cd $(GIT_BASE) && git pull && make update"
+
+
+
+# target: install-dev             - Install local development tools.
+.PHONY: install-dev
+install-dev:
+	@$(call HELPTEXT,$@)
+	npm install
+
+
+
+# target: update-dev              - Update local development tools.
+.PHONY: update-dev
+update-dev:
+	@$(call HELPTEXT,$@)
+	npm install
 
 
 
@@ -421,8 +439,8 @@ virtual-host:
 	sudo service apache2 reload
 
 virtual-host-echo:
-	$(ECHO) "$$VIRTUAL_HOST_80"
-	$(ECHO) "$$VIRTUAL_HOST_80_WWW"
+	@$(ECHO) "$$VIRTUAL_HOST_80"
+	#$(ECHO) "$$VIRTUAL_HOST_80_WWW"
 
 # target: virtual-host-https - Create entries for the virtual host https.
 .PHONY: virtual-host-https
