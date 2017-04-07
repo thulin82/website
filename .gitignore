@@ -1,8 +1,8 @@
 /vendor/
-/theme/
+/theme
 /build/
 /config/error_reporting.php
 /backup/
 /cache/
 .DS_Store
-
+/node_modules/
