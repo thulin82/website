@@ -123,7 +123,9 @@ Läs [instruktionen till kursmoment 02](kurser/oophp-v3/kmom02).
 
 ###Kmom03: PHP PDO och MySQL {#kmom03}
 
-Så här långt har du lärt dig om objektorienterad PHP och databasen MySQL. Nu skall du koppla ihop dessa till en databasdriven webbapplikation genom att använda PHP's gränssnitt för databaser PHP PDO. Du får jobba igenom en guide där du bygger upp en filmdatabas med ett webbgränssnitt där du kan redigera information om filmer och söka ut dem. När du jobbar i guiden så kommer du att stöta på och lösa de vanliga problemen som en sådan applikation innebär. När du är klar så har du ett fungerande exempel som du kan använda som bas för kommande webbapplikationer. Om du tittar noga så kan du se likheten mellan till exempel en webbshop och din filmdatabas, rent tekniskt är det samma grunder i båda.
+Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar och därefter får du på egen hand koda motsvarande funktionalitet in i ramverket Anax lite.
+
+Det blir fokus på hur man löser inloggning, konton och administration av dessa. Det blir en hel del formulär, routes och kopplingar mot databasen. Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read) för en webbapplikation mot en databas.
 
 Läs [instruktionen till kursmoment 03](kurser/oophp-v3/kmom03).
 

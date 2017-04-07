@@ -56,6 +56,18 @@ Gör följande övning, den förbereder dig inför uppgifterna och löser ett pa
 
 1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter).
 
+1. Artikel om enhetstestning (makefile, travis).
+
+<!-- 
+
+Unittest (Guess, Dice, Cal) Xdebug install
+
+Use composer require anax/database
+
+(Content som markdown med anax/textfilter)
+
+-->
+
 
 
 ###Uppgifter {#uppgifter}
@@ -77,6 +89,16 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)" som låter dig fortsätta träna på SQL med SQLite. Spara koden i `me/kmom03/sql2`.
 
+-->
+
+
+<!--
+1. Ramverksmoduler att bygga själv.
+* CValidate
+* CFlash
+* CCache
+
+(Olika språk, anpassa med int/loc) 
 -->
 
 

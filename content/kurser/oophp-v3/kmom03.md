@@ -1,24 +1,37 @@
 ---
-author: mos
+author:
+    - mos
+    - lew
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-04-07": (A, mos) Första utgåvan.
 ...
 Kmom03: PHP PDO och MySQL
 ==================================
 
-[WARNING]
+[INFO]
 **Version 3 av oophp.**
 
-Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 10/4 2017.
+Utveckling av nytt kursmoment pågår. Kursmomentet <strike>släpps senaste den 10/4 2017</strike> släpptes den 7/4.
 
-[/WARNING]
+[/INFO]
 
-Så här långt har du lärt dig om objektorienterad PHP och databasen MySQL. Nu skall du koppla ihop dessa till en databasdriven webbapplikation genom att använda PHP's gränssnitt för databaser PHP PDO. Du får jobba igenom en guide där du bygger upp en filmdatabas med ett webbgränssnitt där du kan redigera information om filmer och söka ut dem. När du jobbar i guiden så kommer du att stöta på och lösa de vanliga problemen som en sådan applikation innebär. När du är klar så har du ett fungerande exempel som du kan använda som bas för kommande webbapplikationer. Om du tittar noga så kan du se likheten mellan till exempel en webbshop och din filmdatabas, rent tekniskt är det samma grunder i båda.
+Detta kursmoment fokuserar på PHP PDO och databasen MySQL. Du får en inledande artikel som visar hur det fungerar och därefter får du på egen hand koda motsvarande funktionalitet in i ramverket Anax lite.
 
-[FIGURE src=/image/snapshot/Visa_filmer_med_sokalternativ_kombinerade___Min_Filmdatabas.jpg?w=w1&q=60 caption="Din egen sökbara filmdatabas kan bli ett resultat av detta kursmoment."]
+Det blir fokus på hur man löser inloggning, konton och administration av dessa. Det blir en hel del formulär, routes och kopplingar mot databasen. Vill man förenkla så handlar det om att lösa CRUD (Create, Read, Update, Read) för en webbapplikation mot en databas.
 
-Kursmomentet avslutas med att du kodar ett par moduler till ditt Anax.
+Dessutom blir övningar i hur man kan lösa såna här saker med hjälp av gränssnitt i sin webbplats. Här kan man behöva tänka till hur man vill att det skall se ut för slutanvändaren och de valen kan påverka vilken kod man behöver bygga för att implementera gränssnitten.
 
+Du får träna PDO och MySQL genom att studera hur en filmdatabas kan byggas upp.
+
+[FIGURE src=image/snapvt17/movie-paginate-sort.png?w=w2 caption="Din egen sökbara filmdatabas kan bli ett resultat av detta kursmoment."]
+
+Du får grunden i hur inloggning fungerar och hur man hanterar och skyddar användarens lösenord.
+
+[FIGURE src=image/oophp/v3/login-top.png?w=w2 caption="En enklare inloggningsruta som döljer en del databaskod."]
+
+Sedan lägger du in allt i ditt Anax Lite och kanske väljer du att snygga till det också.
+
+[FIGURE src=image/oophp/v3/loginexercise.png?w=w2&a=0,29,5,25 caption="En snyggare ruta för att registrera ett konto, bakom döljer sig databaskod."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -27,47 +40,37 @@ Kursmomentet avslutas med att du kodar ett par moduler till ditt Anax.
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 4-6 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 1-2 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
 
 
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
+Det finns inga läsanvisningar.
 
 
 
 ###Lästips {#lastips}
 
+Studera följande lästips.
+
+* I övningen får du jobba med PHP PDO så bekanta dig gärna med [PHP PDO i PHP manualen](http://php.net/manual/en/book.pdo.php). Studera vilka metoder som erbjuds av klasserna PDO och PDOStatement samt kika kort på vilka PDO drivers som finns till olika databaser. 
 
 
 
 Övningar & Uppgifter  {#ovningar_uppgifter}
 -------------------------------------------
 
-*(ca: 8-14 studietimmar)*
+*(ca: 14-18 studietimmar)*
 
 
 ###Övningar {#ovningar}
 
-Gör följande övningar, de förbereder dig inför kommande kursmoment.
+Gör följande övningar, de förbereder dig inför uppgifterna.
 
-1. Jobba igenom guiden ["Kom igång med PHP PDO och MySQL"](kunskap/kom-igang-med-php-pdo-och-mysql).
+1. Jobba igenom guiden "[Kom igång med PHP PDO och MySQL (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)". Spara eventuella exempelprogram i `me/kmom03/pdo`.
 
-1. Artikel om enhetstestning (makefile, travis).
-
-1. Artikel om session och inloggning med databas "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)".
-
-
-<!-- 
-
-Unittest (Guess, Dice, Cal) Xdebug install
-
-Use composer require anax/database
-
-(Content som markdown med anax/textfilter)
-
--->
+1. Jobba igenom artikeln "[Logga in med sessioner och cookies](kunskap/sessioner-cookies-login)". Spara eventuella exempelprogram i `me/kmom03/login`. Ett bra tips är att göra ditt egna lilla testprogram för att kolla hur inloggningen kan/skall fungera.
 
 
 
@@ -75,27 +78,13 @@ Use composer require anax/database
 
 Gör följande uppgifter.
 
-1. Börja med att skapa din egna klass `CDatabase` och inkludera den i ditt Anax. Du får tag i koden och lär dig använda klassen genom att göra övningen ["Övningar med CDatabase"](uppgift/ovningar-med-cdatabase).
+1. Gör uppgiften "[Inloggning till Anax Lite](uppgift/inloggning-till-anax-lite)". Spara dina filer under `me/anax-lite`.
 
-1. Gör uppgiften ["Generera en HTML-tabell från en databastabell, använd sökning, sortering och paginering"](uppgift/generera-en-html-tabell-fran-en-databastabell-anvand-sokning-sortering-och-paginering). 
-
-1. Gör uppgiften ["Skapa en klass för användarhantering, CUser"](uppgift/skapa-en-klass-for-anvandarhantering-cuser).
-
-1. Gör uppgiften "[skapa inloggning](uppgift/inloggning)". Spara dina filer under `me/anax-lite`.
+1. Gör uppgiften ["Admin gränssnitt för hantering av användare och konton"](uppgift/admin-granssnitt-for-hantering-av-anvandare-och-konton). Dina filer skall sparas under `me/anax-lite`.
 
 1. Gör sista tredjedelen och avsluta uppgiften "[Kom igång med SQL](uppgift/kom-igang-med-sql)". Fortsätt att spara all SQL-kod i `me/kmom01/skolan/skolan.sql`.
 
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (3.0.\*) när du är klar med alla uppgifter i kursmomentet.
-
-<!--
-1. Ramverksmoduler att bygga själv.
-* CValidate
-* CFlash
-* CCache
-
-(Olika språk, anpassa med int/loc) 
--->
-
 
 
 
@@ -110,10 +99,11 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hur kändes det att jobba med PHP PDO?
-* Gjorde du guiden med filmdatabasen, hur gick det?
-* Du har nu byggt ut ditt Anax med ett par moduler i form av klasser, hur tycker du det konceptet fungerar så här långt, fördelar, nackdelar?
+* Hur kändes det att jobba med PHP PDO, SQL och MySQL?
+* Reflektera kring koden du skrev för att lösa uppgifterna, klasser, formulär, integration Anax Lite?
+* Känner du dig hemma i ramverket, dess komponenter och struktur?
+* Hur bedömmer du svårighetsgraden på kursens inledande kursmoment, känner du att du lär dig något/bra saker?
