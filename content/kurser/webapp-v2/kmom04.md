@@ -8,10 +8,11 @@ revision:
 Kmom04: CRUD
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-17.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-17</strike>.
 
+Kursmomentet tillgängligt per den 2017-04-7.
+[/INFO]
 
 Vi har jobbat en del mot olika api'er, men än så länga har vi bara använt `GET` anrop för att hämta data. I detta kursmoment skall vi kolla på de tre andra anrop: `POST`, `PUT` och `DELETE`. CRUD står för Create, Read, Update, Delete och är de fyra HTTP anrop som görs i bakgrunden när vi skapar, läsar, redigerar och tar bort data.
 
