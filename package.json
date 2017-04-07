@@ -1,0 +1,30 @@
+{
+  "name": "dbwebb-website",
+  "version": "1.0.0",
+  "description": "Website for dbwebb.se",
+  "main": "\"\"",
+  "dependencies": {
+    "csslint": "^1.0.5",
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbwebb-se/website.git"
+  },
+  "keywords": [
+    "web development",
+    "web programming",
+    "databases"
+  ],
+  "author": "Mikael Roos",
+  "license": "propriatary",
+  "bugs": {
+    "url": "https://github.com/dbwebb-se/website/issues"
+  },
+  "homepage": "https://dbwebb.se/"
+}
