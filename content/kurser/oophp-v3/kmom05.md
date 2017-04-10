@@ -49,6 +49,17 @@ Få en insikt i komplexiteten att skydda sig från Cross-Site Scripting (XSS) oc
 
 Gör följande övning, den förbereder dig inför uppgifterna och löser ett par av dem.
 
+1. Artikel om enhetstestning (makefile, travis).
+
+<!-- 
+
+Unittest (Guess, Dice, Cal) Xdebug install
+
+Use composer require anax/database
+
+(Content som markdown med anax/textfilter)
+
+-->
 
 
 
