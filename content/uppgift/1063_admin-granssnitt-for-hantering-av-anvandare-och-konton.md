@@ -22,7 +22,7 @@ Ett sådant gränssnitt kan byggas upp via ett klassiskt CRUD upplägg och det �
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln ["Kom igång med PHP PDO och MySQL (v2)"](kunskap/kom-igang-med-php-pdo-och-mysql-v2).
+Du har jobbat igenom artikeln "[Kom igång med PHP PDO och MySQL (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)".
 
 Tanken är att du redan löst uppgiften "[Inloggning till Anax Lite](uppgift/inloggning-till-anax-lite)" som gör att du kan logga in på webbplatsen.
 
