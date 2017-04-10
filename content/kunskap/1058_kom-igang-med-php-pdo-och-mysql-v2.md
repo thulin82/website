@@ -7,6 +7,7 @@ category:
     - mysql
     - kurs oophp
 revision:
+    "2017-04-11": "(F, mos) Uppdaterade koden för återställa."
     "2017-04-07": "(E, mos) Större genomarbetning inför oophp-v3, flera stycken borttagna."
     "2014-03-05": "(D, mos) Gick inte radera, lade till stycke om att radera även Movie2Genre samt återställning på windows."
     "2013-11-26": "(C, mos) Textstycke om att fånga fel i connection med try-catch, reset.sql och smärre justeringar."
@@ -441,10 +442,14 @@ Vill jag utföra samma sak från en webbsida, säg när man trycker på en knapp
 $file   = "sql/setup.sql";
 $mysql  = "/usr/bin/mysql";
 
-if (isset($_POST["reset"])) {
-    $cmd = "$mysql -h{$host} -u{$login} -p{$password} $database < $file 2>&1";
-    $res = exec($cmd);
-    $output = "<p>The database is reset to its default content:<br/><code>{$cmd}</code></p><p>{$res}</p>";
+if (isset($_POST["reset"]) || isset($_GET["reset"])) {
+    $command = "$mysql -h{$host} -u{$login} -p{$password} $database < $file 2>&1";
+    $output = [];
+    $status = null;
+    $res = exec($command, $output, $status);
+    $output = "<p>The command was: <code>$command</code>.<br>The command exit status was $status."
+        . "<br>The output from the command was:</p><pre>"
+        . print_r($output, 1);
 }
 ```
 
@@ -457,6 +462,8 @@ Delen med `2>&1` gör så att eventuella felmeddelanden syns på en Unix-maskin.
 [FIGURE src=image/snapvt17/movie-reset.png?w=w2 caption="Återställ databasen till sitt ursprungliga skick."]
 
 När man testar och leker runt så är det bra att kunna rensa databasen ibland, antingen via terminalen, eller ett skript i Workbench, eller som här, via ett klick i en webbsida.
+
+Det blev lite mycket kod i vyn denna gången. Det var egentligen inte nödvändigt, jag kunde lika gärna skapat en funktion och låtit vyn varit renare. Men jag låter det vara som det är.
 
 
 
