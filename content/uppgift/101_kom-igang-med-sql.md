@@ -785,7 +785,7 @@ När man jobbar med många tabeller så blir SQL-satserna ofta långa. Därför 
 13. Jobba med Joinade tabeller {#join-mer}
 ---------------------------------------------------------------------
 
-Använd nu den sista vyn (12.5 eller 12.6) som innehöll "all" information. Svara på följande frågor:
+Använd nu den sista vyn som innehöll "all" information. Svara på följande frågor:
 
 1. Vad är medelåldern på kursansvariga på kursen PA1106?
 2. Vad är medellönen för de kursansvariga på kurser som ligger inom ämnet Programvaruteknik (kurskoder som startar med 'PA')?
