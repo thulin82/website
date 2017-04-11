@@ -56,13 +56,8 @@ Gör följande övning, den förbereder dig inför uppgifterna och löser ett pa
 
 1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter).
 
-1. Artikel om enhetstestning (makefile, travis).
 
 <!-- 
-
-Unittest (Guess, Dice, Cal) Xdebug install
-
-Use composer require anax/database
 
 (Content som markdown med anax/textfilter)
 
@@ -74,6 +69,9 @@ Use composer require anax/database
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
+1. Gör uppgift lagra innehåll i databasen.
+
+<!--
 1. Gör uppgiften ["Övningar med CTextFilter"](uppgift/ovningar-med-ctextfilter).
 
 1. Gör uppgiften ["Skapa en klass för innehåll i databasen, CContent"](uppgift/skapa-en-klass-for-innehall-i-databasen-ccontent). 
@@ -81,7 +79,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 1. Gör uppgiften ["Skapa en klass CPage för att visa upp webbsidor från CContent"](uppgift/skapa-en-klass-cpage-for-att-visa-upp-webbsidor-fran-ccontent).
 
 1. Gör uppgiften ["Gör en blogg med CBlog baserad på CContent"](uppgift/gor-en-blogg-med-cblog-baserad-pa-ccontent).
-
+-->
 
 <!--
 
