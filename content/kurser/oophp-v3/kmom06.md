@@ -77,6 +77,9 @@ Gör följande övning, den förbereder dig inför uppgifterna och löser dem ti
 1. Jobba igenom guiden ["Gör ett galleri för att visa upp bilder med PHP"](kunskap/gor-ett-galleri-for-att-visa-upp-bilder-med-php).
 
 
+<!-- index mot movie och content -->
+
+
 
 ###Uppgifter {#uppgifter}
 

@@ -2,11 +2,9 @@
 author: mos
 category: webbprogrammering
 revision:
-  "2014-10-20": (C, mos) Bytte koden till doFilter(), innehöll fel.
-  "2013-12-03": (B, mos) Smärre justeringar inför campus-kursen.
-  "2013-09-30": (A, mos) Första utgåvan i samband oophp-kursen.
-updated: "2014-10-20 18:47:33"
-created: "2013-09-26 16:14:48"
+      "2014-10-20": "(C, mos) Bytte koden till doFilter(), innehöll fel."
+      "2013-12-03": "(B, mos) Smärre justeringar inför campus-kursen."
+      "2013-09-30": "(A, mos) Första utgåvan i samband oophp-kursen."
 ...
 Lagra innehåll i databas för webbsidor och bloggposter
 ==================================
@@ -500,7 +498,3 @@ All [källkod](kod-exempel/lagra-webbsidans-innehall-i-databasen/source.php) och
 Om innehållet verkar trasigt så kan du [återställa det](kod-exempel/lagra-webbsidans-innehall-i-databasen/reset.php) innan du börjar att testa.
 
 Detta är grunderna och visar hur du på ett enkelt sätt kan uppnå en flexibel hantering av innehåll i databasen.
-
-
-
-

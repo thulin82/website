@@ -46,7 +46,7 @@ Försök hitta ett bra flöde mellan de olika routerna, det finns säkert möjli
 Krav {#krav}
 -----------------------
 
-1. Spara all din SQL-kod i `anax-lite/sql/setup-user-admin.sql`.
+1. Spara din SQL-kod som sätter upp tabell och initialt innehåll i `anax-lite/sql/setup-user-admin.sql`.
 
 1. Skapa funktionalitet så att en administratör kan visa samliga konton i en HTML-tabell. Tabellen skall kunna sortera per kolumn och paginering skall fungera. 
 
