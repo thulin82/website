@@ -1,6 +1,10 @@
 ---
-author: mos
-category: webbprogrammering
+author:
+    - aar
+    - mos
+category:
+    - webbprogrammering
+    - webapp
 revision:
   "2017-03-07": (B, aar) Uppdaterat hur man installerar SDK:n och lägga till i PATH.
   "2015-10-26": (A, mos) Första utgåvan inför kursen webapp.
