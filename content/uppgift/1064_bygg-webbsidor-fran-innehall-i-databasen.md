@@ -7,7 +7,7 @@ category:
     - anax-lite
     - sql
 revision:
-    "2017-04-07": "(A, mos) Första utgåvan."
+    "2017-04-11": "(A, mos) Första utgåvan."
 ...
 Bygg webbsidor från innehåll i databasen
 ==================================
