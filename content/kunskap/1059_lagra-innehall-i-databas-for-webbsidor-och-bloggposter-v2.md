@@ -24,6 +24,10 @@ När du är klar har du byggt både webbsidor och en blogg från innehåll som d
 
 <!--more-->
 
+[WARNING]
+**Arbete pågår**
+[/WARNING]
+
 Så här kan det se ut när man redigerar innehåll i databasen via ett formulär.
 
 [FIGURE src=/image/snapshot/Uppdatera_innehall___Innehall_i_databasen.jpg?w=w2 caption="Formulär för att editera innehåll i databasen."]
