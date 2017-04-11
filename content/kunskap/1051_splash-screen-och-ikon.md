@@ -61,7 +61,7 @@ För att skapa splash bilder finns det också hjälp, googla på "splash screen 
 Konfigurera appen {#config}
 --------------------------------------
 
-Då är det dags att bestämma när varje bild ska visas. Det gör vi genom att ändra i `config.xml`. Vi börjar med att fixa det för Android.
+Då är det dags att bestämma när varje bild ska användas. Det gör vi genom att ändra i `config.xml`. Vi börjar med att fixa det för Android.
 
 Om du inte har en platform-tag med android lägger du till det.
 
@@ -85,9 +85,9 @@ Vi börjar med ikonerna.
     <icon density="hdpi" src="www/res/mipmap-hdpi/dbwebb_splash_screen.png" />
 </platfor>
 ```
-När vår app installeras på en enhet med "hdpi" skärm kommer vår app få ikonen som ligger i `www/res/mipmap-hdpi/`.
+När appen byggs med Cordova flyttas bilden, "www/res/mipmap-hdpi/dbwebb_splash_screen.png", till "platforms/android/res/mipmap-hdpi/". Om appen sedan blir installerad på en enhet med "hdpi" skärm kommer vår app använda ikonen som ligger i `www/platforms/android/res/mipmap-hdpi/`.
 
-Vi lägger till fler.
+Vi lägger till för fler skärmstorlekar.
 
 ```xml
 <platform name="android">
