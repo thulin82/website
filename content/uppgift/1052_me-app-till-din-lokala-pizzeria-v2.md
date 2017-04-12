@@ -68,8 +68,6 @@ Krav {#krav}
 
 1. Appen ska funka i webbläsaren och i en Android emulator.
 
-1. Välj hur mycket innehåll som ligger i JSON och hur mycket du kodar in direkt i sidan.
-
 1. Pizzor och pris ska läsas upp från en JSON-fil. Om appen används på en Android plattform ska innehållet läsas med hjälp av [Cordovas File plugin](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html), om appen används i en webbläsare ska filen läsas med hjälp av [m.request()](http://mithril.js.org/request.html). Använd [Cordovas Device plugin](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html) för att kolla vad för plattform som används.
 
 1. Det skall finnas en förstasida med bild och text om din kund.

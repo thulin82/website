@@ -7,13 +7,15 @@ revision:
 Kmom05: Litet kundprojekt
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-24.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-24</strike>.
+
+Kursmomentet tillgängligt per den 2017-04-12.
+[/INFO]
 
 
 
-Du skall nu utföra ett mindre projekt till en kund. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
+I detta kursmomentet ska vi kolla på hur vi kan läsa data från en lokal fil och utföra ett mindre projekt till en kund. Uppgiften är friare i sin utformning, prioritera kraven och tänka till vad kunden egentligen vill ha.
 
 <!--more-->
 
@@ -94,6 +96,7 @@ Läs [instruktionen om hur du skall redovisa](kurser/webapp-v2/redovisa).
 Se till att följande frågor besvaras i redovisningstexten.
 
 * Berätta utförligt vilka val du gjorde och hur din app fungerar.
+* Gick det bra att läsa filen?
 * Fick du göra prioriteringar för att hålla dig inom max 20h, berätta om dem.
 * Gjorde du något som du är extra stolt/nöjd över i din app, berätta om det.
 * Var det något som krånglade eller tog extra mycket tid?

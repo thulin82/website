@@ -7,7 +7,7 @@ revision:
 Läsa en lokal fil med Cordova
 ==================================
 
-Vi ska i denna övning titta på hur man använder [Cordovas File plugin](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html) för att läsa data från lokala filer. För mer utförlig dokumentation av plugin:et kolla på [Phonegap](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html) istället. Dock ska den dokumentationen vara utdaterad men i skrivande stund är den bättre än Cordovas egna.
+Vi ska i den här övning titta på hur man använder [Cordovas File plugin](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html) för att läsa data från lokala filer. För mer utförlig dokumentation av plugin:et kolla på [Phonegap](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html) istället. Dock ska den dokumentationen vara utdaterad men i skrivande stund är den bättre än Cordovas egna.
 
 
 <!--more-->
@@ -17,11 +17,11 @@ Vi ska i denna övning titta på hur man använder [Cordovas File plugin](https:
 Introduktion {#introduktion}
 --------------------------------------
 
-Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt. Projektet behöver plattformarna Browser och Android. Skapa mapparna `www/{models,views}` och filerna `www/{models/people.js,views/people.js}`. Skapa ett klassikt projekt för kursen helt enkelt, med npm, mithril och webpack. Jag kommer bara att visa `www/models/people.js` filen, där vi kommer läsa in datan. Jag utgår ifrån att ni kan lista ut resterande kod, kolla i exempel mappen, "example/readFile", eller på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/readFile).
+Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt. Projektet behöver plattformarna Browser och Android. Skapa mapparna `www/{models,views}` och filerna `www/{models/people.js,views/people.js}`. Skapa ett klassikt projekt för kursen helt enkelt, med npm, mithril och webpack. Jag kommer bara att visa `www/models/people.js` filen, det är här vi läser in datan. Jag utgår ifrån att ni kan lista ut resterande kod, kolla i exempel mappen, "example/readFile", eller på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/readFile).
 
-Vi kommer bara använda Cordova plugin:et för att läsa filer när appen används i Android, för att läsa filer i browser:n kommer vi använda [m.request()](https://mithril.js.org/request.html).
+Vi ska bara använda Cordova plugin:et för att läsa filer när appen används i Android, för att läsa filer i browser:n kommer vi använda [m.request()](https://mithril.js.org/request.html).
 
-Lägga till plugin:et i projektet.
+Lägg till plugin:et i projektet.
 
 ```bash
 #utgå från projekt mappen
@@ -87,9 +87,9 @@ module.exports = People;
 
 ###Hämta filen {#hamta_fil}
 
-Kika på [Android File System Layout](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html#android-file-system-layout), kolla vilka olika mappar vi kan välja att vår path till filen ska utåg från och vad de dess property heter. Filen vi ska läsa kommer ligga i `file:///android_asset/www/` så jag väljer att använda `applicationDirectory`. En sak att tänka på, vi har bara läsrättigheter i den mappen så vi kan inte skriva till filen.
+Kika på [Android File System Layout](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-file/index.html#android-file-system-layout), kolla vilka olika mappar vi kan välja att vår path, till filen, ska utåg från och vad de den property:n heter. Filen vi ska läsa kommer ligga i `file:///android_asset/www/` så jag väljer att använda `applicationDirectory` property:n. En sak att tänka på, vi har bara läsrättigheter i den mappen så vi kan inte skriva till filen.
 
-Skapa en ny funktion för att hämta ett [FileEntry](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#FileEntry) objekt som vi använder för att läsa filens innehåll.
+Skapa en ny funktion för att hämta ett [FileEntry](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#FileEntry) objekt. FileEntry objekt representerar filer på filsystemet, via den kan vi komma åt vår fil och hämta data.
 
 ```js
 var fileNameAndroid = "www/peopleInfo.json";
@@ -122,7 +122,7 @@ function readData(fileEntry) {
 }
 ```
 
-Funktionen tar emot en parameter som är vårt FileEntry objekt. Vi kallar på funktionen `file` för att komma åt vår fil och skickat in en annonym funktion som argument. Den annonyma funktionen tar emot ett [File](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#File) objekt. Nu kan vi använda ett [FileReader](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#FileReader) objekt för att läsa filens innehåll.
+Funktionen tar emot en parameter, vårt FileEntry objekt. Funktionen `file` ger oss tillgång till filen, vi skapar en annonym funktion och skickar som argument. Den annonyma funktionen tar emot ett [File](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#File) objekt. Vi kan använda ett [FileReader](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#FileReader) objekt för att läsa innehållet från File objektet.
 
 ```js
     ...
@@ -136,11 +136,11 @@ Funktionen tar emot en parameter som är vårt FileEntry objekt. Vi kallar på f
         reader.readAsText(file);
     }, fail);
 ```
-I den annonyma funktionen skapar vi ett FileReader objekt, FileReader objektet har ett gäng [properties](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#FileReader_properties) som vi kan använda för att skapa funktioner som exekveras specifika tillfällen under fil-läsnings processen. Vi väljer `onloadend` property:n och tilldelar den en funktion. Funktionen kommer exekvera när FileReader:n har laddat klart innehållet, alltså den har laddat klart.  
-I "onloadend" funktionen refererar vi till FileReader objektet med `this`, då kommer vi åt property:n `result`. "result" innehåller vår data som en vanlig sträng och därför använder vi `JSON.parse()` för att skapa ett JSON objekt av datan. Läsning av filen sker asynkront vilket innebär att med stor sannolikhet kommer mithril köra `view` funktionen, som använder `People.data`, före vi har läst klart datan och lagt tilldelat den till "People.data". Detta gör att vi måste lägga till [m.redraw()](https://mithril.js.org/redraw.html) så att mithril kallar på view-funktionen igen när efter att vi har läst datan.  
-Efter att vi har skapat onloadend funktionen kallar vi på funktionen som faktist läser innehållet, `readAsText(file)` som i sin tur kommer, när den är klar, kallar på onloadend funktionen.
+I den annonyma funktionen skapar vi ett FileReader objekt, FileReader objektet har ett antal [properties](http://docs.phonegap.com/en/1.3.0/phonegap_file_file.md.html#FileReader_properties) som vi kan använda för att skapa funktioner som exekveras vid specifika tillfällen under filläsnings processen. Vi väljer `onloadend` property:n och tilldelar den en funktion. Funktionen kommer exekvera när FileReader:n har laddat klart innehållet, alltså när all data är läst.  
+I "onloadend" funktionen refererar vi till FileReader objektet med `this`, då kommer vi åt property:n `result`. "result" innehåller vår data som en vanlig sträng och därför använder vi `JSON.parse()` för att skapa ett JSON objekt av datan. Läsning av filen sker asynkront vilket innebär att med stor sannolikhet kommer mithril köra `view` funktionen, som använder `People.data`, före vi har läst klart datan och tilldelat den till "People.data". Detta gör att vi måste lägga till [m.redraw()](https://mithril.js.org/redraw.html) så att mithril kallar på view-funktionen igen när vi har läst datan.  
+Efter att vi har skapat onloadend funktionen kallar vi på funktionen som faktist läser innehållet, `readAsText(file)` som i sin tur, när den är klar, kallar på onloadend funktionen.
 
-Nu har vi läst upp data från en fil i Android och kan använda den i en vy. Nästa steg blir att avgöra om vi använder en Android enhet eller en webbläsare och i så fall hämta data med "m.request".
+Nu har vi läst upp data från en fil i Android och kan använda den i en vy. Nästa steg blir att avgöra om en Android enhet används eller en webbläsare och i så fall hämta datan med "m.request".
 
 
 
@@ -153,7 +153,7 @@ För att avgöra vilken enhet som används installerar vi [Cordovas device plugi
 cordova plugin add cordova-plugin-device --save
 ```
 
-Vi lägger till en ny funktion där vi kolla om vi är i Android eller webbläsaren och kallar på den i `People.load()`.
+Vi lägger till en ny funktion där vi kollar om vi är i Android eller webbläsaren, kalla på den nya funktionen i `People.load()`.
 
 ```js
 function loadPeopleData() {
@@ -164,11 +164,13 @@ function loadPeopleData() {
         getDataBrowser();
     }
 }
-...
+var People = {
+    data: [],
+
     load: function () {
         loadPeopleData();
     }
-...
+};
 ```
 
 Om `device.platform` är lika med "Android" kalla på "getDataAndroid" annars "getDataBrowser".
@@ -192,15 +194,14 @@ function getDataBrowser() {
 
 Vi gör ett vanligt "GET" request, som vi gjort mot API:er tidigare i kursen, fast med en path, som utgår från `www`-mappen, till filen istället för en URL till ett API. Request:et läser upp datan som JSON av sig själv vilket gör att vi inte behöver parsa den själva. Vi behöver inte heller gör `m.redraw()` då mithril gör det automatiskt.
 
-Då är vi klara med att läsa in data från en fil. Men nu behöver vi läsa hämta filen och läsa datan varje gång vi vill se innehållet. För att få lite bättre prestanda kan vi cacha datan.
+Då är vi klara med att läsa in data från en fil. Med vår nuvarande kod behöver vi läsa filen varje gång vi vill se innehållet. För att få lite bättre prestanda kan vi cacha datan.
 
 
 
 Att cacha JSON {#cacha_json}
 --------------------------------------
 
-
-Vi gör det enkelt och lagrar undan JSON-svaret i en variabel. Om variabeln är tom så hämtar vi datan men om variabeln har ett innehåll så används det.
+Vi gör det enkelt genom att kolla om vi redan har hämtat datan. Om variabeln är tom så hämtar vi datan men om variabeln har ett innehåll så används det.
 
 I `People.load()` lägger vi in en if-sats som kollar om längden av array:en `People.data` är 0. Om array:en är tom hämtar vi datan annars gör vi inget då all data redan finns.
 
@@ -221,4 +222,4 @@ Detta var alltså en enkel cachning av ett JSON-svar. Det minskar belastningen p
 Avslutningsvis {#avslutning}
 --------------------------------------
 
-Detta var en genomgång av två olika sätt att läsa upp innehållet från en fil och även hur vi kan cacha datan på ett enkelt sätt.
+Detta var en genomgång av två olika sätt att läsa upp innehåll från en fil och även hur vi kan cacha datan på ett enkelt sätt.
