@@ -17,7 +17,7 @@ Vi ska i denna övning titta på hur man använder [Cordovas File plugin](https:
 Introduktion {#introduktion}
 --------------------------------------
 
-Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt. Projektet behöver plattformarna Browser och Android. Skapa mapparna `www/{models,views}` och filerna `www/{models/people.js,views/people.js}`. Skapa ett klassikt projekt för kursen helt enkelt, med npm, mithril och webpack. Jag kommer bara att visa `www/models/people.js` filen, där vi kommer läsa in datan. Jag utgår ifrån att ni kan lista ut resterande kod, kolla i exempel mappen eller på [Github](https://github.com/dbwebb-se/webapp/tree/master/example).
+Vi utgår ifrån att du har ett projekt eller att du skapar ett nytt. Projektet behöver plattformarna Browser och Android. Skapa mapparna `www/{models,views}` och filerna `www/{models/people.js,views/people.js}`. Skapa ett klassikt projekt för kursen helt enkelt, med npm, mithril och webpack. Jag kommer bara att visa `www/models/people.js` filen, där vi kommer läsa in datan. Jag utgår ifrån att ni kan lista ut resterande kod, kolla i exempel mappen, "example/readFile", eller på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/readFile).
 
 Vi kommer bara använda Cordova plugin:et för att läsa filer när appen används i Android, för att läsa filer i browser:n kommer vi använda [m.request()](https://mithril.js.org/request.html).
 
