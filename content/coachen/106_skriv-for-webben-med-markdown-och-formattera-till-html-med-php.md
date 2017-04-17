@@ -11,6 +11,12 @@ Efter att länge sökt efter det ultimata sättet att skriva texter för webben 
 
 <!--more-->
 
+[WARNING]
+**Nyare artikel finns**
+
+Du läser en uppdaterad variant av denna artikel på "[Skriv för webben med Markdown och formattera till HTML med PHP (v2)](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)".
+[/WARNING]
+
 Markdown-syntax och en PHP-parser för att formatera texten till HTML, är nu en del av mitt vardagliga arbetssätt. I stort sett all text på webbplatsen dbwebb.se är skriven enligt syntaxen i Michel Fortin's PHP Markdown Extra.
 
 
@@ -47,4 +53,3 @@ Nu kan du börja skriva dina texter för webben enligt Markdown syntax, inklusiv
 Testa och du kommer troligen bli fast likt jag. 
 
 **Dagens tips**, lär dina kollegor att skriva i Markdown och bli av med den skräpiga HTML-kod som ofta genereras av WYSIWYG-editorerna.
-
