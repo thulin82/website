@@ -8,7 +8,7 @@ category:
     - mysql
     - php pdo
 revision:
-    "2017-04-10": "(D, mos) Uppdaterad till nya version inför oophp-v3."
+    "2017-04-18": "(D, mos) Uppdaterad till nya version inför oophp-v3."
     "2014-10-20": "(C, mos) Bytte koden till doFilter(), innehöll fel."
     "2013-12-03": "(B, mos) Smärre justeringar inför campus-kursen."
     "2013-09-30": "(A, mos) Första utgåvan i samband oophp-kursen."
@@ -16,7 +16,7 @@ revision:
 Lagra innehåll i databas för webbsidor och bloggposter (v2)
 ==================================
 
-[FIGURE src=image/?w=c5 class="right" caption=""]
+[FIGURE src=image/snapvt17/content-blog.png?w=c5&a=0,50,50,0 class="right" caption=""]
 
 Ibland vill vi hantera webbplatsens innehåll genom att lagra det i databasen. Denna artikel visar hur du bygger upp en tabell som lagringsstruktur för innehåll som kan användas till webbsidor och bloggposter. Via ett formulär kan du redigera sidans titel och innehåll som sparas undan i databasen. Det blir enkelt att uppdatera din webbsidas innehåll och visa upp den på valfri länk, utan att ha direkt tillgång till databasen eller webbservern. Det räcker med en webbläsare.
 
@@ -24,13 +24,9 @@ När du är klar har du byggt både webbsidor och en blogg från innehåll som d
 
 <!--more-->
 
-[WARNING]
-**Arbete pågår**
-[/WARNING]
+Så här kan det se ut när du jobbar i exempelprogrammet som medföljer artikeln.
 
-Så här kan det se ut när man redigerar innehåll i databasen via ett formulär.
-
-[FIGURE src=/image/snapshot/Uppdatera_innehall___Innehall_i_databasen.jpg?w=w2 caption="Formulär för att editera innehåll i databasen."]
+[FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
 
 
 
@@ -115,14 +111,14 @@ Jag väljer att använda en inbyggd konstruktion för `updated` som heter `ON UP
 För att komma i gång så lägger jag in lite rader i tabellen. Radernas innehåll visar lite hur jag har tänkt att det skall fungera. Det är inte komplett, men en start.
 
 ```sql
-INSERT INTO `content` (`path`, `type`, `title`, `data`, `filter`) VALUES
-    ("hem", "page", "Hem", "Detta är min hemsida. Den är skriven i [url=http://en.wikipedia.org/wiki/BBCode]bbcode[/url] vilket innebär att man kan formattera texten till [b]bold[/b] och [i]kursiv stil[/i] samt hantera länkar.\n\nDessutom finns ett filter 'nl2br' som lägger in <br>-element istället för \\n, det är smidigt, man kan skriva texten precis som man tänker sig att den skall visas, med radbrytningar.", "bbcode,nl2br"),
-    ("om", "page", "Om", "Detta är en sida om mig och min webbplats. Den är skriven i [Markdown](http://en.wikipedia.org/wiki/Markdown). Markdown innebär att du får bra kontroll över innehållet i din sida, du kan formattera och sätta rubriker, men du behöver inte bry dig om HTML.\n\nRubrik nivå 2\n-------------\n\nDu skriver enkla styrtecken för att formattera texten som **fetstil** och *kursiv*. Det finns ett speciellt sätt att länka, skapa tabeller och så vidare.\n\n###Rubrik nivå 3\n\nNär man skriver i markdown så blir det läsbart även som textfil och det är lite av tanken med markdown.", "markdown"),
-    ("blogpost-1", "post", "Välkommen till min blogg!", "Detta är en bloggpost.\n\nNär det finns länkar till andra webbplatser så kommer de länkarna att bli klickbara.\n\nhttp://dbwebb.se är ett exempel på en länk som blir klickbar.", "link,nl2br"),
-    ("blogpost-2", "post", "Nu har sommaren kommit", "Detta är en bloggpost som berättar att sommaren har kommit, ett budskap som kräver en bloggpost.", "nl2br"),
-    ("blogpost-3", "post", "Nu har hösten kommit", "Detta är en bloggpost som berättar att sommaren har kommit, ett budskap som kräver en bloggpost", "nl2br");
+INSERT INTO `content` (`path`, `slug`, `type`, `title`, `data`, `filter`) VALUES
+    ("hem", null, "page", "Hem", "Detta är min hemsida. Den är skriven i [url=http://en.wikipedia.org/wiki/BBCode]bbcode[/url] vilket innebär att man kan formattera texten till [b]bold[/b] och [i]kursiv stil[/i] samt hantera länkar.\n\nDessutom finns ett filter 'nl2br' som lägger in <br>-element istället för \\n, det är smidigt, man kan skriva texten precis som man tänker sig att den skall visas, med radbrytningar.", "bbcode,nl2br"),
+    ("om", null, "page", "Om", "Detta är en sida om mig och min webbplats. Den är skriven i [Markdown](http://en.wikipedia.org/wiki/Markdown). Markdown innebär att du får bra kontroll över innehållet i din sida, du kan formattera och sätta rubriker, men du behöver inte bry dig om HTML.\n\nRubrik nivå 2\n-------------\n\nDu skriver enkla styrtecken för att formattera texten som **fetstil** och *kursiv*. Det finns ett speciellt sätt att länka, skapa tabeller och så vidare.\n\n###Rubrik nivå 3\n\nNär man skriver i markdown så blir det läsbart även som textfil och det är lite av tanken med markdown.", "markdown"),
+    ("blogpost-1", "valkommen-till-min-blogg", "post", "Välkommen till min blogg!", "Detta är en bloggpost.\n\nNär det finns länkar till andra webbplatser så kommer de länkarna att bli klickbara.\n\nhttp://dbwebb.se är ett exempel på en länk som blir klickbar.", "link,nl2br"),
+    ("blogpost-2", "nu-har-sommaren-kommit", "post", "Nu har sommaren kommit", "Detta är en bloggpost som berättar att sommaren har kommit, ett budskap som kräver en bloggpost.", "nl2br"),
+    ("blogpost-3", "nu-har-hosten-kommit", "post", "Nu har hösten kommit", "Detta är en bloggpost som berättar att sommaren har kommit, ett budskap som kräver en bloggpost", "nl2br");
 
-SELECT `id`, `path`, `slug`, `title`, `created` FROM `content`;
+SELECT `id`, `path`, `slug`, `type`, `title`, `created` FROM `content`;
 ```
 
 Jag lägger bara in värden i ett par av kolumnerna. Du kan se att jag än så länge utelämnar `slug` som blir `null` för alla rader. Jag nöjer mig med att kunna nå allt innehåll via dess `path` som jag tänker använda som en del i länken till innehållet.
@@ -696,20 +692,18 @@ Om vi hade haft en riktig router så hade detta varit smidigt att sätta upp. I 
 default:
     if (substr($route, 0, 5) === "blog/") {
         //  Matches blog/slug, display content by slug and type post
-    } elseif (substr($route, 0, 4) === "blog") {
-        // Matches blog, show bloglist of type post
     } else {
         // Try matching content for type page and its path
     }
 ```
 
-Det blev tre olika varianter.
+Det blev två olika varianter för default-hanteringen. Sen tillkommer att visa en översikt av blogginläggen på en egen sida, men det får bli en egen route.
 
 
 
 ###Visa innehåll av typ page via dess path {#pagepath}
 
-Här behöver vi söka ut det innehåll som är av typen `page` och där `path` matchar `$route` samt att innehållet är publicerat och inte raderat.
+Nu vill vi visa en egen webbsida för innehåll av typen `page`. Här behöver vi söka ut det innehåll som är av typen `page` och där `path` matchar `$route` samt att innehållet är publicerat och inte raderat.
 
 Fundera lite hur du hade löst det. Nu får vi använda våra SQL-kunskaper.
 
@@ -744,13 +738,13 @@ EOD;
     break;
 ```
 
-Själva routen är liten och enkel men SQL-frågan hade ett inslag av en if-sats som kollar status på kolumnerna `deleted` och `published` och därefter bestämmer den vilken status innehållet har och lämnar svaret i den nyskapade kolumnen `status`.
+Själva routen är liten och enkel. Kikar vi på SQL-frågan så har den ett inslag av en if-sats som kollar status på kolumnerna `deleted` och `published` och därefter bestämmer den vilken status innehållet har och lämnar svaret i den nyskapade kolumnen `status`.
 
 Om jag nu klickar på länken till `home` så kan det se ut så här.
 
 [FIGURE src=image/snapvt17/content-home.png?w=w2 caption="Sidan för `home` visas."]
 
-Ännu finns ingen textfiltrering, men innehållet visas som det ska.
+Ännu finns ingen formattering av texten, men innehållet visas som det ska.
 
 Vi kan titta på vyn som är ansvarig för att visa upp resultatet.
 
@@ -779,11 +773,12 @@ SELECT
 FROM content
 WHERE
     path = ?
+    AND type = ?
     AND (deleted IS NULL OR deleted > NOW())
     AND published <= NOW()
 ;
 EOD;
-    $content = $db->executeFetch($sql, [$route]);
+    $content = $db->executeFetch($sql, [$route, "page"]);
     if (!$content) {
         header("HTTP/1.0 404 Not Found");
         $title = "404";
@@ -810,86 +805,113 @@ Här var en sida som inte kunde visas för att den antingen inte fanns, den var 
 Visa innehållet som blogg- och bloggposter {#blog}
 -------------------------------
 
-Då ger vi oss på att visa innehåll för bloggen vilket är allt innehåll av typen `post`.
+Då ger vi oss på att visa innehåll för bloggen vilket är allt innehåll av typen `post`. grunden är densamma som för typen `page`, nu vill vi bara presentera resultatet mer som en blog.
 
-När vi visar innehåll av typen `post` blir det lite mer hantering i sidkontrollern `blog.php`. Tanken är att den skall både kunna visa en enskild bloggpost samt en översikt av alla bloggposter.
+Lite så här.
 
-Så här kan det se ut när alla bloggposter visas.
+[FIGURE src=image/snapvt17/content-blog.png?w=w2 caption="En blogglista med alla inlägg med senaste inlägget först."]
 
-> `blog.php`
-
-[FIGURE src=/image/snapshot/Bloggen___Innehall_i_databasen.jpg?w=w2 caption="Alla bloggposter visas efter varandra."]
-
-Vill man bara visa en bloggpost så anropar man sidkontrollern med innehållets slug som parameter, så här.
-
-> `blog.php?slug=blogpost-1`
-
-[FIGURE src=/image/snapshot/Valkommen_till_min_blogg____Bloggen___Innehall_i_databasen.jpg?w=w2 caption="En bloggpost visas ensam på en sida."]
-
-I min kod väljer jag att bygga upp en SQL-sats beroende på om sluggen är närvarande eller ej. 
-
-**En SQL-sats för båda fallen.**
+Routen som förbereder visningen ser ut ungefär som visningen av sidorna. När man gjort grunderna så handlar det ibland bara om nyanser i skillnader.
 
 ```php
-// Get content
-$slugSql = $slug ? 'slug = ?' : '1';
-$sql = "
-SELECT *
-FROM Content
-WHERE
-  type = 'post' AND
-  $slugSql AND
-  published <= NOW()
-ORDER BY updated DESC
+case "blog":
+    $title = "View blog";
+    $view[] = "view/blog.php";
+
+    $sql = <<<EOD
+SELECT
+*,
+DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS published_iso8601,
+DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%d') AS published
+FROM content
+WHERE type=?
+ORDER BY published DESC
 ;
-";
-$res = $db->ExecuteSelectQueryAndFetchAll($sql, array($slug));
+EOD;
+    $resultset = $db->executeFetchAll($sql, ["post"]);
+    break;
 ```
 
-Det gör att jag kan hantera resultatet på samma sätt oavsett om det är en eller flera bloggposter som skall visas. Så här ser den delen ut.
+Jag valde att jobba med publiseringsdatum, iallafall namngav jag kolumnen till `published`. I bloggsammanhang jobbar man ofta med ett publikationsdatum och ofta ändras eller uppdateras inte blogginlägget.
 
-**Samma kodsekvens visar upp blogglistan och enkla bloggposter.**
+Vyn som lista inläggen är en kombination av de två vyerna som visade översikten av page samt dess innehåll.
 
 ```php
-// Prepare content and store it all in variables in the Anax container.
-$anax['title'] = "Bloggen";
-$anax['main'] = null;
-if(isset($res[0])) {
-  foreach($res as $c) {
-    $title  = htmlentities($c->title, null, 'UTF-8');
-    $data   = doFilter(htmlentities($c->data, null, 'UTF-8'), $c->filter);
+<?php
+if (!$resultset) {
+    return;
+}
+?>
 
-    $anax['main'] .= <<<EOD
+<article>
+
+<?php foreach ($resultset as $row) : ?>
 <section>
-  <article>
-  <header>
-  <h1><a href='blog.php?slug={$c->slug}'>{$title}</a></h1>
-  </header>
-
-  {$data}
-
-  <footer>
-  </footer
-  </article>
+    <header>
+        <h1><a href="?route=blog/<?= esc($row->slug) ?>"><?= esc($row->title) ?></a></h1>
+        <p><i>Published: <time datetime="<?= esc($row->published_iso8601) ?>" pubdate><?= esc($row->published) ?></time></i></p>
+    </header>
+    <?= esc($row->data) ?>
 </section>
-EOD;
-  }
-}
-else if($slug) {
-  $anax['main'] = "Det fanns inte en sådan bloggpost.";
-}
-else {
-  $anax['main'] = "Det fanns inga bloggposter.";
-}
+<?php endforeach; ?>
+
+</article>
 ```
 
-Låt oss nu kika lite på hur filtreringen fungerar.
+Klickar man på länken till bloggposten så skall den visas på en egen sida. Det blir i stort sett samma hantering som för innehåll av typen `page`.
+
+[FIGURE src=image/snapvt17/content-blogpost.png?w=w2 caption="En bloggpost visas nästan på samma sätt som en page."]
+
+Routen delar grundstrukturen med den delen som visar typen page via dess path. Skillnaden ligger aningen i SQL-frågan och att vi här använder slugen istället.
+
+```php
+default:
+    if (substr($route, 0, 5) === "blog/") {
+        //  Matches blog/slug, display content by slug and type post
+        $sql = <<<EOD
+SELECT
+    *,
+    DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS published_iso8601,
+    DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%d') AS published
+FROM content
+WHERE 
+    slug = ?
+    AND type = ?
+    AND (deleted IS NULL OR deleted > NOW())
+    AND published <= NOW()
+ORDER BY published DESC
+;
+EOD;
+        $slug = substr($route, 5);
+        $content = $db->executeFetch($sql, [$slug, "post"]);
+        if (!$content) {
+            header("HTTP/1.0 404 Not Found");
+            $title = "404";
+            $view[] = "view/404.php";
+            break;
+        }
+        $title = $content->title;
+        $view[] = "view/blogpost.php";
+```
+
+Men i övrigt ser det ut ungefär likadant. Det är en SQL-fråga som kollar om innehållet finns, om inte så visas en 404 och annars laddas en vy som visar innehållet i svaret.
+
+Vi har nu innehållet i databasen, vi kan redigera det och presentera på olika sätt. Det som är kvar är att formattera utskriften.
 
 
-Filtrering av texten {#filter}
+
+Formattering av texten {#format}
 -------------------------------
 
-I mitt exempel har jag fyra olika textfilter.
+När användaren skriver in innehållet så är möjligheterna oändliga av hur innehållet kan formatteras. Vi lägger ingen direkt aspekt på hur innehållet skrivs in och vi lagrar det exakt på samma sätt i databasen. Men när det skrivs ut så skyddas det av ett anrop till `esc()` och `htmlentities()`.
+
+Tanken är nu att ge användaren ökad kontroll över hur innehållet formatteras innan det landar i webbsidan.
+
+
+
+###Olika type av filter {#filtertyper}
+
+I mitt exempel har jag tänkt mig fyra olika textfilter som kan formattera texten enligt olika regler.
 
 | Filter     | Funktion         |
 |------------|------------------|
@@ -898,7 +920,7 @@ I mitt exempel har jag fyra olika textfilter.
 | link       | Gör länkar som skrivs i texten klickbara. Ett reguljärt uttryck gör jobbet. |
 | markdown   | Formattering enligt Markdown. Ett externt libb hjälper oss med Markdown. |
 
-Coachen har skrivit en del artiklar om filtrering av text, bland annat ["Reguljära uttryck i PHP ger BBCode formattering"](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering), ["Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar"](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar) samt ["Skriv för webben med Markdown och formattera till HTML med PHP"](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php). Dessa hjälper mig att göra en filterhantering till mitt innehåll.
+Coachen har skrivit en del artiklar om filtrering av text, bland annat ["Reguljära uttryck i PHP ger BBCode formattering"](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering), ["Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar"](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar) samt ["Skriv för webben med Markdown och formattera till HTML med PHP (v2)"](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2). Dessa hjälper dig att göra en filterhantering till ditt innehåll.
 
 Varje innehåll listar de filter som skall användas för att processa sidan, det är en komma-separerad lista av filter. Till exempel så här.
 
@@ -906,53 +928,83 @@ Varje innehåll listar de filter som skall användas för att processa sidan, de
 
 Ovanstående innebär att texten först filtreras enligt filtret för *bbcode* och därefter med filtret för *nl2br*.
 
-Varje filter finns i en funktion och det finns en funktion `doFilter()` som har koll på vilka filter som finns och mappar dem mot en funktion som gör själva "filterjobbet". 
+Så är tanken. På det viset låter man användaren själv bestämma hur texten skall filtreras beroende på hur den är skriven och vad den skall användas till.
 
-**Funktionen `doFilter()`.**
+
+
+###Exempel på formattering {#exempelform}
+
+Om man tänker sig ett exempel som använder sig av ovan möjlighet till textformattering, så kan det se ut så här.
+
+Först innehållet i sitt råa format, som det skrivs in av användaren.
 
 ```php
-/**
- * Call each filter.
- *
- * @param string $text the text to filter.
- * @param string $filter as comma separated list of filter.
- * @return string the formatted text.
- */
-function doFilter($text, $filter) {
-  // Define all valid filters with their callback function.
-  $valid = array(
-    'bbcode'   => 'bbcode2html',
-    'link'     => 'make_clickable',
-    'markdown' => 'markdown',
-    'nl2br'    => 'nl2br',  
-  );
+$textOrig = <<<EOD
+Först lite vanlig text följt av en tom rad.
 
-  // Make an array of the comma separated string $filter
-  $filters = preg_replace('/\s/', '', explode(',', $filter));
+Då tar vi ett nytt stycke med lite bbcode med [b]bold[/b] och [i]italic[/i] samt en [url=https://dbwebb.se]länk till dbwebb[/url].
 
-  // For each filter, call its function with the $text as parameter.
-  foreach($filters as $func) {
-    if(isset($valid[$func])) {
-      $text = $valid[$func]($text);
-    } 
-    else {
-      throw new Exception("The filter '$filter' is not a valid filter string.");
-    }
-  }
+Sen testar vi en länk till https://dbwebb.se som skall bli klickbar.
 
-  return $text;
-}
+Avslutningsvis blir det en [länk skriven i markdown](https://dbwebb.se) och länken leder till dbwebb.
+
+Avsluter med en lista som formatteras till ul/li med markdown.
+
+* Item 1
+* Item 2
+
+EOD;
 ```
 
-Källkoden för samtliga filter finns i [`filter.php`](kod-exempel/lagra-webbsidans-innehall-i-databasen/source.php?path=filter.php#file).
+Sedan tänker vi oss att alla formatterings/filtreringsfunktioner är wrappade i en klass `Textfilter` och det finns en metod `doFilter()` som tar både texten och de filter som skall användas och returnerar den formatterade texten.
+
+```php
+$textfilter = new Textfilter();
+$text = $textfilter->doFilter($textOrig, "bbcode,markdown,link");
+```
+
+Den formatterade/filtrerade texten skulle du kunna se ut så här.
+
+```html
+<p>Först lite vanlig text följt av en tom rad.</p>
+
+<p>Då tar vi ett nytt stycke med lite bbcode med <strong>bold</strong> och <em>italic</em> samt en <a href="https://dbwebb.se">länk till dbwebb</a>.</p>
+
+<p>Sen testar vi en länk till <a href="https://dbwebb.se">https://dbwebb.se</a> som skall bli klickbar.</p>
+
+<p>Avslutningsvis blir det en <a href="https://dbwebb.se">länk skriven i markdown</a> och länken leder till dbwebb.</p>
+
+<p>Avsluter med en lista som formatteras till ul/li med markdown.</p>
+
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+</ul>
+```
+
+Eller om man bygger ett exempel och gör ett litet testprogram av det, då kan resultatet bli så här.
+
+[FIGURE src=image/snapvt17/content-textfilter.png?w=w2 caption="Innehållet formatteras och filtreras för att bli HTML."]
+
+Bilden ovan visar hur exemplet tar innehållets råa källa och formatterar det till HTML, först visas den råa formatterade HTML-koden och seda skrivs den ut så att webbläsaren får visa upp resultatet av HTML-koden.
+
+
+
+###Tankar kring formatteringen {#tankarform}
+
+Hur kan man tänka kring säkerhet och vad det innebär att ge användaren denna typen av kontroll över innehållet?
+
+Man får vara lite försiktig, om man inte filtrerar bort HTML-elementen med `strip _tags()` så har användaren fulla möjligheter att skriva både HTML och JavaScript rätt in i sidan. Men kanske vill man det. Det beror ju på hur väl man känner den som skriver texten. Här får man välja taktik.
+
+Man får även tänka på att vissa filter inte är kompatibla med varandra. Om man till exempel använde `nl2br` innan ett `markdown` så kan det första filtret förstöra för det andra. Kanske borde man styra vilka kombinationer av filter som är tillgängliga, eller så ger man all makt till användaren.
+
+Det finns inget färdigt exempel för klassen `Textfilter`, det lämnas som en övning till läsaren.
 
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-All [källkod](kod-exempel/lagra-webbsidans-innehall-i-databasen/source.php) och [ett körbart exempel](kod-exempel/lagra-webbsidans-innehall-i-databasen/view.php) finns så att du kan testa hur det fungerar i verkligheten.
+Artikeln visar översiktligt i hur du kan bygga upp en databas för att lagra och CRUD-hantera innehålla i databasen samt tekniker för att presentera det i webbplatsen som olika typer av innehåll.
 
-Om innehållet verkar trasigt så kan du [återställa det](kod-exempel/lagra-webbsidans-innehall-i-databasen/reset.php) innan du börjar att testa.
-
-Detta är grunderna och visar hur du på ett enkelt sätt kan uppnå en flexibel hantering av innehåll i databasen.
+Det finns en tråd i forumet där du kan [ställa frågor eller bidra med tips och trix](t/XXX) rörande artikeln.

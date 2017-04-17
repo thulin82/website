@@ -79,13 +79,24 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Reverse engineer och visa EER diagram.
 
+<!--
+
+1. phpdoc
+
+-->
 
 
 ###Extra {#extra}
 
+Det finns inga extrauppgifter.
+
+<!--
+
 Gör följande extrauppgifter om du har tid, lust eller ambition.
 
 1. Du kan forstätta träna grunderna i SQL via laborationen "[SQL lab, fortsättning med SQL (sql2)](uppgift/sql-lab-fortsattning-med-sql)". Labben är gjord för SQLite. Spara koden i `me/kmom05/sql2`.
+
+--->
 
 
 

@@ -5,26 +5,29 @@ category:
     - kurs oophp
     - kurs oophp-v3
 revision:
-    "2017-04-11": (PA1, mos) Utveckling påbörjad.
+    "2017-04-18": (A, mos) Första utgåvan.
 ...
 Kmom04: Lagra innehåll i databasen
 ==================================
 
-[WARNING]
+[INFO]
 **Version 3 av oophp.**
 
-Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 17/4 2017.
+Utveckling av nytt kursmoment pågår. Kursmomentet <strike>släpps senaste den 17/4 2017</strike> släpptes 2017-04-18.
 
-[/WARNING]
+[/INFO]
 
-Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att anväde de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren. Vi skall visa upp vanliga sidor och en blogg.
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren. Vi skall visa upp vanliga sidor och en blogg.
 
 Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
 
 Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur dom klarar både det ena och det andra.
 
-[FIGURE src=/image/snapshot/Uppdatera_innehall___Innehall_i_databasen.jpg?w=w2 caption="Formulär för att editera innehåll i databasen."]
+[FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
 
+[FIGURE src=image/snapvt17/content-blog.png?w=w2 caption="En blogglista med alla inlägg med senaste inlägget först."]
+
+[FIGURE src=image/snapvt17/content-textfilter.png?w=w2 caption="Innehållet formatteras och filtreras för att bli HTML."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -39,16 +42,25 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs följande:
+Det finns inga specifika lästips i kurslitteraturen.
 
+
+
+###Artiklar {#artiklar}
+
+Läs följande artiklar.
+
+1. Läs översiktligt igenom "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)" som ger dig grundläggande förståelse för hur du kan modellera en databas.
 
 
 
 ###Lästips {#lastips}
 
-<!--
-1. [Om databasmodellering](https://dbwebb.se/kunskap/kokbok-for-databasmodellering)
--->
+Följande tips från coachen används i övningen och uppgiften.
+
+1. ["Reguljära uttryck i PHP ger BBCode formattering"](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)
+1. ["Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar"](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar)
+1. ["Skriv för webben med Markdown och formattera till HTML med PHP (v2)"](coachen/skriv-for-webben-med-markdown-och-formattera-till-html-med-php-v2)
 
 
 
@@ -62,11 +74,7 @@ Läs följande:
 
 Gör följande övning, den förbereder dig inför uppgifterna och löser ett par av dem.
 
-1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter).
-
-<!-- 
-(Content som markdown med anax/textfilter)
--->
+1. Jobba igenom guiden ["Lagra innehåll i databas för webbsidor och bloggposter (v2)"](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter-v2). Spara dina exempelprogram under `me/kmom04/content`.
 
 
 
@@ -74,21 +82,25 @@ Gör följande övning, den förbereder dig inför uppgifterna och löser ett pa
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgift "[Bygg webbsidor från innehåll i databasen](uppgift/bygg-webbsidor-fran-innehall-i-databasen)" och spara filerna in `me/anax-lite`.
+1. Gör uppgiften "[Skapa en klass för textfiltrering och formattering](uppgift/skapa-en-klass-for-textfiltrering-och-formattering)". Den färdiga klassen integrerar du i `me/anax-lite`. Vill du testa och utveckla i en separat katalog så använder du `me/kmom04/textfilter`.
 
-<!--
-1. Gör uppgiften ["Övningar med CTextFilter"](uppgift/ovningar-med-ctextfilter).
+1. Gör uppgift "[Bygg webbsidor från innehåll i databasen](uppgift/bygg-webbsidor-fran-innehall-i-databasen)" och spara filerna i `me/anax-lite`.
 
-1. Anax Flat File.
--->
+1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". 
 
 
 
 ###Extra {#extra}
 
+Det finns inga extrauppgifter.
+
+<!--
 Gör följande extrauppgifter om du har tid, lust eller ambition.
 
+1. Anax Flat File.
+
 1. Känner du behov av att träna ytterligare på grunderna i SQL, vilket alltid är en god idé, så gör du laborationen "[SQL lab, introduktion till SQL](uppgift/sql-lab-introduktion-till-sql-dbjs)". Labben är gjord med SQLite. Filerna ligger i `me/kmom04/sql1`.
+-->
 
 
 
