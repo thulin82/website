@@ -90,9 +90,15 @@ CREATE TABLE `content`
   `type` CHAR(20),
   `filter` VARCHAR(80) DEFAULT NULL,
 
-  `published` DATETIME DEFAULT CURRENT_TIMESTAMP,
-  `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
-  `updated` DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  -- MySQL version 5.6 and higher
+  -- `published` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  -- `created` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  -- `updated` DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+ 
+  -- MySQL version 5.5 and lower
+  `published` DATETIME DEFAULT NULL,
+  `created` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `updated` DATETIME DEFAULT NULL, --  ON UPDATE CURRENT_TIMESTAMP,
   `deleted` DATETIME DEFAULT NULL
 
 ) ENGINE INNODB CHARACTER SET utf8 COLLATE utf8_swedish_ci;
@@ -100,9 +106,15 @@ CREATE TABLE `content`
 
 Tabellens struktur matchar de grundkrav som jag tänkt mig. Att ha både `path` och `slug` är två skilda saker, men båda skall unikt kunna peka ut ett visst innehåll.
 
+Hur man kan jobba med tidsstämplar via DATETIME och TIMESTAMP samt ge dem default-värden och att använda konstruktionen ON UPDATE CURRENT_TIMESTAMP, har ändrats mellan versioner.
+
+Från och med MySQL 5.6 så kan du använda den mer flexibla och enklare varianten som är bortkommenterad ovan. Men jobbar du mot en äldre version (likt oss när vi använder blu-ray) så kan du behöva använda ett mer "primitivt" sätt att hantera tidsstämplarna. Jag väljer att inte använda det senaste sättet eftersom vår egen driftsserver kör MySQL 5.5.
+
+<!--
 Jag använder default värden på tidsstämplarna `published` och `created` för att förenkla för mig.
 
 Jag väljer att använda en inbyggd konstruktion för `updated` som heter `ON UPDATE CURRENT_TIMESTAMP` vilket gör att den tidsstämpeln ändras varje gång jag gör en update på tabellen. Man kan fundera på om det är bra eller ej, jag väljer här att bygga in mig i MySQL och släppa på kompabiliteten med andra databaser. Det fungerar i min _domän_ som är detta exemplet och här tänker jag inte vara kompatibel mellan databaser.
+-->
 
 
 
