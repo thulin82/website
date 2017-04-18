@@ -44,3 +44,5 @@ public static function markdown($text)
 Testa ett exempelprogram som visar hur du kan [jobba med PHP Markdown](kod-exempel/start_using_php_markdown/).
 
 Nu kan du börja skriva dina texter för webben enligt Markdown syntax. Det blir text som är lätt att läsa i sitt orginalformat, smidig att skriva och skapar bra HTML. Du kan fortsätta skriva HTML-element om du behöver mer avancerade konstruktioner som inte stöds i Markdown.
+
+Det finns en tråd i forumet där du kan [ställa frågor eller bidra med tips och trix](t/6436) rörande tipset.
