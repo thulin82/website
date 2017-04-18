@@ -44,26 +44,26 @@ Tankar om *innehåll* i databasen {#om}
 
 Låt oss fundera, varje webbsida har en `<title>` och bör ha en rubrik i form av en `<h1>`. Det skall finnas _content_, själva innehållet i webbsidan.
 
-En sida kan ha en unik länk, en _path_ till där sidan kan nås. Man skall kunna nå innehållet via en slug, en url som bygger på innehållets titel. Det är olika sätt att hitta matchande innehåll i databasen.
+En sida kan ha en unik länk, en _path_ till där sidan kan nås. Man skall kunna nå innehållet via en _slug_, en url som bygger på innehållets titel. Varianterna med path och slug är olika sätt att hitta matchande innehåll i databasen.
 
 En sida kan ha olika status, den kan vara publicerad eller inte publicerad. Att vara _inte publicerad_ kan innebära en arbetskopia som man inte vill visa upp förrän den är klar.
 
 Det är bra att ha datumstämplar för när sidan skapades, uppdaterades och raderades. 
 
-En sida kan vara av en speciell typ, en typ som bestämmer hur och var sidan kan visas. Det kan vara bra att vara lite flexibel och visa sidor på olika sätt, baserade på dess typ. Till exempel så visar man innehåll av typen 'post' i bloggen och innehåll av typen 'page' som egna sidor.
+En sida kan vara av en speciell typ, en typ som bestämmer hur och var sidan kan visas. Det kan vara bra att vara lite flexibel och visa sidor på olika sätt, baserade på dess typ. Till exempel så visar man innehåll av typen "post" i bloggen och innehåll av typen "page" som egna sidor.
 
 Innehållet i sidan skulle kunna filtreras på olika sätt, vill man skriva PHP-kod i sidan, eller HTML, BBCode eller Markdown? Det kan behövas olika filter som bearbetar innehållet innan det presenteras. 
 
-Oj, det blev en del. Bäst att börja enkelt.
+Okey, det blev en del. Bäst att börja enkelt.
 
 
 
 En databastabell {#table}
 -------------------------------
 
-Det första vi behöver är en lagringsstruktur för innehållet. Vi behöver fundera igenom vad vi vill och behöver lagra samt hur lagringen skall ske. Det går ju naturligtvis att justera strukturen efter hand men det är rätt bra att tänka igenom strukturen från början. Det är alltså en databastabell vi behöver, en grundstruktur för vad vi vill lagra.
+Det första vi behöver är en lagringsstruktur för innehållet. Vi behöver fundera igenom vad vi vill och behöver lagra samt hur lagringen skall ske. Det går att justera strukturen efter hand men det är bra att tänka igenom strukturen från början. Det är främst en databastabell vi behöver, en grundstruktur för vad vi vill lagra.
 
-Vi behöver alltså skapa en tabell och fylla på med lite innehåll. Sedan kan vi börja jobba.
+Vi behöver skapa en tabell och fylla på med lite innehåll. Sedan kan vi börja jobba.
 
 
 
@@ -108,7 +108,7 @@ Jag väljer att använda en inbyggd konstruktion för `updated` som heter `ON UP
 
 ###Tabellens innehåll {#tabellcont}
 
-För att komma i gång så lägger jag in lite rader i tabellen. Radernas innehåll visar lite hur jag har tänkt att det skall fungera. Det är inte komplett, men en start.
+För att komma i gång så lägger jag in ett par i tabellen. Radernas innehåll visar hur jag har tänkt det skall fungera.
 
 ```sql
 INSERT INTO `content` (`path`, `slug`, `type`, `title`, `data`, `filter`) VALUES
@@ -121,41 +121,47 @@ INSERT INTO `content` (`path`, `slug`, `type`, `title`, `data`, `filter`) VALUES
 SELECT `id`, `path`, `slug`, `type`, `title`, `created` FROM `content`;
 ```
 
-Jag lägger bara in värden i ett par av kolumnerna. Du kan se att jag än så länge utelämnar `slug` som blir `null` för alla rader. Jag nöjer mig med att kunna nå allt innehåll via dess `path` som jag tänker använda som en del i länken till innehållet.
+Jag lägger endast in värden i ett par av kolumnerna, det räcker som en start.
 
 
 
 ###Läs in innehållet till databasen {#contentread}
 
-Så här gör jag för att läsa in innehållet till min databas.
+Så här gör jag för att läsa in innehållet till min databas `oophp`.
 
 ```bash
 $ mysql -uuser -ppass oophp < sql/setup.sql
 Warning: Using a password on the command line interface can be insecure.
-id   path          type    title                      created
-1    hem           page    Hem                        2017-04-10 12:35:27
-2    om            page    Om                         2017-04-10 12:35:27
-3    blogpost-1    post    Välkommen till min blogg!  2017-04-10 12:35:27
-4    blogpost-2    post    Nu har sommaren kommit     2017-04-10 12:35:27
-5    blogpost-3    post    Nu har hösten kommit       2017-04-10 12:35:27
+id  path       slug                     type  title                      created
+1   hem        NULL                     page  Hem                        2017-04-18 09:20:28
+2   om         NULL                     page  Om                         2017-04-18 09:20:28
+3   blogpost-1 valkommen-till-min-blogg post  Välkommen till min blogg!  2017-04-18 09:20:28
+4   blogpost-2 nu-har-sommaren-kommit   post  Nu har sommaren kommit     2017-04-18 09:20:28
+5   blogpost-3 nu-har-hosten-kommit     post  Nu har hösten kommit       2017-04-18 09:20:28
 ```
 
-Men det fungerar lika bra med Workbench eller någon annan klient.
+Det fungerar lika bra att öppna och köra filen med Workbench eller någon annan klient.
 
 
 
 Kommentarer till lagringsstrukturen {#tankt}
 -------------------------------
 
-När man skapar sina tabeller så har man också en grundtanke om hur man skall lösa sin applikation. Man ser till att lagra det som behövs för att applikationen skall fungera.
+När man skapar sina tabeller så har man också en grundtanke om hur man skall lösa sin applikation och vilka frågor man avser ställa mot databasen. Man ser till att lagra det som behövs för att applikationen skall fungera och lagra på ett sätt som gör det enkelt att ställa frågorna.
 
 Låt oss titta på hur jag har tänkt.
 
 
 
-###Två typer `page` och `post` {#tva-typer}
+###Typer page och post {#tva-typer}
 
-Jag tänker mig två typer av innehåll, `page` och `post`. Jag tänker mig rena webbsidor som bygger på innehållet i databasen, dessa har typen `page`. Sedan tänker jag mig en blogg och det innehållet ger jag typen `post`. Två typer och två tänkta hanteringar av innehållet.
+Jag tänker mig två typer av innehåll, `page` och `post`.
+
+För `page` tänker jag mig rena webbsidorinnehållet bygger upp en webbsida. 
+
+För `post` tänker jag mig en blogg med bloggposter. Det skall finnas bloggposter som visas på en sida och en översikt där alla bloggposter visas.
+
+Två typer och två tänkta hanteringar av innehållet.
 
 
 
@@ -171,7 +177,7 @@ Jag tänker också använda mig av `title` för att skapa innehållets `slug`.
 
 Det finns (minst) tre olika sätt att komma åt ett specifikt innehåll, dels via `id` som kan användas när användaren skall editera eller radera en sida.
 
-Delen med `path` är en tänkt del av länken till innehållet. Det ger möjligheten att matcha en länk/route direkt till ett innehåll.
+Dels kan man komma åt innehållet via dess `path` som är en tänkt del av länken till innehållet. Det ger möjligheten att matcha en länk/route direkt till ett innehåll.
 
 Varianten med `slug` är en översättning av innehållets titel som lämpar sig att använda i länkningen till sidan. En länk med en slug kan se ut så här:
 
@@ -179,7 +185,7 @@ Varianten med `slug` är en översättning av innehållets titel som lämpar sig
 
 Texten *gor-en-lasbar-url-med-slugify* är en slug till en sida som har titeln "Gör en läsbar url med slugify()". Läs mer om en [funktion som gör en slug av en sträng](coachen/gor-en-lasbar-url-med-slugify).
 
-Det är alltså tre olika sätt att peka ut det innehåll som skall hanteras. Det ger viss flexibilitet och det vill vi ha.
+Vi har alltså tre olika sätt att peka ut det innehåll som skall hanteras. Det ger viss flexibilitet och det vill vi ha.
 
 
 
@@ -191,7 +197,7 @@ Här kan man till och med tillåta PHP-kod i artikeln, men det är kanske att g�
 
 Här får man även tänka till om man skall tillåta HTML-kod i innehållet, eller om det skall filtreras bort. Att tillåta HTML-kod innebär att man även tillåter JavaScript. Vill man ge den öppningen till webbplatsens användare?
 
-Vill du få ett smakprov på ett filter som översätter BBCode till HTML så kikar du via artikeln "[Reguljära uttryck i PHP ger BBCode formattering](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)". Det leder till en funktion som översätter BBCode likt `[b]Bold[/b]` till `<b>Bold</b>` och erbjuder vissa möjligheter för en användare att formattera sina inlägg.
+Vill du få ett smakprov på ett filter som översätter BBCode till HTML så kikar du via artikeln "[Reguljära uttryck i PHP ger BBCode formattering](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering)". Det leder till en funktion som översätter BBCode likt `[b]Bold[/b]` till HTML `<b>Bold</b>` och därigenom erbjuder vissa möjligheter för en användare att formattera sina inlägg.
 
 
 
@@ -214,7 +220,7 @@ Det kan se ut så här.
 
 [FIGURE src=image/snapvt17/content-all-take1.png?w=w2 caption="En första ansats att visa vilket innehåll som finns i databasen."]
 
-Det som behövs är en route motsvarande den som vi använda i film-databasen. Jag kunde nästan återanvända all min kod från det exemplet.
+Det som behövs för att skapa ovan sida är en route motsvarande den som vi använda i film-databasen. Jag kunde nästan återanvända all min kod från det exemplet.
 
 ```php
 switch ($route) {
@@ -228,7 +234,7 @@ switch ($route) {
 
 Vyn innehåller koden för att översätta innehållet i `$resultset` till en HTML-tabell.
 
-```php
+```html
 <?php
 if (!$resultset) {
     return;
@@ -267,55 +273,16 @@ Jag bygger alltså vidare på samma kodstruktur som jag använde i exemplet med 
 
 
 
-<!--
-Nu behövs ett gränssnitt till användaren så innehållet kan uppdateras via webben. En bra start är att visa allt innehåll i databasen. Så här kan det se ut.
-
-[FIGURE src=/image/snapshot/Visa_allt_innehall___Innehall_i_databasen.jpg?w=w2 caption="Visa allt innehåll från databasen."]
-
-**SQL-sats för att hämta allt innehåll.**
-
-```sql
-SELECT *, (published <= NOW()) AS available
-FROM Content;
-```
-
-Så länge som datumet på `published` är passerat så anses innehållet vara publicerat.
-
-Det finns två olika typer av innehåll. Jag vill att innehållet av typen `page` skall hanteras av sidkontrollern `page.php` och jag vill att innehåll av typen `post` skall hanteras av sidkontrollern `blog.php`. För att lyckas med det så väljer jag att göra en funktion som kan länka till innehållet genom att titta på dess typ.
-
-**En funktion för att koppla innehållets typ till en webbsida.**
-
-```php
-/**
- * Create a link to the content, based on its type.
- *
- * @param object $content to link to.
- * @return string with url to display content.
- */
-function getUrlToContent($content) {
-  switch($content->type) {
-    case 'page': return "page.php?url={$content->url}"; break;
-    case 'post': return "blog.php?slug={$content->slug}"; break;
-    default: return null; break;
-  }
-}
-```
-
-Man kan se det som att man skapar en permalänk till varje innehåll, men beroende på innehållets typ så skall olika sidkontroller hantera innehållet.
--->
-
-
-
 Uppdatera innehållet {#crud-update}
 -------------------------------
 
-Nästa steg känns som jag vill göra CRUD-relaterade operationer på mitt innehåll.
+Nu behövs ett gränssnitt till användaren så innehållet kan uppdateras via webben. Det får bli CRUD-relaterade operationer på innehållet.
 
 
 
 ###Route och formulär {#editroute}
 
-Jag börjar med en enklare variant av vyn `show-all` som visar mindre saker tillsammans med en edit-knapp från FontAwesome.
+Jag börjar med en enklare variant av vyn `show-all` som visar detaljer om innehållet tillsammans med en edit-knapp från FontAwesome.
 
 [FIGURE src=image/snapvt17/content-edit.png?w=w2 caption="Ett admin-gränssnitt för att hantera innehållet."]
 
@@ -323,10 +290,9 @@ Routen till edit-formuläret blir `?route=edit&id=1`.
 
 Nu behöver jag ett edit-formulär. Det kan se ut så här.
 
-content-do-edit.png
 [FIGURE src=image/snapvt17/content-do-edit.png?w=w2 caption="Innehållet kan nu redigeras i ett formulär."]
 
-Vi kan kika kort på routen.
+Vi kan kika kort på routen som hanterar och förbereder för edit-formuläret.
 
 ```php
 case "edit":
@@ -339,13 +305,13 @@ case "edit":
     break;
 ```
 
-Vi hämtar innehållets id från querysträngen och använder det för att hämta ut rätt innehåll från databasen. Här vet vi att det bara finns en rad att hämta ut så vi använder metoden `fetch()` för att bara hämta första raden.
+Vi hämtar innehållets id från querysträngen och använder det för att hämta ut rätt innehåll från databasen. Här vet vi att det bara finns en rad att hämta ut så vi använder metoden `PDO::fetch()` (via klassen `Database`) för att endast hämta första raden.
 
-I vyn byggs formuläret upp med dess innehåll. Här är det klokt att använda `htmlentities()` och jag gör det via min egna wrapper `esc()`.
+I vyn byggs formuläret upp med dess innehåll. Här är det klokt att använda `htmlentities()` (eller `htmlspecialchars()`) och jag gör det via min egna wrapper `esc()`.
 
-Här kan du se vissa delar av formuläret.
+Här kan du se vissa delar av vyns källkod till formuläret.
 
-```php
+```html
 <p>
     <label>Slug:<br> 
     <input type="text" name="contentSlug" value="<?= esc($content->slug) ?>"/>
@@ -364,7 +330,7 @@ Här kan du se vissa delar av formuläret.
 
 Det kan också var en idé att styla till sitt formulär så att det ser lite vänligare ut. Jag gör lite enklare styling.
 
-```php
+```css
 input[type=text],
 input[type=datetime],
 textarea {
@@ -392,7 +358,7 @@ Då ska vi se vad som bör hända när man klickar på Spara-knappen.
 
 ###Spara uppdaterat innehåll {#edit-save}
 
-Här fångar vi in alla delar från formuläret och bygger upp en array med parametrar som skickas med SQL UPDATE uttrycket.
+Jag använder mig av ett selfsubmitting formulär som postar sig till samma route som visar formuläret. Tanken är att här fånga in alla delar från formuläret och bygger upp en array med parametrar som skickas med SQL UPDATE uttrycket för att uppdatera innehållet i databasen.
 
 Det vi vill uppnå ser ut så här.
 
@@ -408,9 +374,9 @@ if (hasKeyPost("doSave")) {
 
 Kolumnen `update` bör nu uppdateras automatiskt av MySQL.
 
-Finns det ett smart, och någorlunda kontrollerar sätt, att fylla på arrayen `$params` utifrån POST?
+Finns det ett smartare, och någorlunda kontrollerar sätt, att fylla på arrayen `$params` utifrån POST?
 
-Ja, vi skulle kunna uppdatera funktionen `getPost()` till att stödja följande usecase och hämta många värden på en gång och spara i en array.
+Ja, vi skulle kunna uppdatera funktionen `getPost()` till att stödja följande usecase och hämta många värden på en gång och returnera i en array.
 
 ```php
 //$params gets all values from getPost()
@@ -426,9 +392,9 @@ $params = getPost([
 ]);
 ```
 
-Ovan sparar vi ett antal anrop till `getPost()`, vi hade behövt en för varje värde vi vill hämta.
+Ovan sparar vi ett antal anrop till `getPost()`, vi hade annars behövt ett funktionsanrop för varje värde vi vill hämta.
 
-Nu löser vi det med manipulering av arrayer.
+Vi uppdaterar funktionen så den ser skillnad på om det är en sträng eller array som kommer i första argumentet.
 
 ```php
 /**
@@ -452,7 +418,7 @@ function getPost($key, $default = null)
 }
 ```
 
-I koden ovan så bygger vi ut funktionen `getPost()` till att tolka inkommande argument till funktionen och utföra till viss del olika arbeten beroende av det är en sträng eller en array som skickas via `$key`.
+I koden ovan så bygger vi ut funktionen `getPost()` till att tolka inkommande argument till funktionen och utföra olika saker beroende av det är en sträng eller en array som skickas via `$key`.
 
 Som du ser kan det vara bekvämt att ha koll på de inbyggda array-funktionerna i PHP. Där kan finnas viss tid och kodrader att spara. Ovan konstruktion hämtar hem värdena från POST som matcher de nycklar som angavs i `$key`.
 
@@ -468,7 +434,7 @@ if (is_array($key)) {
     return $post;
 ```
 
-Ibland vinner man på de inbyggda funktionerna men ibland går det likabra att lösa själv med en enkel loop.
+Ibland vinner man på de inbyggda funktionerna men ibland går det likabra att lösa det själv med en enkel loop.
 
 
 
@@ -486,7 +452,7 @@ if (!$params["contentSlug"]) {
 }
 ```
 
-Det blir både automatik och det ger användaren möjlighet att sätta slugen.
+Det blir både automatik så att slugen automatgenereras och det ger användaren möjlighet att själv sätta slugen.
 
 Men vad händer om det blir två likadana slugs?
 
@@ -500,7 +466,9 @@ Man kan också fundera på om slugen skall vara unik, eller om den egentligen ä
 
 ###Att lagra användarredigerat innehåll {#lagrastrat}
 
-En sak som kan vara på sin plats att nämna är strategin för att lagra informationen i databasen. Skall man **sanitera den innan den lagras i databasen** eller **innan den används i webbsidan**? Jag väljer främst strategin att lagra innehållet precis som användaren skriver in det och sedan filtrera och sanitera när informationen skall visas i webbsidan. Jag föredrar att användaren kan spara ned precis vad som helst, men det ställer krav på att jag verkligen saniterar informationen och rensar bort skadlig kod, innan informationen skrivs ut. 
+En sak som kan vara på sin plats att nämna är strategin för att lagra informationen i databasen. Skall man **sanitera den innan den lagras i databasen** eller **innan den används i webbsidan**?
+
+Jag väljer strategin att lagra innehållet precis som användaren skriver in det och sedan filtrera och sanitera när informationen skall visas i webbsidan. Jag föredrar att användaren kan spara ned precis vad som helst, men det ställer krav på att jag verkligen saniterar informationen och rensar bort skadlig kod, innan informationen skrivs ut. 
 
 Att låta användare skriva in vad som helst, utan att sanitera, har fördelen att användaren alltid känner igen texten som skrivs och det finns ingen _magisk_ hantering som säger vilken text som är rätt eller fel. I mitt fall är det helt okey att skriva in både HTML-kod och PHP-kod, det som är viktigt är vilka filter man väljer att sätta på innehållet. Det är kombinationen av filter (och `htmlentities()`) som gör att texten saniteras och skadlig kod rensas bort.
 
@@ -514,6 +482,9 @@ if (!is_numeric($contentId)) {
     die("Not valid for content id.");
 }
 ```
+
+Innehåller inte inkommande variabler rätt värdemängd så kan man abrupt avbryta. Det är troligast att någon försöker manuellt redigera länkarna för att se om din webbplats har brister i säkerheten.
+
 
 
 Lägga till nytt innehåll {#content-add}
@@ -531,7 +502,7 @@ Tittar man på användargränssnittet så kan det se ut så här.
 
 [FIGURE src=image/snapvt17/content-create.png?w=w2 caption="Ett minimalt formulär för att skapa en ny artikel."]
 
-När användaren klickar "Create" så skapas innehållet i databasen. Routen tar hand om det.
+När användaren klickar "Create" så skapas innehållet i databasen. Följande route tar hand om det.
 
 ```php
 case "create":
@@ -564,7 +535,9 @@ Var uppmärksam på att en tom sträng och NULL inte är samma sak i en databask
 
 > *Duplicate entry '' for key 'path'.*
 
-När du läser upp innehållet från databasen, lägger det i formuläret och åter sparar det, så är det lätt att ditt ursprungliga NULL görs om till en tom sträng. Detta leder i sin tur till att du får problem med databastabellens restriktioner om att path skall vara UNIQUE. Ett enkelt sätt att gå runt problemet är att kontrollera om fältet är tomt (tom sträng) och då sätta den till NULL istället.
+När du läser upp innehållet från databasen, lägger det i formuläret och åter sparar det, så är det lätt att ditt ursprungliga NULL görs om till en tom sträng. Om ett NULL-värde läggs i formuläret så postas det som en tom sträng.
+
+Detta leder i sin tur till att du får problem med databastabellens restriktioner om att path skall vara UNIQUE. Ett enkelt sätt att gå runt problemet är att kontrollera om det postade fältet är tomt (tom sträng) och då sätta den till NULL istället, innan det sparas till databasen.
 
 I sådana här fall är det bra att ha bra felhantering och det försöker vi har i vår klass `Database` som kastar Exception så fort något går fel.
 
@@ -576,6 +549,8 @@ if (!$params["contentPath"]) {
 }
 ```
 
+Nu kan man sätta en "tom" path i formuläret och det sparas som NULL i databasen.
+
 
 
 Radera innehåll {#content-del}
@@ -585,7 +560,7 @@ Då har vi bara delete delen kvar i CRUD. Till att börja med så gör jag det e
 
 Sen tänker jag att det vore trevligt att kunna radera ett innehåll direkt från översikten i Admin via en delete-ikon.
 
-Jag vill också har en säkerhetsfråga om "är du verkligen säker", så att användaren inte av snabbhet eller misstag råkar radera ett innehåll.
+Jag vill också ha en säkerhetsfråga "är du verkligen säker", så att användaren inte av snabbhet eller misstag råkar radera ett innehåll.
 
 Då ska vi se vilket användargränssnitt detta flöde kan få.
 
@@ -601,7 +576,7 @@ I båda fallen leder länken till en vy där man verkligen kan utföra raderinge
 
 [FIGURE src=image/snapvt17/content-delete-true.png?w=w2 caption="Nu kan vi verkligen radera innehållet."]
 
-Vyerna och formulärens förändringar är enkla. Det är kan vara lite klurigt är hur man vill att flödet i applikationen skall fungera. Var kan kan radera och hur skall det gå till.
+Vyerna och formulärens förändringar är enkla. Det som kan vara lite klurigt är hur man vill att flödet i applikationen skall fungera. Var kan kan radera och hur skall det gå till?
 
 Vi kan ta en titt på routen som utför själva raderingen av innehållet.
 
@@ -639,7 +614,7 @@ I övrigt så ser det mer eller mindre likadant ut som i de andra routerna. Likn
 
 Vi kan avsluta med en kort titt på delete-vyn.
 
-```php
+```html
 <form method="post">
     <fieldset>
     <legend>Delete</legend>
@@ -659,7 +634,7 @@ Vi kan avsluta med en kort titt på delete-vyn.
 </form>
 ```
 
-Det man kan nämna är att innehållets id ligger i formuläret som postas för att raderas. Sen skadar det inte att påpeka att göra `htmlentites()` på de värden som skrivs ut.
+Det man kan nämna är att innehållets id ligger i formuläret som postas för att raderas. Sedan skadar det inte att påpeka att göra `htmlentites()` på de värden som skrivs ut.
 
 När ett innehåll är raderat så markeras det som raderat och det syns i admin-vyn.
 
@@ -667,7 +642,7 @@ När ett innehåll är raderat så markeras det som raderat och det syns i admin
 
 Nu hade vi kunnat lägga till en funktion som tar bort tidsstämpeln som anger när innehållet raderades. Då hade innehållet _kommit tillbaka_ igen, som inget hade hänt.
 
-Nu är vi nöjda med CRUD-delen, det administrativa gränssnittet för att jobba med innehållet.
+Nu är vi nöjda med CRUD-delen, det administrativa gränssnittet för att jobba med innehållet. Då fortsätter vi att se hur innehållet kan presenteras för användaren.
 
 
 
@@ -703,7 +678,7 @@ Det blev två olika varianter för default-hanteringen. Sen tillkommer att visa 
 
 ###Visa innehåll av typ page via dess path {#pagepath}
 
-Nu vill vi visa en egen webbsida för innehåll av typen `page`. Här behöver vi söka ut det innehåll som är av typen `page` och där `path` matchar `$route` samt att innehållet är publicerat och inte raderat.
+Vi börjar med en egen webbsida för innehåll av typen `page`. Här behöver vi söka ut det innehåll som är av typen `page` och där `path` matchar `$route` samt att innehållet är publicerat och inte raderat.
 
 Fundera lite hur du hade löst det. Nu får vi använda våra SQL-kunskaper.
 
@@ -713,9 +688,9 @@ Så här blev min översikt.
 
 [FIGURE src=image/snapvt17/content-view-pages.png?w=w2 caption="Här är en översikt av de webbsidor som är av typen `page`."]
 
-Du kan se att det visas vilken status sidan har, om den är publicerad eller inte och om den är raderad.
+Du kan se att det visas vilken status sidan har, om den är publicerad eller inte och om den är raderad eller ej.
 
-Det är lite spännande att titta på den route som bygger upp resultatet.
+Låt oss kika på den route som bygger upp resultatet.
 
 ```php
 case "pages":
@@ -738,7 +713,7 @@ EOD;
     break;
 ```
 
-Själva routen är liten och enkel. Kikar vi på SQL-frågan så har den ett inslag av en if-sats som kollar status på kolumnerna `deleted` och `published` och därefter bestämmer den vilken status innehållet har och lämnar svaret i den nyskapade kolumnen `status`.
+Själva routen följer samma struktur som tidigare, där hittar vi inget speciellt. Men kikar vi på SQL-frågan så har den ett inslag av en if-sats (CASE) som kollar status på kolumnerna `deleted` och `published` och därefter bestämmer vilken status innehållet har och lämnar svaret i den nyskapade kolumnen `status`.
 
 Om jag nu klickar på länken till `home` så kan det se ut så här.
 
@@ -748,7 +723,7 @@ Om jag nu klickar på länken till `home` så kan det se ut så här.
 
 Vi kan titta på vyn som är ansvarig för att visa upp resultatet.
 
-```php
+```html
 <article>
     <header>
         <h1><?= esc($content->title) ?></h1>
@@ -758,14 +733,17 @@ Vi kan titta på vyn som är ansvarig för att visa upp resultatet.
 </article>
 ```
 
-Inte så mycket kod men notera hur publikationsdatumet skrivs ut i två varianter, en läsbar för människor `modified` och en läsbar för maskiner `modified_iso8601`.
+Det är inte så mycket kod men notera hur publikationsdatumet skrivs ut i två varianter, en läsbar för människor `modified` och en läsbar för maskiner `modified_iso8601`.
 
 Att skapa de två datumen väljer jag att göra med SQL-koden. Vi kan titta på routen och dess SQL.
 
 ```php
-} else {
-    // Try matching content for type page and its path
-    $sql = <<<EOD
+default:
+    if (substr($route, 0, 5) === "blog/") {
+        //  Matches blog/slug, display content by slug and type post
+    } else {
+        // Try matching content for type page and its path
+        $sql = <<<EOD
 SELECT
     *,
     DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS modified_iso8601,
@@ -778,40 +756,40 @@ WHERE
     AND published <= NOW()
 ;
 EOD;
-    $content = $db->executeFetch($sql, [$route, "page"]);
-    if (!$content) {
-        header("HTTP/1.0 404 Not Found");
-        $title = "404";
-        $view[] = "view/404.php";
-        break;
-    }
-    $title = $content->title;
-    $view[] = "view/page.php";
+        $content = $db->executeFetch($sql, [$route, "page"]);
+        if (!$content) {
+            header("HTTP/1.0 404 Not Found");
+            $title = "404";
+            $view[] = "view/404.php";
+            break;
+        }
+        $title = $content->title;
+        $view[] = "view/page.php";
 }
 ```
 
-Själva SQL-frågan löser dels de två datumformaten där den väljer det första datumet av `updated` och `published` som inte är null som bas för `modified`.
+Själva SQL-frågan löser de två datumformaten där den väljer det första datumet av `updated` och `published` som inte är null som bas för `modified`.
 
-I WHERE-delen så säkerställs att sidans path matchar och den är publicerad och inte raderad, annars väljs den inte.
+I WHERE-delen så säkerställs att sidans path matchar, att det är rätt type och att den är publicerad och inte raderad, annars väljs den inte.
 
 Om SQL-frågan ger ett tomt svar tillbaka så visas en 404-sida.
 
 [FIGURE src=image/snapvt17/content-404.png?w=w2 caption="404 för att sidan kunde inte visas."]
 
-Här var en sida som inte kunde visas för att den antingen inte fanns, den var raderad, eller var den ännu inte publicerad.
+Ovan visas en sida som inte kunde visas för att den antingen inte fanns, den var raderad, eller var den ännu inte publicerad.
 
 
 
 Visa innehållet som blogg- och bloggposter {#blog}
 -------------------------------
 
-Då ger vi oss på att visa innehåll för bloggen vilket är allt innehåll av typen `post`. grunden är densamma som för typen `page`, nu vill vi bara presentera resultatet mer som en blog.
+Då ger vi oss på att visa innehåll för bloggen vilket är allt innehåll av typen `post`. Grunden är densamma som för typen `page`, nu vill vi bara presentera resultatet mer som en blog.
 
 Lite så här.
 
 [FIGURE src=image/snapvt17/content-blog.png?w=w2 caption="En blogglista med alla inlägg med senaste inlägget först."]
 
-Routen som förbereder visningen ser ut ungefär som visningen av sidorna. När man gjort grunderna så handlar det ibland bara om nyanser i skillnader.
+Routen som förbereder visningen ser ut ungefär som visningen av sidorna (typen page). När man gjort grunderna så handlar det ibland bara om nyanser i skillnader i koden och utmaningen ligger i att skriva kod där man inte upprepar sig och koddelar kan återanvändas.
 
 ```php
 case "blog":
@@ -820,10 +798,10 @@ case "blog":
 
     $sql = <<<EOD
 SELECT
-*,
-DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS published_iso8601,
-DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%d') AS published
-FROM content
+    *,
+    DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%dT%TZ') AS published_iso8601,
+    DATE_FORMAT(COALESCE(updated, published), '%Y-%m-%d') AS published
+    FROM content
 WHERE type=?
 ORDER BY published DESC
 ;
@@ -834,9 +812,9 @@ EOD;
 
 Jag valde att jobba med publiseringsdatum, iallafall namngav jag kolumnen till `published`. I bloggsammanhang jobbar man ofta med ett publikationsdatum och ofta ändras eller uppdateras inte blogginlägget.
 
-Vyn som lista inläggen är en kombination av de två vyerna som visade översikten av page samt dess innehåll.
+Vyn som listar inläggen är en kombination av de två vyerna som visade översikten av page samt dess innehåll.
 
-```php
+```html
 <?php
 if (!$resultset) {
     return;
@@ -862,7 +840,7 @@ Klickar man på länken till bloggposten så skall den visas på en egen sida. D
 
 [FIGURE src=image/snapvt17/content-blogpost.png?w=w2 caption="En bloggpost visas nästan på samma sätt som en page."]
 
-Routen delar grundstrukturen med den delen som visar typen page via dess path. Skillnaden ligger aningen i SQL-frågan och att vi här använder slugen istället.
+Routen delar grundstrukturen med den delen som visar typen page via dess path. Skillnaden ligger i SQL-frågan där slug används istället för path.
 
 ```php
 default:
@@ -963,7 +941,7 @@ $textfilter = new Textfilter();
 $text = $textfilter->doFilter($textOrig, "bbcode,markdown,link");
 ```
 
-Den formatterade/filtrerade texten skulle du kunna se ut så här.
+Den formatterade/filtrerade texten `$textOrig` skulle du kunna se ut så här.
 
 ```html
 <p>Först lite vanlig text följt av en tom rad.</p>
@@ -994,17 +972,19 @@ Bilden ovan visar hur exemplet tar innehållets råa källa och formatterar det 
 
 Hur kan man tänka kring säkerhet och vad det innebär att ge användaren denna typen av kontroll över innehållet?
 
-Man får vara lite försiktig, om man inte filtrerar bort HTML-elementen med `strip _tags()` så har användaren fulla möjligheter att skriva både HTML och JavaScript rätt in i sidan. Men kanske vill man det. Det beror ju på hur väl man känner den som skriver texten. Här får man välja taktik.
+Man får vara lite försiktig, om man inte filtrerar bort HTML-elementen med [`strip _tags()`](http://php.net/manual/en/function.strip-tags.php) så har användaren fulla möjligheter att skriva både HTML och JavaScript rätt in i sidan. Men kanske vill man det. Det beror ju på hur väl man känner den som skriver texten. Här får man välja taktik.
 
-Man får även tänka på att vissa filter inte är kompatibla med varandra. Om man till exempel använde `nl2br` innan ett `markdown` så kan det första filtret förstöra för det andra. Kanske borde man styra vilka kombinationer av filter som är tillgängliga, eller så ger man all makt till användaren.
+Det finns tillfällen då jag själv uppskattat möjligheten att skriva PHP-kod rätt in i sådant innehåll som vi nu sett. Det rörde sig om ramverk som annars krävde större energi för att lösa ett krav på alternativt sätt. Men en sådan möjlighet öppnar naturligtvis hela din server för den som kan redigera innehållet.
 
-Det finns inget färdigt exempel för klassen `Textfilter`, det lämnas som en övning till läsaren.
+Man får även tänka på att vissa filter inte är kompatibla med varandra eller att ordningen av filtren är viktig. Om man till exempel använde `nl2br` innan ett `markdown` så kan det första filtret förstöra för det andra. Kanske borde man styra vilka kombinationer av filter som är tillgängliga, eller så ger man all makt till användaren.
+
+Det finns inget färdigt exempel för klassen `Textfilter`, det lämnas som en programmeringsövning till läsaren.
 
 
 
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Artikeln visar översiktligt i hur du kan bygga upp en databas för att lagra och CRUD-hantera innehålla i databasen samt tekniker för att presentera det i webbplatsen som olika typer av innehåll.
+Artikeln visar översiktligt i hur du kan bygga upp en databas för att lagra och CRUD-hantera innehåll i databasen samt tekniker för att presentera det i webbplatsen som olika typer av innehåll.
 
 Det finns en tråd i forumet där du kan [ställa frågor eller bidra med tips och trix](t/XXX) rörande artikeln.

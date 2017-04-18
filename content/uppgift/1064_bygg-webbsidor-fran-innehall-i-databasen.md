@@ -41,13 +41,13 @@ Krav {#krav}
 
 1. Spara din SQL-kod som sätter upp tabell och initialt innehåll i `anax-lite/sql/setup-content.sql`.
 
-1. Det skall finnas en administrativ del som skyddas av inloggning. Där kan den inloggade användaren (eller administratören) uppdatera innehållet enligt CRUD.
+1. Det skall finnas en administrativ del som skyddas av inloggning. Där kan den inloggade användaren (eller administratören) skapa, uppdatera och radera innehåll (CRUD).
 
 1. Se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin. 
 
-1. I din översikt av innehållet, visa minst innehållets id, titeln, published, created, updated, deleted och path samt slug.
+1. I din översikt av innehållet, visa minst innehållets id, titeln, published, created, updated, deleted, path och slug.
 
-1. Det skall finnas felhantering om det finns två likadana slugs.
+1. Det skall finnas (någon enkel form av) felhantering om det finns två likadana slugs.
 
 1. Det skall finnas felhantering så att man kan ha tomma path.
 
@@ -66,7 +66,10 @@ Extrauppgift {#extra}
 
 1. Skapa en möjlighet att se de sidor som inte är publicerade.
 
+1. Skapa funktioner så att endast ingressen (första delen av bloggposten) visas i översikten samt lägg till en länk för "Läs mer »".
+
 1. Hämta från konfig om antal bloggposter på första sidan och om hela eller bara ingressen skall visas.
+
 
 1. Använd ett _flash-minne_ för att skriva ut information till användaren när innehåll raderas, skapas, sparas men det sker via redirects. Det är för att göra gränssnittet tydligare för användaren.
 

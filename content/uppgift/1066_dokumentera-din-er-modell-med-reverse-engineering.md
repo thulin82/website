@@ -43,6 +43,8 @@ Krav {#krav}
 
 1. Ta en snapshot av din ER-modell och spara som en PNG-fil döpt till `er.png` (kom ihåg att spara med små bokstäver i filnamnet).
 
+1. Skriv en kort beskrivning av din databas (i Markdown) i filen `anax-lite.md`. Det räcker om du skriver en introduktion och en en-raders kommentar till varje tabell.
+
 
 
 Extrauppgift {#extra}

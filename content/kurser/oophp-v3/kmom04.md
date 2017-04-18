@@ -115,5 +115,6 @@ Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Berätta hur du tänkte när du strukturerade klasserna och databasen?
-* Gjorde du SQL-labben och vad tyckte du om den?
+* Finns något att säga kring din klass för texfilter, eller rent allmänt om formattering och filtrering av text som sparas i databasen av användaren?
+* Berätta hur du tänkte när du strukturerade klasserna och databasen för webbsidor och bloggposter?
+* Hur känns det att dokumentera databasen så här i efterhand?
