@@ -48,6 +48,8 @@ Krav {#krav}
 
 1. Spara din SQL-kod som sätter upp tabell och initialt innehåll i `anax-lite/sql/setup-user-admin.sql`.
 
+1. Se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin (om du har en admin-behörighet).
+
 1. Skapa funktionalitet så att en administratör kan visa samliga konton i en HTML-tabell. Tabellen skall kunna sortera per kolumn och paginering skall fungera. 
 
 1. Man skall kunna söka efter en användare. De användare som matchar sökningen skall visas.
