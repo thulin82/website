@@ -133,7 +133,7 @@ Läs [instruktionen till kursmoment 03](kurser/oophp-v3/kmom03).
 
 ###Kmom04: Lagra innehåll i databasen {#kmom04}
 
-Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i de flesta webbplatser. Nu har vi både en mall för webbplatser och koll på databaser och objektorienterad programmering. låt oss då försöka använda allt detta för att lagra undan innehåll i databasen och sedan visa upp det som webbsidor och bloggposter i webbplatsen.
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
 Läs [instruktionen till kursmoment 04](kurser/oophp-v3/kmom04).
 

@@ -17,11 +17,11 @@ Utveckling av nytt kursmoment pågår. Kursmomentet <strike>släpps senaste den 
 
 [/INFO]
 
-Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren. Vi skall visa upp vanliga sidor och en blogg.
+Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen är en kärnfunktionalitet i många webbplatser. Så här långt har vi en fungerande webbplats om använder sig av databas och objektorienterad programmering. Vi fortsätter att använda de teknikerna för att bygga grunden i en databasdriven webbplats där innehåll lagras i databasen och kan redigeras av användaren (CRUD). Vi skall sedan visa upp innehållet som vanliga sidor i webbplatsen samt en blogg.
 
-Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
+Utmaningen är att hitta en bra lagringsstruktur i databastabellen, en bra och flexibel struktur som låter oss använda innehållet på ett smidigt sätt i webbplatsen och leder till effektiv SQL. Tänker man till när man skapar lagringsstrukturen så kan man spara ett antal kodrader när man sedan skall redigera, och visa upp innehållet i webbplatsen.
 
-Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur dom klarar både det ena och det andra.
+Utmaningen ligger även i hur man väljer att konstruera sina klasser, kanske går det att skapa en generell struktur som klarar både det ena och det andra och även är förberedd för att byggas ut.
 
 [FIGURE src=image/snapvt17/content-delete-edit.png?w=w2 caption="Ett formulär för att jobba CRUD med innehåll i databasen."]
 
@@ -50,7 +50,7 @@ Det finns inga specifika lästips i kurslitteraturen.
 
 Läs följande artiklar.
 
-1. Läs översiktligt igenom "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)" som ger dig grundläggande förståelse för hur du kan modellera en databas.
+1. Läs översiktligt igenom "[Kokbok för databasmodellering](kunskap/kokbok-for-databasmodellering)" som ger dig grundläggande förståelse för hur du kan tänka när du modellerar en databas.
 
 
 
@@ -86,7 +86,9 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgift "[Bygg webbsidor från innehåll i databasen](uppgift/bygg-webbsidor-fran-innehall-i-databasen)" och spara filerna i `me/anax-lite`.
 
-1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". 
+1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom04/er1`.
+
+1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (4.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
 
 

@@ -24,6 +24,7 @@ Förkunskaper {#forkunskaper}
 Du kan använda MySQL Workbench. 
 
 _mysqldump_
+https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html
 
 
 
@@ -38,16 +39,18 @@ Se när Mikael gör reverse engineering och skapar en ER-modell av en befintlig 
 Krav {#krav}
 -----------------------
 
-1. Gör en ER-modell via . Spara modellen som en .
+1. Gör en ER-modell via MySQL Workbench Reverse Engineering. Spara modellen som en MySQL Workbeng Models och döp till `anax-lite.mwb`.
 
-1. Spara ned SQL-koden för din databas.
+1. Spara ned SQL-koden för din databas och döp till `anax-lite.sql`.
+
+1. Ta en snapshot av din ER-modell och spara som en PNG-fil döpt till `er.png` (kom ihåg att spara med små bokstäver i filnamnet).
 
 
 
 Extrauppgift {#extra}
 -----------------------
 
-1. Din klass kan stödja filter som `strip` som gör `strip_tags()` samt `esc` som gör `htmlentities` (eller `htmlspecialchars`).
+Det finns ingen extrauppgift.
 
 
 

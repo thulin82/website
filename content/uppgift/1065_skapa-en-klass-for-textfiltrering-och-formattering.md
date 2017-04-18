@@ -20,9 +20,9 @@ Du skall skapa en klass som kan filtrera och formattera rå text till HTML.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artikeln "[Lagra innehåll i databas för webbsidor och bloggposter (v2)](kunskap/kom-igang-med-php-pdo-och-mysql-v2)".
+Du har jobbat igenom artikeln "[Lagra innehåll i databas för webbsidor och bloggposter (v2)](kunskap/lagra-innehall-i-databas-for-webbsidor-och-bloggposter-v2)".
 
-Du har kikat igenom följande artiklar och textformattering.
+Du har kikat igenom följande artiklar om textfiltrering och formattering.
 
 1. ["Reguljära uttryck i PHP ger BBCode formattering"](coachen/reguljara-uttryck-i-php-ger-bbcode-formattering).
 1. ["Låt PHP-funktion make_clickable() automatiskt skapa klickbara länkar"](coachen/lat-php-funktion-make-clickable-automatiskt-skapa-klickbara-lankar).
@@ -33,7 +33,7 @@ Du har kikat igenom följande artiklar och textformattering.
 Introduktion {#intro}
 -----------------------
 
-Samla koden som gör textfiltrering och formattering i en egen klass som du kan använda i ditt Anax Lite för att filtrera/formattera innehåll från databasen.
+Samla koden för textfiltrering och formattering i en egen klass som du kan använda i ditt Anax Lite för att filtrera/formattera innehåll från databasen.
 
 
 
@@ -42,9 +42,11 @@ Krav {#krav}
 
 1. Din klass skall stödja `nl2br`, `bbcode`, `link` samt `markdown`.
 
+1. Din klass skall innehålla en metod som tar text (sträng) och filter (kommaseparerad sträng) som inparametrar och returnerar den modifierade texten.
+
 1. Din klass skall finnas i Anax Lite. Du väljer själv hur du integrerar klassen och vilka beroenden den skall ha.
 
-1. Gör en testroute som visar hur du formatterar innehållet med Markdown.
+1. Gör en testroute som visar hur du formatterar innehåll på de sätt som skall stödjas.
 
 1. Validera och publicera din kod.
 
@@ -54,8 +56,6 @@ Extrauppgift {#extra}
 -----------------------
 
 1. Din klass kan stödja filter som `strip` som gör `strip_tags()` samt `esc` som gör `htmlentities` (eller `htmlspecialchars`).
-
-1. Bara visa inledningen av en artikel, <!--more-->.
 
 
 

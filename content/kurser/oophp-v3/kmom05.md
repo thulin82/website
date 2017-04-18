@@ -77,7 +77,7 @@ Use composer require anax/database
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Reverse engineer och visa EER diagram.
+1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom05/er2`.
 
 <!--
 
