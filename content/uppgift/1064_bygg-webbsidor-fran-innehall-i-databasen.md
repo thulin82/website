@@ -32,7 +32,7 @@ Introduktion {#intro}
 
 Du skall bygga in hantering för innehåll i ditt Anax Lite. Det skall fungera (ungefär) på motsvarande sätt som det gjorde i artikeln. Men du har full frihet hur du väljer att integrera det i ditt Anax Lite.
 
-Se till att din databas innehåller en användare doe med lösenord doe och en admin med lösenord admin. Det är för att rättaren skall kunna komma åt och logga in.
+Se till att din databas innehåller en användare doe med lösenord doe och en admin med lösenord admin, förutsatt att du har en annan behörighet för admin. Det är för att rättaren skall kunna komma åt och logga in.
 
 Tips. Förslagsvis bygger du en generell Content-klass och specifika klasser för Page och Blog, men du väljer strukturen helt själv.
 
@@ -45,7 +45,7 @@ Krav {#krav}
 
 1. Det skall finnas en administrativ del som skyddas av inloggning. Där kan den inloggade användaren (eller administratören) skapa, uppdatera och radera innehåll (CRUD).
 
-1. Se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin. 
+1. Se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin (om du har en admin-behörighet).
 
 1. I din översikt av innehållet visar du minst innehållets id, titeln, published, created, updated, deleted, path och slug.
 
