@@ -987,4 +987,4 @@ Avslutningsvis {#avslutning}
 
 Artikeln visar översiktligt i hur du kan bygga upp en databas för att lagra och CRUD-hantera innehåll i databasen samt tekniker för att presentera det i webbplatsen som olika typer av innehåll.
 
-Det finns en tråd i forumet där du kan [ställa frågor eller bidra med tips och trix](t/XXX) rörande artikeln.
+Det finns en tråd i forumet där du kan [ställa frågor eller bidra med tips och trix](t/6435) rörande artikeln.
