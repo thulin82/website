@@ -43,6 +43,8 @@ Krav {#krav}
 
 1. Det skall finnas en administrativ del som skyddas av inloggning. Där kan den inloggade användaren (eller administratören) uppdatera innehållet enligt CRUD.
 
+1. Se till att din databas innehåller en användare doe med lösenord doe och en användare admin med lösenord admin. 
+
 1. I din översikt av innehållet, visa minst innehållets id, titeln, published, created, updated, deleted och path samt slug.
 
 1. Det skall finnas felhantering om det finns två likadana slugs.

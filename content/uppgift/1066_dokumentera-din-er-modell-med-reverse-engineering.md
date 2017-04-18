@@ -21,18 +21,16 @@ Din databas håller på och växer och du vill dokumentera den genom att rita up
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du kan använda MySQL Workbench. 
-
-_mysqldump_
-https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html
+Du kan använda MySQL Workbench sedan tidigare.
 
 
 
 Introduktion {#intro}
 -----------------------
 
-Se när Mikael gör reverse engineering och skapar en ER-modell av en befintlig databas.
+Se när Mikael gör reverse engineering och skapar en ER-modell av en befintlig databas. Exemplet visas [1 timme in i videon](https://youtu.be/fqC_VQh_E74?t=3629).
 
+Använd kommandot [`mysqldump`](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) för att dumpa ut SQL-kod från en databas, som en backup av databasen som kan flyttas till en annan maskin.
 
 
 
