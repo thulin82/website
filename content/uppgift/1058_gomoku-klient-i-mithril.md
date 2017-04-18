@@ -43,7 +43,7 @@ Lägg även till `npm start` scriptet, som underlätter vid utveckling och testn
 }
 ```
 
-För att appen kan hämta från och skicka data till `localhost:1337` där vår Gomoku server måste du lägga till urlen i Content-Security-Policy. Android emulatorn använder dock ip adressen `10.0.2.2` för att komma åt localhost på din värd dator. Så vi lägger till både `http://localhost:1337` och `http://10.0.2.2:1337` i vår CSP.
+För att appen kan hämta från och skicka data till vår Gomoku server på `localhost:1337` måste du lägga till urlen i Content-Security-Policy. Android emulatorn använder dock ip adressen `10.0.2.2` för att komma åt localhost på din värd dator. Så vi lägger till både `http://localhost:1337` och `http://10.0.2.2:1337` i vår CSP.
 
 Vi måste därför veta vilken platform vi kör programmet på för att kunna avgöra vilken url vi skall använda. Vi använder oss av pluginen `cordova-plugin-device` ([Dokumentation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device/index.html)) för att bestämma plattform. Pluginen installeras genom följande kommando.
 

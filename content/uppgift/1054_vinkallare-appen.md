@@ -52,6 +52,8 @@ Lägg även till `npm start` scriptet, som underlätter vid utveckling och testn
 }
 ```
 
+Under utveckling rekommenderar vi att ni laddar ner och kör REM api't lokalt. [Installationsintruktioner](kunskap/lokalt-rem-api) för att installera och köra REM api't lokalt.
+
 För att appen kan hämta från och skicka data till `rem-rest-api.herokuapp.com` måste du lägga till urlen i Content-Security-Policy.
 
 [INFO]
