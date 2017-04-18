@@ -117,4 +117,6 @@ Se till att följande frågor besvaras i texten:
 
 * Finns något att säga kring din klass för texfilter, eller rent allmänt om formattering och filtrering av text som sparas i databasen av användaren?
 * Berätta hur du tänkte när du strukturerade klasserna och databasen för webbsidor och bloggposter?
+* Förklara vilka routes som används för att demonstrera funktionaliteten för webbsidor och blogg (så att en utomstående kan testa).
 * Hur känns det att dokumentera databasen så här i efterhand?
+* Om du är självkritisk till koden du skriver i Anax Lite, ser du förbättringspotential och möjligheter till alternativ struktur av din kod?
