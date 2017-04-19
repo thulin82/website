@@ -26,11 +26,7 @@ Projektidé och upplägg {#upplagg}
 
 Du är engagerad student och funderar på hur du kan nå ut och bidra till en förändring av omvärlden och säkra framtiden. Du känner en pulserande ådra av entreprenörsskap i dig. Du bestämmer dig för att "bygga en webapp" som bidrar till förändring. 
 
-Du kan dock inte bestämma dig för vad du skall göra. Dina alternativ är:
-
-1. Delta i tävlingen ["Hack for Sweden"](http://hackforsweden.se/) med ett eget bidrag.
-1. Du väljer att inte direkt delta i tävligen, men du använder [en eller flera datakällor som publiceras via tävlingen](http://hackforsweden.se/data/) som källa till din webapp.
-1. Du väljer att bygga på [Arbetsförmedlingens API](http://www.arbetsformedlingen.se/psidata) och skapa en webapp som fokuserar på alla jobb inom webb-branschen.
+Det finns en årlig tävling, ["Hack for Sweden"](http://hackforsweden.se/), där öppen data används för att bygga appar som fokuserar på nytänkande och innovation. I detta projekt ska du använda [en eller flera datakällor som publiceras via tävlingen](http://hackforsweden.se/data/) som källa till din webapp. Vi ser självklart fram emot att du deltar i tävlingen Hack for Sweden med din app.
 
 Du funderar och väljer en ansats för din webapp.
 
@@ -70,19 +66,17 @@ Skapa en egen kortfattad specifikation för din webapp genom att beskriva din t�
 
 Välj ut de datakällor du skall använda och vilken data du behöver ur varje datakälla. Berätta om ditt val.
 
-Skapa ett bash-skript `update-sources.bash` som hämtar hem senaste informationen från datakällorna och sparar en lokal kopia av dem. Skriptet skall skriva ut vilka filer som uppdateras och om det gick bra.
-
-Din webapp skall jobba mot lokala (cachade) datakällor och behöver inte vara beroende av en direktuppkoppling mot tjänsten.
-
 
 
 ###Krav 2: Arkitektur, dokumentation och manual {#k2}
 
-Beskriv arkitekturen för din lösning. Valde du jQuery Mobile, Mithril eller annan struktur? Berätta varför du valde som du gjorde.
+Beskriv arkitekturen för din lösning. Berätta varför du valde som du gjorde.
 
 Berätta hur du organiserade din kod och filer, så att en annan teknisk person snabbt kan sätta sig in i din webapp.
 
 Skapa en fil `README.md` som kort berättar om webappen, hur man startar den och vilka olika "features" den innehåller.
+
+Din webapp ska göras med Mithril, Cordova, minst stödja Android och webbläsare, samt innehålla logga och splash screen.
 
 
 
@@ -98,7 +92,15 @@ Berätta om någon av de möjligheter som finns för att förbättra din lösnin
 
 
 
-###Krav 4, 5, 6: Valbart krav (optionellt) {#k4}
+###Krav 4: Offline-läge (optionellt) {#k4}
+
+Använd dina kunskaper från kursmoment 5 och `cordova-plugin-file` för att cacha datan från dina valda datakällor så appen kan användas utan internetuppkoppling.
+
+När du ansluter till ett api och hämtar data ska du spara den till en fil som du hämtar datan ifrån om det inte finns någon internetuppkoppling.
+
+
+
+###Krav 5, 6: Valbart krav (optionellt) {#k5}
 
 Om du anser att din insats är värd ett högre betyg så måste du visa det. Det innebär att du formulerar de optionella kraven på egen hand, i samspråk med läraren om det behövs.
 
@@ -110,21 +112,16 @@ Tänk på att även ett *enklare* projekt kan ha features som kan lyftas upp som
 
 Här är en icke komplett lista på saker som till exempel kan vara värda att lyfta upp.
 
-* Att göra appen i Cordova.
-* Att stödja flera plattformar i Cordova.
-* Att använda API:er i Cordova och integrera med en hårdvara.
-* Design, layout, användbarhet.
-* En svår/tuff/tidskrävande teknisk implementation
-* Egna widgetar och användande av Mithril.
-* Webapp som kan installeras på hemmaskärmen.
+* Använd Cordova plugin för Geolocation, Media, Camera, Contacts osv.
+* Optimera din design för mobila enheter och beskriv dina design val.
+* En svår/tuff teknisk implementation
 * En komplex och omfattande webapp med flera features.
-* Kombinera datakällor från flera leverantörer.
 * Integration med tjänster för social media.
-* Större användning av externa bibliotek likt handlebar.
+* Koppla data från flera olika API:er, som samverkar på ett nytänkande sätt.
 
 Alltså, lyft upp det som du anser borde lyftas upp. Beskriv vad du gjort, varför, hur och hur mycket tid det tog. Var tydlig -- bedömning utgår från din beskrivning och därefter tittar vi på din lösning. 
 
-På denna del kan du få totalt 30 poäng (10 + 10 + 10).
+På denna del kan du få totalt 20 poäng (10 + 10).
 
 
 
