@@ -96,10 +96,10 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgiften "Enhetstestning och kodtäckning". Spara uppdateringarna du gör i ditt `me/anax-lite`.
 
-1. Gör uppgiften "Dokumentation med phpdoc". Spara uppdateringarna du gör i ditt `me/anax-lite`.
-
 1. Gör uppgiften med "Index och prestanda". Spara uppdateringarna du gör i ditt `me/anax-lite`, använd kommentarer för att beskriva vad du gör.
 <!-- index mot movie och content -->
+
+1. Gör uppgiften "Dokumentation med phpdoc". Spara uppdateringarna du gör i ditt `me/anax-lite`.
 
 1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom06/er3`.
 
