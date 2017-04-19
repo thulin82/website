@@ -1,9 +1,13 @@
 ---
-author: mos
+author:
+    - mos
+category:
+    - kurs oophp-v3
+    - kurs oophp
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom05: TBD
+Kmom05: Programmera i databasen
 ==================================
 
 [WARNING]
@@ -28,14 +32,27 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Det finns inga läsanvisningar till detta kursmomentet.
+Det finns inga specifika läsanvisningar till detta kursmomentet.
 
+
+
+###Artiklar {#artiklar}
+
+Det finns inga artiklar.
 
 
 
 ###Lästips {#lastips}
 
-Få en insikt i komplexiteten att skydda sig från Cross-Site Scripting (XSS) och relaterade sårbarheter. Läs en [PHP RFC som föreslår en SPL-klass Escaper](https://wiki.php.net/rfc/escaper). Det ger en bra genomgång i ämnet.
+Kika på följande lästips om du finner dem intressanta.
+
+1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 12. Integritetsvillkor
+    * Kap 14: Lagrade procedurer
+    * Kap 15: Aktiva databaser och triggers
+    * Kap 23: Transaktioner
+
+Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 
 
@@ -47,29 +64,15 @@ Få en insikt i komplexiteten att skydda sig från Cross-Site Scripting (XSS) oc
 
 ###Övningar {#ovningar}
 
-Gör följande övning, den förbereder dig inför uppgifterna och löser ett par av dem.
+Gör följande övning, den förbereder dig inför uppgifterna.
 
-1. Artikel om enhetstestning (makefile, travis).
+1. Jobba igenom "[Transaktioner i databas](kunskap/transaktioner-i-databas)" för att lära dig grunderna i hur du använder transaktioner i databaser. Spara dina exempelprogram i `me/kmom05/progsql`.
 
-<!-- 
+1. Jobba igenom "[Lagrade procedurer i databas](kunskap/lagrade-procedurer-i-databas)" för att lära dig om lagrade procedurer och vad du kan göra med dem. Spara dina exempelprogram i `me/kmom05/progsql`.
 
-Unittest (Guess, Dice, Cal) Xdebug install
+1. Jobba igenom "[Triggers i databas](kunskap/triggers-i-databas)" för att lära dig om vad du kan göra med triggers och hur de fungerar. Spara dina exempelprogram i `me/kmom05/progsql`.
 
-Use composer require anax/database
-
-(Content som markdown med anax/textfilter)
-
--->
-
-
-<!--
-1. Ramverksmoduler att bygga själv.
-* CValidate
-* CFlash
-* CCache
-
-(Olika språk, anpassa med int/loc) 
--->
+1. Jobba igenom "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/progsql`.
 
 
 
@@ -77,13 +80,12 @@ Use composer require anax/database
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
+1. Gör uppgift "Programmera i databasen". Spara koden i ditt `me/anax-lite`.
+
 1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom05/er2`.
 
-<!--
+1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (5.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
-1. phpdoc
-
--->
 
 
 ###Extra {#extra}
@@ -109,7 +111,5 @@ Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Det blir en del moduler till ditt Anax nu, hur känns det?
-* Berätta hur du tänkte när du löste uppgifterna, hur tänkte du när du strukturerade klasserna och sidkontrollerna?
-* Börjar du få en känsla för hur du kan strukturera din kod i klasser och moduler, eller kanske inte?
-* Snart har du grunderna klara i ditt Anax, grunderna som kan skapa många webbplatser, är det något du saknar så här långt, kanske några moduler som du känner som viktiga i ditt Anax?
+* Gick det bra att komma igång med det vi kallar programmering av databas, med transaktioner, lagrade procedurer, triggers, funktioner?
+* Hur är din syn på att programmera på detta viset i databasen?

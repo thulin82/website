@@ -1,9 +1,13 @@
 ---
-author: mos
+author:
+    - mos
+category:
+    - kurs oophp-v3
+    - kurs oophp
 revision:
     "2016-12-16": (PA1, mos) Utveckling påbörjad.
 ...
-Kmom06: Bildbearbetning och galleri
+Kmom06: Enhetstestning
 ==================================
 
 [WARNING]
@@ -13,21 +17,9 @@ Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 1/5 2017
 
 [/WARNING]
 
-Här handlar det om flexibel hantering av bilder och att låta PHP vara behjälpligt att beskära och processa bilder på serversidan. Du får jobba med det inbyggda grafik-biblioteket PHP GD och med hjälp av det bygger du upp ett skript `img.php` som ger dig en flexibel hantering av bilder.
+TBD.
 
-Därefter tar du hjälp av ditt skript `img.php` och använder det för att skapa ett enkelt galleri som visar bilderna som ligger i en katalogstruktur.
-
-Beskärning av bilder med PHP kan vara ett kraftfullt hjälpmedel för att ge bilderna lite karaktär genom att beskära dem.
-
-[FIGURE src=/image/kodak/kodim15.png?sa=jpg&w=w2&h=200&cf&sharpen&area=15,10,55,20 caption="Tack till Kodak-flickan för hjälpen i exemplet med img.php."]
-
-Med hjälp av `img.php` blir det enklare att skapa ett galleri.
-
-[FIGURE src=/image/snapshot/gallery-start.jpg?w=w2 caption="Så här kan ett galleri se ut när du är klar. Startsidan för galleriet som innehåller både bilder och kataloger."]
-
-Kursmomentet avslutas med att du kodar ett par moduler till ditt Anax.
-
-*(Kursmomentet omfattar cirka 20 studietimmar fördelat på läsanvisningar, uppgifter och övningar samt resultat, redovisning och eftertanke.)*
+<small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
 
 
@@ -40,25 +32,30 @@ Läsanvisningar  {#lasanvisningar}
 
 ###Kurslitteratur  {#kurslitteratur}
 
-Läs [artikeln om `CImage` och `img.php`](opensource/cimage).
-
-> *CImage is a PHP class which enables scaling, cropping, filtering effects and processing of images using PHP GD. The script img.php uses CImage to enable server-side image processing together with caching and optimization of the processed images.*
+Det finns inga specifika läsanvisningar till detta kursmomentet.
 
 
 
-###Lektionsmaterial  {#lektionsmaterial}
+###Artiklar {#artiklar}
 
-Följande föreläsningsmaterial användes i samband med campus-kursen höstterminen 2013. Det kan vara av intresse att skumma igen -- även för distanstudenten.
+Läs följande.
 
-* [Översikt av kursmomentet](<a href='https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom06-ht13.pdf'>https://dl.dropboxusercontent.com/u/24315211/oophp/oophp-kmom06-ht13.pdf</a>).
+1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
 
 
 
 ###Lästips {#lastips}
 
-Vill du läsa mer om bildhantering med PHP, så kan du läsa om tre andra populära programvaror som gör detta, nämligen [timtumb](<a href='http://code.google.com/p/timthumb/'>http://code.google.com/p/timthumb/</a>), [phpTHumb](<a href='http://phpthumb.sourceforge.net/'>http://phpthumb.sourceforge.net/</a>) och [ImageMagick](<a href='http://www.imagemagick.org/script/index.php'>http://www.imagemagick.org/script/index.php</a>).
+Kika på följande lästips om du finner dem intressanta.
 
-Framförallt ImageMagick har riktigt bra manualer om bildhantering i allmänhet. En bra startpunkt för den som vill fördjupa sig i ämnet.
+1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 22: Fysiska lagringsstrukturer i databaser
+
+1. [Databasteknik](kunskap/boken-databasteknik)
+    * Kap 9: Sammanfattning av SQL-kommandon
+    * Kap 21: Index och prestanda
+
+Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
 
 
 
@@ -70,14 +67,26 @@ Framförallt ImageMagick har riktigt bra manualer om bildhantering i allmänhet.
 
 ###Övningar {#ovningar}
 
-Gör följande övning, den förbereder dig inför uppgifterna och löser dem till stor del.
+Gör följande övning, den förbereder dig inför uppgifterna.
 
-1. Jobba igenom guiden ["Skapa egen kod för att beskära och förminska bilder med PHP GD"](kunskap/skapa-egen-kod-for-att-beskara-och-forminska-bilder-med-php-gd).
+1. Jobba igenom övningen "[Index och prestanda i MySQL](kunskap/index-och-prestanda-i-mysql)" som tränar dig i hur du kan optimera dina databasfrågor med index. Spara dina testprogram i `me/kmom06/index`.
 
-1. Jobba igenom guiden ["Gör ett galleri för att visa upp bilder med PHP"](kunskap/gor-ett-galleri-for-att-visa-upp-bilder-med-php).
+<!--
+Artikel om hur man skriver bra SQL frågor på ett optimerat sätt.
+-->
 
+1. Artikel om enhetstestning (makefile, travis).
 
-<!-- index mot movie och content -->
+<!-- Unittest (Guess, Dice, Cal) Xdebug install -->
+
+<!--
+1. Ramverksmoduler att bygga själv.
+* CValidate
+* CFlash
+* CCache
+
+(Olika språk, anpassa med int/loc) 
+-->
 
 
 
@@ -85,20 +94,22 @@ Gör följande övning, den förbereder dig inför uppgifterna och löser dem ti
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgiften ["Skapa img.php och en klass CImage för bildhantering"](uppgift/skapa-img-php-och-en-klass-cimage-for-bildhantering). 
+1. Gör uppgiften "Enhetstestning och kodtäckning". Spara uppdateringarna du gör i ditt `me/anax-lite`.
 
-1. Gör uppgiften ["Skapa gallery.php och en klass CGallery för ett bildgalleri"](uppgift/skapa-gallery-php-och-en-klass-cgallery-for-ett-bildgalleri).
+1. Gör uppgiften "Dokumentation med phpdoc". Spara uppdateringarna du gör i ditt `me/anax-lite`.
+
+1. Gör uppgiften med "Index och prestanda". Spara uppdateringarna du gör i ditt `me/anax-lite`, använd kommentarer för att beskriva vad du gör.
+<!-- index mot movie och content -->
+
+1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom06/er3`.
+
+1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (6.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
 
 
 ###Extra {#extra}
 
-1. Uppgradera ditt `img.php` till att hantera transparenta PNG-bilder: ["Uppgradera din img.php till att hantera transparenta bilder med PHP GD"](coachen/uppgradera-din-img-php-till-att-hantera-transparenta-bilder-med-php-gd).
-
-2. Tjuvkika på lite avancerad läsning om cachning med HTTP headers.
-  * ["Increasing Application Performance with HTTP Cache Headers"](<a href='https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers'>https://devcenter.heroku.com/articles/increasing-application-performance-with-http-cache-headers</a>)
-  * ["REST Better: HTTP Cache"](<a href='http://odino.org/rest-better-http-cache/'>http://odino.org/rest-better-http-cache/</a>)
-  * ["Caching Tutorial for Web Authors and Webmasters"](<a href='http://www.mnot.net/cache_docs/'>http://www.mnot.net/cache_docs/</a>)
+Det finns inga extrauppgifter.
 
 
 
@@ -107,12 +118,9 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](oophp/redovisa).
+Läs [instruktionen om hur du skall redovisa](kurser/oophp-v3/redovisa).
 
 Se till att följande frågor besvaras i texten:
 
-* Hade du erfarenheter av bildhantering sedan tidigare?
-* Hur känns det att jobba i PHP GD?
-* Hur känns det att jobba med `img.php`, ett bra verktyg i din verktygslåda?
-* Detta var sista kursmomentet innan projektet, hur ser du på ditt Anax nu, en summering så här långt? 
-* Finns det något du saknar så här långt, kanske några moduler som du känner som viktiga i ditt Anax?
+* Hur var din erfarenhet av enhetstester inför detta kursmoment?
+* Lärde du dig något ytterligare om enhetstestning under kursmomentet?

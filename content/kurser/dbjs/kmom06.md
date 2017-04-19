@@ -33,7 +33,6 @@ Läs följande:
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 9: Sammanfattning av SQL-kommandon
-    * Kap 13: Säkerhet i databaser
     * Kap 21: Index och prestanda
 
 Vissa av kapitlen finns i [bokens webbkurs](http://www.databasteknik.se/webbkursen/), del 2.
@@ -43,13 +42,14 @@ Saker vi inte hanterat:
 
 * Kap 3: Mer om datamodellering
 * Kap 11: Normalformer och normalisering
+* Kap 13: Säkerhet i databaser
 -->
 
 
 
 ###Artiklar {#artiklar}
 
-Det finns inga artiklar.
+Läs följande.
 
 1. Bekanta dig översiktligt med de olika delarna av manualen i [MySQL om optimering](https://dev.mysql.com/doc/refman/5.7/en/optimization.html). Se vilka delar som kan optimeras och på vilket sätt. Skumma igenom de olika delarna.
 

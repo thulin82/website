@@ -138,14 +138,14 @@ Att lagra innehåll i databasen för att sedan kunna visa upp det i webbplatsen 
 Läs [instruktionen till kursmoment 04](kurser/oophp-v3/kmom04).
 
 
-###Kmom05: TBD {#kmom05}
+###Kmom05: Programmera i databasen {#kmom05}
 
 TBD.
 
 Läs [instruktionen till kursmoment 05](kurser/oophp-v3/kmom05).
 
 
-###Kmom06: TBD {#kmom06}
+###Kmom06: Enhetstestning {#kmom06}
 
 TBD.
 
