@@ -51,6 +51,8 @@ Utöver kraven har du fria valmöjligheter att lägga nivån på den höjd du k�
 5. Gör din webbshop efter bästa förmåga. Får du tid över kan du passa på att snygga till den.
 
 
+Glöm inte att validera ofta och göra en `dbwebb publish anax-lite` när du är klar.
+
 
 Extrauppgift {#extra}
 -----------------------
