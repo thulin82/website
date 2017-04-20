@@ -68,7 +68,7 @@ Det finns inga extra lästips.
 
 ###Övningar {#ovningar}
 
-Det finns inga övningar.
+1. Gör uppgiften "[Läsa en lokal fil med Cordova](kunskap/lasa-lokal-fil-med-cordova)".
 
 
 
