@@ -18,8 +18,6 @@ I linux-kursen skapade vi kommandoradsklienter som skickade frågor till en node
 Introduktion {#intro}
 -----------------------
 
-Din app kan vara en vinkällare, modelltåg, Lego byggsätt samling eller liknande. Välj något du tycker är roligt och som du vill ha koll på hemma.
-
 Börja med att skapa ett cordova projekt i `me/kmom06/gomoku/` och efter det ett mithril projekt i `me/kmom06/gomoku/www/`, precis som vi har gjort i tidigare kursmoment.
 
 ```bash

@@ -1,18 +1,21 @@
 ---
 author: mos
 revision:
-  "2017-03-17": (C, efo) Förberedelser för webapp-v2.
+  "2017-04-21": (C, efo) Ändringar inför släpp av kmom.
+  "2017-03-17": (B, efo) Förberedelser för webapp-v2.
   "2015-12-11": (A, mos) Första utgåvan för kursen.
 ...
 Kmom06: Gomoku
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-05-01.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-05-01</strike>.
+
+Kursmomentet tillgängligt per den 2017-04-21.
+[/INFO]
 
 
-Vi har vid ett tidigare tillfälle skrivit en server som kan spela Gomoku. I detta kursmoment skall vi använda denna server, men spela på den via våra mobial enheter.
+Vi har vid ett tidigare tillfälle skrivit en server som kan spela Gomoku. I detta kursmoment skall vi använda denna server, men spela via servern på våra mobila enheter.
 
 
 
@@ -21,7 +24,7 @@ Vi har vid ett tidigare tillfälle skrivit en server som kan spela Gomoku. I det
 Nedan finns ett exempel på hur det kan se ut när vi spelar via vår mobila enhet mot Gomoku servern.
 
 
-<!-- [FIGURE src=/image/snapht15/Strip-dileme-appli-mobile-650-Finalenglish3.jpg caption="Så här kan man ibland känna när man väljer mellan native app och hybrid app." href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/"] -->
+[YOUTUBE src=bso8oeUIFvg width=630 caption="Gomoku i kursmoment 6."]
 
 
 
