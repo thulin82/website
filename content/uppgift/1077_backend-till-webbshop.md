@@ -20,7 +20,9 @@ Nu är det dags att sätta kunskaperna på prov. Du ska skapa grunden till en we
 Förkunskaper {#forkunskaper}
 -----------------------
 
-artiklarna...
+Du har jobbat igenom [övningarna tillhörande kursmomentet](kurser/oophp-v3/kmom05#ovningar).
+
+
 
 
 
