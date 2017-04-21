@@ -27,7 +27,9 @@ artiklarna...
 Introduktion {#intro}
 -----------------------
 
-För att få en förståelse för vad som förväntas kan du kika på [devdungeon's webbshop](https://shop.devdungeon.com/). Tar man bort skalet, utseendet, liknar det kursmomentets mål. Du kommer jobba vidare med webbshoppen i projektet så en bra grund nu ger dig en smidigare väg i mål. Vad som ska säljas i din affär bestämmer du själv. Det kan vara kläder, djur, elektronik m.m. Se bara till så du använder godkänt material i din produkt.
+[FIGURE src=/image/oophp/v3/webbshop.png?w=w1&q=70 caption="Ett exempel på en webbshop."]
+
+För att få en förståelse för vad som förväntas kan du kika på [devdungeon's webbshop](https://shop.devdungeon.com/). Tar man bort skalet, utseendet, liknar det kursmomentets mål. Du kommer jobba vidare med webbshoppen i projektet så en bra grund nu ger dig en smidigare väg i mål. Vad som ska säljas i din affär bestämmer du själv. Det kan vara kläder, djur, elektronik m.m. Tänk på upphovsrätten om du lånar material från nätet.
 
 
 
