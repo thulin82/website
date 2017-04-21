@@ -4,10 +4,10 @@ category: webbprogrammering
 revision:
   "2017-03-14": (A, efo) Första utgåvan i samband med kursen webapp v2.
 ...
-Gomoku klient
+Gomoku klient i Mithril
 ==================================
 
-I linux-kursen skapade vi en kommandoradsklienter för en nodejs Gomoku-server. I detta kursmoment skall vi ta klienten ett steg vidare och bygga den som en SPA applikation i mithril.
+I linux-kursen skapade vi kommandoradsklienter som skickade frågor till en nodejs Gomoku-server. I detta kursmoment skall vi ta klienten ett steg vidare och bygga den som en SPA applikation i mithril.
 
 
 
@@ -57,7 +57,7 @@ Vi kan nu i all kod som anropas från vår `onDeviceReady: function() { }` anvä
 var current_platform = device.platform;
 ```
 
-Vi användar oss av Gomoku servern som finns i [`example/gomoku`](webapp/repo/example/gomoku) och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/gomoku). Den har skrivits om så den kan köras enbart med node via följande kommando. Serverns api kan ses genom att gå till `localhost:1337` i webbläsaren.
+Vi användar oss av Gomoku servern som finns i [`example/gomoku`](webapp/repo/example/gomoku) och på [Github](https://github.com/dbwebb-se/webapp/tree/master/example/gomoku). Serverns API är dokumenterat i [Github repot](https://github.com/dbwebb-se/webapp/blob/master/example/gomoku/api.md). Servern har skrivits om så den kan köras enbart med node via följande kommando.
 
 ```bash
 $ node index-server.js
