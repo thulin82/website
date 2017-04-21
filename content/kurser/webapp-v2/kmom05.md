@@ -21,6 +21,11 @@ I detta kursmomentet ska vi kolla på hur vi kan läsa data från en lokal fil o
 
 När du är klar har du skapat en mobil webapp till kunden.
 
+Nedan finns ett exempel på hur det kan se ut när din app är klar.
+
+
+[YOUTUBE src=xmri6W5wB2E width=630 caption="Pizza app."]
+
 
 
 <small>*(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka 20 studietimmar inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)*</small>
