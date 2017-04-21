@@ -10,14 +10,24 @@ revision:
 Kmom05: Programmera i databasen
 ==================================
 
-[WARNING]
+[INFO]
 **Version 3 av oophp.**
 
-Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 24/4 2017.
+Utveckling av nytt kursmoment pågår. Kursmomentet <strike>släpps senaste den 24/4 2017</strike> släpptes 2017-04-21.
 
-[/WARNING]
+[/INFO]
 
-TBD.
+Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
+
+Du får implementera en större databasmodell och skriva SQL där du använder programmeringskonstruktioner för att skriva koden i SQL.
+
+Du får även bygga en Anax Lite backend i till en webbshop.
+
+[FIGURE src=image/snapvt17/lagrad-procedur.png caption="Programmera i en databas med lagrade procedurer."]
+
+[FIGURE src=image/snapvt17/triggers.png caption="Programmera i en databas med triggers."]
+
+[FIGURE src=image/snapvt17/udf.png caption="Programmera i en databas med egendefinierade funktioner."]
 
 <small><i>(Detta är instruktionen för kursmomentet och omfattar det som skall göras inom ramen för kursmomentet. Momentet omfattar cirka **20 studietimmar** inklusive läsning, arbete med övningar och uppgifter, felsökning, problemlösning, redovisning och eftertanke. Läs igenom hela kursmomentet innan du börjar jobba. Om möjligt -- planera och prioritera var du vill lägga tiden.)</i></small>
 
@@ -26,7 +36,7 @@ TBD.
 Läsanvisningar  {#lasanvisningar}
 ---------------------------------
 
-*(ca: 0-2 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
+*(ca: 0-6 studietimmar, inklusive extra läsning i referenslitteraturen efter eget val)*
 
 
 
@@ -44,7 +54,7 @@ Det finns inga artiklar.
 
 ###Lästips {#lastips}
 
-Kika på följande lästips om du finner dem intressanta.
+Kika gärna på följande lästips.
 
 1. [Databasteknik](kunskap/boken-databasteknik)
     * Kap 12. Integritetsvillkor
@@ -72,7 +82,7 @@ Gör följande övning, den förbereder dig inför uppgifterna.
 
 1. Jobba igenom "[Triggers i databas](kunskap/triggers-i-databas)" för att lära dig om vad du kan göra med triggers och hur de fungerar. Spara dina exempelprogram i `me/kmom05/progsql`.
 
-1. Jobba igenom "[Egen-definierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/progsql`.
+1. Jobba igenom "[Egendefinierade funktioner i databas](kunskap/egen-definierade-funktioner-i-databas)" för att lära dig hur konceptet kan användas i en databas. Spara dina exempelprogram i `me/kmom05/progsql`.
 
 
 
@@ -80,11 +90,11 @@ Gör följande övning, den förbereder dig inför uppgifterna.
 
 Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
-1. Gör uppgift "Programmera i databasen". Spara koden i ditt `me/anax-lite`.
+1. Gör uppgift "[Skapa backend till en webbshop](uppgift/skapa-backend-till-en-webbshop)". Spara koden i ditt `me/anax-lite`.
 
-1. Gör uppgiften "Dokumentation med phpdoc". Spara uppdateringarna du gör i ditt `me/anax-lite`.
+1. Gör uppgiften "[Dokumentera PHP med phpdoc och phpDocumentor](uppgift/dokumentera-php-med-phpdoc-och-phpdocumentor)". Spara uppdateringarna du gör i ditt `me/anax-lite`.
 
-1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom05/er2`.
+1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom05/er2`. Det är samma sak som du gjorde i förra kmomentent.
 
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (5.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
@@ -115,3 +125,5 @@ Se till att följande frågor besvaras i texten:
 
 * Gick det bra att komma igång med det vi kallar programmering av databas, med transaktioner, lagrade procedurer, triggers, funktioner?
 * Hur är din syn på att programmera på detta viset i databasen?
+* Några reflektioner kring din kod för backenden till webbshopen?
+* Något du vill säga om koden generellt i och kring Anax Lite?

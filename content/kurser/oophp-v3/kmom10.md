@@ -37,6 +37,12 @@ PS. Du kan byta temat från "Movies" till musik, datorer, husvagnar, hundar, min
 
 
 
+<!--
+1. Gör ett betalningsformulär där användaren fyller i sina uppgifter. Formuläret ska valideras på ett rimligt sätt. Man ska tex inte kunna utelämna något fält eller ange felaktiga uppgifter. I rimlig mån.
+-->
+
+
+
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 

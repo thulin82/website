@@ -140,7 +140,11 @@ Läs [instruktionen till kursmoment 04](kurser/oophp-v3/kmom04).
 
 ###Kmom05: Programmera i databasen {#kmom05}
 
-TBD.
+Kursmomenten handlar dels om att programmera en databas med transaktioner, lagrade procedurer, triggers och inbyggda funktioner.
+
+Du får implementera en större databasmodell och skriva SQL där du använder programmeringskonstruktioner för att skriva koden i SQL.
+
+Du får även bygga en backend till en webbshop.
 
 Läs [instruktionen till kursmoment 05](kurser/oophp-v3/kmom05).
 
