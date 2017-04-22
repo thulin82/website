@@ -11,7 +11,7 @@ revision:
 Dokumentera PHP med phpdoc och phpDocumentor
 ==================================
 
-Du ska dokumentera ditt ramverk med phpdoc och phpDocumenter. Det handlar om att dra nytta av dina docblock kommenterar och av fördelen med att följa rekommendationer av phpmd och phpcs. Tillsammans underlättar det när du nu skall automatgenerera din dokumentationen.
+Du ska dokumentera ditt ramverk med phpdoc och phpDocumenter. Det handlar om att dra nytta av dina docblock kommenterarer och av fördelen med att följa rekommendationer av phpmd och phpcs. Tillsammans underlättar det när du nu skall automatgenerera din dokumentation.
 
 <!--more-->
 
@@ -58,7 +58,7 @@ Krav {#krav}
 
 1. Checka in och committa dokumentationen som en del av ditt repo.
 
-1. Validera och publisera.
+1. Validera och publicera.
 
 
 

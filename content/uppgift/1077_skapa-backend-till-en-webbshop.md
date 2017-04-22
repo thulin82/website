@@ -35,7 +35,7 @@ Du har jobbat igenom följande övningar:
 Introduktion {#intro}
 -----------------------
 
-Du skall bygga ett CRUD-baserat adminsgränssnitt samt tränga på att programmera i databasen via largade procedurer, funktioner, triggers och transaktion.
+Du skall bygga ett CRUD-baserat adminsgränssnitt samt träna på att programmera i databasen via lagrade procedurer, funktioner, triggers och transaktioner.
 
 
 
@@ -69,7 +69,7 @@ En viktig del i uppgiften är att träna på att använda lagrade procedurer, in
 
 Du kan även använda dessa konstruktioner på din övriga databaskod i Anax Lite.
 
-Du kan alltså delvis lösa uppgiften genom att skriva om din gmala databaskod. Var tydlig i redovisningstexten om du gör på det viset.
+Du kan alltså delvis lösa uppgiften genom att skriva om din gamla databaskod. Var tydlig i redovisningstexten om du gör på det viset.
 
 
 
@@ -92,7 +92,7 @@ Krav {#krav}
 
 1. Skriv dokumentation i `anax-lite/sql/setup-webshop.md` som visar hur man använder ditt SQL API mot databasen för att jobba med varukorg, order och rapporten för beställning.
 
-1. Validera och publisera.
+1. Validera och publicera.
 
 
 
