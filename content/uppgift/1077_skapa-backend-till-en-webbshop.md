@@ -84,9 +84,9 @@ Krav {#krav}
 
 1. Skapa ett gränssnitt i Anax Lite där man kan göra CRUD på produkter och lager.
 
-1. Skapa ren SQL för att simulera en varukorg. Man skall kunna lägga till/ta bort en produkt i en varukorg. Man skall kunna visa varukorgensinnehåll.
+1. Skapa ren SQL för att implementera en varukorg. Man skall kunna lägga till/ta bort en produkt i en varukorg. Man skall kunna visa varukorgens innehåll.
 
-1. Skapa ren SQL för att göra en order av en varukorg. Man skall kunna visa innehållet i en order och ta bort en order. När en varukorg övergår till en order skall du även "flytta" produkten från lagret till ordern.
+1. Skapa ren SQL för att göra en order baserat på en varukorg. Man skall kunna visa innehållet i en order och ta bort en order. När en varukorg övergår till en order skall du även "flytta" motsvarande antal produkter från lagret till ordern.
 
 1. Lägg in stöd så att databasen har koll på när du behöver beställa nya produkter. När en produkt har färre än 5 produkter i lagret så lägger du in en rad, tillsammans med en tidsstämpel för när det hände, i en speciell tabell där du kan se vilka produkter som behövs beställas. Skapa SQL för en rapport som visar de produkter du skall beställa.
 
