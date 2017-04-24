@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-04-24": (B, mos) Justerade poängberäkning för individuell examination.
     "2017-02-23": (A, mos) Första utgåvan.
 ...
 Poängbedömning
@@ -42,11 +43,14 @@ Följande tabell används vid bedömning av den individuella examinationen.
 
 | Bedömningspunkt | Poäng | Din poäng |
 |-----------------|-------|-----------|
-| Den obligatoriska delen är implementerad och fungerar felfritt. | 10 | |
-| Optionellt uppgift 1 är implementerad och fungerar felfritt. | 10 | |
-| Optionellt uppgift 2 är implementerad och fungerar felfritt. | 10 | |
-| Optionellt uppgift 3 är implementerad och fungerar felfritt. | 10 | |
-| TOTALT | 40 | |
+| Uppgift 1 är implementerad och fungerar felfritt. | 10 | |
+| Uppgift 2 är implementerad och fungerar felfritt. | 10 | |
+| Uppgift 3 är implementerad och fungerar felfritt. | 10 | |
+| Uppgift 4 är implementerad och fungerar felfritt. | 10 | |
+| Uppgift 5 är implementerad och fungerar felfritt. | 10 | |
+| Uppgift 6 är implementerad och fungerar felfritt. | 10 | |
+| TOTALT | 60 | |
+| Totalpoäng delat med 1.5 = | | |
 
 
 
