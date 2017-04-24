@@ -51,7 +51,7 @@ Githubs API har en [begränsning](https://developer.github.com/v3/#rate-limiting
 Krav {#krav}
 -----------------------
 
-1. Skapa en vy där du presenterar information om dina Github repos. Som minimum namn och när det senast var uppdaterat.
+1. Skapa en vy där du presenterar information om dina Github repos, om du inte har egna kan du använda Dbwebbs istället. Som minimum namn och när repot senast var uppdaterat för varje repo. Dbwebbs användarnamn är `dbwebb-se` på Github.
 
 1. Skapa en vy där du detekterar och skriver ut information om användarens enhets orientering och storlek. Tips: använd mithril funktionen `m.redraw()` för att rita vyn på nytt.
 
