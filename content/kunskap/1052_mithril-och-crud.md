@@ -21,7 +21,7 @@ När vi vill skapa nya data-objekt använder vi oss av `POST`. I mithril har vi 
 ```javascript
 return m.request({
     method: "POST",
-    url: "http://rem-rest-api.herokuapp.com/computers",
+    url: "http://rem-rest-api.herokuapp.com/api/computers",
     data: { name : "MacBook Pro", year : 2016 },
     withCredentials: true
 }).then(function () { });
@@ -36,7 +36,7 @@ För att uppdatera data-objekt använder vi oss av `PUT`. Vi skickar även här 
 ```javascript
 return m.request({
     method: "PUT",
-    url: "http://rem-rest-api.herokuapp.com/computers/:id",
+    url: "http://rem-rest-api.herokuapp.com/api/computers/:id",
     data: { id: 1, name : "MacBook Pro", year : 2017 },
     withCredentials: true
 }).then(function () { });
@@ -51,7 +51,7 @@ För att ta bort data-objekt använder vi oss av `DELETE`. Här skickar vi bara 
 ```javascript
 return m.request({
     method: "DELETE",
-    url: "http://rem-rest-api.herokuapp.com/computers/:id",
+    url: "http://rem-rest-api.herokuapp.com/api/computers/:id",
     data: { id: 1 },
     withCredentials: true
 }).then(function () { });
