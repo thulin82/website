@@ -45,7 +45,7 @@ All SQL-kod skall sparas i filen `db.sql` tillsammans med tydliga kommentarer. S
 
 
 
-###Del 1 5p {2del1}
+###Del 1 5p {#2del1}
 
 Kunden vill ha en ebutik till webbplatsen. De skall visa upp och sälja sina ekologiska produkter. Det finns (för tillfället) fyra produkter som är kopplade till en eller flera produktkategorier enligt följande.
 
@@ -79,7 +79,7 @@ Kunden har nya önskemål kring databasen.
 
 
 
-###Del 1 5p {3del1}
+###Del 1 5p {#3del1}
 
 Skriv SQL DML för att lägga till en ny produktkategori "jäst".
 
