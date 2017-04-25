@@ -5,7 +5,7 @@ category:
     - kurs oophp-v3
     - kurs oophp
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-04-21": (A, mos) Släppt i första utgåvan.
 ...
 Kmom05: Programmera i databasen
 ==================================
