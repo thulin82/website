@@ -106,7 +106,7 @@ Kunden vill ha ett terminalbaserat gränssnitt för att jobba mot databasen. Du 
 
 
 
-###Del 1 5p {4del1}
+###Del 1 5p {#4del1}
 
 Skapa terminalprogrammet `client.js` som kan:
 
