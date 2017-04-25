@@ -1,10 +1,14 @@
 ---
-author: mos
+author:
+    - mos
 category:
     - databas
+    - sql
     - kurs dbjs
+    - kurs oophp
 revision:
-    "2017-03-06": (A, mos) Första utgåvan inför kursen dbjs.
+    "2017-04-25": "(B, mos) Nu även i kursen oophp."
+    "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
 ...
 Transaktioner i databas
 ==================================
@@ -28,7 +32,7 @@ Du kan läsa om [transaktioner i manualen för MySQL](https://dev.mysql.com/doc/
 
 Du kan även läsa om [transaktioner i manualen för SQLite](https://www.sqlite.org/transactional.html).
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/transaction.sql) finner du på GitHub.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/transaction.sql) finner du på GitHub eller i ditt kursrepo (dbjs, oophp) under `example/sql/transaction.sql`.
 
 
 
@@ -44,7 +48,7 @@ ACID är en samling properties för databastransaktioner. De beskriver hur en tr
 | I - Isolation   | Även om flera transaktioner exekveras samtidigt så skall resultatet från transaktionerna betraktas som om de exekverades sekventiellt. En transaktion kan inte se effekter av en delvis exekverad transaktion. |
 | D - Durability  | När en transaktion är *committad* så skall den vara beständig, även om strömmen går och databasmotorn krashar. |
 
-En transaktion skall alltså vara atomär, behålla konsistensen i databasen, vara isolerad från övriga transaktioner och vara beständig när den är committad.
+En transaktion skall alltså vara atomär, bevara konsistensen i databasen, vara isolerad från övriga transaktioner och vara beständig när den är committad.
 
 
 
@@ -117,7 +121,7 @@ Till vår hjälp kommer transaktionen.
 
 ###Flytta med transaktion {#flyttrans}
 
-Vi lägger flytten av pengarna inom ramen för en transaktion, så att pengaflytten blir atomär och databasen behåller sin konsistens oavsett vad som händer.
+Vi lägger flytten av pengarna inom ramen för en transaktion, så att flytten av pengar blir atomär och databasen behåller sin konsistens oavsett vad som händer.
 
 ```sql
 --

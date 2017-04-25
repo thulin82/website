@@ -1,10 +1,14 @@
 ---
-author: mos
+author:
+    - mos
 category:
     - databas
+    - sql
     - kurs dbjs
+    - kurs oophp
 revision:
-    "2017-03-06": (A, mos) Första utgåvan inför kursen dbjs.
+    "2017-04-25": "(B, mos) Nu även i kursen oophp."
+    "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
 ...
 Triggers i databas
 ==================================
@@ -30,7 +34,7 @@ Artikeln visar grunderna i [triggers i MySQL](https://dev.mysql.com/doc/refman/5
 
 Om du jobbar i [SQLite så fungerar triggers](https://www.sqlite.org/lang_createtrigger.html) även där.
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/triggers.sql) finner du på GitHub.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/triggers.sql) finner du på GitHub eller i ditt kursrepo (dbjs, oophp) under `example/sql/stored_procedure.sql`.
 
 
 
@@ -53,7 +57,6 @@ CREATE TABLE Account
     `balance` DECIMAL(4, 2)
 );
 
-DELETE FROM Account;
 INSERT INTO Account
 VALUES
 	("1111", "Adam", 10.0),
@@ -138,14 +141,13 @@ DROP TABLE IF EXISTS AccountLog;
 CREATE TABLE AccountLog
 (
     `id` INTEGER PRIMARY KEY AUTO_INCREMENT,
-    `when` DATETIME DEFAULT CURRENT_TIMESTAMP,
+    `when` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `what` VARCHAR(20),
     `account` CHAR(4),
     `balance` DECIMAL(4, 2),
     `amount` DECIMAL(4, 2)
 );
 
-DELETE FROM AccountLog;
 SELECT * FROM AccountLog;
 ```
 

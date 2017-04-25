@@ -1,10 +1,14 @@
 ---
-author: mos
+author:
+    - mos
 category:
     - databas
+    - sql
     - kurs dbjs
+    - kurs oophp
 revision:
-    "2017-03-06": (A, mos) Första utgåvan inför kursen dbjs.
+    "2017-04-25": "(B, mos) Nu även i kursen oophp, la till stycke om parametrar och variabler."
+    "2017-03-06": "(A, mos) Första utgåvan inför kursen dbjs."
 ...
 Lagrade procedurer i databas
 ==================================
@@ -30,7 +34,7 @@ Exemplet visar hur du jobbar med lagrade procedurer i MySQL.
 
 SQLite stödjer inte lagrade procedurer.
 
-[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/stored_procedure.sql) finner du på GitHub.
+[SQL-koden som visas i exemplet](https://github.com/dbwebb-se/dbjs/blob/master/example/sql/stored_procedure.sql) finner du på GitHub eller i ditt kursrepo (dbjs, oophp) under `example/sql/stored_procedure.sql`.
 
 
 
@@ -62,7 +66,6 @@ CREATE TABLE Account
     `balance` DECIMAL(4, 2)
 );
 
-DELETE FROM Account;
 INSERT INTO Account
 VALUES
 	("1111", "Adam", 10.0),
@@ -103,14 +106,14 @@ Vad kan en lagrad procedur göra för oss här?
 
 
 
-En lagrad procedur för att flytta {#sp}
+En lagrad procedur för att flytta pengar {#sp}
 --------------------------------------
 
 Vi kan bara flytta pengar om det finns några pengar. Vi behöver alltså kontrollera om Adam har så mycket pengar på kontot som han nu är benägen att flytta till Eva.
 
-Men, detta är inget vi direkt kan skriva i SQL.
+Detta är inget vi direkt kan skriva i SQL, iallafall inte utan att skriva en mer komplex SQL-sats.
 
-Nåväl, då gör vi en lagrad procedur som flyttar pengarna, förutsatt att de finns.
+Istället gör vi en lagrad procedur som flyttar pengarna, förutsatt att de finns.
 
 
 
@@ -122,7 +125,7 @@ För att skapa en lagrad procedur så omsluter vi dess kod på följande sätt, 
 --
 -- Procedure moveMoney()
 --
-DROP PROCEDURE moveMoney;
+DROP PROCEDURE IF EXISTS moveMoney;
 
 DELIMITER //
 
@@ -271,6 +274,64 @@ END IF;
 ```
 
 Jag valde att omsluta koden i IF-satsen, det finns nämligen ingen `RETURN` i en lagrad procedur, vilket hade varit ett alternativ när man väl förstod att transaktionen inte kunde utföras.
+
+
+
+IN och UT parametrar {#inout}
+--------------------------------------
+
+En lagrad procedur kan ta IN, OUT och INOUT parametrar. Här är ett exempel på en lagrad procedur som sätter ett värde och som anroparen kan lagra i en variabel utanför den lagrade proceduren.
+
+```sql
+--
+-- Try OUT variables from SP
+--
+DROP PROCEDURE IF EXISTS getMoney;
+
+DELIMITER //
+
+CREATE PROCEDURE getMoney(
+	IN account CHAR(4),
+    OUT total NUMERIC(4, 2)
+)
+BEGIN
+	SELECT balance INTO total FROM Account WHERE id = account;
+END
+//
+
+DELIMITER ;
+
+CALL getMoney("1111", @sum);
+SELECT @sum;
+```
+
+Proceduren tar två argument, det ena är IN och det andra är OUT.
+
+I SELECT-satsen hämtas ett värde från databasen och lagras i variabeln.
+
+När anropet sker med CALL så bifogas en variabel som efter anropet kan läsas av och användas vidare.
+
+En lagrad procedur kan även ta ett argument som är INOUT.
+
+Vill du skriva en SELECT-sats som sätter flera variabler på en gång så skriver du så här.
+
+```sql
+SELECT id, balance INTO idx, total FROM Account WHERE id = account;
+```
+
+Ovan förutsätts att `idx` och `total` är argument, eller lokala variabler i den lagrade proceduren.
+
+Samma princip kan man använda även utanför en lagrad procedur, om man vill hämta värden och för tillfället spara undan i lokala variabler.
+
+```sql
+--
+-- Select mutiple into variables
+--
+SELECT 1, 2 INTO @a, @b;
+SELECT @a, @b;
+```
+
+Med sådan taktik kan man göra "lite mer" i en vanlig SQL-fil, vilket kan vara behändigt när databasen växer.
 
 
 
