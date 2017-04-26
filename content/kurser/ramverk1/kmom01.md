@@ -21,12 +21,21 @@ TBD.
 
 enhetstest o doc dag 1
 lokal utvecklingsmiljö och testverktyg
+PHPUnit
+Behat
+Selenium
+Enhetstestning databas
+Kompabilitet databas (sqlite, mysql, postgresql)
 travis, scrutinizer, circle
 docker
 debug och profiling med Xdebug
 MVC och databasdrivna modeller
 form
 flat file med frontmatter
+
+Ajax
+login Ajax
+(zend module?)
 
 
 
