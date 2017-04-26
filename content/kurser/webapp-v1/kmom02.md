@@ -8,11 +8,6 @@ revision:
 Kmom02: Bygg ut din mobila webapp
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-03.
-[/WARNING]
-
-
 Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. Men med mobila terminaler finns det en del som är specifikt och skiljer sig från desktop miljöer. Låt oss bygga vidare på me-appen och testa runt för att se vilka möjligheter och begränsningar som kan finnas. Det blir en blandning av olika tekniker men fokus är att lära oss mer om den mobila utvecklingsmiljön.
 
 <!--more-->
@@ -110,7 +105,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](webapp/redovisa).
+Läs [instruktionen om hur du skall redovisa](webapp-v1/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

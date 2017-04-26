@@ -6,11 +6,6 @@ revision:
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-05-08.
-[/WARNING]
-
-
 Detta kursmoment avslutar och examinerar kursen.
 
 Upplägget är enligt följande:

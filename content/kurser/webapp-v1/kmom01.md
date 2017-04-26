@@ -7,11 +7,6 @@ revision:
 Kmom01: En mobil webapp i HTML
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-03-27.
-[/WARNING]
-
-
 Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript och vi kallar dem för mobila webbapplikationer. Som ett första steg så läser vi på om grunderna och vi bygger en me-app med fokus på mindre terminaler.
 
 Eller ja, den blir skalbar så den fungerar även på större plattformar, men vårt fokus är mindre, mobila enheter.
@@ -87,7 +82,7 @@ Det finns inga extra lästips.
 
 Installera labbmiljön för kursen.
 
-1. [Installera labbmiljön](webapp/labbmiljo) som behövs för kursen.
+1. [Installera labbmiljön](webapp-v1/labbmiljo) som behövs för kursen.
 
 1. [Installera kommandot `dbwebb`  samt kursrepot för kursen `webapp`](dbwebb-cli/clone).
 
@@ -125,7 +120,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](webapp/redovisa).
+Läs [instruktionen om hur du skall redovisa](webapp-v1/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

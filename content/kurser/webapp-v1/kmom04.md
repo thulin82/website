@@ -7,11 +7,6 @@ revision:
 Kmom04: SPA och MVC
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-17.
-[/WARNING]
-
-
 Vi använt jQuery Mobile en del, låt oss nu titta på ett alternativ till att skriva klientfokuserad kod. Jag väljer att titta på ramverket Mithril som är ett ungt och inte alltför stort JavaScript-ramverk med fokus på klientbaserad programmering.
 
 Mithril erbjuder en kodstruktur som är likt *model, view, controller (MVC)* som är en ofta använd design arkitektur. Vi prövar hur en lösning motsvarande meappen kan se ut med Mithril, därefter utvärderar vi och jämför med jQuery Mobile.
@@ -106,7 +101,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](webapp/redovisa).
+Läs [instruktionen om hur du skall redovisa](webapp-v1/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

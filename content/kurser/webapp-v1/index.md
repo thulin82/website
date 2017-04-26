@@ -1,13 +1,14 @@
 ---
-title: webapp
+title: webapp v1
 
 author: mos
 revision:
-  "2015-12-11": (E, mos) Inklusive kmom06 och översyn av syftet.
-  "2015-12-04": (D, mos) Inklusive kmom05.
-  "2015-11-23": (C, mos) Inklusive kmom03 & 04.
-  "2015-10-26": (B, mos) Inklusive kmom01 & 02.
-  "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
+    "2017-04-26": (F, mos) Fixa länkar till webapp-v1.
+    "2015-12-11": (E, mos) Inklusive kmom06 och översyn av syftet.
+    "2015-12-04": (D, mos) Inklusive kmom05.
+    "2015-11-23": (C, mos) Inklusive kmom03 & 04.
+    "2015-10-26": (B, mos) Inklusive kmom01 & 02.
+    "2015-03-02": (A, mos) Första revisionen inför kursstart HT2015.
 ...
 Kursen "webapp"
 ==================================
@@ -17,9 +18,12 @@ Kursen **Webbapplikationer för mobila enheter**, a.k.a. *webapp*, lär dig hur 
 [INFO]
 **Tidigare version av kursen**
 
-Från och med vårterminen 2017 läsperiod 4 finns en ny version av kursen.
+Dett är version 1 av kursen webapp.
 
-Kursmaterialet till [den nya kursen finns här](kurser/webapp-v2).
+Från och med vårterminen 2017 läsperiod 4 finns en ny version av kursen, version 2. Kursmaterialet till [den nya kursen finns här](kurser/webapp-v2).
+
+Om du har påbörjat version 1 så skall du avsluta den och dess kursmoment, eller kan du välja att gå om webapp-v2 från början.
+  
 [/INFO]
 
 
@@ -100,7 +104,7 @@ Kursen är uppdelad i kursmoment där varje kursmoment uppskattas till 20h stude
 
 Tanken är att komma igång med utveckling av mobila applikationer. De mobila applikationerna utvecklar vi med tekniker baserade på HTML, CSS och JavaScript och vi kallar dem för mobila webbapplikationer. Som ett första steg så läser vi på om grunderna och vi bygger en me-app med fokus på mindre terminaler.
 
-[Instruktion till kursmoment 01](webapp/kmom01).
+[Instruktion till kursmoment 01](webapp-v1/kmom01).
 
 
 
@@ -109,7 +113,7 @@ Tanken är att komma igång med utveckling av mobila applikationer. De mobila ap
 Vi har en me-app, från föregående kursmoment, som är utvecklad mot mobila enheter. Men med mobila terminaler finns det en del som är specifikt och skiljer sig från desktop miljöer. Låt oss bygga vidare på me-appen och testa runt för att se vilka möjligheter och begränsningar som kan finnas. Det blir en blandning av olika tekniker men fokus är att lära oss mer om den mobila utvecklingsmiljön.
 
 
-[Instruktion till kursmoment 02](webapp/kmom02).
+[Instruktion till kursmoment 02](webapp-v1/kmom02).
 
 
 
@@ -121,7 +125,7 @@ Kanske når vi en gräns där vi tycker att ett ramverk likt jQm börjar inkrän
 
 På vägen tar vi och övar att söka och visa information i JSON-filer.
 
-[Instruktion till kursmoment 03](webapp/kmom03).
+[Instruktion till kursmoment 03](webapp-v1/kmom03).
 
 
 
@@ -131,7 +135,7 @@ Vi använt jQuery Mobile en del, låt oss nu titta på ett alternativ till att s
 
 Mithril erbjuder en kodstruktur som är likt *model, view, controller (MVC)* som är en ofta använd design arkitektur. Vi prövar hur en lösning motsvarande meappen kan se ut med Mithril, därefter utvärderar vi och jämför med jQuery Mobile.
 
-[Instruktion till kursmoment 04](webapp/kmom04).
+[Instruktion till kursmoment 04](webapp-v1/kmom04).
 
 
 
@@ -139,7 +143,7 @@ Mithril erbjuder en kodstruktur som är likt *model, view, controller (MVC)* som
 
 Du skall nu utföra ett mindre projekt till en kund. Du får själv välja vilken teknik du jobbar med -- jQuery Mobile eller Mithril. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
 
-[Instruktion till kursmoment 05](webapp/kmom05).
+[Instruktion till kursmoment 05](webapp-v1/kmom05).
 
 
 
@@ -147,7 +151,7 @@ Du skall nu utföra ett mindre projekt till en kund. Du får själv välja vilke
 
 Du tar din nyligen utvecklade webapp och gör den till en hybrid webapp som går att installera på enheter likt en vanlig native app.
 
-[Instruktion till kursmoment 06](webapp/kmom06).
+[Instruktion till kursmoment 06](webapp-v1/kmom06).
 
 
 
@@ -155,7 +159,7 @@ Du tar din nyligen utvecklade webapp och gör den till en hybrid webapp som går
 
 Avslutningsvis gör du ett projekt enligt en specifikation. Projektet är det sista som du gör och tillsammans med alla redovisningar som finns på din me-sida så används detta som underlag för att examinera dig från kursen.
 
-[Instruktion till kursmoment 10](webapp/kmom10).
+[Instruktion till kursmoment 10](webapp-v1/kmom10).
 
 
 

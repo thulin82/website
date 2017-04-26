@@ -6,11 +6,6 @@ revision:
 Kmom05: Litet kundprojekt
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-04-24.
-[/WARNING]
-
-
 Du har så här långt jobbat dels med jQuery Mobile och dels prövat på ramverket Mithril. Båda varianterna är fokuserade på att skriva koden i klienten och de erbjuder två varianter till hur du kan utveckla en webapp som fokuserar på mobilt användande.
 
 Du skall nu utföra ett mindre projekt till en kund. Du får själv välja vilken teknik du jobbar med -- jQuery Mobile eller Mithril. Detta kursmoment är friare i sin utformning och det gäller att själv tänka till när det gäller val av teknik, prioritera kraven och tänka till vad kunden egentligen vill ha.
@@ -88,7 +83,7 @@ Resultat & Redovisning  {#resultat_redovisning}
 
 *(ca: 1-2 studietimmar)*
 
-Läs [instruktionen om hur du skall redovisa](webapp/redovisa).
+Läs [instruktionen om hur du skall redovisa](webapp-v1/redovisa).
 
 Se till att följande frågor besvaras i redovisningstexten.
 

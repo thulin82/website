@@ -1,5 +1,5 @@
 ---
-title: webapp
+title: webapp v2
 
 author: mos
 revision:
@@ -38,7 +38,7 @@ Via litteraturstudier och praktiska övningar förkovrar du dig i området. I sl
 [INFO]
 **Tidigare version av kursen**
 
-Om du gick kursen tidigare, fram till och med höstterminen 2016, så finns kursmaterialet till [den kursen här](kurser/webapp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
+Om du gick kursen tidigare, fram till och med höstterminen 2016, så finns kursmaterialet till [kursen webapp-v1 här](kurser/webapp-v1). Om du påbörjat den äldre version av kursen så skall du också slutföra denna versionen av kursen (eller göra om den nya kursen från start).
 
 [/INFO]
 
