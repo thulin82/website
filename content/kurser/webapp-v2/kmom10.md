@@ -66,6 +66,8 @@ Skapa en egen kortfattad specifikation för din webapp genom att beskriva din t�
 
 Välj ut de datakällor du skall använda och vilken data du behöver ur varje datakälla. Berätta om ditt val.
 
+Du ska använda minst två API:er. API:erna måste inte vara från Hack for sweden, det är enbart ett tips.
+
 
 
 ###Krav 2: Arkitektur, dokumentation och manual {#k2}
