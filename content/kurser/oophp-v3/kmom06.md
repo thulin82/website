@@ -19,7 +19,7 @@ Utveckling av nytt kursmoment pågår. Kursmomentet <strike>släpps senaste den 
 
 Nu börjar vi närma oss slutet och vi finpolerar vårt Anax Lite genom att komplettera med enhetstester och vi förbättrar databasens prestanda med index.
 
-När det gäller enhetstestning så jobbar vi med PHpUnit och vi försöker hitta klasser som är testbara och vi ser hur bra vi lyckas uppnå kodtäckning.
+När det gäller enhetstestning så jobbar vi med PHPUnit och vi försöker hitta klasser som är testbara och vi ser hur bra vi lyckas uppnå kodtäckning.
 
 [FIGURE src=image/snapvt17/mysql-optimize.png?w=w2 caption="Optimera databasen med index."]
 
@@ -99,7 +99,7 @@ Följande uppgifter skall utföras och resultatet skall redovisas via me-sidan.
 
 1. Gör uppgiften "[Dokumentera din ER-modell med Reverse Engineering](uppgift/dokumentera-din-er-modell-med-reverse-engineering)". Spara resultatet i `me/kmom06/er3`. Det är samma sak som du gjort i föregående kmomentent, det handlar om att få med de uppdateringar du nyss gjort.
 
-1. Gör uppgiften "[Skapa enhetstester till Anax Lite](uppgift/skapa-enhetstester-till-anax)". Spara uppdateringarna du gör i ditt `me/anax-lite` och uppgiften om klassen `Guess` utför du i `me/kmom06/phpunit`.
+1. Gör uppgiften "[Skapa enhetstester till Anax Lite](uppgift/skapa-enhetstester-till-anax)". Spara uppdateringarna du gör i ditt `me/anax-lite` och del-uppgiften för `Guess` utför du i `me/kmom06/phpunit`.
 
 1. Pusha och tagga ditt Anax Lite, allt eftersom och sätt en avslutande tagg (6.0.\*) när du är klar med alla uppgifter i kursmomentet.
 
