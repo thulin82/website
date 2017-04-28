@@ -8,8 +8,6 @@ PHPUnit
 Du kan kontrollera om det redan finns installerat på din dator, det kan redan ligga i din PATH.
 
 ```bash
-$ whereis phpunit
-$ which phpunit
 $ phpunit --version
 ```
 

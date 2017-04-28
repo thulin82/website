@@ -18,10 +18,23 @@ TBD.
 
 <!--stop-->
 
+Förslag kmoms:
 
+* Anax med MVC (inkl flat file)
+* Databasdrivna modeller (med formulär)
+* Testning (phpunit och behat)
+* Testning (docker och selenium)
+* Testing (travis, circle, scrutinizer)
+
+* Realtime web
+* Big data
+* Cloud (docker containers)
+
+Olika versioner av PHP i XAMPP/Docker
 enhetstest o doc dag 1
+Guide: Writing Testable Code
 lokal utvecklingsmiljö och testverktyg
-PHPUnit
+PHPUnit (exception, setup, teardown, database, mocking, providers)
 Behat
 Selenium
 Enhetstestning databas
@@ -36,6 +49,18 @@ flat file med frontmatter
 Ajax
 login Ajax
 (zend module?)
+
+<!--
+1. Ramverksmoduler att bygga själv.
+* CValidate
+* CFlash
+* CCache
+
+(Olika språk, anpassa med int/loc) 
+-->
+
+
+
 
 
 

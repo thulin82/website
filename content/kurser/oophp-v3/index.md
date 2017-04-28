@@ -1,5 +1,5 @@
 ---
-title: oophp
+title: oophp-v3
 
 author:
     - mos
@@ -151,7 +151,9 @@ Läs [instruktionen till kursmoment 05](kurser/oophp-v3/kmom05).
 
 ###Kmom06: Enhetstestning {#kmom06}
 
-TBD.
+Nu börjar vi närma oss slutet och vi finpolerar vårt Anax Lite genom att komplettera med enhetstester och vi förbättrar databasens prestanda med index.
+
+När det gäller enhetstestning så jobbar vi med PHpUnit och vi försöker hitta klasser som är testbara och vi ser hur bra vi lyckas uppnå kodtäckning.
 
 Läs [instruktionen till kursmoment 06](kurser/oophp-v3/kmom06).
 
@@ -199,6 +201,9 @@ Följande böcker har jag valt som referenslitteratur. De kan vara bra att ha ti
 Läsanvisningar {#lasanvisning}
 ------------------------------
 
+Det finns inga specifika läsanvisningar till kurslitteraturen.
+
+<!--
 Här följer en sammanställning av de läsanvisningar som ges i varje kursmoment. Skaffa gärna böckerna i förväg och börja läsa dem innan kursen.
 
 | Kursmoment | Beginning PHP and MySQL   | Webbutveckling med PHP och MySQL | Databasteknik       |
@@ -210,6 +215,8 @@ Här följer en sammanställning av de läsanvisningar som ges i varje kursmomen
 | Kmom05     |                           |                                  |                     |
 | Kmom06     |                           |                                  |                     |
 | Kmom07/10  ||||
+
+-->
 
 
 

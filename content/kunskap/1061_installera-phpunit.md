@@ -8,10 +8,10 @@ category:
 revision:
     "2017-04-27": (A, mos) Första revisionen.
 ...
-installera PHPUnit
+Installera PHPUnit
 ==================================
 
-[FIGURE src=/image/snapht16/php-in-path.png?w=c5&a=0,70,70,0 class="right"]
+[FIGURE src=/image/snapvt17/phpunit.png?w=c5&a=0,50,70,0 class="right"]
 
 Så här gör du för att installera PHPUnit i din sökväg.
 
@@ -58,6 +58,9 @@ $ wget https://phar.phpunit.de/phpunit-5.7.phar -Ophpunit && chmod 755 phpunit
 $ ./phpunit --version
 PHPUnit 5.7.19 by Sebastian Bergmann and contributors.
 $ cp phpunit /usr/local/bin 
+$ which phpunit
+/usr/local/bin/phpunit
+$ phpunit --version
 ```
 
 Du kan lägga den exekverabara filen i godtycklig katalog som du har i din PATH.
@@ -71,7 +74,9 @@ Dubbelkolla att phpunit fungerar {#funkar}
 
 I kursrepot för oophp-kursen finns ett [exempelprogram](https://github.com/dbwebb-se/oophp/tree/master/example/phpunit) som kan användas för att testa att phpunit fungerar.
 
-Läs README-filen för instruktioner hur du kommer igång och testa både enhetstestning och kodtäckning.
+Läs README-filen för instruktioner om hur du kommer igång och testa att phpunit fungerar som det ska.
+
+Notera att du behöver även [PHP Xdebug](labbmiljo/xdebug) för att kodtäckningen skall fungera.
 
 
 
