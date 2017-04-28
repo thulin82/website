@@ -16,7 +16,7 @@ Du skall bygga en me-app, som en me-sida, men med fokus på mobila enheter. Du a
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom artiklarna "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)" och [Kom igång med cordova]().
+Du har jobbat igenom artiklarna "[Kom igång med ramverket Mithril](kunskap/kom-igang-med-mithril-och-webpack)" och "[Kom igång med cordova](kunskap/kom-igang-med-cordova)".
 
 
 
