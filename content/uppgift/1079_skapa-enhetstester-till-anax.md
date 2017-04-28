@@ -48,9 +48,13 @@ Krav {#krav}
 
 1. Se till att du har ett testfall som kontrollerar att rätt typ av Exception kastas i `Guess::makeGuess()`.
 
+1. Kör enhetstesterna för `Guess` via `make test` och din globala installation av PHPUnit kommer att användas.
+
 1. Leta genom din kod i Anax Lite och finn en eller flera klasser som lämpar sig att enhetstesta. Skriv minst en testklass med minst två testfall och relevanta assertions.
 
 1. Kontrollera vilken kodtäckning du lyckades uppnå och se om du med mindre modifikationer av ditt testfall kan öka kodtäckningen.
+
+1. Kör enhetstesterna via `make install` följt av `make phpunit` eller `make test`. Makefilen kommer att installera och använda en lokal installation av PHPUnit som finns i din katalog `anax-lite/.bin`.
 
 1. Validera och publicera.
 

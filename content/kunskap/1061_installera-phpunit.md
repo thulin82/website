@@ -83,4 +83,4 @@ Notera att du behöver även [PHP Xdebug](labbmiljo/xdebug) för att kodtäcknin
 Avslutningsvis {#avslutning}
 ------------------------------
 
-Det finns en [forumtråd](t/XXX) där du kan ställa frågor, eller ge tips och trix, om denna artikel. Kika där om du får problem.
+Det finns en [forumtråd](t/6465) där du kan ställa frågor, eller ge tips och trix, om denna artikel. Kika där om du får problem.
