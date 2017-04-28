@@ -9,6 +9,10 @@ Gomoku klient i Mithril
 
 I linux-kursen skapade vi kommandoradsklienter som skickade frågor till en nodejs Gomoku-server. I detta kursmoment skall vi ta klienten ett steg vidare och bygga den som en SPA applikation i mithril.
 
+[INFO]
+Gör `dbwebb update` i kursrepot för att försökra dig om att du har den senaste exempelkoden.
+[/INFO]
+
 
 
 <!--more-->

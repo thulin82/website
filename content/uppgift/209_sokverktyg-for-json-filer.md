@@ -5,6 +5,7 @@ category:
     - javascript
     - kurs webapp
 revision:
+    "2017-04-28": "(C, aar) Förtydligade krav 15, att alla användarnamn ska hittas och inte bara det första."
     "2017-04-05": "(B, mos) Ändrade krav 13 från felaktiga 3 till 7 som facit visar."
     "2015-11-23": "(A, mos) Första utgåvan i samband med kursen webapp."
 ...
@@ -101,7 +102,7 @@ Du skall samla ihop minst 15 poäng. Fråga 1-10 är värd en poäng var. Fråga
 
 14. Lista länkarna till de bilder som har fler än 5 'likes' och minst 1 'comment' (n.txt).
 
-15. Hitta användarnamnet (username) på användare som likeat bilden som är tagen på 'Studentviken' (location "Studentviken") (o.txt).
+15. Hitta användarnamnen (username) på de användare som likeat bilden som är tagen på 'Studentviken' (location "Studentviken") (o.txt).
 
 11. Validera din kod enligt följande.
 
