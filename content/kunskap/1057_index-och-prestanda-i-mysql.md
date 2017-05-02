@@ -42,7 +42,7 @@ Gör så här för att skapa en egen tabell i godtycklig databas (byt ut anyData
 $ mysql -uuser -ppass anyDatabase < example/sql/index.sql
 ```
 
-Du kan även köra allt i i Workbench. 
+Du kan även köra allt i Workbench. 
 
 För att du på bästa sätt skall lära dig de delar som artikeln behandlar, så bör du köra dem själv och på egen hand. Nu har du möjlighet till det.
 
