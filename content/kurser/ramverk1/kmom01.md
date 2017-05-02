@@ -22,13 +22,16 @@ Förslag kmoms:
 
 * 01 Anax med DI, MVC (inkl flat file)
 * Databasdrivna modeller (med formulär)
-* Testning (phpunit och behat)
+* TDD/BDD Testning (phpunit och behat)
 * Testning (docker och selenium)
-* Testing (travis, circle, scrutinizer)
+* Testing (travis, circle, scrutinizer, https://codeclimate.com/, https://coveralls.io/)
 
 * Realtime web
 * Big data
 * Cloud (docker containers)
+
+* Redis (key value data store, caching)
+Caching
 
 REM server
 
@@ -38,6 +41,8 @@ Koppling faktureringsmotor
 Chatt (express.js)
 ajax bild upload
 visa bilder på olika sätt, bildspel
+datavisualisering med JS https://d3js.org/, googles api, http://www.chartjs.org/
+maps, html5 api
 
 Olika versioner av PHP i XAMPP/Docker
 enhetstest o doc dag 1
@@ -55,6 +60,7 @@ docker (olika versioner av PHP, databas, egen testmiljö)
 debug och profiling med Xdebug
 MVC och databasdrivna modeller
 form
+scaffolding
 flat file med frontmatter
 
 Ajax
