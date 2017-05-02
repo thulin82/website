@@ -12,6 +12,6 @@ Webbplatsen använder cookies för att spara sessionsdata om den inloggade anvä
 
 När du skapar ditt konto på dbwebb.se så samtycker du också till webbplatsens hantering av cookies.
 
-[Läs vad PTS säger om cookies ur användarens perspektiv](http://www.pts.se/sv/Regler/Lagar/Lag-om-elektronisk-kommunikation/Cookies-kakor/Fragor-och-svar-om-kakor-for-anvandare/).
+[Läs vad PTS säger om cookies ur användarens perspektiv](http://www.pts.se/sv/Privat/Internet/Skydd-av-uppgifter/Fragor-och-svar-om-kakor-for-anvandare1/).
 
 Som ägare till webbplatsen följer vi de [direktiv och rekommendationer som PTS ger till webbplatsinnehavare](http://www.pts.se/sv/Regler/Lagar/Lag-om-elektronisk-kommunikation/Cookies-kakor/Fragor-och-svar-om-kakor-for-webbplatsinnehavare/).

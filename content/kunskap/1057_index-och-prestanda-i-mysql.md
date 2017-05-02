@@ -687,11 +687,11 @@ Dock, innan man väljer index så bör man tänka igenom vilka frågor som komme
 Index och främmande nycklar {#foreign}
 ------------------------------
 
-Det vi behöver veta är att en FOREIGN KEY inde är ett index. Däremot försöker MySQL att skapa ett index för varje FOREIGN KEY som vi lägger till. MySQL har bestämt sig för att vi troligen kommer vilja joina tabeller på en främmande nyckel och automatiskt försöker den lägga till ett matchande index.
+Det vi behöver veta är att en FOREIGN KEY inte är ett index. Däremot försöker MySQL att skapa ett index för varje FOREIGN KEY som vi lägger till. MySQL har bestämt sig för att vi troligen kommer vilja joina tabeller på en främmande nyckel och därför väljer den att automatiskt försöka lägga till ett matchande index.
 
 Principen är att en join behöver göras på en kolumn som har ett index, annars kan man få en full table scan på sin join och det vill man undvika.
 
-Kontroller vilka index du har via SHOW INDEX, SHOW CREATE TABLE och använd EXPLAIN på både tabeller och frågor för att ha koll på att det ser bra ut.
+Minns att kontrollera vilka index du har via SHOW INDEX, SHOW CREATE TABLE och använd EXPLAIN på både tabeller och frågor för att ha koll på att det ser bra ut. Då kommer du långt.
 
 
 <!--
