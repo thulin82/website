@@ -20,7 +20,7 @@ TBD.
 
 Förslag kmoms:
 
-* 01 Anax med MVC (inkl flat file)
+* 01 Anax med DI, MVC (inkl flat file)
 * Databasdrivna modeller (med formulär)
 * Testning (phpunit och behat)
 * Testning (docker och selenium)
@@ -30,15 +30,20 @@ Förslag kmoms:
 * Big data
 * Cloud (docker containers)
 
+REM server
+
 SEO, reklam på webben
 Koppling faktureringsmotor
 
+Chatt (express.js)
 ajax bild upload
 visa bilder på olika sätt, bildspel
 
 Olika versioner av PHP i XAMPP/Docker
 enhetstest o doc dag 1
+Test doubles, db test, BDD
 Guide: Writing Testable Code
+JS test (klient/server)
 lokal utvecklingsmiljö och testverktyg
 PHPUnit (exception, setup, teardown, database, mocking, providers)
 Behat
@@ -46,7 +51,7 @@ Selenium
 Enhetstestning databas
 Kompabilitet databas (sqlite, mysql, postgresql) med SQL Query Builder
 travis, scrutinizer, circle
-docker
+docker (olika versioner av PHP, databas, egen testmiljö)
 debug och profiling med Xdebug
 MVC och databasdrivna modeller
 form
