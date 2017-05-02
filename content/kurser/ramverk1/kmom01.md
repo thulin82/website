@@ -20,7 +20,7 @@ TBD.
 
 Förslag kmoms:
 
-* Anax med MVC (inkl flat file)
+* 01 Anax med MVC (inkl flat file)
 * Databasdrivna modeller (med formulär)
 * Testning (phpunit och behat)
 * Testning (docker och selenium)
@@ -30,6 +30,12 @@ Förslag kmoms:
 * Big data
 * Cloud (docker containers)
 
+SEO, reklam på webben
+Koppling faktureringsmotor
+
+ajax bild upload
+visa bilder på olika sätt, bildspel
+
 Olika versioner av PHP i XAMPP/Docker
 enhetstest o doc dag 1
 Guide: Writing Testable Code
@@ -38,7 +44,7 @@ PHPUnit (exception, setup, teardown, database, mocking, providers)
 Behat
 Selenium
 Enhetstestning databas
-Kompabilitet databas (sqlite, mysql, postgresql)
+Kompabilitet databas (sqlite, mysql, postgresql) med SQL Query Builder
 travis, scrutinizer, circle
 docker
 debug och profiling med Xdebug
@@ -49,6 +55,14 @@ flat file med frontmatter
 Ajax
 login Ajax
 (zend module?)
+
+OWASP
+Hur escapa på rätt sätt, RFC, url, mot OWASP, tesfall för säkerhet.
+
+Om RFC, exempel där man måste läsa RFC.
+
+Debugging med Xdebug
+
 
 <!--
 1. Ramverksmoduler att bygga själv.
