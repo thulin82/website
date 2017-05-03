@@ -31,7 +31,7 @@ Förslag kmoms:
 * Cloud (docker containers)
 
 * Redis (key value data store, caching)
-Caching
+Caching (som modul anax/cache, möjligen PSR)
 
 REM server
 
