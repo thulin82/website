@@ -74,6 +74,12 @@ Om RFC, exempel där man måste läsa RFC.
 
 Debugging med Xdebug
 
+phpuml
+egna paket packagist
+search i databaser, sökmotor
+middleware
+cform
+
 
 <!--
 1. Ramverksmoduler att bygga själv.
