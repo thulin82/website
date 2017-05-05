@@ -57,7 +57,7 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 ###Kataloger för redovisning {#var}
 
-Samla alla dina filer för projektet i ditt kursrepo under `me/proj`.
+Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10`.
 
 Redovisningstexten skriver du som vanligt i `me/redovisa`.
 
