@@ -1,15 +1,20 @@
 ---
-author: mos
+author: 
+- aar
+- efo
+- mos
 revision:
+  "2017-05-05": (B, aar,efo) Första versionen till webapp-v2.
   "2015-12-22": (A, mos) Första versionen till webapp.
 ...
 Kmom10: Projekt och examination
 ==================================
 
-[WARNING]
-Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-05-08.
-[/WARNING]
+[INFO]
+<strike>Kursmomentet är under översyn och eventuell uppdatering inför kursrundan som går i lp4 2017. Kursmomentet släpps senast 2017-05-08</strike>.
 
+Kursmomentet tillgängligt per den 2017-05-05.
+[/INFO]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -24,9 +29,9 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 Projektidé och upplägg {#upplagg}
 --------------------------------------------------------------------
 
-Du är engagerad student och funderar på hur du kan nå ut och bidra till en förändring av omvärlden och säkra framtiden. Du känner en pulserande ådra av entreprenörsskap i dig. Du bestämmer dig för att "bygga en webapp" som bidrar till förändring. 
+Du är en engagerad student och funderar på hur du kan nå ut och bidra till en förändring av omvärlden och säkra framtiden. Du känner en pulserande ådra av entreprenörsskap i dig. Du bestämmer dig för att "bygga en webapp" som bidrar till förändring. 
 
-Det finns en årlig tävling, ["Hack for Sweden"](http://hackforsweden.se/), där öppen data används för att bygga appar som fokuserar på nytänkande och innovation. I detta projekt ska du använda [en eller flera datakällor som publiceras via tävlingen](http://hackforsweden.se/data/) som källa till din webapp. Vi ser självklart fram emot att du deltar i tävlingen Hack for Sweden med din app.
+Det finns en årlig tävling, ["Hack for Sweden"](http://hackforsweden.se/), där öppen data används för att bygga appar som fokuserar på nytänkande och innovation. I detta projekt kan du använda [en eller flera datakällor som publiceras via tävlingen](http://hackforsweden.se/data/) som källa till din webapp. Vi ser självklart fram emot att du deltar i tävlingen Hack for Sweden med din app.
 
 Du funderar och väljer en ansats för din webapp.
 
@@ -56,6 +61,13 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10/proj`.
 
+Skapa ditt cordova projekt med följande kommando:
+
+```bash
+# stå i me/kmom10/proj
+cordova create . se.dbwebb.<valfritt namn> <Valfritt namn>
+```
+
 Redovisningstexten skriver du i `me/redovisa`.
 
 
@@ -78,7 +90,7 @@ Berätta hur du organiserade din kod och filer, så att en annan teknisk person 
 
 Skapa en fil `README.md` som kort berättar om webappen, hur man startar den och vilka olika "features" den innehåller.
 
-Din webapp ska göras med Mithril, Cordova, minst stödja Android och webbläsare, samt innehålla logga och splash screen.
+Din webapp ska göras med Mithril, Cordova, minst stödja Android och webbläsare, samt innehålla ikon och splash screen.
 
 
 
@@ -116,7 +128,7 @@ Här är en icke komplett lista på saker som till exempel kan vara värda att l
 
 * Använd Cordova plugin för Geolocation, Media, Camera, Contacts osv.
 * Optimera din design för mobila enheter och beskriv dina design val.
-* En svår/tuff teknisk implementation
+* En svår/tuff teknisk implementation.
 * En komplex och omfattande webapp med flera features.
 * Integration med tjänster för social media.
 * Koppla data från flera olika API:er, som samverkar på ett nytänkande sätt.
