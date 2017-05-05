@@ -1,7 +1,8 @@
 ---
-author: mos
+author:
+    - mos
 revision:
-    "2016-12-16": (PA1, mos) Utveckling påbörjad.
+    "2017-05-06": (A, mos) Första utgåvan.
 ...
 Kmom07/10: Projekt och examination
 ==================================
@@ -23,26 +24,6 @@ Totalt omfattar kursmomentet (07/10) ca 20+20+20+20 studietimmar.
 
 
 
-Projektidé och upplägg {#upplagg}
---------------------------------------------------------------------
-
-Under kursen har du byggt upp din egen version av Anax webbmall och fyllt den med moduler i form av klasser. Förhoppningsvis kör du din me-sida med ditt Anax så din webbmall bör fungera. Det är förutsättningen innan du kan gå in i projektet.
-
-Du skall nu bygga en ny webbplats med hjälp av ditt Anax. Vi ska nu se hur bra din webbmall fungerar för att skapa en webbplats.
-
-
-Den tänkte kunden heter "RM Rental Movies" och har av dig beställt en webbplats för sin verksamhet som är uthyrning av filmer över nätet.
-
-PS. Du kan byta temat från "Movies" till musik, datorer, husvagnar, hundar, mini-grisar eller något annat tema som du tycker om.
-
-
-
-<!--
-1. Gör ett betalningsformulär där användaren fyller i sina uppgifter. Formuläret ska valideras på ett rimligt sätt. Man ska tex inte kunna utelämna något fält eller ange felaktiga uppgifter. I rimlig mån.
--->
-
-
-
 Bedömning och betygsättning {#bedomning}
 --------------------------------------------------------------------
 
@@ -50,16 +31,35 @@ När du lämnat in projektet bedöms det tillsammans med dina tidigare redovisad
 
 
 
+Projektidé och upplägg {#upplagg}
+--------------------------------------------------------------------
+
+Ryktet har spritt sig att du är en högst kompetent programutvecklare vilket resulterat i att en välkänd investerare, låt oss kalla henne fru BeckSten, har bett dig utveckla nästa generations webbshop.
+
+Du accepterar uppdraget, väl medveten om att du redan har en god grund till lösningen. 
+
+Du tar din grund `me/anax-lite` och skapar ett helt nytt repo. Om du lägger projektet på GitHub/BitBucket så behöver det vara privat, eftersom detta är projektet och vi vill undvika att någon hittar och lånar dina affärshemligheter.
+
+Du skall alltså göra en webbshop där användare kan registrera sig och köpa saker, samtidigt skall det finnas en bra backend för administration. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil webbshopen skall ha och vilka produktern den skall innehålla.
+
+
+
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikationen. De optionella kraven är markerade med *optionellt*, de andra kraven är obligatoriska. Lös de obligatoriska kraven för att nå ett godkänt betyg. Lös de optionella kraven för att samla poäng och nå högre betyg.
+Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
 
-Varje krav är värt maximalt 10 poäng. Om du inte implementerat hela kravet så får du avdrag. 
+De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
 
-Du måste implementera samtliga obligatoriska krav och nå minst 25 poäng totalt, för att betraktas som godkänd.
+Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
-Är du osäker på kravets formulering? Tolka det, gör ett antagande och dokumentera det i din redovisningstext.
+
+
+###Kataloger för redovisning {#var}
+
+Samla alla dina filer för projektet i ditt kursrepo under `me/proj`.
+
+Redovisningstexten skriver du som vanligt i `me/redovisa`.
 
 
 
@@ -76,10 +76,11 @@ Följande struktur/innehåll skall (minst) finnas på webbplatsen:
 
 Webbsidan skyddas av inloggning och när man är inloggad kan man via ett gränssnitt ändra innehållet på webbplatsen.
 
-<del>På denna del kan du maximalt få 10 poäng om samtliga delar finns med och fungerar. 5 poäng är för innehållet och 5 poäng är en objektiv/subjektiv bedömning om hur väl/bra/snyggt du har implementerat din lösning, en acceptabel lösning ger 0 poäng och en utomordentlig lösning ger 5 poäng.</del>
-
 På denna del kan du maximalt få 10 poäng.
 
+<!--
+1. Gör ett betalningsformulär där användaren fyller i sina uppgifter. Formuläret ska valideras på ett rimligt sätt. Man ska tex inte kunna utelämna något fält eller ange felaktiga uppgifter. I rimlig mån.
+-->
 
 
 ###Krav 2: Sida - Filmer {#k2}

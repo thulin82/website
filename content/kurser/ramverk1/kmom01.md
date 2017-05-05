@@ -18,80 +18,146 @@ TBD.
 
 <!--stop-->
 
-Förslag kmoms:
 
-* 01 Anax med DI, MVC (inkl flat file)
-* Databasdrivna modeller (med formulär)
-* TDD/BDD Testning (phpunit och behat)
-* Testning (docker och selenium)
-* Testing (travis, circle, scrutinizer, https://codeclimate.com/, https://coveralls.io/)
+RAMVERK1:
 
-* Realtime web
-* Big data
-* Cloud (docker containers)
+Röd tråd:
+Software engineering, ebok
+Software development processes
+XP, Agile
+software quality assurance
+Deployment, Maintenance, Support
+Software architecture
+Design patterns
 
-* Redis (key value data store, caching)
-Caching (som modul anax/cache, möjligen PSR)
-
-REM server
-
-SEO, reklam på webben
-Koppling faktureringsmotor
-
-Chatt (express.js)
-ajax bild upload
-visa bilder på olika sätt, bildspel
-datavisualisering med JS https://d3js.org/, googles api, http://www.chartjs.org/
-maps, html5 api
-
-Olika versioner av PHP i XAMPP/Docker
-enhetstest o doc dag 1
-Test doubles, db test, BDD
-Guide: Writing Testable Code
-JS test (klient/server)
+Pre:
+Ny kodstandard js.
 lokal utvecklingsmiljö och testverktyg
-PHPUnit (exception, setup, teardown, database, mocking, providers)
-Behat
-Selenium
-Enhetstestning databas
-Kompabilitet databas (sqlite, mysql, postgresql) med SQL Query Builder
-travis, scrutinizer, circle
-docker (olika versioner av PHP, databas, egen testmiljö)
-debug och profiling med Xdebug
-MVC och databasdrivna modeller
-form
-scaffolding
+
+01: (kom igång, även ci med enhetstestning)
+Använd Anax med moduler till me-sida.
+Anax med DI, MVC (inkl flat file)
+Service container/locator, Inversion of control, SOLID, lazy instantiation/initialisation (by class or by configuration) (egen artikel om injection?) (Typehinting on method arguments)
+Titta på REM-server som flyttar koden till domän-modul.
+Samt Flatfilecontent-module (som exempel på mer fristående modul)
+Enhetstestning av domänmodul, samt packagist, travis (scrutinizer, circleci)
 flat file med frontmatter
 
+0x:
+Continous integration, fixa en extern validator/badge per kmom.
+
+0x: (likt phpmvc/kmom04 men splitta upp i delar, viktigt kmom)
+MVC (kontroller och modeller)
+kontroller versus router, specifika up/down-metoder
+dispatching, forward
+form/cform (introducera för sig själv)
+Databasdrivna modeller (med formulär), olika databaspatterns från phpmvc/kmom04 med SQLQueryBuilder
+Kompabilitet databas (sqlite, mysql, postgresql) med SQL Query Builder
+scaffolding
+HMVC
+
+0x:
+middleware
+Exempel på middleware, skriv eget och gör som paket på packagist.
+
+0x:
+eventlisteners, event in framwork
+logger
+
+0x:
+ajax bild upload (POST, FILES) (använder olika routes).
+visa bilder på olika sätt, bildspel (ajax?)
 Ajax
 login Ajax
 (zend module?)
 
+02:
+User login, registrering, aktivering (usability) med ajax. (cookies)
+Kan testas BDD eller Selenium?
+
+0x: (likt phpmvc/kmom05)
+Egen dummy-modul (valutakonverterare, datum, kalender, namn, rot, etc), till eget webbplats för trafik och reklam?
+egna paket packagist (domänmodul till Anax)
+Reklam på webben
+
+03:
+Cachning, nyhetsplanet, rss-flöde. RSS-modul, Cache-modul (PSR?)
+Caching (som modul anax/cache, möjligen PSR)
+Kan byggas med BDD?
+(domänmoduler)
+
+0x: Testning
+TDD/BDD Testning (phpunit och behat)
+Testning (docker och selenium)
+Testing (travis, circle, scrutinizer, https://codeclimate.com/, https://coveralls.io/)
+Olika versioner av PHP i XAMPP/Docker
+enhetstest o doc dag 1
+Test doubles, db test, BDD
+Guide: Writing Testable Code
+Behat
+Selenium
+Enhetstestning databas
+PHPUnit (exception, setup, teardown, database, mocking, providers)
+travis, scrutinizer, circle
+docker (olika versioner av PHP, databas, egen testmiljö)
+
+0x:
+debug och profiling med Xdebug
+Debugging med Xdebug
+prestandatestning
+prestandamätningar, analyser
+
+0x: Säkerhet
 OWASP
 Hur escapa på rätt sätt, RFC, url, mot OWASP, tesfall för säkerhet.
+* CValidate (eller bätre med Zendmodul?)
 
+
+Övrigt:
+SEO
 Om RFC, exempel där man måste läsa RFC.
-
-Debugging med Xdebug
-
-phpuml
-egna paket packagist
-search i databaser, sökmotor
-middleware
-cform
+phpuml (integrera i resp modul)
+(Olika språk, anpassa med int/loc) (internationalisering)
 
 
-<!--
-1. Ramverksmoduler att bygga själv.
-* CValidate
-* CFlash
-* CCache
+RAMVERK2:
+01:
+Express.js, routes, någon tjänst?
 
-(Olika språk, anpassa med int/loc) 
--->
+01:
+Ny kodstandard js som exempel på npm-modul.
+Bygg egen npm-modul (använd i Express).
+
+02:
+Websockets
+Realtime web
+Chatt (express.js)
+Chatt
+Pusha notiser till användaren (desktop/mobil) när saker uppdateras.
+
+0x:
+datavisualisering med JS https://d3js.org/, googles api, http://www.chartjs.org/
+maps, html5 api
+
+0x:
+JS test (klient/server)
 
 
+Exempel uppgifter:
+- Generera nyhetsbrev (från info-flödet av news)
+- Matchning ala rekrytering
+- search i databaser, sökmotor (artiklar, information, slå ihop databaser från andra källor)
+- Kommentarssystem, forum, SO
 
+
+Externa kopplingar:
+* Koppling faktureringsmotor
+
+
+Tema:
+* Big data
+* Cloud (docker containers)
+* Redis (key value data store, caching)
 
 
 
