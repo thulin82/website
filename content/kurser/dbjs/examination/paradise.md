@@ -131,7 +131,7 @@ Skapa en webbsida (lägg i navbaren) där man kan boka ett rum en viss dag.
 
 Skapa en webbsida (lägg i navbaren) som visar alla bokningar (rummets namn och datum då det är bokat).
 
-Lägg till i terminalklienten att man kan avboka en bokning för ett rum en viss datum.
+Lägg till i terminalklienten att man kan avboka en bokning för ett rum en viss datum samt att man kan visa samtliga bokningar.
 
 
 
