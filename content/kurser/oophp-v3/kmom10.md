@@ -160,7 +160,7 @@ Eller visa mer information på förstasidan/alla sidor likt:
 * Lista de produkter som är mest populära (antalet användare som tittat på dem).
 * Lista senast köpta produkter (oavsett vem som köpt dem).
 
-Eller något som du själv anser är relevant och där du kan argumentera dig fram till några extrapoäng.
+Eller något som du själv anser är relevant och där du kan argumentera dig fram till några extrapoäng. 70% kodtäckning med enhetstester kanske?
 
 Kanske kan du integrera din kalender för att visa när nya produkter kommer att släppas?
 
