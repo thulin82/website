@@ -124,6 +124,9 @@ RAMVERK2:
 01:
 Express.js, routes, någon tjänst?
 
+0x:
+Flex mm? Hur förhåller sig till Mithril?
+
 01:
 Ny kodstandard js som exempel på npm-modul.
 Bygg egen npm-modul (använd i Express).
