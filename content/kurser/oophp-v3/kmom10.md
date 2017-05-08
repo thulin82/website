@@ -166,7 +166,7 @@ Kanske kan du integrera din kalender för att visa när nya produkter kommer att
 
 Kanske hämtar du information till dina produkter från ett externt API? Till exempel en affär som säljer DVD-filmer och hämtar information till nya produkter via ett interface från IMDB.
 
-Skriv vad du gjort och skriv även hur många poäng du anser dig vara värd.
+Skriv vad du gjort och skriv även hur många poäng du anser dina utbyggnader vara värda.
 
 
 
