@@ -38,7 +38,7 @@ Ryktet har spritt sig att du är en högst kompetent programutvecklare vilket re
 
 Du accepterar uppdraget, väl medveten om att du redan har en god grund till lösningen. 
 
-Du tar din grund `me/anax-lite` och skapar ett helt nytt repo. Om du lägger projektet på GitHub/BitBucket så behöver det vara privat, eftersom detta är projektet och vi vill undvika att någon hittar och lånar dina affärshemligheter.
+Du tar din grund `me/anax-lite` och skapar ett helt nytt repo. Om du lägger projektet på GitHub/Bitbucket så behöver det vara privat, eftersom detta är projektet och vi vill undvika att någon hittar och lånar dina affärshemligheter.
 
 Du skall alltså göra en webbshop där användare kan registrera sig och köpa saker, samtidigt skall det finnas en bra backend för administration. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil webbshopen skall ha och vilka produktern den skall innehålla.
 
@@ -59,7 +59,7 @@ Varje krav ger max 10 poäng, totalt är det 60 poäng.
 
 Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10`.
 
-Redovisningstexten skriver du som vanligt i `me/redovisa`.
+Redovisningstexten skriver du som vanligt i `me/anax-lite`.
 
 
 
@@ -67,115 +67,132 @@ Redovisningstexten skriver du som vanligt i `me/redovisa`.
 
 Följande struktur/innehåll skall (minst) finnas på webbplatsen:
 
-1. Första sidan.
-1. Sida - Filmer, lista av tillgängliga filmer.
-1. Sida - Nyheter, blogglista med nyheter.
-1. Sida - Om företaget, statisk sida med information om företaget, hitta på något kul att skriva.
-1. Gemensam Header med logo, titel och en slogan. En navbar med länkar till webbplatsens olika delar.
-1. Gemensam Footer, med text om Copyright Företagsnamnet.
+1. Sida - Produkter, visa upp de produkter som kan säljas.
+1. Sida - Nyheter, blogglista med nyheter om produkter och ditt företag.
+1. Sida - Om företaget, sida med information om företaget, skriv något relevant och trevligt.
+1. Gemensam Header med logo och titel. En navbar med länkar till webbplatsens olika delar.
+1. Gemensam Footer, med text om Copyright med företagsnamnet.
 
-Webbsidan skyddas av inloggning och när man är inloggad kan man via ett gränssnitt ändra innehållet på webbplatsen.
+Webbsidan skyddas av inloggning och när man är inloggad (och har behörighet som "administratör") kan man via ett gränssnitt ändra innehållet på webbplatsen enligt följande.
 
-På denna del kan du maximalt få 10 poäng.
+* Hantera nyhetsbloggen.
+* Administrera produkterna.
+* Administrera innehållet i "om"-sidan, footern.
 
-<!--
-1. Gör ett betalningsformulär där användaren fyller i sina uppgifter. Formuläret ska valideras på ett rimligt sätt. Man ska tex inte kunna utelämna något fält eller ange felaktiga uppgifter. I rimlig mån.
--->
+I nyhetsblogg släpper företaget nyheter om sina produkter, sin verksamhet och erbjudande. I översikten skall det visas inledningen till minst 7 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas. 
 
+Ditt projekt innehåller en makefil som kan generera dokumentation med phpdoc och köra enhetstester med phpunit och generera kodtäckning. Det räcker om det finns testfall i samma omfång som i kmom06.
 
-###Krav 2: Sida - Filmer {#k2}
+Din databaskod skriver du i `me/kmom10/sql/setup.sql` och hela filen kan köras utan problem, för att skapa/återskapa en databas.
 
-Filmerna skall visas i en lista som kan sorteras, man kan välja hur många rader som visas och det finns stöd för paginering. 
+Du skapar ett ER-diagram av din färdiga databas och sparar i `me/kmom10/sql/er.png`.
 
-Varje film tillhör en kategori.
-
-Minst 10 filmer skall finnas med och presenteras tillsammans med synopsis (kopiera från imdb eller skriv själv), bild och pris för uthyrning. 
-
-I listan visas begränsad information om filmen, klickar man på en film så ser man en sida om filmen med all information.
-
-Det skall gå att söka bland filmerna, sökfältet skall vara en del av sidans header.
-
-Använd din `img.php` för att visa olika storlekar av bilderna.
-
-Loggar man in kan man uppdatera all information om filmerna samt skapa nya och radera.
-
-<del>(optionell)</del>Visa mer information om filmen genom att länka till filmens hemsida på imdb och till en trailer på youtube. Du kan även visa fler bilder på varje film (låna bilder från nätet, eller klipp egna).
-
-<del>(optionell)</del>Gör så att en film kan tillhöra en eller flera kategorier. Klickar man på en kategori så visas alla filmer av den kategorin. (3 poäng)
-
-<del>På denna del kan du maximalt få 10 poäng om samtliga delar finns med och fungerar. 5 poäng är för grunden och 5 poäng är en objektiv/subjektiv bedömning om hur väl/bra/snyggt du har implementerat din lösning, en acceptabel lösning ger 0 poäng och en utomordentlig lösning ger 5 poäng.</del>
-
-På denna del kan du maximalt få 10 poäng.
+Ditt system fungerar att köra på studentservern.
 
 
 
-###Krav 3: Sida - Nyheter {#k3}
+###Krav 2: Skapa kundkonto {#k2}
 
-En nyhetsblogg där företaget släpper nyheter om sina produkter, sin verksamhet och erbjudande. Det skall visas minst 7 blogginlägg på första sidan. På bloggrullen kan man klicka på rubriken för att komma till en egen sida där blogginlägget visas. 
+En kund kan själv skapa ett nytt konto på webbplatsen. En kund kan redigera detaljer om sitt konto (mailadress, mer efter eget sinne).
 
-Loggar man in kan man uppdatera all information om bloggposterna samt skapa nya och radera.
+Administratören kan se vilka kundkonton som finns och kan redigera dem.
 
-<del>Ovanstående uppgifter omfattar 5 poäng.</del>
-
-<del>(optionell)</del>Varje blogginlägg visas med en introduktion i översikten, inte hela inlägget. När hela inlägget inte visas så syns en länk till "Läs mer »" som tar läsaren till blogginlägget. (2 poäng)
-
-<del>(optionell)</del>Varje blogginlägg har en kategori. Klickar man på kategorin så får man en lista med de blogginlägg som är gjorda i kategorin.(3 poäng)
-
-På denna del kan du maximalt få 10 poäng.
+En kund har bara behörighet att köpa, hen kan inte redigera andra delar av webbplatsens innehåll.
 
 
 
-###Krav 4: Första sidan {#k4}
+###Krav 3: Sida - Produkter {#k3}
 
-Visa de tre nyaste filmerna (senast uppdaterade filmerna).
+Varje produkt tillhör en produktkategori.
 
-Visa de tre senaste blogginläggen. 
+Produkterna visas upp med en bild, ett namn och en beskrivande text samt ett pris och antalet produkter som finns i lagret.
 
-Visa en översikt av de kategorier som finns för filmerna.
+När man visar produkterna skall de kunna sorteras efter namn, pris, kategori. Man kan välja hur många produkter som visas och det finns stöd för paginering.
 
-Visa bilder på mest populära film och senast hyrda film (okey att hårdkoda).
+Man kan söka efter produkter via produkternas namn och beskrivning.
 
-Lägg till övrig information efter eget tycke för att göra en presentabel första sida.
+En användare måste logga in för att köpa. Eventuellt kan man använda varukorgen först och logga in när man gör köpet (välj väg).
+ 
+En användare kan köpa produkter genom att lägga dem i en varukorg och sedan checka ut varukorgen. Användaren får då en visuell rapport över sin order och ordern sparas.
 
-På denna del kan du maximalt få 10 poäng.
+En kund kan se sin orderhistorik och se innehållet i varje order.
+
+Lagret skall uppdateras när en order görs. Innehåll i varukorgen behöver inte påverka lagret.
+
+Det skall finnas minst tio produkter, fördelade över minst tre produktkategorier. Samtliga produkter skall finnas i olika mängd i lagret.
 
 
 
-###Krav 5, 6: Extra funktioner (optionell) {#k5}
+###Krav 4: Förstasidan (optionell) {#k4}
 
-**En ny sida - Tävling**. Lägg till en egen sida där användaren kan tävla i en tärningstävling och vinna gratis filmer. (3 poäng)
+Gör en förstasida som (minst) innehåller:
 
-**En ny sida - Filmkalendern**. Lägg till en sida som visar månadens film tillsammans med en kalender. (3 poäng)
+De tre senaste inläggen från din nyhetsblogg.
 
-**Kund och profilsida**. Låt användaren skapa sin egen användare och profil på webbplatsen. En användare som skapat sin en användare kan se allt som en administratör kan göra, men kan inte ändra något mer än sin egen profil. Det skall finnas en publik sida för som visar användarens profil. (4 poäng)
+samt:
 
-**Ladda upp bilder** via file upload när du skapar nya filmer. (3 poäng)
+* Senaste inkomna produkter
+* Din mest sålda produkt(er)
+* Veckans erbjudande(n)
+* Rekommenderad produkt(er)
 
-Skapa en **breadcrumb navigering** till filmer och blogg. (3 poäng)
+Den mest sålda produkten och senast inkomna produkter uppdateras automatiskt baserat på databasens innehåll. För de andra kan man justera innehållet om man loggar in som administratör.
 
-**Administration för användare**. En del där administratören kan se en översikt av alla användare samt möjlighet att skapa ny användare, uppdatera, och radera. Listan har stöd för paginering, sortering, och kan bestämma hur många rader som visas. (4 poäng)
 
-**Ditt Anax på GitHub**. Lägg ditt slutliga Anax, dvs den variant du använde till projektet, på GitHub tillsammans med en välskriven README-sida. Lägg enbart mallen där, inte alla specifika sidor som du gjort till din me-sida eller till projektet, bara det som du anser vara mallen. (4 poäng)
 
-**Egen funktion**. Om du gjort en extra funktion som du anser vara värd extra poäng så måste du argumentera för det i din redovisningstext. Skriva vad du gjort, varför och hur. (4 poäng)
+###Krav 5: Produktkategorier (optionell) {#k5}
 
-På denna del kan du maximalt få 10 + 10 poäng. Var dock uppmärksam på att det finns optionella krav som potentiell omfattar totalt 28 poäng -- det är bara för att ge dig lite ökad valfrihet. 
+En produkt kan vara kopplad till många produkter.
+
+Uppdatera dina produkter så att de är kopplade till en mix av 1, 2 och 3 produktkategorier.
+
+På din förstasida, lägg till en översikt av dina kategorier, formattera kategorinamnen så att de får ett större typsnitt baserat på antalet produkter som är kopplade till just den kategorin.
+
+När man tittar på produktsidan skall man kunna filtrera per kategori (visa vilka produkter som finns i en kategori).
+
+Kan man välja att se produkter från flera produktkategorier så är det bonus.
+
+
+
+###Krav 6: Extra (optionell) {#k6}
+
+Välj en utbyggnad som du tycker passar in. Det kan vara något i stil med:
+
+* Betalning
+* Faktura
+* Tävla för att vinna bonuskod (100-spelet)
+
+Eller visa mer information på förstasidan/alla sidor likt:
+
+* Lista senaste produkter som användaren tittat på.
+* Lista de produkter som är mest populära (antalet användare som tittat på dem).
+
+Eller något som du själv anser är relevant och där du kan argumentera dig fram till några extrapoäng.
+
+Kanske kan du integrera din kalender för att visa när nya produkter kommer att släppas?
+
+Kanske hämtar du information till dina produkter från ett externt API? Till exempel en affär som säljer DVD-filmer och hämtar information till nya produkter via ett interface från IMDB.
 
 
 
 Redovisning {#redovisning}
 --------------------------------------------------------------------
 
-1\. På din redovisningssida, skriv följande:
+1. På din [redovisningssida](kurser/oophp-v3/redovisa), skriv följande:
 
-1.1. Länka till din projektsida för RM.
+    1. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning för att få högre betyg.
 
-1.2. För varje krav du implementerat, dvs 1-6, skriver du ett textstycke om ca 5-10 meningar där du beskriver vad du gjort och hur du tänkt. Poängsättningen tar sin start i din text så se till att skriva väl för att undvika poängavdrag. Missar du att skriva/dokumentera din lösning så blir det 0 poäng. Du kan inte komplettera en inlämning.
+    1. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
 
-1.3. Skriv ett allmänt stycke om hur projektet gick att genomföra. Problem/lösningar/strul/enkelt/svårt/snabbt/lång tid, etc. Var projektet lätt eller svårt? Tog det lång tid? Vad var svårt och vad gick lätt? Var det ett bra och rimligt projekt för denna kursen?
+    1. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
 
-1.4. Avsluta med ett sista stycke med dina tankar om kursen och vad du anser om materialet och handledningen (ca 5-10 meningar). Ge feedback till lärarna och förslå eventuella förbättringsförslag till kommande kurstillfällen. Är du nöjd/missnöjd? Kommer du att rekommendera kursen till dina vänner/kollegor? På en skala 1-10, vilket betyg ger du kursen?
+2. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida med projektet. 
 
-2\. Ta en kopia av texten på din redovisningssida och kopiera in den på Its/redovisningen. Glöm inte länka till din me-sida och projektet. 
+3. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oophp) och berätta att du är klar.
 
-3\. Ta en kopia av texten från din redovisningssida och gör ett inlägg i [kursforumet](forum/utbildning/oophp) och berätta att du är klar.
+4. Se till att samtliga kursmoment validerar.
+
+```bash
+# Ställ dig i kursrepot
+dbwebb publish me
+```
