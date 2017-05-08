@@ -150,7 +150,7 @@ Funktion för betygsättning {#grade}
 
 I en funktion kan vi skriva compund statements. Det låter som vi kan lösa uppgiften med en IF, ELSEIF och END IF-sats som är en variant av de [varianter för kontrollflöden](https://dev.mysql.com/doc/refman/5.7/en/flow-control-statements.html) som erbjuds.
 
-Glöm inte att ändra return-typen till `CHAR(1)`.
+Glöm inte att ändra return-typen till `VARCHAR(2)`.
 
 ```sql
 --
@@ -162,7 +162,7 @@ DROP FUNCTION IF EXISTS Grade //
 CREATE FUNCTION Grade(
 	score INTEGER
 )
-RETURNS CHAR(1)
+RETURNS VARCHAR(2)
 BEGIN
 	IF score >= 90 THEN
 		RETURN "A";
