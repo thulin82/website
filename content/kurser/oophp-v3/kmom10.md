@@ -7,12 +7,12 @@ revision:
 Kmom07/10: Projekt och examination
 ==================================
 
-[WARNING]
+[INFO]
 **Version 3 av oophp.**
 
-Utveckling av nytt kursmoment pågår. Kursmomentet släpps senaste den 8/5 2017.
+Utveckling av nytt kursmoment pågår. Kursmomentet <strike>släpps senaste</strike> släpptes den 8/5 2017.
 
-[/WARNING]
+[/INFO]
 
 Detta kursmoment avslutar och examinerar kursen.
 
@@ -38,28 +38,20 @@ Ryktet har spritt sig att du är en högst kompetent programutvecklare vilket re
 
 Du accepterar uppdraget, väl medveten om att du redan har en god grund till lösningen. 
 
-Du tar din grund `me/anax-lite` och skapar ett helt nytt repo. Om du lägger projektet på GitHub/Bitbucket så behöver det vara privat, eftersom detta är projektet och vi vill undvika att någon hittar och lånar dina affärshemligheter.
+Du tar din grund `me/anax-lite` och skapar ett helt nytt repo i `me/kmom10`. Om du lägger projektet på GitHub/Bitbucket så behöver det vara privat, eftersom detta är projektet och vi vill undvika att någon hittar och lånar dina affärshemligheter.
 
-Du skall alltså göra en webbshop där användare kan registrera sig och köpa saker, samtidigt skall det finnas en bra backend för administration. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil webbshopen skall ha och vilka produktern den skall innehålla.
+Du skall alltså göra en webbshop där användare kan registrera sig och köpa saker, samtidigt skall det finnas en backend för administration av webbplats och produkter. Investeraren vill se din tekniska lösning men låter dig själv bestämma vilken profil webbshopen skall ha och vilka produkter den skall innehålla.
 
 
 
 Projektspecifikation {#projspec}
 --------------------------------------------------------------------
 
-Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv välja väg, dokumentera dina val i redovisningstexten.
+Utveckla och leverera projektet enligt följande specifikationen. Saknas info i specen så kan du själv göra en bedömning och välja väg, dokumentera dina val i redovisningstexten.
 
-De tre första kraven är obligatoriska och måste lösas för att få godkänt på uppgiften. De tre sista kraven är optionella krav. Lös de optionella kraven för att samla poäng och därmed nå högre betyg.
+De tre första kraven är obligatoriska. De tre sista kraven är optionella krav,  lös dem för att samla poäng och därmed nå högre betyg.
 
 Varje krav ger max 10 poäng, totalt är det 60 poäng.
-
-
-
-###Kataloger för redovisning {#var}
-
-Samla alla dina filer för projektet i ditt kursrepo under `me/kmom10`.
-
-Redovisningstexten skriver du som vanligt i `me/anax-lite`.
 
 
 
@@ -77,7 +69,7 @@ Webbsidan skyddas av inloggning och när man är inloggad (och har behörighet s
 
 * Hantera nyhetsbloggen.
 * Administrera produkterna.
-* Administrera innehållet i "om"-sidan, footern.
+* Administrera innehållet i "om"-sidan och footern.
 
 I nyhetsblogg släpper företaget nyheter om sina produkter, sin verksamhet och erbjudande. I översikten skall det visas inledningen till minst 7 blogginlägg. Man kan klicka på rubriken för att komma till en egen sida där blogginlägget visas. 
 
@@ -93,7 +85,7 @@ Ditt system fungerar att köra på studentservern.
 
 ###Krav 2: Skapa kundkonto {#k2}
 
-En kund kan själv skapa ett nytt konto på webbplatsen. En kund kan redigera detaljer om sitt konto (mailadress, mer efter eget sinne).
+En kund kan själv skapa ett nytt konto på webbplatsen. En kund kan redigera detaljer om sitt konto (mailadress, mer efter eget sinne, kanske en avatar från Gravatar?).
 
 Administratören kan se vilka kundkonton som finns och kan redigera dem.
 
@@ -127,7 +119,7 @@ Det skall finnas minst tio produkter, fördelade över minst tre produktkategori
 
 Gör en förstasida som (minst) innehåller:
 
-De tre senaste inläggen från din nyhetsblogg.
+De tre senaste inläggen från din nyhetsblogg. Visa inledningen och en länk för att läsa hela blogginlägget.
 
 samt:
 
@@ -150,7 +142,7 @@ På din förstasida, lägg till en översikt av dina kategorier, formattera kate
 
 När man tittar på produktsidan skall man kunna filtrera per kategori (visa vilka produkter som finns i en kategori).
 
-Kan man välja att se produkter från flera produktkategorier så är det bonus.
+Kan man välja att se produkter från flera produktkategorier så är det bonus (men inte nödvändigt).
 
 
 
@@ -160,18 +152,21 @@ Välj en utbyggnad som du tycker passar in. Det kan vara något i stil med:
 
 * Betalning
 * Faktura
-* Tävla för att vinna bonuskod (100-spelet)
+* Tävla för att vinna bonuskod (100-spelet) (och använda bonuskoden)
 
 Eller visa mer information på förstasidan/alla sidor likt:
 
 * Lista senaste produkter som användaren tittat på.
 * Lista de produkter som är mest populära (antalet användare som tittat på dem).
+* Lista senast köpta produkter (oavsett vem som köpt dem).
 
 Eller något som du själv anser är relevant och där du kan argumentera dig fram till några extrapoäng.
 
 Kanske kan du integrera din kalender för att visa när nya produkter kommer att släppas?
 
 Kanske hämtar du information till dina produkter från ett externt API? Till exempel en affär som säljer DVD-filmer och hämtar information till nya produkter via ett interface från IMDB.
+
+Skriv vad du gjort och skriv även hur många poäng du anser dig vara värd.
 
 
 
