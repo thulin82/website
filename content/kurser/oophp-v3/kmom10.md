@@ -2,6 +2,7 @@
 author:
     - mos
 revision:
+    "2017-05-09": (B, mos) Mindre förtydligande.
     "2017-05-06": (A, mos) Första utgåvan.
 ...
 Kmom07/10: Projekt och examination
@@ -87,9 +88,11 @@ Ditt system fungerar att köra på studentservern.
 
 En kund kan själv skapa ett nytt konto på webbplatsen. En kund kan redigera detaljer om sitt konto (mailadress, mer efter eget sinne, kanske en avatar från Gravatar?).
 
-Administratören kan se vilka kundkonton som finns och kan redigera dem.
-
 En kund har bara behörighet att köpa, hen kan inte redigera andra delar av webbplatsens innehåll.
+
+Det skall finnas förskapade användarkonton, minst ett administratörskonto (admin/admin) och ett kundkonto (doe/doe).
+
+Administratören kan se vilka konton som finns skapade (administratörskonton och kundkonton) och kan redigera detaljer om dem.
 
 
 
@@ -99,13 +102,15 @@ Varje produkt tillhör en produktkategori.
 
 Produkterna visas upp med en bild, ett namn och en beskrivande text samt ett pris och antalet produkter som finns i lagret.
 
-När man visar produkterna skall de kunna sorteras efter namn, pris, kategori. Man kan välja hur många produkter som visas och det finns stöd för paginering.
+När man visar produkterna skall de kunna sorteras efter namn och pris. Man kan välja hur många produkter som visas och det finns stöd för paginering.
 
 Man kan söka efter produkter via produkternas namn och beskrivning.
 
 En användare måste logga in för att köpa. Eventuellt kan man använda varukorgen först och logga in när man gör köpet (välj väg).
  
 En användare kan köpa produkter genom att lägga dem i en varukorg och sedan checka ut varukorgen. Användaren får då en visuell rapport över sin order och ordern sparas.
+
+Varukorgen är implementerad i databasen (likt kmom05).
 
 En kund kan se sin orderhistorik och se innehållet i varje order.
 
@@ -134,7 +139,7 @@ Den mest sålda produkten och senast inkomna produkter uppdateras automatiskt ba
 
 ###Krav 5: Produktkategorier (optionell) {#k5}
 
-En produkt kan vara kopplad till många produkter.
+Du förbättrar flexibiliteten och en produkt kan vara kopplad till många produktkategorier.
 
 Uppdatera dina produkter så att de är kopplade till en mix av 1, 2 och 3 produktkategorier.
 
