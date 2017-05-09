@@ -22,6 +22,7 @@ TBD.
 RAMVERK1:
 
 Röd tråd:
+---------------------------------
 Software engineering, ebok
 Software development processes
 XP, Agile
@@ -31,10 +32,12 @@ Software architecture
 Design patterns
 
 Pre:
+---------------------------------
 Ny kodstandard js.
 lokal utvecklingsmiljö och testverktyg
 
 01: (kom igång, även ci med enhetstestning)
+---------------------------------
 Använd Anax med moduler till me-sida.
 Anax med DI, MVC (inkl flat file)
 Service container/locator, Inversion of control, SOLID, lazy instantiation/initialisation (by class or by configuration) (egen artikel om injection?) (Typehinting on method arguments)
@@ -43,48 +46,73 @@ Samt Flatfilecontent-module (som exempel på mer fristående modul)
 Enhetstestning av domänmodul, samt packagist, travis (scrutinizer, circleci)
 flat file med frontmatter
 
-0x:
-Continous integration, fixa en extern validator/badge per kmom.
+02: Formulär och Ajax
+---------------------------------
+anax/form
+login och search-form
+User login, registrering, aktivering (usability) med ajax. (cookies)
+ajaxifiera formulären
+modulifiera koden
+Kan testas TDD, BDD eller Selenium?
+uppgift: gör liknande med egen modul inkl tester (ajax bild upload POST/FILES)
 
-0x: (likt phpmvc/kmom04 men splitta upp i delar, viktigt kmom)
-MVC (kontroller och modeller)
-kontroller versus router, specifika up/down-metoder
-dispatching, forward
-form/cform (introducera för sig själv)
-Databasdrivna modeller (med formulär), olika databaspatterns från phpmvc/kmom04 med SQLQueryBuilder
-Kompabilitet databas (sqlite, mysql, postgresql) med SQL Query Builder
-scaffolding
-HMVC
 
-0x:
+03: Databasdrivna modeller
+---------------------------------
+
+
+04: Ramverkets glue
+---------------------------------
 middleware
 Exempel på middleware, skriv eget och gör som paket på packagist.
-
-0x:
 eventlisteners, event in framwork
 logger
 
-0x:
-ajax bild upload (POST, FILES) (använder olika routes).
-visa bilder på olika sätt, bildspel (ajax?)
-Ajax
-login Ajax
-(zend module?)
 
-02:
-User login, registrering, aktivering (usability) med ajax. (cookies)
-Kan testas BDD eller Selenium?
-
-0x: (likt phpmvc/kmom05)
-Egen dummy-modul (valutakonverterare, datum, kalender, namn, rot, etc), till eget webbplats för trafik och reklam?
-egna paket packagist (domänmodul till Anax)
+05: Egen modul och tjänst
+---------------------------------
+(likt phpmvc/kmom05)
+Egen dummy-modul (valutakonverterare, datum, kalender, namn, rot, etc), till egna paket packagist (domänmodul till Anax)
+eget webbplats för trafik och reklam?
 Reklam på webben
+
+
+
+06: Systemtest och optimering
+---------------------------------
+debug och profiling med Xdebug
+Debugging med Xdebug
+prestandatestning
+prestandamätningar, analyser
+Systemtest
+
+
 
 03:
 Cachning, nyhetsplanet, rss-flöde. RSS-modul, Cache-modul (PSR?)
 Caching (som modul anax/cache, möjligen PSR)
 Kan byggas med BDD?
 (domänmoduler)
+
+
+0x:
+Continous integration, fixa en extern validator/badge per kmom.
+Grönt efter varje kmom.
+
+
+0x: (likt phpmvc/kmom04 men splitta upp i delar, viktigt kmom)
+MVC (kontroller och modeller)
+kontroller versus router, specifika up/down-metoder
+dispatching, forward
+Databasdrivna modeller (med formulär), olika databaspatterns från phpmvc/kmom04 med SQLQueryBuilder
+Kompabilitet databas (sqlite, mysql, postgresql) med SQL Query Builder
+scaffolding
+HMVC
+
+0x:
+visa bilder på olika sätt, bildspel (ajax?)
+(zend module?)
+
 
 0x: Testning
 TDD/BDD Testning (phpunit och behat)
@@ -101,11 +129,6 @@ PHPUnit (exception, setup, teardown, database, mocking, providers)
 travis, scrutinizer, circle
 docker (olika versioner av PHP, databas, egen testmiljö)
 
-0x:
-debug och profiling med Xdebug
-Debugging med Xdebug
-prestandatestning
-prestandamätningar, analyser
 
 0x: Säkerhet
 OWASP
@@ -120,8 +143,12 @@ phpuml (integrera i resp modul)
 (Olika språk, anpassa med int/loc) (internationalisering)
 
 
+
 RAMVERK2:
+---------------------------------
+
 01:
+---------------------------------
 Express.js, routes, någon tjänst?
 
 0x:
@@ -132,6 +159,7 @@ Ny kodstandard js som exempel på npm-modul.
 Bygg egen npm-modul (använd i Express).
 
 02:
+---------------------------------
 Websockets
 Realtime web
 Chatt (express.js)
