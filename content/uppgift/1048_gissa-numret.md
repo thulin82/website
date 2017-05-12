@@ -3,9 +3,9 @@ author: lew
 category:
     - kurs oophp
 revision:
-    "2017-05-12": (C, mos) Uppdaterade vilka stycken som gälle ri oophp20-guiden.
-    "2017-03-14": (B, mos) La till info samt om objekt i sessionen.
-    "2017-03-09": (A, lew) Första utgåvan i samband med kursen oophp v3.
+    "2017-05-12": "(C, mos) Uppdaterade vilka stycken som gäller i oophp20-guiden."
+    "2017-03-14": "(B, mos) La till info samt om objekt i sessionen."
+    "2017-03-09": "(A, lew) Första utgåvan i samband med kursen oophp v3."
 ...
 Gissa numret
 ==================================
