@@ -3,6 +3,7 @@ author: lew
 category:
     - kurs oophp
 revision:
+    "2017-05-12": (C, mos) Uppdaterade vilka stycken som gälle ri oophp20-guiden.
     "2017-03-14": (B, mos) La till info samt om objekt i sessionen.
     "2017-03-09": (A, lew) Första utgåvan i samband med kursen oophp v3.
 ...
@@ -29,7 +30,9 @@ Det skall finnas följande varianter av spelet.
 Förkunskaper {#forkunskaper}
 -----------------------
 
-Du har jobbat igenom steg 1-12 i guiden ["Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg).
+Du har goda grundläggande kunskaper i PHP som motsvarar artikeln "[20 steg för att komma igång med PHP (php20)](kunskap/kom-i-gang-med-php-pa-20-steg)".
+
+Du har jobbat igenom guiden "[Kom igång med objektorienterad PHP-programmering på 20 steg"](kunskap/kom-i-gang-med-oophp-pa-20-steg)".
 
 
 
