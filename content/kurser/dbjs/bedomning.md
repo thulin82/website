@@ -1,6 +1,7 @@
 ---
 author: mos
 revision:
+    "2017-05-22": (C, mos) Justerade poängberäkning för individuell examination och för projektet.
     "2017-04-24": (B, mos) Justerade poängberäkning för individuell examination.
     "2017-02-23": (A, mos) Första utgåvan.
 ...
@@ -31,7 +32,8 @@ Följande tabell används vid bedömning av projektet.
 
 | Bedömningspunkt | Poäng | Din poäng |
 |-----------------|-------|-----------|
-| Projektet är implementerat och fungerar felfritt. | 20 | |
+| Projektet är implementerat och fungerar felfritt. | 15 | |
+| Redovisningen fungerade felfritt och dokumentationen är välproducerad och komplett. | 5 | |
 | TOTALT | 20 | |
 
 
@@ -45,12 +47,8 @@ Följande tabell används vid bedömning av den individuella examinationen.
 |-----------------|-------|-----------|
 | Uppgift 1 är implementerad och fungerar felfritt. | 10 | |
 | Uppgift 2 är implementerad och fungerar felfritt. | 10 | |
-| Uppgift 3 är implementerad och fungerar felfritt. | 10 | |
-| Uppgift 4 är implementerad och fungerar felfritt. | 10 | |
-| Uppgift 5 är implementerad och fungerar felfritt. | 10 | |
-| Uppgift 6 är implementerad och fungerar felfritt. | 10 | |
-| TOTALT | 60 | |
-| Totalpoäng delat med 1.5 = | | |
+| Uppgift 3 är implementerad och fungerar felfritt. | 20 | |
+| TOTALT | 40 | |
 
 
 
